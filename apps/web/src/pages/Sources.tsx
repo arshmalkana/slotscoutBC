@@ -200,6 +200,37 @@ function MonthlyUpdate({ s }: { s: PipelineStatus }) {
         <li>{s.tests ? (s.tests.regressionPassed ? "Regression tests passed with no false greens." : "Regression tests did not pass; nothing new is released until they do.") : "Regression tests have not run this month."}</li>
         <li>{s.release ? (s.release.publishable ? `Release ${s.release.id} is published.` : `Release candidate ${s.release.id} waits for: ${s.release.missing.join("; ")}.`) : "No release built this month yet."}</li>
       </ul>
+      {!!s.progress?.length && (
+        <>
+          <h3>Progress this month</h3>
+          <table className="progress-table">
+            <thead>
+              <tr>
+                <th>Step</th>
+                <th>Work</th>
+                <th>Done</th>
+                <th>Left</th>
+                <th aria-label="Share done"></th>
+              </tr>
+            </thead>
+            <tbody>
+              {s.progress.map((p) => (
+                <tr key={`${p.step}:${p.part}`}>
+                  <td>{p.step}</td>
+                  <td>{p.part}</td>
+                  <td>
+                    {p.done.toLocaleString("en-CA")} of {p.total.toLocaleString("en-CA")}
+                  </td>
+                  <td>{p.left ? p.left.toLocaleString("en-CA") : "none"}</td>
+                  <td>
+                    <progress max={100} value={p.percent} aria-label={`${p.percent}% done`} /> {p.percent}%
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </>
+      )}
       {bad.length > 0 && (
         <>
           <h3>Sources needing attention</h3>

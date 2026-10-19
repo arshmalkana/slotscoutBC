@@ -48,11 +48,15 @@ function applyNotice(it: ReviewItem, by: string, approve: boolean): void {
     writeJson(path, store);
     return;
   }
+  const taskId = (it.runs?.run1 as { task_id?: string } | undefined)?.task_id;
   for (const n of store.notices) {
-    const match = it.kind === "road_notice_reading" ? n.ai && it.runs && (it.runs.run1 as { task_id?: string })?.task_id === n.ai.task_id : it.title.startsWith(n.road) && (n.text === src || src.includes(n.text.slice(0, 80)));
+    const match =
+      it.kind === "road_notice_reading" || it.kind === "dm_notice"
+        ? !!n.ai && !!taskId && taskId === n.ai.task_id && (it.kind === "dm_notice") === (n.origin === "dm_notice")
+        : it.title.startsWith(n.road) && (n.text === src || src.includes(n.text.slice(0, 80)));
     if (!match) continue;
     if (!approve) continue;
-    if (it.kind === "road_notice_reading" && n.ai) Object.assign(n, { points: n.ai.points, needsAi: false, extraction: "ai", approvedBy: by, approvedOn: today() });
+    if ((it.kind === "road_notice_reading" || it.kind === "dm_notice") && n.ai) Object.assign(n, { points: n.ai.points, needsAi: false, extraction: "ai", approvedBy: by, approvedOn: today() });
     if (it.kind === "road_notice_removed" || it.kind === "road_notice_rescinded") Object.assign(n, { listing: "removed_approved", approvedBy: by, approvedOn: today() });
   }
   writeJson(path, store);
@@ -87,7 +91,7 @@ export function approve(opts: { month?: string; item?: string; by?: string; deci
   const yes = (opts.decision ?? "approve") === "approve";
   if (!yes && opts.decision !== "reject") throw new Error("DECISION must be approve or reject");
   if (it.kind === "closed_area") applyClosedArea(it, by, yes);
-  if (it.kind.startsWith("road_notice")) applyNotice(it, by, yes);
+  if (it.kind.startsWith("road_notice") || it.kind === "dm_notice") applyNotice(it, by, yes);
   if (it.kind === "bylaw") applyBylaw(it, by, yes);
   const decided: ReviewItem = { ...it, status: yes ? "approved" : "rejected", decided_by: by, decided_on: today(), note: opts.note || undefined, updated: new Date().toISOString() };
   writeJson(itemPath(it.month, it.item_id), decided);

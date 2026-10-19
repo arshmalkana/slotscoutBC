@@ -81,12 +81,14 @@ export function validate(_opts: { month?: string } = {}) {
 
   // Road notice store.
   try {
-    const store = readJson<{ notices: { id?: string; listing?: string; extraction?: string; approvedBy?: string | null; points?: { status: string; quote: string }[]; text: string }[] }>(join(P.rules, "road-notices.json"));
+    const store = readJson<{ notices: { id?: string; listing?: string; extraction?: string; origin?: string; approvedBy?: string | null; points?: { status: string; quote: string }[]; text: string }[] }>(join(P.rules, "road-notices.json"));
     for (const n of store.notices) {
       if (!n.id) errors.push(`road-notices.json: notice without id`);
       if (!["listed", "removed_pending_review", "removed_approved", undefined].includes(n.listing)) errors.push(`road-notices.json ${n.id}: unknown listing ${n.listing}`);
       for (const p of n.points ?? []) if (!p.quote) errors.push(`road-notices.json ${n.id}: km point without its quote`);
       if (n.listing === "removed_approved" && !n.approvedBy) errors.push(`road-notices.json ${n.id}: removal approved without a person`);
+      // An AI reading of a District Manager PDF counts (has points) only after a person approved it.
+      if (n.origin === "dm_notice" && n.points?.length && !n.approvedBy && n.extraction !== "person") errors.push(`road-notices.json ${n.id}: District Manager reading counts without a person's approval`);
     }
   } catch (e) {
     if (!/ENOENT/.test(String(e))) errors.push(`road-notices.json: ${(e as Error).message}`);

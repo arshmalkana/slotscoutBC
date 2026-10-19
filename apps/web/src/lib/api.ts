@@ -128,7 +128,9 @@ export interface PipelineStatus {
     failures: { source: string; what: string; error: string }[];
   } | null;
   changes: { comparedWith: string | null; new: number; changed: number; removed: number; unchanged: number };
-  extraction: { tasks: number; waiting: number };
+  extraction: { tasks: number; waiting: number; run1Done?: number; run2Done?: number; withImages?: number };
+  /** Work done and left per pipeline step part. */
+  progress?: { step: string; part: string; done: number; total: number; left: number; percent: number; last: string; at: string }[];
   rules: { approved: number; provisional: number; candidates: number; retired: number };
   review: { thisMonth: number; open: number; openAllMonths: number; looserOpen: number };
   tests: { regressionRan: boolean; regressionPassed: boolean; falseGreen: boolean } | null;

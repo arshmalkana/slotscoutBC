@@ -123,6 +123,38 @@ describe("road notice store (one-way rule)", () => {
     expect(approved.find((n) => n.fileSection === "5748.01")!.points?.[0]?.status).toBe("closed");
   });
 
+  it("counts a road closed in a District Manager PDF only after approval, and keeps P6 grey until then", () => {
+    const dm: StoredNotice = {
+      id: "dm|DCK|DCK-1-gate_map|5833.01",
+      district: "Chilliwack",
+      section: "closure",
+      road: "Map FSR",
+      fileSection: "5833.01",
+      text: "Gate",
+      kind: "closed",
+      url: "https://example.org/map.pdf",
+      points: [],
+      needsAi: true,
+      extraction: "ai",
+      origin: "dm_notice",
+      listing: "listed",
+      orgUnit: "DCK",
+      firstSeen: "x",
+      lastSeen: "x",
+      approvedBy: null,
+      ai: { task_id: "dm_notice-1", agreed: true, points: [{ km: null, extent: "unknown", status: "gated", quote: "Gate" }], rescinded: false },
+    };
+    const pending = mergeWithStore("DCK", live, [dm]).find((n) => n.fileSection === "5833.01")!;
+    expect(pending.needsAi).toBe(true);
+    expect(pending.points).toEqual([]);
+    expect(pending.extraction).toBeUndefined();
+    const approved = mergeWithStore("DCK", live, [{ ...dm, approvedBy: "AB", points: dm.ai!.points, needsAi: false }]).find((n) => n.fileSection === "5833.01")!;
+    expect(approved.needsAi).toBe(false);
+    expect(approved.points?.[0]?.status).toBe("gated");
+    const caution = { ...dm, ai: { ...dm.ai!, points: [{ km: 2, extent: "at" as const, status: "caution" as const, quote: "x" }] } };
+    expect(mergeWithStore("DCK", live, [caution]).some((n) => n.fileSection === "5833.01")).toBe(false);
+  });
+
   it("still counts stored closures when the live page cannot be read", () => {
     const stored: StoredNotice = { ...live.find((n) => n.fileSection === "5748.04")!, orgUnit: "DCK", firstSeen: "x", lastSeen: "x", listing: "listed" };
     expect(mergeWithStore("DCK", null, [stored])).toHaveLength(1);

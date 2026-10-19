@@ -2,7 +2,7 @@ import { readdir, readFile, stat } from "node:fs/promises";
 import { join } from "node:path";
 import type { Feature, Geometry, Position } from "geojson";
 import { parse as parseYaml } from "yaml";
-import type { BylawEntry, DigitisedRuleProps, RegionCoverage, ReleaseInfo, RoadNotice, SourceInfo } from "@slotscout/engine";
+import type { BylawEntry, DigitisedRuleProps, NoticePoint, RegionCoverage, ReleaseInfo, RoadNotice, SourceInfo } from "@slotscout/engine";
 import { config } from "./config.js";
 
 export interface RegisterSource extends SourceInfo {
@@ -29,6 +29,8 @@ export interface StoredNotice extends RoadNotice {
   lastSeen: string;
   approvedBy?: string | null;
   approvedOn?: string | null;
+  /** The AI reading kept for the reviewer; it counts only once approvedBy is set. */
+  ai?: { task_id: string; agreed: boolean; points: NoticePoint[]; rescinded: boolean };
 }
 
 /** Page text the parser could not tie to a road; it stops greying P6 once a person has read it. */

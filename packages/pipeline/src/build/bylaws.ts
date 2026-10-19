@@ -5,6 +5,7 @@ import { checkQuotes, disagreements, schemaErrors } from "../lib/answers.js";
 import { today } from "../lib/config.js";
 import { P, monthDir } from "../lib/paths.js";
 import { itemId, upsertItem } from "../lib/review.js";
+import { PDF_HEADER } from "../lib/pdf.js";
 import { log, readJson, readJsonIf, writeJson } from "../lib/util.js";
 import type { BylawSite } from "../steps/bylaws.js";
 import { loadAnswer } from "../steps/extract.js";
@@ -89,21 +90,21 @@ export function buildBylaws(month: string, tasks: Task[]): { docs: number; agree
       touchedRegister = true;
     }
   }
-  // Found bylaw PDFs with no text layer (scans): a person reads them; nothing is extracted from images.
+  // Found bylaw PDFs that are scans are OCR'd at pull time; only a scan OCR could not read goes to a person.
   const finds = readJsonIf<{ key: string; name: string; documents: { title: string; url: string; file: string | null; textFile: string | null }[] }[]>(join(monthDir(month), "bylaws", "finds.json"), []);
   for (const f of finds)
     for (const d of f.documents) {
       if (!d.file?.endsWith(".pdf") || !/firearm|weapon/i.test(d.title)) continue;
-      const text = d.textFile && existsSync(join(P.root, d.textFile)) ? readFileSync(join(P.root, d.textFile), "utf8").replace(/^(Source|Title|Fetched|SHA-256):.*\n/gm, "").trim() : "";
+      const text = d.textFile && existsSync(join(P.root, d.textFile)) ? readFileSync(join(P.root, d.textFile), "utf8").replace(PDF_HEADER, "").trim() : "";
       if (text.length > 200) continue;
       upsertItem({
         item_id: itemId("bylaw", `scan|${d.url}`),
         month,
         kind: "bylaw",
-        title: `${f.name}: ${d.title} (scanned PDF)`,
+        title: `${f.name}: ${d.title} (scan OCR could not read)`,
         change_type: "new_source",
-        decision: "This bylaw PDF is a scan with no text layer. Save a text copy in inbox/bylaws/<register key>/ (or add OCR to the ingest image) so it can be read and checked; until then the jurisdiction stays grey.",
-        why: ["no text could be extracted, so no rule can be quoted or checked"],
+        decision: "This bylaw PDF is a scan, and OCR could not read enough of it. Save a text copy in inbox/bylaws/<register key>/ so it can be read and checked; until then the jurisdiction stays grey.",
+        why: ["the PDF has no text layer and OCR found too little text to quote or check any rule"],
         source: { text: `Scanned PDF: ${d.file}`, url: d.url, version: "found by the bylaw finder", confirmed: true, file: d.file },
         links: [{ label: "Bylaw PDF", href: d.url }],
       });

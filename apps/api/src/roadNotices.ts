@@ -1,4 +1,4 @@
-import { DISTRICT_PAGES, ROAD_NOTICES_BASE, noticeId, parseNoticesPageFull, type RoadNotice, type RoadNoticeData, type UnparsedBlock } from "@slotscout/engine";
+import { DISTRICT_PAGES, ROAD_NOTICES_BASE, isBlockingStatus, noticeId, parseNoticesPageFull, type RoadNotice, type RoadNoticeData, type UnparsedBlock } from "@slotscout/engine";
 import { data, type StoredBlock, type StoredNotice } from "./data.js";
 import { errorText, getText } from "./http.js";
 
@@ -32,6 +32,15 @@ export function mergeWithStore(orgUnit: string, live: RoadNotice[] | null, store
   }
   for (const s of mine) {
     const id = s.id ?? noticeId(s);
+    if (s.origin === "dm_notice") {
+      // A road closed in a District Manager PDF counts once a person has approved the reading; until
+      // then a closing reading keeps P6 grey on that road ("not yet checked"), never green.
+      if (s.listing === "removed_approved") continue;
+      const blocking = (s.ai?.points ?? s.points ?? []).some((p) => isBlockingStatus(p.status));
+      if (confirmedReading(s)) out.push({ ...s, needsAi: false, kind: blocking ? "closed" : "caution", listing: "listed" });
+      else if (blocking) out.push({ ...s, points: [], kind: "info", needsAi: true, extraction: undefined, listing: "listed" });
+      continue;
+    }
     if (liveIds.has(id)) continue;
     if (s.listing === "removed_pending_review" || (live === null && s.listing === "listed")) {
       out.push({ ...s, listing: live === null ? "listed" : "removed_pending_review" });

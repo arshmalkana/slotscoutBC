@@ -6,8 +6,8 @@ import type { Manifest } from "../lib/manifest.js";
 import { manifestPath } from "../lib/manifest.js";
 import { P, monthDir } from "../lib/paths.js";
 import { legalText, makeUnit, noticeUnits, splitBylaw, splitRegulation, type Unit } from "../lib/units.js";
-import { pdfToText } from "../lib/pdf.js";
-import { listFiles, log, readJsonIf, rel, sha256, writeJson, writeText } from "../lib/util.js";
+import { PDF_HEADER, existingImages, pdfImagesFrom, readPdf } from "../lib/pdf.js";
+import { listFiles, log, progress, readJsonIf, rel, sha256, writeJson, writeText } from "../lib/util.js";
 import { previousManifest } from "./pull.js";
 import type { BylawFind } from "./bylaws.js";
 
@@ -91,7 +91,9 @@ function collect(month: string): Unit[] {
   }
 
   // Road notices from every district page.
-  for (const f of listFiles(join(dir, "district_pages"), (p) => p.endsWith(".html"))) {
+  const pages = listFiles(join(dir, "district_pages"), (p) => p.endsWith(".html"));
+  for (const [i, f] of pages.entries()) {
+    progress("split", "district road pages", i + 1, pages.length, basename(f, ".html"));
     const html = readFileSync(f, "utf8");
     const meta = fileMeta.get(rel(f));
     const org = basename(f, ".html");
@@ -99,7 +101,9 @@ function collect(month: string): Unit[] {
       noticeUnits(html, org, meta?.url ?? "", { source: "road_notices", file: rel(f), fileSha256: sha256(html), version: `District page fetched ${meta?.fetchedAt ?? month}`, confirmed: true }).units,
     );
   }
-  for (const f of listFiles(join(dir, "dm_notices"), (p) => p.endsWith(".txt"))) {
+  const dmFiles = listFiles(join(dir, "dm_notices"), (p) => p.endsWith(".txt"));
+  for (const [i, f] of dmFiles.entries()) {
+    if ((i + 1) % 10 === 0 || i + 1 === dmFiles.length) progress("split", "District Manager PDFs", i + 1, dmFiles.length, basename(f, ".txt"));
     const text = readFileSync(f, "utf8");
     const url = text.match(/^Source:\s*(.*)$/m)?.[1] ?? null;
     add([
@@ -112,16 +116,19 @@ function collect(month: string): Unit[] {
         file: rel(f),
         fileSha256: sha256(text),
         version: text.match(/^Fetched:\s*(.*)$/m)?.[1] ?? month,
-        text: text.replace(/^(Source|Fetched|SHA-256):.*\n/gm, "").trim(),
+        text: text.replace(PDF_HEADER, "").trim(),
         confirmed: true,
-        meta: { org: basename(f).split("-")[0] },
+        // Map and scan pages rendered at pull time; the extraction looks at them as well as the text.
+        meta: { org: basename(f).split("-")[0], read: text.match(/^Read:\s*(.*)$/m)?.[1] ?? "text layer", images: existingImages(pdfImagesFrom(text)) },
       }),
     ]);
   }
 
   // Bylaws the browser found.
   const finds = readJsonIf<BylawFind[]>(join(dir, "bylaws", "finds.json"), []);
-  for (const find of finds) {
+  progress("split", "bylaw sites", 0, finds.length);
+  for (const [i, find] of finds.entries()) {
+    if ((i + 1) % 10 === 0 || i + 1 === finds.length) progress("split", "bylaw sites", i + 1, finds.length, find.name);
     for (const d of find.documents) {
       if (!d.textFile) continue;
       const path = join(P.root, d.textFile);
@@ -137,7 +144,7 @@ function collect(month: string): Unit[] {
   for (const f of listFiles(join(dir, "inbox", "bylaws"), (p) => /\.(txt|pdf)$/i.test(p))) {
     const jur = basename(join(f, ".."));
     let text: string | null = null;
-    if (f.toLowerCase().endsWith(".pdf")) text = pdfToText(f);
+    if (f.toLowerCase().endsWith(".pdf")) text = readPdf(f, null).text;
     else text = readFileSync(f, "utf8");
     if (!text) continue;
     const docId = `inbox:${jur}:${sha256(text).slice(0, 8)}`;

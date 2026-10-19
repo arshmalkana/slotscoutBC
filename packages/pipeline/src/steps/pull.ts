@@ -6,9 +6,9 @@ import { pullLayer } from "../lib/gis.js";
 import { fetchBuffer, fetchText, userAgent } from "../lib/http.js";
 import { addFile, clearFailure, fail, loadManifest, saveManifest, setSource, type Manifest } from "../lib/manifest.js";
 import { P, monthDir } from "../lib/paths.js";
-import { pdfToText } from "../lib/pdf.js";
+import { pdfTextFile, readPdf } from "../lib/pdf.js";
 import { loadRegistry, type Source } from "../lib/registry.js";
-import { ensureDir, listFiles, log, readJsonIf, rel, sha256, writeText } from "../lib/util.js";
+import { ensureDir, listFiles, log, progress, readJsonIf, rel, sha256, writeText } from "../lib/util.js";
 import { pullBylaws } from "./bylaws.js";
 
 /**
@@ -46,9 +46,13 @@ async function pullGis(m: Manifest, sources: Source[], opts: PullOpts): Promise<
   const prev = previousManifest(m.month);
   const dir = join(monthDir(m.month), "gis");
   if (opts.skip?.includes("gis")) return;
-  for (const s of sources.filter((x) => x.pull === "gis")) {
-    if (opts.skip?.includes(s.id) || (opts.only?.length && !opts.only.includes(s.id) && !opts.only.includes("gis"))) continue;
-    if (!opts.force && m.layers[s.id]?.status === "ok") continue;
+  const layers = sources.filter((x) => x.pull === "gis" && !opts.skip?.includes(x.id) && (!opts.only?.length || opts.only.includes(x.id) || opts.only.includes("gis")));
+  let done = 0;
+  for (const s of layers) {
+    if (!opts.force && m.layers[s.id]?.status === "ok") {
+      progress("pull", "GIS layers", ++done, layers.length, `${s.id} already pulled`);
+      continue;
+    }
     log("pull", `GIS ${s.id} (${s.layer})`);
     try {
       const entry = await pullLayer(s, dir, prev?.layers[s.id]?.serverCount ?? null);
@@ -63,6 +67,7 @@ async function pullGis(m: Manifest, sources: Source[], opts: PullOpts): Promise<
       log("pull", `${s.id} FAILED: ${(e as Error).message}`);
     }
     saveManifest(m);
+    progress("pull", "GIS layers", ++done, layers.length, `${s.id} ${m.layers[s.id]?.status ?? "failed"}`);
   }
 }
 
@@ -79,8 +84,10 @@ async function pullDistrictPages(m: Manifest, opts: PullOpts): Promise<void> {
   const dir = join(monthDir(m.month), "district_pages");
   const pdfDir = join(monthDir(m.month), "dm_notices");
   let ok = 0;
+  let tried = 0;
   const pdfs = new Map<string, string>();
-  for (const [org, slug] of Object.entries(DISTRICT_PAGES)) {
+  const pages = Object.entries(DISTRICT_PAGES);
+  for (const [org, slug] of pages) {
     const file = join(dir, `${org}.html`);
     const url = `${ROAD_NOTICES_BASE}/${slug}`;
     try {
@@ -96,25 +103,28 @@ async function pullDistrictPages(m: Manifest, opts: PullOpts): Promise<void> {
       log("pull", `district page ${org} FAILED: ${(e as Error).message}`);
     }
     saveManifest(m);
+    progress("pull", "district road pages", ++tried, pages.length, org);
   }
   const total = Object.keys(DISTRICT_PAGES).length;
   setSource(m, "road_notices", { status: ok === total ? "ok" : ok ? "partial" : "failed", detail: `${ok} of ${total} district pages`, at: new Date().toISOString() });
 
   // District Manager notice PDFs linked from the notices (Addendum A 10.3 step 10).
   let pdfOk = 0;
+  let pdfTried = 0;
   for (const [url, org] of pdfs) {
     const name = `${org}-${sha256(url).slice(0, 8)}-${basename(new URL(url).pathname).replace(/[^\w.-]+/g, "_").slice(0, 80)}`;
     const file = join(pdfDir, name.endsWith(".pdf") ? name : `${name}.pdf`);
     if (!opts.force && m.files.some((f) => f.url === url)) {
       pdfOk++;
+      progress("pull", "District Manager PDFs", ++pdfTried, pdfs.size, `${basename(file)} already pulled`);
       continue;
     }
     try {
       const res = await fetchBuffer(url, { kind: "page", accept: "application/pdf" });
       storeFile(m, "dm_notices", file, res.body, url, res.fetchedAt);
       const stored = m.files.find((f) => f.url === url)!;
-      const text = pdfToText(join(P.root, stored.path));
-      if (text !== null) writeText(file.replace(/\.pdf$/, ".txt"), `Source: ${url}\nFetched: ${res.fetchedAt}\nSHA-256: ${stored.sha256}\n\n${text}`);
+      const read = readPdf(join(P.root, stored.path), join(pdfDir, "images", basename(file, ".pdf")));
+      writeText(file.replace(/\.pdf$/, ".txt"), pdfTextFile({ Source: url, Fetched: res.fetchedAt, "SHA-256": stored.sha256 }, read));
       clearFailure(m, "dm_notices", url);
       pdfOk++;
     } catch (e) {
@@ -122,6 +132,7 @@ async function pullDistrictPages(m: Manifest, opts: PullOpts): Promise<void> {
       log("pull", `notice PDF ${url} FAILED: ${(e as Error).message}`);
     }
     saveManifest(m);
+    progress("pull", "District Manager PDFs", ++pdfTried, pdfs.size, basename(file));
   }
   setSource(m, "dm_notices", { status: pdfOk === pdfs.size ? "ok" : pdfOk ? "partial" : pdfs.size ? "failed" : "ok", detail: `${pdfOk} of ${pdfs.size} linked notice PDFs`, at: new Date().toISOString() });
   saveManifest(m);
@@ -134,7 +145,8 @@ async function pullBcLaws(m: Manifest, opts: PullOpts): Promise<void> {
   const dir = join(monthDir(m.month), "bclaws");
   const have: string[] = [];
   const missing: string[] = [];
-  for (const doc of documents) {
+  for (const [i, doc] of documents.entries()) {
+    progress("pull", "BC Laws regulations", i, documents.length, doc);
     if (api_confirmed) {
       const url = api_document_url.replace("{doc}", doc);
       try {
@@ -158,6 +170,7 @@ async function pullBcLaws(m: Manifest, opts: PullOpts): Promise<void> {
     }
     have.push(doc);
   }
+  progress("pull", "BC Laws regulations", documents.length, documents.length, `${have.length} available, ${missing.length} waiting for a person`);
   const excerpts = listFiles(join(P.inbox, "excerpts"), (f) => f.endsWith(".txt"));
   const how = api_confirmed ? "BC Laws API" : "copies a person saved in inbox/bclaws";
   setSource(m, "closed_areas", {
@@ -174,12 +187,15 @@ async function pullBcLaws(m: Manifest, opts: PullOpts): Promise<void> {
 function pullInbox(m: Manifest): void {
   const dir = join(monthDir(m.month), "inbox");
   let n = 0;
-  for (const f of listFiles(P.inbox, (p) => !p.endsWith("README.md"))) {
+  const files = listFiles(P.inbox, (p) => !p.endsWith("README.md"));
+  for (const [i, f] of files.entries()) {
     const body = readFileSync(f);
     const target = join(dir, relative(P.inbox, f));
-    if (m.files.some((x) => x.path === rel(target) && x.sha256 === sha256(body))) continue;
-    storeFile(m, "inbox", target, body, undefined, statSync(f).mtime.toISOString(), `copied from ${rel(f)}`);
-    n++;
+    if (!m.files.some((x) => x.path === rel(target) && x.sha256 === sha256(body))) {
+      storeFile(m, "inbox", target, body, undefined, statSync(f).mtime.toISOString(), `copied from ${rel(f)}`);
+      n++;
+    }
+    progress("pull", "inbox files", i + 1, files.length, rel(f));
   }
   log("pull", `inbox: ${n} new file(s)`);
   saveManifest(m);

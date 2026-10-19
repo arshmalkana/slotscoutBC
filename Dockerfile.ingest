@@ -1,5 +1,6 @@
 # SlotScout ingest container (Addendum A 6.3): the pipeline CLI with Playwright + Chromium for
-# browser capture and poppler for PDF text. The repository is bind-mounted at /repo, so everything
+# browser capture, poppler for PDF text and page images, and tesseract for OCR of scanned pages
+# and maps saved as pictures. The repository is bind-mounted at /repo, so everything
 # the pipeline writes (raw/, queue/, rules/, review/, reports/, releases/) lands in the repo.
 FROM mcr.microsoft.com/playwright:v1.56.1-noble
 ARG HTTPS_PROXY
@@ -9,7 +10,7 @@ RUN --mount=type=secret,id=extra_ca,required=false \
     if [ -s /run/secrets/extra_ca ]; then cp /run/secrets/extra_ca /usr/local/share/ca-certificates/extra-ca.crt && update-ca-certificates; fi \
  && sed -i 's#http://#https://#g' /etc/apt/sources.list.d/*.sources 2>/dev/null; \
     apt-get update \
- && apt-get install -y --no-install-recommends make poppler-utils libnss3-tools \
+ && apt-get install -y --no-install-recommends make poppler-utils tesseract-ocr tesseract-ocr-eng libnss3-tools \
  && rm -rf /var/lib/apt/lists/*
 ENV PLAYWRIGHT_BROWSERS_PATH=/ms-playwright \
     PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1 \

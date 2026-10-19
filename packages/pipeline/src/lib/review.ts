@@ -31,6 +31,8 @@ export interface ReviewItem {
   feature?: unknown;
   previous_feature?: unknown;
   placements?: unknown[];
+  /** Map or scan page images the readings looked at (repository paths). */
+  images?: string[];
   diff?: string | null;
   links?: { label: string; href: string }[];
   status: "open" | "approved" | "rejected";

@@ -1212,3 +1212,15 @@ fieldset {
   width: 34px;
   height: 34px;
 }
+
+.progress-table progress {
+  width: 90px;
+  height: 10px;
+  vertical-align: middle;
+  accent-color: var(--blue);
+}
+@media (max-width: 600px) {
+  .progress-table progress {
+    width: 48px;
+  }
+}

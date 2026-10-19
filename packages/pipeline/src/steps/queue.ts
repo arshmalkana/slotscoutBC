@@ -4,7 +4,7 @@ import { config, currentMonth } from "../lib/config.js";
 import { P } from "../lib/paths.js";
 import { parseClosedArea } from "../lib/ruleparse.js";
 import { ruleIdFor, type Unit } from "../lib/units.js";
-import { listFiles, log, readJsonIf, sha256, writeJson } from "../lib/util.js";
+import { listFiles, log, progress, readJsonIf, sha256, writeJson } from "../lib/util.js";
 import { EFFECT_BY_RULE } from "../lib/effects.js";
 import type { UnitChange } from "./split.js";
 import { loadUnits } from "./split.js";
@@ -15,7 +15,7 @@ import { monthDir } from "../lib/paths.js";
  * every permanent boundary (as a cross-check), becomes a task in queue/pending/. Tasks hold only
  * public source text: never user data (Addendum A 7.5).
  */
-export type TaskKind = "closed_area" | "road_notice" | "bylaw" | "change";
+export type TaskKind = "closed_area" | "road_notice" | "dm_notice" | "bylaw" | "change";
 
 export interface Task {
   task_id: string;
@@ -28,6 +28,8 @@ export interface Task {
   title: string;
   source: { url: string | null; version: string; file: string; confirmed: boolean };
   source_text: string;
+  /** Page images of map or scan pages (repository paths); the extraction looks at them too. */
+  images?: string[];
   created: string;
   meta: Record<string, unknown>;
 }
@@ -42,9 +44,10 @@ export function loadTasks(): Task[] {
   return listFiles(P.pending, (f) => f.endsWith(".json")).map((f) => readJsonIf<Task>(f, null as unknown as Task)).filter(Boolean);
 }
 
-function makeTask(month: string, kind: TaskKind, units: Unit[], text: string, title: string, meta: Record<string, unknown> = {}): Task {
+function makeTask(month: string, kind: TaskKind, units: Unit[], text: string, title: string, meta: Record<string, unknown> = {}, images: string[] = []): Task {
   const prompts = config().ai.prompts as Record<string, string>;
-  const hash = sha256(units.map((u) => `${u.id}:${u.hash}`).join("|") + kind);
+  // Page images are part of what is read, so a task with images is a different task.
+  const hash = sha256(units.map((u) => `${u.id}:${u.hash}`).join("|") + kind + (images.length ? `|images:${images.join(",")}` : ""));
   return {
     task_id: `${kind}-${hash.slice(0, 12)}`,
     kind,
@@ -56,6 +59,7 @@ function makeTask(month: string, kind: TaskKind, units: Unit[], text: string, ti
     title,
     source: { url: units[0]!.url, version: units[0]!.version, file: units[0]!.file, confirmed: units.every((u) => u.confirmed) },
     source_text: text,
+    ...(images.length ? { images } : {}),
     created: new Date().toISOString(),
     meta,
   };
@@ -89,9 +93,12 @@ export function queue(opts: { month?: string } = {}) {
     if (n.needsAi) tasks.push(makeTask(month, "road_notice", [u], u.text, u.title, { org: u.meta.org, noticeId: u.id.replace(/^notice:/, "") }));
     else ruleParsed++;
   }
-  // A notice PDF with no text layer (a map or a scan) has nothing to quote; build sends it to a person.
-  for (const u of work.filter((x) => x.kind === "dm_notice" && x.text.trim().length >= 50)) {
-    tasks.push(makeTask(month, "road_notice", [u], u.text.slice(0, 30_000), u.title, { org: u.meta.org, pdf: u.url }));
+  // District Manager PDFs: the text layer plus OCR of picture pages, and images of map or scan pages.
+  // Only a PDF with neither text nor images has nothing to read; build sends that one to a person.
+  for (const u of work.filter((x) => x.kind === "dm_notice")) {
+    const images = (u.meta.images as string[] | undefined) ?? [];
+    if (u.text.trim().length < 50 && !images.length) continue;
+    tasks.push(makeTask(month, "dm_notice", [u], u.text.slice(0, 30_000), u.title, { org: u.meta.org, pdf: u.url, read: u.meta.read }, images));
   }
 
   // Bylaws: one task per document when any clause is new or changed (5.3).
@@ -130,13 +137,15 @@ export function queue(opts: { month?: string } = {}) {
   if (superseded) log("queue", `${superseded} task(s) moved to queue/superseded because their units changed`);
 
   let created = 0;
-  for (const t of tasks) {
+  for (const [i, t] of tasks.entries()) {
     const existing = readJsonIf<Task | null>(taskPath(t.task_id), null);
     // The same unit text gives the same task in any month; the earliest month owns it, so a later
     // run's clean-up never removes a task an earlier month still needs.
-    if (existing && existing.month <= t.month) continue;
-    writeJson(taskPath(t.task_id), t);
-    created++;
+    if (!existing || existing.month > t.month) {
+      writeJson(taskPath(t.task_id), t);
+      created++;
+    }
+    if ((i + 1) % 25 === 0 || i + 1 === tasks.length) progress("queue", "AI tasks written", i + 1, tasks.length, t.task_id);
   }
   log("queue", `${work.length} new or changed units; ${ruleParsed} read by rules; ${tasks.length} AI tasks (${created} new in queue/pending)`);
   return { tasks, created };

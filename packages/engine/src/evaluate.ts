@@ -842,7 +842,13 @@ function checkRoadNotices(ctx: Context): void {
   }
   const unread = notices.filter((n) => n.needsAi && n.extraction !== "ai" && n.extraction !== "person");
   if (unread.length) {
-    ctx.unknown("P6", `a notice for ${unread[0]!.road} names km points the parser could not read, and it has not yet been read and checked`);
+    const u = unread[0]!;
+    ctx.unknown(
+      "P6",
+      u.origin === "dm_notice"
+        ? `a District Manager notice closes or restricts ${u.road}, and its reading has not yet been checked by a person`
+        : `a notice for ${u.road} names km points the parser could not read, and it has not yet been read and checked`,
+    );
     return;
   }
   const ahead = placements.filter((p) => isBlockingStatus(p.point.status));

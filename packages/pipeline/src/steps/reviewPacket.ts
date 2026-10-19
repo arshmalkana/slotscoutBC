@@ -30,11 +30,18 @@ function coords(g: Geometry | null | undefined): Position[][] {
   return [];
 }
 
+type Placed = { lat?: number; lon?: number; km: number | null; status: string; quote?: string };
+
+/** Placed points, flat: District Manager items group them by road. */
+function placedPoints(item: ReviewItem): Placed[] {
+  return ((item.placements as (Placed & { points?: Placed[] })[] | undefined) ?? []).flatMap((p) => p.points ?? [p]);
+}
+
 /** A small map: the candidate (red outline), the approved version (grey), placed points. North is up. */
 function svgMap(item: ReviewItem): string {
   const cand = (item.feature as Feature | undefined)?.geometry;
   const prev = (item.previous_feature as Feature | undefined)?.geometry;
-  const pts = ((item.placements as { lat?: number; lon?: number; km: number | null; status: string }[] | undefined) ?? []).filter((p) => p.lat !== undefined);
+  const pts = placedPoints(item).filter((p) => p.lat !== undefined);
   const construction = ((item.construction as { point?: Position; what: string }[] | undefined) ?? []).filter((c) => c.point);
   const all = [...coords(cand).flat(), ...coords(prev).flat(), ...pts.map((p) => [p.lon!, p.lat!]), ...construction.map((c) => c.point!)];
   if (!all.length) return `<div class="nomap">No shape or placed point to draw.</div>`;
@@ -72,13 +79,16 @@ function badge(t: string): string {
 }
 
 function itemHtml(it: ReviewItem): string {
-  const quotes = [...Object.values(it.quotes ?? {}), ...(((it.placements as { quote?: string }[]) ?? []).map((p) => p.quote ?? ""))];
+  const quotes = [...Object.values(it.quotes ?? {}), ...placedPoints(it).map((p) => p.quote ?? "")];
+  const roads = ((it.placements as { road?: string; file_section?: string | null; placement?: string; points?: Placed[] }[] | undefined) ?? []).filter((p) => p.road);
   const runs = it.runs ? Object.entries(it.runs).filter(([, v]) => v) : [];
   return `<article id="${esc(it.item_id)}" class="item ${it.status}">
 <header><h2>${esc(it.title)}</h2><div>${badge(it.change_type)} ${badge(it.kind)} ${it.rule_id ? `<code>${esc(it.rule_id)}</code>` : ""} <span class="status">${esc(it.status)}${it.decided_by ? ` by ${esc(it.decided_by)} on ${esc(it.decided_on)}` : ""}</span></div></header>
 <p class="decision"><strong>Decision needed:</strong> ${esc(it.decision)}</p>
 <ul class="why">${it.why.map((w) => `<li>${esc(w)}</li>`).join("")}</ul>
-<div class="grid"><section><h3>Source text</h3><p class="meta">${esc(it.source.version)}${it.source.url ? ` · <a href="${esc(it.source.url)}">source</a>` : ""}${it.source.confirmed ? "" : ' · <strong class="warn">unconfirmed excerpt</strong>'}</p>
+${it.images?.length ? `<h3>Page images the readings looked at</h3><div class="pages">${it.images.map((f) => `<a href="../../${esc(f)}"><img loading="lazy" src="../../${esc(f)}" alt="Page ${esc(f.match(/\.p(\d+)\.jpg$/)?.[1] ?? "")} of the PDF"></a>`).join("")}</div>` : ""}
+${roads.length ? `<h3>Roads read</h3><table><tr><th>Road</th><th>File and section</th><th>Points</th><th>Placement</th></tr>${roads.map((r) => `<tr><td>${esc(r.road)}</td><td>${esc(r.file_section ?? "")}</td><td>${(r.points ?? []).map((p) => `${esc(p.status)}${p.km !== null ? ` at km ${esc(p.km)}` : ""}`).join("; ")}</td><td>${esc(r.placement ?? "")}</td></tr>`).join("")}</table>` : ""}
+<div class="grid"><section><h3>Source text</h3><p class="meta">${esc(it.source.version)}${it.source.url ? ` · <a href="${esc(it.source.url)}">source</a>` : ""}${it.source.confirmed ? "" : ' · <strong class="warn">unconfirmed excerpt</strong>'}${(it.links ?? []).filter((l) => l.href !== it.source.url).map((l) => ` · <a href="${esc(l.href)}">${esc(l.label)}</a>`).join("")}</p>
 <blockquote>${highlight(it.source.text, quotes)}</blockquote>
 ${it.quotes && Object.keys(it.quotes).length ? `<table><tr><th>Field</th><th>Quote</th></tr>${Object.entries(it.quotes).map(([f, q]) => `<tr><td><code>${esc(f)}</code></td><td>${esc(q)}</td></tr>`).join("")}</table>` : ""}
 ${it.rejected_quotes?.length ? `<p class="warn">Dropped (quote not found verbatim): ${it.rejected_quotes.map((x) => `<code>${esc(x)}</code>`).join(", ")}</p>` : ""}
@@ -109,7 +119,8 @@ pre{white-space:pre-wrap;font-size:.75rem;max-height:360px;overflow:auto;backgro
 svg .bg{fill:var(--bg)}svg .cand{fill:var(--cand);fill-opacity:.18;stroke:var(--cand);stroke-width:2}svg .prev{fill:none;stroke:var(--prev);stroke-width:2;stroke-dasharray:5 4}
 svg .junction{fill:var(--accent)}svg .pt{fill:var(--mut)}svg .pt.closed,svg .pt.bridge_out,svg .pt.washout,svg .pt.deactivated,svg .pt.gated,svg .pt.restricted{fill:var(--warn)}svg .bar{stroke:var(--fg);stroke-width:2}svg .lbl{fill:var(--fg);font-size:11px;text-anchor:start}
 .legend{font-size:.8rem;color:var(--mut)}.sw{display:inline-block;width:12px;height:12px;vertical-align:middle;border:2px solid}.sw.cand{border-color:var(--cand)}.sw.prev{border-color:var(--prev);border-style:dashed}.sw.junction{border-color:var(--accent);border-radius:50%}
-.nomap{color:var(--mut);font-size:.85rem;padding:20px;border:1px dashed var(--line)}nav a{margin-right:10px}`;
+.nomap{color:var(--mut);font-size:.85rem;padding:20px;border:1px dashed var(--line)}nav a{margin-right:10px}
+.pages{display:flex;gap:10px;overflow-x:auto}.pages img{max-height:420px;max-width:100%;border:1px solid var(--line);background:#fff}`;
 
 export function reviewPacket(opts: { month?: string } = {}) {
   const month = currentMonth(opts.month);

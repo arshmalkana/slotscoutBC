@@ -88,7 +88,47 @@ function setNull(o: Record<string, unknown>, path: string): void {
   else parent[last] = null;
 }
 
+/**
+ * District Manager documents: each road and each km point carries its own quote, from the text, the
+ * OCR text, or printed on a map page. A road or point whose quote is not in the text (or the OCR
+ * text) is not counted; the review packet shows it for a person to check on the page image.
+ */
+function checkDmQuotes(answer: Record<string, unknown>, source: string): QuoteCheck {
+  const cleaned = structuredClone(answer);
+  const rejected: string[] = [];
+  const kept: Record<string, string> = {};
+  const byField = new Map<string, string[]>();
+  for (const q of (answer.quotes as Q[] | undefined) ?? []) byField.set(q.field, [...(byField.get(q.field) ?? []), q.quote]);
+  for (const f of ["signed_on", "rescinded"]) {
+    if (!answer[f]) continue;
+    const good = (byField.get(f) ?? []).find((q) => quoteFound(q, source));
+    if (good) kept[f] = good;
+    else {
+      rejected.push(f);
+      cleaned[f] = f === "rescinded" ? false : null;
+    }
+  }
+  type Road = { quote: string; points?: { quote: string }[] };
+  const roads: Road[] = [];
+  ((answer.roads as Road[] | undefined) ?? []).forEach((r, i) => {
+    if (!quoteFound(r.quote, source)) {
+      rejected.push(`roads[${i}]`);
+      return;
+    }
+    kept[`roads[${i}]`] = r.quote;
+    const points = (r.points ?? []).filter((p, j) => {
+      if (quoteFound(p.quote, source)) return (kept[`roads[${i}].points[${j}]`] = p.quote), true;
+      rejected.push(`roads[${i}].points[${j}]`);
+      return false;
+    });
+    roads.push({ ...structuredClone(r), points: structuredClone(points) });
+  });
+  cleaned.roads = roads;
+  return { rejected, cleaned, quotes: kept };
+}
+
 export function checkQuotes(kind: string, answer: Record<string, unknown>, source: string): QuoteCheck {
+  if (kind === "dm_notice") return checkDmQuotes(answer, source);
   const cleaned = structuredClone(answer);
   const quotes = (answer.quotes as Q[] | undefined) ?? [];
   const byField = new Map<string, string[]>();
@@ -161,6 +201,13 @@ export function comparable(kind: string, a: Record<string, unknown> | null): Rec
   if (kind === "road_notice") {
     const pts = ((a.points as Record<string, unknown>[]) ?? []).map((p) => `${p.km ?? "?"}-${p.km_end ?? ""}:${p.extent}:${p.status}`).sort();
     return { road: norm((a.road as { name?: string }).name), file_section: (a.road as { file_section?: string }).file_section ?? null, rescinded: a.rescinded ?? false, points: pts };
+  }
+  if (kind === "dm_notice") {
+    type Road = { name: string; file_section: string | null; points?: Record<string, unknown>[] };
+    const roads = ((a.roads as Road[]) ?? [])
+      .map((r) => `${norm(r.name)}|${r.file_section ?? ""}|${(r.points ?? []).map((p) => `${p.km ?? "?"}-${p.km_end ?? ""}:${p.extent}:${p.status}`).sort().join(",")}`)
+      .sort();
+    return { legible: a.legible ?? true, rescinded: a.rescinded ?? false, roads };
   }
   if (kind === "bylaw") {
     return {

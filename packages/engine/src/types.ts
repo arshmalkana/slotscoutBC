@@ -274,6 +274,11 @@ export interface RoadNotice {
   /** How the km points were read. */
   extraction?: "rule" | "ai" | "person";
   /**
+   * "page": a notice on the district road safety page. "dm_notice": a road closed in a District
+   * Manager PDF (letter, bulletin or gate map) linked from the page, read by the pipeline.
+   */
+  origin?: "page" | "dm_notice";
+  /**
    * "listed": on the district page now. "removed_pending_review": no longer on the page, but kept
    * until a person confirms it was lifted (looser changes wait for a person, Addendum A 5.2).
    */

@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dm_notice.v1",
+  "title": "District Manager notice, letter, bulletin or map linked from a district road page (Addendum A 2, 5.2)",
+  "type": "object",
+  "properties": {
+    "legible": {
+      "type": "boolean",
+      "description": "False only when neither the text nor the page images can be read at all."
+    },
+    "document_type": {
+      "type": "string",
+      "enum": ["closure_order", "closure_rescinded", "gate_map", "restriction_bulletin", "deactivation_notice", "other"]
+    },
+    "signed_on": {
+      "type": ["string", "null"],
+      "description": "Date the notice was signed or issued, as YYYY-MM-DD."
+    },
+    "rescinded": {
+      "type": "boolean"
+    },
+    "roads": {
+      "type": "array",
+      "description": "Every road the document closes, restricts, gates or deactivates. Empty when it closes nothing.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "file_section": { "type": ["string", "null"] },
+          "quote": {
+            "type": "string",
+            "description": "The exact words that name this road, copied from the text or printed on the map."
+          },
+          "effective_from": { "type": ["string", "null"] },
+          "effective_to": { "type": ["string", "null"] },
+          "points": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "km": { "type": ["number", "null"] },
+                "km_end": { "type": ["number", "null"] },
+                "extent": { "type": "string", "enum": ["at", "beyond", "range", "whole_road", "unknown"] },
+                "status": { "type": "string", "enum": ["caution", "restricted", "closed", "gated", "washout", "bridge_out", "deactivated"] },
+                "seen_on": { "type": "string", "enum": ["text", "map"] },
+                "quote": { "type": "string" }
+              },
+              "required": ["km", "km_end", "extent", "status", "seen_on", "quote"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["name", "file_section", "quote", "effective_from", "effective_to", "points"],
+        "additionalProperties": false
+      }
+    },
+    "map_readings": {
+      "type": "array",
+      "description": "What the page images show, one entry per marked place: the words printed there and what the map marks.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "page": { "type": "integer" },
+          "label": { "type": "string", "description": "The words printed on the map at that place, exactly as printed." },
+          "shows": { "type": "string", "description": "What the map marks there, in plain words (no coordinates)." }
+        },
+        "required": ["page", "label", "shows"],
+        "additionalProperties": false
+      }
+    },
+    "quotes": {
+      "type": "array",
+      "description": "One entry per filled top-level field (signed_on, rescinded): the exact words it came from.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "field": { "type": "string" },
+          "quote": { "type": "string" }
+        },
+        "required": ["field", "quote"],
+        "additionalProperties": false
+      }
+    },
+    "uncertain": {
+      "type": "array",
+      "description": "Field paths the document does not settle. Leave those fields null.",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["legible", "document_type", "signed_on", "rescinded", "roads", "map_readings", "quotes", "uncertain"],
+  "additionalProperties": false
+}

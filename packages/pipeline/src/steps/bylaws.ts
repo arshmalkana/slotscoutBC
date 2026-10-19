@@ -4,9 +4,9 @@ import { capturePage, closeBrowser, type Capture } from "../lib/capture.js";
 import { fetchBuffer } from "../lib/http.js";
 import { addFile, clearFailure, fail, saveManifest, setSource, type Manifest } from "../lib/manifest.js";
 import { P, monthDir } from "../lib/paths.js";
-import { pdfToText } from "../lib/pdf.js";
+import { pdfTextFile, readPdf } from "../lib/pdf.js";
 import { config } from "../lib/config.js";
-import { ensureDir, listFiles, log, readJson, readJsonIf, rel, sha256, writeJson, writeText } from "../lib/util.js";
+import { ensureDir, listFiles, log, progress, readJson, readJsonIf, rel, sha256, writeJson, writeText } from "../lib/util.js";
 
 /**
  * Bylaw finder (Addendum A 6.3, 10.3 step 9): opens each local government's website in the
@@ -76,10 +76,11 @@ async function download(m: Manifest, find: BylawFind, dir: string, title: string
   addFile(m, { path: rel(file), sha256: digest, bytes: res.body.length, source: "bylaws", url, fetchedAt: res.fetchedAt, committed: !big, note: big ? `over ${maxMb} MB: hash kept, file not committed` : undefined });
   let textFile: string | null = null;
   if (isPdf) {
-    const text = pdfToText(file);
-    if (text) {
+    // Scanned bylaws have no text layer: readPdf OCRs those pages.
+    const read = readPdf(file, null);
+    if (read.text.trim()) {
       textFile = join(dir, `${base}.txt`);
-      writeText(textFile, `Source: ${url}\nTitle: ${title}\nFetched: ${res.fetchedAt}\nSHA-256: ${digest}\n\n${text}`);
+      writeText(textFile, pdfTextFile({ Source: url, Title: title, Fetched: res.fetchedAt, "SHA-256": digest }, read));
     }
   }
   find.documents.push({ title, url, file: rel(file), sha256: digest, textFile: textFile ? rel(textFile) : null, bytes: res.body.length });
@@ -197,11 +198,13 @@ export async function pullBylaws(m: Manifest, opts: { force?: boolean; only?: st
   const previous = new Map((opts.force ? [] : earlier).map((f) => [f.key, f]));
   // Sites not picked this time keep their earlier result.
   const results: BylawFind[] = earlier.filter((f) => !sites.some((s) => s.key === f.key));
+  let done = 0;
   try {
     for (const site of sites) {
       const prev = previous.get(site.key);
       if (prev && prev.status !== "failed") {
         results.push(prev);
+        progress("pull", "bylaw sites", ++done, sites.length, `${site.name} already checked`);
         continue;
       }
       log("pull", `bylaws: ${site.name}`);
@@ -212,6 +215,7 @@ export async function pullBylaws(m: Manifest, opts: { force?: boolean; only?: st
       log("pull", `bylaws: ${site.name}: ${f.status}${f.documents.length ? ` (${f.documents.map((d) => d.title).join("; ").slice(0, 160)})` : ""}`);
       writeJson(doneFile, results);
       saveManifest(m);
+      progress("pull", "bylaw sites", ++done, sites.length, `${site.name}: ${f.status}`);
     }
   } finally {
     await closeBrowser();

@@ -9,7 +9,7 @@ import { manifestPath } from "../lib/manifest.js";
 import { P } from "../lib/paths.js";
 import { itemId, upsertItem } from "../lib/review.js";
 import type { Unit } from "../lib/units.js";
-import { log, readJsonIf, writeJson } from "../lib/util.js";
+import { log, progress, readJsonIf, writeJson } from "../lib/util.js";
 import { loadAnswer } from "../steps/extract.js";
 import type { Task } from "../steps/queue.js";
 
@@ -72,7 +72,7 @@ function toPoints(ans: Record<string, any>): NoticePoint[] {
   }));
 }
 
-export async function buildNotices(month: string, units: Unit[], tasks: Task[]): Promise<{ notices: number; placed: number; removed: number; aiRead: number }> {
+export async function buildNotices(month: string, units: Unit[], tasks: Task[]) {
   const prev = readJsonIf<NoticeStore>(STORE(), emptyStore());
   const prevById = new Map(prev.notices.map((n) => [n.id!, n]));
   const manifest = readJsonIf<Manifest | null>(manifestPath(month), null);
@@ -184,7 +184,7 @@ export async function buildNotices(month: string, units: Unit[], tasks: Task[]):
   const current = new Set(store.notices.map((n) => n.id));
   let removed = 0;
   for (const old of prev.notices) {
-    if (current.has(old.id) || old.listing === "removed_approved") continue;
+    if (old.origin === "dm_notice" || current.has(old.id) || old.listing === "removed_approved") continue;
     if (!pagesRead.has(old.orgUnit)) {
       // The page could not be read this time: keep the notice as it was.
       store.notices.push(old);
@@ -227,57 +227,192 @@ export async function buildNotices(month: string, units: Unit[], tasks: Task[]):
       });
     }
   }
-  for (const u of units.filter((x) => x.kind === "dm_notice" && x.text.trim().length < 50)) {
-    upsertItem({
-      item_id: itemId("dm_notice", `notext|${u.id}`),
-      month,
-      kind: "dm_notice",
-      title: `${u.title} (no text layer)`,
-      change_type: "unclear",
-      decision: "This District Manager PDF is a map or a scan with no text to read. Open it and add any closure it shows to rules/road-notices.json as a person-read notice, then approve.",
-      why: ["no text could be extracted, so nothing can be quoted or checked"],
-      source: { text: `PDF with no text layer: ${u.file}`, url: u.url, version: u.version, confirmed: true, file: u.file },
-      links: u.url ? [{ label: "Notice PDF", href: u.url }] : [],
-    });
-  }
+  const dm = await buildDmNotices(month, units, tasks, store, prev, pagesRead, section);
   store.notices.sort((a, b) => a.orgUnit.localeCompare(b.orgUnit) || a.road.localeCompare(b.road));
   writeJson(STORE(), store);
-  log("build", `road notices: ${store.notices.length} kept (${removed} gone from their page, held for a person), ${placed} km points placed, ${aiRead} AI-read`);
-  return { notices: store.notices.length, placed, removed, aiRead };
+  log("build", `road notices: ${store.notices.length} kept (${removed} gone from their page, held for a person), ${placed} km points placed, ${aiRead} AI-read; District Manager PDFs: ${dm.read} read, ${dm.roads} road(s) closed or restricted in them, ${dm.waiting} waiting for extraction, ${dm.unreadable} unreadable`);
+  return { notices: store.notices.length, placed, removed, aiRead, dmNotices: dm };
 }
 
-/** District Manager notice PDFs must agree with the web notice (Addendum A 2). */
-export function checkDmNotices(month: string, tasks: Task[], store: NoticeStore): number {
-  let flagged = 0;
-  for (const t of tasks.filter((x) => x.kind === "road_notice" && x.meta.pdf)) {
+type DmPoint = { km: number | null; km_end: number | null; extent: string; status: NoticePoint["status"]; seen_on: "text" | "map"; quote: string };
+type DmRoad = { name: string; file_section: string | null; quote: string; effective_from: string | null; effective_to: string | null; points: DmPoint[] };
+
+const roadKey = (r: { name: string; file_section: string | null }) => (r.file_section ?? r.name).toLowerCase().replace(/\b(forest service road|fsr)\b/g, "fsr").replace(/[^a-z0-9.]+/g, " ").trim();
+
+/**
+ * District Manager PDFs linked from the district pages (Addendum A 2, 5.2): letters, bulletins and
+ * gate maps, read from their text, OCR text and page images. Every road they close or restrict goes
+ * into the store as an AI reading. It counts on the map only after a person approves it; until then
+ * a closing reading keeps P6 grey on that road ("not yet checked"), never green. A PDF goes to a
+ * person as unreadable only when OCR found no text and the page images could not be read either.
+ */
+async function buildDmNotices(
+  month: string,
+  units: Unit[],
+  tasks: Task[],
+  store: NoticeStore,
+  prev: NoticeStore,
+  pagesRead: Set<string>,
+  section: (fs: string) => Promise<Geometry | null>,
+): Promise<{ read: number; roads: number; waiting: number; unreadable: number; disagree: number }> {
+  const now = today();
+  const prevById = new Map(prev.notices.filter((n) => n.origin === "dm_notice").map((n) => [n.id!, n]));
+  const made = new Set<string>();
+  const out = { read: 0, roads: 0, waiting: 0, unreadable: 0, disagree: 0 };
+  const dmUnits = units.filter((x) => x.kind === "dm_notice");
+  for (const [i, u] of dmUnits.entries()) {
+    progress("build", "District Manager PDFs", i + 1, dmUnits.length, u.title.replace(/^District Manager notice /, ""));
+    const org = String(u.meta.org);
+    const pdfLinks = u.url ? [{ label: "Notice PDF", href: u.url }] : [];
+    const t = tasks.find((x) => x.kind === "dm_notice" && x.unit_ids.includes(u.id));
+    const unreadable = (why: string[]) => {
+      out.unreadable++;
+      upsertItem({
+        item_id: itemId("dm_notice", `notext|${u.id}`),
+        month,
+        kind: "dm_notice",
+        title: `${u.title} (could not be read)`,
+        change_type: "unclear",
+        decision: "OCR and the page images could not be read. Open the PDF and add any closure it shows to rules/road-notices.json as a person-read notice, then approve.",
+        why,
+        source: { text: u.text.trim() || `No text in ${u.file}`, url: u.url, version: u.version, confirmed: true, file: u.file },
+        images: (u.meta.images as string[] | undefined) ?? [],
+        links: pdfLinks,
+      });
+    };
+    if (!t) {
+      // queue only skips a PDF that has neither text (layer or OCR) nor a page image.
+      unreadable([`read as: ${String(u.meta.read ?? "no text layer")}`, "OCR found no text and no page image could be made, so there is nothing to read or quote"]);
+      continue;
+    }
     const r1 = loadAnswer(1, t.task_id);
     const r2 = loadAnswer(2, t.task_id);
-    if (!r1?.answer || !r2?.answer) continue;
-    const q1 = checkQuotes("road_notice", r1.answer, t.source_text);
-    const dis = disagreements("road_notice", q1.cleaned, checkQuotes("road_notice", r2.answer, t.source_text).cleaned);
-    const fs = (q1.cleaned.road as { file_section?: string | null })?.file_section;
-    const web = store.notices.find((n) => n.orgUnit === t.meta.org && n.fileSection && n.fileSection === fs);
-    const pdfBlocking = toPoints(q1.cleaned).some((p) => isBlockingStatus(p.status));
-    const webBlocking = !!web?.points?.some((p) => isBlockingStatus(p.status));
-    const mismatch = !!web && pdfBlocking !== webBlocking;
-    if (!dis.length && !mismatch && web) continue;
-    flagged++;
+    if (!r1 || !r2) {
+      out.waiting++;
+      continue;
+    }
+    if (!r1.answer || !r2.answer || schemaErrors(t.schema, r1.answer).length || schemaErrors(t.schema, r2.answer).length) {
+      unreadable([
+        `read as: ${String(u.meta.read)}`,
+        ...[r1, r2].map((r, k) => (!r.answer ? `run ${k + 1} gave no answer${r.error ? ` (${r.error})` : ""}` : `run ${k + 1} answer rejected by the schema: ${schemaErrors(t.schema, r.answer).slice(0, 3).join("; ")}`)),
+      ]);
+      continue;
+    }
+    if (!r1.answer.legible && !r2.answer.legible) {
+      unreadable([`read as: ${String(u.meta.read)}`, "both independent readings of the text, the OCR text and the page images found them illegible"]);
+      continue;
+    }
+    out.read++;
+    const q1 = checkQuotes("dm_notice", r1.answer, t.source_text);
+    const q2 = checkQuotes("dm_notice", r2.answer, t.source_text);
+    const dis = disagreements("dm_notice", q1.cleaned, q2.cleaned);
+    if (dis.length) out.disagree++;
+    const rescinded = !!q1.cleaned.rescinded;
+    const signed = (q1.cleaned.signed_on as string | null) ?? null;
+    const roads = (q1.cleaned.roads as DmRoad[]) ?? [];
+    const rejected = [...new Set([...q1.rejected, ...q2.rejected])];
+    const mapOnly = ((r1.answer.roads as DmRoad[]) ?? []).flatMap((r, k) => [
+      ...(q1.rejected.includes(`roads[${k}]`) ? [`${r.name}: "${r.quote}"`] : []),
+      ...r.points.filter((_, j) => q1.rejected.includes(`roads[${k}].points[${j}]`)).map((p) => `${r.name} ${p.status}${p.km !== null ? ` at km ${p.km}` : ""}: "${p.quote}" (${p.seen_on})`),
+    ]);
+    const placements: unknown[] = [];
+    for (const r of roads) {
+      const pts: NoticePoint[] = r.points.map((p) => ({ km: p.km ?? null, ...(p.km_end != null ? { kmEnd: p.km_end } : {}), extent: p.extent === "whole_road" ? "unknown" : (p.extent as NoticePoint["extent"]), status: p.status, quote: p.quote }));
+      if (!pts.length) pts.push({ km: null, extent: "unknown", status: "closed", quote: r.quote });
+      // Code, not the reading, places km points: along the FTEN section named in the PDF.
+      let note = r.file_section ? `file ${r.file_section}` : "no file and section number in the PDF";
+      if (r.file_section?.includes(".") && pts.some((p) => p.km !== null)) {
+        const g = await section(r.file_section);
+        if (g) {
+          note = `section ${r.file_section} is ${(lineLengthM(g) / 1000).toFixed(1)} km long as mapped`;
+          for (const p of pts) {
+            if (p.km === null) continue;
+            const at = pointAlong(g, p.km * 1000);
+            if (at) Object.assign(p, { lat: Number(at.lat.toFixed(6)), lon: Number(at.lon.toFixed(6)) });
+            else note += `; km ${p.km} is past the mapped end`;
+          }
+        } else note = `FTEN section ${r.file_section} not found`;
+      }
+      placements.push({ road: r.name, file_section: r.file_section, points: pts, placement: note });
+      if (rescinded) continue;
+      const id = `dm|${org}|${u.id.replace(/^dm:/, "")}|${roadKey(r)}`;
+      if (made.has(id)) continue;
+      made.add(id);
+      out.roads++;
+      const old = prevById.get(id);
+      const bare = (ps: NoticePoint[] | undefined) => JSON.stringify((ps ?? []).map(({ lat: _a, lon: _b, ...p }) => p));
+      const approved = !!old?.approvedBy && bare(old.ai?.points) === bare(pts);
+      const blocking = pts.some((p) => isBlockingStatus(p.status));
+      store.notices.push({
+        id,
+        district: store.notices.find((n) => n.orgUnit === org && n.origin !== "dm_notice")?.district ?? org,
+        section: blocking ? "closure" : "warning",
+        road: r.name,
+        ...(r.file_section ? { fileSection: r.file_section } : {}),
+        ...(signed ? { postedOn: signed, date: signed } : {}),
+        text: [r.quote, ...pts.map((p) => p.quote)].filter((x, k, a) => a.indexOf(x) === k).join(" "),
+        kind: blocking ? "closed" : "caution",
+        url: u.url ?? "",
+        points: approved ? pts : [],
+        needsAi: !approved && blocking,
+        extraction: "ai",
+        origin: "dm_notice",
+        listing: "listed",
+        orgUnit: org,
+        firstSeen: old?.firstSeen ?? now,
+        lastSeen: now,
+        approvedBy: approved ? old!.approvedBy : null,
+        approvedOn: approved ? old!.approvedOn : null,
+        placement: { sectionLengthKm: null, note },
+        ai: { task_id: t.task_id, agreed: !dis.length, points: pts, rescinded },
+      });
+    }
+    const roadList = roads.map((r) => r.name).join(", ");
+    if (!roads.length && !dis.length && !rescinded && !mapOnly.length) continue;
+    const allApproved = roads.length > 0 && !rescinded && roads.every((r) => store.notices.find((n) => n.id === `dm|${org}|${u.id.replace(/^dm:/, "")}|${roadKey(r)}`)?.approvedBy);
+    if (allApproved) continue;
     upsertItem({
       item_id: itemId("dm_notice", t.task_id),
       month,
       kind: "dm_notice",
-      title: t.title,
-      change_type: pdfBlocking && !webBlocking ? "stricter" : "unclear",
-      decision: "Compare the District Manager notice with the web notice and correct the store if they differ.",
+      title: `${u.title}: ${rescinded ? "rescinds a closure" : roads.length ? `${roads.length} road${roads.length > 1 ? "s" : ""} closed or restricted (${roadList.slice(0, 120)})` : "no road closure read"}`,
+      change_type: rescinded ? "looser" : roads.some((r) => r.points.some((p) => isBlockingStatus(p.status)) || !r.points.length) ? "stricter" : "unclear",
+      decision: rescinded
+        ? "This District Manager document rescinds a closure. Check it; approve the removal of the matching web notice only if the closure is really lifted."
+        : "Check each road and km point against the PDF and its page images. Approving lets these closures count on the map; until then P6 shows Cannot confirm on these roads.",
       why: [
+        `read from: ${String(t.meta.read ?? "text layer")}${(t.images ?? []).length ? `, and ${t.images!.length} page image(s) looked at by both readings` : ""}`,
+        "a person checks every AI reading before it counts (Addendum A 7.2: the gold set has not passed yet)",
         ...(dis.length ? [`AI runs disagree: ${dis.join("; ")}`] : []),
-        ...(!web ? [`no web notice on the ${t.meta.org} page matches file section ${fs ?? "(none read)"}`] : []),
-        ...(mismatch ? [`the PDF ${pdfBlocking ? "closes or restricts" : "does not close"} the road, the web notice ${webBlocking ? "does" : "does not"}`] : []),
+        ...(mapOnly.length ? [`read from the map image but not found in the text or OCR text, so not counted: ${mapOnly.join("; ")}`] : []),
+        ...(rejected.length && !mapOnly.length ? [`quotes not found verbatim: ${rejected.join(", ")}`] : []),
       ],
-      source: { text: t.source_text.slice(0, 6000), url: (t.meta.pdf as string) ?? null, version: t.source.version, confirmed: true, file: t.source.file },
+      source: { text: t.source_text.slice(0, 8000), url: u.url, version: u.version, confirmed: true, file: u.file },
       runs: { run1: r1, run2: r2 },
       disagreements: dis,
+      rejected_quotes: rejected,
+      placements,
+      images: t.images ?? [],
+      links: pdfLinks,
     });
   }
-  return flagged;
+  // Roads from a PDF that is no longer linked: an approved one stays until a person approves its
+  // removal (looser); an unapproved reading never counted and goes with its PDF.
+  for (const old of prev.notices.filter((n) => n.origin === "dm_notice" && !made.has(n.id!))) {
+    if (!pagesRead.has(old.orgUnit)) store.notices.push(old);
+    else if (old.approvedBy && old.listing !== "removed_approved") {
+      store.notices.push({ ...old, listing: "removed_pending_review" });
+      upsertItem({
+        item_id: itemId("road_notice_removed", old.id!),
+        month,
+        kind: "road_notice_removed",
+        title: `${old.road}: District Manager notice no longer linked from the ${old.district} page`,
+        change_type: "looser",
+        decision: "Check whether the closure was lifted. Approve the removal only if it was; until then it stays on the map.",
+        why: ["a closure that disappears is a looser change (Addendum A 5.2 step 4)"],
+        source: { text: old.text, url: old.url ?? null, version: `last seen ${old.lastSeen}`, confirmed: true, file: null },
+      });
+    }
+  }
+  return out;
 }

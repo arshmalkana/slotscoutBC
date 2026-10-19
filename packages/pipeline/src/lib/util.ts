@@ -86,9 +86,39 @@ export function quoteFound(quote: string, source: string): boolean {
 }
 
 let logFile: string | null = null;
+let progressFile: string | null = null;
 
 export function setLogMonth(month: string): void {
   logFile = join(ensureDir(P.reports), `${month}-run.log`);
+  progressFile = join(P.reports, `${month}-progress.json`);
+}
+
+export interface ProgressEntry {
+  step: string;
+  part: string;
+  done: number;
+  total: number;
+  left: number;
+  percent: number;
+  last: string;
+  at: string;
+}
+
+export const progressPath = (month: string) => join(P.reports, `${month}-progress.json`);
+
+/**
+ * Work done and work left for one part of a step ("pull" / "GIS layers": 3 of 33). Logged as
+ * "[pull] GIS layers 3/33 (9%), 30 left: bc_parks", and kept in reports/<month>-progress.json,
+ * which status.json and the site's Sources page show.
+ */
+export function progress(step: string, part: string, done: number, total: number, last = ""): void {
+  const left = Math.max(0, total - done);
+  const percent = total ? Math.floor((done / total) * 100) : 100;
+  log(step, `${part} ${done}/${total} (${percent}%)${left ? `, ${left} left` : ", all done"}${last ? `: ${last}` : ""}`);
+  if (!progressFile) return;
+  const all = readJsonIf<Record<string, ProgressEntry>>(progressFile, {});
+  all[`${step}: ${part}`] = { step, part, done, total, left, percent, last: last.slice(0, 160), at: new Date().toISOString() };
+  writeJson(progressFile, all, { stable: true });
 }
 
 export function log(step: string, msg: string): void {

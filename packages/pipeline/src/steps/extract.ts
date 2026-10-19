@@ -3,7 +3,8 @@ import { basename, join } from "node:path";
 import Anthropic from "@anthropic-ai/sdk";
 import { config, currentMonth, extractorMode, loadEnv, type Mode } from "../lib/config.js";
 import { P } from "../lib/paths.js";
-import { listFiles, log, readJsonIf, rel, writeJson, writeText } from "../lib/util.js";
+import { existingImages } from "../lib/pdf.js";
+import { listFiles, log, progress, readJsonIf, rel, writeJson, writeText } from "../lib/util.js";
 import { loadTasks, type Task } from "./queue.js";
 
 /**
@@ -43,9 +44,24 @@ export function schemaFor(id: string): Record<string, unknown> {
   return rest;
 }
 
-/** The only user content a model ever sees: the public source text (Addendum A 7.5). */
+const pageOf = (img: string) => Number(img.match(/\.p(\d+)\.jpg$/)?.[1] ?? 0);
+
+/** The only user content a model ever sees: the public source text and page images (Addendum A 7.5). */
 export function userMessage(t: Task): string {
-  return `Source: ${t.title}${t.source.version ? ` (${t.source.version})` : ""}\n\n<source_text>\n${t.source_text}\n</source_text>\n\nReturn the JSON for this text.`;
+  const imgs = t.images ?? [];
+  const pics = imgs.length ? `\n\nPage images of the map or scan pages are attached (page ${imgs.map(pageOf).join(", page ")}). Look at them as well as the text.` : "";
+  return `Source: ${t.title}${t.source.version ? ` (${t.source.version})` : ""}\n\n<source_text>\n${t.source_text}\n</source_text>${pics}\n\nReturn the JSON for this ${imgs.length ? "document" : "text"}.`;
+}
+
+/** Message content for the API: each page image with its page number, then the text. */
+function userContent(t: Task): Anthropic.Beta.Messages.BetaContentBlockParam[] {
+  const blocks: Anthropic.Beta.Messages.BetaContentBlockParam[] = [];
+  for (const img of existingImages(t.images ?? [])) {
+    blocks.push({ type: "text", text: `Page ${pageOf(img)} image:` });
+    blocks.push({ type: "image", source: { type: "base64", media_type: "image/jpeg", data: readFileSync(join(P.root, img)).toString("base64") } });
+  }
+  blocks.push({ type: "text", text: userMessage(t) });
+  return blocks;
 }
 
 async function runApi(client: Anthropic, t: Task, run: 1 | 2): Promise<Answer> {
@@ -56,7 +72,7 @@ async function runApi(client: Anthropic, t: Task, run: 1 | 2): Promise<Answer> {
       model: ai.model,
       max_tokens: ai.max_tokens,
       system: promptText(t.prompt),
-      messages: [{ role: "user", content: userMessage(t) }],
+      messages: [{ role: "user", content: userContent(t) }],
       output_config: { effort: ai.effort, format: { type: "json_schema", schema: schemaFor(t.schema) } },
       ...(ai.server_side_fallback ? { betas: ["server-side-fallback-2026-07-01"], fallbacks: "default" as const } : {}),
     });
@@ -93,6 +109,16 @@ function agentBrief(t: Task, run: 1 | 2): string {
     JSON.stringify(schemaFor(t.schema), null, 1),
     "```",
     "",
+    ...((t.images ?? []).length
+      ? [
+          "## Page images",
+          "",
+          "Open each image with the Read tool and look at it before answering. Read the words printed on the map; never write coordinates or measure from the map.",
+          "",
+          ...(t.images ?? []).map((img) => `- \`${img}\` (page ${pageOf(img)})`),
+          "",
+        ]
+      : []),
     "## Source",
     "",
     userMessage(t),
@@ -113,11 +139,12 @@ export async function extract(opts: { month?: string; only?: string[]; force?: b
     let done = 0;
     for (const run of [1, 2] as const) {
       if (run > runs) break;
-      for (const t of missing(run)) {
+      const todo = missing(run);
+      for (const [i, t] of todo.entries()) {
         const a = await runApi(client, t, run);
         writeJson(answerPath(run, t.task_id), a);
         done++;
-        log("extract", `${t.task_id} run ${run}: ${a.answer ? "ok" : `no answer (${a.error})`}${a.fallback ? ` [served by fallback ${a.fallback.to}]` : ""}`);
+        progress("extract", `run ${run} answers`, i + 1, todo.length, `${t.task_id}: ${a.answer ? "ok" : `no answer (${a.error})`}${a.fallback ? ` [served by fallback ${a.fallback.to}]` : ""}`);
       }
     }
     log("extract", `api mode: ${done} answer file(s) written`);
@@ -141,14 +168,16 @@ export async function extract(opts: { month?: string; only?: string[]; force?: b
       ? "Run 1: Claude Code reads each brief in `queue/agent/run1/` and writes the answer file it names. Run 2: for each brief in `queue/agent/run2/`, start a fresh subagent and give it only that brief (it holds the prompt, schema and source text, never the run-1 answer); it replies with file paths only, so nothing of run 2 reaches run 1. Then run `make build`."
       : "A person fills each answer file named in the briefs, using only the brief. Then run `make build`.",
     "",
-    `Run 1 still needed: ${need1.length}. Run 2 still needed: ${need2.length}.`,
+    `Progress: run 1 ${tasks.length - need1.length} of ${tasks.length} done (${need1.length} left); run 2 ${tasks.length - need2.length} of ${tasks.length} done (${need2.length} left).`,
     "",
-    "| Task | Kind | Title | Run 1 | Run 2 |",
-    "| --- | --- | --- | --- | --- |",
-    ...tasks.map((t) => `| ${t.task_id} | ${t.kind} | ${t.title.replace(/\|/g, "/").slice(0, 90)} | ${existsSync(answerPath(1, t.task_id)) ? "done" : `[brief](agent/run1/${t.task_id}.md)`} | ${existsSync(answerPath(2, t.task_id)) ? "done" : `[brief](agent/run2/${t.task_id}.md)`} |`),
+    "| Task | Kind | Title | Images | Run 1 | Run 2 |",
+    "| --- | --- | --- | ---: | --- | --- |",
+    ...tasks.map((t) => `| ${t.task_id} | ${t.kind} | ${t.title.replace(/\|/g, "/").slice(0, 90)} | ${(t.images ?? []).length || ""} | ${existsSync(answerPath(1, t.task_id)) ? "done" : `[brief](agent/run1/${t.task_id}.md)`} | ${existsSync(answerPath(2, t.task_id)) ? "done" : `[brief](agent/run2/${t.task_id}.md)`} |`),
     "",
   ];
   writeText(join(P.queue, "AGENT_TASKS.md"), L.join("\n"));
+  progress("extract", "run 1 answers", tasks.length - need1.length, tasks.length, `${need1.length} brief(s) in queue/agent/run1`);
+  if (runs >= 2) progress("extract", "run 2 answers", tasks.length - need2.length, tasks.length, `${need2.length} brief(s) in queue/agent/run2`);
   log("extract", `${mode} mode: ${need1.length} run-1 and ${need2.length} run-2 answers needed; see ${rel(join(P.queue, "AGENT_TASKS.md"))}`);
   return { mode, need1: need1.length, need2: need2.length };
 }
