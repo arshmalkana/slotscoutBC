@@ -227,6 +227,19 @@ export async function buildNotices(month: string, units: Unit[], tasks: Task[]):
       });
     }
   }
+  for (const u of units.filter((x) => x.kind === "dm_notice" && x.text.trim().length < 50)) {
+    upsertItem({
+      item_id: itemId("dm_notice", `notext|${u.id}`),
+      month,
+      kind: "dm_notice",
+      title: `${u.title} (no text layer)`,
+      change_type: "unclear",
+      decision: "This District Manager PDF is a map or a scan with no text to read. Open it and add any closure it shows to rules/road-notices.json as a person-read notice, then approve.",
+      why: ["no text could be extracted, so nothing can be quoted or checked"],
+      source: { text: `PDF with no text layer: ${u.file}`, url: u.url, version: u.version, confirmed: true, file: u.file },
+      links: u.url ? [{ label: "Notice PDF", href: u.url }] : [],
+    });
+  }
   store.notices.sort((a, b) => a.orgUnit.localeCompare(b.orgUnit) || a.road.localeCompare(b.road));
   writeJson(STORE(), store);
   log("build", `road notices: ${store.notices.length} kept (${removed} gone from their page, held for a person), ${placed} km points placed, ${aiRead} AI-read`);

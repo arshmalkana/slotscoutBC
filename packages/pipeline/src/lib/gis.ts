@@ -6,7 +6,7 @@ import { config } from "./config.js";
 import { politeFetch } from "./http.js";
 import type { LayerEntry } from "./manifest.js";
 import type { Source } from "./registry.js";
-import { ensureDir, log } from "./util.js";
+import { ensureDir, log, sleep } from "./util.js";
 
 /**
  * Province-wide GIS pulls (main spec 4.1; Addendum A 10.3 step 3). Each layer is paged through in
@@ -55,6 +55,27 @@ export async function serverCount(s: Source): Promise<number> {
   return s.endpoint.includes("/arcgis/rest/") ? arcgisCount(s) : wfsHits(s);
 }
 
+/**
+ * One page, retried when the connection drops while the body is still arriving or the JSON is
+ * cut short (politeFetch only retries before the response starts). A page that keeps failing
+ * fails the layer, which is recorded and turns its checks grey.
+ */
+async function fetchPage(url: string, attempts = 3): Promise<Page & { bytes: number }> {
+  let last: unknown;
+  for (let i = 1; i <= attempts; i++) {
+    try {
+      const r = await politeFetch(url, { kind: "api", timeoutMs: 300_000 });
+      const text = await r.text();
+      return { ...(JSON.parse(text) as Page), bytes: text.length };
+    } catch (e) {
+      last = e;
+      log("pull", `page retry ${i}/${attempts}: ${(e as Error).message}`);
+      await sleep(5000 * i);
+    }
+  }
+  throw last instanceof Error ? last : new Error(String(last));
+}
+
 export async function pullLayer(s: Source, outDir: string, previousCount: number | null): Promise<LayerEntry> {
   const { page_size, store_bodies_up_to_features, max_count_change } = config().gis;
   const startedAt = new Date().toISOString();
@@ -80,10 +101,8 @@ export async function pullLayer(s: Source, outDir: string, previousCount: number
     } else {
       url = wfsUrl(s, { outputFormat: "application/json", count: String(size), startIndex: String(start), ...(sortBy ? { sortBy } : {}) });
     }
-    const r = await politeFetch(url, { kind: "api", timeoutMs: 300_000 });
-    const text = await r.text();
-    bytes += text.length;
-    const page = JSON.parse(text) as Page;
+    const page = await fetchPage(url);
+    bytes += page.bytes;
     pages++;
     for (const f of page.features) {
       const line = JSON.stringify([f.geometry, f.properties]);

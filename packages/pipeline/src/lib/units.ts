@@ -151,7 +151,8 @@ const CLAUSE_RE = /^\s*(\d{1,3}(?:\.\d{1,3})*)[.)]?\s+(?=\S)/;
 
 /** Splits bylaw text into numbered clauses; text before the first number is the preamble. */
 export function splitBylaw(text: string, docId: string, base: Omit<Unit, "hash" | "id" | "kind" | "text" | "meta">): Unit[] {
-  const body = text.replace(/^(Source|Title|Fetched|SHA-256):.*\n/gm, "");
+  // Capture headers (time, URL, hash) change on every pull and are not part of the bylaw.
+  const body = text.replace(/^(Source|Title|Fetched|SHA-256|Captured|URL):.*\n/gm, "");
   const units: Unit[] = [];
   let cur: { n: string; lines: string[] } = { n: "preamble", lines: [] };
   const flush = () => {

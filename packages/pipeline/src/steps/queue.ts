@@ -89,7 +89,8 @@ export function queue(opts: { month?: string } = {}) {
     if (n.needsAi) tasks.push(makeTask(month, "road_notice", [u], u.text, u.title, { org: u.meta.org, noticeId: u.id.replace(/^notice:/, "") }));
     else ruleParsed++;
   }
-  for (const u of work.filter((x) => x.kind === "dm_notice")) {
+  // A notice PDF with no text layer (a map or a scan) has nothing to quote; build sends it to a person.
+  for (const u of work.filter((x) => x.kind === "dm_notice" && x.text.trim().length >= 50)) {
     tasks.push(makeTask(month, "road_notice", [u], u.text.slice(0, 30_000), u.title, { org: u.meta.org, pdf: u.url }));
   }
 
@@ -131,7 +132,9 @@ export function queue(opts: { month?: string } = {}) {
   let created = 0;
   for (const t of tasks) {
     const existing = readJsonIf<Task | null>(taskPath(t.task_id), null);
-    if (existing) continue;
+    // The same unit text gives the same task in any month; the earliest month owns it, so a later
+    // run's clean-up never removes a task an earlier month still needs.
+    if (existing && existing.month <= t.month) continue;
     writeJson(taskPath(t.task_id), t);
     created++;
   }
