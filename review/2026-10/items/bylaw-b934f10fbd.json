@@ -9,7 +9,7 @@
     "a person checks every extracted bylaw rule before first use"
   ],
   "source": {
-    "text": "Captured: 2026-10-19T17:51:38.839Z URL: https://www.slrd.bc.ca/inside-slrd/bylaws/firearms-electoral-area This website uses cookies to ensure you get the best experience on our website Close Skip to main content Select Language English 简体中文 繁體中文 Hrvatski Čeština‎ Français Deutsch Italiano Español Українська Emergency Alerts & Evacuation Orders Contact Careers Main About Us Inside the SLRD Services Planning & Development Services Protective & Emergency Services Open the search form Inside the SLRD Bylaws Employment Contracting Opportunities Current Projects & Initiatives Get Involved & Stay Connected Corporate Services Meetings & Agendas News & Events Notices Accessibility Community Organizations Reports Breadcrumb Home Inside the SLRD Bylaws Firearms Electoral Area A Firearms Electoral Area A Bylaw Number 1293-2013 Bylaw Type(s) Planning Regulatory Bylaws A bylaw of the Squamish-Lillooet Regional District to regulate and prohibit the use of firearms within Electoral Area A. (Consolidated) Applicable Communities Electoral Area A View Firearms Electoral Area A PDF Facebook YouTube Twitter (X) Instagram Box 219, 1350 Aster Street Pemberton BC, V0N 2L0 Office Hours (604) 894-6371 (800) 298-7753 info@slrd.bc.ca Territorial Acknowledgement The Squamish-Lillooet Regional District is found within the traditional territories of several First Nations, including the Sḵwx̱wú7mesh Úxwumixw (Squamish), St’át’imc and Líl̓wat Nations. Small parts of the SLRD also overlap with the traditional territories of the Stó:lō, Tsleil-Waututh, Nlaka’pamux, Tŝilhqot’in, and Secwepemc Nations. Indigenous Relations © Squamish-Lillooet Regional District Footer Disclaimer Privacy Policy Municipal Website by Upanup",
+    "text": "This website uses cookies to ensure you get the best experience on our website Close Skip to main content Select Language English 简体中文 繁體中文 Hrvatski Čeština‎ Français Deutsch Italiano Español Українська Emergency Alerts & Evacuation Orders Contact Careers Main About Us Inside the SLRD Services Planning & Development Services Protective & Emergency Services Open the search form Inside the SLRD Bylaws Employment Contracting Opportunities Current Projects & Initiatives Get Involved & Stay Connected Corporate Services Meetings & Agendas News & Events Notices Accessibility Community Organizations Reports Breadcrumb Home Inside the SLRD Bylaws Firearms Electoral Area A Firearms Electoral Area A Bylaw Number 1293-2013 Bylaw Type(s) Planning Regulatory Bylaws A bylaw of the Squamish-Lillooet Regional District to regulate and prohibit the use of firearms within Electoral Area A. (Consolidated) Applicable Communities Electoral Area A View Firearms Electoral Area A PDF Facebook YouTube Twitter (X) Instagram Box 219, 1350 Aster Street Pemberton BC, V0N 2L0 Office Hours (604) 894-6371 (800) 298-7753 info@slrd.bc.ca Territorial Acknowledgement The Squamish-Lillooet Regional District is found within the traditional territories of several First Nations, including the Sḵwx̱wú7mesh Úxwumixw (Squamish), St’át’imc and Líl̓wat Nations. Small parts of the SLRD also overlap with the traditional territories of the Stó:lō, Tsleil-Waututh, Nlaka’pamux, Tŝilhqot’in, and Secwepemc Nations. Indigenous Relations © Squamish-Lillooet Regional District Footer Disclaimer Privacy Policy Municipal Website by Upanup",
     "url": "https://www.slrd.bc.ca/inside-slrd/bylaws/firearms-electoral-area",
     "version": "Captured 2026-10-19",
     "confirmed": true,
@@ -18,13 +18,13 @@
   "runs": {
     "run1": [
       {
-        "task_id": "bylaw-bf74c22930e3",
+        "task_id": "bylaw-1af291427d0b",
         "run": 1,
         "mode": "agent",
         "model": "claude-opus-5-5 (Claude Code)",
         "prompt_version": "bylaw.v1",
         "schema_id": "bylaw.v1",
-        "produced_at": "2026-10-19T17:52:28Z",
+        "produced_at": "2026-10-19T19:17:26Z",
         "answer": {
           "bylaw": {
             "title": "Firearms Electoral Area A",
@@ -61,13 +61,13 @@
     ],
     "run2": [
       {
-        "task_id": "bylaw-bf74c22930e3",
+        "task_id": "bylaw-1af291427d0b",
         "run": 2,
         "mode": "agent",
         "model": "claude-opus-5-5 (Claude Code subagent)",
         "prompt_version": "bylaw.v1",
         "schema_id": "bylaw.v1",
-        "produced_at": "2026-10-19T17:54:01Z",
+        "produced_at": "2026-10-19T19:19:25Z",
         "answer": {
           "bylaw": {
             "title": "Firearms Electoral Area A",
@@ -92,7 +92,7 @@
             },
             {
               "field": "target_shooting",
-              "quote": "A bylaw of the Squamish-Lillooet Regional District to regulate and prohibit the use of firearms within Electoral Area A. (Consolidated)"
+              "quote": "A bylaw of the Squamish-Lillooet Regional District to regulate and prohibit the use of firearms within Electoral Area A."
             }
           ],
           "uncertain": [
@@ -117,5 +117,5 @@
   ],
   "status": "open",
   "created": "2026-10-19T17:57:03.463Z",
-  "updated": "2026-10-19T18:02:21.955Z"
+  "updated": "2026-10-19T19:35:20.470Z"
 }

@@ -1,0 +1,36 @@
+{
+  "task_id": "road_notice-7a2c63303ff2",
+  "run": 1,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code)",
+  "prompt_version": "road_notice.v1",
+  "schema_id": "road_notice.v1",
+  "produced_at": "2026-10-19T19:18:00Z",
+  "answer": {
+    "road": {
+      "name": "Banon Creek Forest Service Road",
+      "file_section": null
+    },
+    "posted_on": null,
+    "rescinded": false,
+    "points": [
+      {
+        "km": null,
+        "km_end": null,
+        "extent": "whole_road",
+        "status": "gated",
+        "quote": "the access gate to the Banon Creek Forest Service Road at the end of South Watts Road will be closed Monday to Friday."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "road.name",
+        "quote": "Banon Creek Forest Service Road"
+      }
+    ],
+    "uncertain": [
+      "road.file_section",
+      "posted_on"
+    ]
+  }
+}

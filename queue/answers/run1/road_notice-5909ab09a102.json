@@ -1,0 +1,41 @@
+{
+  "task_id": "road_notice-5909ab09a102",
+  "run": 1,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code)",
+  "prompt_version": "road_notice.v1",
+  "schema_id": "road_notice.v1",
+  "produced_at": "2026-10-19T19:18:25Z",
+  "answer": {
+    "road": {
+      "name": "Hangover FSR",
+      "file_section": "8229.06"
+    },
+    "posted_on": "2024-10-25",
+    "rescinded": false,
+    "points": [
+      {
+        "km": 0,
+        "km_end": null,
+        "extent": "beyond",
+        "status": "closed",
+        "quote": "FSR (8229.06) is hereby closed at 0.0 km effective immediately until further notice."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "road.name",
+        "quote": "Hangover FSR"
+      },
+      {
+        "field": "road.file_section",
+        "quote": "8229.06"
+      },
+      {
+        "field": "posted_on",
+        "quote": "October 25, 2024"
+      }
+    ],
+    "uncertain": []
+  }
+}

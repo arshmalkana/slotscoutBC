@@ -1,0 +1,41 @@
+{
+  "task_id": "road_notice-14912ad08536",
+  "run": 1,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code)",
+  "prompt_version": "road_notice.v1",
+  "schema_id": "road_notice.v1",
+  "produced_at": "2026-10-19T19:18:25Z",
+  "answer": {
+    "road": {
+      "name": "Bill Brown Forest Service Road",
+      "file_section": "8229.01"
+    },
+    "posted_on": "2024-06-07",
+    "rescinded": false,
+    "points": [
+      {
+        "km": 0.5,
+        "km_end": null,
+        "extent": "beyond",
+        "status": "closed",
+        "quote": "Forest Service Road (8229.01) is hereby closed at 0.5 km effective immediately until further notice."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "road.name",
+        "quote": "Bill Brown Forest Service Road"
+      },
+      {
+        "field": "road.file_section",
+        "quote": "8229.01"
+      },
+      {
+        "field": "posted_on",
+        "quote": "June 7, 2024"
+      }
+    ],
+    "uncertain": []
+  }
+}

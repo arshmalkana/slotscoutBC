@@ -1,9 +1,9 @@
-# Extraction task bylaw-bf74c22930e3 (run 1)
+# Extraction task bylaw-d25bbe7b8455 (run 2)
 
-Write your answer to `queue/answers/run1/bylaw-bf74c22930e3.json` as:
+Write your answer to `queue/answers/run2/bylaw-d25bbe7b8455.json` as:
 
 ```json
-{ "task_id": "bylaw-bf74c22930e3", "run": 1, "mode": "agent", "model": "<your model id> (Claude Code)", "prompt_version": "bylaw.v1", "schema_id": "bylaw.v1", "produced_at": "<ISO time>", "answer": { ...matching schema/bylaw.v1.json... } }
+{ "task_id": "bylaw-d25bbe7b8455", "run": 2, "mode": "agent", "model": "<your model id> (Claude Code subagent)", "prompt_version": "bylaw.v1", "schema_id": "bylaw.v1", "produced_at": "<ISO time>", "answer": { ...matching schema/bylaw.v1.json... } }
 ```
 
 The answer must match `schema/bylaw.v1.json` exactly. Use only the source text below. Never write coordinates. Every filled field needs its exact quote.
@@ -288,10 +288,18 @@ Rules:
 
 ## Source
 
-Source: Squamish-Lillooet Regional District: Firearms Electoral Area A | Squamish-Lillooet Regional District (Captured 2026-10-19)
+Source: City of Langley: Firearms Bylaw (Captured 2026-10-19)
 
 <source_text>
-Captured: 2026-10-19T17:51:38.839Z URL: https://www.slrd.bc.ca/inside-slrd/bylaws/firearms-electoral-area This website uses cookies to ensure you get the best experience on our website Close Skip to main content Select Language English 简体中文 繁體中文 Hrvatski Čeština‎ Français Deutsch Italiano Español Українська Emergency Alerts & Evacuation Orders Contact Careers Main About Us Inside the SLRD Services Planning & Development Services Protective & Emergency Services Open the search form Inside the SLRD Bylaws Employment Contracting Opportunities Current Projects & Initiatives Get Involved & Stay Connected Corporate Services Meetings & Agendas News & Events Notices Accessibility Community Organizations Reports Breadcrumb Home Inside the SLRD Bylaws Firearms Electoral Area A Firearms Electoral Area A Bylaw Number 1293-2013 Bylaw Type(s) Planning Regulatory Bylaws A bylaw of the Squamish-Lillooet Regional District to regulate and prohibit the use of firearms within Electoral Area A. (Consolidated) Applicable Communities Electoral Area A View Firearms Electoral Area A PDF Facebook YouTube Twitter (X) Instagram Box 219, 1350 Aster Street Pemberton BC, V0N 2L0 Office Hours (604) 894-6371 (800) 298-7753 info@slrd.bc.ca Territorial Acknowledgement The Squamish-Lillooet Regional District is found within the traditional territories of several First Nations, including the Sḵwx̱wú7mesh Úxwumixw (Squamish), St’át’imc and Líl̓wat Nations. Small parts of the SLRD also overlap with the traditional territories of the Stó:lō, Tsleil-Waututh, Nlaka’pamux, Tŝilhqot’in, and Secwepemc Nations. Indigenous Relations © Squamish-Lillooet Regional District Footer Disclaimer Privacy Policy Municipal Website by Upanup
+FIREARMS REGULATION BYLAW, 2015, BYLAW NO. 2961 A Bylaw to regulate the use of firearms and bows in the City of Langley. The Council of the City of Langley, in open meeting assembled, enacts as follows:
+1. Title This bylaw shall be cited as the “Firearms Regulation Bylaw, 2015, No. 2961”.
+2. Definitions In this bylaw: (1) Bow includes a long bow, recurve bow, composite bow, or crossbow. (2) Firearm includes any barreled weapon using a propellant, compressed air, explosives, or gas from which any shot, bullet, or other projectile can be discharged but does not include: (a) Starting pistols when used in connection with an athletic or sporting event where blank ammunition is used; (b) paintball guns when used in a licensed and insured facility designed for organized paintball games. (3) City means the City of Langley. (4) Inspector means the Bylaw Enforcement Officer, the Chief Building Inspector, a Peace Officer and any other person who is authorized by the City Council to enter and inspect property in accordance with this Bylaw.
+3. Exemptions This Bylaw, does not apply to: (1) a peace officer, a conservation officer under the Wildlife Act, an enforcement officer of the Department of Fisheries and Oceans, an employee of the Canadian Wildlife service, or a person appointed to enforce the City’s Animal Control Bylaw, when engaged in the lawful performance of their duties; Firearms Regulation Bylaw Page 2 Bylaw No. 2961 (2) land located in the Agricultural Land Reserve where a firearm or bow is discharged for the purpose of: (a) the protection of agricultural crops, livestock, or domestic animals from wildlife; or (b) the humane destruction of livestock.
+4. General Regulations No person shall discharge a firearm or bow within the City.
+5. General Nothing contained in or permitted in this Bylaw shall abrogate or relieve any obligation of any person pursuant to any applicable provincial or federal act or regulations with regard to the discharge of firearms.
+6. Enforcement (1) No person shall obstruct an Inspector in the administration or enforcement of this Bylaw. (2) Every person who violates any of the provisions of this Bylaw or who suffers or permits any act or thing to be done in contravention or in violation of any of the provisions of this Bylaw, who neglects to do or refrains from doing anything required to be done by any of the provisions of this Bylaw or who does any act which violates any of the provisions of this Bylaw, is guilty of an offence against this Bylaw and liable to the penalties hereby imposed. (3) Each day that a violation continues to exist shall constitute a separate offence. (4) Every person who commits an offence against this Bylaw is liable to a fine and penalty of no more than $2000.00 and not less than $100.00 for each offence, and in default of payment thereof, forthwith or within such time as the presiding Provincial Court Judge of the Province shall direct the fine imposed shall be recoverable under the provisions of the Offence Act R.S.B.C. 1996, Chapter 338 and all amendments.
+7. Severability If a court of competent jurisdiction should declare any section of part of a section of this Bylaw to be invalid, such declaration shall not affect the validity of the remainder of this Bylaw all of which shall remain valid and in force.
+8. Repeal Bylaw No. 1046 and all amendments are hereby repealed. Firearms Regulation Bylaw Page 3 Bylaw No. 2961 READ A FIRST, SECOND AND THIRD TIME this twenty ninth day of June, 2015. FINALLY ADOPTED this thirteenth day of July, 2015. _________________________ MAYOR _________________________ CORPORATE OFFICER
 </source_text>
 
 Return the JSON for this text.

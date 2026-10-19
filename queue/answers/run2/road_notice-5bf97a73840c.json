@@ -1,0 +1,28 @@
+{
+  "task_id": "road_notice-5bf97a73840c",
+  "run": 2,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code subagent)",
+  "prompt_version": "road_notice.v1",
+  "schema_id": "road_notice.v1",
+  "produced_at": "2026-10-19T19:19:58.504Z",
+  "answer": {
+    "road": {
+      "name": "",
+      "file_section": null
+    },
+    "posted_on": "2021-08-18",
+    "rescinded": false,
+    "points": [],
+    "quotes": [
+      {
+        "field": "posted_on",
+        "quote": "August 18, 2021"
+      }
+    ],
+    "uncertain": [
+      "road.name",
+      "road.file_section"
+    ]
+  }
+}

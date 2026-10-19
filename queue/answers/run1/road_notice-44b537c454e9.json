@@ -1,0 +1,31 @@
+{
+  "task_id": "road_notice-44b537c454e9",
+  "run": 1,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code)",
+  "prompt_version": "road_notice.v1",
+  "schema_id": "road_notice.v1",
+  "produced_at": "2026-10-19T19:18:00Z",
+  "answer": {
+    "road": {
+      "name": "B&K Forest Service Road",
+      "file_section": null
+    },
+    "posted_on": "2026-06-02",
+    "rescinded": false,
+    "points": [],
+    "quotes": [
+      {
+        "field": "road.name",
+        "quote": "B&K Forest Service Road"
+      },
+      {
+        "field": "posted_on",
+        "quote": "June 2, 2026"
+      }
+    ],
+    "uncertain": [
+      "road.file_section"
+    ]
+  }
+}

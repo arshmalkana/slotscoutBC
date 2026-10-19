@@ -487,3 +487,17 @@
 2026-10-19T18:07:41.550Z [build] road notices: 327 kept (0 gone from their page, held for a person), 183 km points placed, 33 AI-read
 2026-10-19T18:07:41.653Z [build] bylaws: 3 document(s), 2 with agreeing runs; all wait for a person
 2026-10-19T18:07:41.656Z [build] done: {"month":"2026-10","builtAt":"2026-10-19T18:06:59.045Z","closedAreas":{"candidate":1},"roadNotices":{"notices":327,"placed":183,"removed":0,"aiRead":33},"dmNoticesFlagged":19,"bylaws":{"docs":3,"agreed":2},"changeClasses":0,"withdrawnItems":0}
+2026-10-19T18:09:37.246Z [validate] 1 rule features, 332 bylaw rows, 9 regions, 41 sources: 0 errors, 1 warnings
+2026-10-19T19:16:01.321Z [split] 396 units; 396 new, 0 changed, 0 removed, 0 unchanged (first pull: baseline)
+2026-10-19T19:16:01.994Z [queue] 1 task(s) moved to queue/superseded because their units changed
+2026-10-19T19:16:02.000Z [queue] 396 new or changed units; 295 read by rules; 61 AI tasks (0 new in queue/pending)
+2026-10-19T19:16:26.856Z [queue] 396 new or changed units; 295 read by rules; 61 AI tasks (1 new in queue/pending)
+2026-10-19T19:16:28.473Z [extract] agent mode: 23 run-1 and 23 run-2 answers needed; see queue/AGENT_TASKS.md
+2026-10-19T19:34:41.807Z [build] W5-085: candidate v1 (new); 1 issue(s) for the reviewer
+2026-10-19T19:35:20.402Z [build] road notices: 327 kept (0 gone from their page, held for a person), 183 km points placed, 33 AI-read
+2026-10-19T19:35:20.499Z [build] bylaws: 3 document(s), 2 with agreeing runs; all wait for a person
+2026-10-19T19:35:20.502Z [build] done: {"month":"2026-10","builtAt":"2026-10-19T19:34:37.317Z","closedAreas":{"candidate":1},"roadNotices":{"notices":327,"placed":183,"removed":0,"aiRead":33},"dmNoticesFlagged":19,"bylaws":{"docs":3,"agreed":2},"changeClasses":0,"withdrawnItems":0}
+2026-10-19T19:35:21.168Z [validate] 1 rule features, 332 bylaw rows, 9 regions, 41 sources: 0 errors, 1 warnings
+2026-10-19T19:35:21.728Z [review-packet] review/2026-10/index.html: 70 item(s), 70 open
+2026-10-19T19:35:22.595Z [report] reports/2026-10-monthly.md and reports/status.json written
+2026-10-19T19:36:30.108Z [validate] 1 rule features, 332 bylaw rows, 9 regions, 41 sources: 0 errors, 1 warnings

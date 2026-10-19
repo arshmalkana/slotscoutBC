@@ -1,0 +1,26 @@
+{
+  "task_id": "road_notice-0818e4e5a415",
+  "kind": "road_notice",
+  "schema": "road_notice.v1",
+  "prompt": "road_notice.v1",
+  "month": "2026-10-dryrun",
+  "unit_ids": [
+    "dm:DCR-9ef086bc-dcr_sdfmap"
+  ],
+  "unit_hash": "0818e4e5a4155593c3ec8600b7080fccb933f4a404676e58bbe5a389ed07ea30",
+  "title": "District Manager notice DCR-9ef086bc-dcr_sdfmap",
+  "source": {
+    "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/campbell-river/dcr_sdfmap.pdf",
+    "version": "2026-10-19T18:09:02.261Z",
+    "file": "raw/2026-10-dryrun/dm_notices/DCR-9ef086bc-dcr_sdfmap.txt",
+    "confirmed": true
+  },
+  "source_text": "",
+  "created": "2026-10-19T19:02:52.587Z",
+  "meta": {
+    "org": "DCR",
+    "pdf": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/campbell-river/dcr_sdfmap.pdf"
+  },
+  "superseded_on": "2026-10-19T19:15:45.112Z",
+  "reason": "the unit's text changed or it is no longer queued (re-split)"
+}

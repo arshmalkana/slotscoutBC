@@ -1,0 +1,36 @@
+{
+  "task_id": "road_notice-2d7dfa9fde6e",
+  "run": 1,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code)",
+  "prompt_version": "road_notice.v1",
+  "schema_id": "road_notice.v1",
+  "produced_at": "2026-10-19T19:17:26Z",
+  "answer": {
+    "road": {
+      "name": "Driftwood FSR",
+      "file_section": null
+    },
+    "posted_on": null,
+    "rescinded": false,
+    "points": [
+      {
+        "km": 15.1,
+        "km_end": 16.7,
+        "extent": "range",
+        "status": "caution",
+        "quote": "a section of the Driftwood FSR north of Fort St James from 15.1km to 16.7km"
+      }
+    ],
+    "quotes": [
+      {
+        "field": "road.name",
+        "quote": "Driftwood FSR"
+      }
+    ],
+    "uncertain": [
+      "road.file_section",
+      "posted_on"
+    ]
+  }
+}
