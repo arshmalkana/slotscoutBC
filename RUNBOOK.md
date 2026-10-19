@@ -20,7 +20,7 @@ Open Claude Code and say "Run the monthly update in RUNBOOK.md", or let `api` mo
 | 10 | person | Approves review items (`make approve ITEM=<id> BY=<initials>`), legal reviewer signs off (`make signoff BY=<name>`) | |
 | 11 | `make release` | Builds `releases/<YYYY-MM>/` only when every included change is approved and signed off; never publishes alone | |
 
-`make monthly` runs steps 1 to 9 and stops before anything a person must do.
+`make monthly` runs steps 1 to 9 and stops before anything a person must do. To run an extra cycle in the same month (a dry run), give it a labelled month: `make monthly MONTH=2026-10-dryrun`. It is compared with the plain month and items already raised there are not raised again.
 
 ## One-way rule (Addendum A 5.1, 9)
 
