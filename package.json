@@ -17,11 +17,12 @@
     "build": "npm run build -w @slotscout/api && npm run build -w @slotscout/web",
     "start": "npm run start -w @slotscout/api",
     "test": "vitest run",
-    "typecheck": "tsc -p packages/engine && tsc -p apps/api && tsc -p apps/web",
+    "typecheck": "tsc -p packages/engine && tsc -p apps/api && tsc -p apps/web && tsc -p scripts",
     "regression": "tsx scripts/regression.ts",
     "validate:data": "tsx scripts/validate-data.ts",
     "pipeline:pull": "tsx scripts/pull-wfs.ts",
-    "register:bylaws": "tsx scripts/build-bylaw-register.ts"
+    "register:bylaws": "tsx scripts/build-bylaw-register.ts",
+    "sitemap": "tsx scripts/build-sitemap.ts"
   },
   "devDependencies": {
     "@types/node": "^22.19.0",

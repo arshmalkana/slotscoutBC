@@ -1,0 +1,67 @@
+{
+  "$comment": "Regression set (PRD 11.2). Every release must produce zero false greens on this set. Expected verdicts come from the October 2026 manual study and are reviewed by the legal reviewer; points whose deciding rule is not digitised yet are allowed to come back grey ('pending') but never green. Grow this set to 2,000+ points as each region is digitised: 3 inside, 3 just outside (10 to 50 m) and 1 on the boundary of every closed area, and 5 per municipality and electoral area.",
+  "points": [
+    {
+      "id": "harrison-east-spot-a",
+      "label": "Harrison East Spot A",
+      "point": { "lat": 49.41474, "lon": -121.7547 },
+      "profile": { "type": "shotgun_shot", "fz": 250 },
+      "expected": { "verdict": "green" },
+      "source": "PRD 11.2, October 2026 manual study"
+    },
+    {
+      "id": "stsailes-fsr-km15",
+      "label": "Sts'ailes FSR at 15 km",
+      "point": { "lat": 49.43053, "lon": -121.846 },
+      "profile": { "type": "shotgun_shot", "fz": 250 },
+      "expected": { "verdict": "red" },
+      "note": "Expected reason is Closed Areas Reg. Sch. 5.1 s. 11; today it is also red for the road allowance (W13).",
+      "source": "PRD 11.2"
+    },
+    {
+      "id": "golden-ears-park",
+      "label": "Golden Ears Park",
+      "point": { "lat": 49.3567, "lon": -122.4705 },
+      "expected": { "verdict": "red", "rules": { "P1": "fail" } },
+      "source": "PRD 11.2"
+    },
+    {
+      "id": "abbotsford-centre",
+      "label": "Abbotsford centre",
+      "point": { "lat": 49.0504, "lon": -122.3045 },
+      "expected": { "verdict": "red" },
+      "source": "PRD 11.2"
+    },
+    {
+      "id": "harrison-hot-springs-village",
+      "label": "Harrison Hot Springs village",
+      "point": { "lat": 49.3024, "lon": -121.7853 },
+      "expected": { "verdict": "red" },
+      "source": "PRD 11.2"
+    },
+    {
+      "id": "slollicum-fsr-spot-d",
+      "label": "Spot D area on Slollicum FSR (washout notice)",
+      "point": { "lat": 49.3756, "lon": -121.73743 },
+      "profile": { "type": "shotgun_shot", "fz": 250 },
+      "expected": { "rules": { "P6": "conditional" } },
+      "note": "60 m off Slollicum FSR 5748.04 at about km 1.2. The district notice reports no access at 2 km due to washout.",
+      "source": "PRD 11.2"
+    },
+    {
+      "id": "restricted-anywhere",
+      "label": "Restricted firearm outside a range",
+      "point": { "lat": 49.41474, "lon": -121.7547 },
+      "profile": { "class": "restricted", "type": "centrefire", "fz": 4000 },
+      "expected": { "verdict": "red", "rules": { "F1": "fail" } },
+      "source": "PRD 3.1 F1"
+    },
+    {
+      "id": "outside-bc",
+      "label": "Point in Alberta",
+      "point": { "lat": 51.1784, "lon": -115.5708 },
+      "expected": { "verdictNot": "green" },
+      "source": "PRD 1.2 whole-province coverage"
+    }
+  ]
+}
