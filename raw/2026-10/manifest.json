@@ -1,0 +1,956 @@
+{
+  "month": "2026-10",
+  "userAgent": "SlotScoutBot/0.1 (+https://slotscout.ca/about; data@slotscout.ca)",
+  "startedAt": "2026-10-19T16:53:43.915Z",
+  "updatedAt": "2026-10-19T17:33:28.833Z",
+  "sources": {
+    "bcparks_advisories": {
+      "status": "skipped",
+      "detail": "planned source, not pulled yet",
+      "at": "2026-10-19T17:28:35.953Z"
+    },
+    "licensee_notices": {
+      "status": "skipped",
+      "detail": "planned source, not pulled yet",
+      "at": "2026-10-19T17:28:35.953Z"
+    },
+    "wmu": {
+      "status": "ok",
+      "detail": "225 features, count matches the server",
+      "at": "2026-10-19T16:57:12.783Z"
+    },
+    "federal_protected": {
+      "status": "ok",
+      "detail": "21 features, count matches the server",
+      "at": "2026-10-19T16:56:11.694Z"
+    },
+    "province": {
+      "status": "ok",
+      "detail": "1 features, count matches the server",
+      "at": "2026-10-19T16:58:07.242Z"
+    },
+    "bc_parks": {
+      "status": "ok",
+      "detail": "930 features, count matches the server",
+      "at": "2026-10-19T16:58:13.685Z"
+    },
+    "national_parks": {
+      "status": "ok",
+      "detail": "102 features, count matches the server",
+      "at": "2026-10-19T16:58:15.666Z"
+    },
+    "reserves": {
+      "status": "ok",
+      "detail": "1602 features, count matches the server",
+      "at": "2026-10-19T16:58:18.379Z"
+    },
+    "treaty_lands": {
+      "status": "ok",
+      "detail": "148 features, count matches the server",
+      "at": "2026-10-19T16:58:19.888Z"
+    },
+    "treaty_areas": {
+      "status": "ok",
+      "detail": "69 features, count matches the server",
+      "at": "2026-10-19T16:58:22.861Z"
+    },
+    "municipalities": {
+      "status": "ok",
+      "detail": "160 features, count matches the server",
+      "at": "2026-10-19T16:58:24.509Z"
+    },
+    "regional_districts": {
+      "status": "ok",
+      "detail": "28 features, count matches the server",
+      "at": "2026-10-19T16:58:28.324Z"
+    },
+    "electoral_areas": {
+      "status": "ok",
+      "detail": "159 features, count matches the server",
+      "at": "2026-10-19T16:58:34.488Z"
+    },
+    "local_trust_areas": {
+      "status": "ok",
+      "detail": "13 features, count matches the server",
+      "at": "2026-10-19T16:58:35.849Z"
+    },
+    "local_parks": {
+      "status": "ok",
+      "detail": "9488 features, count matches the server",
+      "at": "2026-10-19T16:58:40.776Z"
+    },
+    "rec_sites": {
+      "status": "ok",
+      "detail": "4525 features, count matches the server",
+      "at": "2026-10-19T16:58:45.915Z"
+    },
+    "rec_trails": {
+      "status": "ok",
+      "detail": "19915 features, count matches the server",
+      "at": "2026-10-19T16:59:09.937Z"
+    },
+    "fire_restrictions": {
+      "status": "ok",
+      "detail": "0 features, count matches the server",
+      "at": "2026-10-19T16:59:10.812Z"
+    },
+    "fire_bans": {
+      "status": "ok",
+      "detail": "0 features, count matches the server",
+      "at": "2026-10-19T16:59:11.813Z"
+    },
+    "fire_current": {
+      "status": "ok",
+      "detail": "314 features, count matches the server",
+      "at": "2026-10-19T16:59:13.540Z"
+    },
+    "fire_history": {
+      "status": "ok",
+      "detail": "24751 features, count matches the server",
+      "at": "2026-10-19T16:59:28.651Z"
+    },
+    "parcels": {
+      "status": "ok",
+      "detail": "740686 features, count matches the server",
+      "at": "2026-10-19T17:09:18.053Z"
+    },
+    "fsr_roads": {
+      "status": "ok",
+      "detail": "286301 features, count matches the server",
+      "at": "2026-10-19T17:11:56.588Z"
+    },
+    "closed_areas": {
+      "status": "awaiting_person",
+      "detail": "0 of 6 regulations from copies a person saved in inbox/bclaws; waiting for 76_84_00_multi, 196_99, 190_84, 180_90, 16_2004, 38_2005; 1 unconfirmed excerpt(s) in inbox/excerpts",
+      "at": "2026-10-19T17:13:23.522Z"
+    },
+    "road_notices": {
+      "status": "ok",
+      "detail": "22 of 22 district pages",
+      "at": "2026-10-19T17:14:07.160Z"
+    },
+    "dm_notices": {
+      "status": "ok",
+      "detail": "24 of 24 linked notice PDFs",
+      "at": "2026-10-19T17:14:54.699Z"
+    }
+  },
+  "layers": {
+    "wmu": {
+      "id": "wmu",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 225,
+      "pulledCount": 225,
+      "sha256": "8662260ca636dd9053dbe10d369e983b7bc291c53af8bfe5d751dd317a829832",
+      "bytes": 51940755,
+      "pages": 1,
+      "sortBy": "OBJECTID",
+      "bodyStored": true,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T16:57:02.386Z",
+      "finishedAt": "2026-10-19T16:57:12.783Z"
+    },
+    "federal_protected": {
+      "id": "federal_protected",
+      "layer": "CPCAD TYPE_E in (Migratory Bird Sanctuary, National Wildlife Area, Marine National Wildlife Area), LOC=2",
+      "endpoint": "https://maps-cartes.ec.gc.ca/arcgis/rest/services/CWS_SCF/CPCAD/MapServer/0",
+      "serverCount": 21,
+      "pulledCount": 21,
+      "sha256": "6b79792f324b6ceaa807426dc606a7204e673d026f51149c3fc7d102cdaee4a2",
+      "bytes": 2013747,
+      "pages": 1,
+      "sortBy": "OBJECTID",
+      "bodyStored": true,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T16:56:06.900Z",
+      "finishedAt": "2026-10-19T16:56:11.694Z"
+    },
+    "province": {
+      "id": "province",
+      "layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_PROVINCE_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 1,
+      "pulledCount": 1,
+      "sha256": "a367a076bade7fc45cdf4bcf242680f0d886f94e7b95a19c0585548689c78831",
+      "bytes": 1379940,
+      "pages": 1,
+      "sortBy": "OBJECTID",
+      "bodyStored": true,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T16:58:05.251Z",
+      "finishedAt": "2026-10-19T16:58:07.242Z"
+    },
+    "bc_parks": {
+      "id": "bc_parks",
+      "layer": "WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 930,
+      "pulledCount": 930,
+      "sha256": "b16c8a3e3403b5f2238df677d296289d7280e4fc0ddee322ceb15528bf8e38ff",
+      "bytes": 33222898,
+      "pages": 1,
+      "sortBy": "OBJECTID",
+      "bodyStored": true,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T16:58:07.244Z",
+      "finishedAt": "2026-10-19T16:58:13.685Z"
+    },
+    "national_parks": {
+      "id": "national_parks",
+      "layer": "WHSE_ADMIN_BOUNDARIES.CLAB_NATIONAL_PARKS",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 102,
+      "pulledCount": 102,
+      "sha256": "1c341ee97a7fc478b074d8fb714d27db3aab8c98d3b61900fc7c1c9ea50a8582",
+      "bytes": 5200600,
+      "pages": 1,
+      "sortBy": "OBJECTID",
+      "bodyStored": true,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T16:58:13.690Z",
+      "finishedAt": "2026-10-19T16:58:15.666Z"
+    },
+    "reserves": {
+      "id": "reserves",
+      "layer": "WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 1602,
+      "pulledCount": 1602,
+      "sha256": "ed208f775de516f73c958be8cd62ee25a6dea8b58e657ef7c0ea8c126e432679",
+      "bytes": 10450780,
+      "pages": 1,
+      "sortBy": "OBJECTID",
+      "bodyStored": true,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T16:58:15.667Z",
+      "finishedAt": "2026-10-19T16:58:18.379Z"
+    },
+    "treaty_lands": {
+      "id": "treaty_lands",
+      "layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.FNT_TREATY_LAND_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 148,
+      "pulledCount": 148,
+      "sha256": "b61c59f5bd7809a3fd056aa87e7842ea147cb93d8bd6e53dd7e4190b1619e17c",
+      "bytes": 3452822,
+      "pages": 1,
+      "sortBy": "OBJECTID",
+      "bodyStored": true,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T16:58:18.382Z",
+      "finishedAt": "2026-10-19T16:58:19.888Z"
+    },
+    "treaty_areas": {
+      "id": "treaty_areas",
+      "layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.FNT_TREATY_AREA_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 69,
+      "pulledCount": 69,
+      "sha256": "e479ff1f383df6eb3df5abf3d88650cea6b655fa76be064841fedcce01cfdb51",
+      "bytes": 12928084,
+      "pages": 1,
+      "sortBy": "OBJECTID",
+      "bodyStored": true,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T16:58:19.891Z",
+      "finishedAt": "2026-10-19T16:58:22.861Z"
+    },
+    "municipalities": {
+      "id": "municipalities",
+      "layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 160,
+      "pulledCount": 160,
+      "sha256": "b5e23e2bde604d007a7afbf0d7c5f1467888613c6daf1c85dbc0c52fed253dbd",
+      "bytes": 3925372,
+      "pages": 1,
+      "sortBy": "OBJECTID",
+      "bodyStored": true,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T16:58:22.864Z",
+      "finishedAt": "2026-10-19T16:58:24.509Z"
+    },
+    "regional_districts": {
+      "id": "regional_districts",
+      "layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_REGIONAL_DISTRICTS_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 28,
+      "pulledCount": 28,
+      "sha256": "26f552d7029a16ef8f310e8a489ddb3d5a6a40ef3522ab45e7770906a4ee2f12",
+      "bytes": 17667251,
+      "pages": 1,
+      "sortBy": "OBJECTID",
+      "bodyStored": true,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T16:58:24.510Z",
+      "finishedAt": "2026-10-19T16:58:28.324Z"
+    },
+    "electoral_areas": {
+      "id": "electoral_areas",
+      "layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_ELECTORAL_AREAS_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 159,
+      "pulledCount": 159,
+      "sha256": "7348791d69067e830173fd230408c160eca7c201a4a4091dfa4838ad71b7d45f",
+      "bytes": 33482433,
+      "pages": 1,
+      "sortBy": "OBJECTID",
+      "bodyStored": true,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T16:58:28.326Z",
+      "finishedAt": "2026-10-19T16:58:34.488Z"
+    },
+    "local_trust_areas": {
+      "id": "local_trust_areas",
+      "layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_LOCAL_TRUST_AREAS_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 13,
+      "pulledCount": 13,
+      "sha256": "367ea78831ef51915d50b932cf7f6843ff0c5f838ad76ced8f240086c8f16ccb",
+      "bytes": 1297152,
+      "pages": 1,
+      "sortBy": "OBJECTID",
+      "bodyStored": true,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T16:58:34.489Z",
+      "finishedAt": "2026-10-19T16:58:35.849Z"
+    },
+    "local_parks": {
+      "id": "local_parks",
+      "layer": "WHSE_BASEMAPPING.GBA_LOCAL_REG_GREENSPACES_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 9488,
+      "pulledCount": 9488,
+      "sha256": "3c5c5aa0fe2526610d5eaaf7bcabe67aeb092b4c269278607bb600037b03f7c3",
+      "bytes": 28827246,
+      "pages": 1,
+      "sortBy": "OBJECTID",
+      "bodyStored": true,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T16:58:35.865Z",
+      "finishedAt": "2026-10-19T16:58:40.776Z"
+    },
+    "rec_sites": {
+      "id": "rec_sites",
+      "layer": "WHSE_FOREST_TENURE.FTEN_RECREATION_POLY_SVW",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 4525,
+      "pulledCount": 4525,
+      "sha256": "66ba4f960541c7a9843d06e9bd61a4662891343b2a8a7fc3a79095cef8c3b7f1",
+      "bytes": 25460645,
+      "pages": 1,
+      "sortBy": "OBJECTID",
+      "bodyStored": true,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T16:58:40.778Z",
+      "finishedAt": "2026-10-19T16:58:45.915Z"
+    },
+    "rec_trails": {
+      "id": "rec_trails",
+      "layer": "WHSE_FOREST_TENURE.FTEN_RECREATION_LINES_SVW",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 19915,
+      "pulledCount": 19915,
+      "sha256": "f3aee1728dfd341f9440d9cfc26ce187aaa3774bcae286683ed380b9f677c50f",
+      "bytes": 131944332,
+      "pages": 2,
+      "sortBy": "OBJECTID",
+      "bodyStored": true,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T16:58:45.917Z",
+      "finishedAt": "2026-10-19T16:59:09.937Z"
+    },
+    "fire_restrictions": {
+      "id": "fire_restrictions",
+      "layer": "WHSE_LAND_AND_NATURAL_RESOURCE.PROT_RESTRICTED_AREAS_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 0,
+      "pulledCount": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 147,
+      "pages": 1,
+      "sortBy": null,
+      "bodyStored": true,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T16:59:09.949Z",
+      "finishedAt": "2026-10-19T16:59:10.812Z"
+    },
+    "fire_bans": {
+      "id": "fire_bans",
+      "layer": "WHSE_LAND_AND_NATURAL_RESOURCE.PROT_BANS_AND_PROHIBITIONS_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 0,
+      "pulledCount": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 147,
+      "pages": 1,
+      "sortBy": null,
+      "bodyStored": true,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T16:59:10.814Z",
+      "finishedAt": "2026-10-19T16:59:11.813Z"
+    },
+    "fire_current": {
+      "id": "fire_current",
+      "layer": "WHSE_LAND_AND_NATURAL_RESOURCE.PROT_CURRENT_FIRE_POLYS_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 314,
+      "pulledCount": 314,
+      "sha256": "d1d05579322a5a1f4d5a9cba669292db8111beeeeab050f8e7b31aadb135b332",
+      "bytes": 4397864,
+      "pages": 1,
+      "sortBy": "OBJECTID",
+      "bodyStored": true,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T16:59:11.814Z",
+      "finishedAt": "2026-10-19T16:59:13.540Z"
+    },
+    "fire_history": {
+      "id": "fire_history",
+      "layer": "WHSE_LAND_AND_NATURAL_RESOURCE.PROT_HISTORICAL_FIRE_POLYS_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 24751,
+      "pulledCount": 24751,
+      "sha256": "96ca2fda10a6041d18264f10b32a10e0d2742ae4339cc80becdec4d28173a028",
+      "bytes": 101739090,
+      "pages": 3,
+      "sortBy": "OBJECTID",
+      "bodyStored": true,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T16:59:13.542Z",
+      "finishedAt": "2026-10-19T16:59:28.651Z"
+    },
+    "parcels": {
+      "id": "parcels",
+      "layer": "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 740686,
+      "pulledCount": 740686,
+      "sha256": "e3a114d69aa5f2b1317ddb4007c483027dfbd382b7adcec496ba6d94cf061f78",
+      "bytes": 863869400,
+      "pages": 75,
+      "sortBy": "OBJECTID",
+      "bodyStored": false,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T16:59:28.665Z",
+      "finishedAt": "2026-10-19T17:09:18.053Z"
+    },
+    "fsr_roads": {
+      "id": "fsr_roads",
+      "layer": "WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 286301,
+      "pulledCount": 286301,
+      "sha256": "97371be5a9f590146db197e33054b0daf1706481d9e4f41f6b98e49957b34fc3",
+      "bytes": 727868324,
+      "pages": 29,
+      "sortBy": "OBJECTID",
+      "bodyStored": false,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T17:09:18.059Z",
+      "finishedAt": "2026-10-19T17:11:56.588Z"
+    }
+  },
+  "files": [
+    {
+      "path": "raw/2026-10/district_pages/DCC.html",
+      "sha256": "6de4f067c678b9fec351fa6f0a91bc162ece85b34e2165aed45d71b65943bba3",
+      "bytes": 260621,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/cariboo-chilcotin-road-safety-information",
+      "fetchedAt": "2026-10-19T17:13:28.635Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/district_pages/DCK.html",
+      "sha256": "b068cd8d8c8175ba14d7d3d0614673817bc64ae5ee472416663ce446e463ac59",
+      "bytes": 286067,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack-natural-resource-district-district-road-safety-information",
+      "fetchedAt": "2026-10-19T17:13:32.722Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/district_pages/DCR.html",
+      "sha256": "05149061a3ba0c4607fe9bf44e0ad221c180c1cbccad76657c33604c45eb649e",
+      "bytes": 251867,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/campbell-river-road-safety-information",
+      "fetchedAt": "2026-10-19T17:13:26.752Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/district_pages/DCS.html",
+      "sha256": "3717fc1e619195bc94a067b875a6ca34ce8b62cfa642eddedb1966d9a16c7f4b",
+      "bytes": 260200,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/cascades-road-safety-information",
+      "fetchedAt": "2026-10-19T17:13:30.813Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/district_pages/DFN.html",
+      "sha256": "af34f22eb8725348871aabba2e1daac9dcd43a798776cd1b5d9d75fa9792f576",
+      "bytes": 225745,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/fort-nelson-natural-resource-district-road-safety-information",
+      "fetchedAt": "2026-10-19T17:13:37.018Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/district_pages/DKA.html",
+      "sha256": "69847a9468bdc0c94229b34073d96c4c3a235bac357f2601af3042b3bf49e66f",
+      "bytes": 257310,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/thompson-rivers-natural-resource-district-road-safety-information",
+      "fetchedAt": "2026-10-19T17:14:07.152Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/district_pages/DKM.html",
+      "sha256": "b6943a3c079041f229e1e190e70d54ccbb1c2e5de4cd8bd0a73097ebc165dbb4",
+      "bytes": 240023,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/coast-mountain-road-safety-information",
+      "fetchedAt": "2026-10-19T17:13:34.644Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/district_pages/DMH.html",
+      "sha256": "1500d283e5ae5343829c02d30bda3c6f3af18d9188818a3e167417aabdfe2d4b",
+      "bytes": 247404,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/100-mile-house-road-safety-information",
+      "fetchedAt": "2026-10-19T17:13:24.889Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/district_pages/DMK.html",
+      "sha256": "2f5b3766339d02a76c52762f219fd001f5e2cf91c04c9d6401b5fa543c8f6130",
+      "bytes": 241570,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/mackenzie-road-safety-information",
+      "fetchedAt": "2026-10-19T17:13:40.706Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/district_pages/DND.html",
+      "sha256": "dbb3dcb967273a81ed80c37b649ba7683e2976c4938b83ae446fd8049f68eb91",
+      "bytes": 243612,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/nadina-natural-resource-district-road-safety-information",
+      "fetchedAt": "2026-10-19T17:13:42.645Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/district_pages/DNI.html",
+      "sha256": "b32170b2873db04722317e8a20edac553fab9626a25c2ffb2d0f3f7b62f56404",
+      "bytes": 235723,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/noth-island-natural-resource-district-road-safety-information",
+      "fetchedAt": "2026-10-19T17:13:44.702Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/district_pages/DOS.html",
+      "sha256": "5b180ad7cb31e7b5f238ff983d10e85f056e0c5d59909624cce855ed5cc95ecf",
+      "bytes": 243855,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/okanagan-shuswap-road-safety-information",
+      "fetchedAt": "2026-10-19T17:13:46.654Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/district_pages/DPG.html",
+      "sha256": "69d7b3dee80a0afe413d1f911053598bb114bc666d4fe3c706b96bdf9a80b28d",
+      "bytes": 285441,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/prince-george-natural-resource-district-road-safety-information",
+      "fetchedAt": "2026-10-19T17:13:48.719Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/district_pages/DQC.html",
+      "sha256": "50ec2ff7967070a3cb77daa4783a943a80834185a1260cda0e575dbbb590e6dc",
+      "bytes": 256837,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/haida-gwaii-natural-resource-district-road-safety-information",
+      "fetchedAt": "2026-10-19T17:13:38.690Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/district_pages/DQU.html",
+      "sha256": "cae69edae6006845df672a5735db75f9a6cdbbdaa83641e884c4d6bbcca9a9ea",
+      "bytes": 260833,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/quesnel-road-safety-information",
+      "fetchedAt": "2026-10-19T17:13:50.869Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/district_pages/DRM.html",
+      "sha256": "24e1b65a66074c9700d926be8187b2a1cda05904f2c6eab4d3f03913edcea4cd",
+      "bytes": 237156,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/rocky-mountain-natural-resource-district-road-safety-information",
+      "fetchedAt": "2026-10-19T17:13:52.650Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/district_pages/DSC.html",
+      "sha256": "098cc80a80bb19297d08a42ec6d70f93f80751a91f6531c23919cfd60d19a996",
+      "bytes": 254249,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/sunshine-coast-road-safety-information",
+      "fetchedAt": "2026-10-19T17:14:04.916Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/district_pages/DSE.html",
+      "sha256": "c52c4d7ae808d44de3df0452532a71a67c98082d2e112c512a13736450172e09",
+      "bytes": 251439,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/selkirk-natural-resource-district-road-safety-information",
+      "fetchedAt": "2026-10-19T17:13:56.670Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/district_pages/DSI.html",
+      "sha256": "2f1a9f2f787d33245bf320fe1b436019300926705956866370ebe17cc15f61b4",
+      "bytes": 239893,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/south-island-natural-resource-district-road-safety-information",
+      "fetchedAt": "2026-10-19T17:14:00.818Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/district_pages/DSQ.html",
+      "sha256": "7b492b7b31fc09217f03cddf5bdab58a0d56d83c3b2bf6a4efce1d2c8614c051",
+      "bytes": 287311,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/sea-to-sky-natural-resource-district-road-safety-information",
+      "fetchedAt": "2026-10-19T17:13:54.725Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/district_pages/DSS.html",
+      "sha256": "78a30cf1939b91126ce966124e2adab8fe305f2151453f6d313c2a4b13f644b1",
+      "bytes": 253936,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/skeena-stikine-natural-resource-district-road-safety-information",
+      "fetchedAt": "2026-10-19T17:13:58.668Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/district_pages/DVA.html",
+      "sha256": "f3f3f623093f443981ea322cc0ce2ecf689453857548fad994b47919a4dcc0c7",
+      "bytes": 291719,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/stuart-nechako-natural-resource-district-road-safety-information",
+      "fetchedAt": "2026-10-19T17:14:02.823Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DCK-0c70d269-bucklin_fsr_-_2019_road_closure.pdf",
+      "sha256": "944ca4c9add9d0f5d4dd55f852efaaec51494e22989c29606a1423fe7968ede2",
+      "bytes": 399706,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/bucklin_fsr_-_2019_road_closure.pdf",
+      "fetchedAt": "2026-10-19T17:14:18.654Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DCK-1379e235-radium_fsr_fs301.pdf",
+      "sha256": "a4a28f8522db6367075678abc96da46bbcb29cee50637a78bcec1cfff4b39dd4",
+      "bytes": 511219,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/radium_fsr_fs301.pdf",
+      "fetchedAt": "2026-10-19T17:14:38.684Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DCK-15d8fff4-east_anderson_fsr_road_closure_april_24_2026.pdf",
+      "sha256": "c20ce3755fa2fda658bcd423a447be8cac07481237cf03ffd0e813c2a7d340b7",
+      "bytes": 226934,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/east_anderson_fsr_road_closure_april_24_2026.pdf",
+      "fetchedAt": "2026-10-19T17:14:20.662Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DCK-1f93b9e0-cypress_lake_fsr_fs301.pdf",
+      "sha256": "e7ed9ce03e5fe1b67ae7ed4c965b60d5475b499d7fce3cb8f2caa78547868334",
+      "bytes": 674272,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/cypress_lake_fsr_fs301.pdf",
+      "fetchedAt": "2026-10-19T17:14:36.691Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DCK-42f99435-1045201_-_discontinue_and_close_with_exhibit_a.pdf",
+      "sha256": "94ace87507ef96c11509d8908b9868d2c45e8bf969d0af28e2b590c33379dbe0",
+      "bytes": 666801,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/1045201_-_discontinue_and_close_with_exhibit_a.pdf",
+      "fetchedAt": "2026-10-19T17:14:40.700Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DCK-4d024dd5-american_fsr_road_closure_february_9_2026.pdf",
+      "sha256": "32a2ddc307815500820869188186399857c808147a52b6a227c1a930f4375c48",
+      "bytes": 335001,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/american_fsr_road_closure_february_9_2026.pdf",
+      "fetchedAt": "2026-10-19T17:14:14.645Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DCK-691e2b1a-hunter_fsr_variance_to_closure.pdf",
+      "sha256": "954736515c258ed41dbd0d8285fa2c146e2981d008cba3da5a2597cd57f11263",
+      "bytes": 313927,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/hunter_fsr_variance_to_closure.pdf",
+      "fetchedAt": "2026-10-19T17:14:30.664Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DCK-79c52629-fs301_december_13_2024.pdf",
+      "sha256": "c829228ee6380245b6e8223eb1e77c1a99847b2f14f49d062f5b90fa528320da",
+      "bytes": 1346252,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/fs301_december_13_2024.pdf",
+      "fetchedAt": "2026-10-19T17:14:34.825Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DCK-8347a650-71w27vb_fsr_closures_amended_july_22.pdf",
+      "sha256": "dbdc8cf6c822df9e2c7e6684963158fe6b2fc839c06994ba8552cf59f5ae9233",
+      "bytes": 202397,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/71w27vb_fsr_closures_amended_july_22.pdf",
+      "fetchedAt": "2026-10-19T17:14:10.641Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DCK-8eb16f04-squeah_fsr_-_2020_road_closure.pdf",
+      "sha256": "5992920e97e623e685fd740139e3594f242e5b8c5e54080f528e75f88f69fa7d",
+      "bytes": 392800,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/squeah_fsr_-_2020_road_closure.pdf",
+      "fetchedAt": "2026-10-19T17:14:28.662Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DCK-94372f1a-mowhokam_east_fsr_closure.pdf",
+      "sha256": "9b7762b3e8f857ed7a1002d28b49b69d88e09585c804c0d3b830dc73b875a1a4",
+      "bytes": 288241,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/mowhokam_east_fsr_closure.pdf",
+      "fetchedAt": "2026-10-19T17:14:24.669Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DCK-9a9e782c-notice_of_clousre_harrison_east_fsr_-_rescinded.pdf",
+      "sha256": "b45eea730acac74e439accb861d190bbd2f10f44f33310b9042af5d9ce6d8830",
+      "bytes": 405167,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/notice_of_clousre_harrison_east_fsr_-_rescinded.pdf",
+      "fetchedAt": "2026-10-19T17:14:08.995Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DCK-a36f6f84-fsr_road_closure_notice_december_storm_damage.pdf",
+      "sha256": "495856ff8338debcff327e780aaf92e1c290ae04029d94fe72d51b533e813c4e",
+      "bytes": 312747,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/fsr_road_closure_notice_december_storm_damage.pdf",
+      "fetchedAt": "2026-10-19T17:14:12.703Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DCK-cdff3673-bench_fsr_road_closure.pdf",
+      "sha256": "ecae0acf0ecfc8341e282d32b0ace49614f772e2e4e566d1e5e7359b37faea51",
+      "bytes": 237992,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/bench_fsr_road_closure.pdf",
+      "fetchedAt": "2026-10-19T17:14:16.662Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DCK-cfd72836-ac8126-19-01_bcts.pdf",
+      "sha256": "5d210165adfc7245697bc8328127db51028fcf991ee005da1177e3ecdc3f52da",
+      "bytes": 1023118,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/ac8126-19-01_bcts.pdf",
+      "fetchedAt": "2026-10-19T17:14:26.734Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DCK-d8b34b6d-807402_03_04_05_06_fs_301_-_fsr_discontinue_and_close.pdf",
+      "sha256": "f1354edc7b1fc27ece17563db5109ba2a2f235a2651b26c15186b153f8b1d692",
+      "bytes": 641065,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/807402_03_04_05_06_fs_301_-_fsr_discontinue_and_close.pdf",
+      "fetchedAt": "2026-10-19T17:14:32.712Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DSE-68d293da-faq_document_for_incomappleux_deactivation.pdf",
+      "sha256": "d314e583d2a5835c68acd349bfc7128f3786502b4b591b5f7917c3f8fcde092c",
+      "bytes": 206654,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/selkirk/faq_document_for_incomappleux_deactivation.pdf",
+      "fetchedAt": "2026-10-19T17:14:48.672Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DVA-3faae646-dsn_road_restictions_2026_spring_road_bans_bulletin_3.pdf",
+      "sha256": "8754e6af44a81aed666446608dabbbacaed001fdf7fe1d4b603512377a20ae3e",
+      "bytes": 189493,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/stuart-nechako/dsn_road_restictions_2026_spring_road_bans_bulletin_3.pdf",
+      "fetchedAt": "2026-10-19T17:14:54.676Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DVA-70228e68-dsn_road_restrictions_bulletin_4.pdf",
+      "sha256": "5cb3a398eeab4f01b44cea40187de9833377e6fc58a2e0e27f7c5e8e81168951",
+      "bytes": 257819,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/stuart-nechako/dsn_road_restrictions_bulletin_4.pdf",
+      "fetchedAt": "2026-10-19T17:14:52.634Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/large/DCK-e487c48e-ck-2519_-_2024_inspection_signed.pdf",
+      "sha256": "dbd6f536246376b1501f72f799770530fd4c0c980844fd93842f0820b29dfc29",
+      "bytes": 2215982,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/ck-2519_-_2024_inspection_signed.pdf",
+      "fetchedAt": "2026-10-19T17:14:23.114Z",
+      "committed": false,
+      "note": "over 2 MB: hash kept, file not committed"
+    },
+    {
+      "path": "raw/2026-10/dm_notices/large/DSE-2cb2b189-incomappleux_br2deact.pdf",
+      "sha256": "3f41993f7de636c0aec54757093ffed15a50c8853ee45a6140d8774e92429a0e",
+      "bytes": 6158250,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/selkirk/incomappleux_br2deact.pdf",
+      "fetchedAt": "2026-10-19T17:14:45.142Z",
+      "committed": false,
+      "note": "over 2 MB: hash kept, file not committed"
+    },
+    {
+      "path": "raw/2026-10/dm_notices/large/DSE-b217a506-incomappleux_road_deactivation_appendix_a.pdf",
+      "sha256": "5a858e7329b9c6429f15fa4b7b1c6ff2dccde49d5bfb1eac6d95b6bf93fe8dd1",
+      "bytes": 8504145,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/selkirk/incomappleux_road_deactivation_appendix_a.pdf",
+      "fetchedAt": "2026-10-19T17:14:47.193Z",
+      "committed": false,
+      "note": "over 2 MB: hash kept, file not committed"
+    },
+    {
+      "path": "raw/2026-10/dm_notices/large/DSE-c3a0aaa8-incomappleux_road_deactivation_prescription_overview_2024_contour_new.pdf",
+      "sha256": "12341f6e3ac74d77ed47d978526cf3f9213a3976facd777fad3884ff57a4e73a",
+      "bytes": 6966871,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/selkirk/incomappleux_road_deactivation_prescription_overview_2024_contour_new.pdf",
+      "fetchedAt": "2026-10-19T17:14:43.440Z",
+      "committed": false,
+      "note": "over 2 MB: hash kept, file not committed"
+    },
+    {
+      "path": "raw/2026-10/dm_notices/large/DSE-e4e6b5f8-trout_lake_rady_creek_deactivation_prescription_map.pdf",
+      "sha256": "eccd28c2a4f70e853cf5369c7b23cca30ec43d8c57a1e524fba82b96daca149a",
+      "bytes": 6787379,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/selkirk/trout_lake_rady_creek_deactivation_prescription_map.pdf",
+      "fetchedAt": "2026-10-19T17:14:51.327Z",
+      "committed": false,
+      "note": "over 2 MB: hash kept, file not committed"
+    },
+    {
+      "path": "raw/2026-10/inbox/excerpts/closed-areas-sch5-s85.txt",
+      "sha256": "2fb42e0f9ec992c28b06027d61d39869daad9e7c8c75a7f5f4ac6c187181965e",
+      "bytes": 414,
+      "source": "inbox",
+      "fetchedAt": "2026-10-19T17:13:14.158Z",
+      "committed": true,
+      "note": "copied from inbox/excerpts/closed-areas-sch5-s85.txt"
+    }
+  ],
+  "failures": [
+    {
+      "source": "closed_areas",
+      "what": "legal text",
+      "error": "no dated copy of 76_84_00_multi, 196_99, 190_84, 180_90, 16_2004, 38_2005: waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)",
+      "at": "2026-10-19T17:13:23.522Z"
+    }
+  ]
+}
