@@ -64,10 +64,13 @@ class Context {
   readonly failedHazardLayers = new Set<string>();
   readonly usedSources = new Set<string>();
   readonly at: Date;
+  /** Freshness is measured against the real time of the check, not the date being checked. */
+  readonly now: Date;
   readonly radius: number;
 
   constructor(readonly input: EvaluationInput) {
     this.at = input.at;
+    this.now = input.now ?? input.at;
     this.radius = input.profile.fallZoneM;
   }
 
@@ -83,7 +86,7 @@ class Context {
     if (l.status !== "ok" || !l.fetchedAt) return false;
     const src = this.input.sources[l.sourceId];
     const limitH = src?.freshnessHours ?? 24 * 45;
-    return this.at.getTime() - new Date(l.fetchedAt).getTime() <= limitH * 3600_000;
+    return this.now.getTime() - new Date(l.fetchedAt).getTime() <= limitH * 3600_000;
   }
 
   /** Returns a reason string when the layer cannot be trusted, otherwise null. */
@@ -363,7 +366,7 @@ function checkWildlife(ctx: Context): void {
   const freshCoverage =
     cov?.status === "reviewed" &&
     !!cov.confirmedOn &&
-    ctx.at.getTime() - new Date(cov.confirmedOn).getTime() <= TEXT_SOURCE_FRESHNESS_DAYS * 86400_000;
+    ctx.now.getTime() - new Date(cov.confirmedOn).getTime() <= TEXT_SOURCE_FRESHNESS_DAYS * 86400_000;
 
   if (!region || !freshCoverage) {
     let reason: string;
@@ -746,7 +749,7 @@ function checkRoadNotices(ctx: Context): void {
     ctx.unknown("P6", `the ${rn?.district ?? "natural resource district"} road notices page could not be read${rn?.error ? ` (${rn.error})` : ""}`);
     return;
   }
-  const fresh = !!date && ctx.at.getTime() - new Date(date).getTime() <= (ctx.input.sources.road_notices?.freshnessHours ?? 48) * 3600_000;
+  const fresh = !!date && ctx.now.getTime() - new Date(date).getTime() <= (ctx.input.sources.road_notices?.freshnessHours ?? 48) * 3600_000;
   if (!fresh) {
     ctx.unknown("P6", "district road notices are older than their freshness limit");
     return;
@@ -777,7 +780,7 @@ function bylawCheck(ctx: Context, ruleId: "L1" | "L2" | "L3", entry: BylawEntry 
   const fresh =
     entry?.status === "reviewed" &&
     !!entry.confirmedOn &&
-    ctx.at.getTime() - new Date(entry.confirmedOn).getTime() <= TEXT_SOURCE_FRESHNESS_DAYS * 86400_000;
+    ctx.now.getTime() - new Date(entry.confirmedOn).getTime() <= TEXT_SOURCE_FRESHNESS_DAYS * 86400_000;
   if (!entry || !fresh) {
     ctx.add({
       ruleId,

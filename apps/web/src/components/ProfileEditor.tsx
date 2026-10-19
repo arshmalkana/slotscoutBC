@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { ACTIVITIES, DEFAULT_FALL_ZONE_M, FIREARM_CLASSES, FIREARM_TYPES, MAX_FALL_ZONE_M, MIN_FALL_ZONE_M, type Profile } from "@slotscout/engine";
 import { formatDistance } from "../lib/format";
 
@@ -10,6 +11,15 @@ const WHY: Record<string, string> = {
 /** The three profile questions (PRD 2.1). Saved on this device only. */
 export function ProfileEditor({ profile, onChange }: { profile: Profile; onChange(p: Profile): void }) {
   const set = (patch: Partial<Profile>) => onChange({ ...profile, ...patch });
+  const [fzText, setFzText] = useState(String(profile.fallZoneM));
+  useEffect(() => setFzText(String(profile.fallZoneM)), [profile.fallZoneM]);
+  const commitFz = () => {
+    const v = Number(fzText);
+    if (!Number.isFinite(v) || fzText.trim() === "") return setFzText(String(profile.fallZoneM));
+    const clamped = Math.max(MIN_FALL_ZONE_M, Math.min(MAX_FALL_ZONE_M, Math.round(v)));
+    setFzText(String(clamped));
+    if (clamped !== profile.fallZoneM) set({ fallZoneM: clamped });
+  };
   const isDefaultFz = profile.fallZoneM === DEFAULT_FALL_ZONE_M[profile.firearmType];
   return (
     <form onSubmit={(e) => e.preventDefault()} aria-label="Shooting profile">
@@ -67,11 +77,10 @@ export function ProfileEditor({ profile, onChange }: { profile: Profile; onChang
           min={MIN_FALL_ZONE_M}
           max={MAX_FALL_ZONE_M}
           step={50}
-          value={profile.fallZoneM}
-          onChange={(e) => {
-            const v = Number(e.target.value);
-            if (Number.isFinite(v)) set({ fallZoneM: Math.max(MIN_FALL_ZONE_M, Math.min(MAX_FALL_ZONE_M, v)) });
-          }}
+          value={fzText}
+          onChange={(e) => setFzText(e.target.value)}
+          onBlur={commitFz}
+          onKeyDown={(e) => e.key === "Enter" && commitFz()}
         />
         <small>
           {isDefaultFz ? "Planning default" : "Your own value"} for {FIREARM_TYPES.find((t) => t.id === profile.firearmType)?.label.toLowerCase()}:{" "}

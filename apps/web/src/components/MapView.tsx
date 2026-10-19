@@ -46,7 +46,7 @@ const SAT_ATTR = 'Imagery © <a href="https://www.esri.com/">Esri</a>, Vantor, E
 const BC_ATTR = 'BC Basemap © <a href="https://www2.gov.bc.ca/gov/content/data/open-data/open-government-licence-bc">Province of British Columbia</a>';
 const RULES_ATTR = 'Rule layers: <a href="https://catalogue.data.gov.bc.ca/">BC Data Catalogue</a> (OGL-BC)';
 
-/** Raster base styles. "auto" shows topo when zoomed out and satellite from zoom 11 (PRD 9.1). */
+/** Raster base styles. "auto" shows topo when zoomed out and satellite closer in (PRD 9.1). */
 function rasterStyle(base: "auto" | "satellite" | "topo"): StyleInput {
   return {
     version: 8,
@@ -80,7 +80,8 @@ function rasterStyle(base: "auto" | "satellite" | "topo"): StyleInput {
         id: "satellite",
         type: "raster",
         source: "satellite",
-        minzoom: base === "auto" ? 11 : 0,
+        // PRD 9.1 "satellite above zoom 11" in 256 px tile terms is MapLibre zoom 10.
+        minzoom: base === "auto" ? 10 : 0,
         layout: { visibility: base === "topo" ? "none" : "visible" },
         paint: { "raster-fade-duration": 200 },
       },
@@ -88,7 +89,7 @@ function rasterStyle(base: "auto" | "satellite" | "topo"): StyleInput {
         id: "places",
         type: "raster",
         source: "places",
-        minzoom: base === "auto" ? 11 : 0,
+        minzoom: base === "auto" ? 10 : 0,
         layout: { visibility: base === "topo" ? "none" : "visible" },
       },
     ],
@@ -128,7 +129,7 @@ export const MapView = forwardRef<MapViewHandle, Props>(function MapView(props, 
   const styleReady = useRef(false);
 
   useImperativeHandle(ref, () => ({
-    flyTo(point, zoom = 14, radiusM) {
+    flyTo(point, zoom = 13, radiusM) {
       const map = mapRef.current;
       if (!map) return;
       const el = map.getContainer();
@@ -138,7 +139,8 @@ export const MapView = forwardRef<MapViewHandle, Props>(function MapView(props, 
       let z = Math.max(zoom, map.getZoom());
       if (radiusM) {
         const visible = Math.min(el.clientWidth, el.clientHeight - bottom) * 0.8;
-        const fit = Math.log2((156543.03 * Math.cos((point.lat * Math.PI) / 180) * visible) / (2 * radiusM));
+        // MapLibre zoom uses 512 px tiles: metres per pixel = 78271.517 * cos(lat) / 2^zoom.
+        const fit = Math.log2((78271.517 * Math.cos((point.lat * Math.PI) / 180) * visible) / (2 * radiusM));
         z = Math.min(zoom, fit);
       }
       map.flyTo({ center: [point.lon, point.lat], zoom: z, padding: { top: 0, left: 0, right: 0, bottom }, essential: true });
@@ -262,14 +264,18 @@ export const MapView = forwardRef<MapViewHandle, Props>(function MapView(props, 
         });
       }
       if (!map.getLayer(id)) {
-        map.addLayer({
-          id,
-          type: "raster",
-          source: id,
-          minzoom: l.minzoom,
-          layout: { visibility: p.visible.has(l.id) ? "visible" : "none" },
-          paint: { "raster-opacity": p.overlayOpacity, "raster-fade-duration": 150 },
-        });
+        // Rule layers always sit beneath the closed areas, fall zone, throw fan and finder markers.
+        map.addLayer(
+          {
+            id,
+            type: "raster",
+            source: id,
+            minzoom: l.minzoom,
+            layout: { visibility: p.visible.has(l.id) ? "visible" : "none" },
+            paint: { "raster-opacity": p.overlayOpacity, "raster-fade-duration": 150 },
+          },
+          map.getLayer("digitised-fill") ? "digitised-fill" : undefined,
+        );
       }
     }
     if (!map.getSource("digitised")) map.addSource("digitised", { type: "geojson", data: `${location.origin}/v1/digitised.geojson` });

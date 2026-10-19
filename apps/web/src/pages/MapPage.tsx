@@ -90,7 +90,7 @@ export function MapPage() {
   // A shared link opens straight on its report.
   useEffect(() => {
     if (initialUrl.point) {
-      setTimeout(() => mapRef.current?.flyTo(initialUrl.point!, 14, profile.fallZoneM), 300);
+      setTimeout(() => mapRef.current?.flyTo(initialUrl.point!, 13, profile.fallZoneM), 300);
       runCheck(initialUrl.point, profile);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -123,11 +123,11 @@ export function MapPage() {
 
   const onSearch = (r: SearchResult) => {
     if (r.kind === "coordinates" || r.kind === "km_marker") {
-      mapRef.current?.flyTo({ lat: r.lat, lon: r.lon }, 14, profile.fallZoneM);
+      mapRef.current?.flyTo({ lat: r.lat, lon: r.lon }, 13, profile.fallZoneM);
       if (base !== "satellite" && base !== "auto") setBase("auto");
       pick({ lat: r.lat, lon: r.lon });
     } else if (r.bbox) mapRef.current?.fitBounds(r.bbox);
-    else mapRef.current?.flyTo({ lat: r.lat, lon: r.lon }, 13);
+    else mapRef.current?.flyTo({ lat: r.lat, lon: r.lon }, 12);
   };
 
   const saveToTrip = () => {
@@ -290,7 +290,7 @@ export function MapPage() {
                           type="button"
                           style={{ justifyContent: "flex-start" }}
                           onClick={() => {
-                            mapRef.current?.flyTo(e.q, 14, profile.fallZoneM);
+                            mapRef.current?.flyTo(e.q, 13, profile.fallZoneM);
                             pick(e.q);
                           }}
                         >
@@ -311,13 +311,13 @@ export function MapPage() {
                 candidates={candidates}
                 onCandidates={setCandidates}
                 onPick={(c) => {
-                  mapRef.current?.flyTo(c.point, 14, profile.fallZoneM);
+                  mapRef.current?.flyTo(c.point, 13, profile.fallZoneM);
                   pick(c.point);
                 }}
                 trip={trip}
                 onTrip={setTrip}
                 onTripPick={(p) => {
-                  mapRef.current?.flyTo(p, 14, profile.fallZoneM);
+                  mapRef.current?.flyTo(p, 13, profile.fallZoneM);
                   pick(p);
                 }}
               />

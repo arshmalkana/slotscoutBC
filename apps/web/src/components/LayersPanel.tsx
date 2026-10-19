@@ -44,7 +44,7 @@ export function LayersPanel({ base, onBase, layers, visible, onVisible, opacity,
             </label>
           ))}
         </div>
-        <p className="hint">Auto shows the BC topographic map when zoomed out and satellite from zoom 11.</p>
+        <p className="hint">Auto shows the BC topographic map when zoomed out and satellite imagery when zoomed in.</p>
       </section>
 
       <section className="section">

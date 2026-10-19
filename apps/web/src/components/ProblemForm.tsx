@@ -13,7 +13,7 @@ const CATEGORIES = [
 
 /** Report a problem (PRD 1.4, 1.5.5). A possible false green is triaged within 24 hours. */
 export function ProblemForm({ report, onDone }: { report: SpotReport; onDone(): void }) {
-  const [category, setCategory] = useState("false_green");
+  const [category, setCategory] = useState("");
   const [message, setMessage] = useState("");
   const [contact, setContact] = useState("");
   const [state, setState] = useState<"idle" | "sending" | "sent" | "error">("idle");
@@ -56,7 +56,10 @@ export function ProblemForm({ report, onDone }: { report: SpotReport; onDone(): 
     <form className="card" style={{ marginTop: 8 }} onSubmit={submit}>
       <label className="field">
         <span>What is wrong?</span>
-        <select value={category} onChange={(e) => setCategory(e.target.value)}>
+        <select value={category} onChange={(e) => setCategory(e.target.value)} required>
+          <option value="" disabled>
+            Choose one
+          </option>
           {CATEGORIES.map((c) => (
             <option key={c.id} value={c.id}>
               {c.label}

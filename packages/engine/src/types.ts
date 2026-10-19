@@ -252,8 +252,10 @@ export interface ReleaseInfo {
 export interface EvaluationInput {
   point: LatLon;
   profile: Profile;
-  /** Date and time of the check (seasonal rules). */
+  /** Date and time the check is for (seasonal rules). May be in the future. */
   at: Date;
+  /** Wall-clock time used for freshness limits. Defaults to `at`. */
+  now?: Date;
   release: ReleaseInfo;
   /** Whether the point is inside the provincial boundary. */
   inBC: boolean | null;

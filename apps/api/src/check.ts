@@ -55,6 +55,7 @@ export async function buildInput(point: LatLon, profile: Profile, at: Date): Pro
     point,
     profile,
     at,
+    now: new Date(),
     release: d.release,
     inBC,
     layers,

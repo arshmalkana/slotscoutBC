@@ -15,6 +15,14 @@ interface Props {
   saved: boolean;
 }
 
+function hostOf(url: string): string {
+  try {
+    return new URL(url).host;
+  } catch {
+    return url.slice(0, 40);
+  }
+}
+
 function CheckRow({ c, open, onToggle }: { c: CheckResult; open: boolean; onToggle(): void }) {
   const state = statusState(c.status);
   const def = RULES_BY_ID[c.ruleId] ?? RULES_BY_ID[c.ruleId.split(/[–-]/)[0]!];
@@ -87,7 +95,7 @@ function CheckRow({ c, open, onToggle }: { c: CheckResult; open: boolean; onTogg
                     <Link to={c.moreUrl}>Read more</Link>
                   ) : (
                     <a href={c.moreUrl} target="_blank" rel="noreferrer">
-                      {new URL(c.moreUrl).host}
+                      {hostOf(c.moreUrl)}
                     </a>
                   )}
                 </dd>

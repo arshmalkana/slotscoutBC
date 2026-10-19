@@ -16,6 +16,8 @@ export function SearchBox({ onSelect }: Props) {
   const [busy, setBusy] = useState(false);
   const listId = useId();
   const ctrl = useRef<AbortController | null>(null);
+  /** Set when a result was just chosen, so filling the box with its label does not reopen the list. */
+  const chosen = useRef(false);
   const wrap = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -29,6 +31,10 @@ export function SearchBox({ onSelect }: Props) {
   useEffect(() => {
     const text = q.trim();
     ctrl.current?.abort();
+    if (chosen.current) {
+      chosen.current = false;
+      return;
+    }
     if (text.length < 2) {
       setResults([]);
       setMsg(null);
@@ -74,7 +80,8 @@ export function SearchBox({ onSelect }: Props) {
   const choose = (r: SearchResult) => {
     onSelect(r);
     setOpen(false);
-    setQ(r.kind === "coordinates" ? r.label : r.label);
+    chosen.current = true;
+    setQ(r.label);
   };
 
   return (

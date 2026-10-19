@@ -100,8 +100,13 @@ export async function buildApp(opts: { logger?: boolean } = {}): Promise<Fastify
       activity: body.profile?.activity,
       fallZoneM: body.profile?.fz,
     });
-    const reports = [];
-    for (const p of points as LatLon[]) reports.push(await checkPoint(p, profile, at));
+    // Four at a time, in input order, so a batch never floods the government servers.
+    const reports = new Array(points.length);
+    let next = 0;
+    const worker = async () => {
+      for (let i = next++; i < points.length; i = next++) reports[i] = await checkPoint(points[i] as LatLon, profile, at);
+    };
+    await Promise.all([worker(), worker(), worker(), worker()]);
     return { reports };
   });
 

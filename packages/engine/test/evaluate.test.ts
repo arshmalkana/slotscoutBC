@@ -246,3 +246,12 @@ describe("evaluate: report shape", () => {
     expect(r.access.vehicle).toBe("high clearance recommended");
   });
 });
+
+describe("evaluate: dates", () => {
+  it("measures freshness against the real time, not the date being checked", () => {
+    const future = new Date(AT.getTime() + 60 * 86400_000);
+    const r = evaluate(baseInput({ at: future, now: AT }));
+    expect(r.verdict.state).toBe("green");
+    expect(evaluate(baseInput({ at: future })).verdict.state).not.toBe("green");
+  });
+});
