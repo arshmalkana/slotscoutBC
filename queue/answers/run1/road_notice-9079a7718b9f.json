@@ -1,0 +1,41 @@
+{
+  "task_id": "road_notice-9079a7718b9f",
+  "run": 1,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code)",
+  "prompt_version": "road_notice.v1",
+  "schema_id": "road_notice.v1",
+  "produced_at": "2026-10-19T17:45:11Z",
+  "answer": {
+    "road": {
+      "name": "Sanca Creek FSR",
+      "file_section": "0189.01"
+    },
+    "posted_on": "2026-09-15",
+    "rescinded": false,
+    "points": [
+      {
+        "km": 8,
+        "km_end": 15.5,
+        "extent": "range",
+        "status": "caution",
+        "quote": "Road maintenance is planned for Sanca Creek FSR between 8km and 15.5km from September 15th, 2026 to October 9th, 2026."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "road.name",
+        "quote": "Sanca Creek FSR"
+      },
+      {
+        "field": "road.file_section",
+        "quote": "0189.01"
+      },
+      {
+        "field": "posted_on",
+        "quote": "September 15 to October 9, 2026"
+      }
+    ],
+    "uncertain": []
+  }
+}

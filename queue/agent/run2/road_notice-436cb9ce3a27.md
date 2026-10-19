@@ -1,9 +1,9 @@
-# Extraction task road_notice-b33f1acbbe31 (run 2)
+# Extraction task road_notice-436cb9ce3a27 (run 2)
 
-Write your answer to `queue/answers/run2/road_notice-b33f1acbbe31.json` as:
+Write your answer to `queue/answers/run2/road_notice-436cb9ce3a27.json` as:
 
 ```json
-{ "task_id": "road_notice-b33f1acbbe31", "run": 2, "mode": "agent", "model": "<your model id> (Claude Code subagent)", "prompt_version": "road_notice.v1", "schema_id": "road_notice.v1", "produced_at": "<ISO time>", "answer": { ...matching schema/road_notice.v1.json... } }
+{ "task_id": "road_notice-436cb9ce3a27", "run": 2, "mode": "agent", "model": "<your model id> (Claude Code subagent)", "prompt_version": "road_notice.v1", "schema_id": "road_notice.v1", "produced_at": "<ISO time>", "answer": { ...matching schema/road_notice.v1.json... } }
 ```
 
 The answer must match `schema/road_notice.v1.json` exactly. Use only the source text below. Never write coordinates. Every filled field needs its exact quote.
@@ -165,10 +165,10 @@ Rules:
 
 ## Source
 
-Source: Otter Creek FSR 0564.03 (September 19, 2026) (District page fetched 2026-10-19T17:14:07.152Z)
+Source: Chuchinka-Colbourne FSR (5506.04) (District page fetched 2026-10-19T17:13:48.719Z)
 
 <source_text>
-Otter Creek FSR 0564.03 (September 19, 2026): Planned railway crossing work by CN Rail at 0.3km September 19, 2026. Work will commence at1800hrs. No access during the work. Scottie Creek FSR 5451.01 (September 1 - September 25, 2026) Road repair is planned for Scottie Creek FSR from September 1 to September 25, 2026 at 4km to 5km. There will be no access through the worksite between 7am and 6pm. No detour available.
+Chuchinka-Colbourne FSR (5506.04): 874km to 878km (Reynolds Creek). Bridge is removed. Deactivation planned for 4km in front of former Reynolds Creek crossing.
 </source_text>
 
 Return the JSON for this text.

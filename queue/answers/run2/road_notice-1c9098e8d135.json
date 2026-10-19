@@ -1,0 +1,55 @@
+{
+  "task_id": "road_notice-1c9098e8d135",
+  "run": 2,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code subagent)",
+  "prompt_version": "road_notice.v1",
+  "schema_id": "road_notice.v1",
+  "produced_at": "2026-10-19T17:48:40Z",
+  "answer": {
+    "road": {
+      "name": "Dore River – Br.2 FSR",
+      "file_section": "8493.02"
+    },
+    "posted_on": null,
+    "rescinded": false,
+    "points": [
+      {
+        "km": 5.6,
+        "km_end": null,
+        "extent": "at",
+        "status": "restricted",
+        "quote": "Bridge at 5.6km downrated to 30 tonnes."
+      },
+      {
+        "km": 9.9,
+        "km_end": null,
+        "extent": "at",
+        "status": "restricted",
+        "quote": "Bridge at 9.9km (G3-029) downrated to 64 tonnes"
+      },
+      {
+        "km": 15.8,
+        "km_end": null,
+        "extent": "at",
+        "status": "restricted",
+        "quote": "Bridge at 15.8km downrated to 5 tonnes"
+      }
+    ],
+    "quotes": [
+      {
+        "field": "road.name",
+        "quote": "Dore River – Br.2 FSR"
+      },
+      {
+        "field": "road.file_section",
+        "quote": "(8493.02)"
+      },
+      {
+        "field": "rescinded",
+        "quote": "(Listed under: Structures closed and downrated.)"
+      }
+    ],
+    "uncertain": []
+  }
+}

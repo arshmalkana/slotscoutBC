@@ -1,0 +1,46 @@
+{
+  "task_id": "road_notice-694c9c949f21",
+  "run": 2,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code subagent)",
+  "prompt_version": "road_notice.v1",
+  "schema_id": "road_notice.v1",
+  "produced_at": "2026-10-19T17:48:40Z",
+  "answer": {
+    "road": {
+      "name": "Stawamus/Indian River FSR",
+      "file_section": null
+    },
+    "posted_on": null,
+    "rescinded": false,
+    "points": [
+      {
+        "km": 3,
+        "km_end": null,
+        "extent": "beyond",
+        "status": "closed",
+        "quote": "Road closed to all users at gate at 3km due to construction activities."
+      },
+      {
+        "km": 0,
+        "km_end": 3,
+        "extent": "range",
+        "status": "caution",
+        "quote": "Expect delays 0 - 3km."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "road.name",
+        "quote": "Stawamus/Indian River FSR"
+      },
+      {
+        "field": "rescinded",
+        "quote": "August 30, 2024 - December 31, 2026: Road closed to all users at gate at 3km due to construction activities."
+      }
+    ],
+    "uncertain": [
+      "posted_on"
+    ]
+  }
+}

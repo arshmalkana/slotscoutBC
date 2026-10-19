@@ -1,0 +1,41 @@
+{
+  "task_id": "road_notice-adf87b7adf9d",
+  "run": 1,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code)",
+  "prompt_version": "road_notice.v1",
+  "schema_id": "road_notice.v1",
+  "produced_at": "2026-10-19T17:35:34Z",
+  "answer": {
+    "road": {
+      "name": "Seymour River FSR",
+      "file_section": "7271.01"
+    },
+    "posted_on": "2025-09-15",
+    "rescinded": false,
+    "points": [
+      {
+        "km": 45,
+        "km_end": null,
+        "extent": "beyond",
+        "status": "washout",
+        "quote": "Road is washed-out at 45 km, this includes bridge K1066."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "road.name",
+        "quote": "Seymour River FSR"
+      },
+      {
+        "field": "road.file_section",
+        "quote": "7271.01"
+      },
+      {
+        "field": "posted_on",
+        "quote": "September 15, 2025"
+      }
+    ],
+    "uncertain": []
+  }
+}

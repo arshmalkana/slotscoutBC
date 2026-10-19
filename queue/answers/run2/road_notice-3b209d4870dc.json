@@ -1,0 +1,32 @@
+{
+  "task_id": "road_notice-3b209d4870dc",
+  "run": 2,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code subagent)",
+  "prompt_version": "road_notice.v1",
+  "schema_id": "road_notice.v1",
+  "produced_at": "2026-10-19T17:35:18Z",
+  "answer": {
+    "road": {
+      "name": "Bowron FSR",
+      "file_section": "7141.01"
+    },
+    "posted_on": "2026-10-08",
+    "rescinded": false,
+    "points": [
+      {
+        "km": 11.5,
+        "km_end": null,
+        "extent": "at",
+        "status": "restricted",
+        "quote": "Be advised of bridge maintenance work at Bowron Bridge located at +/- 11.5 km on the Bowron FSR. Work will occur from October 14, 2026 through October 16, 2026. Work will then stop for the weekend and start up again on Monday, October 19, 2026 and continue through to October 21, 2026. Expect extended delays during the day as maintenance occurs - traffic will be able to cross when safe to do so and operationally feasible."
+      }
+    ],
+    "quotes": [
+      { "field": "road.name", "quote": "Bowron FSR" },
+      { "field": "road.file_section", "quote": "Bowron FSR 7141.01" },
+      { "field": "posted_on", "quote": "(October 8, 2026)" }
+    ],
+    "uncertain": []
+  }
+}

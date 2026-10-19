@@ -1,9 +1,9 @@
-# Extraction task road_notice-b33f1acbbe31 (run 1)
+# Extraction task road_notice-7236bbb51a24 (run 1)
 
-Write your answer to `queue/answers/run1/road_notice-b33f1acbbe31.json` as:
+Write your answer to `queue/answers/run1/road_notice-7236bbb51a24.json` as:
 
 ```json
-{ "task_id": "road_notice-b33f1acbbe31", "run": 1, "mode": "agent", "model": "<your model id> (Claude Code)", "prompt_version": "road_notice.v1", "schema_id": "road_notice.v1", "produced_at": "<ISO time>", "answer": { ...matching schema/road_notice.v1.json... } }
+{ "task_id": "road_notice-7236bbb51a24", "run": 1, "mode": "agent", "model": "<your model id> (Claude Code)", "prompt_version": "road_notice.v1", "schema_id": "road_notice.v1", "produced_at": "<ISO time>", "answer": { ...matching schema/road_notice.v1.json... } }
 ```
 
 The answer must match `schema/road_notice.v1.json` exactly. Use only the source text below. Never write coordinates. Every filled field needs its exact quote.
@@ -165,10 +165,10 @@ Rules:
 
 ## Source
 
-Source: Otter Creek FSR 0564.03 (September 19, 2026) (District page fetched 2026-10-19T17:14:07.152Z)
+Source: Tom Cole Mountain 7670.01 (updated Sept 3, 2026) (District page fetched 2026-10-19T17:13:30.813Z)
 
 <source_text>
-Otter Creek FSR 0564.03 (September 19, 2026): Planned railway crossing work by CN Rail at 0.3km September 19, 2026. Work will commence at1800hrs. No access during the work. Scottie Creek FSR 5451.01 (September 1 - September 25, 2026) Road repair is planned for Scottie Creek FSR from September 1 to September 25, 2026 at 4km to 5km. There will be no access through the worksite between 7am and 6pm. No detour available.
+Tom Cole Mountain 7670.01 (updated Sept 3, 2026): Access to 0 km obstructed near Highway 99
 </source_text>
 
 Return the JSON for this text.

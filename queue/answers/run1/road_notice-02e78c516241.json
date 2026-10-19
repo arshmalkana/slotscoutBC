@@ -1,0 +1,41 @@
+{
+  "task_id": "road_notice-02e78c516241",
+  "run": 1,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code)",
+  "prompt_version": "road_notice.v1",
+  "schema_id": "road_notice.v1",
+  "produced_at": "2026-10-19T17:36:33Z",
+  "answer": {
+    "road": {
+      "name": "Mowhokam East FSR",
+      "file_section": "8019.03"
+    },
+    "posted_on": "2025-02-25",
+    "rescinded": false,
+    "points": [
+      {
+        "km": 6.3,
+        "km_end": null,
+        "extent": "beyond",
+        "status": "closed",
+        "quote": "Mowhokam East FSR (8019.03) is hereby closed at Bridge CK-2210 located at approximately 6.3km on the Mowhokam East FSR until further notice."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "road.name",
+        "quote": "Mowhokam East FSR"
+      },
+      {
+        "field": "road.file_section",
+        "quote": "8019.03"
+      },
+      {
+        "field": "posted_on",
+        "quote": "February 25, 2025"
+      }
+    ],
+    "uncertain": []
+  }
+}

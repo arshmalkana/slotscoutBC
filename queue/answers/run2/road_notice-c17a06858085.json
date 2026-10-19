@@ -1,0 +1,28 @@
+{
+  "task_id": "road_notice-c17a06858085",
+  "run": 2,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code subagent)",
+  "prompt_version": "road_notice.v1",
+  "schema_id": "road_notice.v1",
+  "produced_at": "2026-10-19T17:36:17Z",
+  "answer": {
+    "road": {
+      "name": "GARNET 9400",
+      "file_section": null
+    },
+    "posted_on": null,
+    "rescinded": false,
+    "points": [],
+    "quotes": [
+      {
+        "field": "road.name",
+        "quote": "Road Name GARNET 9400"
+      }
+    ],
+    "uncertain": [
+      "road.file_section",
+      "points"
+    ]
+  }
+}

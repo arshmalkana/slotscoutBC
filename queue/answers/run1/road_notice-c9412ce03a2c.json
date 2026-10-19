@@ -1,0 +1,41 @@
+{
+  "task_id": "road_notice-c9412ce03a2c",
+  "run": 1,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code)",
+  "prompt_version": "road_notice.v1",
+  "schema_id": "road_notice.v1",
+  "produced_at": "2026-10-19T17:45:11Z",
+  "answer": {
+    "road": {
+      "name": "Scottie Creek FSR",
+      "file_section": "5451.01"
+    },
+    "posted_on": "2026-09-01",
+    "rescinded": false,
+    "points": [
+      {
+        "km": 4,
+        "km_end": 5,
+        "extent": "range",
+        "status": "closed",
+        "quote": "There will be no access through the worksite between 7am and 6pm."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "road.name",
+        "quote": "Scottie Creek FSR"
+      },
+      {
+        "field": "road.file_section",
+        "quote": "5451.01"
+      },
+      {
+        "field": "posted_on",
+        "quote": "September 1 - September 25, 2026"
+      }
+    ],
+    "uncertain": []
+  }
+}

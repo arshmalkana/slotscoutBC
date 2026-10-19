@@ -1,0 +1,45 @@
+{
+  "task_id": "road_notice-2dfa8620da6e",
+  "run": 2,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code subagent)",
+  "prompt_version": "road_notice.v1",
+  "schema_id": "road_notice.v1",
+  "produced_at": "2026-10-19T17:48:40Z",
+  "answer": {
+    "road": {
+      "name": "Yalakom River FSR",
+      "file_section": "7649.01"
+    },
+    "posted_on": "2026-09-03",
+    "rescinded": false,
+    "points": [
+      {
+        "km": 60,
+        "km_end": null,
+        "extent": "beyond",
+        "status": "caution",
+        "quote": "Travel not recommended beyond 60 km."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "road.name",
+        "quote": "Yalakom River FSR"
+      },
+      {
+        "field": "road.file_section",
+        "quote": "Yalakom River FSR 7649.01"
+      },
+      {
+        "field": "posted_on",
+        "quote": "(updated Sept 3, 2026)"
+      },
+      {
+        "field": "rescinded",
+        "quote": "Several sections with rock and cut bank sloughs on the road."
+      }
+    ],
+    "uncertain": []
+  }
+}

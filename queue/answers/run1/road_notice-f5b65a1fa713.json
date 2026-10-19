@@ -1,0 +1,48 @@
+{
+  "task_id": "road_notice-f5b65a1fa713",
+  "run": 1,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code)",
+  "prompt_version": "road_notice.v1",
+  "schema_id": "road_notice.v1",
+  "produced_at": "2026-10-19T17:35:07Z",
+  "answer": {
+    "road": {
+      "name": "Adams Lake West FSR",
+      "file_section": "7458.01"
+    },
+    "posted_on": "2023-09-19",
+    "rescinded": false,
+    "points": [
+      {
+        "km": 0,
+        "km_end": 18,
+        "extent": "range",
+        "status": "caution",
+        "quote": "Road heavily impacted by wildfire from 0km to 18km."
+      },
+      {
+        "km": null,
+        "km_end": null,
+        "extent": "whole_road",
+        "status": "closed",
+        "quote": "NO ACCESS during rain events."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "road.name",
+        "quote": "Adams Lake West FSR"
+      },
+      {
+        "field": "road.file_section",
+        "quote": "7458.01"
+      },
+      {
+        "field": "posted_on",
+        "quote": "September 19, 2023"
+      }
+    ],
+    "uncertain": []
+  }
+}

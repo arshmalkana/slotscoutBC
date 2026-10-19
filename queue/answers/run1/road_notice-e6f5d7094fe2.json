@@ -1,0 +1,39 @@
+{
+  "task_id": "road_notice-e6f5d7094fe2",
+  "run": 1,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code)",
+  "prompt_version": "road_notice.v1",
+  "schema_id": "road_notice.v1",
+  "produced_at": "2026-10-19T17:45:11Z",
+  "answer": {
+    "road": {
+      "name": "Caribou FSR",
+      "file_section": "10998.01"
+    },
+    "posted_on": null,
+    "rescinded": false,
+    "points": [
+      {
+        "km": 6,
+        "km_end": null,
+        "extent": "beyond",
+        "status": "bridge_out",
+        "quote": "Bridge removed at 6km, only quad, snowmobile access beyond."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "road.name",
+        "quote": "Caribou FSR"
+      },
+      {
+        "field": "road.file_section",
+        "quote": "10998.01"
+      }
+    ],
+    "uncertain": [
+      "posted_on"
+    ]
+  }
+}

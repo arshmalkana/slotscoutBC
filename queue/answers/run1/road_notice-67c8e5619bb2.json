@@ -1,0 +1,39 @@
+{
+  "task_id": "road_notice-67c8e5619bb2",
+  "run": 1,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code)",
+  "prompt_version": "road_notice.v1",
+  "schema_id": "road_notice.v1",
+  "produced_at": "2026-10-19T17:45:10Z",
+  "answer": {
+    "road": {
+      "name": "Clusko River – Aneko Creek FSR",
+      "file_section": "7356.04"
+    },
+    "posted_on": null,
+    "rescinded": false,
+    "points": [
+      {
+        "km": 13,
+        "km_end": null,
+        "extent": "beyond",
+        "status": "washout",
+        "quote": "The road is temporarily closed at approximately 13km due to a rain event which has caused a major washout."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "road.name",
+        "quote": "Clusko River – Aneko Creek FSR"
+      },
+      {
+        "field": "road.file_section",
+        "quote": "7356.04"
+      }
+    ],
+    "uncertain": [
+      "posted_on"
+    ]
+  }
+}

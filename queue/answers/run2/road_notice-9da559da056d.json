@@ -1,0 +1,33 @@
+{
+  "task_id": "road_notice-9da559da056d",
+  "run": 2,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code subagent)",
+  "prompt_version": "road_notice.v1",
+  "schema_id": "road_notice.v1",
+  "produced_at": "2026-10-19T17:36:14.237Z",
+  "answer": {
+    "road": {
+      "name": "",
+      "file_section": null
+    },
+    "posted_on": "2024-12-13",
+    "rescinded": false,
+    "points": [],
+    "quotes": [
+      {
+        "field": "posted_on",
+        "quote": "Please indicate the date or dates of notification: December 13, 2024."
+      },
+      {
+        "field": "rescinded",
+        "quote": "DISCONTINUANCE AND CLOSURE APPROVED"
+      }
+    ],
+    "uncertain": [
+      "road.name",
+      "road.file_section",
+      "points"
+    ]
+  }
+}

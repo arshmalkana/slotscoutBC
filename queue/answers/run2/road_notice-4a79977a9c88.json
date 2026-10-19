@@ -1,0 +1,45 @@
+{
+  "task_id": "road_notice-4a79977a9c88",
+  "run": 2,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code subagent)",
+  "prompt_version": "road_notice.v1",
+  "schema_id": "road_notice.v1",
+  "produced_at": "2026-10-19T17:48:40Z",
+  "answer": {
+    "road": {
+      "name": "Bonaparte-Komori",
+      "file_section": "6315.15"
+    },
+    "posted_on": "2025-05-27",
+    "rescinded": false,
+    "points": [
+      {
+        "km": 0.05,
+        "km_end": null,
+        "extent": "at",
+        "status": "bridge_out",
+        "quote": "Bridge closure at 0.05km on the Bonaparte-Komori Cut off."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "road.name",
+        "quote": "Bonaparte-Komori"
+      },
+      {
+        "field": "road.file_section",
+        "quote": "Bonaparte-Komori 6315.15"
+      },
+      {
+        "field": "posted_on",
+        "quote": "(May 27,2025)"
+      },
+      {
+        "field": "rescinded",
+        "quote": "There is no estimated time for repairs or opening."
+      }
+    ],
+    "uncertain": []
+  }
+}

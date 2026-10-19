@@ -1,0 +1,41 @@
+{
+  "task_id": "road_notice-86f64d2888d5",
+  "run": 1,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code)",
+  "prompt_version": "road_notice.v1",
+  "schema_id": "road_notice.v1",
+  "produced_at": "2026-10-19T17:36:33Z",
+  "answer": {
+    "road": {
+      "name": "CYPRESS LAKE",
+      "file_section": "8337.01"
+    },
+    "posted_on": "2019-01-02",
+    "rescinded": false,
+    "points": [
+      {
+        "km": null,
+        "km_end": null,
+        "extent": "whole_road",
+        "status": "closed",
+        "quote": "DISCONTINUANCE AND CLOSURE APPROVED"
+      }
+    ],
+    "quotes": [
+      {
+        "field": "road.name",
+        "quote": "CYPRESS LAKE"
+      },
+      {
+        "field": "road.file_section",
+        "quote": "8337.01"
+      },
+      {
+        "field": "posted_on",
+        "quote": "January 2, 2019"
+      }
+    ],
+    "uncertain": []
+  }
+}

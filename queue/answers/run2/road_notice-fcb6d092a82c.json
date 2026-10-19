@@ -1,0 +1,43 @@
+{
+  "task_id": "road_notice-fcb6d092a82c",
+  "run": 2,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code subagent)",
+  "prompt_version": "road_notice.v1",
+  "schema_id": "road_notice.v1",
+  "produced_at": "2026-10-19T17:36:08.630Z",
+  "answer": {
+    "road": {
+      "name": "Peers FSR",
+      "file_section": "8126.01"
+    },
+    "posted_on": null,
+    "rescinded": false,
+    "points": [
+      {
+        "km": 1.7,
+        "km_end": null,
+        "extent": "at",
+        "status": "gated",
+        "quote": "Pursuant to section 6 of the Forest Service Road Use Regulation regarding traffic control\n  devices to restrict access, authorization for the installation, maintenance and operation of a gate\n  to be located at 1.7 km on the Peers FSR as shown and described on the attached map is hereby\n  granted to:"
+      }
+    ],
+    "quotes": [
+      {
+        "field": "road.name",
+        "quote": "Peers FSR"
+      },
+      {
+        "field": "road.file_section",
+        "quote": "1.7 km Peers FSR 8126.01"
+      },
+      {
+        "field": "rescinded",
+        "quote": "This authorization is in effect from the date of signature until otherwise specified by the"
+      }
+    ],
+    "uncertain": [
+      "posted_on"
+    ]
+  }
+}

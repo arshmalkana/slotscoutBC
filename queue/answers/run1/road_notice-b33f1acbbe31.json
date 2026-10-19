@@ -1,0 +1,41 @@
+{
+  "task_id": "road_notice-b33f1acbbe31",
+  "run": 1,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code)",
+  "prompt_version": "road_notice.v1",
+  "schema_id": "road_notice.v1",
+  "produced_at": "2026-10-19T17:35:35Z",
+  "answer": {
+    "road": {
+      "name": "Otter Creek FSR",
+      "file_section": "0564.03"
+    },
+    "posted_on": "2026-09-19",
+    "rescinded": false,
+    "points": [
+      {
+        "km": 0.3,
+        "km_end": null,
+        "extent": "at",
+        "status": "closed",
+        "quote": "Planned railway crossing work by CN Rail at 0.3km September 19, 2026. Work will commence at1800hrs. No access during the work."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "road.name",
+        "quote": "Otter Creek FSR"
+      },
+      {
+        "field": "road.file_section",
+        "quote": "0564.03"
+      },
+      {
+        "field": "posted_on",
+        "quote": "September 19, 2026"
+      }
+    ],
+    "uncertain": []
+  }
+}

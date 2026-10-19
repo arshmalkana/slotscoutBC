@@ -1,0 +1,68 @@
+{
+  "task_id": "closed_area-6f910f8509f6",
+  "run": 1,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code)",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-19T17:34:25Z",
+  "answer": {
+    "effect": null,
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "regional_district",
+      "name": "Fraser Valley Regional District"
+    },
+    "geometry": {
+      "method": "road_buffer",
+      "road": {
+        "name": "Sylvester Road",
+        "source_hint": "DRA"
+      },
+      "feature": null,
+      "buffer_m": 50,
+      "side": "both",
+      "from": {
+        "type": "road_intersection",
+        "road": "Farms Road",
+        "name": null
+      },
+      "to": {
+        "type": "road_intersection",
+        "road": "Dale Road",
+        "name": null
+      },
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "within",
+        "quote": "That portion of Fraser Valley Regional District"
+      },
+      {
+        "field": "geometry.road",
+        "quote": "the centreline of Sylvester Road"
+      },
+      {
+        "field": "geometry.buffer_m",
+        "quote": "50 m either side of the centreline"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "either side"
+      },
+      {
+        "field": "geometry.from",
+        "quote": "between the midline of Farms Road"
+      },
+      {
+        "field": "geometry.to",
+        "quote": "and the midline of Dale Road"
+      }
+    ],
+    "uncertain": [
+      "effect"
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "task_id": "road_notice-436cb9ce3a27",
+  "run": 1,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code)",
+  "prompt_version": "road_notice.v1",
+  "schema_id": "road_notice.v1",
+  "produced_at": "2026-10-19T17:45:10Z",
+  "answer": {
+    "road": {
+      "name": "Chuchinka-Colbourne FSR",
+      "file_section": "5506.04"
+    },
+    "posted_on": null,
+    "rescinded": false,
+    "points": [
+      {
+        "km": 874,
+        "km_end": 878,
+        "extent": "range",
+        "status": "bridge_out",
+        "quote": "874km to 878km (Reynolds Creek). Bridge is removed."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "road.name",
+        "quote": "Chuchinka-Colbourne FSR"
+      },
+      {
+        "field": "road.file_section",
+        "quote": "5506.04"
+      }
+    ],
+    "uncertain": [
+      "posted_on"
+    ]
+  }
+}

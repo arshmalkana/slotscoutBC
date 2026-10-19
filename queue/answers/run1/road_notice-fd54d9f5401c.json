@@ -1,0 +1,41 @@
+{
+  "task_id": "road_notice-fd54d9f5401c",
+  "run": 1,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code)",
+  "prompt_version": "road_notice.v1",
+  "schema_id": "road_notice.v1",
+  "produced_at": "2026-10-19T17:36:19Z",
+  "answer": {
+    "road": {
+      "name": "Fifteen Mile",
+      "file_section": "10452.01"
+    },
+    "posted_on": "2025-02-13",
+    "rescinded": false,
+    "points": [
+      {
+        "km": null,
+        "km_end": null,
+        "extent": "whole_road",
+        "status": "closed",
+        "quote": "DISCONTINUANCE AND CLOSURE APPROVED"
+      }
+    ],
+    "quotes": [
+      {
+        "field": "road.name",
+        "quote": "Fifteen Mile"
+      },
+      {
+        "field": "road.file_section",
+        "quote": "10452.01"
+      },
+      {
+        "field": "posted_on",
+        "quote": "February 13, 2025"
+      }
+    ],
+    "uncertain": []
+  }
+}

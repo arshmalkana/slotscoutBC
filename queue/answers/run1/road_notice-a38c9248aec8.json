@@ -1,0 +1,41 @@
+{
+  "task_id": "road_notice-a38c9248aec8",
+  "run": 1,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code)",
+  "prompt_version": "road_notice.v1",
+  "schema_id": "road_notice.v1",
+  "produced_at": "2026-10-19T17:36:19Z",
+  "answer": {
+    "road": {
+      "name": "American FSR",
+      "file_section": "7972.02"
+    },
+    "posted_on": "2026-04-24",
+    "rescinded": false,
+    "points": [
+      {
+        "km": null,
+        "km_end": null,
+        "extent": "whole_road",
+        "status": "closed",
+        "quote": "the American FSR 7972.02 is CLOSED due to a road washout at 6.0 km."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "road.name",
+        "quote": "American FSR"
+      },
+      {
+        "field": "road.file_section",
+        "quote": "7972.02"
+      },
+      {
+        "field": "posted_on",
+        "quote": "April 24, 2026"
+      }
+    ],
+    "uncertain": []
+  }
+}

@@ -7,6 +7,7 @@ First pull: this is the baseline every later month is compared with.
 | Layer | Features | Server count | Count matches | Change vs last month | Content hash |
 | --- | ---: | ---: | --- | --- | --- |
 | bc_parks | 930 | 930 | yes | first pull | `b16c8a3e3403b5f2` |
+| dra_roads | 1,882,029 | 1,882,029 | yes | first pull | `d9b318e274731932` |
 | electoral_areas | 159 | 159 | yes | first pull | `7348791d69067e83` |
 | federal_protected | 21 | 21 | yes | first pull | `6b79792f324b6cea` |
 | fire_bans | 0 | 0 | yes | first pull | `e3b0c44298fc1c14` |
@@ -32,9 +33,11 @@ First pull: this is the baseline every later month is compared with.
 
 | Kind | Units | New | Changed | Removed | Unchanged |
 | --- | ---: | ---: | ---: | ---: | ---: |
+| bylaw_clause | 31 | 31 | 0 | 0 | 0 |
 | dm_notice | 24 | 24 | 0 | 0 | 0 |
+| notice_block | 15 | 15 | 0 | 0 | 0 |
 | regulation_section | 1 | 1 | 0 | 0 | 0 |
-| road_notice | 142 | 142 | 0 | 0 | 0 |
+| road_notice | 327 | 327 | 0 | 0 | 0 |
 
 ## Unconfirmed text
 
@@ -43,3 +46,4 @@ First pull: this is the baseline every later month is compared with.
 ## Failed or missing sources
 
 - **closed_areas** legal text: no dated copy of 76_84_00_multi, 196_99, 190_84, 180_90, 16_2004, 38_2005: waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)
+- **bylaws** muni:Bowen Island Municipality: robots.txt for www.bimbc.ca could not be read, so automated access is not assumed

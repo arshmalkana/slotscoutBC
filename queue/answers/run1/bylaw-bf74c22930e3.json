@@ -1,0 +1,41 @@
+{
+  "task_id": "bylaw-bf74c22930e3",
+  "run": 1,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code)",
+  "prompt_version": "bylaw.v1",
+  "schema_id": "bylaw.v1",
+  "produced_at": "2026-10-19T17:52:28Z",
+  "answer": {
+    "bylaw": {
+      "title": "Firearms Electoral Area A",
+      "number": "1293-2013",
+      "adopted_on": null,
+      "amended_by": []
+    },
+    "definitions": [],
+    "prohibitions": [],
+    "exceptions": [],
+    "distance_rules": [],
+    "schedule_maps": [],
+    "target_shooting": "unclear",
+    "quotes": [
+      {
+        "field": "bylaw.title",
+        "quote": "Firearms Electoral Area A"
+      },
+      {
+        "field": "bylaw.number",
+        "quote": "Bylaw Number 1293-2013"
+      }
+    ],
+    "uncertain": [
+      "bylaw.adopted_on",
+      "prohibitions",
+      "exceptions",
+      "distance_rules",
+      "schedule_maps",
+      "target_shooting"
+    ]
+  }
+}

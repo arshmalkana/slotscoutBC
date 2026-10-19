@@ -1,0 +1,39 @@
+{
+  "task_id": "road_notice-27cbe81c8759",
+  "run": 1,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code)",
+  "prompt_version": "road_notice.v1",
+  "schema_id": "road_notice.v1",
+  "produced_at": "2026-10-19T17:45:10Z",
+  "answer": {
+    "road": {
+      "name": "Chuc 20600",
+      "file_section": "5506.34"
+    },
+    "posted_on": null,
+    "rescinded": false,
+    "points": [
+      {
+        "km": 1,
+        "km_end": null,
+        "extent": "beyond",
+        "status": "bridge_out",
+        "quote": "Bridge G1-234 crossing Hominka River headwater (approximately 1km on Chuc 20600 FSR) load rating downrated to 0 tonnes. Impassable."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "road.name",
+        "quote": "Chuc 20600"
+      },
+      {
+        "field": "road.file_section",
+        "quote": "5506.34"
+      }
+    ],
+    "uncertain": [
+      "posted_on"
+    ]
+  }
+}
