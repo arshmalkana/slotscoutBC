@@ -25,7 +25,6 @@ export const config = {
   wmsUrl: process.env.BC_WMS_URL ?? "https://openmaps.gov.bc.ca/geo/pub/ows",
   cpcadUrl: "https://maps-cartes.ec.gc.ca/arcgis/rest/services/CWS_SCF/CPCAD/MapServer/0/query",
   imageryIdentifyUrl: "https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/identify",
-  roadNoticesBase: "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information",
   geocoderUrl: "https://geocoder.api.gov.bc.ca/addresses.json",
   geonamesUrl: "https://apps.gov.bc.ca/pub/bcgnws/names/search",
   userAgent: process.env.USER_AGENT ?? "SlotScoutBot/0.1 (+https://slotscout.ca/about; data@slotscout.ca)",

@@ -1,8 +1,13 @@
 node_modules
 **/node_modules
 **/dist
-data/raw
-data/reports/*.jsonl
 .git
 .github
 *.log
+.env
+raw/*/gis
+raw/*/*/large
+data/feedback
+review
+releases
+queue

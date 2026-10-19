@@ -1,0 +1,395 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "closed_area.v1",
+  "title": "Closed Areas Regulation section (Addendum A 4.1, 4.2)",
+  "type": "object",
+  "properties": {
+    "effect": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "no_shooting",
+        "no_shooting_seasonal",
+        "shot_only",
+        "shot_only_seasonal",
+        "no_rifle",
+        "non_toxic",
+        "no_shooting_hunting_exempt",
+        "no_hunting",
+        null
+      ]
+    },
+    "exemptions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "period": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "start": {
+              "type": "string"
+            },
+            "end": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "start",
+            "end"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "within": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "regional_district",
+                "municipality",
+                "electoral_area",
+                "wildlife_management_unit",
+                "region",
+                "other"
+              ]
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "name"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "geometry": {
+      "type": "object",
+      "properties": {
+        "method": {
+          "type": "string",
+          "enum": [
+            "road_buffer",
+            "waterbody_buffer",
+            "admin_boundary",
+            "metes_and_bounds",
+            "other"
+          ]
+        },
+        "road": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "source_hint": {
+                  "type": "string",
+                  "enum": [
+                    "DRA",
+                    "FTEN",
+                    "highway",
+                    "unknown"
+                  ]
+                }
+              },
+              "required": [
+                "name",
+                "source_hint"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "feature": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "creek",
+                    "river",
+                    "lake",
+                    "reserve",
+                    "park",
+                    "municipality",
+                    "electoral_area",
+                    "lot",
+                    "island",
+                    "other"
+                  ]
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "type",
+                "name"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "buffer_m": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "side": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "both",
+            "left",
+            "right",
+            "north",
+            "south",
+            "east",
+            "west",
+            "inside",
+            "unknown",
+            null
+          ]
+        },
+        "from": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "road_intersection",
+                    "landmark",
+                    "km_point",
+                    "boundary",
+                    "shoreline",
+                    "other"
+                  ]
+                },
+                "road": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "name": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "type",
+                "road",
+                "name"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "to": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "road_intersection",
+                    "landmark",
+                    "km_point",
+                    "boundary",
+                    "shoreline",
+                    "other"
+                  ]
+                },
+                "road": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "name": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "type",
+                "road",
+                "name"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "start": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "direction": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "follow": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "enum": [
+                  "road",
+                  "creek",
+                  "river",
+                  "contour",
+                  "lot_line",
+                  "reserve_boundary",
+                  "district_boundary",
+                  "shoreline",
+                  "straight_line",
+                  "other",
+                  null
+                ]
+              },
+              "feature": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "side_or_bank": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "until": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "distance": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "quote": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "start",
+              "direction",
+              "follow",
+              "feature",
+              "side_or_bank",
+              "until",
+              "distance",
+              "quote"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "method",
+        "road",
+        "feature",
+        "buffer_m",
+        "side",
+        "from",
+        "to",
+        "steps"
+      ],
+      "additionalProperties": false
+    },
+    "quotes": {
+      "type": "array",
+      "description": "One entry per extracted field: the field path and the exact words of the source text it came from, copied verbatim.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "quote": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "field",
+          "quote"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "uncertain": {
+      "type": "array",
+      "description": "Field paths the text does not settle. Leave those fields null.",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "effect",
+    "exemptions",
+    "period",
+    "within",
+    "geometry",
+    "quotes",
+    "uncertain"
+  ],
+  "additionalProperties": false
+}

@@ -1,39 +1,12 @@
-import { noticeId, parseNoticesPage, type RoadNotice, type RoadNoticeData } from "@slotscout/engine";
-import { config } from "./config.js";
+import { DISTRICT_PAGES, ROAD_NOTICES_BASE, noticeId, parseNoticesPage, type RoadNotice, type RoadNoticeData } from "@slotscout/engine";
 import { data, type StoredNotice } from "./data.js";
 import { errorText, getText } from "./http.js";
 
 /**
- * District resource road safety pages (main spec 4.3, 6.2; Addendum A 5.2). One page per natural
- * resource district, allowed by www2.gov.bc.ca robots.txt. Fetched at most once per district per
- * 6 hours, at least 2 seconds apart, with a descriptive user agent. The pipeline keeps the same
- * slugs in sources/registry.yaml.
+ * District resource road safety pages (main spec 4.3, 6.2; Addendum A 5.2), allowed by
+ * www2.gov.bc.ca robots.txt. Fetched at most once per district per 6 hours, at least 2 seconds
+ * apart, with a descriptive user agent.
  */
-export const DISTRICT_PAGES: Record<string, string> = {
-  DMH: "100-mile-house-road-safety-information",
-  DCR: "campbell-river-road-safety-information",
-  DCC: "cariboo-chilcotin-road-safety-information",
-  DCS: "cascades-road-safety-information",
-  DCK: "chilliwack-natural-resource-district-district-road-safety-information",
-  DKM: "coast-mountain-road-safety-information",
-  DFN: "fort-nelson-natural-resource-district-road-safety-information",
-  DQC: "haida-gwaii-natural-resource-district-road-safety-information",
-  DMK: "mackenzie-road-safety-information",
-  DND: "nadina-natural-resource-district-road-safety-information",
-  DNI: "noth-island-natural-resource-district-road-safety-information",
-  DOS: "okanagan-shuswap-road-safety-information",
-  DPG: "prince-george-natural-resource-district-road-safety-information",
-  DQU: "quesnel-road-safety-information",
-  DRM: "rocky-mountain-natural-resource-district-road-safety-information",
-  DSQ: "sea-to-sky-natural-resource-district-road-safety-information",
-  DSE: "selkirk-natural-resource-district-road-safety-information",
-  DSS: "skeena-stikine-natural-resource-district-road-safety-information",
-  DSI: "south-island-natural-resource-district-road-safety-information",
-  DVA: "stuart-nechako-natural-resource-district-road-safety-information",
-  DSC: "sunshine-coast-road-safety-information",
-  DKA: "thompson-rivers-natural-resource-district-road-safety-information",
-};
-
 const TTL = 6 * 3600_000;
 
 /** A km reading a person made, or an AI reading a person approved, replaces the parser's. */
@@ -74,7 +47,7 @@ export async function fetchRoadNotices(orgUnit: string | undefined, districtName
     return { district, status: "missing", notices: [], error: orgUnit ? "this district has no road safety page" : "district not found" };
   }
   const stored = data().notices.notices;
-  const pageUrl = `${config.roadNoticesBase}/${slug}`;
+  const pageUrl = `${ROAD_NOTICES_BASE}/${slug}`;
   try {
     const res = await getText(pageUrl, { ttlMs: TTL, accept: "text/html" });
     return { district, status: "ok", fetchedAt: res.fetchedAt, pageUrl, notices: mergeWithStore(orgUnit!, parseNoticesPage(res.body, district, pageUrl), stored) };

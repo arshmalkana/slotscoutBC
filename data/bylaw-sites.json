@@ -1,0 +1,339 @@
+{
+  "$comment": "Where the headless browser looks for each local government's firearm discharge bylaw (Addendum A 6.3, 10.3 step 9). Region 2 starter set; people add websites for other jurisdictions. 'covers' lists bylaw register keys: a regional district bylaw covers its electoral areas. Websites are checked on first capture; robots.txt is respected on every visit.",
+  "sites": [
+    {
+      "key": "rd:Fraser Valley Regional District",
+      "name": "Fraser Valley Regional District",
+      "website": "https://www.fvrd.ca",
+      "region": "2",
+      "coversElectoralAreasOf": "Fraser Valley Regional District",
+      "covers": []
+    },
+    {
+      "key": "muni:City of Abbotsford",
+      "name": "City of Abbotsford",
+      "website": "https://www.abbotsford.ca",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:City of Abbotsford"
+      ]
+    },
+    {
+      "key": "muni:City of Chilliwack",
+      "name": "City of Chilliwack",
+      "website": "https://www.chilliwack.com",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:City of Chilliwack"
+      ]
+    },
+    {
+      "key": "muni:City of Mission",
+      "name": "City of Mission",
+      "website": "https://www.mission.ca",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:City of Mission"
+      ]
+    },
+    {
+      "key": "muni:District of Kent",
+      "name": "District of Kent",
+      "website": "https://www.kentbc.ca",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:District of Kent"
+      ]
+    },
+    {
+      "key": "muni:Village of Harrison Hot Springs",
+      "name": "Village of Harrison Hot Springs",
+      "website": "https://www.harrisonhotsprings.ca",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:Village of Harrison Hot Springs"
+      ]
+    },
+    {
+      "key": "muni:District of Hope",
+      "name": "District of Hope",
+      "website": "https://hope.ca",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:District of Hope"
+      ]
+    },
+    {
+      "key": "rd:Metro Vancouver Regional District",
+      "name": "Metro Vancouver Regional District",
+      "website": "https://metrovancouver.org",
+      "region": "2",
+      "coversElectoralAreasOf": "Metro Vancouver Regional District",
+      "covers": []
+    },
+    {
+      "key": "muni:City of Maple Ridge",
+      "name": "City of Maple Ridge",
+      "website": "https://www.mapleridge.ca",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:City of Maple Ridge"
+      ]
+    },
+    {
+      "key": "muni:City of Pitt Meadows",
+      "name": "City of Pitt Meadows",
+      "website": "https://www.pittmeadows.ca",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:City of Pitt Meadows"
+      ]
+    },
+    {
+      "key": "muni:The Corporation of the Township of Langley",
+      "name": "The Corporation of the Township of Langley",
+      "website": "https://www.tol.ca",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:The Corporation of the Township of Langley"
+      ]
+    },
+    {
+      "key": "muni:City of Langley",
+      "name": "City of Langley",
+      "website": "https://langleycity.ca",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:City of Langley"
+      ]
+    },
+    {
+      "key": "muni:City of Surrey",
+      "name": "City of Surrey",
+      "website": "https://www.surrey.ca",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:City of Surrey"
+      ]
+    },
+    {
+      "key": "muni:City of Delta",
+      "name": "City of Delta",
+      "website": "https://www.delta.ca",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:City of Delta"
+      ]
+    },
+    {
+      "key": "muni:City of Richmond",
+      "name": "City of Richmond",
+      "website": "https://www.richmond.ca",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:City of Richmond"
+      ]
+    },
+    {
+      "key": "muni:City of Coquitlam",
+      "name": "City of Coquitlam",
+      "website": "https://www.coquitlam.ca",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:City of Coquitlam"
+      ]
+    },
+    {
+      "key": "muni:City of Port Coquitlam",
+      "name": "City of Port Coquitlam",
+      "website": "https://www.portcoquitlam.ca",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:City of Port Coquitlam"
+      ]
+    },
+    {
+      "key": "muni:City of Port Moody",
+      "name": "City of Port Moody",
+      "website": "https://www.portmoody.ca",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:City of Port Moody"
+      ]
+    },
+    {
+      "key": "muni:City of Burnaby",
+      "name": "City of Burnaby",
+      "website": "https://www.burnaby.ca",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:City of Burnaby"
+      ]
+    },
+    {
+      "key": "muni:City of New Westminster",
+      "name": "City of New Westminster",
+      "website": "https://www.newwestcity.ca",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:City of New Westminster"
+      ]
+    },
+    {
+      "key": "muni:City of Vancouver",
+      "name": "City of Vancouver",
+      "website": "https://vancouver.ca",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:City of Vancouver"
+      ]
+    },
+    {
+      "key": "muni:City of North Vancouver",
+      "name": "City of North Vancouver",
+      "website": "https://www.cnv.org",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:City of North Vancouver"
+      ]
+    },
+    {
+      "key": "muni:The Corporation of the District of North Vancouver",
+      "name": "The Corporation of the District of North Vancouver",
+      "website": "https://www.dnv.org",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:The Corporation of the District of North Vancouver"
+      ]
+    },
+    {
+      "key": "muni:District Municipality of West Vancouver",
+      "name": "District Municipality of West Vancouver",
+      "website": "https://westvancouver.ca",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:District Municipality of West Vancouver"
+      ]
+    },
+    {
+      "key": "muni:Village of Anmore",
+      "name": "Village of Anmore",
+      "website": "https://anmore.com",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:Village of Anmore"
+      ]
+    },
+    {
+      "key": "muni:Village of Belcarra",
+      "name": "Village of Belcarra",
+      "website": "https://belcarra.ca",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:Village of Belcarra"
+      ]
+    },
+    {
+      "key": "muni:Village of Lions Bay",
+      "name": "Village of Lions Bay",
+      "website": "https://www.lionsbay.ca",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:Village of Lions Bay"
+      ]
+    },
+    {
+      "key": "muni:Bowen Island Municipality",
+      "name": "Bowen Island Municipality",
+      "website": "https://www.bimbc.ca",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:Bowen Island Municipality"
+      ]
+    },
+    {
+      "key": "muni:City of White Rock",
+      "name": "City of White Rock",
+      "website": "https://www.whiterockcity.ca",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:City of White Rock"
+      ]
+    },
+    {
+      "key": "rd:Squamish-Lillooet Regional District",
+      "name": "Squamish-Lillooet Regional District",
+      "website": "https://www.slrd.bc.ca",
+      "region": "2",
+      "coversElectoralAreasOf": "Squamish-Lillooet Regional District",
+      "covers": []
+    },
+    {
+      "key": "muni:District of Squamish",
+      "name": "District of Squamish",
+      "website": "https://squamish.ca",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:District of Squamish"
+      ]
+    },
+    {
+      "key": "muni:Resort Municipality of Whistler",
+      "name": "Resort Municipality of Whistler",
+      "website": "https://www.whistler.ca",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:Resort Municipality of Whistler"
+      ]
+    },
+    {
+      "key": "muni:Village of Pemberton",
+      "name": "Village of Pemberton",
+      "website": "https://www.pemberton.ca",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:Village of Pemberton"
+      ]
+    },
+    {
+      "key": "muni:District of Lillooet",
+      "name": "District of Lillooet",
+      "website": "https://lillooet.ca",
+      "region": "2",
+      "coversElectoralAreasOf": null,
+      "covers": [
+        "muni:District of Lillooet"
+      ]
+    }
+  ]
+}

@@ -1,11 +1,11 @@
 name: Data checks
 
-# Release gate and change report (PRD 10). The regression set runs against live official data,
-# so it is scheduled rather than run on every push.
+# Release gate (main spec 10, 11; Addendum A 10.5). The regression set runs against live official
+# data, so it is scheduled rather than run on every push. The monthly pipeline itself runs in the
+# ingest container (docker compose run --rm ingest make monthly) where its output can be committed.
 on:
   schedule:
     - cron: "17 13 * * *" # daily, 06:17 Pacific (daylight time)
-    - cron: "41 14 1 * *" # monthly change report on the 1st
   workflow_dispatch:
 
 permissions:
@@ -24,20 +24,11 @@ jobs:
       - name: Regression set (zero false greens)
         run: npm run regression
 
-  change-report:
-    if: github.event.schedule == '41 14 1 * *' || github.event_name == 'workflow_dispatch'
+  docker:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - name: Layer counts against last month
-        run: npm run pipeline:pull -- --hits
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: change-report
-          path: data/raw/*/manifest.json
+      - name: Build the site and ingest images
+        run: docker compose --profile pipeline build
+      - name: Pipeline runs in the ingest container
+        run: docker compose --profile pipeline run --rm ingest make validate

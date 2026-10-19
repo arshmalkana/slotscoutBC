@@ -6,6 +6,34 @@ import type { NoticePoint, RoadNotice } from "./types.js";
  * a status. This rule-based parser reads most notices; ones it cannot read are flagged for AI.
  */
 
+export const ROAD_NOTICES_BASE = "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information";
+
+/** Road safety page slug for each natural resource district (ORG_UNIT from ADM_NR_DISTRICTS_SPG). */
+export const DISTRICT_PAGES: Record<string, string> = {
+  DMH: "100-mile-house-road-safety-information",
+  DCR: "campbell-river-road-safety-information",
+  DCC: "cariboo-chilcotin-road-safety-information",
+  DCS: "cascades-road-safety-information",
+  DCK: "chilliwack-natural-resource-district-district-road-safety-information",
+  DKM: "coast-mountain-road-safety-information",
+  DFN: "fort-nelson-natural-resource-district-road-safety-information",
+  DQC: "haida-gwaii-natural-resource-district-road-safety-information",
+  DMK: "mackenzie-road-safety-information",
+  DND: "nadina-natural-resource-district-road-safety-information",
+  DNI: "noth-island-natural-resource-district-road-safety-information",
+  DOS: "okanagan-shuswap-road-safety-information",
+  DPG: "prince-george-natural-resource-district-road-safety-information",
+  DQU: "quesnel-road-safety-information",
+  DRM: "rocky-mountain-natural-resource-district-road-safety-information",
+  DSQ: "sea-to-sky-natural-resource-district-road-safety-information",
+  DSE: "selkirk-natural-resource-district-road-safety-information",
+  DSS: "skeena-stikine-natural-resource-district-road-safety-information",
+  DSI: "south-island-natural-resource-district-road-safety-information",
+  DVA: "stuart-nechako-natural-resource-district-road-safety-information",
+  DSC: "sunshine-coast-road-safety-information",
+  DKA: "thompson-rivers-natural-resource-district-road-safety-information",
+};
+
 function decode(s: string): string {
   return s
     .replace(/&nbsp;/g, " ")

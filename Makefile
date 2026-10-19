@@ -3,7 +3,7 @@
 PIPE := npx tsx packages/pipeline/src/cli.ts
 MONTH ?=
 
-.PHONY: help install pull split queue extract build validate review-packet test release report monthly status approve signoff up down logs
+.PHONY: help install pull split queue extract build validate review-packet test release report monthly status approve signoff up down logs in-docker
 
 help:
 	@echo "pull split queue extract build validate review-packet test report monthly status release"
@@ -35,7 +35,7 @@ review-packet:
 
 test:
 	npx vitest run
-	$(PIPE) test $(if $(MONTH),--month $(MONTH))
+	$(PIPE) test $(if $(MONTH),--month $(MONTH)) $(ARGS)
 
 report:
 	$(PIPE) report $(if $(MONTH),--month $(MONTH))
@@ -65,3 +65,7 @@ down:
 
 logs:
 	docker compose logs -f web
+
+# Run any pipeline command in the ingest container, e.g. make in-docker CMD=monthly
+in-docker:
+	docker compose --profile pipeline run --rm ingest make $(or $(CMD),help) $(if $(MONTH),MONTH=$(MONTH))

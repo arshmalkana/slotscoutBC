@@ -1,0 +1,27 @@
+# SlotScout ingest container (Addendum A 6.3): the pipeline CLI with Playwright + Chromium for
+# browser capture and poppler for PDF text. The repository is bind-mounted at /repo, so everything
+# the pipeline writes (raw/, queue/, rules/, review/, reports/, releases/) lands in the repo.
+FROM mcr.microsoft.com/playwright:v1.56.1-noble
+ARG HTTPS_PROXY
+# Behind a TLS-inspecting proxy, pass its CA as a build secret:
+#   docker build --secret id=extra_ca,src=/path/to/ca.crt ...
+RUN --mount=type=secret,id=extra_ca,required=false \
+    if [ -s /run/secrets/extra_ca ]; then cp /run/secrets/extra_ca /usr/local/share/ca-certificates/extra-ca.crt && update-ca-certificates; fi \
+ && sed -i 's#http://#https://#g' /etc/apt/sources.list.d/*.sources 2>/dev/null; \
+    apt-get update \
+ && apt-get install -y --no-install-recommends make poppler-utils \
+ && rm -rf /var/lib/apt/lists/*
+ENV PLAYWRIGHT_BROWSERS_PATH=/ms-playwright \
+    PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1 \
+    REPO_ROOT=/repo \
+    NODE_OPTIONS=--max-old-space-size=6144
+WORKDIR /repo
+COPY package.json package-lock.json ./
+COPY packages/engine/package.json packages/engine/
+COPY packages/pipeline/package.json packages/pipeline/
+COPY apps/api/package.json apps/api/
+COPY apps/web/package.json apps/web/
+RUN npm ci --no-audit --no-fund && npm cache clean --force
+# The source is bind-mounted at run time; this copy lets the image run on its own too.
+COPY . .
+CMD ["make", "help"]

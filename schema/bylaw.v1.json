@@ -1,0 +1,250 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bylaw.v1",
+  "title": "Local government firearm bylaw rule list (Addendum A 5.3)",
+  "type": "object",
+  "properties": {
+    "bylaw": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "number": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "adopted_on": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "amended_by": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "title",
+        "number",
+        "adopted_on",
+        "amended_by"
+      ],
+      "additionalProperties": false
+    },
+    "definitions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "term": {
+            "type": "string"
+          },
+          "meaning": {
+            "type": "string"
+          },
+          "quote": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "term",
+          "meaning",
+          "quote"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "prohibitions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "what": {
+            "type": "string"
+          },
+          "firearm_types": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "all_firearms",
+                "rifle",
+                "shotgun",
+                "handgun",
+                "air_gun",
+                "bow",
+                "other"
+              ]
+            }
+          },
+          "where": {
+            "type": "string"
+          },
+          "quote": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "what",
+          "firearm_types",
+          "where",
+          "quote"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "exceptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "applies_to": {
+            "type": "string"
+          },
+          "firearm_type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "hunting_only": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "permit": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "season": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "quote": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "applies_to",
+          "firearm_type",
+          "hunting_only",
+          "permit",
+          "season",
+          "quote"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "distance_rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "distance_m": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "from_what": {
+            "type": "string"
+          },
+          "quote": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "distance_m",
+          "from_what",
+          "quote"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "schedule_maps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "quote": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "description",
+          "quote"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "target_shooting": {
+      "type": "string",
+      "enum": [
+        "prohibited",
+        "zoned",
+        "no_bylaw",
+        "unclear"
+      ]
+    },
+    "quotes": {
+      "type": "array",
+      "description": "One entry per extracted field: the field path and the exact words of the source text it came from, copied verbatim.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "quote": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "field",
+          "quote"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "uncertain": {
+      "type": "array",
+      "description": "Field paths the text does not settle. Leave those fields null.",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "bylaw",
+    "definitions",
+    "prohibitions",
+    "exceptions",
+    "distance_rules",
+    "schedule_maps",
+    "target_shooting",
+    "quotes",
+    "uncertain"
+  ],
+  "additionalProperties": false
+}

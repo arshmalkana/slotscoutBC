@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "road_notice.v1",
+  "title": "District road notice (Addendum A 5.2)",
+  "type": "object",
+  "properties": {
+    "road": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "file_section": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "file_section"
+      ],
+      "additionalProperties": false
+    },
+    "posted_on": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "rescinded": {
+      "type": "boolean"
+    },
+    "points": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "km": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "km_end": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "extent": {
+            "type": "string",
+            "enum": [
+              "at",
+              "beyond",
+              "range",
+              "whole_road",
+              "unknown"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "caution",
+              "restricted",
+              "closed",
+              "gated",
+              "washout",
+              "bridge_out",
+              "deactivated"
+            ]
+          },
+          "quote": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "km",
+          "km_end",
+          "extent",
+          "status",
+          "quote"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "quotes": {
+      "type": "array",
+      "description": "One entry per extracted field: the field path and the exact words of the source text it came from, copied verbatim.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "quote": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "field",
+          "quote"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "uncertain": {
+      "type": "array",
+      "description": "Field paths the text does not settle. Leave those fields null.",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "road",
+    "posted_on",
+    "rescinded",
+    "points",
+    "quotes",
+    "uncertain"
+  ],
+  "additionalProperties": false
+}

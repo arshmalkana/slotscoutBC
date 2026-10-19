@@ -1,0 +1,48 @@
+# SlotScout under Docker (Addendum A 6.3, 10.2).
+#   docker compose up -d web                      # the site and API on http://localhost:8787
+#   docker compose run --rm ingest make monthly   # the pipeline; output lands in this repository
+# Both services bind-mount the repository, so the site serves exactly the rules, register and
+# reports the pipeline last wrote, and every change can be committed and traced.
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: slotscout-web
+    restart: unless-stopped
+    ports:
+      - "${PORT:-8787}:8787"
+    environment:
+      SITE_URL: ${SITE_URL:-https://slotscout.ca}
+      TRUST_PROXY: ${TRUST_PROXY:-false}
+      FEEDBACK_DIR: /feedback
+    volumes:
+      - ./data:/app/data:ro
+      - ./rules:/app/rules:ro
+      - ./sources:/app/sources:ro
+      - ./reports:/app/reports:ro
+      - feedback:/feedback
+
+  ingest:
+    build:
+      context: .
+      dockerfile: Dockerfile.ingest
+    image: slotscout-ingest
+    profiles: ["pipeline"]
+    working_dir: /repo
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      HTTPS_PROXY: ${HTTPS_PROXY:-}
+      HTTP_PROXY: ${HTTP_PROXY:-}
+      NO_PROXY: ${NO_PROXY:-}
+    volumes:
+      - .:/repo
+      # The image's own node_modules (Linux build), not the host's.
+      - /repo/node_modules
+    shm_size: 1gb
+    init: true
+
+volumes:
+  feedback:

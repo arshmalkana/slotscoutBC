@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "change.v1",
+  "title": "Wording change classification (Addendum A 5.1)",
+  "type": "object",
+  "properties": {
+    "change_type": {
+      "type": "string",
+      "enum": [
+        "cosmetic",
+        "stricter",
+        "looser",
+        "unclear"
+      ]
+    },
+    "reason": {
+      "type": "string"
+    },
+    "old_quotes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "new_quotes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "change_type",
+    "reason",
+    "old_quotes",
+    "new_quotes"
+  ],
+  "additionalProperties": false
+}

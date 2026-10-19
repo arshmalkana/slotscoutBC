@@ -511,6 +511,8 @@ sources:
   rules:
   - F6
   contact: ec.aireprotegee-protectedarea.ec@ec.gc.ca
+  pull: gis
+  where: LOC=2 AND TYPE_E IN ('Migratory Bird Sanctuary','National Wildlife Area','Marine National Wildlife Area')
 - id: road_notices
   name: Resource road safety information (district notices)
   owner: Ministry of Forests, natural resource districts
