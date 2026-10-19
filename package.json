@@ -1,0 +1,33 @@
+{
+  "name": "slotscout",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SlotScout (slotscout.ca): check any spot in British Columbia, rule by rule, for recreational target shooting.",
+  "license": "UNLICENSED",
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,magenta \"npm run dev -w @slotscout/api\" \"npm run dev -w @slotscout/web\"",
+    "build": "npm run build -w @slotscout/api && npm run build -w @slotscout/web",
+    "start": "npm run start -w @slotscout/api",
+    "test": "vitest run",
+    "typecheck": "tsc -p packages/engine && tsc -p apps/api && tsc -p apps/web",
+    "regression": "tsx scripts/regression.ts",
+    "validate:data": "tsx scripts/validate-data.ts",
+    "pipeline:pull": "tsx scripts/pull-wfs.ts",
+    "register:bylaws": "tsx scripts/build-bylaw-register.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.0",
+    "concurrently": "^9.2.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}

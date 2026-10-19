@@ -1,0 +1,14 @@
+node_modules/
+dist/
+coverage/
+*.log
+.env
+.env.*
+!.env.example
+.DS_Store
+# Raw pipeline pulls are large and belong in object storage, not git
+data/raw/
+data/reports/*.jsonl
+.cache/
+playwright-report/
+test-results/

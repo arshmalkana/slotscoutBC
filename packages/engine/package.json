@@ -1,0 +1,17 @@
+{
+  "name": "@slotscout/engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "SlotScout evaluation engine: the rule catalogue, coordinate parser and verdict logic shared by the API, the map and the spot finder.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "proj4": "^2.22.0"
+  },
+  "devDependencies": {
+    "@types/geojson": "^7946.0.16",
+    "@types/proj4": "^2.5.6"
+  }
+}
