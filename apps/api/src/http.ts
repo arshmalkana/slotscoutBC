@@ -1,3 +1,4 @@
+import "./proxy.js";
 import { LRUCache } from "lru-cache";
 import { config } from "./config.js";
 
