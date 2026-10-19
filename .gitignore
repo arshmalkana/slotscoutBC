@@ -15,6 +15,8 @@ test-results/
 # Large GIS pull bodies stay out of git; their counts and hashes are in raw/<YYYY-MM>/manifest.json
 raw/*/gis/*.ndjson.gz
 raw/*/gis/*.tmp
+# Files over storage.commit_pdf_max_mb keep only their SHA-256 in the manifest
+raw/**/large/
 # Problem reports from users may hold contact details
 data/feedback/
 queue/.lock

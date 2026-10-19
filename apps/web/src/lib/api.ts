@@ -114,6 +114,35 @@ export interface CoverageResponse {
 }
 export const fetchCoverage = () => get<CoverageResponse>("/v1/coverage");
 
+export interface PipelineStatus {
+  month: string;
+  updatedAt: string;
+  extractor: "api" | "agent" | "manual";
+  autopublish: { configured: boolean; goldPasses: boolean; goldItems: number };
+  pull: {
+    startedAt: string;
+    updatedAt: string;
+    sources: Record<string, { status: string; detail: string }>;
+    layers: number;
+    layersMatching: number;
+    failures: { source: string; what: string; error: string }[];
+  } | null;
+  changes: { comparedWith: string | null; new: number; changed: number; removed: number; unchanged: number };
+  extraction: { tasks: number; waiting: number };
+  rules: { approved: number; provisional: number; candidates: number; retired: number };
+  review: { thisMonth: number; open: number; openAllMonths: number; looserOpen: number };
+  tests: { regressionRan: boolean; regressionPassed: boolean; falseGreen: boolean } | null;
+  release: { id: string; publishable: boolean; missing: string[] } | null;
+}
+
+/** The monthly pipeline's state; null before the pipeline has run. */
+export async function fetchPipelineStatus(): Promise<PipelineStatus | null> {
+  const res = await fetch("/v1/pipeline-status", { headers: { Accept: "application/json" } });
+  if (res.status === 404) return null;
+  if (!res.ok) throw new Error(`Request failed (${res.status})`);
+  return (await res.json()) as PipelineStatus;
+}
+
 export const fetchReleases = () => get<{ current: { id: string; label: string; publishedOn: string; notes: string }; changelog: string }>("/v1/releases");
 
 export async function sendProblemReport(body: Record<string, unknown>): Promise<{ ok: boolean; id?: string; error?: string }> {

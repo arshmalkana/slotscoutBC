@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Header } from "../components/Header";
-import { fetchCoverage, fetchSources, type CoverageResponse, type RegisterSource } from "../lib/api";
+import { fetchCoverage, fetchPipelineStatus, fetchSources, type CoverageResponse, type PipelineStatus, type RegisterSource } from "../lib/api";
 import { dateTime } from "../lib/format";
 import { Footer } from "./Footer";
 
@@ -11,6 +11,7 @@ function limit(h: number): string {
 export function Sources() {
   const [sources, setSources] = useState<RegisterSource[] | null>(null);
   const [cov, setCov] = useState<CoverageResponse | null>(null);
+  const [pipe, setPipe] = useState<PipelineStatus | null | undefined>(undefined);
   const [filter, setFilter] = useState("");
   const [err, setErr] = useState(false);
   useEffect(() => {
@@ -21,6 +22,9 @@ export function Sources() {
     fetchCoverage()
       .then(setCov)
       .catch(() => setErr(true));
+    fetchPipelineStatus()
+      .then(setPipe)
+      .catch(() => setPipe(null));
   }, []);
   const bylaws = useMemo(() => {
     const f = filter.trim().toLowerCase();
@@ -85,12 +89,21 @@ export function Sources() {
           </div>
         )}
 
+        <h2 id="monthly-update">Monthly update</h2>
+        {pipe === undefined ? (
+          <p className="hint">Loading…</p>
+        ) : pipe === null ? (
+          <p className="hint">The monthly update has not run on this server yet.</p>
+        ) : (
+          <MonthlyUpdate s={pipe} />
+        )}
+
         <h2 id="closed-areas">Wildlife Act closed areas</h2>
         {cov && (
           <>
             <p>
               Closed Areas Regulation (B.C. Reg. 76/84), consolidation current to {cov.consolidation.currentTo}, last amended {cov.consolidation.lastAmended} ({cov.consolidation.amendingRegulation}). BC Laws does not allow
-              automated crawling, so the consolidation is downloaded by a person each month until written permission or an official bulk service is in place.
+              automated crawling, so a person saves the consolidation each month until the King's Printer confirms in writing that SlotScout may call the official BC Laws API on a schedule.
             </p>
             <table>
               <thead>
@@ -157,6 +170,48 @@ export function Sources() {
         )}
         <Footer />
       </main>
+    </>
+  );
+}
+
+function MonthlyUpdate({ s }: { s: PipelineStatus }) {
+  const sources = Object.entries(s.pull?.sources ?? {});
+  const bad = sources.filter(([, v]) => v.status !== "ok" && v.status !== "skipped");
+  return (
+    <>
+      <p>
+        Month {s.month}, updated {dateTime(s.updatedAt)}. Every source is pulled, split into sections, clauses and notices, and compared with last month; only changed text is read again.{" "}
+        {s.changes.comparedWith ? `Since ${s.changes.comparedWith}: ${s.changes.new} new, ${s.changes.changed} changed and ${s.changes.removed} removed units.` : `This is the first month: ${s.changes.new} units form the baseline.`}
+      </p>
+      <ul>
+        <li>
+          {s.pull?.layersMatching ?? 0} of {s.pull?.layers ?? 0} GIS layers pulled province-wide with counts matching the server.
+        </li>
+        <li>
+          Rule shapes: {s.rules.approved} approved by a person, {s.rules.candidates} waiting for review (their areas show grey).
+        </li>
+        <li>
+          {s.review.openAllMonths} item(s) waiting for a person{s.review.looserOpen ? `, including ${s.review.looserOpen} looser change(s): the older, stricter answer stays on the map until then` : ""}.
+        </li>
+        <li>
+          AI reading: {s.autopublish.configured && s.autopublish.goldPasses ? "stricter changes publish at once and a person confirms within 24 hours" : "pre-fills a person's work only; nothing it reads counts until a person approves it"} (test set:{" "}
+          {s.autopublish.goldItems ? `${s.autopublish.goldItems} items, ${s.autopublish.goldPasses ? "passing" : "not passing yet"}` : "not built yet"}).
+        </li>
+        <li>{s.tests ? (s.tests.regressionPassed ? "Regression tests passed with no false greens." : "Regression tests did not pass; nothing new is released until they do.") : "Regression tests have not run this month."}</li>
+        <li>{s.release ? (s.release.publishable ? `Release ${s.release.id} is published.` : `Release candidate ${s.release.id} waits for: ${s.release.missing.join("; ")}.`) : "No release built this month yet."}</li>
+      </ul>
+      {bad.length > 0 && (
+        <>
+          <h3>Sources needing attention</h3>
+          <ul>
+            {bad.map(([k, v]) => (
+              <li key={k}>
+                <b>{k}</b>: {v.status.replace(/_/g, " ")}. {v.detail}
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
     </>
   );
 }

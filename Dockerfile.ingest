@@ -9,7 +9,7 @@ RUN --mount=type=secret,id=extra_ca,required=false \
     if [ -s /run/secrets/extra_ca ]; then cp /run/secrets/extra_ca /usr/local/share/ca-certificates/extra-ca.crt && update-ca-certificates; fi \
  && sed -i 's#http://#https://#g' /etc/apt/sources.list.d/*.sources 2>/dev/null; \
     apt-get update \
- && apt-get install -y --no-install-recommends make poppler-utils \
+ && apt-get install -y --no-install-recommends make poppler-utils libnss3-tools \
  && rm -rf /var/lib/apt/lists/*
 ENV PLAYWRIGHT_BROWSERS_PATH=/ms-playwright \
     PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1 \
@@ -24,4 +24,6 @@ COPY apps/web/package.json apps/web/
 RUN npm ci --no-audit --no-fund && npm cache clean --force
 # The source is bind-mounted at run time; this copy lets the image run on its own too.
 COPY . .
+COPY docker/ingest-entrypoint.sh /usr/local/bin/ingest-entrypoint
+ENTRYPOINT ["/usr/local/bin/ingest-entrypoint"]
 CMD ["make", "help"]

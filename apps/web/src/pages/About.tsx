@@ -60,7 +60,18 @@ export function About() {
           <li>
             <b>Errors are fixed fast.</b> A reported error that could cause a false green is triaged within 24 hours and the area is set to grey until fixed.
           </li>
+          <li>
+            <b>No AI output ever makes an area less restricted without a person's approval.</b> A closure lifted, a buffer shrinking or a notice leaving its page keeps the older, stricter answer on the map until a person checks the source.
+          </li>
         </ol>
+
+        <h2>How legal text becomes map shapes</h2>
+        <p>
+          Closed areas, bylaws and road notices are written as text. An AI model reads each section twice, independently, and lists only the named roads, creeks, distances, dates and effect, each with the exact words it came
+          from; any value whose words are not in the source is thrown away. Code, not the AI, finds those names in official datasets and draws the shape, then checks it: the ring closes, the area is plausible for the
+          description, it sits inside the area the text names, and both readings agree. Anything that fails, disagrees or cannot be found goes to a person and the area stays grey. Until the AI matches people on a hand-built
+          test set, its output only pre-fills a person's work, and every permanent boundary is approved by a person either way. The model sees public legal text only, never anything about you.
+        </p>
 
         <h2>What is checked</h2>
         <p>

@@ -45,8 +45,9 @@ function want(opts: PullOpts, key: string): boolean {
 async function pullGis(m: Manifest, sources: Source[], opts: PullOpts): Promise<void> {
   const prev = previousManifest(m.month);
   const dir = join(monthDir(m.month), "gis");
+  if (opts.skip?.includes("gis")) return;
   for (const s of sources.filter((x) => x.pull === "gis")) {
-    if (!want(opts, s.id) && !want(opts, "gis")) continue;
+    if (opts.skip?.includes(s.id) || (opts.only?.length && !opts.only.includes(s.id) && !opts.only.includes("gis"))) continue;
     if (!opts.force && m.layers[s.id]?.status === "ok") continue;
     log("pull", `GIS ${s.id} (${s.layer})`);
     try {
@@ -194,7 +195,7 @@ export async function pull(opts: PullOpts = {}): Promise<Manifest> {
   if (want(opts, "inbox")) pullInbox(m);
   await pullBcLaws(m, opts);
   await pullDistrictPages(m, opts);
-  if (want(opts, "bylaws")) await pullBylaws(m, opts);
+  if (want(opts, "bylaws") || opts.only?.some((o) => o.includes(":"))) await pullBylaws(m, opts);
   await pullGis(m, active, opts);
   saveManifest(m);
   const failed = m.failures.length;

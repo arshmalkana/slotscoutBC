@@ -78,6 +78,7 @@ export function Terms() {
           <li>Your shooting profile, map settings and trip list are stored only in your browser.</li>
           <li>Problem reports store the spot you reported, your message and any contact you choose to give. Never your IP address.</li>
           <li>We publish only aggregate usage counts (per region per month) and never popular shooting coordinates. We never sell or share location data.</li>
+          <li>The language model that helps read legal text receives public legal text and notices only, never your pins, location, profile or reports.</li>
           <li>SlotScout follows BC's Personal Information Protection Act and Canada's PIPEDA.</li>
         </ul>
 

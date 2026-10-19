@@ -6,4 +6,4 @@ export * from "./geo.js";
 export * from "./seasonal.js";
 export * from "./layers.js";
 export * from "./notices.js";
-export { evaluate, titleCase, TEXT_SOURCE_FRESHNESS_DAYS } from "./evaluate.js";
+export { evaluate, featureState, titleCase, TEXT_SOURCE_FRESHNESS_DAYS } from "./evaluate.js";

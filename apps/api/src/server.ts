@@ -6,7 +6,7 @@ import Fastify, { type FastifyInstance } from "fastify";
 import compress from "@fastify/compress";
 import rateLimit from "@fastify/rate-limit";
 import fastifyStatic from "@fastify/static";
-import { LIGHTS, RULES, RULES_BY_ID, inBCBox, normaliseProfile, type LatLon } from "@slotscout/engine";
+import { LIGHTS, RULES, RULES_BY_ID, featureState, inBCBox, normaliseProfile, type LatLon } from "@slotscout/engine";
 import { config } from "./config.js";
 import { checkPoint, sourceStats } from "./check.js";
 import { data } from "./data.js";
@@ -132,7 +132,7 @@ export async function buildApp(opts: { logger?: boolean } = {}): Promise<Fastify
     const rule = RULES_BY_ID[id.toUpperCase()];
     if (!rule) return reply.code(404).send({ error: "unknown rule" });
     const d = data();
-    const features = d.digitised.filter((f) => f.properties.rule_id.split("-")[0] === rule.id);
+    const features = d.digitised.filter((f) => f.properties.rule_id.split("-")[0] === rule.id && ["approved", "provisional"].includes(featureState(f)));
     return {
       rule,
       sources: rule.sources.map((s) => d.sources[s]).filter(Boolean),
@@ -191,7 +191,8 @@ export async function buildApp(opts: { logger?: boolean } = {}): Promise<Fastify
   }));
 
   app.get("/v1/digitised.geojson", async (_req, reply) => {
-    const reviewed = data().digitised.filter((f) => f.properties.reviewed_by && f.properties.reviewed_by !== f.properties.digitised_by);
+    // Only shapes that count: approved by a person, or published stricter under the one-way rule.
+    const reviewed = data().digitised.filter((f) => ["approved", "provisional"].includes(featureState(f)));
     reply.header("Cache-Control", "public, max-age=3600");
     return { type: "FeatureCollection", features: reviewed.map(({ bbox: _b, ...f }) => f) };
   });

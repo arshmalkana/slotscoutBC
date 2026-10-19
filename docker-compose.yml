@@ -35,8 +35,9 @@ services:
         required: false
     environment:
       HTTPS_PROXY: ${HTTPS_PROXY:-}
-      HTTP_PROXY: ${HTTP_PROXY:-}
       NO_PROXY: ${NO_PROXY:-}
+      # Path inside the container to an extra CA bundle (behind a TLS-inspecting proxy), if any.
+      EXTRA_CA_CERTS: ${EXTRA_CA_CERTS:-}
     volumes:
       - .:/repo
       # The image's own node_modules (Linux build), not the host's.

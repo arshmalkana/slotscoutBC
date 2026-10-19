@@ -36,6 +36,8 @@ export interface BylawFind {
 
 const BYLAW_LINK = /bylaw/i;
 const FIREARM = /firearm|discharg|weapon|shooting|bow and arrow|hunting/i;
+const CATEGORY = /regulat|safety|protect|nuisance|public|weapon|firearm|discharg|police|consolidat/i;
+const MAX_PAGES = 10;
 const slug = (s: string) => s.replace(/[^A-Za-z0-9]+/g, "-").replace(/^-|-$/g, "").toLowerCase().slice(0, 60);
 
 function rankBylawLinks(cap: Capture, site: string): string[] {
@@ -92,11 +94,27 @@ async function findSite(m: Manifest, site: BylawSite): Promise<BylawFind> {
   try {
     const home = await visit(site.website, "home");
     const candidates = [...firearmLinks(home)];
-    for (const [i, u] of rankBylawLinks(home, site.website).entries()) {
-      if (candidates.length >= 4) break;
+    // Breadth-first through the site's bylaw section: the bylaw pages, then their category pages
+    // (regulatory and public-safety first), at most MAX_PAGES pages per site.
+    const host = new URL(site.website).host.replace(/^www\./, "");
+    const queue = rankBylawLinks(home, site.website);
+    const visited = new Set<string>([site.website]);
+    while (queue.length && find.pages.length < MAX_PAGES && candidates.length < 4) {
+      const u = queue.shift()!;
+      if (visited.has(u)) continue;
+      visited.add(u);
       try {
-        const lib = await visit(u, `bylaws-${i + 1}`);
-        candidates.push(...firearmLinks(lib));
+        const page = await visit(u, `bylaws-${find.pages.length}`);
+        candidates.push(...firearmLinks(page));
+        const base = new URL(page.finalUrl).pathname.replace(/\.html?$/, "").replace(/\/$/, "");
+        const sub = page.links
+          .filter((l) => /^https?:/.test(l.href) && new URL(l.href).host.replace(/^www\./, "") === host && !/\.(pdf|docx?|xlsx?)($|\?)/i.test(l.href))
+          .filter((l) => new URL(l.href).pathname.startsWith(`${base}/`) || /bylaw/i.test(l.text))
+          .map((l) => ({ href: l.href.split("#")[0]!, score: CATEGORY.test(l.text) ? 0 : 1 }))
+          .filter((l) => !visited.has(l.href))
+          .sort((a, b) => a.score - b.score);
+        for (const l of sub) if (!queue.includes(l.href)) queue.push(l.href);
+        queue.sort((a, b) => Number(!CATEGORY.test(a)) - Number(!CATEGORY.test(b)));
       } catch (e) {
         find.note += `bylaw page ${u}: ${(e as Error).message}. `;
       }
@@ -118,7 +136,7 @@ async function findSite(m: Manifest, site: BylawSite): Promise<BylawFind> {
       }
     }
     find.status = find.documents.length ? "found" : "not_found";
-    if (!find.documents.length) find.note += "No firearm or discharge bylaw link found on the home page or the first bylaw pages; a person checks the bylaw library.";
+    if (!find.documents.length) find.note += `No firearm or discharge bylaw link found in ${find.pages.length} page(s) of the site's bylaw section; a person checks the bylaw library.`;
   } catch (e) {
     const msg = (e as Error).message;
     find.status = /robots/i.test(msg) ? "blocked" : "failed";
@@ -130,7 +148,9 @@ async function findSite(m: Manifest, site: BylawSite): Promise<BylawFind> {
 }
 
 export async function pullBylaws(m: Manifest, opts: { force?: boolean; only?: string[] } = {}): Promise<BylawFind[]> {
-  const { sites } = readJson<{ sites: BylawSite[] }>(join(P.data, "bylaw-sites.json"));
+  const all = readJson<{ sites: BylawSite[] }>(join(P.data, "bylaw-sites.json")).sites;
+  const picked = (opts.only ?? []).filter((o) => o.includes(":"));
+  const sites = picked.length ? all.filter((s) => picked.includes(s.key)) : all;
   const results: BylawFind[] = [];
   const doneFile = join(monthDir(m.month), "bylaws", "finds.json");
   const previous = new Map((opts.force ? [] : readJsonIf<BylawFind[]>(doneFile, [])).map((f) => [f.key, f]));
