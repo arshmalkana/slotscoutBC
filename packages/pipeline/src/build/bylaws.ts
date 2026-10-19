@@ -42,7 +42,10 @@ export function buildBylaws(month: string, tasks: Task[]): { docs: number; agree
     if (results.some((r) => r.state === "waiting for extraction")) continue;
     const agreed = results.every((r) => r.state === "agreed");
     if (agreed) agreedDocs++;
-    const covers = site ? [...site.covers, ...reg.entries.filter((e) => site.coversElectoralAreasOf && e.kind === "electoral_area" && e.regionalDistrict === site.coversElectoralAreasOf).map((e) => e.key)] : [jurisdiction];
+    let covers = site ? [...site.covers, ...reg.entries.filter((e) => site.coversElectoralAreasOf && e.kind === "electoral_area" && e.regionalDistrict === site.coversElectoralAreasOf).map((e) => e.key)] : [jurisdiction];
+    // A regional district bylaw that names one electoral area covers only that area.
+    const area = `${parts[0]!.title} ${parts[0]!.source_text.slice(0, 600)}`.match(/Electoral Area\s+([A-Z])\b/);
+    if (area && site?.coversElectoralAreasOf) covers = covers.filter((k) => !k.startsWith("ea:") || new RegExp(`Electoral Area ${area[1]}$`).test(k));
     const first = results.find((r) => "answer" in r && r.answer) as { answer: Record<string, any> } | undefined;
     const title = first?.answer?.bylaw?.title ?? parts[0]!.title;
     const number = first?.answer?.bylaw?.number ?? null;

@@ -71,7 +71,11 @@ export function upsertItem(item: Omit<ReviewItem, "status" | "created" | "update
   const path = itemPath(item.month, item.item_id);
   const old = readJsonIf<ReviewItem | null>(path, null);
   const now = new Date().toISOString();
-  const merged: ReviewItem = old && old.status !== "open" ? old : { ...item, status: "open", created: old?.created ?? now, updated: now };
+  if (old && old.status !== "open") return old;
+  const strip = (x: unknown) => JSON.stringify(x, (k, v) => (k === "created" || k === "updated" || k === "produced_at" || k === "builtAt" ? undefined : v));
+  // Unchanged items are not rewritten, so a re-run leaves no diff behind.
+  if (old && strip({ ...item, status: "open" }) === strip({ ...old })) return old;
+  const merged: ReviewItem = { ...item, status: "open", created: old?.created ?? now, updated: now };
   writeJson(path, merged);
   return merged;
 }

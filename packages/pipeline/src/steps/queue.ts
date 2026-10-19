@@ -77,7 +77,9 @@ export function queue(opts: { month?: string } = {}) {
     const t = makeTask(month, "closed_area", [u], u.text, u.title, { ruleId, schedule: u.meta.schedule, section: u.meta.section, scheduleEffect: effect });
     if (rule) {
       ruleParsed++;
-      writeJson(join(P.queue, "rule", `${t.task_id}.json`), { task_id: t.task_id, mode: "rule", parser: "ruleparse.v1", produced_at: new Date().toISOString(), answer: rule });
+      const rulePath = join(P.queue, "rule", `${t.task_id}.json`);
+      const prevRule = readJsonIf<{ answer: unknown } | null>(rulePath, null);
+      if (JSON.stringify(prevRule?.answer) !== JSON.stringify(rule)) writeJson(rulePath, { task_id: t.task_id, mode: "rule", parser: "ruleparse.v1", produced_at: new Date().toISOString(), answer: rule });
     }
     tasks.push(t);
   }
