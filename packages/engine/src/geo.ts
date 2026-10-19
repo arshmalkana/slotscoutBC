@@ -284,3 +284,59 @@ export function safeSectors(bins: boolean[]): { centreDeg: number; safe: boolean
   }
   return out;
 }
+
+function linesLonLat(g: Geometry | null): Position[][] {
+  if (!g) return [];
+  if (g.type === "LineString") return [g.coordinates];
+  if (g.type === "MultiLineString") return g.coordinates;
+  return [];
+}
+
+/** How far along a line (from its first vertex) the point nearest to p lies, and how far p is from the line. */
+export function measureAlong(g: Geometry | null, p: LatLon): { alongM: number; offsetM: number } | null {
+  const f = new LocalFrame(p);
+  let cum = 0;
+  let best = { d: Infinity, along: 0 };
+  for (const line of linesLonLat(g)) {
+    for (let i = 0; i + 1 < line.length; i++) {
+      const a = line[i]!;
+      const b = line[i + 1]!;
+      const segLen = distanceM({ lon: a[0]!, lat: a[1]! }, { lon: b[0]!, lat: b[1]! });
+      const [ax, ay] = f.xy(a);
+      const [bx, by] = f.xy(b);
+      const dx = bx - ax;
+      const dy = by - ay;
+      const len2 = dx * dx + dy * dy;
+      const t = len2 === 0 ? 0 : Math.max(0, Math.min(1, -(ax * dx + ay * dy) / len2));
+      const d = Math.hypot(ax + t * dx, ay + t * dy);
+      if (d < best.d) best = { d, along: cum + t * segLen };
+      cum += segLen;
+    }
+  }
+  return isFinite(best.d) ? { alongM: best.along, offsetM: best.d } : null;
+}
+
+/** The point a given distance along a line from its first vertex; null when the line is shorter. */
+export function pointAlong(g: Geometry | null, alongM: number): LatLon | null {
+  let remaining = alongM;
+  for (const line of linesLonLat(g)) {
+    for (let i = 0; i + 1 < line.length; i++) {
+      const a = { lon: line[i]![0]!, lat: line[i]![1]! };
+      const b = { lon: line[i + 1]![0]!, lat: line[i + 1]![1]! };
+      const d = distanceM(a, b);
+      if (d >= remaining) {
+        const t = d === 0 ? 0 : remaining / d;
+        return { lat: a.lat + t * (b.lat - a.lat), lon: a.lon + t * (b.lon - a.lon) };
+      }
+      remaining -= d;
+    }
+  }
+  return null;
+}
+
+export function lineLengthM(g: Geometry | null): number {
+  let total = 0;
+  for (const line of linesLonLat(g))
+    for (let i = 0; i + 1 < line.length; i++) total += distanceM({ lon: line[i]![0]!, lat: line[i]![1]! }, { lon: line[i + 1]![0]!, lat: line[i + 1]![1]! });
+  return total;
+}

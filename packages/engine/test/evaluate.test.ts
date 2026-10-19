@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { destination, evaluate, type LayerKey } from "../src/index.js";
+import { destination, evaluate, extractNoticePoints, type LayerKey } from "../src/index.js";
 import { AT, ALL_KEYS, PIN, baseInput, digitised, feature, okLayer, square } from "./fixtures.js";
 
 function check(report: ReturnType<typeof evaluate>, id: string) {
@@ -244,6 +244,83 @@ describe("evaluate: report shape", () => {
     const r = evaluate(input);
     expect(check(r, "P6").status).toBe("conditional");
     expect(r.access.vehicle).toBe("high clearance recommended");
+  });
+});
+
+describe("evaluate: review states and the one-way rule (Addendum A 5.1, 9)", () => {
+  it("holds an area grey while a candidate waits for a person", () => {
+    const r = evaluate(baseInput({ digitised: [digitised(square(PIN, 300), { status: "candidate", change_type: "new", reviewed_by: null, reviewed_on: null, extraction_method: "ai" })] }));
+    expect(r.verdict.state).toBe("grey");
+  });
+
+  it("keeps the older, stricter version live while a looser change waits", () => {
+    const approved = digitised(square(PIN, 300), { rule_id: "W5-001", status: "approved" });
+    const looser = digitised(square(PIN, 50, 2000), { rule_id: "W5-001", status: "candidate", change_type: "looser", reviewed_by: null, reviewed_on: null });
+    expect(evaluate(baseInput({ digitised: [approved, looser] })).verdict.state).toBe("red");
+  });
+
+  it("lets a provisional stricter change restrict, never clear", () => {
+    const strict = digitised(square(PIN, 300), { status: "provisional", change_type: "stricter", reviewed_by: null, reviewed_on: null, extraction_method: "ai" });
+    const r = evaluate(baseInput({ digitised: [strict] }));
+    expect(r.verdict.state).toBe("red");
+    expect(r.checks.find((c) => c.ruleId === "W5")!.notes!.join(" ")).toMatch(/one-way rule/);
+    const shotOnly = digitised(square(PIN, 300), { status: "provisional", effect: "shot_only", reviewed_by: null, reviewed_on: null });
+    const pass = evaluate(baseInput({ digitised: [shotOnly] }, { firearmType: "shotgun_shot", fallZoneM: 250 }));
+    expect(pass.checks.find((c) => c.ruleId === "W5")?.status).toBe("pass");
+    expect(pass.checks.find((c) => c.ruleId === "W5")?.notes ?? []).not.toContain(expect.stringMatching(/one-way/));
+  });
+
+  it("shows an approved closed area as red even before the rest of the region is reviewed", () => {
+    const r = evaluate(baseInput({ wildlifeCoverage: [{ region: "3", name: "Thompson", status: "in_progress" }], digitised: [digitised(square(PIN, 300), {})] }));
+    expect(r.verdict.state).toBe("red");
+    expect(r.checks.some((c) => c.ruleId === "W1–W12" && c.status === "unknown")).toBe(true);
+  });
+});
+
+describe("evaluate: road notice km points (P6, Addendum A 5.2)", () => {
+  // A 2.2 km section running north from its first vertex; the pin sits beside km 1.1.
+  const line = { type: "LineString" as const, coordinates: [[PIN.lon + 0.005, PIN.lat - 0.01], [PIN.lon + 0.005, PIN.lat + 0.01]] };
+  const withNotice = (text: string, kind: "closed" | "caution" = "closed", extra: object = {}) => {
+    const input = baseInput();
+    input.layers.fsr_roads = okLayer("fsr_roads" as LayerKey, [feature(line, { FOREST_FILE_ID: "5748", ROAD_SECTION_ID: "04", ROAD_SECTION_NAME: "SLOLLICUM", FILE_TYPE_DESCRIPTION: "Forest Service Road" })]);
+    const parsed = extractNoticePoints(text, kind);
+    input.roadNotices = {
+      district: "Chilliwack",
+      status: "ok",
+      fetchedAt: new Date(AT.getTime() - 3600_000).toISOString(),
+      pageUrl: "https://example.test",
+      notices: [{ district: "Chilliwack", section: "closure", road: "Slollicum FSR", fileSection: "5748.04", date: "December 17, 2021", postedOn: "2021-12-17", text, kind, url: "https://example.test", ...parsed, ...extra }],
+    };
+    return evaluate(input);
+  };
+
+  it("passes a spot below a closure further up the road", () => {
+    const r = withNotice("No access past 2 km due to washout.");
+    expect(check(r, "P6").status).toBe("pass");
+    expect(check(r, "P6").notes!.join(" ")).toMatch(/posted 2021, still listed/);
+  });
+
+  it("blocks a spot at or past the closure", () => {
+    expect(check(withNotice("No access past 0.8 km due to washout."), "P6").status).toBe("conditional");
+  });
+
+  it("blocks when the posted km cannot be placed on the mapped section", () => {
+    expect(check(withNotice("NO ACCESS PAST 55 KM THROUGH TO KOOKIPI FSR."), "P6").status).toBe("conditional");
+  });
+
+  it("blocks when a closure names no km point", () => {
+    expect(check(withNotice("The road is closed until further notice."), "P6").status).toBe("conditional");
+  });
+
+  it("goes grey when km points could not be read and no person or approved AI reading exists", () => {
+    expect(check(withNotice("Grading work between 1 km and 3 km.", "caution"), "P6").status).toBe("unknown");
+    expect(check(withNotice("Grading work between 1 km and 3 km.", "caution", { extraction: "person", points: [], needsAi: false }), "P6").status).toBe("pass");
+  });
+
+  it("still counts a closure that has left the page until a person approves the removal", () => {
+    const r = withNotice("No access past 0.8 km due to washout.", "closed", { listing: "removed_pending_review" });
+    expect(check(r, "P6").status).toBe("conditional");
+    expect(check(r, "P6").notes!.join(" ")).toMatch(/no longer on the district page/);
   });
 });
 

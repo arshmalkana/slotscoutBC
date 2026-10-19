@@ -1,7 +1,8 @@
 import { beforeAll, describe, expect, it } from "vitest";
-import { loadData } from "../src/data.js";
+import { parseNoticesPage } from "@slotscout/engine";
+import { loadData, type StoredNotice } from "../src/data.js";
 import { MAP_LAYERS, sldFor, tileBounds } from "../src/maplayers.js";
-import { parseNoticesPage } from "../src/roadNotices.js";
+import { mergeWithStore } from "../src/roadNotices.js";
 import { buildApp } from "../src/server.js";
 
 const PAGE = `<html><body><main>
@@ -45,6 +46,50 @@ describe("district road notices parser", () => {
   it("skips intro callouts and sections without dated notices", () => {
     expect(notices.some((n) => /severe wildfires/.test(n.text))).toBe(false);
     expect(notices).toHaveLength(6);
+  });
+
+  it("reads km points with their status and the exact sentence", () => {
+    const slollicum = notices.find((n) => n.fileSection === "5748.04")!;
+    expect(slollicum.points?.[0]).toMatchObject({ km: 2, extent: "beyond", status: "closed" });
+    expect(slollicum.text).toContain(slollicum.points![0]!.quote);
+    expect(notices.find((n) => n.fileSection === "8126.01")!.points?.[0]).toMatchObject({ km: 1.7, status: "restricted" });
+    const harrison = notices.find((n) => n.fileSection === "5748.01")!;
+    expect(harrison.points?.[0]).toMatchObject({ km: 13, extent: "at", status: "caution" });
+    expect(harrison.postedOn).toBe("2021-07-06");
+  });
+});
+
+describe("road notice store (one-way rule)", () => {
+  const live = parseNoticesPage(PAGE, "Chilliwack", "https://www2.gov.bc.ca/gov/content/x");
+  const gone: StoredNotice = {
+    ...live.find((n) => n.fileSection === "5748.04")!,
+    id: "Chilliwack|9999.01|2026-01-01",
+    road: "Gone FSR 9999.01",
+    fileSection: "9999.01",
+    orgUnit: "DCK",
+    firstSeen: "2026-01-01",
+    lastSeen: "2026-09-01",
+    listing: "removed_pending_review",
+  };
+
+  it("keeps a closure that left the page until a person approves the removal", () => {
+    const merged = mergeWithStore("DCK", live, [gone]);
+    expect(merged.find((n) => n.fileSection === "9999.01")?.listing).toBe("removed_pending_review");
+    expect(mergeWithStore("DCK", live, [{ ...gone, listing: "removed_approved" }]).some((n) => n.fileSection === "9999.01")).toBe(false);
+    expect(mergeWithStore("DSQ", live, [gone]).some((n) => n.fileSection === "9999.01")).toBe(false);
+  });
+
+  it("only uses an AI reading of km points once a person approved it", () => {
+    const harrison = live.find((n) => n.fileSection === "5748.01")!;
+    const ai: StoredNotice = { ...harrison, orgUnit: "DCK", firstSeen: "x", lastSeen: "x", extraction: "ai", points: [{ km: 1, extent: "beyond", status: "closed", quote: "x" }] };
+    expect(mergeWithStore("DCK", live, [ai]).find((n) => n.fileSection === "5748.01")!.points?.[0]?.status).toBe("caution");
+    const approved = mergeWithStore("DCK", live, [{ ...ai, approvedBy: "AB" }]);
+    expect(approved.find((n) => n.fileSection === "5748.01")!.points?.[0]?.status).toBe("closed");
+  });
+
+  it("still counts stored closures when the live page cannot be read", () => {
+    const stored: StoredNotice = { ...live.find((n) => n.fileSection === "5748.04")!, orgUnit: "DCK", firstSeen: "x", lastSeen: "x", listing: "listed" };
+    expect(mergeWithStore("DCK", null, [stored])).toHaveLength(1);
   });
 });
 

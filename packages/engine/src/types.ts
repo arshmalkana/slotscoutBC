@@ -186,6 +186,24 @@ export interface DigitisedRuleProps {
   reviewed_on: string | null;
   confidence: "high" | "medium" | "low";
   notes: string;
+  /** Addendum A 9 (5.2 schema additions). */
+  extraction_method?: "manual" | "rule" | "ai";
+  model_version?: string | null;
+  prompt_version?: string | null;
+  /** Field name -> exact words from source_text it came from. */
+  quotes?: Record<string, string>;
+  /** True when both independent extraction runs agreed. */
+  run_agreement?: boolean | null;
+  /**
+   * candidate: built, waiting for a person. provisional: an AI-read stricter change published at once
+   * (only after the gold set passes) and confirmed by a person within 24 h. approved: reviewed by a
+   * second person. retired: replaced or removed after approval.
+   */
+  status?: "candidate" | "provisional" | "approved" | "retired";
+  /** How this version differs from the approved one before it (Addendum A 5.1). */
+  change_type?: "new" | "stricter" | "looser" | "unclear" | "cosmetic";
+  version?: number;
+  unit_hash?: string;
 }
 
 export type CoverageStatus = "not_started" | "in_progress" | "digitised" | "reviewed";
@@ -221,16 +239,46 @@ export interface ImageryInfo {
   error?: string;
 }
 
+/** One km point of a road notice, placed on the road by measuring along its FTEN geometry (Addendum A 5.2). */
+export interface NoticePoint {
+  /** Km from the start of the road section; null when the notice gives none. */
+  km: number | null;
+  kmEnd?: number;
+  /** "beyond": blocks travel past km; "range": km to kmEnd; "at": a single spot; "unknown": somewhere on the road. */
+  extent: "at" | "beyond" | "range" | "unknown";
+  status: "closed" | "restricted" | "gated" | "washout" | "bridge_out" | "deactivated" | "caution";
+  /** The sentence the point came from, verbatim. */
+  quote: string;
+  lat?: number;
+  lon?: number;
+}
+
 export interface RoadNotice {
+  /** district | file section or road | posted date. */
+  id?: string;
   district: string;
   section: "warning" | "closure" | "structure" | "work" | "deactivation" | "other";
   road: string;
   /** FSR file and section, e.g. "5748.01", when the notice gives one. */
   fileSection?: string;
   date?: string;
+  /** Posted date as YYYY-MM-DD, when it could be read. */
+  postedOn?: string;
   text: string;
   kind: "closed" | "restricted" | "caution" | "deactivated" | "info";
   url: string;
+  pdfs?: string[];
+  points?: NoticePoint[];
+  /** True when the rule-based parser could not read every km point; the pipeline queues it for AI. */
+  needsAi?: boolean;
+  /** How the km points were read. */
+  extraction?: "rule" | "ai" | "person";
+  /**
+   * "listed": on the district page now. "removed_pending_review": no longer on the page, but kept
+   * until a person confirms it was lifted (looser changes wait for a person, Addendum A 5.2).
+   */
+  /** Whether the notice is still on the district page; a removal waits for a person (one-way rule). */
+  listing?: "listed" | "removed_pending_review" | "removed_approved";
 }
 
 export interface RoadNoticeData {

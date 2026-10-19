@@ -1,6 +1,7 @@
 import type { Feature, Geometry } from "geojson";
 import { DISCLAIMER, LIGHTS, RULES_BY_ID, SEVERITY_ORDER, STANDING_CHECKS } from "./catalogue.js";
-import { compass8, markBlockedBearings, norm360, relate, safeSectors } from "./geo.js";
+import { compass8, lineLengthM, markBlockedBearings, measureAlong, norm360, relate, safeSectors } from "./geo.js";
+import { isBlockingStatus } from "./notices.js";
 import { ACCESS_RADIUS_M, OWNER_TYPES, REGION_BY_NAME, type LayerKey } from "./layers.js";
 import { formatDistance, isRifle, isShot } from "./profile.js";
 import { periodStatus } from "./seasonal.js";
@@ -14,6 +15,7 @@ import type {
   FeatureHit,
   LayerData,
   Light,
+  NoticePoint,
   RoadNotice,
   SpotReport,
   VerdictState,
@@ -357,6 +359,24 @@ function evaluateDigitised(ctx: Context, f: Feature<Geometry, DigitisedRuleProps
   }
 }
 
+/**
+ * How a digitised rule feature counts (Addendum A 5.1, 9): approved features count fully; an AI-read
+ * stricter change published under the one-way rule ("provisional") may only restrict; a candidate
+ * waits for a person and holds its area grey, except a looser candidate, where the older, stricter
+ * approved version stays live.
+ */
+export function featureState(f: Feature<Geometry, DigitisedRuleProps>): "approved" | "provisional" | "pending" | "ignore" {
+  const p = f.properties;
+  if (p.status === "retired") return "ignore";
+  if (p.status === "provisional") return "provisional";
+  const reviewed = !!p.reviewed_by && !!p.reviewed_on && p.reviewed_by !== p.digitised_by;
+  if ((p.status === undefined || p.status === "approved") && reviewed) return "approved";
+  if (p.status === "candidate" && p.change_type === "looser") return "ignore";
+  return "pending";
+}
+
+const PROVISIONAL_NOTE = "AI-read change published under the one-way rule: it can only make the map stricter, and a person confirms it within 24 hours.";
+
 function checkWildlife(ctx: Context): void {
   const wmuProblem = ctx.problem("wmu", false);
   const { region, mu } = wildlifeRegion(ctx);
@@ -368,9 +388,66 @@ function checkWildlife(ctx: Context): void {
     !!cov.confirmedOn &&
     ctx.now.getTime() - new Date(cov.confirmedOn).getTime() <= TEXT_SOURCE_FRESHNESS_DAYS * 86400_000;
 
-  if (!region || !freshCoverage) {
+  const wFeatures = ctx.input.digitised.filter((f) => f.properties.rule_id.startsWith("W"));
+  const byRule = new Map<string, CheckResult[]>();
+  let pendingNear: Feature<Geometry, DigitisedRuleProps> | undefined;
+  for (const f of wFeatures) {
+    const state = featureState(f);
+    if (state === "ignore") continue;
+    const rel = relate(f.geometry, ctx.input.point);
+    if (!rel) continue;
+    const near = rel.inside || rel.distanceM <= ctx.radius;
+    if (state === "pending") {
+      if (near && !pendingNear) pendingNear = f;
+      continue;
+    }
+    const inside = rel.inside;
+    if (!inside && rel.distanceM <= ctx.radius) {
+      const prohibits =
+        ["no_shooting", "no_shooting_hunting_exempt"].includes(f.properties.effect) ||
+        (f.properties.effect === "no_shooting_seasonal" && !!f.properties.period && periodStatus(f.properties.period, ctx.at).active);
+      if (prohibits) {
+        const hit: FeatureHit = { kind: "Wildlife Act closed area", name: f.properties.rule_id, distanceM: Math.round(rel.distanceM), bearingDeg: Math.round(rel.bearingDeg), inside: false };
+        ctx.fzRed.push(hit);
+        ctx.hazards.push(f.geometry);
+        ctx.hazardHits.push(hit);
+      }
+    }
+    if (!inside) continue;
+    const ev = evaluateDigitised(ctx, f, true);
+    // A provisional feature may only restrict.
+    if (state === "provisional" && ev.status !== "fail" && ev.status !== "conditional") continue;
+    const w = wRuleOf(f.properties.rule_id);
+    const list = byRule.get(w) ?? [];
+    const p = f.properties;
+    list.push({
+      ruleId: w,
+      light: "wildlife",
+      status: ev.status,
+      reason: ev.reason,
+      citation: p.authority,
+      sourceUrl: p.source_url,
+      sources: ["closed_areas"],
+      dataDate: cov?.confirmedOn ?? p.reviewed_on ?? p.digitised_on,
+      sourceText: p.source_text,
+      changesOn: ev.changesOn,
+      changesText: ev.changesText,
+      notes: [
+        ...(ev.notes ?? []),
+        ...(state === "provisional" ? [PROVISIONAL_NOTE] : []),
+        `Source: ${p.source_version}. ${p.extraction_method === "ai" ? `Read by ${p.model_version ?? "AI"} (prompt ${p.prompt_version ?? "?"})` : p.extraction_method === "rule" ? "Read by the rule-based parser" : "Digitised by hand"} ${p.digitised_on}${state === "approved" ? `, reviewed ${p.reviewed_on}` : ""}.`,
+      ],
+      nearestM: Math.round(rel.edgeDistanceM),
+      nearestBearingDeg: Math.round(rel.bearingDeg),
+    });
+    byRule.set(w, list);
+  }
+  const restricting = [...byRule.values()].flat().filter((c) => c.status === "fail" || c.status === "conditional");
+
+  if (!region || !freshCoverage || pendingNear) {
     let reason: string;
-    if (!region) reason = wmuProblem ?? "the wildlife management unit for this point could not be found";
+    if (pendingNear) reason = `closed area ${pendingNear.properties.rule_id} near this spot is ${pendingNear.properties.status === "candidate" && pendingNear.properties.change_type === "unclear" ? "being re-read after a wording change" : "digitised but not yet reviewed by a second person"}`;
+    else if (!region) reason = wmuProblem ?? "the wildlife management unit for this point could not be found";
     else if (cov?.status === "reviewed") reason = `the Closed Areas Regulation set for Region ${region} has not been re-confirmed against the current consolidation in the last ${TEXT_SOURCE_FRESHNESS_DAYS} days`;
     else reason = `Wildlife Act closed areas for Region ${region}${cov ? ` (${cov.name})` : ""}${mu ? `, MU ${mu},` : ""} are not yet digitised and reviewed`;
     ctx.add({
@@ -378,77 +455,21 @@ function checkWildlife(ctx: Context): void {
       light: "wildlife",
       status: "unknown",
       reason: `Cannot confirm: ${reason}.`,
-      citation: "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Schedules 1 to 13",
-      sourceUrl: RULES_BY_ID.W1!.citationUrl,
+      citation: pendingNear?.properties.authority ?? "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Schedules 1 to 13",
+      sourceUrl: pendingNear?.properties.source_url ?? RULES_BY_ID.W1!.citationUrl,
       sources: ["closed_areas", "wmu"],
+      sourceText: pendingNear?.properties.source_text,
       moreUrl: RULES_BY_ID.W1!.citationUrl,
       notes: ["Read the regional Hunting and Trapping Regulations Synopsis map for closed areas near this spot."],
     });
+    // Closed areas already approved (or published stricter) still count: red is never hidden by a gap elsewhere.
+    for (const c of restricting) ctx.checks.push(c);
   } else {
-    const isReviewed = (f: Feature<Geometry, DigitisedRuleProps>) =>
-      !!f.properties.reviewed_by && !!f.properties.reviewed_on && f.properties.reviewed_by !== f.properties.digitised_by;
-    const wFeatures = ctx.input.digitised.filter((f) => f.properties.rule_id.startsWith("W"));
-    const pendingNear = wFeatures.find((f) => {
-      if (isReviewed(f)) return false;
-      const rel = relate(f.geometry, ctx.input.point);
-      return !!rel && (rel.inside || rel.distanceM <= ctx.radius);
-    });
-    if (pendingNear) {
-      ctx.add({
-        ruleId: "W1–W12",
-        light: "wildlife",
-        status: "unknown",
-        reason: `Cannot confirm: closed area ${pendingNear.properties.rule_id} near this spot is digitised but not yet reviewed by a second person.`,
-        citation: pendingNear.properties.authority,
-        sourceUrl: pendingNear.properties.source_url,
-        sources: ["closed_areas"],
-        sourceText: pendingNear.properties.source_text,
-      });
-      return checkRoadAllowance(ctx);
-    }
-    const reviewed = wFeatures.filter(isReviewed);
-    const byRule = new Map<string, CheckResult[]>();
-    for (const f of reviewed) {
-      const rel = relate(f.geometry, ctx.input.point);
-      if (!rel) continue;
-      const w = wRuleOf(f.properties.rule_id);
-      const inside = rel.inside;
-      if (!inside && rel.distanceM <= ctx.radius) {
-        const prohibits = ["no_shooting", "no_shooting_hunting_exempt"].includes(f.properties.effect) ||
-          (f.properties.effect === "no_shooting_seasonal" && !!f.properties.period && periodStatus(f.properties.period, ctx.at).active);
-        if (prohibits) {
-          const hit: FeatureHit = { kind: "Wildlife Act closed area", name: f.properties.rule_id, distanceM: Math.round(rel.distanceM), bearingDeg: Math.round(rel.bearingDeg), inside: false };
-          ctx.fzRed.push(hit);
-          ctx.hazards.push(f.geometry);
-          ctx.hazardHits.push(hit);
-        }
-      }
-      if (!inside) continue;
-      const ev = evaluateDigitised(ctx, f, true);
-      const list = byRule.get(w) ?? [];
-      list.push({
-        ruleId: w,
-        light: "wildlife",
-        status: ev.status,
-        reason: ev.reason,
-        citation: f.properties.authority,
-        sourceUrl: f.properties.source_url,
-        sources: ["closed_areas"],
-        dataDate: cov.confirmedOn,
-        sourceText: f.properties.source_text,
-        changesOn: ev.changesOn,
-        changesText: ev.changesText,
-        notes: [...(ev.notes ?? []), `Source: ${f.properties.source_version}. Digitised ${f.properties.digitised_on}, reviewed ${f.properties.reviewed_on}.`],
-        nearestM: Math.round(rel.edgeDistanceM),
-        nearestBearingDeg: Math.round(rel.bearingDeg),
-      });
-      byRule.set(w, list);
-    }
     for (let i = 1; i <= 12; i++) {
       const id = `W${i}`;
       const list = byRule.get(id);
       if (!list?.length) {
-        ctx.add({ ruleId: id, status: "pass", reason: `Not inside a ${RULES_BY_ID[id]!.title.split(":")[0]} area.`, dataDate: cov.confirmedOn });
+        ctx.add({ ruleId: id, status: "pass", reason: `Not inside a ${RULES_BY_ID[id]!.title.split(":")[0]} area.`, dataDate: cov!.confirmedOn });
         continue;
       }
       list.sort((a, b) => STATUS_RANK[b.status] - STATUS_RANK[a.status]);
@@ -719,6 +740,45 @@ function matchNotices(ctx: Context): { notices: RoadNotice[]; fsrs: ReturnType<t
   return { notices: matched, fsrs };
 }
 
+/** "posted 2021, still listed" for notices older than a year (Addendum A 5.2 step 5). */
+function postedLabel(n: RoadNotice, now: Date): string {
+  const iso = n.postedOn;
+  if (!iso) return n.date ? ` (${n.date})` : "";
+  const ageDays = (now.getTime() - new Date(iso).getTime()) / 86400_000;
+  return ageDays > 365 ? ` (posted ${iso.slice(0, 4)}, still listed)` : ` (${n.date ?? iso})`;
+}
+
+type Placement = { notice: RoadNotice; point: NoticePoint; spotKm: number | null; blocks: boolean; why: string };
+
+/**
+ * Places a notice's km points against the spot (Addendum A 5.2 step 3): the spot's km is measured
+ * along the matching FTEN section from its first vertex. A closure only clears the spot when it is
+ * clearly further up the road, with a margin for the gap between posted km markers and mapped
+ * length; when the section is shorter than the posted km (km markers carried over from an earlier
+ * section) or the notice names no km, the closure counts as blocking.
+ */
+function placeNotice(ctx: Context, n: RoadNotice, fsrs: ReturnType<typeof nearbyFsrs>): Placement[] {
+  const section = fsrs.find((it) => n.fileSection && fileSection(it.f.properties ?? {}) === n.fileSection);
+  const measured = section ? measureAlong(section.f.geometry, ctx.input.point) : null;
+  const lengthKm = section ? lineLengthM(section.f.geometry) / 1000 : 0;
+  const spotKm = measured ? measured.alongM / 1000 : null;
+  const points: NoticePoint[] = n.points?.length
+    ? n.points
+    : n.kind === "closed" || n.kind === "restricted" || n.kind === "deactivated"
+      ? [{ km: null, extent: "unknown", status: n.kind === "deactivated" ? "deactivated" : n.kind === "restricted" ? "restricted" : "closed", quote: closureText(n) }]
+      : [];
+  return points.map((point) => {
+    if (!isBlockingStatus(point.status)) return { notice: n, point, spotKm, blocks: false, why: "caution" };
+    if (point.km === null || point.extent === "unknown") return { notice: n, point, spotKm, blocks: true, why: "the notice does not say where on the road" };
+    if (spotKm === null) return { notice: n, point, spotKm, blocks: true, why: "the spot could not be placed on this road section" };
+    const startKm = point.km;
+    if (startKm > lengthKm + 1) return { notice: n, point, spotKm, blocks: true, why: `the mapped section is ${lengthKm.toFixed(1)} km long, so km ${startKm} cannot be placed on it` };
+    const margin = Math.max(0.5, startKm * 0.1);
+    if (spotKm + margin < startKm) return { notice: n, point, spotKm, blocks: false, why: `the closure starts at km ${startKm}, further up the road than this spot (about km ${spotKm.toFixed(1)})` };
+    return { notice: n, point, spotKm, blocks: true, why: `this spot is at about km ${spotKm.toFixed(1)}, at or past the closure` };
+  });
+}
+
 function checkRoadNotices(ctx: Context): void {
   const fsrProblem = ctx.problem("fsr_roads", false);
   const { notices, fsrs } = matchNotices(ctx);
@@ -730,18 +790,30 @@ function checkRoadNotices(ctx: Context): void {
     else ctx.add({ ruleId: "P6", status: "not_applicable", reason: `No forest service or permit road within ${formatDistance(ACCESS_RADIUS_M)}.`, dataDate: ctx.dataDate(["fsr_roads"]) });
     return;
   }
-  const blocking = notices.filter((n) => n.kind === "closed" || n.kind === "restricted" || n.kind === "deactivated");
+  const placements = notices.flatMap((n) => placeNotice(ctx, n, fsrs));
+  const blocking = placements.filter((p) => p.blocks);
+  // A notice that has left the district page still counts until a person checks it (one-way rule).
+  const removedNote = notices.some((n) => n.listing === "removed_pending_review")
+    ? ["A closure that is no longer on the district page stays on SlotScout until a person checks the District Manager's notice."]
+    : [];
   if (blocking.length) {
+    const seen = new Set<RoadNotice>();
+    const lines = blocking.filter((p) => (seen.has(p.notice) ? false : (seen.add(p.notice), true)));
     ctx.add({
       ruleId: "P6",
       status: "conditional",
-      reason: `Route may be closed or restricted: ${blocking
+      reason: `Route may be closed or restricted: ${lines
         .slice(0, 2)
-        .map((n) => `${n.road}${n.date ? ` (${n.date})` : ""}: ${closureText(n)}`)
+        .map((p) => `${p.notice.road}${postedLabel(p.notice, ctx.now)}: ${p.point.quote.slice(0, 220)}`)
         .join(" ")}`,
-      moreUrl: rn?.pageUrl,
+      sourceText: lines[0]!.point.quote,
+      moreUrl: lines[0]!.notice.url ?? rn?.pageUrl,
       dataDate: date,
-      notes: ["SlotScout does not yet plan routes, so it cannot tell whether a closure is on your way in."],
+      notes: [
+        ...lines.slice(0, 3).map((p) => `${p.notice.road}: counted as blocking because ${p.why}.`),
+        ...removedNote,
+        "SlotScout does not yet plan routes, so it cannot tell whether a closure is on your way in.",
+      ],
     });
     return;
   }
@@ -754,12 +826,23 @@ function checkRoadNotices(ctx: Context): void {
     ctx.unknown("P6", "district road notices are older than their freshness limit");
     return;
   }
-  const cautions = notices.filter((n) => n.kind === "caution" || n.kind === "info");
+  const unread = notices.filter((n) => n.needsAi && n.extraction !== "ai" && n.extraction !== "person");
+  if (unread.length) {
+    ctx.unknown("P6", `a notice for ${unread[0]!.road} names km points the parser could not read, and it has not yet been read and checked`);
+    return;
+  }
+  const ahead = placements.filter((p) => isBlockingStatus(p.point.status));
+  const cautions = placements.filter((p) => !isBlockingStatus(p.point.status));
   ctx.add({
     ruleId: "P6",
     status: "pass",
-    reason: `No closure posted for nearby resource roads on the ${rn.district} notices page.`,
-    notes: cautions.length ? cautions.slice(0, 3).map((n) => `${n.road}: ${n.text.slice(0, 200)}`) : undefined,
+    reason: ahead.length
+      ? `Closures posted on nearby resource roads are further up the road than this spot (${rn.district} notices page).`
+      : `No closure posted for nearby resource roads on the ${rn.district} notices page.`,
+    notes: [
+      ...ahead.slice(0, 2).map((p) => `${p.notice.road}${postedLabel(p.notice, ctx.now)}: ${p.why}. "${p.point.quote.slice(0, 200)}"`),
+      ...cautions.slice(0, 3).map((p) => `${p.notice.road}${postedLabel(p.notice, ctx.now)}: ${p.point.quote.slice(0, 200)}`),
+    ].slice(0, 5),
     moreUrl: rn.pageUrl,
     dataDate: date,
   });
@@ -800,23 +883,30 @@ function bylawCheck(ctx: Context, ruleId: "L1" | "L2" | "L3", entry: BylawEntry 
     ctx.add({ ruleId, status: "pass", reason: `No firearm discharge bylaw applies in ${name} (reviewed ${entry.confirmedOn}).`, dataDate: entry.confirmedOn });
     return;
   }
-  // Zoned bylaw: evaluate reviewed digitised zones for this jurisdiction.
+  // Zoned bylaw: evaluate digitised zones for this jurisdiction by their review state.
   const all = ctx.input.digitised.filter((f) => f.properties.rule_id.startsWith(`${ruleId}-`));
-  const ok = (f: Feature<Geometry, DigitisedRuleProps>) => !!f.properties.reviewed_by && f.properties.reviewed_by !== f.properties.digitised_by;
-  const pending = all.find((f) => !ok(f) && relate(f.geometry, ctx.input.point)?.inside);
+  const inside = all.filter((f) => featureState(f) !== "ignore" && relate(f.geometry, ctx.input.point)?.inside);
+  for (const z of inside) {
+    const state = featureState(z);
+    if (state === "pending") continue;
+    const ev = evaluateDigitised(ctx, z, true);
+    if (ev.status === "fail" || ev.status === "conditional") {
+      ctx.add({
+        ruleId,
+        status: ev.status,
+        reason: `${name}: ${ev.reason}`,
+        sourceText: z.properties.source_text,
+        moreUrl: link,
+        dataDate: entry.confirmedOn,
+        notes: state === "provisional" ? [PROVISIONAL_NOTE] : undefined,
+      });
+      return;
+    }
+  }
+  const pending = inside.find((f) => featureState(f) === "pending");
   if (pending) {
     ctx.add({ ruleId, status: "unknown", reason: `Cannot confirm: bylaw zone ${pending.properties.rule_id} in ${name} is not yet reviewed.`, moreUrl: link });
     return;
-  }
-  const zones = all.filter(ok);
-  for (const z of zones) {
-    const rel = relate(z.geometry, ctx.input.point);
-    if (!rel?.inside) continue;
-    const ev = evaluateDigitised(ctx, z, true);
-    if (ev.status === "fail" || ev.status === "conditional") {
-      ctx.add({ ruleId, status: ev.status, reason: `${name}: ${ev.reason}`, sourceText: z.properties.source_text, moreUrl: link, dataDate: entry.confirmedOn });
-      return;
-    }
   }
   ctx.add({ ruleId, status: "pass", reason: `Outside the bylaw's no-discharge zones in ${name}.`, moreUrl: link, dataDate: entry.confirmedOn });
 }

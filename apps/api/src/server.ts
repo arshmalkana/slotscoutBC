@@ -160,6 +160,15 @@ export async function buildApp(opts: { logger?: boolean } = {}): Promise<Fastify
     };
   });
 
+  // Pipeline state for the Sources page (Addendum A 10.5): last run, open review items, failed sources.
+  app.get("/v1/pipeline-status", async (_req, reply) => {
+    try {
+      return JSON.parse(await readFile(join(config.pipelineReportsDir, "status.json"), "utf8"));
+    } catch {
+      return reply.code(404).send({ error: "the pipeline has not run yet" });
+    }
+  });
+
   app.get("/v1/coverage", async () => {
     const d = data();
     const counts: Record<string, number> = {};

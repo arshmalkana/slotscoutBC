@@ -12,3 +12,11 @@ data/reports/*.jsonl
 .cache/
 playwright-report/
 test-results/
+# Large GIS pull bodies stay out of git; their counts and hashes are in raw/<YYYY-MM>/manifest.json
+raw/*/gis/*.ndjson.gz
+raw/*/gis/*.tmp
+# Problem reports from users may hold contact details
+data/feedback/
+queue/.lock
+# Pipeline run logs are part of the audit trail (Addendum A 7.4)
+!reports/*.log
