@@ -1,0 +1,673 @@
+# SlotScout source register (main spec section 4 and Appendix B; Addendum A 2 and 6).
+# Every source has an owner, URL, access method, cadence and a freshness limit (hours) after which
+# the checks that use it turn grey. The site and the pipeline both read this file.
+version: 2
+checked_on: '2026-10-19'
+sources:
+- id: province
+  name: Province of BC boundary
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=ABMS_PROVINCE_SP
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_PROVINCE_SP
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Yearly
+  freshness_hours: 9600
+  rules:
+  - BC
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: bc_parks
+  name: Provincial parks, ecological reserves and protected areas
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=TA_PARK_ECORES_PA_SVW
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Monthly
+  freshness_hours: 1080
+  rules:
+  - P1
+  - P2
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: national_parks
+  name: National parks (Canada Lands)
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=CLAB_NATIONAL_PARKS
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_ADMIN_BOUNDARIES.CLAB_NATIONAL_PARKS
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Monthly
+  freshness_hours: 2160
+  rules:
+  - F3
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: reserves
+  name: Indian reserves (Canada Lands Survey System)
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=CLAB_INDIAN_RESERVES
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Monthly
+  freshness_hours: 2160
+  rules:
+  - I1
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: treaty_lands
+  name: Modern treaty settlement lands
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=FNT_TREATY_LAND_SP
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_LEGAL_ADMIN_BOUNDARIES.FNT_TREATY_LAND_SP
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Monthly
+  freshness_hours: 2160
+  rules:
+  - I2
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: treaty_areas
+  name: Treaty areas
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=FNT_TREATY_AREA_SP
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_LEGAL_ADMIN_BOUNDARIES.FNT_TREATY_AREA_SP
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Monthly
+  freshness_hours: 2160
+  rules:
+  - I3
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: municipalities
+  name: Municipalities
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=ABMS_MUNICIPALITIES_SP
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Monthly
+  freshness_hours: 2160
+  rules:
+  - L1
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: regional_districts
+  name: Regional districts
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=ABMS_REGIONAL_DISTRICTS_SP
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_REGIONAL_DISTRICTS_SP
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Monthly
+  freshness_hours: 2160
+  rules:
+  - L2
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: electoral_areas
+  name: Regional district electoral areas
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=ABMS_ELECTORAL_AREAS_SP
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_ELECTORAL_AREAS_SP
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Monthly
+  freshness_hours: 2160
+  rules:
+  - L2
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: local_trust_areas
+  name: Islands Trust local trust areas
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=ABMS_LOCAL_TRUST_AREAS_SP
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_LOCAL_TRUST_AREAS_SP
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Monthly
+  freshness_hours: 2160
+  rules:
+  - L3
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: local_parks
+  name: Local and regional greenspaces
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=GBA_LOCAL_REG_GREENSPACES_SP
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_BASEMAPPING.GBA_LOCAL_REG_GREENSPACES_SP
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Monthly
+  freshness_hours: 2160
+  rules:
+  - L4
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: rec_sites
+  name: Recreation sites and interpretive forests
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=FTEN_RECREATION_POLY_SVW
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_FOREST_TENURE.FTEN_RECREATION_POLY_SVW
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Monthly
+  freshness_hours: 1080
+  rules:
+  - P3
+  - S2
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: rec_trails
+  name: Recreation trails
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=FTEN_RECREATION_LINES_SVW
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_FOREST_TENURE.FTEN_RECREATION_LINES_SVW
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Monthly
+  freshness_hours: 1080
+  rules:
+  - P3
+  - S2
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: fire_restrictions
+  name: Wildfire area restrictions
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=PROT_RESTRICTED_AREAS_SP
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_LAND_AND_NATURAL_RESOURCE.PROT_RESTRICTED_AREAS_SP
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Hourly Apr 1 to Oct 31, daily otherwise
+  freshness_hours: 24
+  rules:
+  - P4
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: fire_bans
+  name: Fire bans and prohibitions
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=PROT_BANS_AND_PROHIBITIONS_SP
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_LAND_AND_NATURAL_RESOURCE.PROT_BANS_AND_PROHIBITIONS_SP
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Hourly Apr 1 to Oct 31, daily otherwise
+  freshness_hours: 24
+  rules:
+  - P5
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: fire_current
+  name: Current fire perimeters
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=PROT_CURRENT_FIRE_POLYS_SP
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_LAND_AND_NATURAL_RESOURCE.PROT_CURRENT_FIRE_POLYS_SP
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Hourly Apr 1 to Oct 31, daily otherwise
+  freshness_hours: 24
+  rules:
+  - P4
+  - S3
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: fire_history
+  name: Historical fire perimeters
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=PROT_HISTORICAL_FIRE_POLYS_SP
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_LAND_AND_NATURAL_RESOURCE.PROT_HISTORICAL_FIRE_POLYS_SP
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Monthly
+  freshness_hours: 8760
+  rules:
+  - S3
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: parcels
+  name: ParcelMap BC parcel fabric (owner type)
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=PMBC_PARCEL_FABRIC_POLY_SVW
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Monthly
+  freshness_hours: 1080
+  rules:
+  - F4
+  - O1
+  - O2
+  - O3
+  - I1
+  - FZ
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: fsr_roads
+  name: Forest tenure road sections (FSR and road permits)
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=FTEN_ROAD_SECTION_LINES_SVW
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Monthly
+  freshness_hours: 1080
+  rules:
+  - W6
+  - P6
+  - S2
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: dra_roads
+  name: Digital Road Atlas
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=DRA_DGTL_ROAD_ATLAS_MPAR_SP
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Monthly
+  freshness_hours: 2160
+  rules:
+  - W13
+  - S2
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: cutblocks
+  name: Consolidated cutblocks
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=VEG_CONSOLIDATED_CUT_BLOCKS_SP
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_FOREST_VEGETATION.VEG_CONSOLIDATED_CUT_BLOCKS_SP
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Monthly
+  freshness_hours: 2160
+  rules:
+  - S4
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: mvpr
+  name: Motor vehicle prohibition areas
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=WAA_MVPR_AREAS_SP
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_WILDLIFE_MANAGEMENT.WAA_MVPR_AREAS_SP
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Monthly
+  freshness_hours: 1080
+  rules:
+  - P7
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: wmu
+  name: Wildlife management units
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=WAA_WILDLIFE_MGMT_UNITS_SVW
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Monthly
+  freshness_hours: 8760
+  rules:
+  - W1
+  - S6
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: community_watersheds
+  name: Community watersheds
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=WLS_COMMUNITY_WS_PUB_SVW
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_WATER_MANAGEMENT.WLS_COMMUNITY_WS_PUB_SVW
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Quarterly
+  freshness_hours: 8760
+  rules:
+  - P8
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: crown_tenures
+  name: Crown land tenures
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=TA_CROWN_TENURES_SVW
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_TANTALIS.TA_CROWN_TENURES_SVW
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Monthly
+  freshness_hours: 2160
+  rules:
+  - P9
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: range_tenures
+  name: Range tenures
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=FTEN_RANGE_POLY_SVW
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_FOREST_TENURE.FTEN_RANGE_POLY_SVW
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Monthly
+  freshness_hours: 2160
+  rules:
+  - P9
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: mineral_tenures
+  name: Mineral, placer and coal tenures
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=MTA_ACQUIRED_TENURE_SVW
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_MINERAL_TENURE.MTA_ACQUIRED_TENURE_SVW
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Monthly
+  freshness_hours: 2160
+  rules:
+  - P9
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: transmission
+  name: Transmission lines
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=GBA_TRANSMISSION_LINES_SP
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_BASEMAPPING.GBA_TRANSMISSION_LINES_SP
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Monthly
+  freshness_hours: 8760
+  rules:
+  - O4
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: pipelines
+  name: Oil and gas pipeline segments (permitted)
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=OG_PIPELINE_SEGMENT_PERMIT_SP
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_MINERAL_TENURE.OG_PIPELINE_SEGMENT_PERMIT_SP
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Monthly
+  freshness_hours: 2160
+  rules:
+  - O4
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: railways
+  name: Railway tracks (National Railway Network)
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=GBA_RAILWAY_TRACKS_SP
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_BASEMAPPING.GBA_RAILWAY_TRACKS_SP
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Monthly
+  freshness_hours: 8760
+  rules:
+  - F5
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: buildings
+  name: TRIM buildings
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=TRIM_EBM_BUILDINGS
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_BASEMAPPING.TRIM_EBM_BUILDINGS
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Yearly
+  freshness_hours: 9600
+  rules:
+  - S1
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: nr_districts
+  name: Natural resource districts
+  owner: Province of British Columbia
+  url: https://catalogue.data.gov.bc.ca/dataset?q=ADM_NR_DISTRICTS_SPG
+  access: wfs
+  endpoint: https://openmaps.gov.bc.ca/geo/pub/wfs
+  layer: WHSE_ADMIN_BOUNDARIES.ADM_NR_DISTRICTS_SPG
+  licence: Open Government Licence – British Columbia
+  robots: API service; no robots.txt restriction
+  cadence: Yearly
+  freshness_hours: 9600
+  rules:
+  - P6
+  contact: DataBC (data@gov.bc.ca)
+  pull: gis
+- id: federal_protected
+  name: Migratory bird sanctuaries and national wildlife areas (CPCAD)
+  owner: Environment and Climate Change Canada
+  url: https://www.canada.ca/en/environment-climate-change/services/national-wildlife-areas/protected-conserved-areas-database.html
+  access: api
+  endpoint: https://maps-cartes.ec.gc.ca/arcgis/rest/services/CWS_SCF/CPCAD/MapServer/0
+  layer: CPCAD TYPE_E in (Migratory Bird Sanctuary, National Wildlife Area, Marine National Wildlife Area), LOC=2
+  licence: Open Government Licence – Canada
+  robots: API service
+  cadence: Monthly
+  freshness_hours: 2160
+  rules:
+  - F6
+  contact: ec.aireprotegee-protectedarea.ec@ec.gc.ca
+  pull: gis
+  where: LOC=2 AND TYPE_E IN ('Migratory Bird Sanctuary','National Wildlife Area','Marine National Wildlife Area')
+- id: road_notices
+  name: Resource road safety information (district notices)
+  owner: Ministry of Forests, natural resource districts
+  url: https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information
+  access: scrape
+  endpoint: one page per natural resource district
+  layer: HTML page
+  licence: Copyright Province of British Columbia; facts reused with attribution
+  robots: Allowed by www2.gov.bc.ca robots.txt (checked 2026-10-19)
+  cadence: Daily
+  freshness_hours: 48
+  rules:
+  - P6
+  contact: District offices
+  pull: district_pages
+  unit: road_notice
+  method: rule parser first; AI for notices that do not fit the pattern (Addendum A 2, 5.2)
+- id: imagery_meta
+  name: World Imagery capture metadata
+  owner: Esri and imagery partners
+  url: https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9
+  access: api
+  endpoint: https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/identify
+  layer: World Imagery citations
+  licence: Commercial licence required for a public site (PRD 7.1)
+  robots: API service
+  cadence: On demand
+  freshness_hours: 9600
+  rules:
+  - IM
+  contact: ''
+- id: closed_areas
+  name: Closed Areas Regulation, B.C. Reg. 76/84 (digitised by SlotScout)
+  owner: Province of British Columbia (King's Printer); digitised by SlotScout
+  url: https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi
+  access: manual
+  endpoint: rules/*.geojson
+  layer: Reviewed rule areas
+  licence: Queen's/King's Printer licence for BC Laws; SlotScout digitising
+  robots: BC Laws robots.txt allows only Googlebot and Bingbot (checked 2026-10-19). Use the official BC Laws API only after written confirmation
+    from the King's Printer; until then a person saves a copy into inbox/ (Addendum A 6.2).
+  cadence: Monthly
+  freshness_hours: 1080
+  rules:
+  - W1
+  - W2
+  - W3
+  - W4
+  - W5
+  - W6
+  - W7
+  - W8
+  - W9
+  - W10
+  - W11
+  - W12
+  contact: Fish and Wildlife Branch
+  pull: bclaws
+  unit: regulation_section
+  method: rule parser for road corridors and whole areas; AI extraction for metes and bounds; person reviews every shape (Addendum A 2)
+- id: bylaws
+  name: Local government firearm bylaw register
+  owner: Each municipality, regional district and local trust committee; register kept by SlotScout
+  url: /sources#bylaws
+  access: browser
+  endpoint: data/bylaws.json
+  layer: Register
+  licence: Public bylaws
+  robots: Checked per site before each capture; sites that forbid automation are asked first
+  cadence: Monthly
+  freshness_hours: 1080
+  rules:
+  - L1
+  - L2
+  - L3
+  contact: Each local government
+  pull: bylaws
+  unit: bylaw_clause
+  method: headless browser finds and saves each bylaw; AI extracts rules; person reviews every extracted rule before first use (Addendum A 5.3)
+- id: bclaws_api
+  name: BC Laws API (King's Printer)
+  owner: King's Printer for British Columbia
+  url: https://github.com/bcgov/bc-laws-api
+  access: api
+  endpoint: https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/{doc}/xml
+  layer: Statutes and regulations as XML
+  licence: Queen's Printer Licence (commercial and non-commercial reuse with conditions)
+  robots: 'API paths sit under the BC Laws robots.txt: use only after written confirmation (config.toml bclaws.api_confirmed)'
+  cadence: Monthly full pull of about 30 regulations; daily current-to date check
+  freshness_hours: 1080
+  rules:
+  - W1
+  - W2
+  - W3
+  - W4
+  - W5
+  - W6
+  - W7
+  - W8
+  - W9
+  - W10
+  - W11
+  - W12
+  - P7
+  contact: King's Printer for British Columbia (via bclaws.gov.bc.ca)
+  status: awaiting_permission
+- id: dm_notices
+  name: District Manager notice PDFs (linked from district road pages)
+  owner: Ministry of Forests, natural resource districts
+  url: https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information
+  access: scrape
+  endpoint: PDF links on each district road safety page
+  layer: PDF
+  licence: Copyright Province of British Columbia; facts reused with attribution
+  robots: Allowed by www2.gov.bc.ca robots.txt (checked 2026-10-19)
+  cadence: Daily
+  freshness_hours: 48
+  rules:
+  - P6
+  contact: District offices
+  pull: district_pages
+  unit: dm_notice
+  method: AI extraction; must agree with the web notice (Addendum A 2)
+- id: bcparks_advisories
+  name: BC Parks advisories
+  owner: BC Parks
+  url: https://bcparks.ca/active-advisories/
+  access: browser
+  endpoint: https://bcparks.ca/active-advisories/
+  layer: Advisories
+  licence: Copyright Province of British Columbia
+  robots: Check bcparks.ca robots.txt before each capture
+  cadence: Daily
+  freshness_hours: 48
+  rules:
+  - P1
+  contact: BC Parks
+  pull: advisories
+  unit: advisory
+  method: AI classifies closure, partial or info and links to the park by its ID (Addendum A 2)
+  status: planned
+- id: licensee_notices
+  name: Licensee gate and hauling notices
+  owner: Forest licensees and private forest owners
+  url: ''
+  access: manual
+  endpoint: Owner websites and data-sharing agreements
+  layer: Free text
+  licence: Per owner
+  robots: Per owner
+  cadence: Monthly
+  freshness_hours: 1080
+  rules:
+  - P6
+  contact: Each licensee
+  unit: licensee_notice
+  method: AI extraction; shown as owner-reported (Addendum A 2)
+  status: planned

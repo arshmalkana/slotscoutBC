@@ -1,0 +1,80 @@
+{
+  "id": "2026-10-rc",
+  "month": "2026-10",
+  "builtAt": "2026-10-19T18:04:48.540Z",
+  "publishable": false,
+  "missing": [
+    "legal reviewer sign-off (make signoff BY=<name>)"
+  ],
+  "includes": {
+    "approvedRuleFeatures": 0,
+    "candidatesExcluded": 1
+  },
+  "openReviewItemsExcluded": 70,
+  "decisions": [],
+  "signoff": null,
+  "sourceHashes": {
+    "layers": {
+      "wmu": "8662260ca636dd9053dbe10d369e983b7bc291c53af8bfe5d751dd317a829832",
+      "federal_protected": "6b79792f324b6ceaa807426dc606a7204e673d026f51149c3fc7d102cdaee4a2",
+      "province": "a367a076bade7fc45cdf4bcf242680f0d886f94e7b95a19c0585548689c78831",
+      "bc_parks": "b16c8a3e3403b5f2238df677d296289d7280e4fc0ddee322ceb15528bf8e38ff",
+      "national_parks": "1c341ee97a7fc478b074d8fb714d27db3aab8c98d3b61900fc7c1c9ea50a8582",
+      "reserves": "ed208f775de516f73c958be8cd62ee25a6dea8b58e657ef7c0ea8c126e432679",
+      "treaty_lands": "b61c59f5bd7809a3fd056aa87e7842ea147cb93d8bd6e53dd7e4190b1619e17c",
+      "treaty_areas": "e479ff1f383df6eb3df5abf3d88650cea6b655fa76be064841fedcce01cfdb51",
+      "municipalities": "b5e23e2bde604d007a7afbf0d7c5f1467888613c6daf1c85dbc0c52fed253dbd",
+      "regional_districts": "26f552d7029a16ef8f310e8a489ddb3d5a6a40ef3522ab45e7770906a4ee2f12",
+      "electoral_areas": "7348791d69067e830173fd230408c160eca7c201a4a4091dfa4838ad71b7d45f",
+      "local_trust_areas": "367ea78831ef51915d50b932cf7f6843ff0c5f838ad76ced8f240086c8f16ccb",
+      "local_parks": "3c5c5aa0fe2526610d5eaaf7bcabe67aeb092b4c269278607bb600037b03f7c3",
+      "rec_sites": "66ba4f960541c7a9843d06e9bd61a4662891343b2a8a7fc3a79095cef8c3b7f1",
+      "rec_trails": "f3aee1728dfd341f9440d9cfc26ce187aaa3774bcae286683ed380b9f677c50f",
+      "fire_restrictions": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "fire_bans": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "fire_current": "d1d05579322a5a1f4d5a9cba669292db8111beeeeab050f8e7b31aadb135b332",
+      "fire_history": "96ca2fda10a6041d18264f10b32a10e0d2742ae4339cc80becdec4d28173a028",
+      "parcels": "e3a114d69aa5f2b1317ddb4007c483027dfbd382b7adcec496ba6d94cf061f78",
+      "fsr_roads": "97371be5a9f590146db197e33054b0daf1706481d9e4f41f6b98e49957b34fc3",
+      "dra_roads": "d9b318e2747319325c18a00ddd39f5f8662ebcf5f2c894903b281f46e0b72908",
+      "cutblocks": "292ac6f0bcd90c9c30704c3faa4d79e20ff96d6d446bd58439a446fd2d53025d",
+      "mvpr": "a3d42c8c681def580b3da2a714fb117be49364c4ebcb73abfe0053af8ae39e83",
+      "community_watersheds": "4b7f5ef7680bd35b88fa0da98355b4cc249f4aafea51c656ba884fbd3df71e6f",
+      "crown_tenures": "cd58db82f0b9222e308a5ce521cd4a579f0370e6b20b14d24857ce313bf4d6af",
+      "range_tenures": "fbda09cab91283a3535efa75a2bb342bff3a33aa6a51bd078cd37a418bb3033b",
+      "mineral_tenures": "f51555df745b4d2f31d4b25a5f8d1e36c09b8eeac16693beeded032b71e8eec2",
+      "transmission": "b51bfb3f2af3ff1cf12f212f6b9f27e025673d9d209be332e75093b3a7d7085b",
+      "pipelines": "703f4223b761fe53a9fe78e04fd814649a77bda679148e55b8cd1d5357f1c14e",
+      "railways": "2a18fc2c2ff8b26706d6f9df7ed901b9e2ce5ab681d418e9679b96b0c7045bed",
+      "buildings": "b50d2140ec8f870e85d9be94b52a5cc3d1f4c270bd54f5681e00c64c774c26cc",
+      "nr_districts": "0c5b01f36d1dc540735103ecc34b12260fe7835dfe784845b870238315d635b2"
+    },
+    "files": 51
+  },
+  "files": [
+    {
+      "file": "bylaws.json",
+      "sha256": "881e455dcc95962901527ee0fb029cacb6bf4dee15ff7b03786de429ff451ff3"
+    },
+    {
+      "file": "config.toml",
+      "sha256": "005f14388892ede4d4611840b544b4cabb5d4848b15085682a00f214f0e0efb2"
+    },
+    {
+      "file": "registry.yaml",
+      "sha256": "7a2f238494870f4588aa3f5d5a728e3542ea2c4bd6e2b39b981a61ef6816d5a9"
+    },
+    {
+      "file": "road-notices.json",
+      "sha256": "1f3db19face17df2794a9bbc8ff549aa07dcd3f4dd4e2a386c08372e1350f75e"
+    },
+    {
+      "file": "rules.geojson",
+      "sha256": "9d099add762f815034c5cc1ec84650e318d54f2be45b1f850cfa49eb0e988f55"
+    },
+    {
+      "file": "wildlife-coverage.json",
+      "sha256": "36baf90fb1cea8747112b96cf00e9574d94ecbfd892ffdeb0591f549491df3b1"
+    }
+  ]
+}

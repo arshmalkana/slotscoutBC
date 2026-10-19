@@ -1,0 +1,64 @@
+# SlotScout pipeline settings (Addendum A 10.1). Secrets never go here: the API key lives in .env.
+
+[pipeline]
+# auto uses "api" when ANTHROPIC_API_KEY is set and "agent" otherwise; "manual" means a person fills the answer files.
+extractor = "auto"
+user_agent = "SlotScoutBot/0.1 (+https://slotscout.ca/about; data@slotscout.ca)"
+# Minimum seconds between requests to the same host for scraped and browser-captured pages (main spec 10.3).
+min_request_spacing_s = 2
+# Override the working month (YYYY-MM) to re-run a past cycle; empty means the current month in Pacific time.
+month = ""
+
+[ai]
+model = "claude-opus-5-5"
+# Claude Opus 5.5 takes no temperature setting; determinism comes from fixed prompts, structured
+# output schemas, quote checks and the two-run agreement check.
+effort = "high"
+max_tokens = 16000
+runs = 2
+# Retry a declined request on another model inside the same call (Claude API only).
+server_side_fallback = true
+# AI-read stricter changes publish at once only after the gold set passes every threshold below
+# (Addendum A 7.2, 13.1). Until then AI output only pre-fills a person's work.
+autopublish = false
+
+[ai.prompts]
+closed_area = "closed_area.v1"
+road_notice = "road_notice.v1"
+bylaw = "bylaw.v1"
+change = "change.v1"
+
+[thresholds]
+field_accuracy = 0.98
+shape_agreement_share = 0.95
+shape_agreement_overlap = 0.95
+effect_accuracy = 1.0
+looser_errors = 0
+notice_status_accuracy = 0.99
+
+[validation]
+ring_close_m = 25
+synopsis_overlap_min = 0.90
+direction_tolerance_deg = 60
+# Area limits per description type, km2: a 50 m road buffer that comes out over 2 km2 fails.
+max_area_km2_road_buffer = 2.0
+max_area_km2_metes_and_bounds = 500
+# Shapes are drawn larger than the law where the edge is uncertain (main spec 1.5.2).
+conservative_pad_m = 10
+
+[gis]
+page_size = 10000
+max_count_change = 0.05
+# Layers with more features than this are pulled and hashed in full but their bodies are not kept on disk.
+store_bodies_up_to_features = 120000
+
+[bclaws]
+# Set true only after the King's Printer confirms in writing that scheduled API use is allowed (Addendum A 6.2).
+api_confirmed = false
+api_document_url = "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/{doc}/xml"
+documents = ["76_84_00_multi", "196_99", "190_84", "180_90", "16_2004", "38_2005"]
+
+[storage]
+commit_pdf_max_mb = 2
+screenshot_quality = 55
+screenshot_max_height_px = 12000

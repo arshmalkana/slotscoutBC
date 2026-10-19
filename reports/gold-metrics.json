@@ -1,0 +1,29 @@
+{
+  "measuredAt": "2026-10-19T18:04:09.972Z",
+  "goldItems": 0,
+  "counts": {
+    "fields": 0,
+    "effects": 0,
+    "shapes": 0,
+    "notices": 0
+  },
+  "metrics": {
+    "field_accuracy": null,
+    "effect_accuracy": null,
+    "shape_agreement_share": null,
+    "looser_errors": 0,
+    "notice_status_accuracy": null
+  },
+  "thresholds": {
+    "field_accuracy": 0.98,
+    "shape_agreement_share": 0.95,
+    "shape_agreement_overlap": 0.95,
+    "effect_accuracy": 1,
+    "looser_errors": 0,
+    "notice_status_accuracy": 0.99
+  },
+  "passes": false,
+  "autopublishAllowed": false,
+  "note": "No gold set yet. Region 2 must be digitised by hand first (Addendum A 7.1); until then AI output only pre-fills a person's work and nothing is auto-published.",
+  "misses": []
+}

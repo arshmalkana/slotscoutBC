@@ -1,0 +1,221 @@
+{
+  "month": "2026-10",
+  "updatedAt": "2026-10-19T18:05:08.017Z",
+  "extractor": "agent",
+  "autopublish": {
+    "configured": false,
+    "goldPasses": false,
+    "goldItems": 0
+  },
+  "pull": {
+    "startedAt": "2026-10-19T16:53:43.915Z",
+    "updatedAt": "2026-10-19T18:03:28.531Z",
+    "sources": {
+      "bcparks_advisories": {
+        "status": "skipped",
+        "detail": "planned source, not pulled yet"
+      },
+      "licensee_notices": {
+        "status": "skipped",
+        "detail": "planned source, not pulled yet"
+      },
+      "wmu": {
+        "status": "ok",
+        "detail": "225 features, count matches the server"
+      },
+      "federal_protected": {
+        "status": "ok",
+        "detail": "21 features, count matches the server"
+      },
+      "province": {
+        "status": "ok",
+        "detail": "1 features, count matches the server"
+      },
+      "bc_parks": {
+        "status": "ok",
+        "detail": "930 features, count matches the server"
+      },
+      "national_parks": {
+        "status": "ok",
+        "detail": "102 features, count matches the server"
+      },
+      "reserves": {
+        "status": "ok",
+        "detail": "1602 features, count matches the server"
+      },
+      "treaty_lands": {
+        "status": "ok",
+        "detail": "148 features, count matches the server"
+      },
+      "treaty_areas": {
+        "status": "ok",
+        "detail": "69 features, count matches the server"
+      },
+      "municipalities": {
+        "status": "ok",
+        "detail": "160 features, count matches the server"
+      },
+      "regional_districts": {
+        "status": "ok",
+        "detail": "28 features, count matches the server"
+      },
+      "electoral_areas": {
+        "status": "ok",
+        "detail": "159 features, count matches the server"
+      },
+      "local_trust_areas": {
+        "status": "ok",
+        "detail": "13 features, count matches the server"
+      },
+      "local_parks": {
+        "status": "ok",
+        "detail": "9488 features, count matches the server"
+      },
+      "rec_sites": {
+        "status": "ok",
+        "detail": "4525 features, count matches the server"
+      },
+      "rec_trails": {
+        "status": "ok",
+        "detail": "19915 features, count matches the server"
+      },
+      "fire_restrictions": {
+        "status": "ok",
+        "detail": "0 features, count matches the server"
+      },
+      "fire_bans": {
+        "status": "ok",
+        "detail": "0 features, count matches the server"
+      },
+      "fire_current": {
+        "status": "ok",
+        "detail": "314 features, count matches the server"
+      },
+      "fire_history": {
+        "status": "ok",
+        "detail": "24751 features, count matches the server"
+      },
+      "parcels": {
+        "status": "ok",
+        "detail": "740686 features, count matches the server"
+      },
+      "fsr_roads": {
+        "status": "ok",
+        "detail": "286301 features, count matches the server"
+      },
+      "closed_areas": {
+        "status": "awaiting_person",
+        "detail": "0 of 6 regulations from copies a person saved in inbox/bclaws; waiting for 76_84_00_multi, 196_99, 190_84, 180_90, 16_2004, 38_2005; 1 unconfirmed excerpt(s) in inbox/excerpts"
+      },
+      "road_notices": {
+        "status": "ok",
+        "detail": "22 of 22 district pages"
+      },
+      "dm_notices": {
+        "status": "ok",
+        "detail": "24 of 24 linked notice PDFs"
+      },
+      "dra_roads": {
+        "status": "ok",
+        "detail": "1882029 features, count matches the server"
+      },
+      "bylaws": {
+        "status": "partial",
+        "detail": "3 of 34 starter-set jurisdictions with a bylaw document found; the rest need a person"
+      },
+      "cutblocks": {
+        "status": "ok",
+        "detail": "596129 features, count matches the server"
+      },
+      "mvpr": {
+        "status": "ok",
+        "detail": "347 features, count matches the server"
+      },
+      "community_watersheds": {
+        "status": "ok",
+        "detail": "466 features, count matches the server"
+      },
+      "crown_tenures": {
+        "status": "ok",
+        "detail": "66843 features, count matches the server"
+      },
+      "range_tenures": {
+        "status": "ok",
+        "detail": "4333 features, count matches the server"
+      },
+      "mineral_tenures": {
+        "status": "ok",
+        "detail": "42281 features, count matches the server"
+      },
+      "transmission": {
+        "status": "ok",
+        "detail": "3730 features, count matches the server"
+      },
+      "pipelines": {
+        "status": "ok",
+        "detail": "6144 features, count matches the server"
+      },
+      "railways": {
+        "status": "ok",
+        "detail": "10055 features, count matches the server"
+      },
+      "buildings": {
+        "status": "ok",
+        "detail": "433681 features, count matches the server"
+      },
+      "nr_districts": {
+        "status": "ok",
+        "detail": "23 features, count matches the server"
+      }
+    },
+    "layers": 33,
+    "layersMatching": 33,
+    "failures": [
+      {
+        "source": "closed_areas",
+        "what": "legal text",
+        "error": "no dated copy of 76_84_00_multi, 196_99, 190_84, 180_90, 16_2004, 38_2005: waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)"
+      },
+      {
+        "source": "bylaws",
+        "what": "muni:Bowen Island Municipality",
+        "error": "robots.txt for www.bimbc.ca could not be read, so automated access is not assumed"
+      }
+    ]
+  },
+  "changes": {
+    "comparedWith": null,
+    "new": 396,
+    "changed": 0,
+    "removed": 0,
+    "unchanged": 0
+  },
+  "extraction": {
+    "tasks": 61,
+    "waiting": 0
+  },
+  "rules": {
+    "approved": 0,
+    "provisional": 0,
+    "candidates": 1,
+    "retired": 0
+  },
+  "review": {
+    "thisMonth": 70,
+    "open": 70,
+    "openAllMonths": 70,
+    "looserOpen": 0
+  },
+  "tests": {
+    "regressionRan": true,
+    "regressionPassed": true,
+    "falseGreen": false
+  },
+  "release": {
+    "id": "2026-10-rc",
+    "publishable": false,
+    "missing": [
+      "legal reviewer sign-off (make signoff BY=<name>)"
+    ]
+  }
+}
