@@ -1,3 +1,4 @@
+import { rmSync } from "node:fs";
 import { join } from "node:path";
 import { monthDir } from "./paths.js";
 import { readJsonIf, writeJson } from "./util.js";
@@ -96,6 +97,18 @@ export function addFile(m: Manifest, f: FileEntry): void {
   m.files = m.files.filter((x) => x.path !== f.path);
   m.files.push(f);
   touch(m, f.source);
+}
+
+/**
+ * A forced re-pull replaces the month's earlier copy of a source: its files and manifest entries are
+ * removed first, so nothing stale is split again. Earlier copies stay in git history.
+ */
+export function resetSource(m: Manifest, sources: string[], dirs: string[]): number {
+  const before = m.files.length;
+  m.files = m.files.filter((f) => !sources.includes(f.source));
+  for (const d of dirs) rmSync(join(monthDir(m.month), d), { recursive: true, force: true });
+  saveManifest(m);
+  return before - m.files.length;
 }
 
 export function fail(m: Manifest, source: string, what: string, error: unknown): void {

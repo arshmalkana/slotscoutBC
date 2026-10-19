@@ -4,7 +4,7 @@ import { DISTRICT_PAGES, ROAD_NOTICES_BASE, parseNoticesPage } from "@slotscout/
 import { config, currentMonth } from "../lib/config.js";
 import { pullLayer } from "../lib/gis.js";
 import { fetchBuffer, fetchText, userAgent } from "../lib/http.js";
-import { addFile, clearFailure, fail, loadManifest, saveManifest, setSource, type Manifest } from "../lib/manifest.js";
+import { addFile, clearFailure, fail, loadManifest, resetSource, saveManifest, setSource, type Manifest } from "../lib/manifest.js";
 import { P, monthDir } from "../lib/paths.js";
 import { pdfTextFile, readPdf } from "../lib/pdf.js";
 import { loadRegistry, type Source } from "../lib/registry.js";
@@ -81,6 +81,7 @@ function storeFile(m: Manifest, source: string, file: string, body: Buffer, url:
 
 async function pullDistrictPages(m: Manifest, opts: PullOpts): Promise<void> {
   if (!want(opts, "road_notices")) return;
+  if (opts.force) log("pull", `--force: replacing ${resetSource(m, ["road_notices", "dm_notices"], ["district_pages", "dm_notices"])} earlier district page and notice PDF file(s) of ${m.month}`);
   const dir = join(monthDir(m.month), "district_pages");
   const pdfDir = join(monthDir(m.month), "dm_notices");
   let ok = 0;

@@ -2,7 +2,7 @@ import { renameSync } from "node:fs";
 import { basename, join } from "node:path";
 import { capturePage, closeBrowser, type Capture } from "../lib/capture.js";
 import { fetchBuffer } from "../lib/http.js";
-import { addFile, clearFailure, fail, saveManifest, setSource, type Manifest } from "../lib/manifest.js";
+import { addFile, clearFailure, fail, resetSource, saveManifest, setSource, type Manifest } from "../lib/manifest.js";
 import { P, monthDir } from "../lib/paths.js";
 import { pdfTextFile, readPdf } from "../lib/pdf.js";
 import { config } from "../lib/config.js";
@@ -194,6 +194,7 @@ export async function pullBylaws(m: Manifest, opts: { force?: boolean; only?: st
   const picked = (opts.only ?? []).filter((o) => o.includes(":"));
   const sites = picked.length ? all.filter((s) => picked.includes(s.key)) : all;
   const doneFile = join(monthDir(m.month), "bylaws", "finds.json");
+  if (opts.force && !picked.length) log("pull", `--force: replacing ${resetSource(m, ["bylaws"], ["bylaws"])} earlier bylaw file(s) of ${m.month}`);
   const earlier = readJsonIf<BylawFind[]>(doneFile, []);
   const previous = new Map((opts.force ? [] : earlier).map((f) => [f.key, f]));
   // Sites not picked this time keep their earlier result.
