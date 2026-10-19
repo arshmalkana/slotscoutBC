@@ -2,17 +2,17 @@
   "month": "2026-10",
   "userAgent": "SlotScoutBot/0.1 (+https://slotscout.ca/about; data@slotscout.ca)",
   "startedAt": "2026-10-19T16:53:43.915Z",
-  "updatedAt": "2026-10-19T17:51:39.030Z",
+  "updatedAt": "2026-10-19T18:03:28.531Z",
   "sources": {
     "bcparks_advisories": {
       "status": "skipped",
       "detail": "planned source, not pulled yet",
-      "at": "2026-10-19T17:51:05.516Z"
+      "at": "2026-10-19T16:58:05.249Z"
     },
     "licensee_notices": {
       "status": "skipped",
       "detail": "planned source, not pulled yet",
-      "at": "2026-10-19T17:51:05.516Z"
+      "at": "2026-10-19T16:58:05.249Z"
     },
     "wmu": {
       "status": "ok",
@@ -143,6 +143,61 @@
       "status": "partial",
       "detail": "3 of 34 starter-set jurisdictions with a bylaw document found; the rest need a person",
       "at": "2026-10-19T17:51:39.028Z"
+    },
+    "cutblocks": {
+      "status": "ok",
+      "detail": "596129 features, count matches the server",
+      "at": "2026-10-19T17:59:42.324Z"
+    },
+    "mvpr": {
+      "status": "ok",
+      "detail": "347 features, count matches the server",
+      "at": "2026-10-19T17:59:55.045Z"
+    },
+    "community_watersheds": {
+      "status": "ok",
+      "detail": "466 features, count matches the server",
+      "at": "2026-10-19T17:59:57.057Z"
+    },
+    "crown_tenures": {
+      "status": "ok",
+      "detail": "66843 features, count matches the server",
+      "at": "2026-10-19T18:01:06.210Z"
+    },
+    "range_tenures": {
+      "status": "ok",
+      "detail": "4333 features, count matches the server",
+      "at": "2026-10-19T18:01:39.759Z"
+    },
+    "mineral_tenures": {
+      "status": "ok",
+      "detail": "42281 features, count matches the server",
+      "at": "2026-10-19T18:01:46.260Z"
+    },
+    "transmission": {
+      "status": "ok",
+      "detail": "3730 features, count matches the server",
+      "at": "2026-10-19T18:01:48.329Z"
+    },
+    "pipelines": {
+      "status": "ok",
+      "detail": "6144 features, count matches the server",
+      "at": "2026-10-19T18:01:51.069Z"
+    },
+    "railways": {
+      "status": "ok",
+      "detail": "10055 features, count matches the server",
+      "at": "2026-10-19T18:01:53.852Z"
+    },
+    "buildings": {
+      "status": "ok",
+      "detail": "433681 features, count matches the server",
+      "at": "2026-10-19T18:03:26.961Z"
+    },
+    "nr_districts": {
+      "status": "ok",
+      "detail": "23 features, count matches the server",
+      "at": "2026-10-19T18:03:28.527Z"
     }
   },
   "layers": {
@@ -541,6 +596,204 @@
       "countChange": null,
       "startedAt": "2026-10-19T17:11:56.592Z",
       "finishedAt": "2026-10-19T17:42:42.685Z"
+    },
+    "cutblocks": {
+      "id": "cutblocks",
+      "layer": "WHSE_FOREST_VEGETATION.VEG_CONSOLIDATED_CUT_BLOCKS_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 596129,
+      "pulledCount": 596129,
+      "sha256": "292ac6f0bcd90c9c30704c3faa4d79e20ff96d6d446bd58439a446fd2d53025d",
+      "bytes": 2530861362,
+      "pages": 60,
+      "sortBy": "OBJECTID",
+      "bodyStored": false,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T17:42:42.698Z",
+      "finishedAt": "2026-10-19T17:59:42.324Z"
+    },
+    "mvpr": {
+      "id": "mvpr",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_MVPR_AREAS_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 347,
+      "pulledCount": 347,
+      "sha256": "a3d42c8c681def580b3da2a714fb117be49364c4ebcb73abfe0053af8ae39e83",
+      "bytes": 71050725,
+      "pages": 1,
+      "sortBy": "OBJECTID",
+      "bodyStored": true,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T17:59:42.333Z",
+      "finishedAt": "2026-10-19T17:59:55.045Z"
+    },
+    "community_watersheds": {
+      "id": "community_watersheds",
+      "layer": "WHSE_WATER_MANAGEMENT.WLS_COMMUNITY_WS_PUB_SVW",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 466,
+      "pulledCount": 466,
+      "sha256": "4b7f5ef7680bd35b88fa0da98355b4cc249f4aafea51c656ba884fbd3df71e6f",
+      "bytes": 6021292,
+      "pages": 1,
+      "sortBy": "OBJECTID",
+      "bodyStored": true,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T17:59:55.047Z",
+      "finishedAt": "2026-10-19T17:59:57.057Z"
+    },
+    "crown_tenures": {
+      "id": "crown_tenures",
+      "layer": "WHSE_TANTALIS.TA_CROWN_TENURES_SVW",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 66843,
+      "pulledCount": 66843,
+      "sha256": "cd58db82f0b9222e308a5ce521cd4a579f0370e6b20b14d24857ce313bf4d6af",
+      "bytes": 390256912,
+      "pages": 7,
+      "sortBy": "OBJECTID",
+      "bodyStored": true,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T17:59:57.062Z",
+      "finishedAt": "2026-10-19T18:01:06.210Z"
+    },
+    "range_tenures": {
+      "id": "range_tenures",
+      "layer": "WHSE_FOREST_TENURE.FTEN_RANGE_POLY_SVW",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 4333,
+      "pulledCount": 4333,
+      "sha256": "fbda09cab91283a3535efa75a2bb342bff3a33aa6a51bd078cd37a418bb3033b",
+      "bytes": 161566754,
+      "pages": 1,
+      "sortBy": "OBJECTID",
+      "bodyStored": true,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T18:01:06.214Z",
+      "finishedAt": "2026-10-19T18:01:39.759Z"
+    },
+    "mineral_tenures": {
+      "id": "mineral_tenures",
+      "layer": "WHSE_MINERAL_TENURE.MTA_ACQUIRED_TENURE_SVW",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 42281,
+      "pulledCount": 42281,
+      "sha256": "f51555df745b4d2f31d4b25a5f8d1e36c09b8eeac16693beeded032b71e8eec2",
+      "bytes": 66529470,
+      "pages": 5,
+      "sortBy": "OBJECTID",
+      "bodyStored": true,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T18:01:39.763Z",
+      "finishedAt": "2026-10-19T18:01:46.260Z"
+    },
+    "transmission": {
+      "id": "transmission",
+      "layer": "WHSE_BASEMAPPING.GBA_TRANSMISSION_LINES_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 3730,
+      "pulledCount": 3730,
+      "sha256": "b51bfb3f2af3ff1cf12f212f6b9f27e025673d9d209be332e75093b3a7d7085b",
+      "bytes": 5512900,
+      "pages": 1,
+      "sortBy": "OBJECTID",
+      "bodyStored": true,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T18:01:46.266Z",
+      "finishedAt": "2026-10-19T18:01:48.329Z"
+    },
+    "pipelines": {
+      "id": "pipelines",
+      "layer": "WHSE_MINERAL_TENURE.OG_PIPELINE_SEGMENT_PERMIT_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 6144,
+      "pulledCount": 6144,
+      "sha256": "703f4223b761fe53a9fe78e04fd814649a77bda679148e55b8cd1d5357f1c14e",
+      "bytes": 14194505,
+      "pages": 1,
+      "sortBy": "OBJECTID",
+      "bodyStored": true,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T18:01:48.333Z",
+      "finishedAt": "2026-10-19T18:01:51.069Z"
+    },
+    "railways": {
+      "id": "railways",
+      "layer": "WHSE_BASEMAPPING.GBA_RAILWAY_TRACKS_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 10055,
+      "pulledCount": 10055,
+      "sha256": "2a18fc2c2ff8b26706d6f9df7ed901b9e2ce5ab681d418e9679b96b0c7045bed",
+      "bytes": 20727303,
+      "pages": 2,
+      "sortBy": "OBJECTID",
+      "bodyStored": true,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T18:01:51.071Z",
+      "finishedAt": "2026-10-19T18:01:53.852Z"
+    },
+    "buildings": {
+      "id": "buildings",
+      "layer": "WHSE_BASEMAPPING.TRIM_EBM_BUILDINGS",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 433681,
+      "pulledCount": 433681,
+      "sha256": "b50d2140ec8f870e85d9be94b52a5cc3d1f4c270bd54f5681e00c64c774c26cc",
+      "bytes": 211443463,
+      "pages": 44,
+      "sortBy": "OBJECTID",
+      "bodyStored": false,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T18:01:53.856Z",
+      "finishedAt": "2026-10-19T18:03:26.961Z"
+    },
+    "nr_districts": {
+      "id": "nr_districts",
+      "layer": "WHSE_ADMIN_BOUNDARIES.ADM_NR_DISTRICTS_SPG",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 23,
+      "pulledCount": 23,
+      "sha256": "0c5b01f36d1dc540735103ecc34b12260fe7835dfe784845b870238315d635b2",
+      "bytes": 4556314,
+      "pages": 1,
+      "sortBy": "OBJECTID",
+      "bodyStored": true,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T18:03:26.969Z",
+      "finishedAt": "2026-10-19T18:03:28.527Z"
     }
   },
   "files": [
