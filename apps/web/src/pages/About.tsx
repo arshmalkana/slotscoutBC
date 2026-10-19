@@ -72,6 +72,11 @@ export function About() {
           description, it sits inside the area the text names, and both readings agree. Anything that fails, disagrees or cannot be found goes to a person and the area stays grey. Until the AI matches people on a hand-built
           test set, its output only pre-fills a person's work, and every permanent boundary is approved by a person either way. The model sees public legal text only, never anything about you.
         </p>
+        <p>
+          Some District Manager notices and bylaws are scans or maps with no text to copy. Those pages are read by OCR, and map pages are also shown to the AI as images so it can read the road names, km labels and gate
+          marks printed on them. It still quotes the printed words; it never measures from a map or places anything itself. A road a notice or map closes counts only after a person has checked it, and until then
+          SlotScout shows "Cannot confirm" on that road rather than green.
+        </p>
 
         <h2>What is checked</h2>
         <p>
