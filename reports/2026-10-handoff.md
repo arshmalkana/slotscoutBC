@@ -28,14 +28,15 @@ Prepared by Claude Code on 2026-10-19 (Addendum A 10.3 step 13). Nothing in this
 | 6 Rule-based parsing | 295 units read by rules (most road notices, and the s. 85 corridor) |
 | 7 AI extraction | Agent mode (no API key): 61 tasks, two independent runs each (run 2 always by a fresh subagent that saw only the source, prompt and schema) |
 | 8 Lookups, shapes, validation | Sch. 5 s. 85: FVRD, Sylvester Rd, Farms Rd and Dale Rd each matched exactly one official feature; a 1.8 km corridor (0.235 km²) passed ring, area, inside-FVRD and agreement checks. The synopsis check could not run (no synopsis shape) |
-| 9 Bylaws | Headless browser visited 34 Region 2 sites: 3 jurisdictions found (Richmond 4183, SLRD Areas A and D, Belcarra 498-2016), 30 not found by navigation, 1 not reachable (Bowen Island) |
+| 9 Bylaws | Headless browser visited 34 Region 2 sites: 3 jurisdictions found (Richmond 4183, SLRD Areas A and D, Belcarra 498-2016), 30 not found by navigation, 1 not reachable (Bowen Island). The dry run found 2 more (Chilliwack 2740, City of Langley 2961) |
 | 10 Road notices | 22 of 22 district pages read; 327 notices; 24 linked District Manager PDFs; 183 km points placed along FTEN sections |
 | 11 Review packet | `review/2026-10/index.html`: 70 open items (below) |
 | 12 Release candidate | `releases/2026-10/` is `2026-10-rc`, not published (needs legal sign-off). 100 unit tests pass; regression set: 0 false greens; gold set: none yet |
+| 10.4 First monthly run | `make monthly MONTH=2026-10-dryrun` in the ingest container. GIS: all 33 layers re-pulled with matching counts; only `fire_current` changed (same 314 features, new content hash). Text: 396 units unchanged, 0 changed, 0 removed. New: 22 District Manager PDFs reachable through the fixed parser, and the Chilliwack (2740) and City of Langley (2961) bylaws. 22 tasks extracted twice and built; 22 more review items; no looser change; regression passed. Report: `reports/2026-10-dryrun-monthly.md` |
 
-## 3. Open items waiting for a person (70)
+## 3. Open items waiting for a person (92)
 
-Open `review/2026-10/index.html`. Approve or reject each with `make approve ITEM=<id> BY=<initials>` (add `DECISION=reject NOTE="why"` to reject).
+Open `review/2026-10/index.html` (70 items) and `review/2026-10-dryrun/index.html` (22 more: 20 District Manager PDFs, mostly gate and closure maps, and the Chilliwack and Langley bylaws). Approve or reject each with `make approve ITEM=<id> BY=<initials>` (add `DECISION=reject NOTE="why"` to reject). The table covers the one-time packet.
 
 | Kind | Count | What to decide |
 | --- | ---: | --- |
@@ -49,7 +50,7 @@ Open `review/2026-10/index.html`. Approve or reject each with `make approve ITEM
 
 - **BC Laws (Closed Areas, Motor Vehicle Prohibition, Hunting and the other regulations in `config.toml`)**: waiting for a person to save copies into `inbox/bclaws/` (see `inbox/README.md`), or for the King's Printer's written confirmation of API use (then set `bclaws.api_confirmed = true`). Until then the Wildlife Act checks stay "Cannot confirm" everywhere.
 - **Bowen Island Municipality**: its robots.txt could not be read, so the browser did not visit; a person saves the bylaw into `inbox/bylaws/muni:Bowen Island Municipality/`.
-- **30 Region 2 jurisdictions**: no firearm bylaw link found in up to 10 pages of each site's bylaw section. Add the document URL under `documents` in `data/bylaw-sites.json`, or save a copy in `inbox/bylaws/<register key>/`.
+- **28 Region 2 jurisdictions** (30 after the one-time run, 28 after the dry run): no firearm bylaw link found in up to 10 pages of each site's bylaw section. Add the document URL under `documents` in `data/bylaw-sites.json`, or save a copy in `inbox/bylaws/<register key>/`.
 - **CivicInfo BC bylaw directory**: refuses automated clients (403) and reserves AI use in its robots.txt content signals. Not used; ask CivicInfo BC for permission if it would help.
 - **Synopsis maps**: none in `inbox/synopsis/`, so the 90% overlap check could not run.
 - 5 District Manager PDFs over 2 MB keep only their SHA-256 in the manifest (files git-ignored).
@@ -60,6 +61,7 @@ Open `review/2026-10/index.html`. Approve or reject each with `make approve ITEM
 - **km placement margin:** a closure now clears a spot only when it is more than 1 km or 25% further up the road, instead of changing the regression expectation for Slollicum spot D.
 - **Run independence:** run-2 subagents' summaries reached the main session before run 1 was finished, so the remaining 12 run-1 answers were written by fresh subagents. CLAUDE.md now says run-2 subagents reply with file paths only.
 - **Bylaw finder:** a sewage-discharge bylaw matched "discharge" (now ignored); a regional district bylaw naming one electoral area no longer covers the others.
+- **Found by the dry run:** a dropped connection lost the Digital Road Atlas mid-pull (it was logged as failed, and pages are now retried); capture headers made an unchanged bylaw page look changed (now stripped); District Manager PDFs with no text layer now go to a person instead of the AI; a task shared by two months now belongs to the earliest.
 
 ## 6. Known limits (not fixed here)
 
@@ -80,7 +82,7 @@ Open `review/2026-10/index.html`. Approve or reject each with `make approve ITEM
 - [ ] Save the BC Laws regulations into `inbox/bclaws/` (names in `inbox/README.md`), and email the King's Printer about scheduled API use
 - [ ] Read the 13 `road_notice_block` items first (they keep P6 grey in 9 districts)
 - [ ] Work through `review/2026-10/index.html`; approve only what you have checked against the source
-- [ ] Add Region 2 bylaw document URLs or copies for the 31 jurisdictions not found
+- [ ] Add Region 2 bylaw document URLs or copies for the 29 jurisdictions still not found (28 by navigation, plus Bowen Island)
 - [ ] Hand-digitise Region 2 closed areas for the gold set; put people's answers in `gold/answers/`
 - [ ] Legal reviewer sign-off (`make signoff BY=<name> MONTH=2026-10`), then `make release MONTH=2026-10`
 - [ ] Decide when to add `ANTHROPIC_API_KEY` to `.env` (switches to `api` mode) and confirm the imagery licence
