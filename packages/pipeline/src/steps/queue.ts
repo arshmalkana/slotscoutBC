@@ -1,3 +1,4 @@
+import { rmSync } from "node:fs";
 import { join } from "node:path";
 import { config, currentMonth } from "../lib/config.js";
 import { P } from "../lib/paths.js";
@@ -114,6 +115,16 @@ export function queue(opts: { month?: string } = {}) {
     if (!old) continue;
     tasks.push(makeTask(month, "change", [u], `OLD WORDING:\n${old.text}\n\nNEW WORDING:\n${u.text}`, `Change: ${u.title}`, { unitId: u.id, oldHash: old.hash }));
   }
+
+  // Tasks for this month whose units have since changed are moved out of the queue; their answers stay.
+  const keep = new Set(tasks.map((t) => t.task_id));
+  let superseded = 0;
+  for (const old of loadTasks().filter((t) => t.month === month && !keep.has(t.task_id))) {
+    writeJson(join(P.queue, "superseded", `${old.task_id}.json`), { ...old, superseded_on: new Date().toISOString(), reason: "the unit's text changed or it is no longer queued (re-split)" });
+    rmSync(taskPath(old.task_id));
+    superseded++;
+  }
+  if (superseded) log("queue", `${superseded} task(s) moved to queue/superseded because their units changed`);
 
   let created = 0;
   for (const t of tasks) {

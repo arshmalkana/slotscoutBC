@@ -317,6 +317,13 @@ describe("evaluate: road notice km points (P6, Addendum A 5.2)", () => {
     expect(check(withNotice("Grading work between 1 km and 3 km.", "caution", { extraction: "person", points: [], needsAi: false }), "P6").status).toBe("pass");
   });
 
+  it("goes grey when the district page has closure text the parser could not tie to a road", () => {
+    const input = baseInput();
+    input.layers.fsr_roads = okLayer("fsr_roads" as LayerKey, [feature(line, { FOREST_FILE_ID: "5748", ROAD_SECTION_ID: "04", ROAD_SECTION_NAME: "SLOLLICUM", FILE_TYPE_DESCRIPTION: "Forest Service Road" })]);
+    input.roadNotices = { ...input.roadNotices!, notices: [], unparsed: [{ key: "k", section: "deactivation", text: "Discontinued and Closed FSRs with BCTS (Updated Regularly)" }] };
+    expect(check(evaluate(input), "P6").status).toBe("unknown");
+  });
+
   it("still counts a closure that has left the page until a person approves the removal", () => {
     const r = withNotice("No access past 0.8 km due to washout.", "closed", { listing: "removed_pending_review" });
     expect(check(r, "P6").status).toBe("conditional");

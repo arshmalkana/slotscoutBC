@@ -42,6 +42,12 @@ function applyNotice(it: ReviewItem, by: string, approve: boolean): void {
   const path = join(P.rules, "road-notices.json");
   const store = readJson<NoticeStore>(path);
   const src = it.source.text;
+  if (it.kind === "road_notice_block") {
+    const b = store.blocks?.find((x) => x.text === src);
+    if (b && approve) Object.assign(b, { status: "read", readBy: by, readOn: today() });
+    writeJson(path, store);
+    return;
+  }
   for (const n of store.notices) {
     const match = it.kind === "road_notice_reading" ? n.ai && it.runs && (it.runs.run1 as { task_id?: string })?.task_id === n.ai.task_id : it.title.startsWith(n.road) && (n.text === src || src.includes(n.text.slice(0, 80)));
     if (!match) continue;

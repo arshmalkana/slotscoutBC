@@ -31,9 +31,20 @@ export interface StoredNotice extends RoadNotice {
   approvedOn?: string | null;
 }
 
+/** Page text the parser could not tie to a road; it stops greying P6 once a person has read it. */
+export interface StoredBlock {
+  orgUnit: string;
+  key: string;
+  text: string;
+  status: "open" | "read";
+  readBy?: string | null;
+  readOn?: string | null;
+}
+
 export interface NoticeStore {
   updatedAt: string | null;
   notices: StoredNotice[];
+  blocks?: StoredBlock[];
 }
 
 export interface DataStore {

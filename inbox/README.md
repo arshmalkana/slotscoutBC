@@ -16,7 +16,7 @@ Use "Save page as, web page, HTML only", or copy the text into a `.txt` file wit
 
 ## Other files
 
-- `bylaws/<jurisdiction>/<anything>.pdf`: a bylaw a person downloaded because the site blocks automated access.
+- `bylaws/<register key>/<anything>.pdf` (for example `bylaws/muni:City of Mission/discharge-bylaw.pdf`): a bylaw a person downloaded because the finder could not reach it or the site blocks automated access. You can also add the document's URL under `documents` for that site in `data/bylaw-sites.json`.
 - `synopsis/`: Hunting and Trapping Regulations Synopsis PDFs used to cross-check shapes.
 
 Text excerpts a person has typed or pasted from a source document go in `excerpts/` as `.txt` with a first line `Source: <where it came from>`; they are treated as unconfirmed until checked against the official consolidation.

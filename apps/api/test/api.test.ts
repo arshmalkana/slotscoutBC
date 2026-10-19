@@ -1,8 +1,8 @@
 import { beforeAll, describe, expect, it } from "vitest";
-import { parseNoticesPage } from "@slotscout/engine";
+import { parseNoticesPage, parseNoticesPageFull } from "@slotscout/engine";
 import { loadData, type StoredNotice } from "../src/data.js";
 import { MAP_LAYERS, sldFor, tileBounds } from "../src/maplayers.js";
-import { mergeWithStore } from "../src/roadNotices.js";
+import { mergeWithStore, unreadBlocks } from "../src/roadNotices.js";
 import { buildApp } from "../src/server.js";
 
 const PAGE = `<html><body><main>
@@ -56,6 +56,41 @@ describe("district road notices parser", () => {
     const harrison = notices.find((n) => n.fileSection === "5748.01")!;
     expect(harrison.points?.[0]).toMatchObject({ km: 13, extent: "at", status: "caution" });
     expect(harrison.postedOn).toBe("2021-07-06");
+  });
+});
+
+describe("district page layouts", () => {
+  const OTHER = `<main><h2>Road closures and restrictions</h2>
+<h3>FSRs closed due to fire activity (updated Sept 3, 2026)</h3>
+<p><strong>Mud Creek 5496.01 -</strong> Entire FSR</p>
+<p><strong>Slim Creek 8151</strong> - Entire FSR</p>
+<h3>Planned Bridge Maintenance (updated Sept 3, 2026)</h3>
+<p>Moosecamp 21km - Estimated Outages September 1 to September 30</p>
+<h2>Road notices and warnings</h2>
+<p><strong>Scottie Creek FSR 5451.01&nbsp;(September 1 - September 25, 2026)</strong> No access through the worksite at 4km to 5km.</p>
+<p><strong>Beaver 7753.1 (Aug 12, 2013)</strong> Road Closed at 42 km.</p>
+<h2>Road deactivation</h2>
+<p>Discontinued and Closed FSRs with BCTS (Updated Regularly)</p>
+<h2>Contact information</h2><p>Closed on weekends.</p></main>`;
+  const r = parseNoticesPageFull(OTHER, "DCS", "https://www2.gov.bc.ca/x");
+
+  it("reads undated road titles, date ranges and abbreviated dates", () => {
+    expect(r.notices.map((n) => n.fileSection ?? n.road)).toEqual(["5496.01", "Slim Creek 8151", "Planned Bridge Maintenance", "5451.01", "7753.01"]);
+    expect(r.notices.find((n) => n.fileSection === "5451.01")!.postedOn).toBe("2026-09-01");
+    expect(r.notices.find((n) => n.fileSection === "7753.01")!.postedOn).toBe("2013-08-12");
+  });
+
+  it("carries a closure stated in the sub-heading to each road under it", () => {
+    expect(r.notices.find((n) => n.fileSection === "5496.01")!.kind).toBe("closed");
+    expect(r.notices.find((n) => n.road === "Slim Creek 8151")!.kind).toBe("closed");
+    expect(r.notices.find((n) => n.road === "Planned Bridge Maintenance")!.kind).not.toBe("closed");
+  });
+
+  it("reports closure text it cannot tie to a road, and ignores contact sections", () => {
+    expect(r.unparsed.map((u) => u.text)).toEqual(["Discontinued and Closed FSRs with BCTS (Updated Regularly)"]);
+    const key = r.unparsed[0]!.key;
+    expect(unreadBlocks("DCS", r.unparsed, [{ orgUnit: "DCS", key, text: "", status: "open" }])).toHaveLength(1);
+    expect(unreadBlocks("DCS", r.unparsed, [{ orgUnit: "DCS", key, text: "", status: "read", readBy: "AB" }])).toHaveLength(0);
   });
 });
 

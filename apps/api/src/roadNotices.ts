@@ -1,5 +1,5 @@
-import { DISTRICT_PAGES, ROAD_NOTICES_BASE, noticeId, parseNoticesPage, type RoadNotice, type RoadNoticeData } from "@slotscout/engine";
-import { data, type StoredNotice } from "./data.js";
+import { DISTRICT_PAGES, ROAD_NOTICES_BASE, noticeId, parseNoticesPageFull, type RoadNotice, type RoadNoticeData, type UnparsedBlock } from "@slotscout/engine";
+import { data, type StoredBlock, type StoredNotice } from "./data.js";
 import { errorText, getText } from "./http.js";
 
 /**
@@ -40,6 +40,12 @@ export function mergeWithStore(orgUnit: string, live: RoadNotice[] | null, store
   return out;
 }
 
+/** Unparsed page text stays unread until a person has marked that exact text as read. */
+export function unreadBlocks(orgUnit: string, blocks: UnparsedBlock[], stored: StoredBlock[]): UnparsedBlock[] {
+  const read = new Set(stored.filter((b) => b.orgUnit === orgUnit && b.status === "read").map((b) => b.key));
+  return blocks.filter((b) => !read.has(b.key));
+}
+
 export async function fetchRoadNotices(orgUnit: string | undefined, districtName: string | undefined): Promise<RoadNoticeData> {
   const district = (districtName ?? orgUnit ?? "Unknown district").replace(/ Natural Resource District$/, "");
   const slug = orgUnit ? DISTRICT_PAGES[orgUnit] : undefined;
@@ -47,10 +53,12 @@ export async function fetchRoadNotices(orgUnit: string | undefined, districtName
     return { district, status: "missing", notices: [], error: orgUnit ? "this district has no road safety page" : "district not found" };
   }
   const stored = data().notices.notices;
+  const storedBlocks = data().notices.blocks ?? [];
   const pageUrl = `${ROAD_NOTICES_BASE}/${slug}`;
   try {
     const res = await getText(pageUrl, { ttlMs: TTL, accept: "text/html" });
-    return { district, status: "ok", fetchedAt: res.fetchedAt, pageUrl, notices: mergeWithStore(orgUnit!, parseNoticesPage(res.body, district, pageUrl), stored) };
+    const page = parseNoticesPageFull(res.body, district, pageUrl);
+    return { district, status: "ok", fetchedAt: res.fetchedAt, pageUrl, notices: mergeWithStore(orgUnit!, page.notices, stored), unparsed: unreadBlocks(orgUnit!, page.unparsed, storedBlocks) };
   } catch (e) {
     return { district, status: "error", pageUrl, notices: mergeWithStore(orgUnit!, null, stored), error: errorText(e) };
   }

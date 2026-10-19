@@ -1,11 +1,11 @@
-import { htmlToText, noticeId, parseNoticesPage, type RoadNotice } from "@slotscout/engine";
+import { htmlToText, noticeId, parseNoticesPageFull, type RoadNotice } from "@slotscout/engine";
 import { normaliseUnit, sha256 } from "./util.js";
 
 /**
  * Text units (Addendum A 5.1 step 1): one regulation section, one bylaw clause, one road notice.
  * Each unit is normalised and hashed; a new hash means the unit changed.
  */
-export type UnitKind = "regulation_section" | "road_notice" | "dm_notice" | "bylaw_clause";
+export type UnitKind = "regulation_section" | "road_notice" | "notice_block" | "dm_notice" | "bylaw_clause";
 
 export interface Unit {
   id: string;
@@ -119,7 +119,7 @@ export function splitRegulation(text: string, base: Omit<Unit, "hash" | "id" | "
 }
 
 export function noticeUnits(html: string, org: string, pageUrl: string, base: Omit<Unit, "hash" | "id" | "kind" | "title" | "text" | "meta" | "url">): { units: Unit[]; notices: RoadNotice[] } {
-  const notices = parseNoticesPage(html, org, pageUrl);
+  const { notices, unparsed } = parseNoticesPageFull(html, org, pageUrl);
   const units = notices.map((n) =>
     makeUnit({
       ...base,
@@ -131,6 +131,19 @@ export function noticeUnits(html: string, org: string, pageUrl: string, base: Om
       meta: { org, notice: n },
     }),
   );
+  // Text the parser could not tie to a road: a person reads it (it keeps P6 grey until then).
+  for (const b of unparsed)
+    units.push(
+      makeUnit({
+        ...base,
+        id: `block:${org}:${b.key}`,
+        kind: "notice_block",
+        title: `${org} page text not tied to a road (${b.section})`,
+        url: pageUrl,
+        text: b.text,
+        meta: { org, block: b },
+      }),
+    );
   return { units, notices };
 }
 

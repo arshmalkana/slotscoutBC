@@ -6,6 +6,7 @@ import type { Manifest } from "../lib/manifest.js";
 import { manifestPath } from "../lib/manifest.js";
 import { P, monthDir } from "../lib/paths.js";
 import { legalText, makeUnit, noticeUnits, splitBylaw, splitRegulation, type Unit } from "../lib/units.js";
+import { pdfToText } from "../lib/pdf.js";
 import { listFiles, log, readJsonIf, rel, sha256, writeJson, writeText } from "../lib/util.js";
 import { previousManifest } from "./pull.js";
 import type { BylawFind } from "./bylaws.js";
@@ -129,6 +130,21 @@ function collect(month: string): Unit[] {
       const docId = `${find.key}:${sha256(d.url).slice(0, 8)}`;
       add(splitBylaw(text, docId, { source: "bylaws", title: `${find.name}: ${d.title}`, url: d.url, file: d.textFile, fileSha256: sha256(text), version: `Captured ${find.checkedAt.slice(0, 10)}`, confirmed: true }).map((u) => ({ ...u, meta: { ...u.meta, jurisdiction: find.key, docTitle: d.title } })));
     }
+  }
+  // Bylaw copies a person saved in inbox/bylaws/<jurisdiction>/ (sites that block automation).
+  for (const f of listFiles(join(dir, "inbox", "bylaws"), (p) => /\.(txt|pdf)$/i.test(p))) {
+    const jur = basename(join(f, ".."));
+    let text: string | null = null;
+    if (f.toLowerCase().endsWith(".pdf")) text = pdfToText(f);
+    else text = readFileSync(f, "utf8");
+    if (!text) continue;
+    const docId = `inbox:${jur}:${sha256(text).slice(0, 8)}`;
+    add(
+      splitBylaw(text, docId, { source: "bylaws", title: `${jur}: ${basename(f)}`, url: null, file: rel(f), fileSha256: sha256(text), version: `Copy saved by a person (${month})`, confirmed: true }).map((u) => ({
+        ...u,
+        meta: { ...u.meta, jurisdiction: jur.includes(":") ? jur : `muni:${jur}`, docTitle: basename(f) },
+      })),
+    );
   }
   return units;
 }

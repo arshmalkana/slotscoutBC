@@ -277,13 +277,22 @@ export interface RoadNotice {
    * "listed": on the district page now. "removed_pending_review": no longer on the page, but kept
    * until a person confirms it was lifted (looser changes wait for a person, Addendum A 5.2).
    */
-  /** Whether the notice is still on the district page; a removal waits for a person (one-way rule). */
   listing?: "listed" | "removed_pending_review" | "removed_approved";
+}
+
+/** Text on a district page that looks like a closure but could not be tied to a road. */
+export interface UnparsedBlock {
+  /** SHA-like key of the normalised text, so a reading can be matched later. */
+  key: string;
+  section: RoadNotice["section"];
+  text: string;
 }
 
 export interface RoadNoticeData {
   district: string;
   status: "ok" | "error" | "missing";
+  /** Closure-like text the parser could not read; until it is read and approved, P6 stays grey for the district. */
+  unparsed?: UnparsedBlock[];
   fetchedAt?: string;
   pageUrl?: string;
   notices: RoadNotice[];

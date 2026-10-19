@@ -1,4 +1,4 @@
-import type { NoticePoint, RoadNotice } from "./types.js";
+import type { NoticePoint, RoadNotice, UnparsedBlock } from "./types.js";
 
 /**
  * District resource road notices (main spec 4.3, 6.2; Addendum A 5.2). District pages use a
@@ -69,7 +69,7 @@ export function htmlToText(html: string): string {
 
 function sectionOf(heading: string): RoadNotice["section"] {
   const h = heading.toLowerCase();
-  if (/closure|restriction/.test(h)) return "closure";
+  if (/closure|closed|restriction/.test(h)) return "closure";
   if (/notice|warning/.test(h)) return "warning";
   if (/structure|bridge/.test(h)) return "structure";
   if (/deactivat/.test(h)) return "deactivation";
@@ -95,16 +95,21 @@ export function fileSectionOf(s: string): string | undefined {
   return `${m[1]}.${sec}`;
 }
 
-const DATE_RE = /\(((?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s+\d{4})\)\s*$/;
+const MONTH = "(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sept?|Oct|Nov|Dec)\\.?";
+/** A bracketed date anywhere in a title: "(December 17, 2021)", "(September 1 - September 25, 2026)", "(June 2015)". */
+const DATE_PAREN = new RegExp(`\\(([^()]*?\\b${MONTH}\\b[^()]*?\\b(?:19|20)\\d{2}\\b[^()]*?)\\)`, "i");
 const MONTHS = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
 
-/** "December 17, 2021" -> "2021-12-17". */
+/** First date in a date text as YYYY-MM-DD: "December 17, 2021", "September 1 - September 25, 2026", "June 2015" (day 1). */
 export function isoFromLongDate(s: string | undefined): string | undefined {
-  const m = s?.match(/^(\w+)\s+(\d{1,2}),\s+(\d{4})$/);
-  if (!m) return undefined;
-  const mo = MONTHS.indexOf(m[1]!.toLowerCase());
+  if (!s) return undefined;
+  const m = s.match(new RegExp(`\\b(${MONTH})\\s+(\\d{1,2})?\\b`, "i"));
+  const y = s.match(/\b((?:19|20)\d{2})\b/);
+  if (!m || !y) return undefined;
+  const mo = MONTHS.findIndex((x) => x.startsWith(m[1]!.toLowerCase().replace(".", "").slice(0, 3)));
   if (mo < 0) return undefined;
-  return `${m[3]}-${String(mo + 1).padStart(2, "0")}-${m[2]!.padStart(2, "0")}`;
+  const day = m[2] && Number(m[2]) <= 31 && !/^(19|20)\d{2}$/.test(m[2]) ? m[2] : "1";
+  return `${y[1]}-${String(mo + 1).padStart(2, "0")}-${day.padStart(2, "0")}`;
 }
 
 function normaliseRoad(s: string): string {
@@ -116,11 +121,37 @@ export function noticeId(n: Pick<RoadNotice, "district" | "road" | "fileSection"
   return `${n.district}|${n.fileSection ?? normaliseRoad(n.road)}|${isoFromLongDate(n.date) ?? n.date ?? "undated"}`;
 }
 
+/** Looks like a road title: names a road type, a file and section, or a road permit number. */
+const ROADISH = /\b(FSR|F\.S\.R\.?|Forest Service Road|Main(?:line)?|Branch|Br|Road|Rd|Spur|Connector|Bridge)\b|\b\d{3,5}[.\s-]\d{1,3}\b|\bR\d{4,}|^[A-Z][^.!?]{0,60}\b\d{4,5}\b[^.!?]{0,20}$/i;
+/** Text that may close or restrict a road; it must be tied to a road or the page counts as unread. */
+const CLOSURE_WORDS = /\bclosed\b(?! areas?\b)|\bclosures?\b(?! areas?\b)|no access|no vehicle access|impassable|not drivable|washed? ?out|deactivat|restricted|\bgated?\b|bridge (?:is )?out|load limit|no through/i;
+
+function blockKey(section: string, text: string): string {
+  // Small stable hash (FNV-1a) so a reading of the block can be matched next time.
+  let h = 0x811c9dc5;
+  const t = `${section}|${text.toLowerCase().replace(/\s+/g, " ").trim()}`;
+  for (let i = 0; i < t.length; i++) h = Math.imul(h ^ t.charCodeAt(i), 0x01000193) >>> 0;
+  return h.toString(16).padStart(8, "0");
+}
+
 export function parseNoticesPage(html: string, district: string, pageUrl: string): RoadNotice[] {
-  const main = html.match(/<main[\s\S]*?<\/main>/i)?.[0] ?? html;
-  const blocks = [...main.matchAll(/<(h2|h3|p|li)\b[^>]*>([\s\S]*?)<\/\1>/gi)];
+  return parseNoticesPageFull(html, district, pageUrl).notices;
+}
+
+/**
+ * Reads a district road safety page. Notices start at a bold road title in a paragraph or list
+ * item, or at a road-named sub-heading, inside a notices, closures, bridge, works or deactivation
+ * section. Closure-like text that cannot be tied to a road is returned as unparsed, so the site
+ * can stay grey instead of passing a spot the page may close.
+ */
+export function parseNoticesPageFull(html: string, district: string, pageUrl: string): { notices: RoadNotice[]; unparsed: UnparsedBlock[] } {
+  const main = (html.match(/<main[\s\S]*?<\/main>/i)?.[0] ?? html).replace(/<(script|style)[\s\S]*?<\/\1>/gi, "");
+  const blocks = [...main.matchAll(/<(h2|h3|h4|p|li)\b[^>]*>([\s\S]*?)<\/\1>/gi)];
   const notices: RoadNotice[] = [];
+  const unparsed: UnparsedBlock[] = [];
   let section: RoadNotice["section"] = "other";
+  /** The sub-heading the notice sits under ("FSRs closed due to fire activity"): its words count too. */
+  let heading = "";
   let current: RoadNotice | null = null;
   let listRoads: string[] = [];
 
@@ -131,7 +162,9 @@ export function parseNoticesPage(html: string, district: string, pageUrl: string
 
   const flush = () => {
     if (!current) return;
-    current.kind = classifyNotice(current.section, current.text);
+    current.kind = classifyNotice(current.section, `${heading} ${current.road} ${current.text}`);
+    // A closure stated only in the heading applies to each road listed under it.
+    if (/\bclosed\b|\bclosures?\b/i.test(heading) && !/\bclosed\b|no access|impassable/i.test(current.text)) current.text = `${current.text} (Listed under: ${heading}.)`.trim();
     if (listRoads.length) {
       // A single notice that closes a list of roads: one notice per road so each can match.
       for (const r of listRoads) {
@@ -144,44 +177,71 @@ export function parseNoticesPage(html: string, district: string, pageUrl: string
     listRoads = [];
   };
 
+  const start = (title: string, body: string, inner: string) => {
+    flush();
+    const dm = title.match(DATE_PAREN);
+    const road = (dm ? title.slice(0, dm.index) : title).replace(/[\s:–—-]+$/, "").trim();
+    const after = dm ? title.slice(dm.index! + dm[0].length).replace(/^[\s:–—-]+/, "") : "";
+    const href = inner.match(/href="([^"]+)"/)?.[1];
+    current = {
+      district,
+      section,
+      road: road || title,
+      fileSection: fileSectionOf(title),
+      date: dm?.[1]?.replace(/\s+/g, " ").trim(),
+      text: [after, body].filter(Boolean).join(" ").trim().slice(0, 1200),
+      kind: "info",
+      url: href ? resolveUrl(decode(href), pageUrl) : pageUrl,
+      pdfs: [...inner.matchAll(/href="([^"]+\.pdf)"/gi)].map((m) => resolveUrl(decode(m[1]!), pageUrl)),
+    };
+  };
+
   for (const b of blocks) {
     const tag = b[1]!.toLowerCase();
     const inner = b[2]!;
-    if (tag === "h2" || tag === "h3") {
+    const text = htmlToText(inner);
+    if (tag === "h2") {
       flush();
-      section = sectionOf(htmlToText(inner));
+      section = sectionOf(text);
+      heading = "";
+      continue;
+    }
+    if (tag === "h3" || tag === "h4") {
+      const sec = sectionOf(text);
+      if (section === "other" && sec === "other") continue;
+      if (ROADISH.test(text) && text.length < 140 && !/^(fsrs?|roads?)\b/i.test(text)) {
+        // A sub-heading naming a road starts a notice; the paragraphs below are its text.
+        flush();
+        heading = "";
+        start(text, "", inner);
+        continue;
+      }
+      flush();
+      heading = text;
+      if (sec !== "other") section = sec;
+      else if (/resources|contact|links|maps?\b|more info|weather|licensee/i.test(text)) section = "other";
       continue;
     }
     if (section === "other") continue;
-    const strong = inner.match(/^\s*(?:<span[^>]*>\s*)?<strong>([\s\S]*?)<\/strong>/i);
-    const title = strong ? htmlToText(strong[1]!) : "";
-    const dateMatch = title.match(DATE_RE);
-    if (tag === "p" && dateMatch) {
-      flush();
-      const road = title.replace(DATE_RE, "").trim();
-      const href = inner.match(/href="([^"]+)"/)?.[1];
-      current = {
-        district,
-        section,
-        road,
-        fileSection: fileSectionOf(road),
-        date: dateMatch[1],
-        text: htmlToText(inner.slice(strong![0].length)),
-        kind: "info",
-        url: href ? resolveUrl(decode(href), pageUrl) : pageUrl,
-        pdfs: [...inner.matchAll(/href="([^"]+\.pdf)"/gi)].map((m) => resolveUrl(decode(m[1]!), pageUrl)),
-      };
+    const strong = inner.match(/^\s*(?:<span[^>]*>\s*)*<(strong|b)>([\s\S]*?)<\/\1>/i);
+    const title = strong ? htmlToText(strong[2]!) : "";
+    if (title && (DATE_PAREN.test(title) || (ROADISH.test(title) && title.length < 160))) {
+      start(title, htmlToText(inner.slice(strong![0].length)), inner);
       continue;
     }
-    if (!current) continue;
-    const t = htmlToText(inner);
-    if (!t) continue;
-    for (const m of inner.matchAll(/href="([^"]+\.pdf)"/gi)) current.pdfs = [...(current.pdfs ?? []), resolveUrl(decode(m[1]!), pageUrl)];
-    if (tag === "li" && /\(\d{3,5}[.\s]\d{1,3}\)/.test(t)) listRoads.push(t);
-    else current.text = `${current.text} ${t}`.trim().slice(0, 1200);
+    if (!text) continue;
+    // `current` is set inside start(), which TypeScript's narrowing cannot see.
+    const cur = current as RoadNotice | null;
+    if (cur) {
+      for (const m of inner.matchAll(/href="([^"]+\.pdf)"/gi)) cur.pdfs = [...(cur.pdfs ?? []), resolveUrl(decode(m[1]!), pageUrl)];
+      if (tag === "li" && /\(\d{3,5}[.\s]\d{1,3}\)/.test(text)) listRoads.push(text);
+      else cur.text = `${cur.text} ${text}`.trim().slice(0, 1200);
+      continue;
+    }
+    if (CLOSURE_WORDS.test(text)) unparsed.push({ key: blockKey(section, text), section, text: text.slice(0, 1500) });
   }
   flush();
-  return notices;
+  return { notices, unparsed };
 }
 
 const STATUS_PATTERNS: [NoticePoint["status"], RegExp][] = [

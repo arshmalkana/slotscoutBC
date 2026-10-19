@@ -29,12 +29,26 @@ export interface StoredNotice extends RoadNotice {
   ai?: { task_id: string; agreed: boolean; points: NoticePoint[]; rescinded: boolean };
 }
 
+export interface StoredBlock {
+  orgUnit: string;
+  key: string;
+  section: string;
+  text: string;
+  status: "open" | "read";
+  firstSeen: string;
+  lastSeen: string;
+  readBy?: string | null;
+  readOn?: string | null;
+}
+
 export interface NoticeStore {
   $comment: string;
   updatedAt: string | null;
   month: string | null;
   districts: Record<string, { pageUrl: string; fetchedAt: string | null }>;
   notices: StoredNotice[];
+  /** Page text the parser could not tie to a road; P6 stays grey in that district until a person reads it. */
+  blocks: StoredBlock[];
 }
 
 export const STORE = () => join(P.rules, "road-notices.json");
@@ -45,6 +59,7 @@ const emptyStore = (): NoticeStore => ({
   month: null,
   districts: {},
   notices: [],
+  blocks: [],
 });
 
 function toPoints(ans: Record<string, any>): NoticePoint[] {
@@ -187,6 +202,28 @@ export async function buildNotices(month: string, units: Unit[], tasks: Task[]):
         decision: "Check the linked District Manager notice. Approve the removal only if the restriction is lifted; until then it stays on the map.",
         why: ["a notice disappearing from the page is a looser change (Addendum A 5.2 step 4)"],
         source: { text: old.text, url: old.url ?? null, version: `last seen ${old.lastSeen}`, confirmed: true, file: null },
+      });
+    }
+  }
+  // Unparsed page text (5.2): a person reads each block once; the reading holds while the text is unchanged.
+  const prevBlocks = new Map((prev.blocks ?? []).map((b) => [`${b.orgUnit}|${b.key}`, b]));
+  for (const u of units.filter((x) => x.kind === "notice_block")) {
+    const b = u.meta.block as { key: string; section: string; text: string };
+    const org = String(u.meta.org);
+    const old = prevBlocks.get(`${org}|${b.key}`);
+    const kept: StoredBlock = { orgUnit: org, key: b.key, section: b.section, text: b.text, status: old?.status ?? "open", firstSeen: old?.firstSeen ?? now, lastSeen: now, readBy: old?.readBy ?? null, readOn: old?.readOn ?? null };
+    store.blocks.push(kept);
+    if (kept.status !== "read") {
+      upsertItem({
+        item_id: itemId("road_notice_block", `${org}|${b.key}`),
+        month,
+        kind: "road_notice_block",
+        title: `${store.districts[org] ? org : org} road safety page: text not tied to a road`,
+        change_type: "unclear",
+        decision: "Read this text and anything it links to. Add any closed or restricted road to rules/road-notices.json as a person-read notice, then approve to mark the text read. Until then P6 shows Cannot confirm in this district.",
+        why: ["the rule-based parser found closure or deactivation wording it could not tie to a road (Addendum A 5.2)"],
+        source: { text: b.text, url: u.url, version: u.version, confirmed: true, file: u.file },
+        links: u.url ? [{ label: "District page", href: u.url }] : [],
       });
     }
   }

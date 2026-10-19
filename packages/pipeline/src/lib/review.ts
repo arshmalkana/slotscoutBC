@@ -10,7 +10,7 @@ import { listFiles, readJson, readJsonIf, sha256, writeJson } from "./util.js";
 export interface ReviewItem {
   item_id: string;
   month: string;
-  kind: "closed_area" | "road_notice_reading" | "road_notice_removed" | "road_notice_rescinded" | "dm_notice" | "bylaw" | "change" | "unconfirmed_source";
+  kind: "closed_area" | "road_notice_reading" | "road_notice_removed" | "road_notice_rescinded" | "road_notice_block" | "dm_notice" | "bylaw" | "change" | "unconfirmed_source";
   title: string;
   rule_id?: string;
   /** new, stricter, looser, unclear, cosmetic, new_source, or n/a */

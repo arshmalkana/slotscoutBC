@@ -20,6 +20,8 @@ export interface BylawSite {
   region: string;
   coversElectoralAreasOf: string | null;
   covers: string[];
+  /** Bylaw document URLs a person has found; downloaded directly (robots.txt still checked). */
+  documents?: { title: string; url: string }[];
 }
 
 export interface BylawFind {
@@ -91,6 +93,20 @@ async function findSite(m: Manifest, site: BylawSite): Promise<BylawFind> {
     find.services.push(...cap.services);
     return cap;
   };
+  // Documents a person listed come first and need no discovery.
+  for (const d of site.documents ?? []) {
+    try {
+      await download(m, find, dir, d.title, d.url);
+    } catch (e) {
+      find.note += `${d.url}: ${(e as Error).message}. `;
+    }
+  }
+  if (find.documents.length) {
+    find.status = "found";
+    find.services = [];
+    writeJson(join(dir, "find.json"), find);
+    return find;
+  }
   try {
     const home = await visit(site.website, "home");
     const candidates = [...firearmLinks(home)];

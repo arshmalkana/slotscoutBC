@@ -1,9 +1,9 @@
-import { existsSync, readFileSync } from "node:fs";
-import { join } from "node:path";
+import { existsSync, readFileSync, rmSync } from "node:fs";
+import { basename, join } from "node:path";
 import Anthropic from "@anthropic-ai/sdk";
 import { config, currentMonth, extractorMode, loadEnv, type Mode } from "../lib/config.js";
 import { P } from "../lib/paths.js";
-import { log, readJsonIf, rel, writeJson, writeText } from "../lib/util.js";
+import { listFiles, log, readJsonIf, rel, writeJson, writeText } from "../lib/util.js";
 import { loadTasks, type Task } from "./queue.js";
 
 /**
@@ -127,6 +127,9 @@ export async function extract(opts: { month?: string; only?: string[]; force?: b
   // agent and manual: write the work lists and stop. Claude Code (or a person) fills the answers.
   const need1 = missing(1);
   const need2 = runs >= 2 ? missing(2) : [];
+  // Briefs for tasks no longer queued (superseded) are removed so nobody answers them.
+  const live = new Set(loadTasks().map((t) => t.task_id));
+  for (const run of ["run1", "run2"]) for (const f of listFiles(join(P.queue, "agent", run), (x) => x.endsWith(".md"))) if (!live.has(basename(f, ".md"))) rmSync(f);
   for (const t of need1) writeText(join(P.queue, "agent", "run1", `${t.task_id}.md`), agentBrief(t, 1));
   for (const t of need2) writeText(join(P.queue, "agent", "run2", `${t.task_id}.md`), agentBrief(t, 2));
   const L = [

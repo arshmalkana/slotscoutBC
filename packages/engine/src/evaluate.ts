@@ -826,6 +826,19 @@ function checkRoadNotices(ctx: Context): void {
     ctx.unknown("P6", "district road notices are older than their freshness limit");
     return;
   }
+  const unparsed = rn.unparsed ?? [];
+  if (unparsed.length) {
+    ctx.add({
+      ruleId: "P6",
+      status: "unknown",
+      reason: `Cannot confirm: the ${rn.district} road safety page has ${unparsed.length === 1 ? "a closure or deactivation item" : `${unparsed.length} closure or deactivation items`} SlotScout could not tie to a road yet.`,
+      sourceText: unparsed[0]!.text.slice(0, 400),
+      moreUrl: rn.pageUrl,
+      dataDate: date,
+      notes: ["A person is checking these items. Read the district page for closures near this spot."],
+    });
+    return;
+  }
   const unread = notices.filter((n) => n.needsAi && n.extraction !== "ai" && n.extraction !== "person");
   if (unread.length) {
     ctx.unknown("P6", `a notice for ${unread[0]!.road} names km points the parser could not read, and it has not yet been read and checked`);
