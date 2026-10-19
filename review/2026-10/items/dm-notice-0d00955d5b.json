@@ -1,0 +1,110 @@
+{
+  "item_id": "dm-notice-0d00955d5b",
+  "month": "2026-10",
+  "kind": "dm_notice",
+  "title": "District Manager notice DCK-1379e235-radium_fsr_fs301",
+  "change_type": "stricter",
+  "decision": "Compare the District Manager notice with the web notice and correct the store if they differ.",
+  "why": [
+    "no web notice on the DCK page matches file section 5127.19"
+  ],
+  "source": {
+    "text": "FS301 Form\n\n                                         Forest Service Road Discontinue and Close Form\n\n    This form is used to Discontinue and Close a Forest Service Road in accordance\n                  with the provisions of Section 121 (9) of the Forest Act.\n                                                                               File No._______________\n                                                                                       11250-32/5127.19\n                                                                       FSR Project No. _______________\n                                                                                       5127.19\n\n\n\nRESPONSIBLE PROGRAM:                                   Natural Resource Operations ____\n                                                                                   X                BCTS ____\n\nForest District __________________________________________________________\n                 CHILLIWACK\n\nNatural Resource District _________________________________________________\n                           CHILLIWACK\n\nFSR NAME ____________________________________________________________\n              RADIUM\nand identified in the following manner:\n5127.19\n\n\non the attached document or Exhibit A sketch dated __________________\n                                                   January 2, 2019\n\n\n\nDISCONTINUANCE AND CLOSURE APPROVED\nPlease check to indicate the type of notice[s] that was given.\nPlease indicate the date or dates of notification: __________________________.\n_____ District website                             ______ District Notice Board   _____ Press Release /\n_____ Stakeholder letter                           ______ On-Site Signage               Press Package\n_____ Newspaper                                    ______ Email Distribution List _____ Radio\n_____ TV ad                                        ______ FLNR website              ✔\n                                                                                  _____ Gov BC Website\n_____ Other [Please summarize]                     _______________________________________________\n\n\nMike Peters                                                              January 2, 2019\n----------------------------------------------------------               ---------------------------------------------\nDistrict Manager                                                         Effective Date\n             Digitally signed by Mike Peters\n             Date: 2019.01.02 15:57:36 -08'00'\n\n___________________________________\nDate Signed\n\nDistribution: Senior Project Manager, Forest Land Acquisitions, Forest Tenures Branch, Victoria.\nPlease attach a copy, photograph or summary of the Notice.\nFS 301 HTH\n\f                                                                                                                        EXHIBIT A\nMAP OF : FSR 5127 Retirement (shown in bold black)\n\nFOREST REGION : RSC                     TSA :                           PULPWOOD AGREEMENT :   MGT UNIT TYPE : TIMBER SUPPLY\nFOREST DISTRICT : DCK                   LAND DISTRICT : YDYD                                   AREA\n                                                                                               MGT UNIT NO : 30\n\nESF SUBMISSION ID : 0                   SCALE : 1:5000 at ANSI A Size   UTM : 10               DRAWN BY : FTA\nBCGS MAPSHEET NO : 92H.003              Length (Km): 1.003              NAD : NAD83            DATE : Jan 02, 2019\n\n\n\n                                                                                                                                           Legend\n\n\n\n\n                                                                                                                                5127.19 CHILLIWACK RIVER RADIUM (\n                                                                                                                                Length: 1.0031 Km, R/W: 75 m )\n                                                                                                                                PofC UTM10 611088, 5438849\n                                                                                                                                PofT UTM10 611722, 5438170",
+    "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/radium_fsr_fs301.pdf",
+    "version": "2026-10-19T17:14:38.684Z",
+    "confirmed": true,
+    "file": "raw/2026-10/dm_notices/DCK-1379e235-radium_fsr_fs301.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "road_notice-31b09c8a8471",
+      "run": 1,
+      "mode": "agent",
+      "model": "claude-opus-5-5 (Claude Code subagent, run 1)",
+      "prompt_version": "road_notice.v1",
+      "schema_id": "road_notice.v1",
+      "produced_at": "2026-10-19T17:38:18Z",
+      "answer": {
+        "road": {
+          "name": "RADIUM",
+          "file_section": "5127.19"
+        },
+        "posted_on": null,
+        "rescinded": false,
+        "points": [
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "whole_road",
+            "status": "closed",
+            "quote": "DISCONTINUANCE AND CLOSURE APPROVED"
+          }
+        ],
+        "quotes": [
+          {
+            "field": "road.name",
+            "quote": "5127.19 CHILLIWACK RIVER RADIUM ("
+          },
+          {
+            "field": "road.file_section",
+            "quote": "11250-32/5127.19"
+          },
+          {
+            "field": "rescinded",
+            "quote": "DISCONTINUANCE AND CLOSURE APPROVED"
+          }
+        ],
+        "uncertain": [
+          "posted_on"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "road_notice-31b09c8a8471",
+      "run": 2,
+      "mode": "agent",
+      "model": "claude-opus-5-5 (Claude Code subagent)",
+      "prompt_version": "road_notice.v1",
+      "schema_id": "road_notice.v1",
+      "produced_at": "2026-10-19T17:36:06.960Z",
+      "answer": {
+        "road": {
+          "name": "RADIUM",
+          "file_section": "5127.19"
+        },
+        "posted_on": null,
+        "rescinded": false,
+        "points": [
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "whole_road",
+            "status": "closed",
+            "quote": "DISCONTINUANCE AND CLOSURE APPROVED"
+          }
+        ],
+        "quotes": [
+          {
+            "field": "road.name",
+            "quote": "RADIUM"
+          },
+          {
+            "field": "road.file_section",
+            "quote": "5127.19"
+          },
+          {
+            "field": "rescinded",
+            "quote": "DISCONTINUANCE AND CLOSURE APPROVED"
+          }
+        ],
+        "uncertain": [
+          "posted_on"
+        ]
+      }
+    }
+  },
+  "disagreements": [],
+  "status": "open",
+  "created": "2026-10-19T17:57:03.384Z",
+  "updated": "2026-10-19T17:57:03.384Z"
+}

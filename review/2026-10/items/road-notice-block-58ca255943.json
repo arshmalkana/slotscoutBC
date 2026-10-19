@@ -1,0 +1,27 @@
+{
+  "item_id": "road-notice-block-58ca255943",
+  "month": "2026-10",
+  "kind": "road_notice_block",
+  "title": "DCR road safety page: text not tied to a road",
+  "change_type": "unclear",
+  "decision": "Read this text and anything it links to. Add any closed or restricted road to rules/road-notices.json as a person-read notice, then approve to mark the text read. Until then P6 shows Cannot confirm in this district.",
+  "why": [
+    "the rule-based parser found closure or deactivation wording it could not tie to a road (Addendum A 5.2)"
+  ],
+  "source": {
+    "text": "TSG Planned Deactivation (2026-2031)",
+    "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/campbell-river-road-safety-information",
+    "version": "District page fetched 2026-10-19T17:13:26.752Z",
+    "confirmed": true,
+    "file": "raw/2026-10/district_pages/DCR.html"
+  },
+  "links": [
+    {
+      "label": "District page",
+      "href": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/campbell-river-road-safety-information"
+    }
+  ],
+  "status": "open",
+  "created": "2026-10-19T17:57:03.318Z",
+  "updated": "2026-10-19T17:57:03.318Z"
+}

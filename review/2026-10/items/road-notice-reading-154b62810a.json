@@ -1,0 +1,121 @@
+{
+  "item_id": "road-notice-reading-154b62810a",
+  "month": "2026-10",
+  "kind": "road_notice_reading",
+  "title": "Jumbo Creek FSR, DRM",
+  "change_type": "stricter",
+  "decision": "Check the km points and status the AI read from this notice. Approving lets the reading count on the map.",
+  "why": [
+    "the rule-based parser could not read this notice's km points",
+    "AI runs disagree: points: run 1 [\"1.3-:beyond:bridge_out\"] vs run 2 [\"1.3-:at:bridge_out\"]"
+  ],
+  "source": {
+    "text": "Jumbo Creek FSR: 7825.01 (October 13, 2026) Maintenance will be occurring on bridge N2- 060 located at 1.3km of Jumbo Creek FSR on October 13, 2026. Bridge work will begin at 7am and will take all day. The bridge will not re-open until October 14, 2026.",
+    "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/rocky-mountain-natural-resource-district-road-safety-information",
+    "version": "District page fetched 2026-10-19T17:13:52.650Z",
+    "confirmed": true,
+    "file": "raw/2026-10/district_pages/DRM.html"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "road_notice-34ab84673962",
+      "run": 1,
+      "mode": "agent",
+      "model": "claude-opus-5-5 (Claude Code)",
+      "prompt_version": "road_notice.v1",
+      "schema_id": "road_notice.v1",
+      "produced_at": "2026-10-19T17:45:10Z",
+      "answer": {
+        "road": {
+          "name": "Jumbo Creek FSR",
+          "file_section": "7825.01"
+        },
+        "posted_on": "2026-10-13",
+        "rescinded": false,
+        "points": [
+          {
+            "km": 1.3,
+            "km_end": null,
+            "extent": "beyond",
+            "status": "bridge_out",
+            "quote": "Maintenance will be occurring on bridge N2- 060 located at 1.3km of Jumbo Creek FSR on October 13, 2026. Bridge work will begin at 7am and will take all day. The bridge will not re-open until October 14, 2026."
+          }
+        ],
+        "quotes": [
+          {
+            "field": "road.name",
+            "quote": "Jumbo Creek FSR"
+          },
+          {
+            "field": "road.file_section",
+            "quote": "7825.01"
+          },
+          {
+            "field": "posted_on",
+            "quote": "(October 13, 2026)"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "road_notice-34ab84673962",
+      "run": 2,
+      "mode": "agent",
+      "model": "claude-opus-5-5 (Claude Code subagent)",
+      "prompt_version": "road_notice.v1",
+      "schema_id": "road_notice.v1",
+      "produced_at": "2026-10-19T17:48:40Z",
+      "answer": {
+        "road": {
+          "name": "Jumbo Creek FSR",
+          "file_section": "7825.01"
+        },
+        "posted_on": "2026-10-13",
+        "rescinded": false,
+        "points": [
+          {
+            "km": 1.3,
+            "km_end": null,
+            "extent": "at",
+            "status": "bridge_out",
+            "quote": "Maintenance will be occurring on bridge N2- 060 located at 1.3km of Jumbo Creek FSR on October 13, 2026. Bridge work will begin at 7am and will take all day. The bridge will not re-open until October 14, 2026."
+          }
+        ],
+        "quotes": [
+          {
+            "field": "road.name",
+            "quote": "Jumbo Creek FSR"
+          },
+          {
+            "field": "road.file_section",
+            "quote": "Jumbo Creek FSR: 7825.01"
+          },
+          {
+            "field": "posted_on",
+            "quote": "(October 13, 2026)"
+          },
+          {
+            "field": "rescinded",
+            "quote": "The bridge will not re-open until October 14, 2026."
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "disagreements": [
+    "points: run 1 [\"1.3-:beyond:bridge_out\"] vs run 2 [\"1.3-:at:bridge_out\"]"
+  ],
+  "placements": [
+    {
+      "km": 1.3,
+      "extent": "beyond",
+      "status": "bridge_out",
+      "quote": "Maintenance will be occurring on bridge N2- 060 located at 1.3km of Jumbo Creek FSR on October 13, 2026. Bridge work will begin at 7am and will take all day. The bridge will not re-open until October 14, 2026."
+    }
+  ],
+  "status": "open",
+  "created": "2026-10-19T17:56:53.963Z",
+  "updated": "2026-10-19T17:56:53.963Z"
+}

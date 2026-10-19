@@ -1,0 +1,128 @@
+{
+  "item_id": "road-notice-reading-aa5796ad8c",
+  "month": "2026-10",
+  "kind": "road_notice_reading",
+  "title": "Seymour River FSR 7271.01 (September 15, 2025), DOS",
+  "change_type": "stricter",
+  "decision": "Check the km points and status the AI read from this notice. Approving lets the reading count on the map.",
+  "why": [
+    "the rule-based parser could not read this notice's km points",
+    "AI runs disagree: points: run 1 [\"45-:beyond:washout\"] vs run 2 [\"45-:at:washout\",\"45-:beyond:closed\"]"
+  ],
+  "source": {
+    "text": "Seymour River FSR 7271.01 (September 15, 2025): Road is washed-out at 45 km, this includes bridge K1066. Crews are currently assessing the road washout. There is no vehicle access beyond this point. Message is intended for wide distribution. There is no timeline on a reopening for this road.",
+    "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/okanagan-shuswap-road-safety-information",
+    "version": "District page fetched 2026-10-19T17:13:46.654Z",
+    "confirmed": true,
+    "file": "raw/2026-10/district_pages/DOS.html"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "road_notice-adf87b7adf9d",
+      "run": 1,
+      "mode": "agent",
+      "model": "claude-opus-5-5 (Claude Code)",
+      "prompt_version": "road_notice.v1",
+      "schema_id": "road_notice.v1",
+      "produced_at": "2026-10-19T17:35:34Z",
+      "answer": {
+        "road": {
+          "name": "Seymour River FSR",
+          "file_section": "7271.01"
+        },
+        "posted_on": "2025-09-15",
+        "rescinded": false,
+        "points": [
+          {
+            "km": 45,
+            "km_end": null,
+            "extent": "beyond",
+            "status": "washout",
+            "quote": "Road is washed-out at 45 km, this includes bridge K1066."
+          }
+        ],
+        "quotes": [
+          {
+            "field": "road.name",
+            "quote": "Seymour River FSR"
+          },
+          {
+            "field": "road.file_section",
+            "quote": "7271.01"
+          },
+          {
+            "field": "posted_on",
+            "quote": "September 15, 2025"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "road_notice-adf87b7adf9d",
+      "run": 2,
+      "mode": "agent",
+      "model": "claude-opus-5-5 (Claude Code subagent)",
+      "prompt_version": "road_notice.v1",
+      "schema_id": "road_notice.v1",
+      "produced_at": "2026-10-19T17:36:14.237Z",
+      "answer": {
+        "road": {
+          "name": "Seymour River FSR",
+          "file_section": "7271.01"
+        },
+        "posted_on": "2025-09-15",
+        "rescinded": false,
+        "points": [
+          {
+            "km": 45,
+            "km_end": null,
+            "extent": "at",
+            "status": "washout",
+            "quote": "Road is washed-out at 45 km, this includes bridge K1066."
+          },
+          {
+            "km": 45,
+            "km_end": null,
+            "extent": "beyond",
+            "status": "closed",
+            "quote": "There is no vehicle access beyond this point."
+          }
+        ],
+        "quotes": [
+          {
+            "field": "road.name",
+            "quote": "Seymour River FSR"
+          },
+          {
+            "field": "road.file_section",
+            "quote": "Seymour River FSR 7271.01"
+          },
+          {
+            "field": "posted_on",
+            "quote": "(September 15, 2025)"
+          },
+          {
+            "field": "rescinded",
+            "quote": "There is no timeline on a reopening for this road."
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "disagreements": [
+    "points: run 1 [\"45-:beyond:washout\"] vs run 2 [\"45-:at:washout\",\"45-:beyond:closed\"]"
+  ],
+  "placements": [
+    {
+      "km": 45,
+      "extent": "beyond",
+      "status": "washout",
+      "quote": "Road is washed-out at 45 km, this includes bridge K1066."
+    }
+  ],
+  "status": "open",
+  "created": "2026-10-19T17:56:39.933Z",
+  "updated": "2026-10-19T17:56:39.933Z"
+}

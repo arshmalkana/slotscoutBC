@@ -1,0 +1,27 @@
+{
+  "item_id": "road-notice-block-ef9d6dd284",
+  "month": "2026-10",
+  "kind": "road_notice_block",
+  "title": "DSQ road safety page: text not tied to a road",
+  "change_type": "unclear",
+  "decision": "Read this text and anything it links to. Add any closed or restricted road to rules/road-notices.json as a person-read notice, then approve to mark the text read. Until then P6 shows Cannot confirm in this district.",
+  "why": [
+    "the rule-based parser found closure or deactivation wording it could not tie to a road (Addendum A 5.2)"
+  ],
+  "source": {
+    "text": "Under Section 121 (9) of the Forest Act, please find notice of the deactivation or transfer of selected Forest Service Roads within the Sea to Sky Natural Resource District.",
+    "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/sea-to-sky-natural-resource-district-road-safety-information",
+    "version": "District page fetched 2026-10-19T17:13:54.725Z",
+    "confirmed": true,
+    "file": "raw/2026-10/district_pages/DSQ.html"
+  },
+  "links": [
+    {
+      "label": "District page",
+      "href": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/sea-to-sky-natural-resource-district-road-safety-information"
+    }
+  ],
+  "status": "open",
+  "created": "2026-10-19T17:57:03.364Z",
+  "updated": "2026-10-19T17:57:03.364Z"
+}

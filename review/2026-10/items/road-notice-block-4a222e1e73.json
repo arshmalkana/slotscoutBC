@@ -1,0 +1,27 @@
+{
+  "item_id": "road-notice-block-4a222e1e73",
+  "month": "2026-10",
+  "kind": "road_notice_block",
+  "title": "DMH road safety page: text not tied to a road",
+  "change_type": "unclear",
+  "decision": "Read this text and anything it links to. Add any closed or restricted road to rules/road-notices.json as a person-read notice, then approve to mark the text read. Until then P6 shows Cannot confirm in this district.",
+  "why": [
+    "the rule-based parser found closure or deactivation wording it could not tie to a road (Addendum A 5.2)"
+  ],
+  "source": {
+    "text": "Elephant Hill and Allie Lake Wildfire Areas The closure to off road motorized vehicles has ended, however, there are still restrictions in place regarding hunting in this area. It is the responsibility of hunters to be aware of local restrictions. Visit the BC hunting page for more information.",
+    "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/100-mile-house-road-safety-information",
+    "version": "District page fetched 2026-10-19T17:13:24.889Z",
+    "confirmed": true,
+    "file": "raw/2026-10/district_pages/DMH.html"
+  },
+  "links": [
+    {
+      "label": "District page",
+      "href": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/100-mile-house-road-safety-information"
+    }
+  ],
+  "status": "open",
+  "created": "2026-10-19T17:57:03.330Z",
+  "updated": "2026-10-19T17:57:03.330Z"
+}

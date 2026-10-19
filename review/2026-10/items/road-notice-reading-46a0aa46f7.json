@@ -1,0 +1,108 @@
+{
+  "item_id": "road-notice-reading-46a0aa46f7",
+  "month": "2026-10",
+  "kind": "road_notice_reading",
+  "title": "Squamish River FSR, DSQ",
+  "change_type": "stricter",
+  "decision": "Check the km points and status the AI read from this notice. Approving lets the reading count on the map.",
+  "why": [
+    "the rule-based parser could not read this notice's km points"
+  ],
+  "source": {
+    "text": "Squamish River FSR: Updated September 17, 2026: Seasonal road closure in place at 21.7km (Mud Creek) for Fall and Winter 2026. No access permitted until Spring/Summer 2027.",
+    "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/sea-to-sky-natural-resource-district-road-safety-information",
+    "version": "District page fetched 2026-10-19T17:13:54.725Z",
+    "confirmed": true,
+    "file": "raw/2026-10/district_pages/DSQ.html"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "road_notice-a16e2f9adcea",
+      "run": 1,
+      "mode": "agent",
+      "model": "claude-opus-5-5 (Claude Code)",
+      "prompt_version": "road_notice.v1",
+      "schema_id": "road_notice.v1",
+      "produced_at": "2026-10-19T17:45:11Z",
+      "answer": {
+        "road": {
+          "name": "Squamish River FSR",
+          "file_section": null
+        },
+        "posted_on": "2026-09-17",
+        "rescinded": false,
+        "points": [
+          {
+            "km": 21.7,
+            "km_end": null,
+            "extent": "beyond",
+            "status": "closed",
+            "quote": "Seasonal road closure in place at 21.7km (Mud Creek) for Fall and Winter 2026."
+          }
+        ],
+        "quotes": [
+          {
+            "field": "road.name",
+            "quote": "Squamish River FSR"
+          },
+          {
+            "field": "posted_on",
+            "quote": "Updated September 17, 2026"
+          }
+        ],
+        "uncertain": [
+          "road.file_section"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "road_notice-a16e2f9adcea",
+      "run": 2,
+      "mode": "agent",
+      "model": "claude-opus-5-5 (Claude Code subagent)",
+      "prompt_version": "road_notice.v1",
+      "schema_id": "road_notice.v1",
+      "produced_at": "2026-10-19T17:47:31.136Z",
+      "answer": {
+        "road": {
+          "name": "Squamish River FSR",
+          "file_section": null
+        },
+        "posted_on": "2026-09-17",
+        "rescinded": false,
+        "points": [
+          {
+            "km": 21.7,
+            "km_end": null,
+            "extent": "beyond",
+            "status": "closed",
+            "quote": "Seasonal road closure in place at 21.7km (Mud Creek) for Fall and Winter 2026. No access permitted until Spring/Summer 2027."
+          }
+        ],
+        "quotes": [
+          {
+            "field": "road.name",
+            "quote": "Squamish River FSR"
+          },
+          {
+            "field": "posted_on",
+            "quote": "Updated September 17, 2026"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "disagreements": [],
+  "placements": [
+    {
+      "km": 21.7,
+      "extent": "beyond",
+      "status": "closed",
+      "quote": "Seasonal road closure in place at 21.7km (Mud Creek) for Fall and Winter 2026."
+    }
+  ],
+  "status": "open",
+  "created": "2026-10-19T17:57:00.479Z",
+  "updated": "2026-10-19T17:57:00.479Z"
+}

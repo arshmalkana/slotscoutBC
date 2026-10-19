@@ -1,0 +1,146 @@
+{
+  "jurisdiction": "rd:Squamish-Lillooet Regional District",
+  "covers": [
+    "ea:SLRD Electoral Area A",
+    "ea:SLRD Electoral Area B",
+    "ea:SLRD Electoral Area C",
+    "ea:SLRD Electoral Area D"
+  ],
+  "doc": "rd:Squamish-Lillooet Regional District:a93f37bd",
+  "title": "Squamish-Lillooet Regional District Electoral Area D Firearms Bylaw",
+  "number": "1294-2013",
+  "url": "https://www.slrd.bc.ca/media/file/rb1294-electoral-area-d-firearms-bylaw-consoldiation-bl1317-2014pdf",
+  "source_version": "Captured 2026-10-19",
+  "status": "candidate",
+  "run_agreement": true,
+  "extracted_on": "2026-10-19",
+  "parts": [
+    {
+      "task_id": "bylaw-e55e095ee0fd",
+      "state": "agreed",
+      "answer": {
+        "bylaw": {
+          "title": "Squamish-Lillooet Regional District Electoral Area D Firearms Bylaw",
+          "number": "1294-2013",
+          "adopted_on": "2013-09-30",
+          "amended_by": [
+            "1317-2014"
+          ]
+        },
+        "definitions": [
+          {
+            "term": "Firearm",
+            "meaning": "same meaning as in the Firearms Act (British Columbia)",
+            "quote": "shall have the same meaning as in the Firearms Act (British Columbia) Chapter 145 R.S.B.C and Amendments."
+          },
+          {
+            "term": "Permit",
+            "meaning": "same meaning as in the Firearms Act (British Columbia)",
+            "quote": "Permit” shall have the same meaning as in the Firearms Act (British Columbia) Chapter 145 R.S.B.C and Amendments."
+          }
+        ],
+        "prohibitions": [
+          {
+            "what": "discharge a firearm",
+            "firearm_types": [
+              "all_firearms"
+            ],
+            "where": "within the limits of the areas defined in Schedules A and B",
+            "quote": "discharge a firearm within the limits of the areas defined in Schedules A, and B attached to and forming part of this bylaw"
+          },
+          {
+            "what": "discharge a firearm on or across a highway or near listed places",
+            "firearm_types": [
+              "all_firearms"
+            ],
+            "where": "on or across a highway, or within 100 meters of any school building, school yard, public park, playground, church, cemetery, workshop, place of business, dwelling house, or other place where persons may be assembled or engage in work of any kind",
+            "quote": "without limiting the foregoing, discharge a firearm on or across a highway or within 100 meters of any school building, school yard, public park, playground, church, cemetery, workshop, place of business, dwelling house, or other place where persons may be assembled or engage in work of any kind."
+          }
+        ],
+        "exceptions": [
+          {
+            "applies_to": "section 3",
+            "firearm_type": null,
+            "hunting_only": null,
+            "permit": null,
+            "season": null,
+            "quote": "Section 3 of this bylaw does not apply to a person: (a) who is: (i) a peace officer"
+          },
+          {
+            "applies_to": "section 3",
+            "firearm_type": null,
+            "hunting_only": false,
+            "permit": "permit issued by the Chief Provincial Firearms Officer for an indoor shooting range",
+            "season": null,
+            "quote": "who is authorized by a permit issued by the Chief Provincial Firearms Officer to discharge a firearm in an indoor shooting range under the Firearms Act (British Columbia)"
+          },
+          {
+            "applies_to": "section 3",
+            "firearm_type": null,
+            "hunting_only": false,
+            "permit": "shooting range approved in writing by the Chief Provincial Firearms Officer",
+            "season": null,
+            "quote": "who is on a shooting range approved in writing by the Chief Provincial Firearms Officer."
+          },
+          {
+            "applies_to": "section 3",
+            "firearm_type": null,
+            "hunting_only": false,
+            "permit": null,
+            "season": null,
+            "quote": "who is a bonafide farmer or their agent acting on behalf of the farmer in rural zoned properties when engaged in a farm operation"
+          },
+          {
+            "applies_to": "closed area",
+            "firearm_type": "rifle range or trap club",
+            "hunting_only": false,
+            "permit": "Regional Board resolution with RCMP and Chief Provincial Firearms Officer permission",
+            "season": null,
+            "quote": "The Regional Board may by resolution, on receipt of a written application from an approved club or organization, grant permission to the applicant for the operation of a rifle range or trap club, or both, within a closed area"
+          }
+        ],
+        "distance_rules": [
+          {
+            "distance_m": 100,
+            "from_what": "any school building, school yard, public park, playground, church, cemetery, workshop, place of business, dwelling house, or other place where persons may be assembled or engage in work of any kind",
+            "quote": "within 100 meters of any school building, school yard, public park, playground, church, cemetery, workshop, place of business, dwelling house, or other place where persons may be assembled or engage in work of any kind"
+          }
+        ],
+        "schedule_maps": [
+          {
+            "name": "Schedule A",
+            "description": "No Shooting Area map, Electoral Area D",
+            "quote": "SCHEDULE A No Shooting Area FIREARMS BYLAW NO. 1294"
+          },
+          {
+            "name": "Schedule B",
+            "description": "No Shooting Area map, Electoral Area D",
+            "quote": "SCHEDULE B No Shooting Area FIREARMS BYLAW NO. 1294"
+          }
+        ],
+        "target_shooting": "zoned",
+        "quotes": [
+          {
+            "field": "bylaw.title",
+            "quote": "Squamish-Lillooet Regional District Electoral Area D Firearms Bylaw"
+          },
+          {
+            "field": "bylaw.number",
+            "quote": "BYLAW NO. 1294-2013"
+          },
+          {
+            "field": "bylaw.adopted_on",
+            "quote": "ADOPTED this 30th day of September, 2013."
+          },
+          {
+            "field": "target_shooting",
+            "quote": "discharge a firearm within the limits of the areas defined in Schedules A, and B"
+          }
+        ],
+        "uncertain": []
+      },
+      "rejected_quotes": [],
+      "disagreements": []
+    }
+  ]
+}

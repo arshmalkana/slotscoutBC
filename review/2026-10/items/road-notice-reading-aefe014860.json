@@ -1,0 +1,118 @@
+{
+  "item_id": "road-notice-reading-aefe014860",
+  "month": "2026-10",
+  "kind": "road_notice_reading",
+  "title": "Tom Cole Mountain 7670.01 (updated Sept 3, 2026), DCS",
+  "change_type": "stricter",
+  "decision": "Check the km points and status the AI read from this notice. Approving lets the reading count on the map.",
+  "why": [
+    "the rule-based parser could not read this notice's km points"
+  ],
+  "source": {
+    "text": "Tom Cole Mountain 7670.01 (updated Sept 3, 2026): Access to 0 km obstructed near Highway 99",
+    "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/cascades-road-safety-information",
+    "version": "District page fetched 2026-10-19T17:13:30.813Z",
+    "confirmed": true,
+    "file": "raw/2026-10/district_pages/DCS.html"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "road_notice-7236bbb51a24",
+      "run": 1,
+      "mode": "agent",
+      "model": "claude-opus-5-5 (Claude Code)",
+      "prompt_version": "road_notice.v1",
+      "schema_id": "road_notice.v1",
+      "produced_at": "2026-10-19T17:45:10Z",
+      "answer": {
+        "road": {
+          "name": "Tom Cole Mountain",
+          "file_section": "7670.01"
+        },
+        "posted_on": "2026-09-03",
+        "rescinded": false,
+        "points": [
+          {
+            "km": 0,
+            "km_end": null,
+            "extent": "beyond",
+            "status": "closed",
+            "quote": "Access to 0 km obstructed near Highway 99"
+          }
+        ],
+        "quotes": [
+          {
+            "field": "road.name",
+            "quote": "Tom Cole Mountain"
+          },
+          {
+            "field": "road.file_section",
+            "quote": "7670.01"
+          },
+          {
+            "field": "posted_on",
+            "quote": "updated Sept 3, 2026"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "road_notice-7236bbb51a24",
+      "run": 2,
+      "mode": "agent",
+      "model": "claude-opus-5-5 (Claude Code subagent)",
+      "prompt_version": "road_notice.v1",
+      "schema_id": "road_notice.v1",
+      "produced_at": "2026-10-19T17:48:40Z",
+      "answer": {
+        "road": {
+          "name": "Tom Cole Mountain",
+          "file_section": "7670.01"
+        },
+        "posted_on": "2026-09-03",
+        "rescinded": false,
+        "points": [
+          {
+            "km": 0,
+            "km_end": null,
+            "extent": "beyond",
+            "status": "closed",
+            "quote": "Access to 0 km obstructed near Highway 99"
+          }
+        ],
+        "quotes": [
+          {
+            "field": "road.name",
+            "quote": "Tom Cole Mountain"
+          },
+          {
+            "field": "road.file_section",
+            "quote": "Tom Cole Mountain 7670.01"
+          },
+          {
+            "field": "posted_on",
+            "quote": "(updated Sept 3, 2026)"
+          },
+          {
+            "field": "rescinded",
+            "quote": "Access to 0 km obstructed near Highway 99"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "disagreements": [],
+  "placements": [
+    {
+      "km": 0,
+      "extent": "beyond",
+      "status": "closed",
+      "quote": "Access to 0 km obstructed near Highway 99"
+    }
+  ],
+  "status": "open",
+  "created": "2026-10-19T17:56:35.466Z",
+  "updated": "2026-10-19T17:56:35.466Z"
+}

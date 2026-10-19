@@ -1,0 +1,114 @@
+{
+  "item_id": "road-notice-reading-da9ad8cc04",
+  "month": "2026-10",
+  "kind": "road_notice_reading",
+  "title": "Redding Creek FSR 0252.05 (September 2, 2026), DSE",
+  "change_type": "stricter",
+  "decision": "Check the km points and status the AI read from this notice. Approving lets the reading count on the map.",
+  "why": [
+    "the rule-based parser could not read this notice's km points"
+  ],
+  "source": {
+    "text": "Redding Creek FSR 0252.05 (September 2, 2026): Redding Creek FSR (east of Gray Creek pass) at 61.3km is closed until approximately September 4th, 2026, at 5pm for repairs. It will not be possible to travel from the east to west Kootenays via Gray Creek Pass until after September 4th 2026 at 5pm. Gray Creek FSR 0050.01 will remain open to the summit at approximately 16km.",
+    "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/selkirk-natural-resource-district-road-safety-information",
+    "version": "District page fetched 2026-10-19T17:13:56.670Z",
+    "confirmed": true,
+    "file": "raw/2026-10/district_pages/DSE.html"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "road_notice-7dee7073507f",
+      "run": 1,
+      "mode": "agent",
+      "model": "claude-opus-5-5 (Claude Code)",
+      "prompt_version": "road_notice.v1",
+      "schema_id": "road_notice.v1",
+      "produced_at": "2026-10-19T17:35:35Z",
+      "answer": {
+        "road": {
+          "name": "Redding Creek FSR",
+          "file_section": "0252.05"
+        },
+        "posted_on": "2026-09-02",
+        "rescinded": false,
+        "points": [
+          {
+            "km": 61.3,
+            "km_end": null,
+            "extent": "at",
+            "status": "closed",
+            "quote": "Redding Creek FSR (east of Gray Creek pass) at 61.3km is closed until approximately September 4th, 2026, at 5pm for repairs."
+          }
+        ],
+        "quotes": [
+          {
+            "field": "road.name",
+            "quote": "Redding Creek FSR"
+          },
+          {
+            "field": "road.file_section",
+            "quote": "0252.05"
+          },
+          {
+            "field": "posted_on",
+            "quote": "September 2, 2026"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "road_notice-7dee7073507f",
+      "run": 2,
+      "mode": "agent",
+      "model": "claude-opus-5-5 (Claude Code subagent)",
+      "prompt_version": "road_notice.v1",
+      "schema_id": "road_notice.v1",
+      "produced_at": "2026-10-19T17:35:18Z",
+      "answer": {
+        "road": {
+          "name": "Redding Creek FSR",
+          "file_section": "0252.05"
+        },
+        "posted_on": "2026-09-02",
+        "rescinded": false,
+        "points": [
+          {
+            "km": 61.3,
+            "km_end": null,
+            "extent": "at",
+            "status": "closed",
+            "quote": "Redding Creek FSR (east of Gray Creek pass) at 61.3km is closed until approximately September 4th, 2026, at 5pm for repairs."
+          }
+        ],
+        "quotes": [
+          {
+            "field": "road.name",
+            "quote": "Redding Creek FSR"
+          },
+          {
+            "field": "road.file_section",
+            "quote": "Redding Creek FSR 0252.05"
+          },
+          {
+            "field": "posted_on",
+            "quote": "(September 2, 2026)"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "disagreements": [],
+  "placements": [
+    {
+      "km": 61.3,
+      "extent": "at",
+      "status": "closed",
+      "quote": "Redding Creek FSR (east of Gray Creek pass) at 61.3km is closed until approximately September 4th, 2026, at 5pm for repairs."
+    }
+  ],
+  "status": "open",
+  "created": "2026-10-19T17:56:58.740Z",
+  "updated": "2026-10-19T17:56:58.740Z"
+}

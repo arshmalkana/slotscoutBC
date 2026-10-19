@@ -1,0 +1,27 @@
+{
+  "item_id": "road-notice-block-a4521cb232",
+  "month": "2026-10",
+  "kind": "road_notice_block",
+  "title": "DMH road safety page: text not tied to a road",
+  "change_type": "unclear",
+  "decision": "Read this text and anything it links to. Add any closed or restricted road to rules/road-notices.json as a person-read notice, then approve to mark the text read. Until then P6 shows Cannot confirm in this district.",
+  "why": [
+    "the rule-based parser found closure or deactivation wording it could not tie to a road (Addendum A 5.2)"
+  ],
+  "source": {
+    "text": "Map of current closures in the Cariboo Natural Resource Region",
+    "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/100-mile-house-road-safety-information",
+    "version": "District page fetched 2026-10-19T17:13:24.889Z",
+    "confirmed": true,
+    "file": "raw/2026-10/district_pages/DMH.html"
+  },
+  "links": [
+    {
+      "label": "District page",
+      "href": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/100-mile-house-road-safety-information"
+    }
+  ],
+  "status": "open",
+  "created": "2026-10-19T17:57:03.339Z",
+  "updated": "2026-10-19T17:57:03.339Z"
+}

@@ -1,0 +1,92 @@
+{
+  "item_id": "dm-notice-79c1eb87b6",
+  "month": "2026-10",
+  "kind": "dm_notice",
+  "title": "District Manager notice DCK-8347a650-71w27vb_fsr_closures_amended_july_22",
+  "change_type": "unclear",
+  "decision": "Compare the District Manager notice with the web notice and correct the store if they differ.",
+  "why": [
+    "AI runs disagree: points: run 1 [] vs run 2 [\"?-:whole_road:closed\"]",
+    "no web notice on the DCK page matches file section (none read)"
+  ],
+  "source": {
+    "text": "July 22, 2026\n\nNotice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st,\n2026, closure has been amended, the following Forest Service Roads are CLOSED until\nfurther notice due to V11090, V10755 and V10742 wildfire activity:\n\nNAHATLATCH RIVER (6996.01)\nSCUZZY CREEK (8127.01)\nMOWHOKAM CREEK (9019.02)\nEAST ANDERSON (7972.02)\nNORTH AINSLIE CREEK (8019.01)\nSOUTH AINSLIE CREEK (9703.01)\nSOUTH AINSLIE TWO (9703.02)\nNORTH BEND (7549.01)\nUTZLIUS (7972.01)\nSTOYOMA (7972.03)\nSTOYOMA 3400 (7972 04)\nSTOYOMA 6200 (7972.05)\nSTOYOMA 6200A (7972.06)\nANDERSON (8074.01)\nANDERSON 13000 (8074.07)\nANDERSON 9000 (8074.08)\nANDERSON 10000 (8074.09)\nANDERSON 13000A (8074.10)\n\nForest and Range Practices Act\n       Non-industrial use of a road\n       22.2 (1) Subject to subsections (2) to (4) and to regulations respecting roads made\n            under the Industrial Roads Act, a road that is\n                               (a) a forest service road, or\n                               (b) authorized under a road permit or a woodlot\n\n                                               licence\n\n                  may be used by any person without charge for a purpose other than a timber\n                  harvesting purpose, silviculture purpose or natural resource development\n                  purpose.\n                          (2) The\n                                   (a) district manager, for a forest service road, or\n\n                                                                                                                         Page 1 of 3\n\n\nMinistry of Forests     Chilliwack Forest District       Location:                      Tel:                      604 702-5700\n                                                         46360 Airport Road             Fax:                      604 702-5711\n                                                         Chilliwack, British Columbia   Email:Chilliwackforestdistrictoffice@gov.bc.ca\n                                                         V2P 1A5                        Website: www.gov.bc.ca/for\n\f                             (b) holder of a road permit or a woodlot licence, for a\n\n                             road under the permit or licence,\n\n                  may take action under subsection (3) if\n                            (c) use of the road under subsection (1) would likely\n                                    (i) cause significant damage to the road,\n                                    (ii) cause significant sediment delivery, or\n                                    (iii) endanger property, public health or public\n                                          safety, or\n                            (d) the presence on the road of a vehicle or animal would\n\n                             likely cause damage to the road or environment or\n\n                             endanger life or property.\n                  (3) In the circumstances described in subsection (2),\n                             (a) the district manager, for a forest service road, may\n                                    (i) close the road or restrict its use, or\n                                    (ii) remove a vehicle or an animal from the road at\n\n                                    the expense of the owner of the vehicle or animal,\n\n                                    and\n\n                             (b) the holder of a road permit or a woodlot licence,\n\n                             for a road under the permit or licence,\n\n                                    (i) with the prior consent of the minister, may close\n\n                                    the road or restrict its use, or\n\n                                    (ii) may remove a vehicle or an animal from the\n\n                                    road at the expense of the owner of the vehicle or\n\n                                    animal.\n\n\nPlease check Chilliwack's Forest Service Road Safety Information web page for Forest\nService Road advisories and closure updates.\nhttps://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-\nroads/local-road-safety-information/chilliwack-natural-resource-district-district-road-\nsafety-information\n\nAll resource road users are advised to check local weather and safety advisories, drive\n\fto the condition of the road and watch for hazards if heading into the backcountry.\n\nThank you for your patience and cooperation during this time.\n                      Digitally signed by\n                      Carissa Logue\n                      Date: 2026.07.23\n                      08:44:21 -07'00'\nCarissa Logue\nDistrict Manager\nChilliwack Forest District\n\n\n\n\n                                                                                                                     Page 3 of 3\n\n\nMinistry of Forests     Chilliwack Forest District   Location:                      Tel:                      604 702-5700\n                                                     46360 Airport Road             Fax:                      604 702-5711\n                                                     Chilliwack, British Columbia   Email:Chilliwackforestdistrictoffice@gov.bc.ca\n                                                     V2P 1A5                        Website: www.gov.bc.ca/for",
+    "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/71w27vb_fsr_closures_amended_july_22.pdf",
+    "version": "2026-10-19T17:14:10.641Z",
+    "confirmed": true,
+    "file": "raw/2026-10/dm_notices/DCK-8347a650-71w27vb_fsr_closures_amended_july_22.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "road_notice-d7d6e8debaf3",
+      "run": 1,
+      "mode": "agent",
+      "model": "claude-opus-5-5 (Claude Code subagent, run 1)",
+      "prompt_version": "road_notice.v1",
+      "schema_id": "road_notice.v1",
+      "produced_at": "2026-10-19T17:38:51Z",
+      "answer": {
+        "road": {
+          "name": "",
+          "file_section": null
+        },
+        "posted_on": null,
+        "rescinded": false,
+        "points": [],
+        "quotes": [
+          {
+            "field": "rescinded",
+            "quote": "the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:"
+          }
+        ],
+        "uncertain": [
+          "road.name",
+          "road.file_section",
+          "points"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "road_notice-d7d6e8debaf3",
+      "run": 2,
+      "mode": "agent",
+      "model": "claude-opus-5-5 (Claude Code subagent)",
+      "prompt_version": "road_notice.v1",
+      "schema_id": "road_notice.v1",
+      "produced_at": "2026-10-19T17:36:17Z",
+      "answer": {
+        "road": {
+          "name": "",
+          "file_section": null
+        },
+        "posted_on": "2026-07-22",
+        "rescinded": false,
+        "points": [
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "whole_road",
+            "status": "closed",
+            "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st,\n2026, closure has been amended, the following Forest Service Roads are CLOSED until\nfurther notice due to V11090, V10755 and V10742 wildfire activity:"
+          }
+        ],
+        "quotes": [
+          {
+            "field": "posted_on",
+            "quote": "July 22, 2026"
+          }
+        ],
+        "uncertain": [
+          "road.name",
+          "road.file_section"
+        ]
+      }
+    }
+  },
+  "disagreements": [
+    "points: run 1 [] vs run 2 [\"?-:whole_road:closed\"]"
+  ],
+  "status": "open",
+  "created": "2026-10-19T17:57:03.425Z",
+  "updated": "2026-10-19T17:57:03.425Z"
+}

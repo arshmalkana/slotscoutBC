@@ -1,0 +1,27 @@
+{
+  "item_id": "road-notice-block-a0707ff10c",
+  "month": "2026-10",
+  "kind": "road_notice_block",
+  "title": "DCK road safety page: text not tied to a road",
+  "change_type": "unclear",
+  "decision": "Read this text and anything it links to. Add any closed or restricted road to rules/road-notices.json as a person-read notice, then approve to mark the text read. Until then P6 shows Cannot confirm in this district.",
+  "why": [
+    "the rule-based parser found closure or deactivation wording it could not tie to a road (Addendum A 5.2)"
+  ],
+  "source": {
+    "text": "Due to the 2021 atmospheric river storm events many forest service roads in the Chilliwack Forest District were damaged. Some may have unmarked hazards, unscheduled delays, have no access or will be closed at short notice. For specific enquiries please refer to the list of road closures and restrictions and visit the Chilliwack District FSR Access Map. As always it is advised to drive with caution and watch for hazards if heading into the backcountry.",
+    "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack-natural-resource-district-district-road-safety-information",
+    "version": "District page fetched 2026-10-19T17:13:32.722Z",
+    "confirmed": true,
+    "file": "raw/2026-10/district_pages/DCK.html"
+  },
+  "links": [
+    {
+      "label": "District page",
+      "href": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack-natural-resource-district-district-road-safety-information"
+    }
+  ],
+  "status": "open",
+  "created": "2026-10-19T17:57:03.316Z",
+  "updated": "2026-10-19T17:57:03.316Z"
+}

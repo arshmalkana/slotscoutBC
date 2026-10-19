@@ -1,0 +1,137 @@
+{
+  "item_id": "road-notice-reading-bbbc32c270",
+  "month": "2026-10",
+  "kind": "road_notice_reading",
+  "title": "Woodbury Fletcher FSR 0198.02 (May 29, 2026), DSE",
+  "change_type": "stricter",
+  "decision": "Check the km points and status the AI read from this notice. Approving lets the reading count on the map.",
+  "why": [
+    "the rule-based parser could not read this notice's km points",
+    "AI runs disagree: points: run 1 [\"3.7-:beyond:closed\",\"5-:at:caution\"] vs run 2 [\"3.7-:beyond:closed\",\"5-:at:closed\"]"
+  ],
+  "source": {
+    "text": "Woodbury Fletcher FSR 0198.02 (May 29, 2026): Woodbury Fletcher FSR is closed with a barricade at 3.7km because of a sink hole at 3.7km and a slump at 5km. No vehicular access beyond 3.7km. There is no planned repair date.",
+    "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/selkirk-natural-resource-district-road-safety-information",
+    "version": "District page fetched 2026-10-19T17:13:56.670Z",
+    "confirmed": true,
+    "file": "raw/2026-10/district_pages/DSE.html"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "road_notice-305afdc68d2e",
+      "run": 1,
+      "mode": "agent",
+      "model": "claude-opus-5-5 (Claude Code)",
+      "prompt_version": "road_notice.v1",
+      "schema_id": "road_notice.v1",
+      "produced_at": "2026-10-19T17:35:07Z",
+      "answer": {
+        "road": {
+          "name": "Woodbury Fletcher FSR",
+          "file_section": "0198.02"
+        },
+        "posted_on": "2026-05-29",
+        "rescinded": false,
+        "points": [
+          {
+            "km": 3.7,
+            "km_end": null,
+            "extent": "beyond",
+            "status": "closed",
+            "quote": "No vehicular access beyond 3.7km."
+          },
+          {
+            "km": 5,
+            "km_end": null,
+            "extent": "at",
+            "status": "caution",
+            "quote": "Woodbury Fletcher FSR is closed with a barricade at 3.7km because of a sink hole at 3.7km and a slump at 5km."
+          }
+        ],
+        "quotes": [
+          {
+            "field": "road.name",
+            "quote": "Woodbury Fletcher FSR"
+          },
+          {
+            "field": "road.file_section",
+            "quote": "0198.02"
+          },
+          {
+            "field": "posted_on",
+            "quote": "May 29, 2026"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "road_notice-305afdc68d2e",
+      "run": 2,
+      "mode": "agent",
+      "model": "claude-opus-5-5 (Claude Code subagent)",
+      "prompt_version": "road_notice.v1",
+      "schema_id": "road_notice.v1",
+      "produced_at": "2026-10-19T17:35:18Z",
+      "answer": {
+        "road": {
+          "name": "Woodbury Fletcher FSR",
+          "file_section": "0198.02"
+        },
+        "posted_on": "2026-05-29",
+        "rescinded": false,
+        "points": [
+          {
+            "km": 3.7,
+            "km_end": null,
+            "extent": "beyond",
+            "status": "closed",
+            "quote": "Woodbury Fletcher FSR is closed with a barricade at 3.7km because of a sink hole at 3.7km and a slump at 5km. No vehicular access beyond 3.7km."
+          },
+          {
+            "km": 5,
+            "km_end": null,
+            "extent": "at",
+            "status": "closed",
+            "quote": "Woodbury Fletcher FSR is closed with a barricade at 3.7km because of a sink hole at 3.7km and a slump at 5km."
+          }
+        ],
+        "quotes": [
+          {
+            "field": "road.name",
+            "quote": "Woodbury Fletcher FSR"
+          },
+          {
+            "field": "road.file_section",
+            "quote": "Woodbury Fletcher FSR 0198.02"
+          },
+          {
+            "field": "posted_on",
+            "quote": "(May 29, 2026)"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "disagreements": [
+    "points: run 1 [\"3.7-:beyond:closed\",\"5-:at:caution\"] vs run 2 [\"3.7-:beyond:closed\",\"5-:at:closed\"]"
+  ],
+  "placements": [
+    {
+      "km": 3.7,
+      "extent": "beyond",
+      "status": "closed",
+      "quote": "No vehicular access beyond 3.7km."
+    },
+    {
+      "km": 5,
+      "extent": "at",
+      "status": "caution",
+      "quote": "Woodbury Fletcher FSR is closed with a barricade at 3.7km because of a sink hole at 3.7km and a slump at 5km."
+    }
+  ],
+  "status": "open",
+  "created": "2026-10-19T17:56:59.481Z",
+  "updated": "2026-10-19T17:56:59.481Z"
+}

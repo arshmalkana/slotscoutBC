@@ -1,0 +1,118 @@
+{
+  "item_id": "road-notice-reading-faf10ed377",
+  "month": "2026-10",
+  "kind": "road_notice_reading",
+  "title": "Goat Range Park Br FSR 7051.02 (June 13, 2025), DSE",
+  "change_type": "stricter",
+  "decision": "Check the km points and status the AI read from this notice. Approving lets the reading count on the map.",
+  "why": [
+    "the rule-based parser could not read this notice's km points"
+  ],
+  "source": {
+    "text": "Goat Range Park Br FSR 7051.02 (June 13, 2025): This FSR is located at 47km on Hwy 31, approximately 4.5km southeast of Trout Lake, and provides access into the Healy Creek watershed. Road is closed to all traffic at the 0.0 km bridge N7-266 for public safety due to deteriorated bridge deck conditions. No planned repair date.",
+    "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/selkirk-natural-resource-district-road-safety-information",
+    "version": "District page fetched 2026-10-19T17:13:56.670Z",
+    "confirmed": true,
+    "file": "raw/2026-10/district_pages/DSE.html"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "road_notice-9243ad7b4d4c",
+      "run": 1,
+      "mode": "agent",
+      "model": "claude-opus-5-5 (Claude Code)",
+      "prompt_version": "road_notice.v1",
+      "schema_id": "road_notice.v1",
+      "produced_at": "2026-10-19T17:35:34Z",
+      "answer": {
+        "road": {
+          "name": "Goat Range Park Br FSR",
+          "file_section": "7051.02"
+        },
+        "posted_on": "2025-06-13",
+        "rescinded": false,
+        "points": [
+          {
+            "km": 0,
+            "km_end": null,
+            "extent": "beyond",
+            "status": "closed",
+            "quote": "Road is closed to all traffic at the 0.0 km bridge N7-266 for public safety due to deteriorated bridge deck conditions."
+          }
+        ],
+        "quotes": [
+          {
+            "field": "road.name",
+            "quote": "Goat Range Park Br FSR"
+          },
+          {
+            "field": "road.file_section",
+            "quote": "7051.02"
+          },
+          {
+            "field": "posted_on",
+            "quote": "June 13, 2025"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "road_notice-9243ad7b4d4c",
+      "run": 2,
+      "mode": "agent",
+      "model": "claude-opus-5-5 (Claude Code subagent)",
+      "prompt_version": "road_notice.v1",
+      "schema_id": "road_notice.v1",
+      "produced_at": "2026-10-19T17:36:14.237Z",
+      "answer": {
+        "road": {
+          "name": "Goat Range Park Br FSR",
+          "file_section": "7051.02"
+        },
+        "posted_on": "2025-06-13",
+        "rescinded": false,
+        "points": [
+          {
+            "km": 0,
+            "km_end": null,
+            "extent": "beyond",
+            "status": "closed",
+            "quote": "Road is closed to all traffic at the 0.0 km bridge N7-266 for public safety due to deteriorated bridge deck conditions."
+          }
+        ],
+        "quotes": [
+          {
+            "field": "road.name",
+            "quote": "Goat Range Park Br FSR"
+          },
+          {
+            "field": "road.file_section",
+            "quote": "Goat Range Park Br FSR 7051.02"
+          },
+          {
+            "field": "posted_on",
+            "quote": "(June 13, 2025)"
+          },
+          {
+            "field": "rescinded",
+            "quote": "Road is closed to all traffic"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "disagreements": [],
+  "placements": [
+    {
+      "km": 0,
+      "extent": "beyond",
+      "status": "closed",
+      "quote": "Road is closed to all traffic at the 0.0 km bridge N7-266 for public safety due to deteriorated bridge deck conditions."
+    }
+  ],
+  "status": "open",
+  "created": "2026-10-19T17:56:56.962Z",
+  "updated": "2026-10-19T17:56:56.962Z"
+}

@@ -1,0 +1,27 @@
+{
+  "item_id": "road-notice-block-8014868a01",
+  "month": "2026-10",
+  "kind": "road_notice_block",
+  "title": "DQC road safety page: text not tied to a road",
+  "change_type": "unclear",
+  "decision": "Read this text and anything it links to. Add any closed or restricted road to rules/road-notices.json as a person-read notice, then approve to mark the text read. Until then P6 shows Cannot confirm in this district.",
+  "why": [
+    "the rule-based parser found closure or deactivation wording it could not tie to a road (Addendum A 5.2)"
+  ],
+  "source": {
+    "text": "The following Forest Service Roads (FSRs) have been declared redundant to industrial needs and are being proposed for permanent deactivation. Vehicular access will not be possible. Please review the attached maps and send any questions or comments to the Haida Gwaii Natural Resource District Office.",
+    "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/haida-gwaii-natural-resource-district-road-safety-information",
+    "version": "District page fetched 2026-10-19T17:13:38.690Z",
+    "confirmed": true,
+    "file": "raw/2026-10/district_pages/DQC.html"
+  },
+  "links": [
+    {
+      "label": "District page",
+      "href": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/haida-gwaii-natural-resource-district-road-safety-information"
+    }
+  ],
+  "status": "open",
+  "created": "2026-10-19T17:57:03.351Z",
+  "updated": "2026-10-19T17:57:03.351Z"
+}
