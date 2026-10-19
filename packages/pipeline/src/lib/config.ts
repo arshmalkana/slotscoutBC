@@ -44,7 +44,7 @@ export function extractorMode(): Mode {
 export function currentMonth(argMonth?: string): string {
   const m = argMonth || process.env.PIPELINE_MONTH || config().pipeline.month;
   if (m) {
-    // YYYY-MM, or YYYY-MM-<label> for an extra run in the same month (a dry run), compared with the plain month.
+    // YYYY-MM, or YYYY-MM-<label> for an extra run in the same month, compared with the plain month.
     if (!/^\d{4}-\d{2}(-[a-z0-9]+)?$/.test(m)) throw new Error(`month must be YYYY-MM or YYYY-MM-<label>, got ${m}`);
     return m;
   }

@@ -1,10 +1,10 @@
-import { rmSync } from "node:fs";
+import { existsSync, renameSync, rmSync } from "node:fs";
 import { join } from "node:path";
 import { config, currentMonth } from "../lib/config.js";
 import { P } from "../lib/paths.js";
 import { parseClosedArea } from "../lib/ruleparse.js";
 import { ruleIdFor, type Unit } from "../lib/units.js";
-import { listFiles, log, progress, readJsonIf, sha256, writeJson } from "../lib/util.js";
+import { ensureDir, listFiles, log, progress, readJsonIf, sha256, writeJson } from "../lib/util.js";
 import { EFFECT_BY_RULE } from "../lib/effects.js";
 import type { UnitChange } from "./split.js";
 import { loadUnits } from "./split.js";
@@ -35,6 +35,7 @@ export interface Task {
 }
 
 const BYLAW_MAX_CHARS = 90_000;
+const DM_MAX_CHARS = 90_000;
 
 export function taskPath(id: string): string {
   return join(P.pending, `${id}.json`);
@@ -98,7 +99,10 @@ export function queue(opts: { month?: string } = {}) {
   for (const u of work.filter((x) => x.kind === "dm_notice")) {
     const images = (u.meta.images as string[] | undefined) ?? [];
     if (u.text.trim().length < 50 && !images.length) continue;
-    tasks.push(makeTask(month, "dm_notice", [u], u.text.slice(0, 30_000), u.title, { org: u.meta.org, pdf: u.url, read: u.meta.read }, images));
+    // Layout text of a big map sheet is mostly spaces: collapse them so the whole text fits.
+    const text = u.text.replace(/[ \t]{3,}/g, "  ");
+    if (text.length > DM_MAX_CHARS) log("queue", `${u.title}: text cut at ${DM_MAX_CHARS} of ${text.length} characters`);
+    tasks.push(makeTask(month, "dm_notice", [u], text.slice(0, DM_MAX_CHARS), u.title, { org: u.meta.org, pdf: u.url, read: u.meta.read }, images));
   }
 
   // Bylaws: one task per document when any clause is new or changed (5.3).
@@ -141,7 +145,20 @@ export function queue(opts: { month?: string } = {}) {
     const existing = readJsonIf<Task | null>(taskPath(t.task_id), null);
     // The same unit text gives the same task in any month; the earliest month owns it, so a later
     // run's clean-up never removes a task an earlier month still needs.
-    if (!existing || existing.month > t.month) {
+    // Same task, but its text or images are now prepared differently: the task file is refreshed.
+    // Whitespace-only differences do not count: quotes are checked whitespace-insensitively.
+    const squash = (x: string) => x.replace(/\s+/g, " ").trim();
+    const refreshed = !!existing && existing.month === t.month && (squash(existing.source_text) !== squash(t.source_text) || JSON.stringify(existing.images ?? []) !== JSON.stringify(t.images ?? []));
+    if (refreshed) {
+      // Answers to the old text are kept for the record but no longer count.
+      for (const run of [1, 2] as const) {
+        const a = join(P.answers(run), `${t.task_id}.json`);
+        if (existsSync(a)) renameSync(a, join(ensureDir(join(P.answers(run), "superseded")), `${t.task_id}.${Date.now()}.json`));
+      }
+      log("queue", `${t.task_id}: source text or page images changed; task refreshed, earlier answers moved to superseded/`);
+    }
+    const respaced = !!existing && existing.month === t.month && !refreshed && existing.source_text !== t.source_text;
+    if (!existing || existing.month > t.month || refreshed || respaced) {
       writeJson(taskPath(t.task_id), t);
       created++;
     }
