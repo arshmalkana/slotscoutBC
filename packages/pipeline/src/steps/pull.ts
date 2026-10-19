@@ -27,7 +27,7 @@ export interface PullOpts {
 function previousMonths(month: string): string[] {
   if (!existsSync(P.raw)) return [];
   return readdirSync(P.raw)
-    .filter((d) => /^\d{4}-\d{2}$/.test(d) && d < month && existsSync(join(P.raw, d, "manifest.json")))
+    .filter((d) => /^\d{4}-\d{2}(-[a-z0-9]+)?$/.test(d) && d < month && existsSync(join(P.raw, d, "manifest.json")))
     .sort()
     .reverse();
 }

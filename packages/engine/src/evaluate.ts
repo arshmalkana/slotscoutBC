@@ -753,8 +753,8 @@ type Placement = { notice: RoadNotice; point: NoticePoint; spotKm: number | null
 /**
  * Places a notice's km points against the spot (Addendum A 5.2 step 3): the spot's km is measured
  * along the matching FTEN section from its first vertex. A closure only clears the spot when it is
- * clearly further up the road, with a margin for the gap between posted km markers and mapped
- * length; when the section is shorter than the posted km (km markers carried over from an earlier
+ * clearly further up the road (more than 1 km or 25% beyond it), a margin for the gap between
+ * posted km markers and mapped length; when the section is shorter than the posted km (km markers carried over from an earlier
  * section) or the notice names no km, the closure counts as blocking.
  */
 function placeNotice(ctx: Context, n: RoadNotice, fsrs: ReturnType<typeof nearbyFsrs>): Placement[] {
@@ -773,7 +773,8 @@ function placeNotice(ctx: Context, n: RoadNotice, fsrs: ReturnType<typeof nearby
     if (spotKm === null) return { notice: n, point, spotKm, blocks: true, why: "the spot could not be placed on this road section" };
     const startKm = point.km;
     if (startKm > lengthKm + 1) return { notice: n, point, spotKm, blocks: true, why: `the mapped section is ${lengthKm.toFixed(1)} km long, so km ${startKm} cannot be placed on it` };
-    const margin = Math.max(0.5, startKm * 0.1);
+    // Posted km markers are approximate and mapped lengths are generalised: clear a spot only well below the closure.
+    const margin = Math.max(1, startKm * 0.25);
     if (spotKm + margin < startKm) return { notice: n, point, spotKm, blocks: false, why: `the closure starts at km ${startKm}, further up the road than this spot (about km ${spotKm.toFixed(1)})` };
     return { notice: n, point, spotKm, blocks: true, why: `this spot is at about km ${spotKm.toFixed(1)}, at or past the closure` };
   });

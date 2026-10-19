@@ -37,7 +37,7 @@ export interface BylawFind {
 }
 
 const BYLAW_LINK = /bylaw/i;
-const FIREARM = /firearm|discharg|weapon|shooting|bow and arrow|hunting/i;
+const FIREARM = /firearm|weapon|shooting|bow and arrow|hunting|discharg\w*[\s_%20-]+(?:of[\s_%20-]+)?(?:fire)?arms?/i;
 const CATEGORY = /regulat|safety|protect|nuisance|public|weapon|firearm|discharg|police|consolidat/i;
 const MAX_PAGES = 10;
 const slug = (s: string) => s.replace(/[^A-Za-z0-9]+/g, "-").replace(/^-|-$/g, "").toLowerCase().slice(0, 60);

@@ -44,7 +44,8 @@ export function extractorMode(): Mode {
 export function currentMonth(argMonth?: string): string {
   const m = argMonth || process.env.PIPELINE_MONTH || config().pipeline.month;
   if (m) {
-    if (!/^\d{4}-\d{2}$/.test(m)) throw new Error(`month must be YYYY-MM, got ${m}`);
+    // YYYY-MM, or YYYY-MM-<label> for an extra run in the same month (a dry run), compared with the plain month.
+    if (!/^\d{4}-\d{2}(-[a-z0-9]+)?$/.test(m)) throw new Error(`month must be YYYY-MM or YYYY-MM-<label>, got ${m}`);
     return m;
   }
   const parts = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Vancouver", year: "numeric", month: "2-digit" }).formatToParts(new Date());

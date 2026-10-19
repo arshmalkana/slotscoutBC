@@ -49,6 +49,9 @@ export function itemId(kind: string, key: string): string {
 
 /** Writes or refreshes an item; a person's decision on it is never overwritten. */
 export function upsertItem(item: Omit<ReviewItem, "status" | "created" | "updated">): ReviewItem {
+  // The same item from an earlier month (open or decided) stands; it is not raised again.
+  const earlier = allItems().find((i) => i.item_id === item.item_id && i.month !== item.month && i.month < item.month);
+  if (earlier) return earlier;
   const path = itemPath(item.month, item.item_id);
   const old = readJsonIf<ReviewItem | null>(path, null);
   const now = new Date().toISOString();

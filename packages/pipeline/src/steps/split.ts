@@ -127,6 +127,8 @@ function collect(month: string): Unit[] {
       const path = join(P.root, d.textFile);
       if (!existsSync(path)) continue;
       const text = readFileSync(path, "utf8");
+      // A document the finder matched on a loose word (a sewage discharge bylaw) is kept as evidence but not read.
+      if (!/firearm|weapon/i.test(text)) continue;
       const docId = `${find.key}:${sha256(d.url).slice(0, 8)}`;
       add(splitBylaw(text, docId, { source: "bylaws", title: `${find.name}: ${d.title}`, url: d.url, file: d.textFile, fileSha256: sha256(text), version: `Captured ${find.checkedAt.slice(0, 10)}`, confirmed: true }).map((u) => ({ ...u, meta: { ...u.meta, jurisdiction: find.key, docTitle: d.title } })));
     }

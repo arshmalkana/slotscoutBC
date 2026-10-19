@@ -295,13 +295,14 @@ describe("evaluate: road notice km points (P6, Addendum A 5.2)", () => {
   };
 
   it("passes a spot below a closure further up the road", () => {
-    const r = withNotice("No access past 2 km due to washout.");
+    const r = withNotice("No access past 3 km due to washout.");
     expect(check(r, "P6").status).toBe("pass");
     expect(check(r, "P6").notes!.join(" ")).toMatch(/posted 2021, still listed/);
   });
 
-  it("blocks a spot at or past the closure", () => {
+  it("blocks a spot at or past the closure, or within the km-marker margin below it", () => {
     expect(check(withNotice("No access past 0.8 km due to washout."), "P6").status).toBe("conditional");
+    expect(check(withNotice("No access past 2 km due to washout."), "P6").status).toBe("conditional");
   });
 
   it("blocks when the posted km cannot be placed on the mapped section", () => {
