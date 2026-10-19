@@ -95,8 +95,13 @@ function renderPage(file: string, page: number, out: string): void {
 export function readPdf(file: string, imageBase: string | null): PdfRead {
   const errors: string[] = [];
   let pages = 0;
+  let bigPage = false;
   try {
-    pages = Number(run("pdfinfo", [file]).match(/^Pages:\s+(\d+)/m)?.[1] ?? 0);
+    const info = run("pdfinfo", [file]);
+    pages = Number(info.match(/^Pages:\s+(\d+)/m)?.[1] ?? 0);
+    const size = info.match(/^Page size:\s+([\d.]+) x ([\d.]+) pts/m);
+    // Larger than tabloid: a map sheet or a poster, not a letter.
+    bigPage = !!size && Number(size[1]) * Number(size[2]) > 792 * 1224 * 1.05;
   } catch (e) {
     errors.push(`pdfinfo: ${(e as Error).message.split("\n")[0]}`);
   }
@@ -112,7 +117,8 @@ export function readPdf(file: string, imageBase: string | null): PdfRead {
     const px = raster.get(p) ?? 0;
     const pictureOnly = chars < 300;
     const bigPicture = px >= 500_000 && chars < 1200;
-    const vectorMap = chars < 2500 && (MAP_WORDS.test(perPage[p - 1] ?? "") || /map/i.test(name)) && (px >= 200_000 || chars < 1500);
+    const mapNamed = MAP_WORDS.test(perPage[p - 1] ?? "") || /map/i.test(name);
+    const vectorMap = mapNamed && ((chars < 2500 && (px >= 200_000 || chars < 1500)) || (bigPage && pages <= 3) || (/map/i.test(name) && pages <= 2));
     if (pictureOnly || bigPicture) ocrNeeded.push(p);
     if (pictureOnly || bigPicture || vectorMap) mapPages.push(p);
   }
