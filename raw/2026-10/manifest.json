@@ -2,17 +2,17 @@
   "month": "2026-10",
   "userAgent": "SlotScoutBot/0.1 (+https://slotscout.ca/about; data@slotscout.ca)",
   "startedAt": "2026-10-19T16:53:43.915Z",
-  "updatedAt": "2026-10-19T17:33:28.833Z",
+  "updatedAt": "2026-10-19T17:51:39.030Z",
   "sources": {
     "bcparks_advisories": {
       "status": "skipped",
       "detail": "planned source, not pulled yet",
-      "at": "2026-10-19T17:28:35.953Z"
+      "at": "2026-10-19T17:51:05.516Z"
     },
     "licensee_notices": {
       "status": "skipped",
       "detail": "planned source, not pulled yet",
-      "at": "2026-10-19T17:28:35.953Z"
+      "at": "2026-10-19T17:51:05.516Z"
     },
     "wmu": {
       "status": "ok",
@@ -133,6 +133,16 @@
       "status": "ok",
       "detail": "24 of 24 linked notice PDFs",
       "at": "2026-10-19T17:14:54.699Z"
+    },
+    "dra_roads": {
+      "status": "ok",
+      "detail": "1882029 features, count matches the server",
+      "at": "2026-10-19T17:42:42.685Z"
+    },
+    "bylaws": {
+      "status": "partial",
+      "detail": "3 of 34 starter-set jurisdictions with a bylaw document found; the rest need a person",
+      "at": "2026-10-19T17:51:39.028Z"
     }
   },
   "layers": {
@@ -513,9 +523,63 @@
       "countChange": null,
       "startedAt": "2026-10-19T17:09:18.059Z",
       "finishedAt": "2026-10-19T17:11:56.588Z"
+    },
+    "dra_roads": {
+      "id": "dra_roads",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "serverCount": 1882029,
+      "pulledCount": 1882029,
+      "sha256": "d9b318e2747319325c18a00ddd39f5f8662ebcf5f2c894903b281f46e0b72908",
+      "bytes": 2196316012,
+      "pages": 189,
+      "sortBy": "OBJECTID",
+      "bodyStored": false,
+      "status": "ok",
+      "countMatches": true,
+      "previousCount": null,
+      "countChange": null,
+      "startedAt": "2026-10-19T17:11:56.592Z",
+      "finishedAt": "2026-10-19T17:42:42.685Z"
     }
   },
   "files": [
+    {
+      "path": "raw/2026-10/bylaws/city-of-richmond/firearm-discharge-regulation-bylaw-4183-1983-0129f2.pdf",
+      "sha256": "f4ec65aa9fb254b220fb6953da717060d7d6ac1b1a31b844e2efaf88856adf0b",
+      "bytes": 1453534,
+      "source": "bylaws",
+      "url": "https://www.richmond.ca/__shared/assets/BL_4183_-_07262158958.pdf",
+      "fetchedAt": "2026-10-19T17:38:56.611Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/bylaws/squamish-lillooet-regional-district/rb-1294-electoral-area-d-firearms-bylaw-consoldiation-of-bl1-a93f37.pdf",
+      "sha256": "3b7b6615f250a37465f28d82eb8e171e268ae97534e03958ad7dc442a465d210",
+      "bytes": 441781,
+      "source": "bylaws",
+      "url": "https://www.slrd.bc.ca/media/file/rb1294-electoral-area-d-firearms-bylaw-consoldiation-bl1317-2014pdf",
+      "fetchedAt": "2026-10-19T17:51:36.753Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/bylaws/village-of-belcarra/complying-with-sewage-discharge-regulations-fd3484.pdf",
+      "sha256": "6d8c8be1da77960546a1b2c6df78154d898de19a3f6efa2ddb669e75387c5602",
+      "bytes": 803026,
+      "source": "bylaws",
+      "url": "https://belcarra.ca/assets/media/2019/10/Posted-on-Belcarra-Website-publication_OBS_sewagedischarge_aqua.pdf",
+      "fetchedAt": "2026-10-19T17:46:31.046Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/bylaws/village-of-belcarra/firearms-control-bylaw-no-498-2016-42e9b2.pdf",
+      "sha256": "31c1c9762b89c05bd946f7fa422aba4c86157d3c1eb773c5fd4fbcd8d68d5f7f",
+      "bytes": 603978,
+      "source": "bylaws",
+      "url": "https://belcarra.ca/assets/media/2019/05/vob-bylaw-498_firearms-control.pdf",
+      "fetchedAt": "2026-10-19T17:46:32.668Z",
+      "committed": true
+    },
     {
       "path": "raw/2026-10/district_pages/DCC.html",
       "sha256": "6de4f067c678b9fec351fa6f0a91bc162ece85b34e2165aed45d71b65943bba3",
@@ -951,6 +1015,12 @@
       "what": "legal text",
       "error": "no dated copy of 76_84_00_multi, 196_99, 190_84, 180_90, 16_2004, 38_2005: waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)",
       "at": "2026-10-19T17:13:23.522Z"
+    },
+    {
+      "source": "bylaws",
+      "what": "muni:Bowen Island Municipality",
+      "error": "robots.txt for www.bimbc.ca could not be read, so automated access is not assumed",
+      "at": "2026-10-19T17:46:56.838Z"
     }
   ]
 }

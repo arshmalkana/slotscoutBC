@@ -138,7 +138,7 @@ export async function extract(opts: { month?: string; only?: string[]; force?: b
     `Generated ${new Date().toISOString()} by \`make extract\` (mode: ${mode}; no ANTHROPIC_API_KEY in .env${mode === "manual" ? ", manual set in config.toml" : ""}).`,
     "",
     mode === "agent"
-      ? "Run 1: Claude Code reads each brief in `queue/agent/run1/` and writes the answer file it names. Run 2: for each brief in `queue/agent/run2/`, start a fresh subagent and give it only that brief (it holds the prompt, schema and source text, never the run-1 answer). Then run `make build`."
+      ? "Run 1: Claude Code reads each brief in `queue/agent/run1/` and writes the answer file it names. Run 2: for each brief in `queue/agent/run2/`, start a fresh subagent and give it only that brief (it holds the prompt, schema and source text, never the run-1 answer); it replies with file paths only, so nothing of run 2 reaches run 1. Then run `make build`."
       : "A person fills each answer file named in the briefs, using only the brief. Then run `make build`.",
     "",
     `Run 1 still needed: ${need1.length}. Run 2 still needed: ${need2.length}.`,

@@ -122,7 +122,7 @@ export function noticeId(n: Pick<RoadNotice, "district" | "road" | "fileSection"
 }
 
 /** Looks like a road title: names a road type, a file and section, or a road permit number. */
-const ROADISH = /\b(FSR|F\.S\.R\.?|Forest Service Road|Main(?:line)?|Branch|Br|Road|Rd|Spur|Connector|Bridge)\b|\b\d{3,5}[.\s-]\d{1,3}\b|\bR\d{4,}|^[A-Z][^.!?]{0,60}\b\d{4,5}\b[^.!?]{0,20}$/i;
+const ROADISH = /\b(FSR|F\.S\.R\.?|Forest Service Road|Main(?:line)?|Branch|Br|Road|Rd|Spur|Connector|Bridge)\b|\b\d{3,5}[.\s-]\d{1,3}\b|\bR\d{4,}|^[A-Z][^.!?]{0,60}\b(?!(?:19|20)\d{2}\b)\d{4,5}\b[^.!?]{0,20}$/i;
 /** Text that may close or restrict a road; it must be tied to a road or the page counts as unread. */
 const CLOSURE_WORDS = /\bclosed\b(?! areas?\b)|\bclosures?\b(?! areas?\b)|no access|no vehicle access|impassable|not drivable|washed? ?out|deactivat|restricted|\bgated?\b|bridge (?:is )?out|load limit|no through/i;
 
@@ -156,7 +156,8 @@ export function parseNoticesPageFull(html: string, district: string, pageUrl: st
   let listRoads: string[] = [];
 
   const finish = (n: RoadNotice): RoadNotice => {
-    const parsed = extractNoticePoints(n.text, n.kind);
+    // A notice with no text beyond its title is quoted by its title.
+    const parsed = extractNoticePoints(n.text || n.road, n.kind);
     return { ...n, id: noticeId(n), points: parsed.points, needsAi: parsed.needsAi, postedOn: isoFromLongDate(n.date) };
   };
 

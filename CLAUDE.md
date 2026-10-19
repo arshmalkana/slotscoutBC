@@ -34,7 +34,7 @@ data/               Registers the site reads (release pointer, coverage, bylaw r
 
 ## Agent-mode extraction
 
-`make extract` writes `queue/AGENT_TASKS.md` when no API key is set. For each listed task: read `queue/pending/<task>.json` and the prompt in `prompts/`, write the answer to `queue/answers/run1/<task>.json` in the schema from `schema/`, quoting the source verbatim for every field, leaving unknown fields null and listing them in `uncertain`. Then start a fresh subagent with only the source text, prompt and schema for run 2. Then `make build`.
+`make extract` writes `queue/AGENT_TASKS.md` and one brief per task in `queue/agent/run1/` and `queue/agent/run2/` when no API key is set. Run 1: read each run-1 brief and write the answer file it names, quoting the source verbatim for every field, leaving unknown fields null and listing them in `uncertain`. Run 2: start a fresh subagent per batch, give it only the run-2 briefs, and tell it to reply with the file paths it wrote and nothing else. Its summary would otherwise reach the session doing run 1 and the runs would no longer be independent. If a run-2 summary does reach you before your run 1 is done, hand the remaining run-1 briefs to fresh subagents too. Never read `queue/answers/run2/` before your run 1 is written. Then `make build`.
 
 ## Checks before committing
 

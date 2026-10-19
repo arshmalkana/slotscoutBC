@@ -1,11 +1,12 @@
-import { join } from "node:path";
+import { renameSync } from "node:fs";
+import { basename, join } from "node:path";
 import { capturePage, closeBrowser, type Capture } from "../lib/capture.js";
 import { fetchBuffer } from "../lib/http.js";
 import { addFile, clearFailure, fail, saveManifest, setSource, type Manifest } from "../lib/manifest.js";
 import { P, monthDir } from "../lib/paths.js";
 import { pdfToText } from "../lib/pdf.js";
 import { config } from "../lib/config.js";
-import { log, readJson, readJsonIf, rel, sha256, writeJson, writeText } from "../lib/util.js";
+import { ensureDir, listFiles, log, readJson, readJsonIf, rel, sha256, writeJson, writeText } from "../lib/util.js";
 
 /**
  * Bylaw finder (Addendum A 6.3, 10.3 step 9): opens each local government's website in the
@@ -140,10 +141,20 @@ async function findSite(m: Manifest, site: BylawSite): Promise<BylawFind> {
       if (seen.has(c.href) || find.documents.length >= 4) continue;
       seen.add(c.href);
       try {
-        if (/\.pdf($|\?)/i.test(c.href)) await download(m, find, dir, c.text || "bylaw", c.href);
+        if (/\.?pdf($|\?)/i.test(c.href)) await download(m, find, dir, c.text || "bylaw", c.href);
         else {
-          const page = await visit(c.href, `doc-${seen.size}`);
-          const pdfs = page.links.filter((l) => /\.pdf($|\?)/i.test(l.href) && (FIREARM.test(l.text) || FIREARM.test(l.href) || BYLAW_LINK.test(l.text)));
+          let page: Capture;
+          try {
+            page = await visit(c.href, `doc-${seen.size}`);
+          } catch (e) {
+            // A link that starts a download is a file, not a page: fetch it directly (robots.txt still applies).
+            if (/Download is starting/i.test((e as Error).message)) {
+              await download(m, find, dir, c.text || "bylaw", c.href);
+              continue;
+            }
+            throw e;
+          }
+          const pdfs = page.links.filter((l) => /\.?pdf($|\?)/i.test(l.href) && (FIREARM.test(l.text) || FIREARM.test(l.href) || BYLAW_LINK.test(l.text)));
           for (const p of pdfs.slice(0, 3)) if (!seen.has(p.href)) (seen.add(p.href), await download(m, find, dir, p.text || c.text, p.href));
           if (!pdfs.length && FIREARM.test(page.title)) find.documents.push({ title: page.title, url: page.finalUrl, file: rel(page.htmlFile), sha256: page.htmlSha256, textFile: rel(page.textFile), bytes: 0 });
         }
@@ -159,17 +170,33 @@ async function findSite(m: Manifest, site: BylawSite): Promise<BylawFind> {
     find.note += msg;
   }
   find.services = [...new Set(find.services)];
+  keepEvidenceOnly(dir);
   writeJson(join(dir, "find.json"), find);
   return find;
+}
+
+/**
+ * Navigation pages are kept as text plus their capture record (URL, time, hashes); only pages a
+ * bylaw document came from keep the full HTML and screenshot in git (Addendum A 6.3 evidence).
+ * The rest move to pages/large/, which git ignores.
+ */
+export function keepEvidenceOnly(dir: string): void {
+  const pages = join(dir, "pages");
+  for (const f of listFiles(pages, (x) => /\.(html|jpg)$/.test(x) && !x.includes("/large/") && !/\/doc-\d+\./.test(x))) {
+    ensureDir(join(pages, "large"));
+    renameSync(f, join(pages, "large", basename(f)));
+  }
 }
 
 export async function pullBylaws(m: Manifest, opts: { force?: boolean; only?: string[] } = {}): Promise<BylawFind[]> {
   const all = readJson<{ sites: BylawSite[] }>(join(P.data, "bylaw-sites.json")).sites;
   const picked = (opts.only ?? []).filter((o) => o.includes(":"));
   const sites = picked.length ? all.filter((s) => picked.includes(s.key)) : all;
-  const results: BylawFind[] = [];
   const doneFile = join(monthDir(m.month), "bylaws", "finds.json");
-  const previous = new Map((opts.force ? [] : readJsonIf<BylawFind[]>(doneFile, [])).map((f) => [f.key, f]));
+  const earlier = readJsonIf<BylawFind[]>(doneFile, []);
+  const previous = new Map((opts.force ? [] : earlier).map((f) => [f.key, f]));
+  // Sites not picked this time keep their earlier result.
+  const results: BylawFind[] = earlier.filter((f) => !sites.some((s) => s.key === f.key));
   try {
     for (const site of sites) {
       const prev = previous.get(site.key);
@@ -190,7 +217,7 @@ export async function pullBylaws(m: Manifest, opts: { force?: boolean; only?: st
     await closeBrowser();
   }
   const found = results.filter((r) => r.status === "found").length;
-  setSource(m, "bylaws", { status: found === sites.length ? "ok" : found ? "partial" : "failed", detail: `${found} of ${sites.length} starter-set jurisdictions with a bylaw document found; the rest need a person`, at: new Date().toISOString() });
+  setSource(m, "bylaws", { status: found === all.length ? "ok" : found ? "partial" : "failed", detail: `${found} of ${all.length} starter-set jurisdictions with a bylaw document found; the rest need a person`, at: new Date().toISOString() });
   saveManifest(m);
   return results;
 }

@@ -1,0 +1,36 @@
+{
+  "key": "muni:District of Hope",
+  "name": "District of Hope",
+  "website": "https://hope.ca",
+  "status": "not_found",
+  "checkedAt": "2026-10-19T17:33:12.911Z",
+  "pages": [
+    {
+      "url": "https://hope.ca/",
+      "title": "Hope, BC",
+      "status": 200,
+      "capture": "raw/2026-10/bylaws/district-of-hope/pages/home.txt"
+    },
+    {
+      "url": "https://hope.ca/bylaws-directory",
+      "title": "Bylaw Directory - Hope, BC",
+      "status": 200,
+      "capture": "raw/2026-10/bylaws/district-of-hope/pages/bylaws-1.txt"
+    },
+    {
+      "url": "https://hope.ca/bylaw-animal-control",
+      "title": "Bylaw Enforcement & Animal Control - Hope, BC",
+      "status": 200,
+      "capture": "raw/2026-10/bylaws/district-of-hope/pages/bylaws-2.txt"
+    },
+    {
+      "url": "https://hope.ca/official-community-plan-and-zoning-bylaw",
+      "title": "Official Community Plan & Zoning Bylaw - Hope, BC",
+      "status": 200,
+      "capture": "raw/2026-10/bylaws/district-of-hope/pages/bylaws-3.txt"
+    }
+  ],
+  "documents": [],
+  "services": [],
+  "note": "bylaw page https://hope.ca/uploads/dm/86976/Good_Neighbour_Bylaw_consolidated_to_Dec._2023: page.goto: Download is starting\nCall log:\n  - navigating to \"https://hope.ca/uploads/dm/86976/Good_Neighbour_Bylaw_consolidated_to_Dec._2023\", waiting until \"domcontentloaded\"\n. bylaw page https://hope.ca/uploads/dm/86972/Dog_Responsibility_Bylaw: page.goto: Download is starting\nCall log:\n  - navigating to \"https://hope.ca/uploads/dm/86972/Dog_Responsibility_Bylaw\", waiting until \"domcontentloaded\"\n. No firearm or discharge bylaw link found in 4 page(s) of the site's bylaw section; a person checks the bylaw library."
+}
