@@ -1,6 +1,6 @@
 {
-  "month": "2026-10",
-  "updatedAt": "2026-10-19T18:05:08.017Z",
+  "month": "2026-10-dryrun",
+  "updatedAt": "2026-10-19T19:36:59.582Z",
   "extractor": "agent",
   "autopublish": {
     "configured": false,
@@ -8,8 +8,8 @@
     "goldItems": 0
   },
   "pull": {
-    "startedAt": "2026-10-19T16:53:43.915Z",
-    "updatedAt": "2026-10-19T18:03:28.531Z",
+    "startedAt": "2026-10-19T18:08:14.056Z",
+    "updatedAt": "2026-10-19T19:34:00.907Z",
     "sources": {
       "bcparks_advisories": {
         "status": "skipped",
@@ -19,13 +19,21 @@
         "status": "skipped",
         "detail": "planned source, not pulled yet"
       },
-      "wmu": {
-        "status": "ok",
-        "detail": "225 features, count matches the server"
+      "closed_areas": {
+        "status": "awaiting_person",
+        "detail": "0 of 6 regulations from copies a person saved in inbox/bclaws; waiting for 76_84_00_multi, 196_99, 190_84, 180_90, 16_2004, 38_2005; 1 unconfirmed excerpt(s) in inbox/excerpts"
       },
-      "federal_protected": {
+      "road_notices": {
         "status": "ok",
-        "detail": "21 features, count matches the server"
+        "detail": "22 of 22 district pages"
+      },
+      "dm_notices": {
+        "status": "ok",
+        "detail": "46 of 46 linked notice PDFs"
+      },
+      "bylaws": {
+        "status": "partial",
+        "detail": "5 of 34 starter-set jurisdictions with a bylaw document found; the rest need a person"
       },
       "province": {
         "status": "ok",
@@ -103,25 +111,9 @@
         "status": "ok",
         "detail": "286301 features, count matches the server"
       },
-      "closed_areas": {
-        "status": "awaiting_person",
-        "detail": "0 of 6 regulations from copies a person saved in inbox/bclaws; waiting for 76_84_00_multi, 196_99, 190_84, 180_90, 16_2004, 38_2005; 1 unconfirmed excerpt(s) in inbox/excerpts"
-      },
-      "road_notices": {
-        "status": "ok",
-        "detail": "22 of 22 district pages"
-      },
-      "dm_notices": {
-        "status": "ok",
-        "detail": "24 of 24 linked notice PDFs"
-      },
       "dra_roads": {
         "status": "ok",
         "detail": "1882029 features, count matches the server"
-      },
-      "bylaws": {
-        "status": "partial",
-        "detail": "3 of 34 starter-set jurisdictions with a bylaw document found; the rest need a person"
       },
       "cutblocks": {
         "status": "ok",
@@ -130,6 +122,10 @@
       "mvpr": {
         "status": "ok",
         "detail": "347 features, count matches the server"
+      },
+      "wmu": {
+        "status": "ok",
+        "detail": "225 features, count matches the server"
       },
       "community_watersheds": {
         "status": "ok",
@@ -166,6 +162,10 @@
       "nr_districts": {
         "status": "ok",
         "detail": "23 features, count matches the server"
+      },
+      "federal_protected": {
+        "status": "ok",
+        "detail": "21 features, count matches the server"
       }
     },
     "layers": 33,
@@ -184,14 +184,14 @@
     ]
   },
   "changes": {
-    "comparedWith": null,
-    "new": 396,
+    "comparedWith": "2026-10",
+    "new": 42,
     "changed": 0,
     "removed": 0,
-    "unchanged": 0
+    "unchanged": 396
   },
   "extraction": {
-    "tasks": 61,
+    "tasks": 22,
     "waiting": 0
   },
   "rules": {
@@ -201,9 +201,9 @@
     "retired": 0
   },
   "review": {
-    "thisMonth": 70,
-    "open": 70,
-    "openAllMonths": 70,
+    "thisMonth": 22,
+    "open": 22,
+    "openAllMonths": 92,
     "looserOpen": 0
   },
   "tests": {
@@ -211,11 +211,5 @@
     "regressionPassed": true,
     "falseGreen": false
   },
-  "release": {
-    "id": "2026-10-rc",
-    "publishable": false,
-    "missing": [
-      "legal reviewer sign-off (make signoff BY=<name>)"
-    ]
-  }
+  "release": null
 }

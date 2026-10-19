@@ -1,0 +1,100 @@
+{
+  "item_id": "dm-notice-10bab6f81a",
+  "month": "2026-10-dryrun",
+  "kind": "dm_notice",
+  "title": "District Manager notice DSI-66e61e93-gate_location_map_braden_mainline_and_tr11",
+  "change_type": "stricter",
+  "decision": "Compare the District Manager notice with the web notice and correct the store if they differ.",
+  "why": [
+    "no web notice on the DSI page matches file section (none read)"
+  ],
+  "source": {
+    "text": "TR11\n   Station 0+200\n\n\n\n\nBraden Mainline\nStation 0+100\n\n\n\n\n                                                     TFL46\n                                                  Braden Area\n                                                 Gate Locations\n                                         Braden Mainline - Station 0+100\n                                              TR11 - Station 0+200\n\n\n                                      Forest Roads             £ Gate Location\n                                      - Mainline               (i)   Blockade Location\n                                             Secondary Road          Swamp\n                                            Overgrown Road           Lake/River\n\n                   2   4 Kilometers                           L��J TFL 46 Boundary\n                                      1:75,000                                    May 27, 2021",
+    "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/gate_location_map_braden_mainline_and_tr11.pdf",
+    "version": "2026-10-19T18:10:14.901Z",
+    "confirmed": true,
+    "file": "raw/2026-10-dryrun/dm_notices/DSI-66e61e93-gate_location_map_braden_mainline_and_tr11.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "road_notice-72eea8feb8ae",
+      "run": 1,
+      "mode": "agent",
+      "model": "claude-opus-5-5 (Claude Code)",
+      "prompt_version": "road_notice.v1",
+      "schema_id": "road_notice.v1",
+      "produced_at": "2026-10-19T19:17:26Z",
+      "answer": {
+        "road": {
+          "name": "Braden Mainline",
+          "file_section": null
+        },
+        "posted_on": "2021-05-27",
+        "rescinded": false,
+        "points": [
+          {
+            "km": 0.1,
+            "km_end": null,
+            "extent": "at",
+            "status": "gated",
+            "quote": "Braden Mainline - Station 0+100"
+          }
+        ],
+        "quotes": [
+          {
+            "field": "road.name",
+            "quote": "Braden Mainline"
+          },
+          {
+            "field": "posted_on",
+            "quote": "May 27, 2021"
+          }
+        ],
+        "uncertain": [
+          "road.file_section"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "road_notice-72eea8feb8ae",
+      "run": 2,
+      "mode": "agent",
+      "model": "claude-opus-5-5 (Claude Code subagent)",
+      "prompt_version": "road_notice.v1",
+      "schema_id": "road_notice.v1",
+      "produced_at": "2026-10-19T19:19:25Z",
+      "answer": {
+        "road": {
+          "name": "Braden Mainline",
+          "file_section": null
+        },
+        "posted_on": null,
+        "rescinded": false,
+        "points": [
+          {
+            "km": 0.1,
+            "km_end": null,
+            "extent": "at",
+            "status": "gated",
+            "quote": "Braden Mainline - Station 0+100"
+          }
+        ],
+        "quotes": [
+          {
+            "field": "road.name",
+            "quote": "Braden Mainline - Station 0+100"
+          }
+        ],
+        "uncertain": [
+          "road.file_section",
+          "posted_on",
+          "points"
+        ]
+      }
+    }
+  },
+  "disagreements": [],
+  "status": "open",
+  "created": "2026-10-19T19:36:29.104Z",
+  "updated": "2026-10-19T19:36:29.104Z"
+}

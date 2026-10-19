@@ -1,0 +1,33 @@
+{
+  "key": "muni:Village of Belcarra",
+  "name": "Village of Belcarra",
+  "website": "https://belcarra.ca",
+  "status": "found",
+  "checkedAt": "2026-10-19T18:28:52.321Z",
+  "pages": [
+    {
+      "url": "https://belcarra.ca/",
+      "title": "Village of Belcarra - A Village between forest and sea.",
+      "status": 200,
+      "capture": "raw/2026-10-dryrun/bylaws/village-of-belcarra/pages/home.txt"
+    },
+    {
+      "url": "https://belcarra.ca/bylaws",
+      "title": "Bylaws - Village of Belcarra",
+      "status": 200,
+      "capture": "raw/2026-10-dryrun/bylaws/village-of-belcarra/pages/bylaws-1.txt"
+    }
+  ],
+  "documents": [
+    {
+      "title": "Firearms Control Bylaw No. 498-2016",
+      "url": "https://belcarra.ca/assets/media/2019/05/vob-bylaw-498_firearms-control.pdf",
+      "file": "raw/2026-10-dryrun/bylaws/village-of-belcarra/firearms-control-bylaw-no-498-2016-42e9b2.pdf",
+      "sha256": "31c1c9762b89c05bd946f7fa422aba4c86157d3c1eb773c5fd4fbcd8d68d5f7f",
+      "textFile": "raw/2026-10-dryrun/bylaws/village-of-belcarra/firearms-control-bylaw-no-498-2016-42e9b2.txt",
+      "bytes": 603978
+    }
+  ],
+  "services": [],
+  "note": ""
+}

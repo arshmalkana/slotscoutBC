@@ -1,0 +1,99 @@
+{
+  "item_id": "dm-notice-e376f4af4e",
+  "month": "2026-10-dryrun",
+  "kind": "dm_notice",
+  "title": "District Manager notice DSI-c4f696e7-map_tfl46_bugaboo_main_gate_location",
+  "change_type": "stricter",
+  "decision": "Compare the District Manager notice with the web notice and correct the store if they differ.",
+  "why": [
+    "no web notice on the DSI page matches file section (none read)"
+  ],
+  "source": {
+    "text": "Bugaboo M/L sta. 0+100\n                                                           Gate or Access Restriction\n                                                           Road Permit R05413\n\nI\n\\I\n    '              I\n     ......... _,...)\n\n\n\n\n           ,   _.,,,,,--\n                           -­   ''\\'\n          /                            '\n          I\n\n\n\n     I\n         I                             \\\n                                           '\n                                               ,\n    ,'                                         \\   I\n\n                                                   \\I\n                                                       \\\n\n\n                                     I\n                                           /'4669\n                                     I\n                                    I\n                                   I\n                             ,'\n                            / -=�..\n\n\n\n\n                        �The           Teal-Jones Group,.\n                                      TFL 46\n                            Bugaboo M/L Gate / Access\n                               Restriction Location\n\n              Forest Roads                                   A     Gate Location\n\n\n                                                              *\n              - Mainline\n\n              = Secondary Road                                     Point of Interest\n\n              -- Overgrown Road                             D      Cutblocks\n\n                                                                   Lake/River\n    1:50,000                                                                            0   0.5        2 Kilometers\n    October 25, 2021                                        [��J TFL 46 Boundary        I         I_   I",
+    "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/map_tfl46_bugaboo_main_gate_location.pdf",
+    "version": "2026-10-19T18:10:16.900Z",
+    "confirmed": true,
+    "file": "raw/2026-10-dryrun/dm_notices/DSI-c4f696e7-map_tfl46_bugaboo_main_gate_location.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "road_notice-8a0c3486f8a0",
+      "run": 1,
+      "mode": "agent",
+      "model": "claude-opus-5-5 (Claude Code)",
+      "prompt_version": "road_notice.v1",
+      "schema_id": "road_notice.v1",
+      "produced_at": "2026-10-19T19:17:26Z",
+      "answer": {
+        "road": {
+          "name": "Bugaboo M/L",
+          "file_section": null
+        },
+        "posted_on": "2021-10-25",
+        "rescinded": false,
+        "points": [
+          {
+            "km": 0.1,
+            "km_end": null,
+            "extent": "at",
+            "status": "gated",
+            "quote": "Bugaboo M/L sta. 0+100"
+          }
+        ],
+        "quotes": [
+          {
+            "field": "road.name",
+            "quote": "Bugaboo M/L"
+          },
+          {
+            "field": "posted_on",
+            "quote": "October 25, 2021"
+          }
+        ],
+        "uncertain": [
+          "road.file_section"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "road_notice-8a0c3486f8a0",
+      "run": 2,
+      "mode": "agent",
+      "model": "claude-opus-5-5 (Claude Code subagent)",
+      "prompt_version": "road_notice.v1",
+      "schema_id": "road_notice.v1",
+      "produced_at": "2026-10-19T19:19:25Z",
+      "answer": {
+        "road": {
+          "name": "Bugaboo M/L",
+          "file_section": null
+        },
+        "posted_on": null,
+        "rescinded": false,
+        "points": [
+          {
+            "km": 0.1,
+            "km_end": null,
+            "extent": "at",
+            "status": "gated",
+            "quote": "Bugaboo M/L sta. 0+100"
+          }
+        ],
+        "quotes": [
+          {
+            "field": "road.name",
+            "quote": "Bugaboo M/L sta. 0+100"
+          }
+        ],
+        "uncertain": [
+          "road.file_section",
+          "posted_on"
+        ]
+      }
+    }
+  },
+  "disagreements": [],
+  "status": "open",
+  "created": "2026-10-19T19:36:29.117Z",
+  "updated": "2026-10-19T19:36:29.117Z"
+}

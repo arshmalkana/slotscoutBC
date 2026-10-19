@@ -1,0 +1,86 @@
+{
+  "item_id": "dm-notice-f19331c6a9",
+  "month": "2026-10-dryrun",
+  "kind": "dm_notice",
+  "title": "District Manager notice DSC-335a98d1-a94817_bk_forest_service_road",
+  "change_type": "unclear",
+  "decision": "Compare the District Manager notice with the web notice and correct the store if they differ.",
+  "why": [
+    "no web notice on the DSC page matches file section (none read)"
+  ],
+  "source": {
+    "text": "Road Construction Notice:\nB&K Forest Service Road\nJune 2, 2026\n\n\n\nB&K Forest Service Road\nThe B&K (Sechelt–Roberts) Forest Service Road (FSR) is located northeast of Mount\nElphinstone Provincial Park. This dirt and gravel road is popular with outdoor enthusiasts\nseeking access to the Mount Elphinstone area. The proposed road construction is\nadjacent to Timber Sale Licence (TSL) A94817 (Mount Elphinstone TSL A94817 Factsheet)\nand will involve approximately 4.2 km of new FSR. The project is intended to shift\nindustrial traffic away from sections of the existing FSR that are heavily used by the\npublic, improving long-term safety and access for recreational users.\n\n\n\n\nRoad Construction Details\n  •   Under the guidance of a professional hydrologist, BCTS conducted water quality\n      monitoring on Roberts Creek for approximately one year and will continue\n      monitoring throughout road construction.\n         o All recommendations from the professional hydrology reports were\n           incorporated into the road design.\n\n                                                                                 1|P age\n\f        o All drainage structures were designed using terrain and hydrology\n          assessments that account for climate change and long-term planning.\n • Bridge design and installation will be overseen by a professional engineer and an\n    environmental monitor, who conducts terrain and hydrology assessments to\n    mitigate any soil or terrain disturbance.\n • Road construction designs incorporate enhanced overland construction\n    techniques to minimize ground water interception.\n • Modern road building practices and intensive water quality monitoring and\n    oversight will ensure consistency with the development plan.\n  • Community engagement on this road construction project occurred between 2022\n    and 2026 and included community meetings, government to government\n    meetings and information sharing through several annual operating plans (4) and\n    Forest Operations Maps (3).\n  • Residents with questions, concerns or comments can reach out to:\n    BCTS.SunshineCoast@gov.bc.ca.\n\n\nAbout BC Timber Sales\n •   BC Timber Sales (BCTS) was established in 2003 to provide benchmark costs and\n     prices from the harvest of Crown/public timber in British Columbia.\n •   Data from BCTS operations is used to help determine the market value of timber\n     harvested from public land and ensures British Columbians receive fair value from\n     their timber resources.\n •   BCTS manages about 20% of the provincial allowable annual cut through 12\n     business areas operating in 33 communities.\n •   On average, over the next three years, BCTS activities will directly support over\n     4,600 well-paying jobs and another 4,200 indirect jobs in B.C.\n •   BCTS activities directly contribute to rural economies each year.\n •   BCTS managed forests are 100% certified under the Sustainable Forestry\n\n\n     Public comments related to BCTS operations on the Sunshine Coast can be addressed to:\n                                       Ministry of Forests\n                   BC Timber Sales - Chinook Business Area, Sunshine Coast\n                                      7077 Duncan Street\n                                  Powell River, B.C. V8A 1W1\n                                BCTS.SunshineCoast@gov.bc.ca\n\n\n\n\n                                                                                      2|P age",
+    "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/forestry/bc-timber-sales/updates-information-releases/a94817_bk_forest_service_road.pdf",
+    "version": "2026-10-19T18:10:34.897Z",
+    "confirmed": true,
+    "file": "raw/2026-10-dryrun/dm_notices/DSC-335a98d1-a94817_bk_forest_service_road.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "road_notice-44b537c454e9",
+      "run": 1,
+      "mode": "agent",
+      "model": "claude-opus-5-5 (Claude Code)",
+      "prompt_version": "road_notice.v1",
+      "schema_id": "road_notice.v1",
+      "produced_at": "2026-10-19T19:18:00Z",
+      "answer": {
+        "road": {
+          "name": "B&K Forest Service Road",
+          "file_section": null
+        },
+        "posted_on": "2026-06-02",
+        "rescinded": false,
+        "points": [],
+        "quotes": [
+          {
+            "field": "road.name",
+            "quote": "B&K Forest Service Road"
+          },
+          {
+            "field": "posted_on",
+            "quote": "June 2, 2026"
+          }
+        ],
+        "uncertain": [
+          "road.file_section"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "road_notice-44b537c454e9",
+      "run": 2,
+      "mode": "agent",
+      "model": "claude-opus-5-5 (Claude Code subagent)",
+      "prompt_version": "road_notice.v1",
+      "schema_id": "road_notice.v1",
+      "produced_at": "2026-10-19T19:19:25Z",
+      "answer": {
+        "road": {
+          "name": "B&K Forest Service Road",
+          "file_section": null
+        },
+        "posted_on": "2026-06-02",
+        "rescinded": false,
+        "points": [],
+        "quotes": [
+          {
+            "field": "road.name",
+            "quote": "Road Construction Notice: B&K Forest Service Road"
+          },
+          {
+            "field": "posted_on",
+            "quote": "June 2, 2026"
+          }
+        ],
+        "uncertain": [
+          "road.file_section"
+        ]
+      }
+    }
+  },
+  "disagreements": [],
+  "status": "open",
+  "created": "2026-10-19T19:36:29.075Z",
+  "updated": "2026-10-19T19:36:29.075Z"
+}

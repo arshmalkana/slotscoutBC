@@ -1,0 +1,36 @@
+{
+  "key": "muni:City of Vancouver",
+  "name": "City of Vancouver",
+  "website": "https://vancouver.ca",
+  "status": "not_found",
+  "checkedAt": "2026-10-19T18:27:25.357Z",
+  "pages": [
+    {
+      "url": "https://vancouver.ca/",
+      "title": "Home | City of Vancouver",
+      "status": 200,
+      "capture": "raw/2026-10-dryrun/bylaws/city-of-vancouver/pages/home.txt"
+    },
+    {
+      "url": "https://vancouver.ca/your-government/find-a-bylaw.aspx",
+      "title": "Attention Required! | Cloudflare",
+      "status": 403,
+      "capture": "raw/2026-10-dryrun/bylaws/city-of-vancouver/pages/bylaws-1.txt"
+    },
+    {
+      "url": "https://vancouver.ca/streets-transportation/parking-tips-regulations-and-bylaws.aspx",
+      "title": "Attention Required! | Cloudflare",
+      "status": 403,
+      "capture": "raw/2026-10-dryrun/bylaws/city-of-vancouver/pages/bylaws-2.txt"
+    },
+    {
+      "url": "https://vancouver.ca/home-property-development/zoning-and-development-bylaw.aspx",
+      "title": "Attention Required! | Cloudflare",
+      "status": 403,
+      "capture": "raw/2026-10-dryrun/bylaws/city-of-vancouver/pages/bylaws-3.txt"
+    }
+  ],
+  "documents": [],
+  "services": [],
+  "note": "No firearm or discharge bylaw link found in 4 page(s) of the site's bylaw section; a person checks the bylaw library."
+}
