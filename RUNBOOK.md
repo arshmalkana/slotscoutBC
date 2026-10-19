@@ -1,6 +1,6 @@
 # SlotScout runbook
 
-Every command can be re-run safely and picks up where it stopped. Run them on the host (`make <cmd>`) or in the ingest container (`docker compose run --rm ingest make <cmd>`). Output lands in this repository, so commit after each step.
+Every command can be re-run safely and picks up where it stopped. Run them on the host (`make <cmd>`) or in the ingest container (`docker compose run --rm ingest make <cmd>`, or `make in-docker CMD=<cmd>`). Output lands in this repository, so commit after each step.
 
 ## Each month (Addendum A 10.5)
 
@@ -11,7 +11,7 @@ Open Claude Code and say "Run the monthly update in RUNBOOK.md", or let `api` mo
 | 1 | `make pull` | Pulls every GIS layer (count + SHA-256), every district road page and linked notice PDF, every bylaw page (headless browser, robots.txt respected), and copies new files from `inbox/` | `raw/<YYYY-MM>/manifest.json` lists every source; failures are logged, not hidden |
 | 2 | `make split` | Splits text into units (one regulation section, bylaw clause or road notice), normalises and hashes each, and writes the change report | `reports/<YYYY-MM>-changes.md` |
 | 3 | `make queue` | Rule-based parsing first; anything free-form or needing a cross-check becomes a task in `queue/pending/` | |
-| 4 | `make extract` | `api` mode: two independent model runs per task. `agent` mode: writes `queue/AGENT_TASKS.md` for Claude Code (run 1) and a fresh subagent (run 2) | every task has run1 and run2 answers |
+| 4 | `make extract` | `api` mode: two independent model runs per task. `agent` mode: writes `queue/AGENT_TASKS.md` and one brief per task in `queue/agent/run1/` (Claude Code) and `queue/agent/run2/` (a fresh subagent given only that brief) | every task has run1 and run2 answers |
 | 5 | `make build` | Quote checks, run agreement, gazetteer lookups, geometry, validation; classifies each change (cosmetic, stricter, looser, unclear, new source) | candidates in `rules/`, items in `review/<YYYY-MM>/` |
 | 6 | `make validate` | Schema checks for every register and rule file | no errors |
 | 7 | `make review-packet` | Writes `review/<YYYY-MM>/index.html`: each item with its source quote, map, both runs and what changed | |

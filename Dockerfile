@@ -1,5 +1,7 @@
 # SlotScout: one container serving the API and the built web app.
 FROM node:22-alpine AS build
+# Optional, for builds behind a proxy.
+ARG HTTPS_PROXY
 WORKDIR /app
 COPY package.json package-lock.json ./
 COPY packages/engine/package.json packages/engine/
@@ -11,6 +13,7 @@ COPY . .
 RUN npm run build
 
 FROM node:22-alpine
+ARG HTTPS_PROXY
 ENV NODE_ENV=production PORT=8787 HOST=0.0.0.0
 WORKDIR /app
 COPY package.json package-lock.json ./

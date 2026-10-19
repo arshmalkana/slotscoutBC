@@ -4,12 +4,12 @@ The Wildlife Act Closed Areas Regulation (B.C. Reg. 76/84) and most local firear
 
 ## Where the data goes
 
-* `data/digitised/closed-areas.geojson`: Closed Areas Regulation areas. `rule_id` starts with the schedule's rule: `W5-085` is Schedule 5, section 85.
-* `data/digitised/bylaw-zones.geojson`: bylaw zones for jurisdictions whose bylaw allows shooting in some zones. `rule_id` starts with `L1-`, `L2-` or `L3-`.
+* `rules/<rule_id>.geojson`: one file per rule ID, holding every version of that area (Addendum A 10.2). `rule_id` starts with the schedule's rule: `W5-085` is Schedule 5, section 85; bylaw zones start with `L1-`, `L2-` or `L3-`. The pipeline writes AI-prefilled candidates here; a digitiser can also add a feature by hand with `extraction_method: "manual"` and `status: "candidate"`.
+* `rules/road-notices.json` and `rules/bylaws/`: the road notice store and bylaw rule lists the pipeline keeps.
 * `data/wildlife-coverage.json`: per hunting region status. A region only stops being grey when its status is `reviewed` and `confirmedOn` is within 45 days.
 * `data/bylaws.json`: per jurisdiction status, bylaw link and reviewed summary (`prohibited`, `permitted_with_zones` or `no_bylaw`).
 
-Features are WGS84 GeoJSON polygons. Run `npm run validate:data` before committing.
+Features are WGS84 GeoJSON polygons. Run `make validate` before committing. Only a person approves a feature (`make approve ITEM=<id> BY=<initials>` from the review packet), which sets `status: "approved"`, `reviewed_by` and `reviewed_on`.
 
 ## Feature schema (PRD 5.2)
 
@@ -33,6 +33,8 @@ Every field is required.
 | `reviewed_by`, `reviewed_on` | A second person, never the digitiser; `null` until reviewed |
 | `confidence` | `high`, `medium`, `low` |
 | `notes` | Ambiguities and how they were resolved |
+
+Addendum A 9 adds: `extraction_method` (`manual`, `rule`, `ai`), `model_version`, `prompt_version`, `quotes` (field to exact words), `run_agreement`, plus `status` (`candidate`, `provisional`, `approved`, `retired`), `change_type` (`new`, `stricter`, `looser`, `unclear`, `cosmetic`), `version` and `unit_hash`. A candidate holds its area grey; a looser candidate leaves the older, stricter approved version live; a provisional feature may only restrict.
 
 Period endpoints are `MM-DD` or a named rule: `labour_day`, `saturday_after_labour_day`, `thanksgiving`, or `1st_monday_of_september` style (`1st` to `4th` or `last`).
 
