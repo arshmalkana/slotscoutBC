@@ -260,14 +260,14 @@ export async function buildApp(opts: { logger?: boolean } = {}): Promise<Fastify
   if (existsSync(join(config.webDist, "index.html"))) {
     await app.register(fastifyStatic, {
       root: config.webDist,
-      wildcard: false,
+      // Wildcard serving picks up a fresh build without a restart; misses fall through to index.html below.
       setHeaders: (res, path) => {
         if (/\/assets\//.test(path)) res.header("Cache-Control", "public, max-age=31536000, immutable");
         else res.header("Cache-Control", "no-cache");
       },
     });
     app.setNotFoundHandler((req, reply) => {
-      if (req.url.startsWith("/v1/")) return reply.code(404).send({ error: "not found" });
+      if (req.url.startsWith("/v1/") || req.url.startsWith("/assets/")) return reply.code(404).send({ error: "not found" });
       return reply.type("text/html").sendFile("index.html");
     });
   } else {

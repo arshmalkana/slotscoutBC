@@ -276,6 +276,8 @@ export interface Light {
   ruleIds: string[];
   /** True for lights that inform but never change the verdict (imagery). */
   informational?: boolean;
+  /** True when a red or amber light also has checks that could not be confirmed. */
+  partlyUnknown?: boolean;
 }
 
 export interface Sector {

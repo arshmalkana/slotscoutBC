@@ -180,6 +180,19 @@ async function boundaries(q: string): Promise<SearchResult[]> {
   return results;
 }
 
+/** Drop repeats within 1 km; tell apart same-named places elsewhere by their position. */
+function dedupe(list: SearchResult[]): SearchResult[] {
+  const out: SearchResult[] = [];
+  for (const r of list) {
+    const same = out.filter((o) => o.label === r.label && o.kind === r.kind);
+    if (same.some((o) => distanceM(o, r) < 1000)) continue;
+    out.push(r);
+  }
+  const counts = new Map<string, number>();
+  for (const r of out) counts.set(`${r.kind}|${r.label}`, (counts.get(`${r.kind}|${r.label}`) ?? 0) + 1);
+  return out.map((r) => ((counts.get(`${r.kind}|${r.label}`) ?? 0) > 1 ? { ...r, sublabel: `${r.sublabel} near ${r.lat.toFixed(2)}, ${r.lon.toFixed(2)}` } : r));
+}
+
 export async function search(qRaw: string): Promise<{ results: SearchResult[]; errors: string[] }> {
   const q = qRaw.trim().slice(0, 120);
   if (!q) return { results: [], errors: [] };
@@ -207,7 +220,7 @@ export async function search(qRaw: string): Promise<{ results: SearchResult[]; e
     else errors.push(name);
   });
   const order = looksLikeRoad ? ["roads", "places", "rec sites", "boundaries", "addresses"] : ["places", "rec sites", "roads", "boundaries", "addresses"];
-  const results = order.flatMap((k) => byKind[k] ?? []).slice(0, 12);
+  const results = dedupe(order.flatMap((k) => byKind[k] ?? [])).slice(0, 12);
   if (!coords.ok && /\d/.test(q) && !results.length) errors.push(coords.error);
   return { results, errors };
 }

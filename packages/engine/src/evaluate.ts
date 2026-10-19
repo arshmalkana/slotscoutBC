@@ -996,7 +996,7 @@ function checkSafety(ctx: Context): void {
   const roads = ctx.near("dra_roads", ctx.radius, (q) => !["ferry", "water", "proposed", "runway"].includes(str(q.ROAD_CLASS).toLowerCase()));
   const fsr = ctx.near("fsr_roads", ctx.radius);
   ctx.addHazard("dra_roads", roads, (q) => (str(q.ROAD_CLASS).toLowerCase() === "trail" ? "Trail" : "Road"), (q) => str(q.ROAD_NAME_FULL) || `${titleCase(str(q.ROAD_CLASS))} road`);
-  ctx.addHazard("fsr_roads", fsr, (q) => str(q.FILE_TYPE_DESCRIPTION) || "Resource road", fsrLabel);
+  ctx.addHazard("fsr_roads", fsr, () => "Resource road", fsrLabel);
   const rec = ctx.near("rec_sites", ctx.radius, recSite).concat(ctx.near("rec_trails", ctx.radius, recActive));
   const all = [
     ...roads.map((it) => ({ d: it.d, b: it.b, label: str(it.f.properties?.ROAD_NAME_FULL) || `${str(it.f.properties?.ROAD_CLASS)} road` })),
@@ -1235,7 +1235,8 @@ export function evaluate(input: EvaluationInput): SpotReport {
     const own = checks.filter((c) => c.light === l.id);
     let state = lightState(own);
     if (l.id === "imagery") state = img?.captureDate ? "green" : "grey";
-    return { id: l.id, label: l.label, state, ruleIds: own.map((c) => c.ruleId), informational: l.informational };
+    const partlyUnknown = (state === "red" || state === "amber") && own.some((c) => c.status === "unknown");
+    return { id: l.id, label: l.label, state, ruleIds: own.map((c) => c.ruleId), informational: l.informational, partlyUnknown };
   });
   const lightCounts: Record<VerdictState, number> = { red: 0, amber: 0, grey: 0, green: 0 };
   for (const l of lights) lightCounts[l.state]++;

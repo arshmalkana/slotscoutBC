@@ -60,7 +60,7 @@ export const MAP_LAYERS: MapLayer[] = [
     description: "Parks, conservancies, recreation areas, protected areas and ecological reserves.",
     ruleIds: ["P1", "P2"],
     typeName: "WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW",
-    style: { kind: "polygon", fill: "#6d28d9", fillOpacity: 0.28, stroke: "#5b21b6", strokeWidth: 1.2, hatch: "slash" },
+    style: { kind: "polygon", fill: "#6d28d9", fillOpacity: 0.2, stroke: "#5b21b6", strokeWidth: 1.4, hatch: "slash" },
     minzoom: 4,
     ttlMs: 12 * H,
     defaultOn: true,
