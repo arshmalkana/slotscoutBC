@@ -180,7 +180,7 @@ function MonthlyUpdate({ s }: { s: PipelineStatus }) {
   return (
     <>
       <p>
-        Month {s.month}, updated {dateTime(s.updatedAt)}. Every source is pulled, split into sections, clauses and notices, and compared with last month; only changed text is read again.{" "}
+        Month {s.month} (updated {dateTime(s.updatedAt)}). Every source is pulled, split into sections, clauses and notices, and compared with last month; only changed text is read again.{" "}
         {s.changes.comparedWith ? `Since ${s.changes.comparedWith}: ${s.changes.new} new, ${s.changes.changed} changed and ${s.changes.removed} removed units.` : `This is the first month: ${s.changes.new} units form the baseline.`}
       </p>
       <ul>
