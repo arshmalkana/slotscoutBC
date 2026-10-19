@@ -1,0 +1,660 @@
+{
+  "$comment": "Source register (PRD Appendix B). Every source has an owner, licence, access method, cadence and a freshness limit after which its checks turn grey. Layer names confirmed against the BC WFS GetCapabilities on 2026-10-19.",
+  "sources": [
+    {
+      "id": "province",
+      "name": "Province of BC boundary",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=ABMS_PROVINCE_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_PROVINCE_SP",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Yearly",
+      "freshnessHours": 9600,
+      "rules": [
+        "BC"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "bc_parks",
+      "name": "Provincial parks, ecological reserves and protected areas",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=TA_PARK_ECORES_PA_SVW",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Monthly",
+      "freshnessHours": 1080,
+      "rules": [
+        "P1",
+        "P2"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "national_parks",
+      "name": "National parks (Canada Lands)",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=CLAB_NATIONAL_PARKS",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_ADMIN_BOUNDARIES.CLAB_NATIONAL_PARKS",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Monthly",
+      "freshnessHours": 2160,
+      "rules": [
+        "F3"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "reserves",
+      "name": "Indian reserves (Canada Lands Survey System)",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=CLAB_INDIAN_RESERVES",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Monthly",
+      "freshnessHours": 2160,
+      "rules": [
+        "I1"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "treaty_lands",
+      "name": "Modern treaty settlement lands",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=FNT_TREATY_LAND_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.FNT_TREATY_LAND_SP",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Monthly",
+      "freshnessHours": 2160,
+      "rules": [
+        "I2"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "treaty_areas",
+      "name": "Treaty areas",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=FNT_TREATY_AREA_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.FNT_TREATY_AREA_SP",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Monthly",
+      "freshnessHours": 2160,
+      "rules": [
+        "I3"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "municipalities",
+      "name": "Municipalities",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=ABMS_MUNICIPALITIES_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Monthly",
+      "freshnessHours": 2160,
+      "rules": [
+        "L1"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "regional_districts",
+      "name": "Regional districts",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=ABMS_REGIONAL_DISTRICTS_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_REGIONAL_DISTRICTS_SP",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Monthly",
+      "freshnessHours": 2160,
+      "rules": [
+        "L2"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "electoral_areas",
+      "name": "Regional district electoral areas",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=ABMS_ELECTORAL_AREAS_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_ELECTORAL_AREAS_SP",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Monthly",
+      "freshnessHours": 2160,
+      "rules": [
+        "L2"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "local_trust_areas",
+      "name": "Islands Trust local trust areas",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=ABMS_LOCAL_TRUST_AREAS_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_LOCAL_TRUST_AREAS_SP",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Monthly",
+      "freshnessHours": 2160,
+      "rules": [
+        "L3"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "local_parks",
+      "name": "Local and regional greenspaces",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=GBA_LOCAL_REG_GREENSPACES_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_BASEMAPPING.GBA_LOCAL_REG_GREENSPACES_SP",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Monthly",
+      "freshnessHours": 2160,
+      "rules": [
+        "L4"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "rec_sites",
+      "name": "Recreation sites and interpretive forests",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=FTEN_RECREATION_POLY_SVW",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_FOREST_TENURE.FTEN_RECREATION_POLY_SVW",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Monthly",
+      "freshnessHours": 1080,
+      "rules": [
+        "P3",
+        "S2"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "rec_trails",
+      "name": "Recreation trails",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=FTEN_RECREATION_LINES_SVW",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_FOREST_TENURE.FTEN_RECREATION_LINES_SVW",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Monthly",
+      "freshnessHours": 1080,
+      "rules": [
+        "P3",
+        "S2"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "fire_restrictions",
+      "name": "Wildfire area restrictions",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=PROT_RESTRICTED_AREAS_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_LAND_AND_NATURAL_RESOURCE.PROT_RESTRICTED_AREAS_SP",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Hourly Apr 1 to Oct 31, daily otherwise",
+      "freshnessHours": 24,
+      "rules": [
+        "P4"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "fire_bans",
+      "name": "Fire bans and prohibitions",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=PROT_BANS_AND_PROHIBITIONS_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_LAND_AND_NATURAL_RESOURCE.PROT_BANS_AND_PROHIBITIONS_SP",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Hourly Apr 1 to Oct 31, daily otherwise",
+      "freshnessHours": 24,
+      "rules": [
+        "P5"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "fire_current",
+      "name": "Current fire perimeters",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=PROT_CURRENT_FIRE_POLYS_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_LAND_AND_NATURAL_RESOURCE.PROT_CURRENT_FIRE_POLYS_SP",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Hourly Apr 1 to Oct 31, daily otherwise",
+      "freshnessHours": 24,
+      "rules": [
+        "P4",
+        "S3"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "fire_history",
+      "name": "Historical fire perimeters",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=PROT_HISTORICAL_FIRE_POLYS_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_LAND_AND_NATURAL_RESOURCE.PROT_HISTORICAL_FIRE_POLYS_SP",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Monthly",
+      "freshnessHours": 8760,
+      "rules": [
+        "S3"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "parcels",
+      "name": "ParcelMap BC parcel fabric (owner type)",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=PMBC_PARCEL_FABRIC_POLY_SVW",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Monthly",
+      "freshnessHours": 1080,
+      "rules": [
+        "F4",
+        "O1",
+        "O2",
+        "O3",
+        "I1",
+        "FZ"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "fsr_roads",
+      "name": "Forest tenure road sections (FSR and road permits)",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=FTEN_ROAD_SECTION_LINES_SVW",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Monthly",
+      "freshnessHours": 1080,
+      "rules": [
+        "W6",
+        "P6",
+        "S2"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "dra_roads",
+      "name": "Digital Road Atlas",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Monthly",
+      "freshnessHours": 2160,
+      "rules": [
+        "W13",
+        "S2"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "cutblocks",
+      "name": "Consolidated cutblocks",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=VEG_CONSOLIDATED_CUT_BLOCKS_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_FOREST_VEGETATION.VEG_CONSOLIDATED_CUT_BLOCKS_SP",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Monthly",
+      "freshnessHours": 2160,
+      "rules": [
+        "S4"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "mvpr",
+      "name": "Motor vehicle prohibition areas",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=WAA_MVPR_AREAS_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_MVPR_AREAS_SP",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Monthly",
+      "freshnessHours": 1080,
+      "rules": [
+        "P7"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "wmu",
+      "name": "Wildlife management units",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Monthly",
+      "freshnessHours": 8760,
+      "rules": [
+        "W1",
+        "S6"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "community_watersheds",
+      "name": "Community watersheds",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=WLS_COMMUNITY_WS_PUB_SVW",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_WATER_MANAGEMENT.WLS_COMMUNITY_WS_PUB_SVW",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Quarterly",
+      "freshnessHours": 8760,
+      "rules": [
+        "P8"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "crown_tenures",
+      "name": "Crown land tenures",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=TA_CROWN_TENURES_SVW",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_TANTALIS.TA_CROWN_TENURES_SVW",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Monthly",
+      "freshnessHours": 2160,
+      "rules": [
+        "P9"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "range_tenures",
+      "name": "Range tenures",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=FTEN_RANGE_POLY_SVW",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_FOREST_TENURE.FTEN_RANGE_POLY_SVW",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Monthly",
+      "freshnessHours": 2160,
+      "rules": [
+        "P9"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "mineral_tenures",
+      "name": "Mineral, placer and coal tenures",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=MTA_ACQUIRED_TENURE_SVW",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_MINERAL_TENURE.MTA_ACQUIRED_TENURE_SVW",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Monthly",
+      "freshnessHours": 2160,
+      "rules": [
+        "P9"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "transmission",
+      "name": "Transmission lines",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=GBA_TRANSMISSION_LINES_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_BASEMAPPING.GBA_TRANSMISSION_LINES_SP",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Monthly",
+      "freshnessHours": 8760,
+      "rules": [
+        "O4"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "pipelines",
+      "name": "Oil and gas pipeline segments (permitted)",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=OG_PIPELINE_SEGMENT_PERMIT_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_MINERAL_TENURE.OG_PIPELINE_SEGMENT_PERMIT_SP",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Monthly",
+      "freshnessHours": 2160,
+      "rules": [
+        "O4"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "railways",
+      "name": "Railway tracks (National Railway Network)",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=GBA_RAILWAY_TRACKS_SP",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_BASEMAPPING.GBA_RAILWAY_TRACKS_SP",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Monthly",
+      "freshnessHours": 8760,
+      "rules": [
+        "F5"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "buildings",
+      "name": "TRIM buildings",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=TRIM_EBM_BUILDINGS",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_BASEMAPPING.TRIM_EBM_BUILDINGS",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Yearly",
+      "freshnessHours": 9600,
+      "rules": [
+        "S1"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "nr_districts",
+      "name": "Natural resource districts",
+      "owner": "Province of British Columbia",
+      "url": "https://catalogue.data.gov.bc.ca/dataset?q=ADM_NR_DISTRICTS_SPG",
+      "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
+      "layer": "WHSE_ADMIN_BOUNDARIES.ADM_NR_DISTRICTS_SPG",
+      "licence": "Open Government Licence – British Columbia",
+      "access": "wfs",
+      "robots": "API service; no robots.txt restriction",
+      "cadence": "Yearly",
+      "freshnessHours": 9600,
+      "rules": [
+        "P6"
+      ],
+      "contact": "DataBC (data@gov.bc.ca)"
+    },
+    {
+      "id": "federal_protected",
+      "name": "Migratory bird sanctuaries and national wildlife areas (CPCAD)",
+      "owner": "Environment and Climate Change Canada",
+      "url": "https://www.canada.ca/en/environment-climate-change/services/national-wildlife-areas/protected-conserved-areas-database.html",
+      "endpoint": "https://maps-cartes.ec.gc.ca/arcgis/rest/services/CWS_SCF/CPCAD/MapServer/0",
+      "layer": "CPCAD TYPE_E in (Migratory Bird Sanctuary, National Wildlife Area, Marine National Wildlife Area), LOC=2",
+      "licence": "Open Government Licence – Canada",
+      "access": "api",
+      "robots": "API service",
+      "cadence": "Monthly",
+      "freshnessHours": 2160,
+      "rules": [
+        "F6"
+      ],
+      "contact": "ec.aireprotegee-protectedarea.ec@ec.gc.ca"
+    },
+    {
+      "id": "road_notices",
+      "name": "Resource road safety information (district notices)",
+      "owner": "Ministry of Forests, natural resource districts",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information",
+      "endpoint": "one page per natural resource district",
+      "layer": "HTML page",
+      "licence": "Copyright Province of British Columbia; facts reused with attribution",
+      "access": "scrape",
+      "robots": "Allowed by www2.gov.bc.ca robots.txt (checked 2026-10-19)",
+      "cadence": "Daily",
+      "freshnessHours": 48,
+      "rules": [
+        "P6"
+      ],
+      "contact": "District offices"
+    },
+    {
+      "id": "imagery_meta",
+      "name": "World Imagery capture metadata",
+      "owner": "Esri and imagery partners",
+      "url": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9",
+      "endpoint": "https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/identify",
+      "layer": "World Imagery citations",
+      "licence": "Commercial licence required for a public site (PRD 7.1)",
+      "access": "api",
+      "robots": "API service",
+      "cadence": "On demand",
+      "freshnessHours": 9600,
+      "rules": [
+        "IM"
+      ],
+      "contact": ""
+    },
+    {
+      "id": "closed_areas",
+      "name": "Closed Areas Regulation, B.C. Reg. 76/84 (digitised by SlotScout)",
+      "owner": "Province of British Columbia (King's Printer); digitised by SlotScout",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "endpoint": "data/digitised/*.geojson",
+      "layer": "Reviewed rule areas",
+      "licence": "Queen's/King's Printer licence for BC Laws; SlotScout digitising",
+      "access": "manual",
+      "robots": "BC Laws disallows automated crawling: monthly manual download until written permission (PRD 4.2)",
+      "cadence": "Monthly",
+      "freshnessHours": 1080,
+      "rules": [
+        "W1",
+        "W2",
+        "W3",
+        "W4",
+        "W5",
+        "W6",
+        "W7",
+        "W8",
+        "W9",
+        "W10",
+        "W11",
+        "W12"
+      ],
+      "contact": "Fish and Wildlife Branch"
+    },
+    {
+      "id": "bylaws",
+      "name": "Local government firearm bylaw register",
+      "owner": "Each municipality, regional district and local trust committee; register kept by SlotScout",
+      "url": "/sources#bylaws",
+      "endpoint": "data/bylaws.json",
+      "layer": "Register",
+      "licence": "Public bylaws",
+      "access": "manual",
+      "robots": "Each site checked before scraping",
+      "cadence": "Monthly",
+      "freshnessHours": 1080,
+      "rules": [
+        "L1",
+        "L2",
+        "L3"
+      ],
+      "contact": "Each local government"
+    }
+  ]
+}

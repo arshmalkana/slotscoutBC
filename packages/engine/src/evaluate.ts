@@ -492,6 +492,10 @@ function checkRoadAllowance(ctx: Context): void {
   }
 }
 
+const recActive = (q: Props) => str(q.LIFE_CYCLE_STATUS_CODE).toUpperCase() !== "RETIRED";
+/** Undeveloped "Recreation Reserve" polygons are not sites; every active trail line counts. */
+const recSite = (q: Props) => recActive(q) && str(q.PROJECT_TYPE) !== "Recreation Reserve";
+
 function checkProvincial(ctx: Context): void {
   const hunting = ctx.input.profile.activity === "hunting";
   const parkName = (q: Props) => titleCase(str(q.PROTECTED_LANDS_NAME));
@@ -530,8 +534,7 @@ function checkProvincial(ctx: Context): void {
   {
     const keys: LayerKey[] = ["rec_sites", "rec_trails"];
     const problem = ctx.problem("rec_sites") ?? ctx.problem("rec_trails");
-    const active = (q: Props) => str(q.LIFE_CYCLE_STATUS_CODE).toUpperCase() !== "RETIRED" && !/reserve/i.test(str(q.PROJECT_TYPE));
-    const items = [...ctx.near("rec_sites", ctx.radius, active), ...ctx.near("rec_trails", ctx.radius, active)].sort((a, b) => a.d - b.d);
+    const items = [...ctx.near("rec_sites", ctx.radius, recSite), ...ctx.near("rec_trails", ctx.radius, recActive)].sort((a, b) => a.d - b.d);
     const kind = (q: Props) => str(q.PROJECT_TYPE) || "Recreation site";
     const name = (q: Props) => titleCase(str(q.PROJECT_NAME)) || str(q.FOREST_FILE_ID);
     ctx.addHazard("rec_sites", items, kind, name);
@@ -673,6 +676,24 @@ function fileSection(q: Props): string {
   return `${str(q.FOREST_FILE_ID)}.${str(q.ROAD_SECTION_ID)}`;
 }
 
+/** "Harrison East FSR 5748.01" or "Road permit R21399 BRSL111" when the section has no name. */
+function fsrLabel(q: Props): string {
+  const type = str(q.FILE_TYPE_DESCRIPTION);
+  const name = titleCase(str(q.ROAD_SECTION_NAME).trim());
+  const id = `${str(q.FOREST_FILE_ID)} ${str(q.ROAD_SECTION_ID)}`.trim();
+  if (type === "Forest Service Road") return `${name || "Unnamed"} FSR ${fileSection(q)}`;
+  return `${name ? `${name} ` : ""}${type ? type.toLowerCase() : "resource road"} ${id}`.replace(/^road permit/, "Road permit").trim();
+}
+
+const CLOSURE_SENTENCE = /no access|closed|impassable|not drivable|no vehicle access|bridge out|restricted|washout|washed out|deactivat|gate/i;
+
+/** The sentence(s) of a notice that carry the closure, so the reason quotes what matters. */
+function closureText(n: RoadNotice): string {
+  const sentences = n.text.split(/(?<=[.!?])\s+/);
+  const key = sentences.filter((x) => CLOSURE_SENTENCE.test(x));
+  return (key.length ? key : sentences).join(" ").slice(0, 220);
+}
+
 function normaliseRoadName(s: string): string {
   return s.toLowerCase().replace(/\b(fsr|forest service road|road|rd)\b/g, "").replace(/[^a-z0-9]+/g, " ").trim();
 }
@@ -713,7 +734,7 @@ function checkRoadNotices(ctx: Context): void {
       status: "conditional",
       reason: `Route may be closed or restricted: ${blocking
         .slice(0, 2)
-        .map((n) => `${n.road}${n.date ? ` (${n.date})` : ""}: ${n.text.slice(0, 160)}`)
+        .map((n) => `${n.road}${n.date ? ` (${n.date})` : ""}: ${closureText(n)}`)
         .join(" ")}`,
       moreUrl: rn?.pageUrl,
       dataDate: date,
@@ -975,11 +996,11 @@ function checkSafety(ctx: Context): void {
   const roads = ctx.near("dra_roads", ctx.radius, (q) => !["ferry", "water", "proposed", "runway"].includes(str(q.ROAD_CLASS).toLowerCase()));
   const fsr = ctx.near("fsr_roads", ctx.radius);
   ctx.addHazard("dra_roads", roads, (q) => (str(q.ROAD_CLASS).toLowerCase() === "trail" ? "Trail" : "Road"), (q) => str(q.ROAD_NAME_FULL) || `${titleCase(str(q.ROAD_CLASS))} road`);
-  ctx.addHazard("fsr_roads", fsr, (q) => str(q.FILE_TYPE_DESCRIPTION) || "Resource road", (q) => titleCase(str(q.ROAD_SECTION_NAME)) || fileSection(q));
-  const rec = ctx.near("rec_sites", ctx.radius).concat(ctx.near("rec_trails", ctx.radius));
+  ctx.addHazard("fsr_roads", fsr, (q) => str(q.FILE_TYPE_DESCRIPTION) || "Resource road", fsrLabel);
+  const rec = ctx.near("rec_sites", ctx.radius, recSite).concat(ctx.near("rec_trails", ctx.radius, recActive));
   const all = [
     ...roads.map((it) => ({ d: it.d, b: it.b, label: str(it.f.properties?.ROAD_NAME_FULL) || `${str(it.f.properties?.ROAD_CLASS)} road` })),
-    ...fsr.map((it) => ({ d: it.d, b: it.b, label: `${titleCase(str(it.f.properties?.ROAD_SECTION_NAME))} (${str(it.f.properties?.FILE_TYPE_DESCRIPTION).toLowerCase()})` })),
+    ...fsr.map((it) => ({ d: it.d, b: it.b, label: fsrLabel(it.f.properties ?? {}) })),
     ...rec.map((it) => ({ d: it.d, b: it.b, label: titleCase(str(it.f.properties?.PROJECT_NAME)) })),
   ].sort((a, b) => a.d - b.d);
   const p2 = keys2.map((k) => ctx.problem(k)).find(Boolean);
@@ -1137,7 +1158,7 @@ function buildAccess(ctx: Context): AccessSummary {
       : undefined,
     nearestResourceRoad: fsr
       ? {
-          name: titleCase(str(fq.ROAD_SECTION_NAME)),
+          name: fsrLabel(fq),
           fileSection: fileSection(fq),
           type: str(fq.FILE_TYPE_DESCRIPTION),
           holder: str(fq.CLIENT_NAME) || undefined,
@@ -1226,18 +1247,28 @@ export function evaluate(input: EvaluationInput): SpotReport {
     return SEVERITY_ORDER.indexOf(def?.severity ?? "system");
   };
   const fails = counted.filter((c) => c.status === "fail").sort((a, b) => sevIndex(a) - sevIndex(b));
-  const conds = counted.filter((c) => c.status === "conditional").sort((a, b) => sevIndex(a) - sevIndex(b));
+  // F2 restates S1/S2 in legal terms; the banner quotes the specific hazard instead.
+  const conds = counted
+    .filter((c) => c.status === "conditional")
+    .sort((a, b) => Number(a.ruleId === "F2") - Number(b.ruleId === "F2") || sevIndex(a) - sevIndex(b));
   const unknowns = counted.filter((c) => c.status === "unknown");
   const dateText = new Date(input.at).toLocaleDateString("en-CA", { year: "numeric", month: "long", day: "numeric", timeZone: "America/Vancouver" });
+  const alsoUnknown = [...new Set(unknowns.map((c) => LIGHTS.find((l) => l.id === c.light)?.label ?? c.ruleId))];
   let verdict: SpotReport["verdict"];
-  if (fails.length) verdict = { state: "red", headline: "Not allowed here", reason: fails[0]!.reason };
+  if (fails.length) verdict = { state: "red", headline: "Not allowed here", reason: fails[0]!.reason, alsoUnknown };
   else if (conds.length) {
     const cond = conds.find((c) => CONDITION_RULES.test(c.ruleId));
     verdict = cond
-      ? { state: "amber", headline: "Only if…", reason: cond.reason }
-      : { state: "amber", headline: "Clear here, but…", reason: conds[0]!.reason };
-  } else if (unknowns.length) verdict = { state: "grey", headline: "Cannot confirm", reason: unknowns[0]!.reason };
-  else verdict = { state: "green", headline: "No restriction found", reason: `No restriction found in the checks below, as of ${dateText}. Check the standing list before you shoot.` };
+      ? { state: "amber", headline: "Only if…", reason: cond.reason, alsoUnknown }
+      : { state: "amber", headline: "Clear here, but…", reason: conds[0]!.reason, alsoUnknown };
+  } else if (unknowns.length) verdict = { state: "grey", headline: "Cannot confirm", reason: unknowns[0]!.reason, alsoUnknown: alsoUnknown.slice(1) };
+  else
+    verdict = {
+      state: "green",
+      headline: "No restriction found",
+      reason: `No restriction found in the checks below, as of ${dateText}. Check the standing list before you shoot.`,
+      alsoUnknown: [],
+    };
 
   const sources = [...ctx.usedSources]
     .filter((id) => input.sources[id])

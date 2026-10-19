@@ -322,7 +322,13 @@ export interface SpotReport {
   point: LatLon;
   profile: Profile;
   inBC: boolean | null;
-  verdict: { state: VerdictState; headline: string; reason: string };
+  verdict: {
+    state: VerdictState;
+    headline: string;
+    reason: string;
+    /** Checks that could not be confirmed. Shown under any non-grey banner so amber never hides a gap. */
+    alsoUnknown: string[];
+  };
   lights: Light[];
   lightCounts: Record<VerdictState, number>;
   checks: CheckResult[];
