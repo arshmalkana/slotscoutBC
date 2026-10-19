@@ -8,7 +8,7 @@ Open Claude Code and say "Run the monthly update in RUNBOOK.md", or let `api` mo
 
 | Step | Command | What it does | Done when |
 | --- | --- | --- | --- |
-| 1 | `make pull` | Pulls every GIS layer (count + SHA-256), every district road page and linked notice PDF, every bylaw page (headless browser, robots.txt respected), and copies new files from `inbox/` | `raw/<YYYY-MM>/manifest.json` lists every source; failures are logged, not hidden |
+| 1 | `make pull` | Pulls every GIS layer (count + SHA-256), every district road page and linked notice PDF (text layer, OCR for scans, page images for maps), every bylaw page (headless browser, robots.txt respected), and copies new files from `inbox/` | `raw/<YYYY-MM>/manifest.json` lists every source; failures are logged, not hidden |
 | 2 | `make split` | Splits text into units (one regulation section, bylaw clause or road notice), normalises and hashes each, and writes the change report | `reports/<YYYY-MM>-changes.md` |
 | 3 | `make queue` | Rule-based parsing first; anything free-form or needing a cross-check becomes a task in `queue/pending/` | |
 | 4 | `make extract` | `api` mode: two independent model runs per task. `agent` mode: writes `queue/AGENT_TASKS.md` and one brief per task in `queue/agent/run1/` (Claude Code) and `queue/agent/run2/` (a fresh subagent given only that brief) | every task has run1 and run2 answers |
@@ -20,7 +20,11 @@ Open Claude Code and say "Run the monthly update in RUNBOOK.md", or let `api` mo
 | 10 | person | Approves review items (`make approve ITEM=<id> BY=<initials>`), legal reviewer signs off (`make signoff BY=<name>`) | |
 | 11 | `make release` | Builds `releases/<YYYY-MM>/` only when every included change is approved and signed off; never publishes alone | |
 
-`make monthly` runs steps 1 to 9 and stops before anything a person must do. To run an extra cycle in the same month (a dry run), give it a labelled month: `make monthly MONTH=2026-10-dryrun`. It is compared with the plain month and items already raised there are not raised again.
+`make monthly` runs steps 1 to 9 and stops before anything a person must do. Every step prints work done and work left (`[pull] District Manager PDFs 12/46 (26%), 34 left`), keeps the same counts in `reports/<YYYY-MM>-progress.json`, and `make status` (or the site's Sources page) shows them. To re-run part of a month with fresh copies, add `--force` (`make pull MONTH=2026-10 ARGS="--force --only road_notices,bylaws"`): it replaces that month's earlier copy of those sources, and the steps after it pick up the change.
+
+### Scans and maps
+
+PDFs are read by `pdftotext` first. A page with no usable text layer (a scan, or a map saved as a picture) is read by OCR (`tesseract`), marked `[Page N: text read by OCR from the page image]` in the text, and map or scan pages are also saved as page images (`raw/<YYYY-MM>/dm_notices/images/`). The extraction looks at the images as well as the text: District Manager letters, bulletins and gate maps use `dm_notice.v1`, which lists every road the document closes. Quotes are still checked against the text and OCR text; anything seen only on the image is shown to a person but not counted. A PDF goes to a person as unreadable only when OCR and the page images both fail.
 
 ## One-way rule (Addendum A 5.1, 9)
 

@@ -66,6 +66,8 @@ export function loadManifest(month: string, ua: string): Manifest {
 
 /** Sources this process changed; saves merge them into what is on disk, so parallel pulls are safe. */
 const touched = new WeakMap<Manifest, Set<string>>();
+/** Sources this process replaced (--force): their files on disk are dropped, not merged back. */
+const resets = new WeakMap<Manifest, Set<string>>();
 const touch = (m: Manifest, source: string) => {
   const t = touched.get(m) ?? new Set<string>();
   t.add(source);
@@ -84,7 +86,8 @@ export function saveManifest(m: Manifest): void {
     m.sources = { ...disk.sources, ...Object.fromEntries(Object.entries(m.sources).filter(([k]) => mine.has(k) || !(k in disk.sources))) };
     m.layers = { ...disk.layers, ...Object.fromEntries(Object.entries(m.layers).filter(([k]) => mine.has(k) || !(k in disk.layers))) };
     const paths = new Set(m.files.filter((f) => mine.has(f.source)).map((f) => f.path));
-    m.files = [...disk.files.filter((f) => !paths.has(f.path)), ...m.files.filter((f) => paths.has(f.path))];
+    const replaced = resets.get(m) ?? new Set<string>();
+    m.files = [...disk.files.filter((f) => !paths.has(f.path) && !replaced.has(f.source)), ...m.files.filter((f) => paths.has(f.path))];
     m.failures = [...disk.failures.filter((f) => !mine.has(f.source)), ...m.failures.filter((f) => mine.has(f.source))];
     m.startedAt = disk.startedAt < m.startedAt ? disk.startedAt : m.startedAt;
   }
@@ -106,9 +109,13 @@ export function addFile(m: Manifest, f: FileEntry): void {
 export function resetSource(m: Manifest, sources: string[], dirs: string[]): number {
   const before = m.files.length;
   m.files = m.files.filter((f) => !sources.includes(f.source));
+  const removed = before - m.files.length;
+  const r = resets.get(m) ?? new Set<string>();
+  for (const s of sources) (r.add(s), touch(m, s));
+  resets.set(m, r);
   for (const d of dirs) rmSync(join(monthDir(m.month), d), { recursive: true, force: true });
   saveManifest(m);
-  return before - m.files.length;
+  return removed;
 }
 
 export function fail(m: Manifest, source: string, what: string, error: unknown): void {
