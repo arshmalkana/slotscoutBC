@@ -2,6 +2,7 @@ import { join } from "node:path";
 import { disagreements, schemaErrors } from "../lib/answers.js";
 import { currentMonth } from "../lib/config.js";
 import { monthDir } from "../lib/paths.js";
+import { withdrawStale } from "../lib/review.js";
 import { log, readJsonIf, writeJson } from "../lib/util.js";
 import { buildBylaws } from "../build/bylaws.js";
 import { buildClosedArea } from "../build/closedAreas.js";
@@ -43,6 +44,9 @@ export async function build(opts: { month?: string } = {}) {
   }
   writeJson(join(monthDir(month), "change-classes.json"), classes);
   summary.changeClasses = Object.keys(classes).length;
+  const withdrawn = withdrawStale(month);
+  if (withdrawn.length) log("build", `${withdrawn.length} open item(s) from an earlier build of ${month} withdrawn: their source changed or went away`);
+  summary.withdrawnItems = withdrawn.length;
   writeJson(join(monthDir(month), "build-summary.json"), summary);
   log("build", `done: ${JSON.stringify(summary)}`);
   return summary;

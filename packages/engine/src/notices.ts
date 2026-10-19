@@ -239,7 +239,10 @@ export function parseNoticesPageFull(html: string, district: string, pageUrl: st
       else cur.text = `${cur.text} ${text}`.trim().slice(0, 1200);
       continue;
     }
-    if (CLOSURE_WORDS.test(text)) unparsed.push({ key: blockKey(section, text), section, text: text.slice(0, 1500) });
+    // "There are no closures at this time" is not a closure.
+    if (CLOSURE_WORDS.test(text) && !/^(?:there are\s+)?no\s+(?:current\s+)?(?:road\s+)?closures\b[^.]*\.?$/i.test(text.trim())) {
+      unparsed.push({ key: blockKey(section, text), section, text: text.slice(0, 1500) });
+    }
   }
   flush();
   return { notices, unparsed };

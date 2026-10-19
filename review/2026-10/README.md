@@ -1,6 +1,6 @@
 # Review packet 2026-10
 
-Open the HTML packet for maps and both runs: `review/2026-10/index.html`. 72 open item(s). Approve with `make approve ITEM=<id> BY=<initials>` (people only).
+Open the HTML packet for maps and both runs: `review/2026-10/index.html`. 70 open item(s). Approve with `make approve ITEM=<id> BY=<initials>` (people only).
 
 | Item | Kind | Change | Title | Why | Status |
 | --- | --- | --- | --- | --- | --- |
@@ -32,11 +32,9 @@ Open the HTML packet for maps and both runs: `review/2026-10/index.html`. 72 ope
 | `road-notice-block-a0707ff10c` | road_notice_block | unclear | DCK road safety page: text not tied to a road | the rule-based parser found closure or deactivation wording it could not tie to a road (Addendum A 5.2) | open |
 | `road-notice-block-58ca255943` | road_notice_block | unclear | DCR road safety page: text not tied to a road | the rule-based parser found closure or deactivation wording it could not tie to a road (Addendum A 5.2) | open |
 | `road-notice-block-c8216cf6fe` | road_notice_block | unclear | DCS road safety page: text not tied to a road | the rule-based parser found closure or deactivation wording it could not tie to a road (Addendum A 5.2) | open |
-| `road-notice-block-fabf094f79` | road_notice_block | unclear | DFN road safety page: text not tied to a road | the rule-based parser found closure or deactivation wording it could not tie to a road (Addendum A 5.2) | open |
 | `road-notice-block-8165716ac7` | road_notice_block | unclear | DKA road safety page: text not tied to a road | the rule-based parser found closure or deactivation wording it could not tie to a road (Addendum A 5.2) | open |
 | `road-notice-block-4a222e1e73` | road_notice_block | unclear | DMH road safety page: text not tied to a road | the rule-based parser found closure or deactivation wording it could not tie to a road (Addendum A 5.2) | open |
 | `road-notice-block-a4521cb232` | road_notice_block | unclear | DMH road safety page: text not tied to a road | the rule-based parser found closure or deactivation wording it could not tie to a road (Addendum A 5.2) | open |
-| `road-notice-block-699a908fcc` | road_notice_block | unclear | DND road safety page: text not tied to a road | the rule-based parser found closure or deactivation wording it could not tie to a road (Addendum A 5.2) | open |
 | `road-notice-block-8014868a01` | road_notice_block | unclear | DQC road safety page: text not tied to a road | the rule-based parser found closure or deactivation wording it could not tie to a road (Addendum A 5.2) | open |
 | `road-notice-block-83e26ab202` | road_notice_block | unclear | DSQ road safety page: text not tied to a road | the rule-based parser found closure or deactivation wording it could not tie to a road (Addendum A 5.2) | open |
 | `road-notice-block-884a9369ad` | road_notice_block | unclear | DSQ road safety page: text not tied to a road | the rule-based parser found closure or deactivation wording it could not tie to a road (Addendum A 5.2) | open |

@@ -7,6 +7,9 @@ First pull: this is the baseline every later month is compared with.
 | Layer | Features | Server count | Count matches | Change vs last month | Content hash |
 | --- | ---: | ---: | --- | --- | --- |
 | bc_parks | 930 | 930 | yes | first pull | `b16c8a3e3403b5f2` |
+| community_watersheds | 466 | 466 | yes | first pull | `4b7f5ef7680bd35b` |
+| crown_tenures | 66,843 | 66,843 | yes | first pull | `cd58db82f0b9222e` |
+| cutblocks | 596,129 | 596,129 | yes | first pull | `292ac6f0bcd90c9c` |
 | dra_roads | 1,882,029 | 1,882,029 | yes | first pull | `d9b318e274731932` |
 | electoral_areas | 159 | 159 | yes | first pull | `7348791d69067e83` |
 | federal_protected | 21 | 21 | yes | first pull | `6b79792f324b6cea` |
@@ -18,6 +21,7 @@ First pull: this is the baseline every later month is compared with.
 | local_parks | 9,488 | 9,488 | yes | first pull | `3c5c5aa0fe252661` |
 | local_trust_areas | 13 | 13 | yes | first pull | `367ea78831ef5191` |
 | municipalities | 160 | 160 | yes | first pull | `b5e23e2bde604d00` |
+| mvpr | 347 | 347 | yes | first pull | `a3d42c8c681def58` |
 | national_parks | 102 | 102 | yes | first pull | `1c341ee97a7fc478` |
 | parcels | 740,686 | 740,686 | yes | first pull | `e3a114d69aa5f2b1` |
 | province | 1 | 1 | yes | first pull | `a367a076bade7fc4` |
@@ -35,7 +39,7 @@ First pull: this is the baseline every later month is compared with.
 | --- | ---: | ---: | ---: | ---: | ---: |
 | bylaw_clause | 31 | 31 | 0 | 0 | 0 |
 | dm_notice | 24 | 24 | 0 | 0 | 0 |
-| notice_block | 15 | 15 | 0 | 0 | 0 |
+| notice_block | 13 | 13 | 0 | 0 | 0 |
 | regulation_section | 1 | 1 | 0 | 0 | 0 |
 | road_notice | 327 | 327 | 0 | 0 | 0 |
 

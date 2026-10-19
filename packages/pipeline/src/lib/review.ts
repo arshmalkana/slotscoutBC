@@ -1,3 +1,4 @@
+import { rmSync } from "node:fs";
 import { join } from "node:path";
 import { P } from "./paths.js";
 import { listFiles, readJson, readJsonIf, sha256, writeJson } from "./util.js";
@@ -48,7 +49,22 @@ export function itemId(kind: string, key: string): string {
 }
 
 /** Writes or refreshes an item; a person's decision on it is never overwritten. */
+/** Item ids raised in this process, so a build can withdraw open items it no longer produces. */
+export const raisedThisRun = new Set<string>();
+
+/** Removes this month's open items that the current build did not raise again (their source changed or went away). */
+export function withdrawStale(month: string): string[] {
+  const gone: string[] = [];
+  for (const it of loadItems(month)) {
+    if (it.status !== "open" || raisedThisRun.has(it.item_id)) continue;
+    rmSync(itemPath(month, it.item_id));
+    gone.push(it.item_id);
+  }
+  return gone;
+}
+
 export function upsertItem(item: Omit<ReviewItem, "status" | "created" | "updated">): ReviewItem {
+  raisedThisRun.add(item.item_id);
   // The same item from an earlier month (open or decided) stands; it is not raised again.
   const earlier = allItems().find((i) => i.item_id === item.item_id && i.month !== item.month && i.month < item.month);
   if (earlier) return earlier;

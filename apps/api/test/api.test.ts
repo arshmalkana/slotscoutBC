@@ -71,6 +71,7 @@ describe("district page layouts", () => {
 <p><strong>Beaver 7753.1 (Aug 12, 2013)</strong> Road Closed at 42 km.</p>
 <h2>Road deactivation</h2>
 <p>Discontinued and Closed FSRs with BCTS (Updated Regularly)</p>
+<p>There are no closures at this time.</p>
 <h2>Contact information</h2><p>Closed on weekends.</p></main>`;
   const r = parseNoticesPageFull(OTHER, "DCS", "https://www2.gov.bc.ca/x");
 
