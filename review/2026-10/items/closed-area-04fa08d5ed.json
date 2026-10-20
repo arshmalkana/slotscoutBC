@@ -1,0 +1,162 @@
+{
+  "item_id": "closed-area-04fa08d5ed",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 3, section 43 (Road 248)",
+  "rule_id": "W3-043",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "road \"Number 248 Road\": none",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nRoad 248\n43 That portion of the Province of British Columbia, in the vicinity of Beatton Provincial Park, that is within 50 metres of either side of the midline of Number 248 Road. [en. B.C. Reg. 204/91, s. 2.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-cc03fd81f55a",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:58:53Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "road_buffer",
+          "road": {
+            "name": "Number 248 Road",
+            "source_hint": "DRA"
+          },
+          "feature": null,
+          "buffer_m": 50,
+          "side": "both",
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting or Hunting Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within 50 metres of either side of the midline of Number 248 Road"
+          },
+          {
+            "field": "geometry.road",
+            "quote": "the midline of Number 248 Road"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": "within 50 metres"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "either side of the midline"
+          }
+        ],
+        "uncertain": [
+          "within",
+          "geometry.from",
+          "geometry.to"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-cc03fd81f55a",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:58:48Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "road_buffer",
+          "road": {
+            "name": "Number 248 Road",
+            "source_hint": "DRA"
+          },
+          "feature": null,
+          "buffer_m": 50,
+          "side": "both",
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting or Hunting Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within 50 metres of either side of the midline of Number 248 Road"
+          },
+          {
+            "field": "geometry.road",
+            "quote": "the midline of Number 248 Road"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": "within 50 metres"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "either side"
+          }
+        ],
+        "uncertain": [
+          "within",
+          "geometry.from",
+          "geometry.to"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "geometry.road": "the midline of Number 248 Road",
+    "geometry.buffer_m": "within 50 metres",
+    "effect": "No Shooting or Hunting Areas",
+    "geometry.side": "either side of the midline"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [
+    {
+      "query": "Number 248 Road",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "matches": 0,
+      "ids": [],
+      "sample": []
+    }
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T22:00:18.522Z",
+  "updated": "2026-10-20T22:00:18.522Z"
+}

@@ -1,0 +1,159 @@
+{
+  "item_id": "closed-area-4d9618698a",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 124 (Gillies Bay and Shelter Point Roads)",
+  "rule_id": "W5-124",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "named area \"M.U. 2-16\": none",
+    "the geometry builder does not draw \"road_buffer\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nGillies Bay and Shelter Point Roads\n124 Those portions of the Province of British Columbia in the vicinity of Texada Island in M.U. 2-16 within 0.2 km of either side of the midline of the following Texada Island roads: (a)Gillies Bay Road between its junction with Blubber Bay Road and Shelter Point Road; (b)Shelter Point Road between its junction with Central Road and its terminus at Mouat Bay; (c)Blubber Bay Road between its junction with Gillies Bay Road and its terminus at Blubber Bay; (d)Crescent Bay Road between its junction with Blubber Bay Road and its terminus. [en. B.C. Reg. 205/94, s. 22; am. B.C. Reg. 235/97, s. 3 (f).]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-0d2935f2f4a7",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:47:52Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 2-16"
+        },
+        "geometry": {
+          "method": "road_buffer",
+          "road": null,
+          "feature": null,
+          "buffer_m": 200,
+          "side": "both",
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "M.U. 2-16"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within 0.2 km of either side of the midline of the following Texada Island roads"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": "0.2 km"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "either side of the midline"
+          }
+        ],
+        "uncertain": [
+          "geometry.road",
+          "geometry.from",
+          "geometry.to"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-0d2935f2f4a7",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:46:22Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 2-16"
+        },
+        "geometry": {
+          "method": "road_buffer",
+          "road": null,
+          "feature": null,
+          "buffer_m": 200,
+          "side": "both",
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "M.U. 2-16"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": "within 0.2 km of either side of the midline"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "either side of the midline"
+          }
+        ],
+        "uncertain": [
+          "geometry.road",
+          "geometry.from",
+          "geometry.to"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "within": "M.U. 2-16",
+    "geometry.buffer_m": "0.2 km",
+    "effect": "No Shooting Areas",
+    "geometry.side": "either side of the midline"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [
+    {
+      "query": "M.U. 2-16",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "none",
+      "matches": 0,
+      "ids": [],
+      "sample": []
+    }
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T21:58:54.364Z",
+  "updated": "2026-10-20T21:58:54.364Z"
+}

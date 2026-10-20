@@ -1,0 +1,185 @@
+{
+  "item_id": "closed-area-5a8031f870",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 3, section 5 (Salmon Arm)",
+  "rule_id": "W3-005",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: method: run 1 \"other\" vs run 2 \"metes_and_bounds\"; steps: run 1 [] vs run 2 [\"|||\",\"|the white marker on the northern boundary of the northwest quarter of section 24 township 20 range 10||straight_line\"]",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nSalmon Arm\n5 That portion of the Province of British Columbia in the vicinity of the District of Salmon Arm, KDYD, except organized territory, which is contained within the following described boundaries: All the waters of Shuswap Lake Iying southeasterly of a straight line commencing at the outer end of the Salmon Arm Wharf; thence northeasterly to the white marker on the northern boundary of the northwest quarter of Section 24, Township 20, Range 10.",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-4183800e83f3",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:47:30Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [
+          "organized territory"
+        ],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "KDYD"
+        },
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": {
+            "type": "lake",
+            "name": "Shuswap Lake"
+          },
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting or Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "KDYD"
+          },
+          {
+            "field": "exemptions[0]",
+            "quote": "except organized territory"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "All the waters of Shuswap Lake"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-4183800e83f3",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:47:30Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [
+          "organized territory"
+        ],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "KDYD"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": {
+            "type": "lake",
+            "name": "Shuswap Lake"
+          },
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the outer end of the Salmon Arm Wharf",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "commencing at the outer end of the Salmon Arm Wharf"
+            },
+            {
+              "start": null,
+              "direction": "northeasterly",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the white marker on the northern boundary of the northwest quarter of Section 24, Township 20, Range 10",
+              "distance": null,
+              "quote": "thence northeasterly to the white marker on the northern boundary of the northwest quarter of Section 24, Township 20, Range 10"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting or Hunting Areas"
+          },
+          {
+            "field": "exemptions[0]",
+            "quote": "except organized territory"
+          },
+          {
+            "field": "within",
+            "quote": "KDYD"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "a straight line commencing at the outer end of the Salmon Arm Wharf"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "All the waters of Shuswap Lake"
+          },
+          {
+            "field": "geometry.steps[0]",
+            "quote": "commencing at the outer end of the Salmon Arm Wharf"
+          },
+          {
+            "field": "geometry.steps[1]",
+            "quote": "thence northeasterly to the white marker on the northern boundary of the northwest quarter of Section 24, Township 20, Range 10"
+          }
+        ],
+        "uncertain": [
+          "geometry.side"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "within": "KDYD",
+    "geometry.feature": "All the waters of Shuswap Lake",
+    "effect": "No Shooting or Hunting Areas",
+    "exemptions[0]": "except organized territory"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "method: run 1 \"other\" vs run 2 \"metes_and_bounds\"",
+    "steps: run 1 [] vs run 2 [\"|||\",\"|the white marker on the northern boundary of the northwest quarter of section 24 township 20 range 10||straight_line\"]"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T21:58:57.910Z",
+  "updated": "2026-10-20T21:58:57.910Z"
+}

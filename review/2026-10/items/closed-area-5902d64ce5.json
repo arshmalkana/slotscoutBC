@@ -1,0 +1,282 @@
+{
+  "item_id": "closed-area-5902d64ce5",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5.1, section 12 (Chehalis Forest Service Road)",
+  "rule_id": "W6-012",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "effect read from the text (no_shooting) differs from the schedule's effect (no_shooting_hunting_exempt)",
+    "named area \"M.U. 2-19\": none",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5.1 [en. B.C. Reg. 135/2017, App. 1, s. 2.] No Shooting Areas — Specified Crown Land (Section 7.1)\nChehalis Forest Service Road\n12 That portion of M.U. 2-19 being all Crown land within 400 m of the midline of Chehalis Forest Service Road from the junction with the Statlu Forest Service Road to the northern boundary of the area described in section 33 of Schedule 5. [am. B.C. Reg. 115/2018, App. 1, s. 8.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-7101e28aeb15",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:46:22Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 2-19"
+        },
+        "geometry": {
+          "method": "road_buffer",
+          "road": {
+            "name": "Chehalis Forest Service Road",
+            "source_hint": "FTEN"
+          },
+          "feature": null,
+          "buffer_m": 400,
+          "side": "both",
+          "from": {
+            "type": "road_intersection",
+            "road": "Statlu Forest Service Road",
+            "name": null
+          },
+          "to": {
+            "type": "boundary",
+            "road": null,
+            "name": "northern boundary of the area described in section 33 of Schedule 5"
+          },
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "M.U. 2-19"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within 400 m of the midline of Chehalis Forest Service Road"
+          },
+          {
+            "field": "geometry.road",
+            "quote": "Chehalis Forest Service Road"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": "400 m"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "within 400 m of the midline"
+          },
+          {
+            "field": "geometry.from",
+            "quote": "from the junction with the Statlu Forest Service Road"
+          },
+          {
+            "field": "geometry.to",
+            "quote": "to the northern boundary of the area described in section 33 of Schedule 5"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-7101e28aeb15",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:48:51Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 2-19"
+        },
+        "geometry": {
+          "method": "road_buffer",
+          "road": {
+            "name": "Chehalis Forest Service Road",
+            "source_hint": "FTEN"
+          },
+          "feature": null,
+          "buffer_m": 400,
+          "side": "both",
+          "from": {
+            "type": "road_intersection",
+            "road": "Statlu Forest Service Road",
+            "name": null
+          },
+          "to": {
+            "type": "boundary",
+            "road": null,
+            "name": "northern boundary of the area described in section 33 of Schedule 5"
+          },
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "M.U. 2-19"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within 400 m of the midline of Chehalis Forest Service Road"
+          },
+          {
+            "field": "geometry.road",
+            "quote": "Chehalis Forest Service Road"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": "within 400 m of the midline"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "within 400 m of the midline"
+          },
+          {
+            "field": "geometry.from",
+            "quote": "from the junction with the Statlu Forest Service Road"
+          },
+          {
+            "field": "geometry.to",
+            "quote": "to the northern boundary of the area described in section 33 of Schedule 5"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "M.U. 2-19",
+    "geometry.road": "Chehalis Forest Service Road",
+    "geometry.buffer_m": "400 m",
+    "geometry.from": "from the junction with the Statlu Forest Service Road",
+    "geometry.to": "to the northern boundary of the area described in section 33 of Schedule 5",
+    "effect": "No Shooting Areas",
+    "geometry.side": "within 400 m of the midline"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [
+    {
+      "query": "M.U. 2-19",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "none",
+      "matches": 0,
+      "ids": [],
+      "sample": []
+    },
+    {
+      "query": "Chehalis Forest Service Road",
+      "kind": "fsr",
+      "layer": "WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "8241.01"
+      ],
+      "sample": [
+        {
+          "FOREST_FILE_ID": "8241",
+          "ROAD_SECTION_ID": "01",
+          "FEATURE_CLASS_SKEY": 558,
+          "ROAD_SECTION_NAME": "CHEHALIS",
+          "ROAD_SECTION_LENGTH": 30.4913,
+          "RETIREMENT_DATE": null,
+          "SECTION_WIDTH": 75,
+          "FEATURE_LENGTH": 30491.3,
+          "AMENDMENT_ID": 5,
+          "FILE_STATUS_CODE": "HI",
+          "FILE_TYPE_CODE": "B40",
+          "FILE_TYPE_DESCRIPTION": "Forest Service Road",
+          "GEOGRAPHIC_DISTRICT_CODE": "DCK",
+          "GEOGRAPHIC_DISTRICT_NAME": "Chilliwack Natural Resource District",
+          "AWARD_DATE": null,
+          "EXPIRY_DATE": null,
+          "CLIENT_NUMBER": "00030011",
+          "CLIENT_LOCATION_CODE": "00",
+          "CLIENT_NAME": "DISTRICT MANAGER CHILLIWACK (DCK)",
+          "LOCATION": "CHEHALIS",
+          "LIFE_CYCLE_STATUS_CODE": "ACTIVE",
+          "MAP_LABEL": "8241 01",
+          "FEATURE_LENGTH_M": 30491.2552,
+          "OBJECTID": 1421358,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    },
+    {
+      "query": "Statlu Forest Service Road",
+      "kind": "fsr",
+      "layer": "WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "8241.02"
+      ],
+      "sample": [
+        {
+          "FOREST_FILE_ID": "8241",
+          "ROAD_SECTION_ID": "02",
+          "FEATURE_CLASS_SKEY": 558,
+          "ROAD_SECTION_NAME": "STATLU",
+          "ROAD_SECTION_LENGTH": 12.4621,
+          "RETIREMENT_DATE": null,
+          "SECTION_WIDTH": 75,
+          "FEATURE_LENGTH": 12462.1,
+          "AMENDMENT_ID": 4,
+          "FILE_STATUS_CODE": "HI",
+          "FILE_TYPE_CODE": "B40",
+          "FILE_TYPE_DESCRIPTION": "Forest Service Road",
+          "GEOGRAPHIC_DISTRICT_CODE": "DCK",
+          "GEOGRAPHIC_DISTRICT_NAME": "Chilliwack Natural Resource District",
+          "AWARD_DATE": null,
+          "EXPIRY_DATE": null,
+          "CLIENT_NUMBER": "00030011",
+          "CLIENT_LOCATION_CODE": "00",
+          "CLIENT_NAME": "DISTRICT MANAGER CHILLIWACK (DCK)",
+          "LOCATION": "CHEHALIS",
+          "LIFE_CYCLE_STATUS_CODE": "ACTIVE",
+          "MAP_LABEL": "8241 02",
+          "FEATURE_LENGTH_M": 12462.144,
+          "OBJECTID": 1421388,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T21:59:14.574Z",
+  "updated": "2026-10-20T21:59:14.574Z"
+}

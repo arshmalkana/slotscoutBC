@@ -7,7 +7,7 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "named area \"M.U. 2-16\": failed (fetch failed)",
+    "named area \"M.U. 2-16\": none",
     "the geometry builder does not draw \"admin_boundary\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -132,10 +132,9 @@
       "query": "M.U. 2-16",
       "kind": "wildlife_management_unit",
       "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
-      "status": "failed",
+      "status": "none",
       "matches": 0,
       "ids": [],
-      "note": "fetch failed",
       "sample": []
     }
   ],
@@ -149,5 +148,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:47:43.020Z",
-  "updated": "2026-10-20T21:47:43.020Z"
+  "updated": "2026-10-20T22:00:19.256Z"
 }

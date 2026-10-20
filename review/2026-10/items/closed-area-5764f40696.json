@@ -1,0 +1,1166 @@
+{
+  "item_id": "closed-area-5764f40696",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 9, section 9 (Nicomen)",
+  "rule_id": "W9-009",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 9 Firearms Using Shot Only Areas (Section 10 (1) (a))\nNicomen\n9 Those 2 portions of the Province of British Columbia in Fraser Valley Regional District within the following described boundaries: (1)Commencing at the intersection of Eagle Road and Highway 7; thence northerly along Eagle Road to a point 150 m north of the intersection of Eagle Road and Shore Road; thence in a straight line due West to a point at the high water mark on the natural boundary of Hatzic Lake; thence in a straight line northwesterly to the most easterly point of the northeast-southwest component of Sward Road; thence due West to the 20 m contour line; thence southerly along the contour line to its intersection with the boundary of the Municipality of Mission; thence westerly and northerly along the District boundary to the point of the boundary's intersection with the southerly natural boundary of Stave Lake; thence easterly along the natural boundary of Stave Lake; thence easterly along the natural boundary to the mouth of Davis Creek; thence easterly and northerly up the creek to the point of its intersection with the southerly boundary of Davis Lake Provincial Park; thence due East and due North along the southerly and easterly boundaries of the park to the intersection of the easterly boundary of the park with the 200 meter contour line; thence southeasterly along the contour line to the point of its intersection with the 280 m contour line; thence southerly along that contour line to the point of its intersection with a point due East of the most easterly point on the southern boundary of the Hartley road right of way; thence in a straight line due West to the point of the line's intersection with the 120 m contour line; thence southerly and easterly along the contour line to the point of its intersection with Chilqua Creek; thence southerly down the creek to its intersection with the 20 m contour line; thence easterly along the contour line to its intersection with the westerly bank of Norrish Creek; thence due East to the 200 m contour line; thence easterly along the contour line to its intersection with Deroche Creek; thence southerly along the natural boundary of Deroche Creek to its intersection with the 60 m contour line; thence due South to a point on North Nicomen Road at the westerly end of a curve approximately 350 m west of the intersection of Park Road and North Nicomen Road; thence easterly along the southern boundary of North Nicomen Road to its intersection with Deroche Creek; thence southerly along the western natural boundary of Deroche Creek to its intersection with Taylor Road; thence westerly along the northern boundary of Taylor Road to a point due North of the end of the western boundary of Ross Road; thence due South to the point of reference; thence southerly along the westerly boundary of Ross Road to its intersection with Highway 7; thence easterly, northerly and westerly along Highway 7 to its intersection with the Canadian Pacific Railway; thence easterly along the railway to its intersection with Malcolm Road; thence northerly and southeasterly along Malcolm Road, approximately 1 km, to its intersection with a dyke that commences at the base of the southwest corner of Harrison Hill; thence southerly and westerly along the dyke to its intersection with another dyke that runs generally westerly and northerly along the southerly boundary of Zaitscullachan slough; thence in a straight line due South to the northerly boundary of the District of Chilliwack; thence westerly along the district boundary following the centre line of the Fraser River, to the intersection with the easterly boundary of the District of Mission; thence northwesterly, easterly and northerly along the district boundary to its intersection with Highway 7; thence easterly along Highway 7 to the point of commencement, excepting all Indian Reserve lands; (2)Commencing at the intersection of the Canadian Pacific Railway right of way and the southeastern corner of the Squawkum Indian Reserve Number 3; thence northerly and easterly along the high water mark, which is the natural boundary of Harrison Bay, to its intersection with the right of way of Highway 7 at a point which is also on the natural boundary of the Harrison River; thence southeasterly along the bridge to the westerly boundary of the District of Kent; thence southwesterly, southeasterly and southerly along the district boundary to the point of intersection with the Canadian Pacific Railway right of way; thence westerly along the southern boundary of the right of way to the point of commencement. [en. B.C. Reg. 176/89, s. 8; am. B.C. Reg. 235/97, s. 5 (b).]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-81716842855a",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:48:00Z",
+      "answer": {
+        "effect": "shot_only",
+        "exemptions": [
+          "excepting all Indian Reserve lands"
+        ],
+        "period": null,
+        "within": {
+          "type": "regional_district",
+          "name": "Fraser Valley Regional District"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": "inside",
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the intersection of Eagle Road and Highway 7",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the intersection of Eagle Road and Highway 7"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "road",
+              "feature": "Eagle Road",
+              "side_or_bank": null,
+              "until": "a point 150 m north of the intersection of Eagle Road and Shore Road",
+              "distance": "150 m",
+              "quote": "thence northerly along Eagle Road to a point 150 m north of the intersection of Eagle Road and Shore Road"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "a point at the high water mark on the natural boundary of Hatzic Lake",
+              "distance": null,
+              "quote": "thence in a straight line due West to a point at the high water mark on the natural boundary of Hatzic Lake"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the most easterly point of the northeast-southwest component of Sward Road",
+              "distance": null,
+              "quote": "thence in a straight line northwesterly to the most easterly point of the northeast-southwest component of Sward Road"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the 20 m contour line",
+              "distance": null,
+              "quote": "thence due West to the 20 m contour line"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "contour",
+              "feature": "20 m contour line",
+              "side_or_bank": null,
+              "until": "its intersection with the boundary of the Municipality of Mission",
+              "distance": null,
+              "quote": "thence southerly along the contour line to its intersection with the boundary of the Municipality of Mission"
+            },
+            {
+              "start": null,
+              "direction": "westerly and northerly",
+              "follow": "district_boundary",
+              "feature": "Municipality of Mission",
+              "side_or_bank": null,
+              "until": "the point of the boundary's intersection with the southerly natural boundary of Stave Lake",
+              "distance": null,
+              "quote": "thence westerly and northerly along the District boundary to the point of the boundary's intersection with the southerly natural boundary of Stave Lake"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "shoreline",
+              "feature": "Stave Lake",
+              "side_or_bank": "natural boundary",
+              "until": null,
+              "distance": null,
+              "quote": "thence easterly along the natural boundary of Stave Lake"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "shoreline",
+              "feature": "Stave Lake",
+              "side_or_bank": "natural boundary",
+              "until": "the mouth of Davis Creek",
+              "distance": null,
+              "quote": "thence easterly along the natural boundary to the mouth of Davis Creek"
+            },
+            {
+              "start": null,
+              "direction": "easterly and northerly up",
+              "follow": "creek",
+              "feature": "Davis Creek",
+              "side_or_bank": null,
+              "until": "the point of its intersection with the southerly boundary of Davis Lake Provincial Park",
+              "distance": null,
+              "quote": "thence easterly and northerly up the creek to the point of its intersection with the southerly boundary of Davis Lake Provincial Park"
+            },
+            {
+              "start": null,
+              "direction": "due East and due North",
+              "follow": "other",
+              "feature": "Davis Lake Provincial Park",
+              "side_or_bank": "southerly and easterly boundaries",
+              "until": "the intersection of the easterly boundary of the park with the 200 meter contour line",
+              "distance": null,
+              "quote": "thence due East and due North along the southerly and easterly boundaries of the park to the intersection of the easterly boundary of the park with the 200 meter contour line"
+            },
+            {
+              "start": null,
+              "direction": "southeasterly",
+              "follow": "contour",
+              "feature": "200 meter contour line",
+              "side_or_bank": null,
+              "until": "the point of its intersection with the 280 m contour line",
+              "distance": null,
+              "quote": "thence southeasterly along the contour line to the point of its intersection with the 280 m contour line"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "contour",
+              "feature": "280 m contour line",
+              "side_or_bank": null,
+              "until": "the point of its intersection with a point due East of the most easterly point on the southern boundary of the Hartley road right of way",
+              "distance": null,
+              "quote": "thence southerly along that contour line to the point of its intersection with a point due East of the most easterly point on the southern boundary of the Hartley road right of way"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of the line's intersection with the 120 m contour line",
+              "distance": null,
+              "quote": "thence in a straight line due West to the point of the line's intersection with the 120 m contour line"
+            },
+            {
+              "start": null,
+              "direction": "southerly and easterly",
+              "follow": "contour",
+              "feature": "120 m contour line",
+              "side_or_bank": null,
+              "until": "the point of its intersection with Chilqua Creek",
+              "distance": null,
+              "quote": "thence southerly and easterly along the contour line to the point of its intersection with Chilqua Creek"
+            },
+            {
+              "start": null,
+              "direction": "southerly down",
+              "follow": "creek",
+              "feature": "Chilqua Creek",
+              "side_or_bank": null,
+              "until": "its intersection with the 20 m contour line",
+              "distance": null,
+              "quote": "thence southerly down the creek to its intersection with the 20 m contour line"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "contour",
+              "feature": "20 m contour line",
+              "side_or_bank": null,
+              "until": "its intersection with the westerly bank of Norrish Creek",
+              "distance": null,
+              "quote": "thence easterly along the contour line to its intersection with the westerly bank of Norrish Creek"
+            },
+            {
+              "start": null,
+              "direction": "due East",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the 200 m contour line",
+              "distance": null,
+              "quote": "thence due East to the 200 m contour line"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "contour",
+              "feature": "200 m contour line",
+              "side_or_bank": null,
+              "until": "its intersection with Deroche Creek",
+              "distance": null,
+              "quote": "thence easterly along the contour line to its intersection with Deroche Creek"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "creek",
+              "feature": "Deroche Creek",
+              "side_or_bank": "natural boundary",
+              "until": "its intersection with the 60 m contour line",
+              "distance": null,
+              "quote": "thence southerly along the natural boundary of Deroche Creek to its intersection with the 60 m contour line"
+            },
+            {
+              "start": null,
+              "direction": "due South",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "a point on North Nicomen Road at the westerly end of a curve approximately 350 m west of the intersection of Park Road and North Nicomen Road",
+              "distance": "approximately 350 m",
+              "quote": "thence due South to a point on North Nicomen Road at the westerly end of a curve approximately 350 m west of the intersection of Park Road and North Nicomen Road"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "road",
+              "feature": "North Nicomen Road",
+              "side_or_bank": "southern boundary",
+              "until": "its intersection with Deroche Creek",
+              "distance": null,
+              "quote": "thence easterly along the southern boundary of North Nicomen Road to its intersection with Deroche Creek"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "creek",
+              "feature": "Deroche Creek",
+              "side_or_bank": "western natural boundary",
+              "until": "its intersection with Taylor Road",
+              "distance": null,
+              "quote": "thence southerly along the western natural boundary of Deroche Creek to its intersection with Taylor Road"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "road",
+              "feature": "Taylor Road",
+              "side_or_bank": "northern boundary",
+              "until": "a point due North of the end of the western boundary of Ross Road",
+              "distance": null,
+              "quote": "thence westerly along the northern boundary of Taylor Road to a point due North of the end of the western boundary of Ross Road"
+            },
+            {
+              "start": null,
+              "direction": "due South",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of reference",
+              "distance": null,
+              "quote": "thence due South to the point of reference"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "road",
+              "feature": "Ross Road",
+              "side_or_bank": "westerly boundary",
+              "until": "its intersection with Highway 7",
+              "distance": null,
+              "quote": "thence southerly along the westerly boundary of Ross Road to its intersection with Highway 7"
+            },
+            {
+              "start": null,
+              "direction": "easterly, northerly and westerly",
+              "follow": "road",
+              "feature": "Highway 7",
+              "side_or_bank": null,
+              "until": "its intersection with the Canadian Pacific Railway",
+              "distance": null,
+              "quote": "thence easterly, northerly and westerly along Highway 7 to its intersection with the Canadian Pacific Railway"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "other",
+              "feature": "Canadian Pacific Railway",
+              "side_or_bank": null,
+              "until": "its intersection with Malcolm Road",
+              "distance": null,
+              "quote": "thence easterly along the railway to its intersection with Malcolm Road"
+            },
+            {
+              "start": null,
+              "direction": "northerly and southeasterly",
+              "follow": "road",
+              "feature": "Malcolm Road",
+              "side_or_bank": null,
+              "until": "its intersection with a dyke that commences at the base of the southwest corner of Harrison Hill",
+              "distance": "approximately 1 km",
+              "quote": "thence northerly and southeasterly along Malcolm Road, approximately 1 km, to its intersection with a dyke that commences at the base of the southwest corner of Harrison Hill"
+            },
+            {
+              "start": null,
+              "direction": "southerly and westerly",
+              "follow": "other",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "its intersection with another dyke that runs generally westerly and northerly along the southerly boundary of Zaitscullachan slough",
+              "distance": null,
+              "quote": "thence southerly and westerly along the dyke to its intersection with another dyke that runs generally westerly and northerly along the southerly boundary of Zaitscullachan slough"
+            },
+            {
+              "start": null,
+              "direction": "due South",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the northerly boundary of the District of Chilliwack",
+              "distance": null,
+              "quote": "thence in a straight line due South to the northerly boundary of the District of Chilliwack"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "district_boundary",
+              "feature": "District of Chilliwack",
+              "side_or_bank": "centre line of the Fraser River",
+              "until": "the intersection with the easterly boundary of the District of Mission",
+              "distance": null,
+              "quote": "thence westerly along the district boundary following the centre line of the Fraser River, to the intersection with the easterly boundary of the District of Mission"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly, easterly and northerly",
+              "follow": "district_boundary",
+              "feature": "District of Mission",
+              "side_or_bank": null,
+              "until": "its intersection with Highway 7",
+              "distance": null,
+              "quote": "thence northwesterly, easterly and northerly along the district boundary to its intersection with Highway 7"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "road",
+              "feature": "Highway 7",
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence easterly along Highway 7 to the point of commencement"
+            },
+            {
+              "start": "the intersection of the Canadian Pacific Railway right of way and the southeastern corner of the Squawkum Indian Reserve Number 3",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the intersection of the Canadian Pacific Railway right of way and the southeastern corner of the Squawkum Indian Reserve Number 3"
+            },
+            {
+              "start": null,
+              "direction": "northerly and easterly",
+              "follow": "shoreline",
+              "feature": "Harrison Bay",
+              "side_or_bank": "high water mark",
+              "until": "its intersection with the right of way of Highway 7 at a point which is also on the natural boundary of the Harrison River",
+              "distance": null,
+              "quote": "thence northerly and easterly along the high water mark, which is the natural boundary of Harrison Bay, to its intersection with the right of way of Highway 7 at a point which is also on the natural boundary of the Harrison River"
+            },
+            {
+              "start": null,
+              "direction": "southeasterly",
+              "follow": "other",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the westerly boundary of the District of Kent",
+              "distance": null,
+              "quote": "thence southeasterly along the bridge to the westerly boundary of the District of Kent"
+            },
+            {
+              "start": null,
+              "direction": "southwesterly, southeasterly and southerly",
+              "follow": "district_boundary",
+              "feature": "District of Kent",
+              "side_or_bank": null,
+              "until": "the point of intersection with the Canadian Pacific Railway right of way",
+              "distance": null,
+              "quote": "thence southwesterly, southeasterly and southerly along the district boundary to the point of intersection with the Canadian Pacific Railway right of way"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "other",
+              "feature": "Canadian Pacific Railway",
+              "side_or_bank": "southern boundary of the right of way",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence westerly along the southern boundary of the right of way to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "Firearms Using Shot Only Areas"
+          },
+          {
+            "field": "exemptions[0]",
+            "quote": "excepting all Indian Reserve lands"
+          },
+          {
+            "field": "within",
+            "quote": "in Fraser Valley Regional District"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "Commencing at"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "within the following described boundaries"
+          },
+          {
+            "field": "geometry.steps[0]",
+            "quote": "Commencing at the intersection of Eagle Road and Highway 7"
+          },
+          {
+            "field": "geometry.steps[1]",
+            "quote": "thence northerly along Eagle Road to a point 150 m north of the intersection of Eagle Road and Shore Road"
+          },
+          {
+            "field": "geometry.steps[2]",
+            "quote": "thence in a straight line due West to a point at the high water mark on the natural boundary of Hatzic Lake"
+          },
+          {
+            "field": "geometry.steps[3]",
+            "quote": "thence in a straight line northwesterly to the most easterly point of the northeast-southwest component of Sward Road"
+          },
+          {
+            "field": "geometry.steps[4]",
+            "quote": "thence due West to the 20 m contour line"
+          },
+          {
+            "field": "geometry.steps[5]",
+            "quote": "thence southerly along the contour line to its intersection with the boundary of the Municipality of Mission"
+          },
+          {
+            "field": "geometry.steps[6]",
+            "quote": "thence westerly and northerly along the District boundary to the point of the boundary's intersection with the southerly natural boundary of Stave Lake"
+          },
+          {
+            "field": "geometry.steps[7]",
+            "quote": "thence easterly along the natural boundary of Stave Lake"
+          },
+          {
+            "field": "geometry.steps[8]",
+            "quote": "thence easterly along the natural boundary to the mouth of Davis Creek"
+          },
+          {
+            "field": "geometry.steps[9]",
+            "quote": "thence easterly and northerly up the creek to the point of its intersection with the southerly boundary of Davis Lake Provincial Park"
+          },
+          {
+            "field": "geometry.steps[10]",
+            "quote": "thence due East and due North along the southerly and easterly boundaries of the park to the intersection of the easterly boundary of the park with the 200 meter contour line"
+          },
+          {
+            "field": "geometry.steps[11]",
+            "quote": "thence southeasterly along the contour line to the point of its intersection with the 280 m contour line"
+          },
+          {
+            "field": "geometry.steps[12]",
+            "quote": "thence southerly along that contour line to the point of its intersection with a point due East of the most easterly point on the southern boundary of the Hartley road right of way"
+          },
+          {
+            "field": "geometry.steps[13]",
+            "quote": "thence in a straight line due West to the point of the line's intersection with the 120 m contour line"
+          },
+          {
+            "field": "geometry.steps[14]",
+            "quote": "thence southerly and easterly along the contour line to the point of its intersection with Chilqua Creek"
+          },
+          {
+            "field": "geometry.steps[15]",
+            "quote": "thence southerly down the creek to its intersection with the 20 m contour line"
+          },
+          {
+            "field": "geometry.steps[16]",
+            "quote": "thence easterly along the contour line to its intersection with the westerly bank of Norrish Creek"
+          },
+          {
+            "field": "geometry.steps[17]",
+            "quote": "thence due East to the 200 m contour line"
+          },
+          {
+            "field": "geometry.steps[18]",
+            "quote": "thence easterly along the contour line to its intersection with Deroche Creek"
+          },
+          {
+            "field": "geometry.steps[19]",
+            "quote": "thence southerly along the natural boundary of Deroche Creek to its intersection with the 60 m contour line"
+          },
+          {
+            "field": "geometry.steps[20]",
+            "quote": "thence due South to a point on North Nicomen Road at the westerly end of a curve approximately 350 m west of the intersection of Park Road and North Nicomen Road"
+          },
+          {
+            "field": "geometry.steps[21]",
+            "quote": "thence easterly along the southern boundary of North Nicomen Road to its intersection with Deroche Creek"
+          },
+          {
+            "field": "geometry.steps[22]",
+            "quote": "thence southerly along the western natural boundary of Deroche Creek to its intersection with Taylor Road"
+          },
+          {
+            "field": "geometry.steps[23]",
+            "quote": "thence westerly along the northern boundary of Taylor Road to a point due North of the end of the western boundary of Ross Road"
+          },
+          {
+            "field": "geometry.steps[24]",
+            "quote": "thence due South to the point of reference"
+          },
+          {
+            "field": "geometry.steps[25]",
+            "quote": "thence southerly along the westerly boundary of Ross Road to its intersection with Highway 7"
+          },
+          {
+            "field": "geometry.steps[26]",
+            "quote": "thence easterly, northerly and westerly along Highway 7 to its intersection with the Canadian Pacific Railway"
+          },
+          {
+            "field": "geometry.steps[27]",
+            "quote": "thence easterly along the railway to its intersection with Malcolm Road"
+          },
+          {
+            "field": "geometry.steps[28]",
+            "quote": "thence northerly and southeasterly along Malcolm Road, approximately 1 km, to its intersection with a dyke that commences at the base of the southwest corner of Harrison Hill"
+          },
+          {
+            "field": "geometry.steps[29]",
+            "quote": "thence southerly and westerly along the dyke to its intersection with another dyke that runs generally westerly and northerly along the southerly boundary of Zaitscullachan slough"
+          },
+          {
+            "field": "geometry.steps[30]",
+            "quote": "thence in a straight line due South to the northerly boundary of the District of Chilliwack"
+          },
+          {
+            "field": "geometry.steps[31]",
+            "quote": "thence westerly along the district boundary following the centre line of the Fraser River, to the intersection with the easterly boundary of the District of Mission"
+          },
+          {
+            "field": "geometry.steps[32]",
+            "quote": "thence northwesterly, easterly and northerly along the district boundary to its intersection with Highway 7"
+          },
+          {
+            "field": "geometry.steps[33]",
+            "quote": "thence easterly along Highway 7 to the point of commencement"
+          },
+          {
+            "field": "geometry.steps[34]",
+            "quote": "Commencing at the intersection of the Canadian Pacific Railway right of way and the southeastern corner of the Squawkum Indian Reserve Number 3"
+          },
+          {
+            "field": "geometry.steps[35]",
+            "quote": "thence northerly and easterly along the high water mark, which is the natural boundary of Harrison Bay, to its intersection with the right of way of Highway 7 at a point which is also on the natural boundary of the Harrison River"
+          },
+          {
+            "field": "geometry.steps[36]",
+            "quote": "thence southeasterly along the bridge to the westerly boundary of the District of Kent"
+          },
+          {
+            "field": "geometry.steps[37]",
+            "quote": "thence southwesterly, southeasterly and southerly along the district boundary to the point of intersection with the Canadian Pacific Railway right of way"
+          },
+          {
+            "field": "geometry.steps[38]",
+            "quote": "thence westerly along the southern boundary of the right of way to the point of commencement"
+          }
+        ],
+        "uncertain": [
+          "geometry.steps[7].until"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-81716842855a",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:48:02Z",
+      "answer": {
+        "effect": "shot_only",
+        "exemptions": [
+          "excepting all Indian Reserve lands"
+        ],
+        "period": null,
+        "within": {
+          "type": "regional_district",
+          "name": "Fraser Valley Regional District"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": "inside",
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the intersection of Eagle Road and Highway 7",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the intersection of Eagle Road and Highway 7"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "road",
+              "feature": "Eagle Road",
+              "side_or_bank": null,
+              "until": "a point 150 m north of the intersection of Eagle Road and Shore Road",
+              "distance": "150 m",
+              "quote": "thence northerly along Eagle Road to a point 150 m north of the intersection of Eagle Road and Shore Road"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "a point at the high water mark on the natural boundary of Hatzic Lake",
+              "distance": null,
+              "quote": "thence in a straight line due West to a point at the high water mark on the natural boundary of Hatzic Lake"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the most easterly point of the northeast-southwest component of Sward Road",
+              "distance": null,
+              "quote": "thence in a straight line northwesterly to the most easterly point of the northeast-southwest component of Sward Road"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the 20 m contour line",
+              "distance": null,
+              "quote": "thence due West to the 20 m contour line"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "contour",
+              "feature": "20 m contour line",
+              "side_or_bank": null,
+              "until": "its intersection with the boundary of the Municipality of Mission",
+              "distance": null,
+              "quote": "thence southerly along the contour line to its intersection with the boundary of the Municipality of Mission"
+            },
+            {
+              "start": null,
+              "direction": "westerly and northerly",
+              "follow": "district_boundary",
+              "feature": "Municipality of Mission",
+              "side_or_bank": null,
+              "until": "the point of the boundary's intersection with the southerly natural boundary of Stave Lake",
+              "distance": null,
+              "quote": "thence westerly and northerly along the District boundary to the point of the boundary's intersection with the southerly natural boundary of Stave Lake"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "shoreline",
+              "feature": "Stave Lake",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "thence easterly along the natural boundary of Stave Lake"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "shoreline",
+              "feature": "Stave Lake",
+              "side_or_bank": null,
+              "until": "the mouth of Davis Creek",
+              "distance": null,
+              "quote": "thence easterly along the natural boundary to the mouth of Davis Creek"
+            },
+            {
+              "start": null,
+              "direction": "easterly and northerly",
+              "follow": "creek",
+              "feature": "Davis Creek",
+              "side_or_bank": null,
+              "until": "the point of its intersection with the southerly boundary of Davis Lake Provincial Park",
+              "distance": null,
+              "quote": "thence easterly and northerly up the creek to the point of its intersection with the southerly boundary of Davis Lake Provincial Park"
+            },
+            {
+              "start": null,
+              "direction": "due East and due North",
+              "follow": "other",
+              "feature": "Davis Lake Provincial Park",
+              "side_or_bank": "southerly and easterly boundaries",
+              "until": "the intersection of the easterly boundary of the park with the 200 meter contour line",
+              "distance": null,
+              "quote": "thence due East and due North along the southerly and easterly boundaries of the park to the intersection of the easterly boundary of the park with the 200 meter contour line"
+            },
+            {
+              "start": null,
+              "direction": "southeasterly",
+              "follow": "contour",
+              "feature": "200 meter contour line",
+              "side_or_bank": null,
+              "until": "the point of its intersection with the 280 m contour line",
+              "distance": null,
+              "quote": "thence southeasterly along the contour line to the point of its intersection with the 280 m contour line"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "contour",
+              "feature": "280 m contour line",
+              "side_or_bank": null,
+              "until": "the point of its intersection with a point due East of the most easterly point on the southern boundary of the Hartley road right of way",
+              "distance": null,
+              "quote": "thence southerly along that contour line to the point of its intersection with a point due East of the most easterly point on the southern boundary of the Hartley road right of way"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of the line's intersection with the 120 m contour line",
+              "distance": null,
+              "quote": "thence in a straight line due West to the point of the line's intersection with the 120 m contour line"
+            },
+            {
+              "start": null,
+              "direction": "southerly and easterly",
+              "follow": "contour",
+              "feature": "120 m contour line",
+              "side_or_bank": null,
+              "until": "the point of its intersection with Chilqua Creek",
+              "distance": null,
+              "quote": "thence southerly and easterly along the contour line to the point of its intersection with Chilqua Creek"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "creek",
+              "feature": "Chilqua Creek",
+              "side_or_bank": null,
+              "until": "its intersection with the 20 m contour line",
+              "distance": null,
+              "quote": "thence southerly down the creek to its intersection with the 20 m contour line"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "contour",
+              "feature": "20 m contour line",
+              "side_or_bank": null,
+              "until": "its intersection with the westerly bank of Norrish Creek",
+              "distance": null,
+              "quote": "thence easterly along the contour line to its intersection with the westerly bank of Norrish Creek"
+            },
+            {
+              "start": null,
+              "direction": "due East",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the 200 m contour line",
+              "distance": null,
+              "quote": "thence due East to the 200 m contour line"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "contour",
+              "feature": "200 m contour line",
+              "side_or_bank": null,
+              "until": "its intersection with Deroche Creek",
+              "distance": null,
+              "quote": "thence easterly along the contour line to its intersection with Deroche Creek"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "creek",
+              "feature": "Deroche Creek",
+              "side_or_bank": null,
+              "until": "its intersection with the 60 m contour line",
+              "distance": null,
+              "quote": "thence southerly along the natural boundary of Deroche Creek to its intersection with the 60 m contour line"
+            },
+            {
+              "start": null,
+              "direction": "due South",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "a point on North Nicomen Road at the westerly end of a curve approximately 350 m west of the intersection of Park Road and North Nicomen Road",
+              "distance": "approximately 350 m",
+              "quote": "thence due South to a point on North Nicomen Road at the westerly end of a curve approximately 350 m west of the intersection of Park Road and North Nicomen Road"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "road",
+              "feature": "North Nicomen Road",
+              "side_or_bank": "southern boundary",
+              "until": "its intersection with Deroche Creek",
+              "distance": null,
+              "quote": "thence easterly along the southern boundary of North Nicomen Road to its intersection with Deroche Creek"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "creek",
+              "feature": "Deroche Creek",
+              "side_or_bank": "western natural boundary",
+              "until": "its intersection with Taylor Road",
+              "distance": null,
+              "quote": "thence southerly along the western natural boundary of Deroche Creek to its intersection with Taylor Road"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "road",
+              "feature": "Taylor Road",
+              "side_or_bank": "northern boundary",
+              "until": "a point due North of the end of the western boundary of Ross Road",
+              "distance": null,
+              "quote": "thence westerly along the northern boundary of Taylor Road to a point due North of the end of the western boundary of Ross Road"
+            },
+            {
+              "start": null,
+              "direction": "due South",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of reference",
+              "distance": null,
+              "quote": "thence due South to the point of reference"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "road",
+              "feature": "Ross Road",
+              "side_or_bank": "westerly boundary",
+              "until": "its intersection with Highway 7",
+              "distance": null,
+              "quote": "thence southerly along the westerly boundary of Ross Road to its intersection with Highway 7"
+            },
+            {
+              "start": null,
+              "direction": "easterly, northerly and westerly",
+              "follow": "road",
+              "feature": "Highway 7",
+              "side_or_bank": null,
+              "until": "its intersection with the Canadian Pacific Railway",
+              "distance": null,
+              "quote": "thence easterly, northerly and westerly along Highway 7 to its intersection with the Canadian Pacific Railway"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "other",
+              "feature": "Canadian Pacific Railway",
+              "side_or_bank": null,
+              "until": "its intersection with Malcolm Road",
+              "distance": null,
+              "quote": "thence easterly along the railway to its intersection with Malcolm Road"
+            },
+            {
+              "start": null,
+              "direction": "northerly and southeasterly",
+              "follow": "road",
+              "feature": "Malcolm Road",
+              "side_or_bank": null,
+              "until": "its intersection with a dyke that commences at the base of the southwest corner of Harrison Hill",
+              "distance": "approximately 1 km",
+              "quote": "thence northerly and southeasterly along Malcolm Road, approximately 1 km, to its intersection with a dyke that commences at the base of the southwest corner of Harrison Hill"
+            },
+            {
+              "start": null,
+              "direction": "southerly and westerly",
+              "follow": "other",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "its intersection with another dyke that runs generally westerly and northerly along the southerly boundary of Zaitscullachan slough",
+              "distance": null,
+              "quote": "thence southerly and westerly along the dyke to its intersection with another dyke that runs generally westerly and northerly along the southerly boundary of Zaitscullachan slough"
+            },
+            {
+              "start": null,
+              "direction": "due South",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the northerly boundary of the District of Chilliwack",
+              "distance": null,
+              "quote": "thence in a straight line due South to the northerly boundary of the District of Chilliwack"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "district_boundary",
+              "feature": "District of Chilliwack",
+              "side_or_bank": "centre line of the Fraser River",
+              "until": "the intersection with the easterly boundary of the District of Mission",
+              "distance": null,
+              "quote": "thence westerly along the district boundary following the centre line of the Fraser River, to the intersection with the easterly boundary of the District of Mission"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly, easterly and northerly",
+              "follow": "district_boundary",
+              "feature": "District of Mission",
+              "side_or_bank": null,
+              "until": "its intersection with Highway 7",
+              "distance": null,
+              "quote": "thence northwesterly, easterly and northerly along the district boundary to its intersection with Highway 7"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "road",
+              "feature": "Highway 7",
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence easterly along Highway 7 to the point of commencement"
+            },
+            {
+              "start": "the intersection of the Canadian Pacific Railway right of way and the southeastern corner of the Squawkum Indian Reserve Number 3",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the intersection of the Canadian Pacific Railway right of way and the southeastern corner of the Squawkum Indian Reserve Number 3"
+            },
+            {
+              "start": null,
+              "direction": "northerly and easterly",
+              "follow": "shoreline",
+              "feature": "Harrison Bay",
+              "side_or_bank": "high water mark",
+              "until": "its intersection with the right of way of Highway 7 at a point which is also on the natural boundary of the Harrison River",
+              "distance": null,
+              "quote": "thence northerly and easterly along the high water mark, which is the natural boundary of Harrison Bay, to its intersection with the right of way of Highway 7 at a point which is also on the natural boundary of the Harrison River"
+            },
+            {
+              "start": null,
+              "direction": "southeasterly",
+              "follow": "other",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the westerly boundary of the District of Kent",
+              "distance": null,
+              "quote": "thence southeasterly along the bridge to the westerly boundary of the District of Kent"
+            },
+            {
+              "start": null,
+              "direction": "southwesterly, southeasterly and southerly",
+              "follow": "district_boundary",
+              "feature": "District of Kent",
+              "side_or_bank": null,
+              "until": "the point of intersection with the Canadian Pacific Railway right of way",
+              "distance": null,
+              "quote": "thence southwesterly, southeasterly and southerly along the district boundary to the point of intersection with the Canadian Pacific Railway right of way"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "other",
+              "feature": "Canadian Pacific Railway",
+              "side_or_bank": "southern boundary",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence westerly along the southern boundary of the right of way to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "Firearms Using Shot Only Areas"
+          },
+          {
+            "field": "exemptions[0]",
+            "quote": "excepting all Indian Reserve lands"
+          },
+          {
+            "field": "within",
+            "quote": "in Fraser Valley Regional District"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "(1)Commencing at the intersection of Eagle Road and Highway 7"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "within the following described boundaries"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "in Fraser Valley Regional District",
+    "effect": "Firearms Using Shot Only Areas",
+    "geometry.side": "within the following described boundaries",
+    "exemptions[0]": "excepting all Indian Reserve lands",
+    "geometry.steps[0]": "Commencing at the intersection of Eagle Road and Highway 7",
+    "geometry.steps[1]": "thence northerly along Eagle Road to a point 150 m north of the intersection of Eagle Road and Shore Road",
+    "geometry.steps[2]": "thence in a straight line due West to a point at the high water mark on the natural boundary of Hatzic Lake",
+    "geometry.steps[3]": "thence in a straight line northwesterly to the most easterly point of the northeast-southwest component of Sward Road",
+    "geometry.steps[4]": "thence due West to the 20 m contour line",
+    "geometry.steps[5]": "thence southerly along the contour line to its intersection with the boundary of the Municipality of Mission",
+    "geometry.steps[6]": "thence westerly and northerly along the District boundary to the point of the boundary's intersection with the southerly natural boundary of Stave Lake",
+    "geometry.steps[7]": "thence easterly along the natural boundary of Stave Lake",
+    "geometry.steps[8]": "thence easterly along the natural boundary to the mouth of Davis Creek",
+    "geometry.steps[9]": "thence easterly and northerly up the creek to the point of its intersection with the southerly boundary of Davis Lake Provincial Park",
+    "geometry.steps[10]": "thence due East and due North along the southerly and easterly boundaries of the park to the intersection of the easterly boundary of the park with the 200 meter contour line",
+    "geometry.steps[11]": "thence southeasterly along the contour line to the point of its intersection with the 280 m contour line",
+    "geometry.steps[12]": "thence southerly along that contour line to the point of its intersection with a point due East of the most easterly point on the southern boundary of the Hartley road right of way",
+    "geometry.steps[13]": "thence in a straight line due West to the point of the line's intersection with the 120 m contour line",
+    "geometry.steps[14]": "thence southerly and easterly along the contour line to the point of its intersection with Chilqua Creek",
+    "geometry.steps[15]": "thence southerly down the creek to its intersection with the 20 m contour line",
+    "geometry.steps[16]": "thence easterly along the contour line to its intersection with the westerly bank of Norrish Creek",
+    "geometry.steps[17]": "thence due East to the 200 m contour line",
+    "geometry.steps[18]": "thence easterly along the contour line to its intersection with Deroche Creek",
+    "geometry.steps[19]": "thence southerly along the natural boundary of Deroche Creek to its intersection with the 60 m contour line",
+    "geometry.steps[20]": "thence due South to a point on North Nicomen Road at the westerly end of a curve approximately 350 m west of the intersection of Park Road and North Nicomen Road",
+    "geometry.steps[21]": "thence easterly along the southern boundary of North Nicomen Road to its intersection with Deroche Creek",
+    "geometry.steps[22]": "thence southerly along the western natural boundary of Deroche Creek to its intersection with Taylor Road",
+    "geometry.steps[23]": "thence westerly along the northern boundary of Taylor Road to a point due North of the end of the western boundary of Ross Road",
+    "geometry.steps[24]": "thence due South to the point of reference",
+    "geometry.steps[25]": "thence southerly along the westerly boundary of Ross Road to its intersection with Highway 7",
+    "geometry.steps[26]": "thence easterly, northerly and westerly along Highway 7 to its intersection with the Canadian Pacific Railway",
+    "geometry.steps[27]": "thence easterly along the railway to its intersection with Malcolm Road",
+    "geometry.steps[28]": "thence northerly and southeasterly along Malcolm Road, approximately 1 km, to its intersection with a dyke that commences at the base of the southwest corner of Harrison Hill",
+    "geometry.steps[29]": "thence southerly and westerly along the dyke to its intersection with another dyke that runs generally westerly and northerly along the southerly boundary of Zaitscullachan slough",
+    "geometry.steps[30]": "thence in a straight line due South to the northerly boundary of the District of Chilliwack",
+    "geometry.steps[31]": "thence westerly along the district boundary following the centre line of the Fraser River, to the intersection with the easterly boundary of the District of Mission",
+    "geometry.steps[32]": "thence northwesterly, easterly and northerly along the district boundary to its intersection with Highway 7",
+    "geometry.steps[33]": "thence easterly along Highway 7 to the point of commencement",
+    "geometry.steps[34]": "Commencing at the intersection of the Canadian Pacific Railway right of way and the southeastern corner of the Squawkum Indian Reserve Number 3",
+    "geometry.steps[35]": "thence northerly and easterly along the high water mark, which is the natural boundary of Harrison Bay, to its intersection with the right of way of Highway 7 at a point which is also on the natural boundary of the Harrison River",
+    "geometry.steps[36]": "thence southeasterly along the bridge to the westerly boundary of the District of Kent",
+    "geometry.steps[37]": "thence southwesterly, southeasterly and southerly along the district boundary to the point of intersection with the Canadian Pacific Railway right of way",
+    "geometry.steps[38]": "thence westerly along the southern boundary of the right of way to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [
+    {
+      "query": "Fraser Valley Regional District",
+      "kind": "regional_district",
+      "layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_REGIONAL_DISTRICTS_SP",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "Fraser Valley Regional District"
+      ],
+      "sample": [
+        {
+          "LGL_ADMIN_AREA_ID": 89,
+          "ADMIN_AREA_NAME": "Fraser Valley Regional District",
+          "ADMIN_AREA_ABBREVIATION": "FVRD",
+          "ADMIN_AREA_BOUNDARY_TYPE": "LGL",
+          "ADMIN_AREA_GROUP_NAME": "-",
+          "CHANGE_REQUESTED_ORG": "HMA",
+          "UPDATE_TYPE": null,
+          "WHEN_UPDATED": "2015-07-15Z",
+          "MAP_STATUS": "Not Appended",
+          "OIC_MO_NUMBER": "1446",
+          "OIC_MO_YEAR": "1995",
+          "OIC_MO_TYPE": "OIC",
+          "WEBSITE_URL": null,
+          "IMAGE_URL": null,
+          "AFFECTED_ADMIN_AREA_ABRVN": null,
+          "FEATURE_AREA_SQM": 13913900713.0139,
+          "FEATURE_LENGTH_M": 748811.2066,
+          "OBJECTID": 34568,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T21:59:15.704Z",
+  "updated": "2026-10-20T21:59:15.704Z"
+}

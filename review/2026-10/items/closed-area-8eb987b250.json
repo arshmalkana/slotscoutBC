@@ -1,0 +1,164 @@
+{
+  "item_id": "closed-area-8eb987b250",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 3, section 4 (Sicamous)",
+  "rule_id": "W3-004",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "named area \"Kamloops Division of Yale District\": failed (no official layer for area type other)",
+    "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nSicamous\n4 That portion of the Province of British Columbia in Kamloops Division of Yale District, except organized territory, which is contained within the following described boundaries: All waters of Mara and Shuswap Lakes Iying east of a straight line between Murdock and Semaphore Points and north of a line running east-west through the mouth of Sicamous Creek.",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-1e9ddb06bf3e",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:47:30Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [
+          "organized territory"
+        ],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Kamloops Division of Yale District"
+        },
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": {
+            "type": "lake",
+            "name": "Mara and Shuswap Lakes"
+          },
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting or Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "Kamloops Division of Yale District"
+          },
+          {
+            "field": "exemptions[0]",
+            "quote": "except organized territory"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "All waters of Mara and Shuswap Lakes"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-1e9ddb06bf3e",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:47:30Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [
+          "organized territory"
+        ],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Kamloops Division of Yale District"
+        },
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": {
+            "type": "lake",
+            "name": "Mara and Shuswap Lakes"
+          },
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting or Hunting Areas"
+          },
+          {
+            "field": "exemptions[0]",
+            "quote": "except organized territory"
+          },
+          {
+            "field": "within",
+            "quote": "Kamloops Division of Yale District"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "All waters of Mara and Shuswap Lakes Iying east of a straight line between Murdock and Semaphore Points and north of a line running east-west through the mouth of Sicamous Creek"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "All waters of Mara and Shuswap Lakes"
+          }
+        ],
+        "uncertain": [
+          "geometry.side"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "within": "Kamloops Division of Yale District",
+    "geometry.feature": "All waters of Mara and Shuswap Lakes",
+    "effect": "No Shooting or Hunting Areas",
+    "exemptions[0]": "except organized territory"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [
+    {
+      "query": "Kamloops Division of Yale District",
+      "kind": "other",
+      "layer": "-",
+      "status": "failed",
+      "matches": 0,
+      "ids": [],
+      "note": "no official layer for area type other",
+      "sample": []
+    }
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T21:58:57.444Z",
+  "updated": "2026-10-20T21:58:57.444Z"
+}

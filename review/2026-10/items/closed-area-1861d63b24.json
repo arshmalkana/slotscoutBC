@@ -1,0 +1,148 @@
+{
+  "item_id": "closed-area-1861d63b24",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 1, section 12 (Tunkwa Lake)",
+  "rule_id": "W1-012",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: side: run 1 null vs run 2 \"inside\"",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 1 No Shooting, Hunting or Trapping Areas (Section 2)\nTunkwa Lake\n12 That portion of the Province, in the vicinity of Tunkwa Lake, Kootenay Land District, that is within the following boundaries: The largest island in Tunkwa Lake, being in Township 19, Range 21, W6M, Kootenay Land District.",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-6c6af88f8c0f",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:47:24Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Kootenay Land District"
+        },
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": {
+            "type": "island",
+            "name": "The largest island in Tunkwa Lake"
+          },
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting, Hunting or Trapping Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in the vicinity of Tunkwa Lake, Kootenay Land District"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "The largest island in Tunkwa Lake"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "The largest island in Tunkwa Lake"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-6c6af88f8c0f",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:46:27Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Kootenay Land District"
+        },
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": {
+            "type": "island",
+            "name": "The largest island in Tunkwa Lake"
+          },
+          "buffer_m": null,
+          "side": "inside",
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting, Hunting or Trapping Areas"
+          },
+          {
+            "field": "within",
+            "quote": "Kootenay Land District"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "The largest island in Tunkwa Lake"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "The largest island in Tunkwa Lake"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "within the following boundaries: The largest island"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "in the vicinity of Tunkwa Lake, Kootenay Land District",
+    "geometry.feature": "The largest island in Tunkwa Lake",
+    "effect": "No Shooting, Hunting or Trapping Areas"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "side: run 1 null vs run 2 \"inside\""
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T21:59:04.319Z",
+  "updated": "2026-10-20T21:59:04.319Z"
+}

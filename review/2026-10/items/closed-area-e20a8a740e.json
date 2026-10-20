@@ -1,0 +1,326 @@
+{
+  "item_id": "closed-area-e20a8a740e",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 10, section 3 (One Island Pasture)",
+  "rule_id": "W10-003",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: within: run 1 \"m.u. 7 20\" vs run 2 \"7 20\"",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 10 Firearms Using Shot Only Areas (Seasonal) (Section 10 (1) (b))\nOne Island Pasture\n3 During the period June 1 to October 15 in that portion of M.U. 7-20 contained within the following described boundaries: Commencing at the northeast corner of District Lot 36, Tp 24 and proceeding southerly along the East boundaries of District Lots 36 and 25, Tp 24 to the middle point on the west boundary of District Lot 30, Tp 25; thence easterly in a straight line to the middle point on the east boundary of Lot 30; thence southerly along the boundary to the southeast corner of Lot 30; thence west along the south boundary of Lot 30 to the southwest corner of Lot 30; thence southerly along the east boundary of District Lot 24, Tp 24 to its intersection with the fence which forms the southerly and westerly boundaries of the community pasture; thence westerly then in a general northwesterly direction along the fence to its intersection with the north boundary of District Lot 34, Tp 24; thence easterly along the north boundaries of District Lots 34, 35 and 36, Tp 24 to the point of commencement. [en. B.C. Reg. 109/85, s. 7.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-195cdbe9083d",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:47:24Z",
+      "answer": {
+        "effect": "shot_only_seasonal",
+        "exemptions": [],
+        "period": {
+          "start": "June 1",
+          "end": "October 15"
+        },
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 7-20"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the northeast corner of District Lot 36, Tp 24",
+              "direction": "southerly",
+              "follow": "lot_line",
+              "feature": "District Lots 36 and 25, Tp 24",
+              "side_or_bank": "East boundaries",
+              "until": "the middle point on the west boundary of District Lot 30, Tp 25",
+              "distance": null,
+              "quote": "Commencing at the northeast corner of District Lot 36, Tp 24 and proceeding southerly along the East boundaries of District Lots 36 and 25, Tp 24 to the middle point on the west boundary of District Lot 30, Tp 25"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the middle point on the east boundary of Lot 30",
+              "distance": null,
+              "quote": "thence easterly in a straight line to the middle point on the east boundary of Lot 30"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "lot_line",
+              "feature": "Lot 30",
+              "side_or_bank": "east boundary",
+              "until": "the southeast corner of Lot 30",
+              "distance": null,
+              "quote": "thence southerly along the boundary to the southeast corner of Lot 30"
+            },
+            {
+              "start": null,
+              "direction": "west",
+              "follow": "lot_line",
+              "feature": "Lot 30",
+              "side_or_bank": "south boundary",
+              "until": "the southwest corner of Lot 30",
+              "distance": null,
+              "quote": "thence west along the south boundary of Lot 30 to the southwest corner of Lot 30"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "lot_line",
+              "feature": "District Lot 24, Tp 24",
+              "side_or_bank": "east boundary",
+              "until": "its intersection with the fence which forms the southerly and westerly boundaries of the community pasture",
+              "distance": null,
+              "quote": "thence southerly along the east boundary of District Lot 24, Tp 24 to its intersection with the fence which forms the southerly and westerly boundaries of the community pasture"
+            },
+            {
+              "start": null,
+              "direction": "westerly then in a general northwesterly direction",
+              "follow": "other",
+              "feature": "the fence which forms the southerly and westerly boundaries of the community pasture",
+              "side_or_bank": null,
+              "until": "its intersection with the north boundary of District Lot 34, Tp 24",
+              "distance": null,
+              "quote": "thence westerly then in a general northwesterly direction along the fence to its intersection with the north boundary of District Lot 34, Tp 24"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "lot_line",
+              "feature": "District Lots 34, 35 and 36, Tp 24",
+              "side_or_bank": "north boundaries",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence easterly along the north boundaries of District Lots 34, 35 and 36, Tp 24 to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "Firearms Using Shot Only Areas (Seasonal)"
+          },
+          {
+            "field": "period",
+            "quote": "During the period June 1 to October 15"
+          },
+          {
+            "field": "within",
+            "quote": "in that portion of M.U. 7-20"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries: Commencing at"
+          },
+          {
+            "field": "geometry.steps[0]",
+            "quote": "Commencing at the northeast corner of District Lot 36, Tp 24 and proceeding southerly along the East boundaries of District Lots 36 and 25, Tp 24 to the middle point on the west boundary of District Lot 30, Tp 25"
+          },
+          {
+            "field": "geometry.steps[1]",
+            "quote": "thence easterly in a straight line to the middle point on the east boundary of Lot 30"
+          },
+          {
+            "field": "geometry.steps[2]",
+            "quote": "thence southerly along the boundary to the southeast corner of Lot 30"
+          },
+          {
+            "field": "geometry.steps[3]",
+            "quote": "thence west along the south boundary of Lot 30 to the southwest corner of Lot 30"
+          },
+          {
+            "field": "geometry.steps[4]",
+            "quote": "thence southerly along the east boundary of District Lot 24, Tp 24 to its intersection with the fence which forms the southerly and westerly boundaries of the community pasture"
+          },
+          {
+            "field": "geometry.steps[5]",
+            "quote": "thence westerly then in a general northwesterly direction along the fence to its intersection with the north boundary of District Lot 34, Tp 24"
+          },
+          {
+            "field": "geometry.steps[6]",
+            "quote": "thence easterly along the north boundaries of District Lots 34, 35 and 36, Tp 24 to the point of commencement"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-195cdbe9083d",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:46:27Z",
+      "answer": {
+        "effect": "shot_only_seasonal",
+        "exemptions": [],
+        "period": {
+          "start": "June 1",
+          "end": "October 15"
+        },
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "7-20"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the northeast corner of District Lot 36, Tp 24",
+              "direction": "southerly",
+              "follow": "lot_line",
+              "feature": "District Lots 36 and 25, Tp 24",
+              "side_or_bank": "East boundaries",
+              "until": "the middle point on the west boundary of District Lot 30, Tp 25",
+              "distance": null,
+              "quote": "Commencing at the northeast corner of District Lot 36, Tp 24 and proceeding southerly along the East boundaries of District Lots 36 and 25, Tp 24 to the middle point on the west boundary of District Lot 30, Tp 25"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the middle point on the east boundary of Lot 30",
+              "distance": null,
+              "quote": "thence easterly in a straight line to the middle point on the east boundary of Lot 30"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "lot_line",
+              "feature": "Lot 30",
+              "side_or_bank": "east boundary",
+              "until": "the southeast corner of Lot 30",
+              "distance": null,
+              "quote": "thence southerly along the boundary to the southeast corner of Lot 30"
+            },
+            {
+              "start": null,
+              "direction": "west",
+              "follow": "lot_line",
+              "feature": "Lot 30",
+              "side_or_bank": "south boundary",
+              "until": "the southwest corner of Lot 30",
+              "distance": null,
+              "quote": "thence west along the south boundary of Lot 30 to the southwest corner of Lot 30"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "lot_line",
+              "feature": "District Lot 24, Tp 24",
+              "side_or_bank": "east boundary",
+              "until": "its intersection with the fence which forms the southerly and westerly boundaries of the community pasture",
+              "distance": null,
+              "quote": "thence southerly along the east boundary of District Lot 24, Tp 24 to its intersection with the fence which forms the southerly and westerly boundaries of the community pasture"
+            },
+            {
+              "start": null,
+              "direction": "westerly then in a general northwesterly direction",
+              "follow": "other",
+              "feature": "the fence which forms the southerly and westerly boundaries of the community pasture",
+              "side_or_bank": null,
+              "until": "its intersection with the north boundary of District Lot 34, Tp 24",
+              "distance": null,
+              "quote": "thence westerly then in a general northwesterly direction along the fence to its intersection with the north boundary of District Lot 34, Tp 24"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "lot_line",
+              "feature": "District Lots 34, 35 and 36, Tp 24",
+              "side_or_bank": "north boundaries",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence easterly along the north boundaries of District Lots 34, 35 and 36, Tp 24 to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "Firearms Using Shot Only Areas (Seasonal)"
+          },
+          {
+            "field": "period",
+            "quote": "During the period June 1 to October 15"
+          },
+          {
+            "field": "within",
+            "quote": "in that portion of M.U. 7-20"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within the following described boundaries: Commencing at"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "in that portion of M.U. 7-20",
+    "period": "During the period June 1 to October 15",
+    "effect": "Firearms Using Shot Only Areas (Seasonal)",
+    "geometry.steps[0]": "Commencing at the northeast corner of District Lot 36, Tp 24 and proceeding southerly along the East boundaries of District Lots 36 and 25, Tp 24 to the middle point on the west boundary of District Lot 30, Tp 25",
+    "geometry.steps[1]": "thence easterly in a straight line to the middle point on the east boundary of Lot 30",
+    "geometry.steps[2]": "thence southerly along the boundary to the southeast corner of Lot 30",
+    "geometry.steps[3]": "thence west along the south boundary of Lot 30 to the southwest corner of Lot 30",
+    "geometry.steps[4]": "thence southerly along the east boundary of District Lot 24, Tp 24 to its intersection with the fence which forms the southerly and westerly boundaries of the community pasture",
+    "geometry.steps[5]": "thence westerly then in a general northwesterly direction along the fence to its intersection with the north boundary of District Lot 34, Tp 24",
+    "geometry.steps[6]": "thence easterly along the north boundaries of District Lots 34, 35 and 36, Tp 24 to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "within: run 1 \"m.u. 7 20\" vs run 2 \"7 20\""
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T21:58:54.548Z",
+  "updated": "2026-10-20T21:58:54.548Z"
+}

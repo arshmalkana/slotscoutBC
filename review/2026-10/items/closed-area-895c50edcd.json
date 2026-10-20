@@ -1,0 +1,354 @@
+{
+  "item_id": "closed-area-895c50edcd",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 9, section 7 (Cultus Lake)",
+  "rule_id": "W9-007",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 9 Firearms Using Shot Only Areas (Section 10 (1) (a))\nCultus Lake\n7 That portion of the Province of British Columbia in the vicinity of Cultus Lake within the following described boundaries: Commencing at the intersection of the 250 m contour line to the west of the Sweltzer River and the southerly boundary of the District of Chilliwack; thence following the contour line southerly and westerly to its intersection with the northern boundary of the Cultus Lake Provincial Park; thence easterly, southerly and southeasterly following the boundary to its southwestern corner and its intersection with the 100 m contour line; thence westerly and southerly along the contour line to its intersection with Frosst Creek; thence southerly and easterly up Frosst Creek to its intersection with the 400 m contour line; thence westerly, northerly and easterly along the 400 m contour line to its intersection with the Department of National Defence's Military Reserve boundary; thence northerly and westerly along the Military Reserve boundary to its intersection with the Soowahlie Indian Reserve boundary; thence westerly and northerly along the Indian Reserve boundary to its point of intersection with the southerly boundary of the District of Chilliwack; thence westerly to the point of commencement. [am. B.C. Reg. 109/85, s. 6 (a).]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-43ff03316408",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:48:00Z",
+      "answer": {
+        "effect": "shot_only",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": "inside",
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the intersection of the 250 m contour line to the west of the Sweltzer River and the southerly boundary of the District of Chilliwack",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the intersection of the 250 m contour line to the west of the Sweltzer River and the southerly boundary of the District of Chilliwack"
+            },
+            {
+              "start": null,
+              "direction": "southerly and westerly",
+              "follow": "contour",
+              "feature": "250 m contour line",
+              "side_or_bank": null,
+              "until": "its intersection with the northern boundary of the Cultus Lake Provincial Park",
+              "distance": null,
+              "quote": "thence following the contour line southerly and westerly to its intersection with the northern boundary of the Cultus Lake Provincial Park"
+            },
+            {
+              "start": null,
+              "direction": "easterly, southerly and southeasterly",
+              "follow": "other",
+              "feature": "Cultus Lake Provincial Park",
+              "side_or_bank": "boundary",
+              "until": "its southwestern corner and its intersection with the 100 m contour line",
+              "distance": null,
+              "quote": "thence easterly, southerly and southeasterly following the boundary to its southwestern corner and its intersection with the 100 m contour line"
+            },
+            {
+              "start": null,
+              "direction": "westerly and southerly",
+              "follow": "contour",
+              "feature": "100 m contour line",
+              "side_or_bank": null,
+              "until": "its intersection with Frosst Creek",
+              "distance": null,
+              "quote": "thence westerly and southerly along the contour line to its intersection with Frosst Creek"
+            },
+            {
+              "start": null,
+              "direction": "southerly and easterly up",
+              "follow": "creek",
+              "feature": "Frosst Creek",
+              "side_or_bank": null,
+              "until": "its intersection with the 400 m contour line",
+              "distance": null,
+              "quote": "thence southerly and easterly up Frosst Creek to its intersection with the 400 m contour line"
+            },
+            {
+              "start": null,
+              "direction": "westerly, northerly and easterly",
+              "follow": "contour",
+              "feature": "400 m contour line",
+              "side_or_bank": null,
+              "until": "its intersection with the Department of National Defence's Military Reserve boundary",
+              "distance": null,
+              "quote": "thence westerly, northerly and easterly along the 400 m contour line to its intersection with the Department of National Defence's Military Reserve boundary"
+            },
+            {
+              "start": null,
+              "direction": "northerly and westerly",
+              "follow": "reserve_boundary",
+              "feature": "Department of National Defence's Military Reserve",
+              "side_or_bank": null,
+              "until": "its intersection with the Soowahlie Indian Reserve boundary",
+              "distance": null,
+              "quote": "thence northerly and westerly along the Military Reserve boundary to its intersection with the Soowahlie Indian Reserve boundary"
+            },
+            {
+              "start": null,
+              "direction": "westerly and northerly",
+              "follow": "reserve_boundary",
+              "feature": "Soowahlie Indian Reserve",
+              "side_or_bank": null,
+              "until": "its point of intersection with the southerly boundary of the District of Chilliwack",
+              "distance": null,
+              "quote": "thence westerly and northerly along the Indian Reserve boundary to its point of intersection with the southerly boundary of the District of Chilliwack"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence westerly to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "Firearms Using Shot Only Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "Commencing at"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "within the following described boundaries"
+          },
+          {
+            "field": "geometry.steps[0]",
+            "quote": "Commencing at the intersection of the 250 m contour line to the west of the Sweltzer River and the southerly boundary of the District of Chilliwack"
+          },
+          {
+            "field": "geometry.steps[1]",
+            "quote": "thence following the contour line southerly and westerly to its intersection with the northern boundary of the Cultus Lake Provincial Park"
+          },
+          {
+            "field": "geometry.steps[2]",
+            "quote": "thence easterly, southerly and southeasterly following the boundary to its southwestern corner and its intersection with the 100 m contour line"
+          },
+          {
+            "field": "geometry.steps[3]",
+            "quote": "thence westerly and southerly along the contour line to its intersection with Frosst Creek"
+          },
+          {
+            "field": "geometry.steps[4]",
+            "quote": "thence southerly and easterly up Frosst Creek to its intersection with the 400 m contour line"
+          },
+          {
+            "field": "geometry.steps[5]",
+            "quote": "thence westerly, northerly and easterly along the 400 m contour line to its intersection with the Department of National Defence's Military Reserve boundary"
+          },
+          {
+            "field": "geometry.steps[6]",
+            "quote": "thence northerly and westerly along the Military Reserve boundary to its intersection with the Soowahlie Indian Reserve boundary"
+          },
+          {
+            "field": "geometry.steps[7]",
+            "quote": "thence westerly and northerly along the Indian Reserve boundary to its point of intersection with the southerly boundary of the District of Chilliwack"
+          },
+          {
+            "field": "geometry.steps[8]",
+            "quote": "thence westerly to the point of commencement"
+          }
+        ],
+        "uncertain": [
+          "geometry.steps[8].follow"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-43ff03316408",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:48:02Z",
+      "answer": {
+        "effect": "shot_only",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": "inside",
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the intersection of the 250 m contour line to the west of the Sweltzer River and the southerly boundary of the District of Chilliwack",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the intersection of the 250 m contour line to the west of the Sweltzer River and the southerly boundary of the District of Chilliwack"
+            },
+            {
+              "start": null,
+              "direction": "southerly and westerly",
+              "follow": "contour",
+              "feature": "250 m contour line",
+              "side_or_bank": null,
+              "until": "its intersection with the northern boundary of the Cultus Lake Provincial Park",
+              "distance": null,
+              "quote": "thence following the contour line southerly and westerly to its intersection with the northern boundary of the Cultus Lake Provincial Park"
+            },
+            {
+              "start": null,
+              "direction": "easterly, southerly and southeasterly",
+              "follow": "other",
+              "feature": "Cultus Lake Provincial Park",
+              "side_or_bank": null,
+              "until": "its southwestern corner and its intersection with the 100 m contour line",
+              "distance": null,
+              "quote": "thence easterly, southerly and southeasterly following the boundary to its southwestern corner and its intersection with the 100 m contour line"
+            },
+            {
+              "start": null,
+              "direction": "westerly and southerly",
+              "follow": "contour",
+              "feature": "100 m contour line",
+              "side_or_bank": null,
+              "until": "its intersection with Frosst Creek",
+              "distance": null,
+              "quote": "thence westerly and southerly along the contour line to its intersection with Frosst Creek"
+            },
+            {
+              "start": null,
+              "direction": "southerly and easterly",
+              "follow": "creek",
+              "feature": "Frosst Creek",
+              "side_or_bank": null,
+              "until": "its intersection with the 400 m contour line",
+              "distance": null,
+              "quote": "thence southerly and easterly up Frosst Creek to its intersection with the 400 m contour line"
+            },
+            {
+              "start": null,
+              "direction": "westerly, northerly and easterly",
+              "follow": "contour",
+              "feature": "400 m contour line",
+              "side_or_bank": null,
+              "until": "its intersection with the Department of National Defence's Military Reserve boundary",
+              "distance": null,
+              "quote": "thence westerly, northerly and easterly along the 400 m contour line to its intersection with the Department of National Defence's Military Reserve boundary"
+            },
+            {
+              "start": null,
+              "direction": "northerly and westerly",
+              "follow": "reserve_boundary",
+              "feature": "Department of National Defence's Military Reserve",
+              "side_or_bank": null,
+              "until": "its intersection with the Soowahlie Indian Reserve boundary",
+              "distance": null,
+              "quote": "thence northerly and westerly along the Military Reserve boundary to its intersection with the Soowahlie Indian Reserve boundary"
+            },
+            {
+              "start": null,
+              "direction": "westerly and northerly",
+              "follow": "reserve_boundary",
+              "feature": "Soowahlie Indian Reserve",
+              "side_or_bank": null,
+              "until": "its point of intersection with the southerly boundary of the District of Chilliwack",
+              "distance": null,
+              "quote": "thence westerly and northerly along the Indian Reserve boundary to its point of intersection with the southerly boundary of the District of Chilliwack"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence westerly to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "Firearms Using Shot Only Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "Commencing at the intersection of the 250 m contour line"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "within the following described boundaries"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "effect": "Firearms Using Shot Only Areas",
+    "geometry.side": "within the following described boundaries",
+    "geometry.steps[0]": "Commencing at the intersection of the 250 m contour line to the west of the Sweltzer River and the southerly boundary of the District of Chilliwack",
+    "geometry.steps[1]": "thence following the contour line southerly and westerly to its intersection with the northern boundary of the Cultus Lake Provincial Park",
+    "geometry.steps[2]": "thence easterly, southerly and southeasterly following the boundary to its southwestern corner and its intersection with the 100 m contour line",
+    "geometry.steps[3]": "thence westerly and southerly along the contour line to its intersection with Frosst Creek",
+    "geometry.steps[4]": "thence southerly and easterly up Frosst Creek to its intersection with the 400 m contour line",
+    "geometry.steps[5]": "thence westerly, northerly and easterly along the 400 m contour line to its intersection with the Department of National Defence's Military Reserve boundary",
+    "geometry.steps[6]": "thence northerly and westerly along the Military Reserve boundary to its intersection with the Soowahlie Indian Reserve boundary",
+    "geometry.steps[7]": "thence westerly and northerly along the Indian Reserve boundary to its point of intersection with the southerly boundary of the District of Chilliwack",
+    "geometry.steps[8]": "thence westerly to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T21:58:57.924Z",
+  "updated": "2026-10-20T21:58:57.924Z"
+}

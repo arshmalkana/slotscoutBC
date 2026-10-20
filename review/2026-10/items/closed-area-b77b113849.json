@@ -1,0 +1,148 @@
+{
+  "item_id": "closed-area-b77b113849",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 7, section 6 (Lot 495 N.W.D.)",
+  "rule_id": "W8-006",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: side: run 1 null vs run 2 \"inside\"",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 7 No Hunting Areas (Section 8)\nLot 495 N.W.D.\n6 That portion of M.U. 2-4 being Lot 495, New Westminster District.",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-3c7c0d0bd18a",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:46:22Z",
+      "answer": {
+        "effect": "no_hunting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 2-4"
+        },
+        "geometry": {
+          "method": "admin_boundary",
+          "road": null,
+          "feature": {
+            "type": "lot",
+            "name": "Lot 495, New Westminster District"
+          },
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "M.U. 2-4"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "being Lot 495, New Westminster District"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "Lot 495, New Westminster District"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-3c7c0d0bd18a",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:48:51Z",
+      "answer": {
+        "effect": "no_hunting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 2-4"
+        },
+        "geometry": {
+          "method": "admin_boundary",
+          "road": null,
+          "feature": {
+            "type": "lot",
+            "name": "Lot 495, New Westminster District"
+          },
+          "buffer_m": null,
+          "side": "inside",
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "M.U. 2-4"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "being Lot 495, New Westminster District"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "Lot 495, New Westminster District"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "being Lot 495, New Westminster District"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "M.U. 2-4",
+    "geometry.feature": "Lot 495, New Westminster District",
+    "effect": "No Hunting Areas"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "side: run 1 null vs run 2 \"inside\""
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T21:58:57.682Z",
+  "updated": "2026-10-20T21:58:57.682Z"
+}

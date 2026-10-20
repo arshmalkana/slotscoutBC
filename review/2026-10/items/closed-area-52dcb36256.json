@@ -1,0 +1,141 @@
+{
+  "item_id": "closed-area-52dcb36256",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 7, section 52 (Whistler Olympic Park)",
+  "rule_id": "W8-052",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "named area \"M.U. 2-6\": none",
+    "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 7 No Hunting Areas (Section 8)\nWhistler Olympic Park\n52 That portion of M.U. 2-6 in the vicinity of the Resort Municipality of Whistler outlined in red on the attached Map No. 7-2/14. [en. B.C. Reg. 72/2014, App. 1, s. 5.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-6d314ca89488",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:46:22Z",
+      "answer": {
+        "effect": "no_hunting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 2-6"
+        },
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "M.U. 2-6"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "outlined in red on the attached Map No. 7-2/14"
+          }
+        ],
+        "uncertain": [
+          "geometry.feature"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-6d314ca89488",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:48:51Z",
+      "answer": {
+        "effect": "no_hunting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 2-6"
+        },
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "M.U. 2-6"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "outlined in red on the attached Map No. 7-2/14"
+          }
+        ],
+        "uncertain": [
+          "geometry.feature"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "within": "M.U. 2-6",
+    "effect": "No Hunting Areas"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [
+    {
+      "query": "M.U. 2-6",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "none",
+      "matches": 0,
+      "ids": [],
+      "sample": []
+    }
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T21:59:04.452Z",
+  "updated": "2026-10-20T21:59:04.452Z"
+}

@@ -1,0 +1,140 @@
+{
+  "item_id": "closed-area-edf3a10269",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 3, section 24 (Kamloops)",
+  "rule_id": "W3-024",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: within: run 1 \"3 19 3 10 3 17 and 3 28\" vs run 2 \"m.u.s 3 19 3 10 3 17 and 3 28\"",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nKamloops\n24 Those portions of M.U.s 3-19, 3-10, 3-17 and 3-28 outlined in red on the attached map 'Closed Area 3-24/24'. [en. B.C. Reg. 161/2024, App. 1, s. 1.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-3ea11c617621",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:47:30Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "3-19, 3-10, 3-17 and 3-28"
+        },
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": {
+            "type": "other",
+            "name": "Closed Area 3-24/24"
+          },
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting or Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "M.U.s 3-19, 3-10, 3-17 and 3-28"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "outlined in red on the attached map 'Closed Area 3-24/24'"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-3ea11c617621",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:47:30Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U.s 3-19, 3-10, 3-17 and 3-28"
+        },
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": {
+            "type": "other",
+            "name": "Closed Area 3-24/24"
+          },
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting or Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "Those portions of M.U.s 3-19, 3-10, 3-17 and 3-28"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "outlined in red on the attached map 'Closed Area 3-24/24'"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "the attached map 'Closed Area 3-24/24'"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "M.U.s 3-19, 3-10, 3-17 and 3-28",
+    "geometry.feature": "outlined in red on the attached map 'Closed Area 3-24/24'",
+    "effect": "No Shooting or Hunting Areas"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "within: run 1 \"3 19 3 10 3 17 and 3 28\" vs run 2 \"m.u.s 3 19 3 10 3 17 and 3 28\""
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T21:58:57.894Z",
+  "updated": "2026-10-20T21:58:57.894Z"
+}

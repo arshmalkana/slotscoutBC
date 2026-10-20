@@ -1,0 +1,257 @@
+{
+  "item_id": "closed-area-cfa56fd08b",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 103 (Sea Island)",
+  "rule_id": "W5-103",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: steps: run 1 [\"|||\",\"|a point due west of the extreme southwesterly tip of sea island||straight_line\",\"|a point on the high water mark at the extreme southwesterly point of sea island||straight_line\",\"sea island iona island causeway and iona island|a point on the high water mark at the extreme northeasterly end of the southerly side of the iona island sewage jetty||shoreline\",\"iona island sewage jetty|the point of commencement||shoreline\"] vs run 2 [\"|||\",\"|a point due west of the extreme southwesterly tip of sea island||\",\"|a point on the high water mark at the extreme southwesterly point of sea island||\",\"sea island iona island causeway and iona island|a point on the high water mark at the extreme northeasterly end of the southerly side of the iona island sewage jetty||shoreline\",\"iona island sewage jetty|the point of commencement||shoreline\"]",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nSea Island\n103 That portion of M.U. 2-04 in the Province of British Columbia within the New Westminster Land District contained within the following described boundaries: Commencing at a point on the high water mark at the extreme southwesterly tip of the Iona Island Sewage Jetty; thence due South to a point due West of the extreme southwesterly tip of Sea Island; thence due East to a point on the high water mark at the extreme southwesterly point of Sea Island; northerly and westerly along the high water mark on the westerly side of Sea Island, Iona Island Causeway and Iona Island to a point on the high water mark at the extreme northeasterly end of the southerly side of the Iona Island Sewage Jetty; thence southwesterly along the high water mark on the south side of the Iona Island Sewage Jetty to the point of commencement [en. B.C. Reg. 176/89, s. 6.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-922330221646",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:47:52Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 2-04"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "a point on the high water mark at the extreme southwesterly tip of the Iona Island Sewage Jetty",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at a point on the high water mark at the extreme southwesterly tip of the Iona Island Sewage Jetty"
+            },
+            {
+              "start": null,
+              "direction": "due South",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "a point due West of the extreme southwesterly tip of Sea Island",
+              "distance": null,
+              "quote": "thence due South to a point due West of the extreme southwesterly tip of Sea Island"
+            },
+            {
+              "start": null,
+              "direction": "due East",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "a point on the high water mark at the extreme southwesterly point of Sea Island",
+              "distance": null,
+              "quote": "thence due East to a point on the high water mark at the extreme southwesterly point of Sea Island"
+            },
+            {
+              "start": null,
+              "direction": "northerly and westerly",
+              "follow": "shoreline",
+              "feature": "Sea Island, Iona Island Causeway and Iona Island",
+              "side_or_bank": "westerly side",
+              "until": "a point on the high water mark at the extreme northeasterly end of the southerly side of the Iona Island Sewage Jetty",
+              "distance": null,
+              "quote": "northerly and westerly along the high water mark on the westerly side of Sea Island, Iona Island Causeway and Iona Island to a point on the high water mark at the extreme northeasterly end of the southerly side of the Iona Island Sewage Jetty"
+            },
+            {
+              "start": null,
+              "direction": "southwesterly",
+              "follow": "shoreline",
+              "feature": "Iona Island Sewage Jetty",
+              "side_or_bank": "south side",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence southwesterly along the high water mark on the south side of the Iona Island Sewage Jetty to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "M.U. 2-04"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-922330221646",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:46:22Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 2-04"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "a point on the high water mark at the extreme southwesterly tip of the Iona Island Sewage Jetty",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at a point on the high water mark at the extreme southwesterly tip of the Iona Island Sewage Jetty"
+            },
+            {
+              "start": null,
+              "direction": "due South",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "a point due West of the extreme southwesterly tip of Sea Island",
+              "distance": null,
+              "quote": "thence due South to a point due West of the extreme southwesterly tip of Sea Island"
+            },
+            {
+              "start": null,
+              "direction": "due East",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "a point on the high water mark at the extreme southwesterly point of Sea Island",
+              "distance": null,
+              "quote": "thence due East to a point on the high water mark at the extreme southwesterly point of Sea Island"
+            },
+            {
+              "start": null,
+              "direction": "northerly and westerly",
+              "follow": "shoreline",
+              "feature": "Sea Island, Iona Island Causeway and Iona Island",
+              "side_or_bank": "westerly side",
+              "until": "a point on the high water mark at the extreme northeasterly end of the southerly side of the Iona Island Sewage Jetty",
+              "distance": null,
+              "quote": "northerly and westerly along the high water mark on the westerly side of Sea Island, Iona Island Causeway and Iona Island to a point on the high water mark at the extreme northeasterly end of the southerly side of the Iona Island Sewage Jetty"
+            },
+            {
+              "start": null,
+              "direction": "southwesterly",
+              "follow": "shoreline",
+              "feature": "Iona Island Sewage Jetty",
+              "side_or_bank": "south side",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence southwesterly along the high water mark on the south side of the Iona Island Sewage Jetty to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "M.U. 2-04"
+          },
+          {
+            "field": "geometry.steps[0]",
+            "quote": "Commencing at a point on the high water mark at the extreme southwesterly tip of the Iona Island Sewage Jetty"
+          },
+          {
+            "field": "geometry.steps[1]",
+            "quote": "thence due South to a point due West of the extreme southwesterly tip of Sea Island"
+          },
+          {
+            "field": "geometry.steps[2]",
+            "quote": "thence due East to a point on the high water mark at the extreme southwesterly point of Sea Island"
+          },
+          {
+            "field": "geometry.steps[3]",
+            "quote": "northerly and westerly along the high water mark on the westerly side of Sea Island, Iona Island Causeway and Iona Island to a point on the high water mark at the extreme northeasterly end of the southerly side of the Iona Island Sewage Jetty"
+          },
+          {
+            "field": "geometry.steps[4]",
+            "quote": "thence southwesterly along the high water mark on the south side of the Iona Island Sewage Jetty to the point of commencement"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "M.U. 2-04",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at a point on the high water mark at the extreme southwesterly tip of the Iona Island Sewage Jetty",
+    "geometry.steps[1]": "thence due South to a point due West of the extreme southwesterly tip of Sea Island",
+    "geometry.steps[2]": "thence due East to a point on the high water mark at the extreme southwesterly point of Sea Island",
+    "geometry.steps[3]": "northerly and westerly along the high water mark on the westerly side of Sea Island, Iona Island Causeway and Iona Island to a point on the high water mark at the extreme northeasterly end of the southerly side of the Iona Island Sewage Jetty",
+    "geometry.steps[4]": "thence southwesterly along the high water mark on the south side of the Iona Island Sewage Jetty to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "steps: run 1 [\"|||\",\"|a point due west of the extreme southwesterly tip of sea island||straight_line\",\"|a point on the high water mark at the extreme southwesterly point of sea island||straight_line\",\"sea island iona island causeway and iona island|a point on the high water mark at the extreme northeasterly end of the southerly side of the iona island sewage jetty||shoreline\",\"iona island sewage jetty|the point of commencement||shoreline\"] vs run 2 [\"|||\",\"|a point due west of the extreme southwesterly tip of sea island||\",\"|a point on the high water mark at the extreme southwesterly point of sea island||\",\"sea island iona island causeway and iona island|a point on the high water mark at the extreme northeasterly end of the southerly side of the iona island sewage jetty||shoreline\",\"iona island sewage jetty|the point of commencement||shoreline\"]"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T21:59:52.212Z",
+  "updated": "2026-10-20T21:59:52.212Z"
+}

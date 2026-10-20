@@ -7,7 +7,7 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "road \"Callaghan Road\": failed (fetch failed)",
+    "road \"Callaghan Road\": none",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -171,11 +171,10 @@
     {
       "query": "Callaghan Road",
       "kind": "road",
-      "layer": "-",
-      "status": "failed",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
       "matches": 0,
       "ids": [],
-      "note": "fetch failed",
       "sample": []
     }
   ],
@@ -189,5 +188,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:47:23.001Z",
-  "updated": "2026-10-20T21:47:23.001Z"
+  "updated": "2026-10-20T21:59:52.192Z"
 }

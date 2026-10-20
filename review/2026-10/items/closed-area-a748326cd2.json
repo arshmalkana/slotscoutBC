@@ -1,0 +1,156 @@
+{
+  "item_id": "closed-area-a748326cd2",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5.1, section 3 (Liumchen East Forest Service Road etc.)",
+  "rule_id": "W6-003",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "effect read from the text (no_shooting) differs from the schedule's effect (no_shooting_hunting_exempt)",
+    "named area \"M.U. 2-3\": none",
+    "the geometry builder does not draw \"road_buffer\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5.1 [en. B.C. Reg. 135/2017, App. 1, s. 2.] No Shooting Areas — Specified Crown Land (Section 7.1)\nLiumchen East Forest Service Road etc.\n3 Those portions of M.U. 2-3 being all Crown land within 400 m of the midline of the following roads: (a)Liumchen East Forest Service Road; (b)Little Tamihi Forest Service Road; (c)Liumchen West Forest Service Road; (d)Little Tamihi 1000 Forest Service Road. [am. B.C. Reg. 115/2018, App. 1, s. 2.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-742ba7f0a802",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:47:52Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 2-3"
+        },
+        "geometry": {
+          "method": "road_buffer",
+          "road": null,
+          "feature": null,
+          "buffer_m": 400,
+          "side": "both",
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "M.U. 2-3"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within 400 m of the midline of the following roads"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": "400 m"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "within 400 m of the midline"
+          }
+        ],
+        "uncertain": [
+          "geometry.road"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-742ba7f0a802",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:46:22Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 2-3"
+        },
+        "geometry": {
+          "method": "road_buffer",
+          "road": null,
+          "feature": null,
+          "buffer_m": 400,
+          "side": "both",
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "M.U. 2-3"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": "within 400 m of the midline"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "within 400 m of the midline"
+          }
+        ],
+        "uncertain": [
+          "geometry.road"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "within": "M.U. 2-3",
+    "geometry.buffer_m": "400 m",
+    "effect": "No Shooting Areas",
+    "geometry.side": "within 400 m of the midline"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [
+    {
+      "query": "M.U. 2-3",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "none",
+      "matches": 0,
+      "ids": [],
+      "sample": []
+    }
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T21:59:14.965Z",
+  "updated": "2026-10-20T21:59:14.965Z"
+}

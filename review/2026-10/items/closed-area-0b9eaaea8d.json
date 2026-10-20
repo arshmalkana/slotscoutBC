@@ -1,0 +1,240 @@
+{
+  "item_id": "closed-area-0b9eaaea8d",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 9, section 4 (Barnston Island)",
+  "rule_id": "W9-004",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 9 Firearms Using Shot Only Areas (Section 10 (1) (a))\nBarnston Island\n4 That portion of the Province of British Columbia in the vicinity of the City of Vancouver within the following described boundaries: Commencing at intersection of the southerly boundary of the District of Pitt Meadows and the northerly boundary of the District of Surrey, west of Barnston Island; thence easterly along the District of Pitt Meadows boundary to the point of its intersection with the northerly boundary of the District of Langley; thence westerly along the District boundary to its point of intersection with the northerly boundary of the District of Surrey; thence westerly along the District boundary to the point of commencement, excepting all Indian Reserve lands.",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-03698f3cea89",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:48:00Z",
+      "answer": {
+        "effect": "shot_only",
+        "exemptions": [
+          "excepting all Indian Reserve lands"
+        ],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": "inside",
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "intersection of the southerly boundary of the District of Pitt Meadows and the northerly boundary of the District of Surrey, west of Barnston Island",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at intersection of the southerly boundary of the District of Pitt Meadows and the northerly boundary of the District of Surrey, west of Barnston Island"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "district_boundary",
+              "feature": "District of Pitt Meadows",
+              "side_or_bank": null,
+              "until": "the point of its intersection with the northerly boundary of the District of Langley",
+              "distance": null,
+              "quote": "thence easterly along the District of Pitt Meadows boundary to the point of its intersection with the northerly boundary of the District of Langley"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "district_boundary",
+              "feature": "District of Langley",
+              "side_or_bank": "northerly boundary",
+              "until": "its point of intersection with the northerly boundary of the District of Surrey",
+              "distance": null,
+              "quote": "thence westerly along the District boundary to its point of intersection with the northerly boundary of the District of Surrey"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "district_boundary",
+              "feature": "District of Surrey",
+              "side_or_bank": "northerly boundary",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence westerly along the District boundary to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "Firearms Using Shot Only Areas"
+          },
+          {
+            "field": "exemptions[0]",
+            "quote": "excepting all Indian Reserve lands"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "Commencing at"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "within the following described boundaries"
+          },
+          {
+            "field": "geometry.steps[0]",
+            "quote": "Commencing at intersection of the southerly boundary of the District of Pitt Meadows and the northerly boundary of the District of Surrey, west of Barnston Island"
+          },
+          {
+            "field": "geometry.steps[1]",
+            "quote": "thence easterly along the District of Pitt Meadows boundary to the point of its intersection with the northerly boundary of the District of Langley"
+          },
+          {
+            "field": "geometry.steps[2]",
+            "quote": "thence westerly along the District boundary to its point of intersection with the northerly boundary of the District of Surrey"
+          },
+          {
+            "field": "geometry.steps[3]",
+            "quote": "thence westerly along the District boundary to the point of commencement"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-03698f3cea89",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:48:02Z",
+      "answer": {
+        "effect": "shot_only",
+        "exemptions": [
+          "excepting all Indian Reserve lands"
+        ],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": "inside",
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "intersection of the southerly boundary of the District of Pitt Meadows and the northerly boundary of the District of Surrey, west of Barnston Island",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at intersection of the southerly boundary of the District of Pitt Meadows and the northerly boundary of the District of Surrey, west of Barnston Island"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "district_boundary",
+              "feature": "District of Pitt Meadows",
+              "side_or_bank": null,
+              "until": "the point of its intersection with the northerly boundary of the District of Langley",
+              "distance": null,
+              "quote": "thence easterly along the District of Pitt Meadows boundary to the point of its intersection with the northerly boundary of the District of Langley"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "district_boundary",
+              "feature": "District of Langley",
+              "side_or_bank": "northerly boundary",
+              "until": "its point of intersection with the northerly boundary of the District of Surrey",
+              "distance": null,
+              "quote": "thence westerly along the District boundary to its point of intersection with the northerly boundary of the District of Surrey"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "district_boundary",
+              "feature": "District of Surrey",
+              "side_or_bank": "northerly boundary",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence westerly along the District boundary to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "Firearms Using Shot Only Areas"
+          },
+          {
+            "field": "exemptions[0]",
+            "quote": "excepting all Indian Reserve lands"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "Commencing at intersection of the southerly boundary of the District of Pitt Meadows"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "within the following described boundaries"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "effect": "Firearms Using Shot Only Areas",
+    "geometry.side": "within the following described boundaries",
+    "exemptions[0]": "excepting all Indian Reserve lands",
+    "geometry.steps[0]": "Commencing at intersection of the southerly boundary of the District of Pitt Meadows and the northerly boundary of the District of Surrey, west of Barnston Island",
+    "geometry.steps[1]": "thence easterly along the District of Pitt Meadows boundary to the point of its intersection with the northerly boundary of the District of Langley",
+    "geometry.steps[2]": "thence westerly along the District boundary to its point of intersection with the northerly boundary of the District of Surrey",
+    "geometry.steps[3]": "thence westerly along the District boundary to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T21:58:53.495Z",
+  "updated": "2026-10-20T21:58:53.495Z"
+}

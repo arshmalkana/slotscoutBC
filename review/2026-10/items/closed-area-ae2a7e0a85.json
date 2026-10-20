@@ -1,0 +1,630 @@
+{
+  "item_id": "closed-area-ae2a7e0a85",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 9, section 12 (Powell River)",
+  "rule_id": "W9-012",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "named area \"M.U. 2-12\": none",
+    "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 9 Firearms Using Shot Only Areas (Section 10 (1) (a))\nPowell River\n12 That portion of the Province of British Columbia in M.U. 2-12 in the vicinity of Powell River contained within the following described boundaries: Commencing at a point on the mean low water mark on the southerly natural boundary of Jefferd Creek where it flows into Thunder Bay; thence northerly up the creek to a point 500 m upstream of the right-of-way of BC Hydro powerline; thence westerly to its intersection with the Lois River; thence northerly and easterly along the west bank of the Lois River to the Lois Lake dam; thence along a straight line due West to a point 500 m north of the right-of-way of the BC Hydro power line; thence northwesterly parallel to the northerly boundary of the power line right of way at a perpendicular distance off 500 m from it to Kelly Creek; thence due South along a straight line to the southern boundary of the BC Hydro power line; thence northwesterly along the southern boundary of the British Columbia Hydro power line right of way to the southeasternmost bay of Hammil Lake; thence westerly and northwesterly along the mean low water mark of Hammil Lake to the outlet of Hammil Lake; thence in a straight line due North to the mean low water mark of Haslam Lake; thence westerly along the mean low water mark of Haslam Lake to its westernmost point; thence in a straight line due northwest to the southwesternmost point of Schmarge Bay, north of Powell Hill; thence due West in a straight line to the easterly boundary of the Sliammon Indian Reserve Number 1; thence southerly along the reserve boundary to its intersection with the northerly boundary of the District Municipality of Powell River; thence easterly and southerly along the district boundary to a point on the boundary 500 m southerly from the mean low water mark on the natural boundary of Malaspina Strait; thence generally southeasterly along a line 500 m from and parallel to the mean low water mark on the natural boundary of Malaspina Strait to a point 500 m south of the southerly tip of an unnamed point of land which forms the westerly shore of Frolander Bay; thence due East to the natural boundary of Frolander Bay; thence northeasterly along the base of a hill, which is located northeast of Frolander Bay, to the natural boundary of Thunder Bay; thence northerly along the mean low water mark on the natural boundary to the point of commencement. [en. B.C. Reg. 205/94, s. 27.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-e4ac8f7c0b20",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:48:00Z",
+      "answer": {
+        "effect": "shot_only",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 2-12"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": "inside",
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "a point on the mean low water mark on the southerly natural boundary of Jefferd Creek where it flows into Thunder Bay",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at a point on the mean low water mark on the southerly natural boundary of Jefferd Creek where it flows into Thunder Bay"
+            },
+            {
+              "start": null,
+              "direction": "northerly up",
+              "follow": "creek",
+              "feature": "Jefferd Creek",
+              "side_or_bank": null,
+              "until": "a point 500 m upstream of the right-of-way of BC Hydro powerline",
+              "distance": "500 m",
+              "quote": "thence northerly up the creek to a point 500 m upstream of the right-of-way of BC Hydro powerline"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "its intersection with the Lois River",
+              "distance": null,
+              "quote": "thence westerly to its intersection with the Lois River"
+            },
+            {
+              "start": null,
+              "direction": "northerly and easterly",
+              "follow": "river",
+              "feature": "Lois River",
+              "side_or_bank": "west bank",
+              "until": "the Lois Lake dam",
+              "distance": null,
+              "quote": "thence northerly and easterly along the west bank of the Lois River to the Lois Lake dam"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "a point 500 m north of the right-of-way of the BC Hydro power line",
+              "distance": "500 m",
+              "quote": "thence along a straight line due West to a point 500 m north of the right-of-way of the BC Hydro power line"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly",
+              "follow": "other",
+              "feature": "BC Hydro power line",
+              "side_or_bank": "northerly boundary of the power line right of way",
+              "until": "Kelly Creek",
+              "distance": "500 m",
+              "quote": "thence northwesterly parallel to the northerly boundary of the power line right of way at a perpendicular distance off 500 m from it to Kelly Creek"
+            },
+            {
+              "start": null,
+              "direction": "due South",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the southern boundary of the BC Hydro power line",
+              "distance": null,
+              "quote": "thence due South along a straight line to the southern boundary of the BC Hydro power line"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly",
+              "follow": "other",
+              "feature": "British Columbia Hydro power line",
+              "side_or_bank": "southern boundary of the right of way",
+              "until": "the southeasternmost bay of Hammil Lake",
+              "distance": null,
+              "quote": "thence northwesterly along the southern boundary of the British Columbia Hydro power line right of way to the southeasternmost bay of Hammil Lake"
+            },
+            {
+              "start": null,
+              "direction": "westerly and northwesterly",
+              "follow": "shoreline",
+              "feature": "Hammil Lake",
+              "side_or_bank": "mean low water mark",
+              "until": "the outlet of Hammil Lake",
+              "distance": null,
+              "quote": "thence westerly and northwesterly along the mean low water mark of Hammil Lake to the outlet of Hammil Lake"
+            },
+            {
+              "start": null,
+              "direction": "due North",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the mean low water mark of Haslam Lake",
+              "distance": null,
+              "quote": "thence in a straight line due North to the mean low water mark of Haslam Lake"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "shoreline",
+              "feature": "Haslam Lake",
+              "side_or_bank": "mean low water mark",
+              "until": "its westernmost point",
+              "distance": null,
+              "quote": "thence westerly along the mean low water mark of Haslam Lake to its westernmost point"
+            },
+            {
+              "start": null,
+              "direction": "due northwest",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the southwesternmost point of Schmarge Bay, north of Powell Hill",
+              "distance": null,
+              "quote": "thence in a straight line due northwest to the southwesternmost point of Schmarge Bay, north of Powell Hill"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the easterly boundary of the Sliammon Indian Reserve Number 1",
+              "distance": null,
+              "quote": "thence due West in a straight line to the easterly boundary of the Sliammon Indian Reserve Number 1"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "reserve_boundary",
+              "feature": "Sliammon Indian Reserve Number 1",
+              "side_or_bank": null,
+              "until": "its intersection with the northerly boundary of the District Municipality of Powell River",
+              "distance": null,
+              "quote": "thence southerly along the reserve boundary to its intersection with the northerly boundary of the District Municipality of Powell River"
+            },
+            {
+              "start": null,
+              "direction": "easterly and southerly",
+              "follow": "district_boundary",
+              "feature": "District Municipality of Powell River",
+              "side_or_bank": null,
+              "until": "a point on the boundary 500 m southerly from the mean low water mark on the natural boundary of Malaspina Strait",
+              "distance": "500 m",
+              "quote": "thence easterly and southerly along the district boundary to a point on the boundary 500 m southerly from the mean low water mark on the natural boundary of Malaspina Strait"
+            },
+            {
+              "start": null,
+              "direction": "generally southeasterly",
+              "follow": "other",
+              "feature": "Malaspina Strait",
+              "side_or_bank": "mean low water mark",
+              "until": "a point 500 m south of the southerly tip of an unnamed point of land which forms the westerly shore of Frolander Bay",
+              "distance": "500 m",
+              "quote": "thence generally southeasterly along a line 500 m from and parallel to the mean low water mark on the natural boundary of Malaspina Strait to a point 500 m south of the southerly tip of an unnamed point of land which forms the westerly shore of Frolander Bay"
+            },
+            {
+              "start": null,
+              "direction": "due East",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the natural boundary of Frolander Bay",
+              "distance": null,
+              "quote": "thence due East to the natural boundary of Frolander Bay"
+            },
+            {
+              "start": null,
+              "direction": "northeasterly",
+              "follow": "other",
+              "feature": null,
+              "side_or_bank": "base of a hill",
+              "until": "the natural boundary of Thunder Bay",
+              "distance": null,
+              "quote": "thence northeasterly along the base of a hill, which is located northeast of Frolander Bay, to the natural boundary of Thunder Bay"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "shoreline",
+              "feature": "Thunder Bay",
+              "side_or_bank": "mean low water mark",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence northerly along the mean low water mark on the natural boundary to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "Firearms Using Shot Only Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in M.U. 2-12"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "Commencing at"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "within the following described boundaries"
+          },
+          {
+            "field": "geometry.steps[0]",
+            "quote": "Commencing at a point on the mean low water mark on the southerly natural boundary of Jefferd Creek where it flows into Thunder Bay"
+          },
+          {
+            "field": "geometry.steps[1]",
+            "quote": "thence northerly up the creek to a point 500 m upstream of the right-of-way of BC Hydro powerline"
+          },
+          {
+            "field": "geometry.steps[2]",
+            "quote": "thence westerly to its intersection with the Lois River"
+          },
+          {
+            "field": "geometry.steps[3]",
+            "quote": "thence northerly and easterly along the west bank of the Lois River to the Lois Lake dam"
+          },
+          {
+            "field": "geometry.steps[4]",
+            "quote": "thence along a straight line due West to a point 500 m north of the right-of-way of the BC Hydro power line"
+          },
+          {
+            "field": "geometry.steps[5]",
+            "quote": "thence northwesterly parallel to the northerly boundary of the power line right of way at a perpendicular distance off 500 m from it to Kelly Creek"
+          },
+          {
+            "field": "geometry.steps[6]",
+            "quote": "thence due South along a straight line to the southern boundary of the BC Hydro power line"
+          },
+          {
+            "field": "geometry.steps[7]",
+            "quote": "thence northwesterly along the southern boundary of the British Columbia Hydro power line right of way to the southeasternmost bay of Hammil Lake"
+          },
+          {
+            "field": "geometry.steps[8]",
+            "quote": "thence westerly and northwesterly along the mean low water mark of Hammil Lake to the outlet of Hammil Lake"
+          },
+          {
+            "field": "geometry.steps[9]",
+            "quote": "thence in a straight line due North to the mean low water mark of Haslam Lake"
+          },
+          {
+            "field": "geometry.steps[10]",
+            "quote": "thence westerly along the mean low water mark of Haslam Lake to its westernmost point"
+          },
+          {
+            "field": "geometry.steps[11]",
+            "quote": "thence in a straight line due northwest to the southwesternmost point of Schmarge Bay, north of Powell Hill"
+          },
+          {
+            "field": "geometry.steps[12]",
+            "quote": "thence due West in a straight line to the easterly boundary of the Sliammon Indian Reserve Number 1"
+          },
+          {
+            "field": "geometry.steps[13]",
+            "quote": "thence southerly along the reserve boundary to its intersection with the northerly boundary of the District Municipality of Powell River"
+          },
+          {
+            "field": "geometry.steps[14]",
+            "quote": "thence easterly and southerly along the district boundary to a point on the boundary 500 m southerly from the mean low water mark on the natural boundary of Malaspina Strait"
+          },
+          {
+            "field": "geometry.steps[15]",
+            "quote": "thence generally southeasterly along a line 500 m from and parallel to the mean low water mark on the natural boundary of Malaspina Strait to a point 500 m south of the southerly tip of an unnamed point of land which forms the westerly shore of Frolander Bay"
+          },
+          {
+            "field": "geometry.steps[16]",
+            "quote": "thence due East to the natural boundary of Frolander Bay"
+          },
+          {
+            "field": "geometry.steps[17]",
+            "quote": "thence northeasterly along the base of a hill, which is located northeast of Frolander Bay, to the natural boundary of Thunder Bay"
+          },
+          {
+            "field": "geometry.steps[18]",
+            "quote": "thence northerly along the mean low water mark on the natural boundary to the point of commencement"
+          }
+        ],
+        "uncertain": [
+          "geometry.steps[2].follow"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-e4ac8f7c0b20",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:48:02Z",
+      "answer": {
+        "effect": "shot_only",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 2-12"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": "inside",
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "a point on the mean low water mark on the southerly natural boundary of Jefferd Creek where it flows into Thunder Bay",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at a point on the mean low water mark on the southerly natural boundary of Jefferd Creek where it flows into Thunder Bay"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "creek",
+              "feature": "Jefferd Creek",
+              "side_or_bank": null,
+              "until": "a point 500 m upstream of the right-of-way of BC Hydro powerline",
+              "distance": "500 m",
+              "quote": "thence northerly up the creek to a point 500 m upstream of the right-of-way of BC Hydro powerline"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "its intersection with the Lois River",
+              "distance": null,
+              "quote": "thence westerly to its intersection with the Lois River"
+            },
+            {
+              "start": null,
+              "direction": "northerly and easterly",
+              "follow": "river",
+              "feature": "Lois River",
+              "side_or_bank": "west bank",
+              "until": "the Lois Lake dam",
+              "distance": null,
+              "quote": "thence northerly and easterly along the west bank of the Lois River to the Lois Lake dam"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "a point 500 m north of the right-of-way of the BC Hydro power line",
+              "distance": "500 m",
+              "quote": "thence along a straight line due West to a point 500 m north of the right-of-way of the BC Hydro power line"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly",
+              "follow": "other",
+              "feature": "BC Hydro power line",
+              "side_or_bank": "northerly boundary",
+              "until": "Kelly Creek",
+              "distance": "500 m",
+              "quote": "thence northwesterly parallel to the northerly boundary of the power line right of way at a perpendicular distance off 500 m from it to Kelly Creek"
+            },
+            {
+              "start": null,
+              "direction": "due South",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the southern boundary of the BC Hydro power line",
+              "distance": null,
+              "quote": "thence due South along a straight line to the southern boundary of the BC Hydro power line"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly",
+              "follow": "other",
+              "feature": "British Columbia Hydro power line",
+              "side_or_bank": "southern boundary",
+              "until": "the southeasternmost bay of Hammil Lake",
+              "distance": null,
+              "quote": "thence northwesterly along the southern boundary of the British Columbia Hydro power line right of way to the southeasternmost bay of Hammil Lake"
+            },
+            {
+              "start": null,
+              "direction": "westerly and northwesterly",
+              "follow": "shoreline",
+              "feature": "Hammil Lake",
+              "side_or_bank": "mean low water mark",
+              "until": "the outlet of Hammil Lake",
+              "distance": null,
+              "quote": "thence westerly and northwesterly along the mean low water mark of Hammil Lake to the outlet of Hammil Lake"
+            },
+            {
+              "start": null,
+              "direction": "due North",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the mean low water mark of Haslam Lake",
+              "distance": null,
+              "quote": "thence in a straight line due North to the mean low water mark of Haslam Lake"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "shoreline",
+              "feature": "Haslam Lake",
+              "side_or_bank": "mean low water mark",
+              "until": "its westernmost point",
+              "distance": null,
+              "quote": "thence westerly along the mean low water mark of Haslam Lake to its westernmost point"
+            },
+            {
+              "start": null,
+              "direction": "due northwest",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the southwesternmost point of Schmarge Bay, north of Powell Hill",
+              "distance": null,
+              "quote": "thence in a straight line due northwest to the southwesternmost point of Schmarge Bay, north of Powell Hill"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the easterly boundary of the Sliammon Indian Reserve Number 1",
+              "distance": null,
+              "quote": "thence due West in a straight line to the easterly boundary of the Sliammon Indian Reserve Number 1"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "reserve_boundary",
+              "feature": "Sliammon Indian Reserve Number 1",
+              "side_or_bank": null,
+              "until": "its intersection with the northerly boundary of the District Municipality of Powell River",
+              "distance": null,
+              "quote": "thence southerly along the reserve boundary to its intersection with the northerly boundary of the District Municipality of Powell River"
+            },
+            {
+              "start": null,
+              "direction": "easterly and southerly",
+              "follow": "district_boundary",
+              "feature": "District Municipality of Powell River",
+              "side_or_bank": null,
+              "until": "a point on the boundary 500 m southerly from the mean low water mark on the natural boundary of Malaspina Strait",
+              "distance": "500 m",
+              "quote": "thence easterly and southerly along the district boundary to a point on the boundary 500 m southerly from the mean low water mark on the natural boundary of Malaspina Strait"
+            },
+            {
+              "start": null,
+              "direction": "generally southeasterly",
+              "follow": "other",
+              "feature": "Malaspina Strait",
+              "side_or_bank": "mean low water mark",
+              "until": "a point 500 m south of the southerly tip of an unnamed point of land which forms the westerly shore of Frolander Bay",
+              "distance": "500 m",
+              "quote": "thence generally southeasterly along a line 500 m from and parallel to the mean low water mark on the natural boundary of Malaspina Strait to a point 500 m south of the southerly tip of an unnamed point of land which forms the westerly shore of Frolander Bay"
+            },
+            {
+              "start": null,
+              "direction": "due East",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the natural boundary of Frolander Bay",
+              "distance": null,
+              "quote": "thence due East to the natural boundary of Frolander Bay"
+            },
+            {
+              "start": null,
+              "direction": "northeasterly",
+              "follow": "other",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the natural boundary of Thunder Bay",
+              "distance": null,
+              "quote": "thence northeasterly along the base of a hill, which is located northeast of Frolander Bay, to the natural boundary of Thunder Bay"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "shoreline",
+              "feature": "Thunder Bay",
+              "side_or_bank": "mean low water mark",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence northerly along the mean low water mark on the natural boundary to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "Firearms Using Shot Only Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in M.U. 2-12"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "Commencing at a point on the mean low water mark on the southerly natural boundary of Jefferd Creek"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "contained within the following described boundaries"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "in M.U. 2-12",
+    "effect": "Firearms Using Shot Only Areas",
+    "geometry.side": "within the following described boundaries",
+    "geometry.steps[0]": "Commencing at a point on the mean low water mark on the southerly natural boundary of Jefferd Creek where it flows into Thunder Bay",
+    "geometry.steps[1]": "thence northerly up the creek to a point 500 m upstream of the right-of-way of BC Hydro powerline",
+    "geometry.steps[2]": "thence westerly to its intersection with the Lois River",
+    "geometry.steps[3]": "thence northerly and easterly along the west bank of the Lois River to the Lois Lake dam",
+    "geometry.steps[4]": "thence along a straight line due West to a point 500 m north of the right-of-way of the BC Hydro power line",
+    "geometry.steps[5]": "thence northwesterly parallel to the northerly boundary of the power line right of way at a perpendicular distance off 500 m from it to Kelly Creek",
+    "geometry.steps[6]": "thence due South along a straight line to the southern boundary of the BC Hydro power line",
+    "geometry.steps[7]": "thence northwesterly along the southern boundary of the British Columbia Hydro power line right of way to the southeasternmost bay of Hammil Lake",
+    "geometry.steps[8]": "thence westerly and northwesterly along the mean low water mark of Hammil Lake to the outlet of Hammil Lake",
+    "geometry.steps[9]": "thence in a straight line due North to the mean low water mark of Haslam Lake",
+    "geometry.steps[10]": "thence westerly along the mean low water mark of Haslam Lake to its westernmost point",
+    "geometry.steps[11]": "thence in a straight line due northwest to the southwesternmost point of Schmarge Bay, north of Powell Hill",
+    "geometry.steps[12]": "thence due West in a straight line to the easterly boundary of the Sliammon Indian Reserve Number 1",
+    "geometry.steps[13]": "thence southerly along the reserve boundary to its intersection with the northerly boundary of the District Municipality of Powell River",
+    "geometry.steps[14]": "thence easterly and southerly along the district boundary to a point on the boundary 500 m southerly from the mean low water mark on the natural boundary of Malaspina Strait",
+    "geometry.steps[15]": "thence generally southeasterly along a line 500 m from and parallel to the mean low water mark on the natural boundary of Malaspina Strait to a point 500 m south of the southerly tip of an unnamed point of land which forms the westerly shore of Frolander Bay",
+    "geometry.steps[16]": "thence due East to the natural boundary of Frolander Bay",
+    "geometry.steps[17]": "thence northeasterly along the base of a hill, which is located northeast of Frolander Bay, to the natural boundary of Thunder Bay",
+    "geometry.steps[18]": "thence northerly along the mean low water mark on the natural boundary to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [
+    {
+      "query": "M.U. 2-12",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "none",
+      "matches": 0,
+      "ids": [],
+      "sample": []
+    }
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T22:00:19.523Z",
+  "updated": "2026-10-20T22:00:19.523Z"
+}

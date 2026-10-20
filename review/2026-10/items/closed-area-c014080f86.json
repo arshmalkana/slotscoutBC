@@ -1,0 +1,170 @@
+{
+  "item_id": "closed-area-c014080f86",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5.1, section 14 (Chehalis Fleetwood)",
+  "rule_id": "W6-014",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "effect read from the text (no_shooting) differs from the schedule's effect (no_shooting_hunting_exempt)",
+    "named area \"M.U. 2-19\": none",
+    "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5.1 [en. B.C. Reg. 135/2017, App. 1, s. 2.] No Shooting Areas — Specified Crown Land (Section 7.1)\nChehalis Fleetwood\n14 Those portions of M.U. 2-19 that are (a)within 400 m of the midline of any road highlighted in yellow on the attached map 'Closed Area 5.1-14/22', or (b)within 400 m of the high water mark of any stream, creek or river highlighted in yellow on the attached map 'Closed Area 5.1-14/22'. [en. B.C. Reg. 157/2022, App. 3, s. 4.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-a4cf1eb992cb",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:46:22Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 2-19"
+        },
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": null,
+          "buffer_m": 400,
+          "side": "both",
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "M.U. 2-19"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within 400 m of the midline of any road highlighted in yellow"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within 400 m of the high water mark of any stream, creek or river highlighted in yellow"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": "400 m"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "within 400 m of the midline of any road highlighted in yellow"
+          }
+        ],
+        "uncertain": [
+          "geometry.road",
+          "geometry.feature",
+          "geometry.from",
+          "geometry.to"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-a4cf1eb992cb",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:48:51Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 2-19"
+        },
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": null,
+          "buffer_m": 400,
+          "side": "both",
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "M.U. 2-19"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "highlighted in yellow on the attached map 'Closed Area 5.1-14/22'"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": "within 400 m of"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "within 400 m of"
+          }
+        ],
+        "uncertain": [
+          "geometry.road",
+          "geometry.feature",
+          "geometry.from",
+          "geometry.to"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "within": "M.U. 2-19",
+    "geometry.buffer_m": "400 m",
+    "effect": "No Shooting Areas",
+    "geometry.side": "within 400 m of the midline of any road highlighted in yellow"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [
+    {
+      "query": "M.U. 2-19",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "none",
+      "matches": 0,
+      "ids": [],
+      "sample": []
+    }
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T21:59:53.065Z",
+  "updated": "2026-10-20T21:59:53.065Z"
+}
