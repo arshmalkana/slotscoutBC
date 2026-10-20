@@ -1,0 +1,26 @@
+{
+  "task_id": "road_notice-72eea8feb8ae",
+  "kind": "road_notice",
+  "schema": "road_notice.v1",
+  "prompt": "road_notice.v1",
+  "month": "2026-10-dryrun",
+  "unit_ids": [
+    "dm:DSI-66e61e93-gate_location_map_braden_mainline_and_tr11"
+  ],
+  "unit_hash": "72eea8feb8ae1d448890614b3de3ed5578916757a57a15205e189729eb4573f4",
+  "title": "District Manager notice DSI-66e61e93-gate_location_map_braden_mainline_and_tr11",
+  "source": {
+    "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/gate_location_map_braden_mainline_and_tr11.pdf",
+    "version": "2026-10-19T18:10:14.901Z",
+    "file": "raw/2026-10-dryrun/dm_notices/DSI-66e61e93-gate_location_map_braden_mainline_and_tr11.txt",
+    "confirmed": true
+  },
+  "source_text": "TR11\n   Station 0+200\n\n\n\n\nBraden Mainline\nStation 0+100\n\n\n\n\n                                                     TFL46\n                                                  Braden Area\n                                                 Gate Locations\n                                         Braden Mainline - Station 0+100\n                                              TR11 - Station 0+200\n\n\n                                      Forest Roads             £ Gate Location\n                                      - Mainline               (i)   Blockade Location\n                                             Secondary Road          Swamp\n                                            Overgrown Road           Lake/River\n\n                   2   4 Kilometers                           L��J TFL 46 Boundary\n                                      1:75,000                                    May 27, 2021",
+  "created": "2026-10-19T19:02:52.588Z",
+  "meta": {
+    "org": "DSI",
+    "pdf": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/gate_location_map_braden_mainline_and_tr11.pdf"
+  },
+  "superseded_on": "2026-10-20T15:15:30+00:00",
+  "reason": "the 2026-10-dryrun cycle was folded into 2026-10 (re-pulled and re-read there); this task's unit is read by a 2026-10 task now"
+}

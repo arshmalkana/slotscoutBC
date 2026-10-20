@@ -1,0 +1,26 @@
+{
+  "task_id": "road_notice-2d7dfa9fde6e",
+  "kind": "road_notice",
+  "schema": "road_notice.v1",
+  "prompt": "road_notice.v1",
+  "month": "2026-10-dryrun",
+  "unit_ids": [
+    "dm:DVA-792bd4d5-project_flyer_driftwood_rebuild"
+  ],
+  "unit_hash": "2d7dfa9fde6e144e07d9f022e172f49668942ab72c5117d29de478191e185abe",
+  "title": "District Manager notice DVA-792bd4d5-project_flyer_driftwood_rebuild",
+  "source": {
+    "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/stuart-nechako/project_flyer_driftwood_rebuild.pdf",
+    "version": "2026-10-19T18:10:30.891Z",
+    "file": "raw/2026-10-dryrun/dm_notices/DVA-792bd4d5-project_flyer_driftwood_rebuild.txt",
+    "confirmed": true
+  },
+  "source_text": "Driftwood FSR 15km Rebuild\n\nOVERVIEW\nThe Ministry of Forests (FOR) will be contracting out work to rebuild\na section of the Driftwood FSR north of Fort St James from 15.1km\nto 16.7km. The current road configuration does not meet the\ndesired road design and must be re-worked to meet the required\nvertical alignment.\n.\n\n\n\nWORK DETAILS\nMINISTRY CONTACTS\nDistrict Engineering Officer\nCoordinating Registered              Ministry Representative\nProfessional                         Road Activity Professional of Record\nSean Baumann, RFT                     Ken Yorston, RFT\n250-570-0672                          250-570-0653\nSean.Baumann@gov.bc.ca                Ken.Yorston@gov.bc.ca\n\n\n\nSCHEDULE\nThe project will take place from July 6 - July 24, 2026.\n\n\nIMPACTS ON ROAD USERS\nMinor delays may be encountered but traffic will be able to\nbypass the work area either along the FSR itself, or by\nusing a short detour route.",
+  "created": "2026-10-19T19:02:52.588Z",
+  "meta": {
+    "org": "DVA",
+    "pdf": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/stuart-nechako/project_flyer_driftwood_rebuild.pdf"
+  },
+  "superseded_on": "2026-10-20T15:15:30+00:00",
+  "reason": "the 2026-10-dryrun cycle was folded into 2026-10 (re-pulled and re-read there); this task's unit is read by a 2026-10 task now"
+}
