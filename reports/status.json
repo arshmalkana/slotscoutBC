@@ -1,6 +1,6 @@
 {
-  "month": "2026-10-dryrun",
-  "updatedAt": "2026-10-19T19:36:59.582Z",
+  "month": "2026-10",
+  "updatedAt": "2026-10-20T15:26:13.384Z",
   "extractor": "agent",
   "autopublish": {
     "configured": false,
@@ -8,8 +8,8 @@
     "goldItems": 0
   },
   "pull": {
-    "startedAt": "2026-10-19T18:08:14.056Z",
-    "updatedAt": "2026-10-19T19:34:00.907Z",
+    "startedAt": "2026-10-19T16:53:43.915Z",
+    "updatedAt": "2026-10-20T15:26:12.410Z",
     "sources": {
       "bcparks_advisories": {
         "status": "skipped",
@@ -19,21 +19,13 @@
         "status": "skipped",
         "detail": "planned source, not pulled yet"
       },
-      "closed_areas": {
-        "status": "awaiting_person",
-        "detail": "0 of 6 regulations from copies a person saved in inbox/bclaws; waiting for 76_84_00_multi, 196_99, 190_84, 180_90, 16_2004, 38_2005; 1 unconfirmed excerpt(s) in inbox/excerpts"
-      },
-      "road_notices": {
+      "wmu": {
         "status": "ok",
-        "detail": "22 of 22 district pages"
+        "detail": "225 features, count matches the server"
       },
-      "dm_notices": {
+      "federal_protected": {
         "status": "ok",
-        "detail": "46 of 46 linked notice PDFs"
-      },
-      "bylaws": {
-        "status": "partial",
-        "detail": "5 of 34 starter-set jurisdictions with a bylaw document found; the rest need a person"
+        "detail": "21 features, count matches the server"
       },
       "province": {
         "status": "ok",
@@ -111,9 +103,25 @@
         "status": "ok",
         "detail": "286301 features, count matches the server"
       },
+      "closed_areas": {
+        "status": "partial",
+        "detail": "1 of 5 regulations from copies a person saved in inbox/bclaws; waiting for 190_84, 180_90, 16_2004, 38_2005; repealed, not pulled: 196_99; 1 unconfirmed excerpt(s) in inbox/excerpts"
+      },
+      "road_notices": {
+        "status": "ok",
+        "detail": "22 of 22 district pages"
+      },
+      "dm_notices": {
+        "status": "ok",
+        "detail": "46 of 46 linked notice PDFs"
+      },
       "dra_roads": {
         "status": "ok",
         "detail": "1882029 features, count matches the server"
+      },
+      "bylaws": {
+        "status": "partial",
+        "detail": "5 of 34 starter-set jurisdictions with a bylaw document found; the rest need a person"
       },
       "cutblocks": {
         "status": "ok",
@@ -122,10 +130,6 @@
       "mvpr": {
         "status": "ok",
         "detail": "347 features, count matches the server"
-      },
-      "wmu": {
-        "status": "ok",
-        "detail": "225 features, count matches the server"
       },
       "community_watersheds": {
         "status": "ok",
@@ -162,38 +166,209 @@
       "nr_districts": {
         "status": "ok",
         "detail": "23 features, count matches the server"
-      },
-      "federal_protected": {
-        "status": "ok",
-        "detail": "21 features, count matches the server"
       }
     },
     "layers": 33,
     "layersMatching": 33,
     "failures": [
       {
-        "source": "closed_areas",
-        "what": "legal text",
-        "error": "no dated copy of 76_84_00_multi, 196_99, 190_84, 180_90, 16_2004, 38_2005: waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)"
-      },
-      {
         "source": "bylaws",
         "what": "muni:Bowen Island Municipality",
         "error": "robots.txt for www.bimbc.ca could not be read, so automated access is not assumed"
+      },
+      {
+        "source": "closed_areas",
+        "what": "legal text",
+        "error": "no dated copy of 180_90, 16_2004, 38_2005: waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)"
+      },
+      {
+        "source": "closed_areas",
+        "what": "190_84",
+        "error": "Hunting Regulation, B.C. Reg. 190/84: https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84 returned HTTP 404 to a person on 2026-10-20. The current BC Laws document id is needed."
+      },
+      {
+        "source": "closed_areas",
+        "what": "196_99",
+        "error": "Motor Vehicle Prohibition Regulation, B.C. Reg. 196/99: repealed effective March 1, 2024 by B.C. Reg. 18/2024 (BC Laws page saved by a person 2026-10-20). Which regulation now holds the motor vehicle closures is not confirmed yet."
       }
     ]
   },
   "changes": {
-    "comparedWith": "2026-10",
-    "new": 42,
+    "comparedWith": null,
+    "new": 699,
     "changed": 0,
     "removed": 0,
-    "unchanged": 396
+    "unchanged": 0
   },
   "extraction": {
-    "tasks": 22,
-    "waiting": 0
+    "tasks": 339,
+    "waiting": 214,
+    "run1Done": 125,
+    "run2Done": 125,
+    "withImages": 37
   },
+  "progress": [
+    {
+      "step": "pull",
+      "part": "BC Laws regulations in hand",
+      "done": 1,
+      "total": 5,
+      "left": 4,
+      "percent": 20,
+      "last": "waiting for 190_84, 180_90, 16_2004, 38_2005",
+      "at": "2026-10-20T15:26:12.399Z"
+    },
+    {
+      "step": "pull",
+      "part": "bylaw sites",
+      "done": 34,
+      "total": 34,
+      "left": 0,
+      "percent": 100,
+      "last": "District of Lillooet: not_found",
+      "at": "2026-10-19T20:24:53.420Z"
+    },
+    {
+      "step": "pull",
+      "part": "District Manager PDFs",
+      "done": 46,
+      "total": 46,
+      "left": 0,
+      "percent": 100,
+      "last": "DSC-335a98d1-a94817_bk_forest_service_road.pdf",
+      "at": "2026-10-19T20:01:35.968Z"
+    },
+    {
+      "step": "pull",
+      "part": "District Manager PDFs re-read",
+      "done": 46,
+      "total": 46,
+      "left": 0,
+      "percent": 100,
+      "last": "DSI-5f111aca-kmu_gate_location_overview_map.pdf",
+      "at": "2026-10-19T20:06:42.187Z"
+    },
+    {
+      "step": "pull",
+      "part": "district road pages",
+      "done": 22,
+      "total": 22,
+      "left": 0,
+      "percent": 100,
+      "last": "DKA",
+      "at": "2026-10-19T19:57:08.171Z"
+    },
+    {
+      "step": "pull",
+      "part": "GIS layers",
+      "done": 4,
+      "total": 4,
+      "left": 0,
+      "percent": 100,
+      "last": "fire_history ok",
+      "at": "2026-10-19T20:25:12.277Z"
+    },
+    {
+      "step": "pull",
+      "part": "inbox files",
+      "done": 4,
+      "total": 4,
+      "left": 0,
+      "percent": 100,
+      "last": "inbox/notes/2026-10-20 BC Laws 196_99 page (repealed).txt",
+      "at": "2026-10-20T15:12:16.142Z"
+    },
+    {
+      "step": "split",
+      "part": "bylaw sites",
+      "done": 34,
+      "total": 34,
+      "left": 0,
+      "percent": 100,
+      "last": "District of Lillooet",
+      "at": "2026-10-20T15:12:18.957Z"
+    },
+    {
+      "step": "split",
+      "part": "District Manager PDFs",
+      "done": 46,
+      "total": 46,
+      "left": 0,
+      "percent": 100,
+      "last": "DVA-d66840c9-upper_driftwood_deactivation_advertisement",
+      "at": "2026-10-20T15:12:18.949Z"
+    },
+    {
+      "step": "split",
+      "part": "district road pages",
+      "done": 22,
+      "total": 22,
+      "left": 0,
+      "percent": 100,
+      "last": "DVA",
+      "at": "2026-10-20T15:12:17.030Z"
+    },
+    {
+      "step": "queue",
+      "part": "AI tasks written",
+      "done": 339,
+      "total": 339,
+      "left": 0,
+      "percent": 100,
+      "last": "bylaw-1af291427d0b",
+      "at": "2026-10-20T15:12:19.977Z"
+    },
+    {
+      "step": "extract",
+      "part": "run 1 answers",
+      "done": 125,
+      "total": 339,
+      "left": 214,
+      "percent": 36,
+      "last": "",
+      "at": "2026-10-20T15:26:13.386Z"
+    },
+    {
+      "step": "extract",
+      "part": "run 2 answers",
+      "done": 125,
+      "total": 339,
+      "left": 214,
+      "percent": 36,
+      "last": "",
+      "at": "2026-10-20T15:26:13.386Z"
+    },
+    {
+      "step": "build",
+      "part": "closed areas",
+      "done": 254,
+      "total": 254,
+      "left": 0,
+      "percent": 100,
+      "last": "Closed Areas Regulation, Schedule 3, section 65 (Kalamalka Lake Park): waiting for extraction",
+      "at": "2026-10-20T15:16:17.787Z"
+    },
+    {
+      "step": "build",
+      "part": "District Manager PDFs",
+      "done": 46,
+      "total": 46,
+      "left": 0,
+      "percent": 100,
+      "last": "DVA-d66840c9-upper_driftwood_deactivation_advertisement",
+      "at": "2026-10-20T15:23:20.521Z"
+    },
+    {
+      "step": "build",
+      "part": "parts",
+      "done": 4,
+      "total": 4,
+      "left": 0,
+      "percent": 100,
+      "last": "build summary written",
+      "at": "2026-10-20T15:23:23.074Z"
+    }
+  ],
   "rules": {
     "approved": 0,
     "provisional": 0,
@@ -201,15 +376,21 @@
     "retired": 0
   },
   "review": {
-    "thisMonth": 22,
-    "open": 22,
-    "openAllMonths": 92,
-    "looserOpen": 0
+    "thisMonth": 91,
+    "open": 91,
+    "openAllMonths": 91,
+    "looserOpen": 1
   },
   "tests": {
     "regressionRan": true,
     "regressionPassed": true,
     "falseGreen": false
   },
-  "release": null
+  "release": {
+    "id": "2026-10-rc",
+    "publishable": false,
+    "missing": [
+      "legal reviewer sign-off (make signoff BY=<name>)"
+    ]
+  }
 }

@@ -146,8 +146,7 @@ async function pullBcLaws(m: Manifest, opts: PullOpts): Promise<void> {
   const dir = join(monthDir(m.month), "bclaws");
   const have: string[] = [];
   const missing: string[] = [];
-  for (const [i, doc] of documents.entries()) {
-    progress("pull", "BC Laws regulations", i, documents.length, doc);
+  for (const doc of documents) {
     if (api_confirmed) {
       const url = api_document_url.replace("{doc}", doc);
       try {
@@ -171,7 +170,8 @@ async function pullBcLaws(m: Manifest, opts: PullOpts): Promise<void> {
     }
     have.push(doc);
   }
-  progress("pull", "BC Laws regulations", documents.length, documents.length, `${have.length} available, ${missing.length} waiting for a person`);
+  // Counts regulations in hand, not regulations looked for: the rest wait for a person (or the API).
+  progress("pull", "BC Laws regulations in hand", have.length, documents.length, missing.length ? `waiting for ${missing.join(", ")}` : "all in hand");
   const excerpts = listFiles(join(P.inbox, "excerpts"), (f) => f.endsWith(".txt"));
   const how = api_confirmed ? "BC Laws API" : "copies a person saved in inbox/bclaws";
   const { repealed = {}, not_found = {} } = config().bclaws;

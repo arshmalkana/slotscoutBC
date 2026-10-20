@@ -1,6 +1,6 @@
 # Monthly report 2026-10
 
-Written 2026-10-19T19:35:22.588Z. Extraction mode: **agent**. AI auto-publishing: **off** (gold set: 0 item(s), not passing yet).
+Written 2026-10-20T15:26:13.384Z. Extraction mode: **agent**. AI auto-publishing: **off** (gold set: 0 item(s), not passing yet).
 
 ## Sources
 
@@ -9,12 +9,12 @@ Written 2026-10-19T19:35:22.588Z. Extraction mode: **agent**. AI auto-publishing
 | bc_parks | ok | 930 features, count matches the server |
 | bcparks_advisories | **skipped** | planned source, not pulled yet |
 | buildings | ok | 433681 features, count matches the server |
-| bylaws | **partial** | 3 of 34 starter-set jurisdictions with a bylaw document found; the rest need a person |
-| closed_areas | **awaiting_person** | 0 of 6 regulations from copies a person saved in inbox/bclaws; waiting for 76_84_00_multi, 196_99, 190_84, 180_90, 16_2004, 38_2005; 1 unconfirmed excerpt(s) in inbox/excerpts |
+| bylaws | **partial** | 5 of 34 starter-set jurisdictions with a bylaw document found; the rest need a person |
+| closed_areas | **partial** | 1 of 5 regulations from copies a person saved in inbox/bclaws; waiting for 190_84, 180_90, 16_2004, 38_2005; repealed, not pulled: 196_99; 1 unconfirmed excerpt(s) in inbox/excerpts |
 | community_watersheds | ok | 466 features, count matches the server |
 | crown_tenures | ok | 66843 features, count matches the server |
 | cutblocks | ok | 596129 features, count matches the server |
-| dm_notices | ok | 24 of 24 linked notice PDFs |
+| dm_notices | ok | 46 of 46 linked notice PDFs |
 | dra_roads | ok | 1882029 features, count matches the server |
 | electoral_areas | ok | 159 features, count matches the server |
 | federal_protected | ok | 21 features, count matches the server |
@@ -50,11 +50,32 @@ GIS layers: 33 of 33 pulled in full with counts matching the server.
 
 ## Changes
 
-First pull (baseline): 396 units. Details: `reports/2026-10-changes.md`.
+First pull (baseline): 699 units. Details: `reports/2026-10-changes.md`.
+
+## Progress
+
+| Step | Part | Done | Total | Left | |
+| --- | --- | ---: | ---: | ---: | --- |
+| pull | BC Laws regulations in hand | 1 | 5 | 4 | 20% |
+| pull | bylaw sites | 34 | 34 | 0 | 100% |
+| pull | District Manager PDFs | 46 | 46 | 0 | 100% |
+| pull | District Manager PDFs re-read | 46 | 46 | 0 | 100% |
+| pull | district road pages | 22 | 22 | 0 | 100% |
+| pull | GIS layers | 4 | 4 | 0 | 100% |
+| pull | inbox files | 4 | 4 | 0 | 100% |
+| split | bylaw sites | 34 | 34 | 0 | 100% |
+| split | District Manager PDFs | 46 | 46 | 0 | 100% |
+| split | district road pages | 22 | 22 | 0 | 100% |
+| queue | AI tasks written | 339 | 339 | 0 | 100% |
+| extract | run 1 answers | 125 | 339 | 214 | 36% |
+| extract | run 2 answers | 125 | 339 | 214 | 36% |
+| build | closed areas | 254 | 254 | 0 | 100% |
+| build | District Manager PDFs | 46 | 46 | 0 | 100% |
+| build | parts | 4 | 4 | 0 | 100% |
 
 ## Extraction and rules
 
-61 extraction task(s) this month; 0 still waiting for both runs (see `queue/AGENT_TASKS.md`).
+339 extraction task(s) this month (37 with map or scan page images); run 1 125 of 339 done, run 2 125 of 339 done; 214 still waiting for both runs (see `queue/AGENT_TASKS.md`).
 Rule features: 0 approved, 0 provisional, 1 candidate(s) waiting for a person, 0 retired.
 
 ## Tests
@@ -64,12 +85,16 @@ Details: `reports/2026-10-test.md`.
 
 ## Open review items
 
-70 open (4 bylaw, 1 closed area, 19 dm notice, 13 road notice block, 33 road notice reading). Packet: `review/2026-10/index.html`.
+91 open (6 bylaw, 39 dm notice, 13 road notice block, 33 road notice reading). Packet: `review/2026-10/index.html`.
+
+1 looser change(s) wait for a person; the live map keeps the older, stricter version until then.
 
 ## Failed or missing sources
 
-- **closed_areas** legal text: no dated copy of 76_84_00_multi, 196_99, 190_84, 180_90, 16_2004, 38_2005: waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)
 - **bylaws** muni:Bowen Island Municipality: robots.txt for www.bimbc.ca could not be read, so automated access is not assumed
+- **closed_areas** legal text: no dated copy of 180_90, 16_2004, 38_2005: waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)
+- **closed_areas** 190_84: Hunting Regulation, B.C. Reg. 190/84: https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84 returned HTTP 404 to a person on 2026-10-20. The current BC Laws document id is needed.
+- **closed_areas** 196_99: Motor Vehicle Prohibition Regulation, B.C. Reg. 196/99: repealed effective March 1, 2024 by B.C. Reg. 18/2024 (BC Laws page saved by a person 2026-10-20). Which regulation now holds the motor vehicle closures is not confirmed yet.
 
 ## Sign-off checklist (people only)
 
