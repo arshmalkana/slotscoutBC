@@ -1,18 +1,1037 @@
 {
-  "id": "2026-10-rc",
+  "id": "2026-10-r1",
   "month": "2026-10",
-  "builtAt": "2026-10-19T18:04:48.540Z",
-  "publishable": false,
-  "missing": [
-    "legal reviewer sign-off (make signoff BY=<name>)"
-  ],
+  "builtAt": "2026-10-20T17:25:55.751Z",
+  "publishable": true,
+  "missing": [],
   "includes": {
-    "approvedRuleFeatures": 0,
+    "approvedRuleFeatures": 1,
     "candidatesExcluded": 1
   },
-  "openReviewItemsExcluded": 70,
-  "decisions": [],
-  "signoff": null,
+  "openReviewItemsExcluded": 39,
+  "decisions": [
+    {
+      "item": "bylaw-12fc977003",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "bylaw-230d956800",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "bylaw-62f344c1b8",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "bylaw-7698b0d8e6",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "bylaw-ef7c79bc45",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "closed-area-71626994d0",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "closed-area-a79cd7c164",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-01f0f56d5a",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-04414c9297",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-0773021b3e",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-0fea3f164f",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-1091c1a777",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-27f2ba74fa",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-28a3819a3f",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-2dce13c628",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-33faafb07d",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-359fe634e2",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-3c833cb69d",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-3e7d8e240f",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-3f434bb427",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-407958e84a",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-44c4ebe3d6",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-4b53d40a7a",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-4f96ad0971",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-55da7db556",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-61df901f7f",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-77d6345c14",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-7c994d8bba",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-80a6b6ddde",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-877e512330",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-88d66b8dbb",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-9142d752b5",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-98a6eb08c1",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-9a64c1324a",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-9bdba2fc2e",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-a1458d150e",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-b223c7aa68",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-b62a9e22a1",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-b9b4467ef9",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-bca3809fe2",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-c319d06e26",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-c361aac4ad",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-ce894c3bf5",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-e3d6638e47",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-ed8ea3a107",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "dm-notice-fa48fcaa86",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-block-4a222e1e73",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-block-58ca255943",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-block-5c1c7bc813",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-block-7089f819f0",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-block-8014868a01",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-block-8165716ac7",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-block-83e26ab202",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-block-884a9369ad",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-block-a0707ff10c",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-block-a4521cb232",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-block-c8216cf6fe",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-block-c87084e0d1",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-block-ef9d6dd284",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-14ff527616",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-154b62810a",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-1d14ca45e2",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-1e23020196",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-26d27b7399",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-27b9d2fd4c",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-46a0aa46f7",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-4705a95122",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-4c21935662",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-52792777ef",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-647d5e3569",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-73725c92ba",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-74fbbe7deb",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-7a74ad65ef",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-89145828e1",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-8e76bca74e",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-98484330e3",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-9f1b1394bb",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-a102045838",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-aa5796ad8c",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-aefe014860",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-bbbc32c270",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-bca135298f",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-c12ae00a1b",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-c80ef4be00",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-cb6c3462b2",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-d8077bb7d5",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-da9ad8cc04",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-ef7281876e",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-f536872be4",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-f6904e336e",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-f6c0d006ad",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    },
+    {
+      "item": "road-notice-reading-faf10ed377",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-20"
+    }
+  ],
+  "signoff": {
+    "month": "2026-10",
+    "by": "Arsh",
+    "on": "2026-10-20",
+    "at": "2026-10-20T17:14:26.240Z",
+    "note": null,
+    "decidedItems": [
+      {
+        "item": "bylaw-12fc977003",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "bylaw-230d956800",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "bylaw-62f344c1b8",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "bylaw-7698b0d8e6",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "bylaw-ef7c79bc45",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "closed-area-71626994d0",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "closed-area-a79cd7c164",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-01f0f56d5a",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-04414c9297",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-0773021b3e",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-0fea3f164f",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-1091c1a777",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-27f2ba74fa",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-28a3819a3f",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-2dce13c628",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-33faafb07d",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-359fe634e2",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-3c833cb69d",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-3e7d8e240f",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-3f434bb427",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-407958e84a",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-44c4ebe3d6",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-4b53d40a7a",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-4f96ad0971",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-55da7db556",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-61df901f7f",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-77d6345c14",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-7c994d8bba",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-80a6b6ddde",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-877e512330",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-88d66b8dbb",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-9142d752b5",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-98a6eb08c1",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-9a64c1324a",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-9bdba2fc2e",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-a1458d150e",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-b223c7aa68",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-b62a9e22a1",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-b9b4467ef9",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-bca3809fe2",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-c319d06e26",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-c361aac4ad",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-ce894c3bf5",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-e3d6638e47",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-ed8ea3a107",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "dm-notice-fa48fcaa86",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-block-4a222e1e73",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-block-58ca255943",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-block-5c1c7bc813",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-block-7089f819f0",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-block-8014868a01",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-block-8165716ac7",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-block-83e26ab202",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-block-884a9369ad",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-block-a0707ff10c",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-block-a4521cb232",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-block-c8216cf6fe",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-block-c87084e0d1",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-block-ef9d6dd284",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-14ff527616",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-154b62810a",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-1d14ca45e2",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-1e23020196",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-26d27b7399",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-27b9d2fd4c",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-46a0aa46f7",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-4705a95122",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-4c21935662",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-52792777ef",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-647d5e3569",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-73725c92ba",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-74fbbe7deb",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-7a74ad65ef",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-89145828e1",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-8e76bca74e",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-98484330e3",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-9f1b1394bb",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-a102045838",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-aa5796ad8c",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-aefe014860",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-bbbc32c270",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-bca135298f",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-c12ae00a1b",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-c80ef4be00",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-cb6c3462b2",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-d8077bb7d5",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-da9ad8cc04",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-ef7281876e",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-f536872be4",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-f6904e336e",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-f6c0d006ad",
+        "decision": "approved",
+        "by": "Arsh"
+      },
+      {
+        "item": "road-notice-reading-faf10ed377",
+        "decision": "approved",
+        "by": "Arsh"
+      }
+    ]
+  },
   "sourceHashes": {
     "layers": {
       "wmu": "8662260ca636dd9053dbe10d369e983b7bc291c53af8bfe5d751dd317a829832",
@@ -32,7 +1051,7 @@
       "rec_trails": "f3aee1728dfd341f9440d9cfc26ce187aaa3774bcae286683ed380b9f677c50f",
       "fire_restrictions": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "fire_bans": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "fire_current": "d1d05579322a5a1f4d5a9cba669292db8111beeeeab050f8e7b31aadb135b332",
+      "fire_current": "d0b283d46bb702e9f11a15f7bec2e322f294a7c234cd9995961690cd9a655df1",
       "fire_history": "96ca2fda10a6041d18264f10b32a10e0d2742ae4339cc80becdec4d28173a028",
       "parcels": "e3a114d69aa5f2b1317ddb4007c483027dfbd382b7adcec496ba6d94cf061f78",
       "fsr_roads": "97371be5a9f590146db197e33054b0daf1706481d9e4f41f6b98e49957b34fc3",
@@ -49,32 +1068,32 @@
       "buildings": "b50d2140ec8f870e85d9be94b52a5cc3d1f4c270bd54f5681e00c64c774c26cc",
       "nr_districts": "0c5b01f36d1dc540735103ecc34b12260fe7835dfe784845b870238315d635b2"
     },
-    "files": 51
+    "files": 116
   },
   "files": [
     {
       "file": "bylaws.json",
-      "sha256": "881e455dcc95962901527ee0fb029cacb6bf4dee15ff7b03786de429ff451ff3"
+      "sha256": "3cadd87d781c40842fc6dc33636b18437cdca005fba1df7f0cf8367f38ebdc5a"
     },
     {
       "file": "config.toml",
-      "sha256": "005f14388892ede4d4611840b544b4cabb5d4848b15085682a00f214f0e0efb2"
+      "sha256": "afb3629384c3500ca51cd5cc9d5587daa016b274eb3bc4e04d8f6aed7f985dc8"
     },
     {
       "file": "registry.yaml",
-      "sha256": "7a2f238494870f4588aa3f5d5a728e3542ea2c4bd6e2b39b981a61ef6816d5a9"
+      "sha256": "f95600bb94ead16852e9ff2ab3f59c8701e10ae260eb7f7b6dbf334a623e872b"
     },
     {
       "file": "road-notices.json",
-      "sha256": "1f3db19face17df2794a9bbc8ff549aa07dcd3f4dd4e2a386c08372e1350f75e"
+      "sha256": "c7de097833c897f4c7ed785aba2ae957bec85be61fc1d65d24e0f2f3cfeee6d5"
     },
     {
       "file": "rules.geojson",
-      "sha256": "9d099add762f815034c5cc1ec84650e318d54f2be45b1f850cfa49eb0e988f55"
+      "sha256": "cc8da286562b0e57d1ce18e051dd34235e2a187943021f59b4687ea3fdee4ced"
     },
     {
       "file": "wildlife-coverage.json",
-      "sha256": "36baf90fb1cea8747112b96cf00e9574d94ecbfd892ffdeb0591f549491df3b1"
+      "sha256": "d2a6a62983adfb7c3477bfe99b91c9a6f4f3b819eb606a44d43cd84c2a6bd04f"
     }
   ]
 }

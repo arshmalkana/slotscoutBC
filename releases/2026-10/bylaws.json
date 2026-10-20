@@ -5,6 +5,13 @@
     "not_started": 331,
     "in_progress": 1
   },
+  "provinceCounts": {
+    "municipality": 161,
+    "electoral_area": 158,
+    "local_trust_area": 13,
+    "source": "Province of British Columbia count, given by a person on 2026-10-20",
+    "note": "The register is built from the official boundary layers (ABMS), which on 2026-10-19 held 160 municipalities and 159 electoral areas. One jurisdiction differs; a person identifies it. Until then every jurisdiction stays grey unless its bylaw is reviewed, so the difference cannot make a spot green."
+  },
   "entries": [
     {
       "key": "muni:Bowen Island Municipality",
@@ -53,7 +60,15 @@
       "kind": "municipality",
       "name": "City of Chilliwack",
       "regionalDistrict": "Fraser Valley Regional District",
-      "status": "not_started"
+      "status": "reviewed",
+      "bylaw": {
+        "title": "Firearms Regulation Bylaw 2001",
+        "number": "2740",
+        "url": "https://www.chilliwack.com/main/attachments/attachView.cfm?attachID=1757"
+      },
+      "notes": "Bylaw document found by the pipeline 2026-10-19; extracted rules wait for a person (review 2026-10-dryrun).",
+      "targetShooting": "zoned",
+      "confirmedOn": "2026-10-20"
     },
     {
       "key": "muni:City of Colwood",
@@ -130,7 +145,15 @@
       "kind": "municipality",
       "name": "City of Langley",
       "regionalDistrict": "Metro Vancouver Regional District",
-      "status": "not_started"
+      "status": "reviewed",
+      "bylaw": {
+        "title": "Firearms Regulation Bylaw, 2015, No. 2961",
+        "number": "2961",
+        "url": "https://www.langleycity.ca/media/file/firearms-bylaw"
+      },
+      "notes": "Bylaw document found by the pipeline 2026-10-19; extracted rules wait for a person (review 2026-10-dryrun).",
+      "targetShooting": "prohibited",
+      "confirmedOn": "2026-10-20"
     },
     {
       "key": "muni:City of Maple Ridge",
@@ -254,13 +277,15 @@
       "kind": "municipality",
       "name": "City of Richmond",
       "regionalDistrict": "Metro Vancouver Regional District",
-      "status": "in_progress",
+      "status": "reviewed",
       "bylaw": {
         "title": "Regulating the Discharge of Firearms Bylaw",
         "number": "4183",
         "url": "https://www.richmond.ca/__shared/assets/BL_4183_-_07262158958.pdf"
       },
-      "notes": "Bylaw document found by the pipeline 2026-10-19; extracted rules wait for a person (review 2026-10)."
+      "notes": "Bylaw document found by the pipeline 2026-10-19; extracted rules wait for a person (review 2026-10).",
+      "targetShooting": "zoned",
+      "confirmedOn": "2026-10-20"
     },
     {
       "key": "muni:City of Rossland",
@@ -939,7 +964,15 @@
       "kind": "municipality",
       "name": "Village of Belcarra",
       "regionalDistrict": "Metro Vancouver Regional District",
-      "status": "not_started"
+      "status": "reviewed",
+      "bylaw": {
+        "title": "Village of Belcarra Firearms Control Bylaw No. 498, 2016",
+        "number": "498, 2016",
+        "url": "https://belcarra.ca/assets/media/2019/05/vob-bylaw-498_firearms-control.pdf"
+      },
+      "notes": "Bylaw document found by the pipeline 2026-10-20; extracted rules wait for a person (review 2026-10).",
+      "targetShooting": "prohibited",
+      "confirmedOn": "2026-10-20"
     },
     {
       "key": "muni:Village of Cache Creek",
@@ -1142,952 +1175,1088 @@
       "kind": "electoral_area",
       "name": "CAPRD Juan de Fuca Electoral Area",
       "regionalDistrict": "Capital Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CAPRD Saltspring Island Electoral Area",
       "kind": "electoral_area",
       "name": "CAPRD Saltspring Island Electoral Area",
       "regionalDistrict": "Capital Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CAPRD Southern Gulf Islands Electoral Area",
       "kind": "electoral_area",
       "name": "CAPRD Southern Gulf Islands Electoral Area",
       "regionalDistrict": "Capital Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CCRD Electoral Area A",
       "kind": "electoral_area",
       "name": "CCRD Electoral Area A",
       "regionalDistrict": "Central Coast Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CCRD Electoral Area B",
       "kind": "electoral_area",
       "name": "CCRD Electoral Area B",
       "regionalDistrict": "Central Coast Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CCRD Electoral Area C",
       "kind": "electoral_area",
       "name": "CCRD Electoral Area C",
       "regionalDistrict": "Central Coast Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CCRD Electoral Area D",
       "kind": "electoral_area",
       "name": "CCRD Electoral Area D",
       "regionalDistrict": "Central Coast Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CCRD Electoral Area E",
       "kind": "electoral_area",
       "name": "CCRD Electoral Area E",
       "regionalDistrict": "Central Coast Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CMXRD Electoral Area A (Baynes Sound - Denman/Hornby Islands)",
       "kind": "electoral_area",
       "name": "CMXRD Electoral Area A (Baynes Sound - Denman/Hornby Islands)",
       "regionalDistrict": "Comox Valley Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CMXRD Electoral Area B (Lazo North)",
       "kind": "electoral_area",
       "name": "CMXRD Electoral Area B (Lazo North)",
       "regionalDistrict": "Comox Valley Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CMXRD Electoral Area C (Puntledge / Black Creek)",
       "kind": "electoral_area",
       "name": "CMXRD Electoral Area C (Puntledge / Black Creek)",
       "regionalDistrict": "Comox Valley Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CRD Electoral Area A",
       "kind": "electoral_area",
       "name": "CRD Electoral Area A",
       "regionalDistrict": "Cariboo Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CRD Electoral Area B",
       "kind": "electoral_area",
       "name": "CRD Electoral Area B",
       "regionalDistrict": "Cariboo Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CRD Electoral Area C",
       "kind": "electoral_area",
       "name": "CRD Electoral Area C",
       "regionalDistrict": "Cariboo Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CRD Electoral Area D",
       "kind": "electoral_area",
       "name": "CRD Electoral Area D",
       "regionalDistrict": "Cariboo Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CRD Electoral Area E",
       "kind": "electoral_area",
       "name": "CRD Electoral Area E",
       "regionalDistrict": "Cariboo Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CRD Electoral Area F",
       "kind": "electoral_area",
       "name": "CRD Electoral Area F",
       "regionalDistrict": "Cariboo Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CRD Electoral Area G",
       "kind": "electoral_area",
       "name": "CRD Electoral Area G",
       "regionalDistrict": "Cariboo Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CRD Electoral Area H",
       "kind": "electoral_area",
       "name": "CRD Electoral Area H",
       "regionalDistrict": "Cariboo Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CRD Electoral Area I",
       "kind": "electoral_area",
       "name": "CRD Electoral Area I",
       "regionalDistrict": "Cariboo Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CRD Electoral Area J",
       "kind": "electoral_area",
       "name": "CRD Electoral Area J",
       "regionalDistrict": "Cariboo Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CRD Electoral Area K",
       "kind": "electoral_area",
       "name": "CRD Electoral Area K",
       "regionalDistrict": "Cariboo Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CRD Electoral Area L",
       "kind": "electoral_area",
       "name": "CRD Electoral Area L",
       "regionalDistrict": "Cariboo Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CSRD Electoral Area A",
       "kind": "electoral_area",
       "name": "CSRD Electoral Area A",
       "regionalDistrict": "Columbia Shuswap Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CSRD Electoral Area B",
       "kind": "electoral_area",
       "name": "CSRD Electoral Area B",
       "regionalDistrict": "Columbia Shuswap Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CSRD Electoral Area C",
       "kind": "electoral_area",
       "name": "CSRD Electoral Area C",
       "regionalDistrict": "Columbia Shuswap Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CSRD Electoral Area D",
       "kind": "electoral_area",
       "name": "CSRD Electoral Area D",
       "regionalDistrict": "Columbia Shuswap Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CSRD Electoral Area E",
       "kind": "electoral_area",
       "name": "CSRD Electoral Area E",
       "regionalDistrict": "Columbia Shuswap Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CSRD Electoral Area F",
       "kind": "electoral_area",
       "name": "CSRD Electoral Area F",
       "regionalDistrict": "Columbia Shuswap Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CSRD Electoral Area G",
       "kind": "electoral_area",
       "name": "CSRD Electoral Area G",
       "regionalDistrict": "Columbia Shuswap Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CVRD Electoral Area A (Mill Bay / Malahat)",
       "kind": "electoral_area",
       "name": "CVRD Electoral Area A (Mill Bay / Malahat)",
       "regionalDistrict": "Cowichan Valley Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CVRD Electoral Area B (Shawnigan Lake)",
       "kind": "electoral_area",
       "name": "CVRD Electoral Area B (Shawnigan Lake)",
       "regionalDistrict": "Cowichan Valley Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CVRD Electoral Area C (Cobble Hill)",
       "kind": "electoral_area",
       "name": "CVRD Electoral Area C (Cobble Hill)",
       "regionalDistrict": "Cowichan Valley Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CVRD Electoral Area D (Cowichan Bay)",
       "kind": "electoral_area",
       "name": "CVRD Electoral Area D (Cowichan Bay)",
       "regionalDistrict": "Cowichan Valley Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CVRD Electoral Area E (Cowichan Station / Sahtlam / Glenora)",
       "kind": "electoral_area",
       "name": "CVRD Electoral Area E (Cowichan Station / Sahtlam / Glenora)",
       "regionalDistrict": "Cowichan Valley Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CVRD Electoral Area F (Cowichan Lake South / Skutz Falls)",
       "kind": "electoral_area",
       "name": "CVRD Electoral Area F (Cowichan Lake South / Skutz Falls)",
       "regionalDistrict": "Cowichan Valley Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CVRD Electoral Area G (Saltair / Gulf Islands)",
       "kind": "electoral_area",
       "name": "CVRD Electoral Area G (Saltair / Gulf Islands)",
       "regionalDistrict": "Cowichan Valley Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CVRD Electoral Area H (North Oyster / Diamond)",
       "kind": "electoral_area",
       "name": "CVRD Electoral Area H (North Oyster / Diamond)",
       "regionalDistrict": "Cowichan Valley Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:CVRD Electoral Area I (Youbou / Meade Creek)",
       "kind": "electoral_area",
       "name": "CVRD Electoral Area I (Youbou / Meade Creek)",
       "regionalDistrict": "Cowichan Valley Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:FVRD Electoral Area A",
       "kind": "electoral_area",
       "name": "FVRD Electoral Area A",
       "regionalDistrict": "Fraser Valley Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:FVRD Electoral Area B",
       "kind": "electoral_area",
       "name": "FVRD Electoral Area B",
       "regionalDistrict": "Fraser Valley Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:FVRD Electoral Area C",
       "kind": "electoral_area",
       "name": "FVRD Electoral Area C",
       "regionalDistrict": "Fraser Valley Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:FVRD Electoral Area D",
       "kind": "electoral_area",
       "name": "FVRD Electoral Area D",
       "regionalDistrict": "Fraser Valley Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:FVRD Electoral Area E",
       "kind": "electoral_area",
       "name": "FVRD Electoral Area E",
       "regionalDistrict": "Fraser Valley Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:FVRD Electoral Area F",
       "kind": "electoral_area",
       "name": "FVRD Electoral Area F",
       "regionalDistrict": "Fraser Valley Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:FVRD Electoral Area G",
       "kind": "electoral_area",
       "name": "FVRD Electoral Area G",
       "regionalDistrict": "Fraser Valley Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:FVRD Electoral Area H",
       "kind": "electoral_area",
       "name": "FVRD Electoral Area H",
       "regionalDistrict": "Fraser Valley Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:MVRD Electoral Area A",
       "kind": "electoral_area",
       "name": "MVRD Electoral Area A",
       "regionalDistrict": "Metro Vancouver Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:NCRD Electoral Area A",
       "kind": "electoral_area",
       "name": "NCRD Electoral Area A",
       "regionalDistrict": "North Coast Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:NCRD Electoral Area C",
       "kind": "electoral_area",
       "name": "NCRD Electoral Area C",
       "regionalDistrict": "North Coast Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:NCRD Electoral Area D",
       "kind": "electoral_area",
       "name": "NCRD Electoral Area D",
       "regionalDistrict": "North Coast Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:NCRD Electoral Area E",
       "kind": "electoral_area",
       "name": "NCRD Electoral Area E",
       "regionalDistrict": "North Coast Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:PRRD Electoral Area B",
       "kind": "electoral_area",
       "name": "PRRD Electoral Area B",
       "regionalDistrict": "Peace River Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:PRRD Electoral Area C",
       "kind": "electoral_area",
       "name": "PRRD Electoral Area C",
       "regionalDistrict": "Peace River Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:PRRD Electoral Area D",
       "kind": "electoral_area",
       "name": "PRRD Electoral Area D",
       "regionalDistrict": "Peace River Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:PRRD Electoral Area E",
       "kind": "electoral_area",
       "name": "PRRD Electoral Area E",
       "regionalDistrict": "Peace River Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDAC Electoral Area A",
       "kind": "electoral_area",
       "name": "RDAC Electoral Area A",
       "regionalDistrict": "Regional District of Alberni-Clayoquot",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDAC Electoral Area B",
       "kind": "electoral_area",
       "name": "RDAC Electoral Area B",
       "regionalDistrict": "Regional District of Alberni-Clayoquot",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDAC Electoral Area C",
       "kind": "electoral_area",
       "name": "RDAC Electoral Area C",
       "regionalDistrict": "Regional District of Alberni-Clayoquot",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDAC Electoral Area D",
       "kind": "electoral_area",
       "name": "RDAC Electoral Area D",
       "regionalDistrict": "Regional District of Alberni-Clayoquot",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDAC Electoral Area E",
       "kind": "electoral_area",
       "name": "RDAC Electoral Area E",
       "regionalDistrict": "Regional District of Alberni-Clayoquot",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDAC Electoral Area F",
       "kind": "electoral_area",
       "name": "RDAC Electoral Area F",
       "regionalDistrict": "Regional District of Alberni-Clayoquot",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDBN Electoral Area A",
       "kind": "electoral_area",
       "name": "RDBN Electoral Area A",
       "regionalDistrict": "Regional District of Bulkley-Nechako",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDBN Electoral Area B",
       "kind": "electoral_area",
       "name": "RDBN Electoral Area B",
       "regionalDistrict": "Regional District of Bulkley-Nechako",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDBN Electoral Area C",
       "kind": "electoral_area",
       "name": "RDBN Electoral Area C",
       "regionalDistrict": "Regional District of Bulkley-Nechako",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDBN Electoral Area D",
       "kind": "electoral_area",
       "name": "RDBN Electoral Area D",
       "regionalDistrict": "Regional District of Bulkley-Nechako",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDBN Electoral Area E",
       "kind": "electoral_area",
       "name": "RDBN Electoral Area E",
       "regionalDistrict": "Regional District of Bulkley-Nechako",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDBN Electoral Area F",
       "kind": "electoral_area",
       "name": "RDBN Electoral Area F",
       "regionalDistrict": "Regional District of Bulkley-Nechako",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDBN Electoral Area G",
       "kind": "electoral_area",
       "name": "RDBN Electoral Area G",
       "regionalDistrict": "Regional District of Bulkley-Nechako",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDCK Electoral Area A (Wynndel / East Shore Kootenay Lake)",
       "kind": "electoral_area",
       "name": "RDCK Electoral Area A (Wynndel / East Shore Kootenay Lake)",
       "regionalDistrict": "Regional District of Central Kootenay",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDCK Electoral Area B",
       "kind": "electoral_area",
       "name": "RDCK Electoral Area B",
       "regionalDistrict": "Regional District of Central Kootenay",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDCK Electoral Area C",
       "kind": "electoral_area",
       "name": "RDCK Electoral Area C",
       "regionalDistrict": "Regional District of Central Kootenay",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDCK Electoral Area D",
       "kind": "electoral_area",
       "name": "RDCK Electoral Area D",
       "regionalDistrict": "Regional District of Central Kootenay",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDCK Electoral Area E",
       "kind": "electoral_area",
       "name": "RDCK Electoral Area E",
       "regionalDistrict": "Regional District of Central Kootenay",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDCK Electoral Area F",
       "kind": "electoral_area",
       "name": "RDCK Electoral Area F",
       "regionalDistrict": "Regional District of Central Kootenay",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDCK Electoral Area G",
       "kind": "electoral_area",
       "name": "RDCK Electoral Area G",
       "regionalDistrict": "Regional District of Central Kootenay",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDCK Electoral Area H (The Slocan Valley)",
       "kind": "electoral_area",
       "name": "RDCK Electoral Area H (The Slocan Valley)",
       "regionalDistrict": "Regional District of Central Kootenay",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDCK Electoral Area I",
       "kind": "electoral_area",
       "name": "RDCK Electoral Area I",
       "regionalDistrict": "Regional District of Central Kootenay",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDCK Electoral Area J (Lower Arrow / Columbia)",
       "kind": "electoral_area",
       "name": "RDCK Electoral Area J (Lower Arrow / Columbia)",
       "regionalDistrict": "Regional District of Central Kootenay",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDCK Electoral Area K (The Arrow Lakes)",
       "kind": "electoral_area",
       "name": "RDCK Electoral Area K (The Arrow Lakes)",
       "regionalDistrict": "Regional District of Central Kootenay",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDCO Central Okanagan East Electoral Area",
       "kind": "electoral_area",
       "name": "RDCO Central Okanagan East Electoral Area",
       "regionalDistrict": "Regional District of Central Okanagan",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDCO Central Okanagan West Electoral Area",
       "kind": "electoral_area",
       "name": "RDCO Central Okanagan West Electoral Area",
       "regionalDistrict": "Regional District of Central Okanagan",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDEK Electoral Area A",
       "kind": "electoral_area",
       "name": "RDEK Electoral Area A",
       "regionalDistrict": "Regional District of East Kootenay",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDEK Electoral Area B",
       "kind": "electoral_area",
       "name": "RDEK Electoral Area B",
       "regionalDistrict": "Regional District of East Kootenay",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDEK Electoral Area C",
       "kind": "electoral_area",
       "name": "RDEK Electoral Area C",
       "regionalDistrict": "Regional District of East Kootenay",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDEK Electoral Area E",
       "kind": "electoral_area",
       "name": "RDEK Electoral Area E",
       "regionalDistrict": "Regional District of East Kootenay",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDEK Electoral Area F",
       "kind": "electoral_area",
       "name": "RDEK Electoral Area F",
       "regionalDistrict": "Regional District of East Kootenay",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDEK Electoral Area G",
       "kind": "electoral_area",
       "name": "RDEK Electoral Area G",
       "regionalDistrict": "Regional District of East Kootenay",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDFFG Electoral Area A",
       "kind": "electoral_area",
       "name": "RDFFG Electoral Area A",
       "regionalDistrict": "Regional District of Fraser-Fort George",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDFFG Electoral Area C",
       "kind": "electoral_area",
       "name": "RDFFG Electoral Area C",
       "regionalDistrict": "Regional District of Fraser-Fort George",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDFFG Electoral Area D",
       "kind": "electoral_area",
       "name": "RDFFG Electoral Area D",
       "regionalDistrict": "Regional District of Fraser-Fort George",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDFFG Electoral Area E",
       "kind": "electoral_area",
       "name": "RDFFG Electoral Area E",
       "regionalDistrict": "Regional District of Fraser-Fort George",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDFFG Electoral Area F",
       "kind": "electoral_area",
       "name": "RDFFG Electoral Area F",
       "regionalDistrict": "Regional District of Fraser-Fort George",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDFFG Electoral Area G",
       "kind": "electoral_area",
       "name": "RDFFG Electoral Area G",
       "regionalDistrict": "Regional District of Fraser-Fort George",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDFFG Electoral Area H",
       "kind": "electoral_area",
       "name": "RDFFG Electoral Area H",
       "regionalDistrict": "Regional District of Fraser-Fort George",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDKB Electoral Area A",
       "kind": "electoral_area",
       "name": "RDKB Electoral Area A",
       "regionalDistrict": "Regional District of Kootenay Boundary",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDKB Electoral Area B (Lower Columbia / Old Glory)",
       "kind": "electoral_area",
       "name": "RDKB Electoral Area B (Lower Columbia / Old Glory)",
       "regionalDistrict": "Regional District of Kootenay Boundary",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDKB Electoral Area C (Christina Lake)",
       "kind": "electoral_area",
       "name": "RDKB Electoral Area C (Christina Lake)",
       "regionalDistrict": "Regional District of Kootenay Boundary",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDKB Electoral Area D (Rural Grand Forks)",
       "kind": "electoral_area",
       "name": "RDKB Electoral Area D (Rural Grand Forks)",
       "regionalDistrict": "Regional District of Kootenay Boundary",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDKB Electoral Area E (West Boundary)",
       "kind": "electoral_area",
       "name": "RDKB Electoral Area E (West Boundary)",
       "regionalDistrict": "Regional District of Kootenay Boundary",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDKS Electoral Area A",
       "kind": "electoral_area",
       "name": "RDKS Electoral Area A",
       "regionalDistrict": "Regional District of Kitimat-Stikine",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDKS Electoral Area B",
       "kind": "electoral_area",
       "name": "RDKS Electoral Area B",
       "regionalDistrict": "Regional District of Kitimat-Stikine",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDKS Electoral Area C",
       "kind": "electoral_area",
       "name": "RDKS Electoral Area C",
       "regionalDistrict": "Regional District of Kitimat-Stikine",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDKS Electoral Area D",
       "kind": "electoral_area",
       "name": "RDKS Electoral Area D",
       "regionalDistrict": "Regional District of Kitimat-Stikine",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDKS Electoral Area E",
       "kind": "electoral_area",
       "name": "RDKS Electoral Area E",
       "regionalDistrict": "Regional District of Kitimat-Stikine",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDKS Electoral Area F",
       "kind": "electoral_area",
       "name": "RDKS Electoral Area F",
       "regionalDistrict": "Regional District of Kitimat-Stikine",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDMW Electoral Area A",
       "kind": "electoral_area",
       "name": "RDMW Electoral Area A",
       "regionalDistrict": "Regional District of Mount Waddington",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDMW Electoral Area B",
       "kind": "electoral_area",
       "name": "RDMW Electoral Area B",
       "regionalDistrict": "Regional District of Mount Waddington",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDMW Electoral Area C",
       "kind": "electoral_area",
       "name": "RDMW Electoral Area C",
       "regionalDistrict": "Regional District of Mount Waddington",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDMW Electoral Area D",
       "kind": "electoral_area",
       "name": "RDMW Electoral Area D",
       "regionalDistrict": "Regional District of Mount Waddington",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDN Electoral Area A",
       "kind": "electoral_area",
       "name": "RDN Electoral Area A",
       "regionalDistrict": "Regional District of Nanaimo",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDN Electoral Area B",
       "kind": "electoral_area",
       "name": "RDN Electoral Area B",
       "regionalDistrict": "Regional District of Nanaimo",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDN Electoral Area C",
       "kind": "electoral_area",
       "name": "RDN Electoral Area C",
       "regionalDistrict": "Regional District of Nanaimo",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDN Electoral Area E",
       "kind": "electoral_area",
       "name": "RDN Electoral Area E",
       "regionalDistrict": "Regional District of Nanaimo",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDN Electoral Area F",
       "kind": "electoral_area",
       "name": "RDN Electoral Area F",
       "regionalDistrict": "Regional District of Nanaimo",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDN Electoral Area G",
       "kind": "electoral_area",
       "name": "RDN Electoral Area G",
       "regionalDistrict": "Regional District of Nanaimo",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDN Electoral Area H",
       "kind": "electoral_area",
       "name": "RDN Electoral Area H",
       "regionalDistrict": "Regional District of Nanaimo",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDNO Electoral Area B",
       "kind": "electoral_area",
       "name": "RDNO Electoral Area B",
       "regionalDistrict": "Regional District of North Okanagan",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDNO Electoral Area C",
       "kind": "electoral_area",
       "name": "RDNO Electoral Area C",
       "regionalDistrict": "Regional District of North Okanagan",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDNO Electoral Area D",
       "kind": "electoral_area",
       "name": "RDNO Electoral Area D",
       "regionalDistrict": "Regional District of North Okanagan",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDNO Electoral Area E",
       "kind": "electoral_area",
       "name": "RDNO Electoral Area E",
       "regionalDistrict": "Regional District of North Okanagan",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDNO Electoral Area F",
       "kind": "electoral_area",
       "name": "RDNO Electoral Area F",
       "regionalDistrict": "Regional District of North Okanagan",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDOS Electoral Area A",
       "kind": "electoral_area",
       "name": "RDOS Electoral Area A",
       "regionalDistrict": "Regional District of Okanagan-Similkameen",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDOS Electoral Area B",
       "kind": "electoral_area",
       "name": "RDOS Electoral Area B",
       "regionalDistrict": "Regional District of Okanagan-Similkameen",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDOS Electoral Area C",
       "kind": "electoral_area",
       "name": "RDOS Electoral Area C",
       "regionalDistrict": "Regional District of Okanagan-Similkameen",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDOS Electoral Area D",
       "kind": "electoral_area",
       "name": "RDOS Electoral Area D",
       "regionalDistrict": "Regional District of Okanagan-Similkameen",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDOS Electoral Area E",
       "kind": "electoral_area",
       "name": "RDOS Electoral Area E",
       "regionalDistrict": "Regional District of Okanagan-Similkameen",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDOS Electoral Area F",
       "kind": "electoral_area",
       "name": "RDOS Electoral Area F",
       "regionalDistrict": "Regional District of Okanagan-Similkameen",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDOS Electoral Area G",
       "kind": "electoral_area",
       "name": "RDOS Electoral Area G",
       "regionalDistrict": "Regional District of Okanagan-Similkameen",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDOS Electoral Area H",
       "kind": "electoral_area",
       "name": "RDOS Electoral Area H",
       "regionalDistrict": "Regional District of Okanagan-Similkameen",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:RDOS Electoral Area I",
       "kind": "electoral_area",
       "name": "RDOS Electoral Area I",
       "regionalDistrict": "Regional District of Okanagan-Similkameen",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:SCRD Electoral Area A (Egmont / Pender Harbour)",
       "kind": "electoral_area",
       "name": "SCRD Electoral Area A (Egmont / Pender Harbour)",
       "regionalDistrict": "Sunshine Coast Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:SCRD Electoral Area B (Halfmoon Bay)",
       "kind": "electoral_area",
       "name": "SCRD Electoral Area B (Halfmoon Bay)",
       "regionalDistrict": "Sunshine Coast Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:SCRD Electoral Area D (Roberts Creek)",
       "kind": "electoral_area",
       "name": "SCRD Electoral Area D (Roberts Creek)",
       "regionalDistrict": "Sunshine Coast Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:SCRD Electoral Area E (Elphinstone)",
       "kind": "electoral_area",
       "name": "SCRD Electoral Area E (Elphinstone)",
       "regionalDistrict": "Sunshine Coast Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:SCRD Electoral Area F (West Howe Sound)",
       "kind": "electoral_area",
       "name": "SCRD Electoral Area F (West Howe Sound)",
       "regionalDistrict": "Sunshine Coast Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:SLRD Electoral Area A",
@@ -2098,7 +2267,7 @@
       "bylaw": {
         "title": "Firearms Electoral Area A",
         "number": "1293-2013",
-        "url": "https://www.slrd.bc.ca/media/file/rb1294-electoral-area-d-firearms-bylaw-consoldiation-bl1317-2014pdf"
+        "url": "https://www.slrd.bc.ca/inside-slrd/bylaws/firearms-electoral-area"
       },
       "notes": "Bylaw document found by the pipeline 2026-10-19; extracted rules wait for a person (review 2026-10)."
     },
@@ -2107,172 +2276,183 @@
       "kind": "electoral_area",
       "name": "SLRD Electoral Area B",
       "regionalDistrict": "Squamish-Lillooet Regional District",
-      "status": "in_progress",
-      "bylaw": {
-        "title": "Firearms Electoral Area A",
-        "number": "1293-2013",
-        "url": "https://www.slrd.bc.ca/media/file/rb1294-electoral-area-d-firearms-bylaw-consoldiation-bl1317-2014pdf"
-      },
-      "notes": "Bylaw document found by the pipeline 2026-10-19; extracted rules wait for a person (review 2026-10)."
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:SLRD Electoral Area C",
       "kind": "electoral_area",
       "name": "SLRD Electoral Area C",
       "regionalDistrict": "Squamish-Lillooet Regional District",
-      "status": "in_progress",
-      "bylaw": {
-        "title": "Firearms Electoral Area A",
-        "number": "1293-2013",
-        "url": "https://www.slrd.bc.ca/media/file/rb1294-electoral-area-d-firearms-bylaw-consoldiation-bl1317-2014pdf"
-      },
-      "notes": "Bylaw document found by the pipeline 2026-10-19; extracted rules wait for a person (review 2026-10)."
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:SLRD Electoral Area D",
       "kind": "electoral_area",
       "name": "SLRD Electoral Area D",
       "regionalDistrict": "Squamish-Lillooet Regional District",
-      "status": "in_progress",
+      "status": "reviewed",
       "bylaw": {
-        "title": "Firearms Electoral Area A",
-        "number": "1293-2013",
+        "title": "Squamish-Lillooet Regional District Electoral Area D Firearms Bylaw No. 1294-2013",
+        "number": "1294-2013",
         "url": "https://www.slrd.bc.ca/media/file/rb1294-electoral-area-d-firearms-bylaw-consoldiation-bl1317-2014pdf"
       },
-      "notes": "Bylaw document found by the pipeline 2026-10-19; extracted rules wait for a person (review 2026-10)."
+      "notes": "Bylaw document found by the pipeline 2026-10-19; extracted rules wait for a person (review 2026-10).",
+      "targetShooting": "zoned",
+      "confirmedOn": "2026-10-20"
     },
     {
       "key": "ea:STRD Electoral Area A (Kyuquot / Nootka-Sayward)",
       "kind": "electoral_area",
       "name": "STRD Electoral Area A (Kyuquot / Nootka-Sayward)",
       "regionalDistrict": "Strathcona Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:STRD Electoral Area B (Cortes)",
       "kind": "electoral_area",
       "name": "STRD Electoral Area B (Cortes)",
       "regionalDistrict": "Strathcona Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:STRD Electoral Area C (Discovery Islands / Mainland Inlets)",
       "kind": "electoral_area",
       "name": "STRD Electoral Area C (Discovery Islands / Mainland Inlets)",
       "regionalDistrict": "Strathcona Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:STRD Electoral Area D (Oyster Bay / Buttle Lake)",
       "kind": "electoral_area",
       "name": "STRD Electoral Area D (Oyster Bay / Buttle Lake)",
       "regionalDistrict": "Strathcona Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:TNRD Electoral Area A (Wells Gray Country)",
       "kind": "electoral_area",
       "name": "TNRD Electoral Area A (Wells Gray Country)",
       "regionalDistrict": "Thompson-Nicola Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:TNRD Electoral Area B (Thompson Headwaters)",
       "kind": "electoral_area",
       "name": "TNRD Electoral Area B (Thompson Headwaters)",
       "regionalDistrict": "Thompson-Nicola Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:TNRD Electoral Area E (Bonaparte Plateau)",
       "kind": "electoral_area",
       "name": "TNRD Electoral Area E (Bonaparte Plateau)",
       "regionalDistrict": "Thompson-Nicola Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:TNRD Electoral Area I (Blue Sky Country)",
       "kind": "electoral_area",
       "name": "TNRD Electoral Area I (Blue Sky Country)",
       "regionalDistrict": "Thompson-Nicola Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:TNRD Electoral Area J (Copper Desert Country)",
       "kind": "electoral_area",
       "name": "TNRD Electoral Area J (Copper Desert Country)",
       "regionalDistrict": "Thompson-Nicola Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:TNRD Electoral Area L (Grasslands)",
       "kind": "electoral_area",
       "name": "TNRD Electoral Area L (Grasslands)",
       "regionalDistrict": "Thompson-Nicola Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:TNRD Electoral Area M (Beautiful Nicola Valley - North)",
       "kind": "electoral_area",
       "name": "TNRD Electoral Area M (Beautiful Nicola Valley - North)",
       "regionalDistrict": "Thompson-Nicola Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:TNRD Electoral Area N (Beautiful Nicola Valley - South)",
       "kind": "electoral_area",
       "name": "TNRD Electoral Area N (Beautiful Nicola Valley - South)",
       "regionalDistrict": "Thompson-Nicola Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:TNRD Electoral Area O (Lower North Thompson)",
       "kind": "electoral_area",
       "name": "TNRD Electoral Area O (Lower North Thompson)",
       "regionalDistrict": "Thompson-Nicola Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:TNRD Electoral Area P (Rivers and the Peaks)",
       "kind": "electoral_area",
       "name": "TNRD Electoral Area P (Rivers and the Peaks)",
       "regionalDistrict": "Thompson-Nicola Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:qRD Electoral Area A",
       "kind": "electoral_area",
       "name": "qRD Electoral Area A",
       "regionalDistrict": "qathet Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:qRD Electoral Area B",
       "kind": "electoral_area",
       "name": "qRD Electoral Area B",
       "regionalDistrict": "qathet Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:qRD Electoral Area C",
       "kind": "electoral_area",
       "name": "qRD Electoral Area C",
       "regionalDistrict": "qathet Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:qRD Electoral Area D",
       "kind": "electoral_area",
       "name": "qRD Electoral Area D",
       "regionalDistrict": "qathet Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "ea:qRD Electoral Area E",
       "kind": "electoral_area",
       "name": "qRD Electoral Area E",
       "regionalDistrict": "qathet Regional District",
-      "status": "not_started"
+      "status": "not_applicable",
+      "notes": "Regional district has no blanket firearm discharge bylaw across rural Crown land."
     },
     {
       "key": "lta:Denman Island Local Trust Area",
