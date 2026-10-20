@@ -71,48 +71,86 @@ export function legalText(raw: string, file: string): string {
 }
 
 const SCHEDULE_RE = /^\s*Schedule\s+(\d+(?:\.\d+)?)\b\s*[–—:-]?\s*(.*)$/i;
-const SECTION_RE = /^\s*(\d+(?:\.\d+)?)\s+(?=[A-Z("“])/;
+// "85  That portion ...", "22   (1)That portion ...", or a number alone on its line ("9", then "(a)...").
+const SECTION_RE = /^\s*(\d+(?:\.\d+)?)(?:\s+(?=[A-Z("“\[])|\s*$)/;
+// A schedule heading in the body is followed by its "(Section 6)" line, an amendment note or "Repealed.";
+// the same words in the table of contents are followed by the next contents entry. An excerpt may
+// go straight to the numbered section.
+const HEADING_FOLLOW = /^\s*(\(Sections?\s|\[(en|am)\.|Repealed\.)/;
 
 /**
- * Splits Closed Areas Regulation text into sections under their schedule heading. The heading is
- * kept at the top of every unit so the effect can be read and quoted from the same text.
+ * Splits Closed Areas Regulation text (a BC Laws page or a person's text copy of it) into one unit
+ * per schedule section. Each unit holds the schedule heading, the section's own title and its text,
+ * so the effect and the place can be read and quoted from the same unit. Repealed sections carry no
+ * area and are left out; if a section is repealed later, its unit disappears and the change report
+ * lists it as removed (looser, so a person decides).
  */
 export function splitRegulation(text: string, base: Omit<Unit, "hash" | "id" | "kind" | "title" | "text" | "meta">): Unit[] {
   const lines = text.split(/\r?\n/).map((l) => l.replace(/\s+$/, ""));
   const units: Unit[] = [];
   let schedule: string | null = null;
-  let heading = "";
-  let sec: { n: string; lines: string[] } | null = null;
+  let heading: string[] = [];
+  let headingOpen = false;
+  let sec: { n: string; title: string | null; lines: string[] } | null = null;
+  let pendingTitle: string | null = null;
+  const nextLines = (i: number, k: number) => lines.slice(i + 1).filter((l) => l.trim()).slice(0, k);
   const flush = () => {
     if (!sec || !schedule) return;
     const body = sec.lines.join(" ").replace(/\s+/g, " ").trim();
-    const ruleId = ruleIdFor(schedule, sec.n);
-    units.push(
-      makeUnit({
-        ...base,
-        id: `car:sch${schedule}:s${sec.n}`,
-        kind: "regulation_section",
-        title: `Closed Areas Regulation, Schedule ${schedule}, section ${sec.n}`,
-        text: `${heading}\n${body}`,
-        meta: { schedule, section: sec.n, ruleId },
-      }),
-    );
+    const repealed = /^\d+(?:\.\d+)?(?:-\d+)?\s+Repealed\./.test(body);
+    if (!repealed) {
+      units.push(
+        makeUnit({
+          ...base,
+          id: `car:sch${schedule}:s${sec.n}`,
+          kind: "regulation_section",
+          title: `Closed Areas Regulation, Schedule ${schedule}, section ${sec.n}${sec.title ? ` (${sec.title})` : ""}`,
+          text: [heading.join(" "), sec.title, body].filter(Boolean).join("\n"),
+          meta: { schedule, section: sec.n, ruleId: ruleIdFor(schedule, sec.n), sectionTitle: sec.title },
+        }),
+      );
+    }
     sec = null;
   };
-  for (const line of lines) {
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i]!;
+    if (!line.trim()) continue;
     const sm = line.match(SCHEDULE_RE);
-    if (sm) {
+    if (sm && (nextLines(i, 3).some((l) => HEADING_FOLLOW.test(l)) || SECTION_RE.test(nextLines(i, 1)[0] ?? ""))) {
       flush();
       schedule = sm[1]!;
-      heading = line.trim();
+      heading = [line.trim()];
+      headingOpen = true;
+      pendingTitle = null;
       continue;
     }
     if (!schedule) continue;
     const m = line.match(SECTION_RE);
     if (m) {
+      headingOpen = false;
       flush();
-      sec = { n: m[1]!, lines: [line.trim()] };
-    } else if (sec && line.trim()) sec.lines.push(line.trim());
+      sec = { n: m[1]!, title: pendingTitle, lines: [line.trim()] };
+      pendingTitle = null;
+      continue;
+    }
+    // A short line right before a numbered section is that section's title ("Sylvester Road").
+    const next = nextLines(i, 1)[0];
+    const t = line.trim();
+    // Titles end without punctuation, except short ones ending in "etc." or an abbreviation ("Lot 495 N.W.D.").
+    const titleEnd = !/[.;:,]$/.test(t) || (t.split(/\s+/).length <= 6 && /(\betc\.|(?:[A-Z]\.){2,})$/.test(t));
+    const isTitle = !!next && SECTION_RE.test(next) && t.length <= 100 && !/^[([]/.test(t) && titleEnd;
+    if (headingOpen && !isTitle) {
+      heading.push(line.trim());
+      if (/^\(Sections?\s/.test(line.trim())) headingOpen = false;
+      continue;
+    }
+    if (isTitle) {
+      headingOpen = false;
+      flush();
+      pendingTitle = line.trim();
+      continue;
+    }
+    if (sec) sec.lines.push(line.trim());
   }
   flush();
   return units;

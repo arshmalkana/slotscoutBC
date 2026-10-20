@@ -71,6 +71,26 @@ describe("units and hashing (Addendum A 5.1)", () => {
     expect(ruleIdFor("5.1", "3")).toBe("W6-003");
   });
 
+  it("splits a BC Laws consolidation: skips the contents list and repealed sections, keeps each title", () => {
+    const text = [
+      "Contents", "1\tInterpretation", "Schedule 1", "Schedule 3", "Schedule 5",
+      "Interpretation", "1  In this regulation:",
+      "Schedule 3", "", "No Shooting or Hunting Areas", "", "(Section 4)", "",
+      "Repealed", "1  Repealed. [B.C. Reg. 224/92, s. 3.]", "",
+      "Highway 3", "9  ", "", "(a)All areas within 0.4 km of the centerline of Highway 3.", "",
+      "Schedule 5", "", "No Shooting Areas", "", "(Section 6)", "",
+      "Sylvester Road", "85  That portion of Fraser Valley Regional District being 50 m either side of the centreline of Sylvester Road.", "",
+      "[en. B.C. Reg. 172/86, s. 2.]", "",
+      "Lot 495 N.W.D.", "86  That portion of M.U. 2-4 being Lot 495.",
+    ].join("\n");
+    const us = splitRegulation(text, { source: "closed_areas", url: null, file: "x", fileSha256: "x", version: "test", confirmed: true });
+    expect(us.map((u) => u.id)).toEqual(["car:sch3:s9", "car:sch5:s85", "car:sch5:s86"]);
+    expect(us[0]!.text).toBe("Schedule 3 No Shooting or Hunting Areas (Section 4)\nHighway 3\n9 (a)All areas within 0.4 km of the centerline of Highway 3.");
+    expect(us[1]!.meta.sectionTitle).toBe("Sylvester Road");
+    expect(us[1]!.text).not.toContain("Lot 495");
+    expect(us[2]!.meta.sectionTitle).toBe("Lot 495 N.W.D.");
+  });
+
   it("hashes wording, not layout", () => {
     expect(normaliseUnit("85  That portion  of X ,being 50 m")).toBe(normaliseUnit("That portion of X, being 50 m"));
     expect(normaliseUnit("centre line")).not.toBe(normaliseUnit("centreline"));

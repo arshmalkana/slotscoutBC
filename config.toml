@@ -57,7 +57,14 @@ store_bodies_up_to_features = 120000
 # Set true only after the King's Printer confirms in writing that scheduled API use is allowed (Addendum A 6.2).
 api_confirmed = false
 api_document_url = "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/{doc}/xml"
-documents = ["76_84_00_multi", "196_99", "190_84", "180_90", "16_2004", "38_2005"]
+documents = ["76_84_00_multi", "190_84", "180_90", "16_2004", "38_2005"]
+
+# What a person found on BC Laws (inbox/notes/). Not pulled; reported so a person can follow up.
+[bclaws.repealed]
+"196_99" = "Motor Vehicle Prohibition Regulation, B.C. Reg. 196/99: repealed effective March 1, 2024 by B.C. Reg. 18/2024 (BC Laws page saved by a person 2026-10-20). Which regulation now holds the motor vehicle closures is not confirmed yet."
+
+[bclaws.not_found]
+"190_84" = "Hunting Regulation, B.C. Reg. 190/84: https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84 returned HTTP 404 to a person on 2026-10-20. The current BC Laws document id is needed."
 
 [storage]
 commit_pdf_max_mb = 2

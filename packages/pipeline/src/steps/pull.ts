@@ -174,13 +174,18 @@ async function pullBcLaws(m: Manifest, opts: PullOpts): Promise<void> {
   progress("pull", "BC Laws regulations", documents.length, documents.length, `${have.length} available, ${missing.length} waiting for a person`);
   const excerpts = listFiles(join(P.inbox, "excerpts"), (f) => f.endsWith(".txt"));
   const how = api_confirmed ? "BC Laws API" : "copies a person saved in inbox/bclaws";
+  const { repealed = {}, not_found = {} } = config().bclaws;
   setSource(m, "closed_areas", {
     status: missing.length ? (have.length ? "partial" : "awaiting_person") : "ok",
-    detail: `${have.length} of ${documents.length} regulations from ${how}${missing.length ? `; waiting for ${missing.join(", ")}` : ""}${excerpts.length ? `; ${excerpts.length} unconfirmed excerpt(s) in inbox/excerpts` : ""}`,
+    detail: `${have.length} of ${documents.length} regulations from ${how}${missing.length ? `; waiting for ${missing.join(", ")}` : ""}${Object.keys(repealed).length ? `; repealed, not pulled: ${Object.keys(repealed).join(", ")}` : ""}${excerpts.length ? `; ${excerpts.length} unconfirmed excerpt(s) in inbox/excerpts` : ""}`,
     at: new Date().toISOString(),
   });
-  if (missing.length) fail(m, "closed_areas", "legal text", `no dated copy of ${missing.join(", ")}: ${api_confirmed ? "API request failed" : "waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)"}`);
+  const waiting = missing.filter((d) => !not_found[d]);
+  if (waiting.length) fail(m, "closed_areas", "legal text", `no dated copy of ${waiting.join(", ")}: ${api_confirmed ? "API request failed" : "waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)"}`);
   else clearFailure(m, "closed_areas", "legal text");
+  // What a person found on BC Laws stays visible until they resolve it.
+  for (const [doc, note] of Object.entries(not_found)) if (missing.includes(doc)) fail(m, "closed_areas", doc, note);
+  for (const [doc, note] of Object.entries(repealed)) fail(m, "closed_areas", doc, note);
   saveManifest(m);
 }
 
