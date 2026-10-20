@@ -1,0 +1,234 @@
+{
+  "task_id": "closed_area-0cb50d07636d",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T22:01:45Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 1-06"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the southwest corner of Lot 245, Comox Land District",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the southwest corner of Lot 245, Comox Land District"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point",
+          "distance": "approximately 360 m",
+          "quote": "thence northerly approximately 360 m to a point"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of intersection with the west boundary of D.L. 195",
+          "distance": null,
+          "quote": "thence westerly to the point of intersection with the west boundary of D.L. 195"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the northwest corner of D.L. 195",
+          "distance": null,
+          "quote": "thence northerly to the northwest corner of D.L. 195"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "lot_line",
+          "feature": "D.L. 195",
+          "side_or_bank": "northern boundary",
+          "until": "the northeast corner of D.L. 195",
+          "distance": null,
+          "quote": "thence easterly along the northern boundary of said district lot to the northeast corner of D.L. 195"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "lot_line",
+          "feature": "D.L. 195",
+          "side_or_bank": "east boundary",
+          "until": "a point",
+          "distance": "approximately 360 m",
+          "quote": "thence southerly along the east boundary of D.L. 195 approximately 360 m to a point"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point",
+          "distance": "approximately 205 m",
+          "quote": "thence easterly approximately 205 m to a point"
+        },
+        {
+          "start": null,
+          "direction": "S 51° E",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point",
+          "distance": "approximately 325 m",
+          "quote": "thence approximately 325 m at S 51° E to a point"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of intersection with the southerly boundary of Lot 245",
+          "distance": "approximately 145 m",
+          "quote": "thence southerly approximately 145 m to the point of intersection with the southerly boundary of Lot 245"
+        },
+        {
+          "start": null,
+          "direction": "S 53° E",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point",
+          "distance": "approximately 170 m",
+          "quote": "thence easterly approximately 170 m at S 53° E to a point"
+        },
+        {
+          "start": null,
+          "direction": "S 18° W",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point",
+          "distance": "approximately 505 m",
+          "quote": "thence approximately 505 m at S 18° W to a point"
+        },
+        {
+          "start": null,
+          "direction": "S 9° W",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of intersection with the southerly boundary of Lot 244",
+          "distance": "approximately 170 m",
+          "quote": "thence approximately 170 m at S 9° W to the point of intersection with the southerly boundary of Lot 244"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point",
+          "distance": "approximately 270 m",
+          "quote": "thence westerly approximately 270 m to a point"
+        },
+        {
+          "start": null,
+          "direction": "N 24° E",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point",
+          "distance": "approximately 150 m",
+          "quote": "thence approximately 150 m at N 24° E to a point"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point",
+          "distance": "approximately 170 m",
+          "quote": "thence northerly approximately 170 m to a point"
+        },
+        {
+          "start": null,
+          "direction": "N 33° W",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point",
+          "distance": "approximately 495 m",
+          "quote": "thence approximately 495 m at N 33° W to a point"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of intersection with the westerly boundary of Lot 244",
+          "distance": "approximately 85 m",
+          "quote": "thence westerly approximately 85 m to the point of intersection with the westerly boundary of Lot 244"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": "approximately 97 m",
+          "quote": "thence northerly approximately 97 m to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "Schedule 3 No Shooting or Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "That portion of M.U. 1-06"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "which is contained within the following described boundaries"
+      }
+    ],
+    "uncertain": [
+      "geometry.steps[1].follow",
+      "geometry.steps[2].follow",
+      "geometry.steps[3].follow",
+      "geometry.steps[6].follow",
+      "geometry.steps[8].follow",
+      "geometry.steps[12].follow",
+      "geometry.steps[14].follow",
+      "geometry.steps[16].follow",
+      "geometry.steps[17].follow"
+    ]
+  }
+}

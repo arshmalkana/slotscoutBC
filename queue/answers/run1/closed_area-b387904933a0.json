@@ -1,0 +1,84 @@
+{
+  "task_id": "closed_area-b387904933a0",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T22:02:11Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Kootenay District"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the point of intersection of the northerly boundaries of Fording River and Elk River",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the point of intersection of the northerly boundaries of Fording River and Elk River"
+        },
+        {
+          "start": null,
+          "direction": "in a general northeasterly and northerly direction",
+          "follow": "river",
+          "feature": "Fording River",
+          "side_or_bank": "northerly and westerly bank",
+          "until": "the point of intersection of the northerly prolongation of the west bank of Fording River with the midline of Highway 43",
+          "distance": null,
+          "quote": "thence in a general northeasterly and northerly direction along the northerly and westerly bank of Fording River to the point of intersection of the northerly prolongation of the west bank of Fording River with the midline of Highway 43"
+        },
+        {
+          "start": null,
+          "direction": "in a general easterly and southerly direction",
+          "follow": "road",
+          "feature": "Highway 43",
+          "side_or_bank": "midline",
+          "until": "the point of intersection with the easterly bank of Elk River",
+          "distance": null,
+          "quote": "thence in a general easterly and southerly direction along the midline of Highway 43 to the point of intersection with the easterly bank of Elk River"
+        },
+        {
+          "start": null,
+          "direction": "in a general southerly direction",
+          "follow": "river",
+          "feature": "Elk River",
+          "side_or_bank": "easterly bank",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence in a general southerly direction along the easterly bank of Elk River to the point of commencement including all intervening territory"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "Kootenay District"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "which is contained within the following described boundaries"
+      }
+    ],
+    "uncertain": []
+  }
+}

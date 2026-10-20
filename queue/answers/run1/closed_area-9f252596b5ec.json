@@ -1,0 +1,128 @@
+{
+  "task_id": "closed_area-9f252596b5ec",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T22:00:39Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Kootenay District"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the Skookumchuck Kootenay River bridge on Highway 95",
+          "direction": null,
+          "follow": null,
+          "feature": "Skookumchuck Kootenay River bridge",
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the Skookumchuck Kootenay River bridge on Highway 95"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "road",
+          "feature": "Highway 95",
+          "side_or_bank": null,
+          "until": "the junction of a roadway named Farstad Way",
+          "distance": null,
+          "quote": "thence southerly along Highway 95 to the junction of a roadway named Farstad Way"
+        },
+        {
+          "start": null,
+          "direction": "westerly and northerly",
+          "follow": "road",
+          "feature": "Farstad Way",
+          "side_or_bank": null,
+          "until": "Skookumchuck River road",
+          "distance": null,
+          "quote": "thence westerly and northerly along Farstad Way to Skookumchuck River road"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "road",
+          "feature": "Skookumchuck River road",
+          "side_or_bank": null,
+          "until": "the Skookumchuck River bridge",
+          "distance": null,
+          "quote": "thence northerly along said road to the Skookumchuck River bridge"
+        },
+        {
+          "start": null,
+          "direction": "downstream",
+          "follow": "river",
+          "feature": "Skookumchuck River",
+          "side_or_bank": null,
+          "until": "its confluence with the Kootenay River",
+          "distance": null,
+          "quote": "thence downstream along the Skookumchuck River to its confluence with the Kootenay River"
+        },
+        {
+          "start": null,
+          "direction": "downstream",
+          "follow": "river",
+          "feature": "Kootenay River",
+          "side_or_bank": "high water mark",
+          "until": "point of commencement",
+          "distance": null,
+          "quote": "thence downstream along the Kootenay River high water mark to point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "in Kootenay District"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundaries: Commencing at"
+      },
+      {
+        "field": "geometry.steps[0]",
+        "quote": "Commencing at the Skookumchuck Kootenay River bridge on Highway 95"
+      },
+      {
+        "field": "geometry.steps[1]",
+        "quote": "thence southerly along Highway 95 to the junction of a roadway named Farstad Way"
+      },
+      {
+        "field": "geometry.steps[2]",
+        "quote": "thence westerly and northerly along Farstad Way to Skookumchuck River road"
+      },
+      {
+        "field": "geometry.steps[3]",
+        "quote": "thence northerly along said road to the Skookumchuck River bridge"
+      },
+      {
+        "field": "geometry.steps[4]",
+        "quote": "thence downstream along the Skookumchuck River to its confluence with the Kootenay River"
+      },
+      {
+        "field": "geometry.steps[5]",
+        "quote": "thence downstream along the Kootenay River high water mark to point of commencement"
+      }
+    ],
+    "uncertain": []
+  }
+}

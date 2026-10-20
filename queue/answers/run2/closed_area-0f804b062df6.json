@@ -1,0 +1,65 @@
+{
+  "task_id": "closed_area-0f804b062df6",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T22:00:43Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Peace River District"
+    },
+    "geometry": {
+      "method": "waterbody_buffer",
+      "road": null,
+      "feature": {
+        "type": "lake",
+        "name": "Charlie Lake"
+      },
+      "buffer_m": 91,
+      "side": "both",
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "all lands within 91 m (100 yards) of the mean high water level of said lake and creek"
+      },
+      {
+        "field": "within",
+        "quote": "Peace River District"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "the waters of Charlie Lake"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "that portion of Stoddard Creek between Charlie Lake and Road 114"
+      },
+      {
+        "field": "geometry.buffer_m",
+        "quote": "91 m (100 yards)"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "the waters of Charlie Lake and that portion of Stoddard Creek between Charlie Lake and Road 114 and all lands within 91 m"
+      }
+    ],
+    "uncertain": [
+      "geometry.from",
+      "geometry.to"
+    ]
+  }
+}

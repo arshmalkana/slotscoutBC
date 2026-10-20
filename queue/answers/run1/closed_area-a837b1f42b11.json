@@ -1,0 +1,74 @@
+{
+  "task_id": "closed_area-a837b1f42b11",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T22:01:24Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U.s 8-08, 3-12 and 8-06"
+    },
+    "geometry": {
+      "method": "road_buffer",
+      "road": {
+        "name": "Coquihalla Phase III (Okanagan Connector) Highway",
+        "source_hint": "highway"
+      },
+      "feature": null,
+      "buffer_m": 400,
+      "side": "both",
+      "from": {
+        "type": "road_intersection",
+        "road": "Highway 97",
+        "name": "Peachland"
+      },
+      "to": {
+        "type": "road_intersection",
+        "road": "Highway 5",
+        "name": "Aspen Grove"
+      },
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting or Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "That portion of M.U.s 8-08, 3-12 and 8-06"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "All areas within 0.4 km of either side of the centreline of the Coquihalla Phase III (Okanagan Connector) Highway"
+      },
+      {
+        "field": "geometry.road",
+        "quote": "the Coquihalla Phase III (Okanagan Connector) Highway"
+      },
+      {
+        "field": "geometry.buffer_m",
+        "quote": "within 0.4 km"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "either side of the centreline"
+      },
+      {
+        "field": "geometry.from",
+        "quote": "its junction with Highway 97 near Peachland"
+      },
+      {
+        "field": "geometry.to",
+        "quote": "its junction with Highway 5 near Aspen Grove"
+      }
+    ],
+    "uncertain": []
+  }
+}

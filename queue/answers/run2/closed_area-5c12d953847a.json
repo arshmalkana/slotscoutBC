@@ -1,0 +1,134 @@
+{
+  "task_id": "closed_area-5c12d953847a",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T22:01:12Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 7-21"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "a point at 914.4 m elevation approximately 5 340 m at S 88° W from the southeast corner of Lot 1476, Peace River Land District",
+          "direction": null,
+          "follow": null,
+          "feature": "Lot 1476",
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at a point at 914.4 m elevation approximately 5 340 m at S 88° W from the southeast corner of Lot 1476, Peace River Land District"
+        },
+        {
+          "start": null,
+          "direction": "general southerly, then westerly, then southeasterly",
+          "follow": "contour",
+          "feature": "914.4 m elevation",
+          "side_or_bank": null,
+          "until": "a point approximately 8 450 m at S 66° W from the southeast corner of Lot 1476",
+          "distance": null,
+          "quote": "thence in a general southerly, then westerly, then southeasterly direction at 914.4 m elevation to a point approximately 8 450 m at S 66° W from the southeast corner of Lot 1476"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "straight_line",
+          "feature": "Murray River",
+          "side_or_bank": "left bank",
+          "until": "a point 402 m due West of the natural boundary of Murray River on the left bank thereof",
+          "distance": "402 m",
+          "quote": "thence westerly in a straight line to a point 402 m due West of the natural boundary of Murray River on the left bank thereof"
+        },
+        {
+          "start": null,
+          "direction": "general northerly",
+          "follow": "river",
+          "feature": "Murray River",
+          "side_or_bank": "left bank",
+          "until": "a point due East of the southeast corner of Lot 817",
+          "distance": "402 m",
+          "quote": "thence in a general northerly direction at 402 m west of the natural boundary of Murray River on the left bank thereof to a point due East of the southeast corner of Lot 817"
+        },
+        {
+          "start": null,
+          "direction": "N 8° W",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": "approximately 2 500 m",
+          "quote": "thence N 8° W approximately 2 500 m"
+        },
+        {
+          "start": null,
+          "direction": "approximately N 37° E",
+          "follow": "straight_line",
+          "feature": "Murray River",
+          "side_or_bank": "right bank",
+          "until": "the point of intersection with the natural boundary of Murray River on the right bank thereof",
+          "distance": null,
+          "quote": "thence approximately N 37° E to the point of intersection with the natural boundary of Murray River on the right bank thereof"
+        },
+        {
+          "start": null,
+          "direction": "due East",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point at 884 m elevation",
+          "distance": null,
+          "quote": "thence due East to a point at 884 m elevation"
+        },
+        {
+          "start": null,
+          "direction": "general southeasterly",
+          "follow": "contour",
+          "feature": "884 m elevation",
+          "side_or_bank": null,
+          "until": "a point due West of the point of commencement",
+          "distance": null,
+          "quote": "thence in a general southeasterly direction at 884 m elevation to a point due West of the point of commencement"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence easterly in a straight line to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting or Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "That portion of M.U. 7-21"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundaries"
+      }
+    ],
+    "uncertain": []
+  }
+}

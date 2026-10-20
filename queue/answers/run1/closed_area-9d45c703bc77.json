@@ -1,0 +1,78 @@
+{
+  "task_id": "closed_area-9d45c703bc77",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T22:01:19Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 1-8"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": "inside",
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the southernmost point on Amphitrite Point on the natural boundary of Ucluth Peninsula",
+          "direction": null,
+          "follow": null,
+          "feature": "Ucluth Peninsula",
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the southernmost point on Amphitrite Point on the natural boundary of Ucluth Peninsula"
+        },
+        {
+          "start": null,
+          "direction": "more or less east",
+          "follow": "straight_line",
+          "feature": "Ucluelet Inlet",
+          "side_or_bank": null,
+          "until": "the most southerly point on the natural boundary of Ucluelet Inlet on an unnamed peninsula directly south of Indian Reserve #5",
+          "distance": null,
+          "quote": "thence more or less east in a straight line to the most southerly point on the natural boundary of Ucluelet Inlet on an unnamed peninsula directly south of Indian Reserve #5"
+        },
+        {
+          "start": null,
+          "direction": "in a generally northwesterly, southwesterly and southeasterly direction",
+          "follow": "shoreline",
+          "feature": "Ucluelet Inlet",
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence in a generally northwesterly, southwesterly and southeasterly direction along the natural boundary of Ucluelet Inlet along the mean high water mark to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting or Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "in M.U. 1-8"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundaries"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "contained within the following described boundaries"
+      }
+    ],
+    "uncertain": []
+  }
+}

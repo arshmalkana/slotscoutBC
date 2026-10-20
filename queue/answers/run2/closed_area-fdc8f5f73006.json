@@ -1,0 +1,118 @@
+{
+  "task_id": "closed_area-fdc8f5f73006",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T22:01:45Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Range 5, Coast District"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": "inside",
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the northwest corner of Lot 314, Range 5, Coast District",
+          "direction": null,
+          "follow": null,
+          "feature": "Lot 314",
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the northwest corner of Lot 314, Range 5, Coast District"
+        },
+        {
+          "start": null,
+          "direction": "easterly and southerly",
+          "follow": "lot_line",
+          "feature": "Lot 314",
+          "side_or_bank": null,
+          "until": "its southeast corner",
+          "distance": null,
+          "quote": "thence easterly and southerly along the boundary of said lot to its southeast corner"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "lot_line",
+          "feature": "Lots 314, 549, 550, 1665, 1644 and 1643",
+          "side_or_bank": "south boundaries",
+          "until": "its southwest corner",
+          "distance": null,
+          "quote": "thence westerly along the south boundaries of Lots 314, 549, 550, 1665, 1644 and 1643 to its southwest corner"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "lot_line",
+          "feature": "Lot 1643",
+          "side_or_bank": "west boundary",
+          "until": null,
+          "distance": "594 metres (1 980 feet)",
+          "quote": "thence to a point northerly 594 metres (1 980 feet) along the west boundary of Lot 1643"
+        },
+        {
+          "start": null,
+          "direction": "due West",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the west boundary of Lot 1643A",
+          "distance": null,
+          "quote": "thence in a straight line due West to the west boundary of Lot 1643A"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "lot_line",
+          "feature": "Lot 1643A",
+          "side_or_bank": "western boundary",
+          "until": "the low water mark of Stuart Lake",
+          "distance": null,
+          "quote": "thence northerly along the western boundary of said lot to the low water mark of Stuart Lake"
+        },
+        {
+          "start": null,
+          "direction": "in an easterly direction",
+          "follow": "shoreline",
+          "feature": "Stuart Lake",
+          "side_or_bank": null,
+          "until": "point of commencement",
+          "distance": null,
+          "quote": "thence in an easterly direction following said low water mark to point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "Commencing at the northwest corner of Lot 314"
+      },
+      {
+        "field": "within",
+        "quote": "Range 5, Coast District"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "contained within the following described boundaries"
+      }
+    ],
+    "uncertain": []
+  }
+}

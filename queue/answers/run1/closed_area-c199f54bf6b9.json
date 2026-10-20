@@ -1,0 +1,103 @@
+{
+  "task_id": "closed_area-c199f54bf6b9",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T22:00:44Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "KDYD"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the mean high water mark at Reedman Point on Shuswap Lake",
+          "direction": null,
+          "follow": null,
+          "feature": "Reedman Point",
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the mean high water mark at Reedman Point on Shuswap Lake"
+        },
+        {
+          "start": null,
+          "direction": "southwesterly",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the intersection of the westerly boundary of Section 24, Township 22, Range 11, W6M, and Shuswap Lake",
+          "distance": null,
+          "quote": "thence southwesterly to the intersection of the westerly boundary of Section 24, Township 22, Range 11, W6M, and Shuswap Lake"
+        },
+        {
+          "start": null,
+          "direction": "due South",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the Sorrento-Eagle Bay Road",
+          "distance": null,
+          "quote": "thence due South to the Sorrento-Eagle Bay Road"
+        },
+        {
+          "start": null,
+          "direction": "easterly, southerly and northerly",
+          "follow": "road",
+          "feature": "Sorrento-Eagle Bay Road",
+          "side_or_bank": null,
+          "until": "the south boundary of Section 30, Township 22, Range 10, W6M",
+          "distance": null,
+          "quote": "thence easterly, southerly and northerly along said road to the south boundary of Section 30, Township 22, Range 10, W6M"
+        },
+        {
+          "start": null,
+          "direction": "northwesterly",
+          "follow": "road",
+          "feature": "Sorrento-Eagle Bay Road",
+          "side_or_bank": null,
+          "until": null,
+          "distance": "500 m",
+          "quote": "thence northwesterly along the Sorrento-Eagle Bay Road for 500 m"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence westerly to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "KDYD"
+      }
+    ],
+    "uncertain": [
+      "geometry.steps[1].follow",
+      "geometry.steps[5].follow"
+    ]
+  }
+}
