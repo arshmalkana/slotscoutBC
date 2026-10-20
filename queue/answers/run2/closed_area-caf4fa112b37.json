@@ -1,0 +1,111 @@
+{
+  "task_id": "closed_area-caf4fa112b37",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:46:22Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 2-19"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": {
+        "name": "Hemlock Valley Recreation Area Road",
+        "source_hint": "DRA"
+      },
+      "feature": null,
+      "buffer_m": null,
+      "side": "both",
+      "from": {
+        "type": "road_intersection",
+        "road": "Hemlock Valley Recreation Area Road",
+        "name": "Weaver Creek Road"
+      },
+      "to": {
+        "type": "boundary",
+        "road": "Hemlock Valley Recreation Area Road",
+        "name": "Hemlock Valley Recreation Area"
+      },
+      "steps": [
+        {
+          "start": "the point of intersection of the midline of Weaver Creek Road and the midline of Hemlock Valley Recreation Area Road",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the point of intersection of the midline of Weaver Creek Road and the midline of Hemlock Valley Recreation Area Road"
+        },
+        {
+          "start": null,
+          "direction": "in a general northerly direction",
+          "follow": "road",
+          "feature": "Hemlock Valley Recreation Area Road",
+          "side_or_bank": "midline",
+          "until": "the point of intersection with the midline of Sakwi Creek at 840 m elevation",
+          "distance": "50 m",
+          "quote": "thence in a general northerly direction along the midline of Hemlock Valley Recreation Area Road to the point of intersection with the midline of Sakwi Creek at 840 m elevation and including all intervening territory for 50 m on either side of the midline of said road"
+        },
+        {
+          "start": null,
+          "direction": "in a general northerly direction",
+          "follow": "road",
+          "feature": "Hemlock Valley Recreation Area Road",
+          "side_or_bank": "midline",
+          "until": "Hemlock Valley Recreation Area",
+          "distance": "150 m",
+          "quote": "thence in a general northerly direction along the midline of said road to Hemlock Valley Recreation Area and including all intervening territory for 150 m on either side of the midline of said road"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "M.U. 2-19"
+      },
+      {
+        "field": "geometry.road",
+        "quote": "along the midline of Hemlock Valley Recreation Area Road"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "on either side of the midline of said road"
+      },
+      {
+        "field": "geometry.from",
+        "quote": "Commencing at the point of intersection of the midline of Weaver Creek Road and the midline of Hemlock Valley Recreation Area Road"
+      },
+      {
+        "field": "geometry.to",
+        "quote": "to Hemlock Valley Recreation Area and including"
+      },
+      {
+        "field": "geometry.steps[0]",
+        "quote": "Commencing at the point of intersection of the midline of Weaver Creek Road and the midline of Hemlock Valley Recreation Area Road"
+      },
+      {
+        "field": "geometry.steps[1]",
+        "quote": "thence in a general northerly direction along the midline of Hemlock Valley Recreation Area Road to the point of intersection with the midline of Sakwi Creek at 840 m elevation and including all intervening territory for 50 m on either side of the midline of said road"
+      },
+      {
+        "field": "geometry.steps[2]",
+        "quote": "thence in a general northerly direction along the midline of said road to Hemlock Valley Recreation Area and including all intervening territory for 150 m on either side of the midline of said road"
+      }
+    ],
+    "uncertain": [
+      "geometry.buffer_m"
+    ]
+  }
+}

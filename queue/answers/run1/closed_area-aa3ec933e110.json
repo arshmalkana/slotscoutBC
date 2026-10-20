@@ -1,0 +1,45 @@
+{
+  "task_id": "closed_area-aa3ec933e110",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:47:24Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": null,
+    "geometry": {
+      "method": "admin_boundary",
+      "road": null,
+      "feature": {
+        "type": "lot",
+        "name": "District Lot 17, Parcel 1 of DD 5963-I and Parcel A of District Lot 3912, Plan 4061 K.D."
+      },
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting, Hunting or Trapping Areas"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "being District Lot 17, Parcel 1 of DD 5963-I and Parcel A of District Lot 3912, Plan 4061 K.D."
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "District Lot 17, Parcel 1 of DD 5963-I and Parcel A of District Lot 3912, Plan 4061 K.D."
+      }
+    ],
+    "uncertain": [
+      "within"
+    ]
+  }
+}

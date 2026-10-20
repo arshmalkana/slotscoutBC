@@ -1,0 +1,46 @@
+{
+  "task_id": "closed_area-b689a1205feb",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:47:30Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "ODYD"
+    },
+    "geometry": {
+      "method": "other",
+      "road": null,
+      "feature": {
+        "type": "lake",
+        "name": "Swan Lake"
+      },
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting or Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "ODYD"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "Those waters of Swan Lake to the maximum high water mark including all marshland adjacent to Swan Lake"
+      }
+    ],
+    "uncertain": []
+  }
+}

@@ -1,0 +1,114 @@
+{
+ "task_id": "closed_area-deab91d218ff",
+ "run": 1,
+ "mode": "agent",
+ "model": "Claude Code agent mode",
+ "prompt_version": "closed_area.v1",
+ "schema_id": "closed_area.v1",
+ "produced_at": "2026-10-20T21:47:52Z",
+ "answer": {
+  "effect": "no_shooting",
+  "exemptions": [],
+  "period": null,
+  "within": {
+   "type": "wildlife_management_unit",
+   "name": "M.U. 2-16"
+  },
+  "geometry": {
+   "method": "metes_and_bounds",
+   "road": null,
+   "feature": null,
+   "buffer_m": null,
+   "side": null,
+   "from": null,
+   "to": null,
+   "steps": [
+    {
+     "start": "a point along the midline of Central Road 2 km northerly from the junction of the midlines of Shelter Point Road, Bell Road and Central Road",
+     "direction": null,
+     "follow": null,
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "2 km",
+     "quote": "Commencing at a point along the midline of Central Road 2 km northerly from the junction of the midlines of Shelter Point Road, Bell Road and Central Road"
+    },
+    {
+     "start": null,
+     "direction": "northeast",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "25 m",
+     "quote": "thence northeast a distance of 25 m"
+    },
+    {
+     "start": null,
+     "direction": "northerly",
+     "follow": "other",
+     "feature": "Central Road",
+     "side_or_bank": null,
+     "until": "a point 25 m due North of the Junction of the midlines of Central Road and Imperial Limestone Road",
+     "distance": "approximately 16 km",
+     "quote": "thence northerly along a line parallel to Central Road approximately 16 km to a point 25 m due North of the Junction of the midlines of Central Road and Imperial Limestone Road"
+    },
+    {
+     "start": null,
+     "direction": "due South",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": "the midline of Central Road",
+     "distance": "25 m",
+     "quote": "thence due South 25 m to the midline of Central Road"
+    },
+    {
+     "start": null,
+     "direction": "due South",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": "a point 25 m south of the midline of Central Road",
+     "distance": null,
+     "quote": "thence due South to a point 25 m south of the midline of Central Road"
+    },
+    {
+     "start": null,
+     "direction": "southerly",
+     "follow": "other",
+     "feature": "Central Road",
+     "side_or_bank": null,
+     "until": "a point 25 m southwest of the point of commencement",
+     "distance": null,
+     "quote": "thence southerly along a line parallel to Central Road to a point 25 m southwest of the point of commencement"
+    },
+    {
+     "start": null,
+     "direction": "northeast",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": "the point of commencement",
+     "distance": "25 m",
+     "quote": "thence northeast 25 m to the point of commencement"
+    }
+   ]
+  },
+  "quotes": [
+   {
+    "field": "effect",
+    "quote": "No Shooting Areas"
+   },
+   {
+    "field": "within",
+    "quote": "M.U. 2-16"
+   },
+   {
+    "field": "geometry.method",
+    "quote": "contained within the following described boundaries"
+   }
+  ],
+  "uncertain": []
+ }
+}

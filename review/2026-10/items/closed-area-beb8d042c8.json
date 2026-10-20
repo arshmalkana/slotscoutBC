@@ -1,0 +1,183 @@
+{
+  "item_id": "closed-area-beb8d042c8",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 1, section 2 (Columbia Lake and River)",
+  "rule_id": "W1-002",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: within: run 1 \"m.u.s 4 25 and 4 26\" vs run 2 \"4 25 and 4 26\"; side: run 1 null vs run 2 \"inside\"",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 1 No Shooting, Hunting or Trapping Areas (Section 2)\nColumbia Lake and River\n2 That portion of the Province, in the vicinity of Columbia Lake, Kootenay Land District, that is within the following boundaries: The portion of the Columbia River and Columbia Lake, below the high water level and including all marshes, sand and gravel bars, located in M.U.s 4-25 and 4-26 bounded at the south on Columbia Lake by a straight line running between the southeast corner of Lot 450, Kootenay Land District, and the mouth of Warspite Creek, and at the north by the south side of the Highway 93/95 bridge over the Columbia River.",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-bb03a902f9e7",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:47:24Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U.s 4-25 and 4-26"
+        },
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": {
+            "type": "other",
+            "name": "Columbia River and Columbia Lake"
+          },
+          "buffer_m": null,
+          "side": null,
+          "from": {
+            "type": "other",
+            "road": null,
+            "name": "a straight line running between the southeast corner of Lot 450, Kootenay Land District, and the mouth of Warspite Creek"
+          },
+          "to": {
+            "type": "landmark",
+            "road": "Highway 93/95",
+            "name": "the south side of the Highway 93/95 bridge over the Columbia River"
+          },
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting, Hunting or Trapping Areas"
+          },
+          {
+            "field": "within",
+            "quote": "located in M.U.s 4-25 and 4-26"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "The portion of the Columbia River and Columbia Lake, below the high water level"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "The portion of the Columbia River and Columbia Lake"
+          },
+          {
+            "field": "geometry.from",
+            "quote": "bounded at the south on Columbia Lake by a straight line running between the southeast corner of Lot 450, Kootenay Land District, and the mouth of Warspite Creek"
+          },
+          {
+            "field": "geometry.to",
+            "quote": "at the north by the south side of the Highway 93/95 bridge over the Columbia River"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-bb03a902f9e7",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:46:27Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "4-25 and 4-26"
+        },
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": {
+            "type": "other",
+            "name": "Columbia River and Columbia Lake"
+          },
+          "buffer_m": null,
+          "side": "inside",
+          "from": {
+            "type": "other",
+            "road": null,
+            "name": "a straight line running between the southeast corner of Lot 450, Kootenay Land District, and the mouth of Warspite Creek"
+          },
+          "to": {
+            "type": "landmark",
+            "road": "Highway 93/95",
+            "name": "the south side of the Highway 93/95 bridge over the Columbia River"
+          },
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting, Hunting or Trapping Areas"
+          },
+          {
+            "field": "within",
+            "quote": "located in M.U.s 4-25 and 4-26"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "The portion of the Columbia River and Columbia Lake, below the high water level"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "the Columbia River and Columbia Lake"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "below the high water level"
+          },
+          {
+            "field": "geometry.from",
+            "quote": "bounded at the south on Columbia Lake by a straight line running between the southeast corner of Lot 450, Kootenay Land District, and the mouth of Warspite Creek"
+          },
+          {
+            "field": "geometry.to",
+            "quote": "at the north by the south side of the Highway 93/95 bridge over the Columbia River"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "located in M.U.s 4-25 and 4-26",
+    "geometry.feature": "The portion of the Columbia River and Columbia Lake",
+    "geometry.from": "bounded at the south on Columbia Lake by a straight line running between the southeast corner of Lot 450, Kootenay Land District, and the mouth of Warspite Creek",
+    "geometry.to": "at the north by the south side of the Highway 93/95 bridge over the Columbia River",
+    "effect": "No Shooting, Hunting or Trapping Areas"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "within: run 1 \"m.u.s 4 25 and 4 26\" vs run 2 \"4 25 and 4 26\"",
+    "side: run 1 null vs run 2 \"inside\""
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T21:47:33.017Z",
+  "updated": "2026-10-20T21:47:33.017Z"
+}

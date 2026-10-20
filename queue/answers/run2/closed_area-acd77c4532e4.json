@@ -1,0 +1,158 @@
+{
+  "task_id": "closed_area-acd77c4532e4",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:48:02Z",
+  "answer": {
+    "effect": "shot_only",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 2-5"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": "inside",
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "Daniel Point",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at Daniel Point"
+        },
+        {
+          "start": null,
+          "direction": "northerly, easterly and southerly",
+          "follow": "shoreline",
+          "feature": "Lee Bay",
+          "side_or_bank": "mean low water mark",
+          "until": "the west end of Keelson Road",
+          "distance": null,
+          "quote": "thence northerly, easterly and southerly along the mean low water mark of the natural boundary of Lee Bay to the west end of Keelson Road"
+        },
+        {
+          "start": null,
+          "direction": null,
+          "follow": "road",
+          "feature": "Keelson Road",
+          "side_or_bank": "northerly and easterly boundary",
+          "until": "Crosstrees Road",
+          "distance": null,
+          "quote": "thence along the northerly and easterly boundary of the road to Crosstrees Road"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "road",
+          "feature": "Crosstrees Road",
+          "side_or_bank": "northerly boundary",
+          "until": "Irvines Landing Road",
+          "distance": null,
+          "quote": "thence easterly along its northerly boundary to Irvines Landing Road"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "road",
+          "feature": "Irvines Landing Road",
+          "side_or_bank": null,
+          "until": "the point of its intersection with Mixal Road and Garden Bay Road",
+          "distance": null,
+          "quote": "thence easterly along the road to the point of its intersection with Mixal Road and Garden Bay Road"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "road",
+          "feature": "Garden Bay Road",
+          "side_or_bank": "northerly boundary",
+          "until": "its intersection with Myers Creek",
+          "distance": null,
+          "quote": "thence easterly along the northerly boundary of Garden Bay Road to its intersection with Myers Creek"
+        },
+        {
+          "start": null,
+          "direction": "northeasterly",
+          "follow": "creek",
+          "feature": "Myers Creek",
+          "side_or_bank": null,
+          "until": "its intersection with Highway 101",
+          "distance": null,
+          "quote": "thence northeasterly up the Creek to its intersection with Highway 101"
+        },
+        {
+          "start": null,
+          "direction": null,
+          "follow": "road",
+          "feature": "Highway 101",
+          "side_or_bank": "westerly boundary",
+          "until": "the most westerly point of the road approximately 2.2 kilometres north of its intersection with Myers Creek",
+          "distance": "approximately 2.2 kilometres",
+          "quote": "thence along the westerly boundary of Highway 101 to the most westerly point of the road approximately 2.2 kilometres north of its intersection with Myers Creek"
+        },
+        {
+          "start": null,
+          "direction": "due northwest",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the natural boundary of Sakinaw Lake",
+          "distance": null,
+          "quote": "thence in a straight line due northwest to the natural boundary of Sakinaw Lake"
+        },
+        {
+          "start": null,
+          "direction": "southwesterly",
+          "follow": "shoreline",
+          "feature": "Sakinaw Lake",
+          "side_or_bank": null,
+          "until": "the mouth of the outlet stream",
+          "distance": null,
+          "quote": "thence southwesterly along the natural boundary of the lake and its outlet stream to the mouth of the outlet stream"
+        },
+        {
+          "start": null,
+          "direction": "westerly and southerly",
+          "follow": "shoreline",
+          "feature": "Agamemnon Channel",
+          "side_or_bank": "mean low water mark",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence westerly and southerly along the mean low water mark in the natural boundary of Agamemnon Channel to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "Firearms Using Shot Only Areas"
+      },
+      {
+        "field": "within",
+        "quote": "in M.U. 2-5"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "Commencing at Daniel Point"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "within the following described boundaries"
+      }
+    ],
+    "uncertain": []
+  }
+}

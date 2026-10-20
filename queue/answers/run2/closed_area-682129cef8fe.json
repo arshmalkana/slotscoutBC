@@ -1,0 +1,114 @@
+{
+  "task_id": "closed_area-682129cef8fe",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:47:30Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 7-9"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the junction of the Willow River and Highway 16",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the junction of the Willow River and Highway 16"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "river",
+          "feature": "Willow River",
+          "side_or_bank": null,
+          "until": "a point between its confluence with Bowes Creek and its confluence with Spey Creek where the Willow River comes closest to the Spey Creek logging access road",
+          "distance": null,
+          "quote": "thence northerly along the Willow River to a point between its confluence with Bowes Creek and its confluence with Spey Creek where the Willow River comes closest to the Spey Creek logging access road"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "Spey Creek logging access road",
+          "distance": null,
+          "quote": "thence proceeding westerly to Spey Creek logging access road"
+        },
+        {
+          "start": null,
+          "direction": "in a general southwesterly direction",
+          "follow": "road",
+          "feature": "Spey Creek logging access road",
+          "side_or_bank": null,
+          "until": "its junction with Highway 16",
+          "distance": null,
+          "quote": "thence proceeding in a general southwesterly direction along said road to its junction with Highway 16"
+        },
+        {
+          "start": null,
+          "direction": "southeasterly",
+          "follow": "road",
+          "feature": "Highway 16",
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence southeasterly along said highway to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting or Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "That portion of M.U. 7-9"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "Commencing at the junction of the Willow River and Highway 16"
+      },
+      {
+        "field": "geometry.steps[0]",
+        "quote": "Commencing at the junction of the Willow River and Highway 16"
+      },
+      {
+        "field": "geometry.steps[1]",
+        "quote": "thence northerly along the Willow River to a point between its confluence with Bowes Creek and its confluence with Spey Creek where the Willow River comes closest to the Spey Creek logging access road"
+      },
+      {
+        "field": "geometry.steps[2]",
+        "quote": "thence proceeding westerly to Spey Creek logging access road"
+      },
+      {
+        "field": "geometry.steps[3]",
+        "quote": "thence proceeding in a general southwesterly direction along said road to its junction with Highway 16"
+      },
+      {
+        "field": "geometry.steps[4]",
+        "quote": "thence southeasterly along said highway to the point of commencement"
+      }
+    ],
+    "uncertain": []
+  }
+}

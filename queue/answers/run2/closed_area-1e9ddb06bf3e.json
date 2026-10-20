@@ -1,0 +1,58 @@
+{
+  "task_id": "closed_area-1e9ddb06bf3e",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:47:30Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [
+      "organized territory"
+    ],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Kamloops Division of Yale District"
+    },
+    "geometry": {
+      "method": "other",
+      "road": null,
+      "feature": {
+        "type": "lake",
+        "name": "Mara and Shuswap Lakes"
+      },
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting or Hunting Areas"
+      },
+      {
+        "field": "exemptions[0]",
+        "quote": "except organized territory"
+      },
+      {
+        "field": "within",
+        "quote": "Kamloops Division of Yale District"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "All waters of Mara and Shuswap Lakes Iying east of a straight line between Murdock and Semaphore Points and north of a line running east-west through the mouth of Sicamous Creek"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "All waters of Mara and Shuswap Lakes"
+      }
+    ],
+    "uncertain": [
+      "geometry.side"
+    ]
+  }
+}

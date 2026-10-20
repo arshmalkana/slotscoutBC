@@ -1,0 +1,50 @@
+{
+  "task_id": "closed_area-3c7c0d0bd18a",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:46:22Z",
+  "answer": {
+    "effect": "no_hunting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 2-4"
+    },
+    "geometry": {
+      "method": "admin_boundary",
+      "road": null,
+      "feature": {
+        "type": "lot",
+        "name": "Lot 495, New Westminster District"
+      },
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "M.U. 2-4"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "being Lot 495, New Westminster District"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "Lot 495, New Westminster District"
+      }
+    ],
+    "uncertain": []
+  }
+}

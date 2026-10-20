@@ -1,0 +1,250 @@
+{
+  "task_id": "closed_area-18e8a4ff6c25",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:46:22Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "municipality",
+      "name": "Municipality of Delta"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the point of intersection of the centerline of 27B Avenue, also referred to as Deltaport Way, and the western flood protection dyke at the northerly extremity of the Roberts Bank Superport Causeway",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the point of intersection of the centerline of 27B Avenue, also referred to as Deltaport Way, and the western flood protection dyke at the northerly extremity of the Roberts Bank Superport Causeway"
+        },
+        {
+          "start": null,
+          "direction": "northwesterly",
+          "follow": "shoreline",
+          "feature": "western flood protection dyke",
+          "side_or_bank": "high water mark",
+          "until": null,
+          "distance": "150 metres",
+          "quote": "thence northwesterly along the high water mark of the dyke for a distance of 150 metres measured in a straight line perpendicular to the axis of the causeway at that point"
+        },
+        {
+          "start": null,
+          "direction": "in southwesterly and northwesterly directions",
+          "follow": "other",
+          "feature": "Roberts Bank Superport Causeway and loading pods",
+          "side_or_bank": "seaward",
+          "until": "a point 150 metres south of the high water mark of the southernmost extremity of the Deltaport loading pods of the Terminal",
+          "distance": "150 m",
+          "quote": "thence parallel to the high water mark contour of the banks of the Roberts Bank Superport Causeway and loading pods at a distance 150 m seaward of the high water mark, measured in a straight line perpendicular to the axis of the causeway, in southwesterly and northwesterly directions to a point 150 metres south of the high water mark of the southernmost extremity of the Deltaport loading pods of the Terminal"
+        },
+        {
+          "start": null,
+          "direction": "northeasterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the most southerly of the two navigation towers located approximately 750 metres offshore from the south side of the causeway",
+          "distance": null,
+          "quote": "thence northeasterly in a straight line to the most southerly of the two navigation towers located approximately 750 metres offshore from the south side of the causeway"
+        },
+        {
+          "start": null,
+          "direction": "perpendicular to the axis of the causeway",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point 150 metres southeast of the high water mark of the south shore of the causeway",
+          "distance": null,
+          "quote": "thence, in a straight line, following a line perpendicular to the axis of the causeway and being the shortest distance to the causeway at that point, to a point 150 metres southeast of the high water mark of the south shore of the causeway, measured in a straight line perpendicular to the axis of the causeway at that point"
+        },
+        {
+          "start": null,
+          "direction": "in a northeasterly direction",
+          "follow": "other",
+          "feature": "Roberts Bank Superport Causeway",
+          "side_or_bank": "seaward",
+          "until": "a point on the high water mark of the western flood protection dyke 150 metres southeast of the high water mark of the causeway",
+          "distance": null,
+          "quote": "thence in a northeasterly direction, seaward and parallel to the contour of the high water mark of the causeway, to a point on the high water mark of the western flood protection dyke 150 metres southeast of the high water mark of the causeway"
+        },
+        {
+          "start": null,
+          "direction": null,
+          "follow": "shoreline",
+          "feature": "western flood protection dyke",
+          "side_or_bank": "high water mark",
+          "until": "the point of intersection of the center line of 27B Avenue and the western flood protection dyke, being the point of commencement",
+          "distance": null,
+          "quote": "thence, following the high water mark of the dyke to the point of intersection of the center line of 27B Avenue and the western flood protection dyke, being the point of commencement"
+        },
+        {
+          "start": "the extreme southernmost corner of the Tsawwassen Indian Reserve",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the extreme southernmost corner of the Tsawwassen Indian Reserve"
+        },
+        {
+          "start": null,
+          "direction": "in a southerly direction",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point on the high water mark of the western flood protection dyke located 150 metres in a southeasterly direction perpendicular from the high water mark of the Tsawwassen Ferry Terminal Causeway",
+          "distance": null,
+          "quote": "thence in a straight line in a southerly direction, to a point on the high water mark of the western flood protection dyke located 150 metres in a southeasterly direction perpendicular from the high water mark of the Tsawwassen Ferry Terminal Causeway"
+        },
+        {
+          "start": null,
+          "direction": "in a southwesterly direction",
+          "follow": "other",
+          "feature": "causeway and terminal loading pod",
+          "side_or_bank": "seaward",
+          "until": "a point located 150 metres seaward and southeast of the high water mark of the extreme southernmost point of the Tsawwassen Ferry Terminal loading pod",
+          "distance": "150 metres",
+          "quote": "thence following a line seaward and parallel to the high water mark contours of the causeway and terminal loading pod, which is 150 metres southeast of the high water mark and being the shortest distance to the high water mark at any point, in a southwesterly direction, to a point located 150 metres seaward and southeast of the high water mark of the extreme southernmost point of the Tsawwassen Ferry Terminal loading pod"
+        },
+        {
+          "start": null,
+          "direction": "in a southeasterly direction",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the easternmost point on the southern edge of the wave protection rock wall",
+          "distance": null,
+          "quote": "thence in a straight line in a southeasterly direction, to the easternmost point on the southern edge of the wave protection rock wall"
+        },
+        {
+          "start": null,
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the extreme westernmost end of the wave protection rock wall, being marked by a navigation light beacon",
+          "distance": null,
+          "quote": "thence to the extreme westernmost end of the wave protection rock wall, being marked by a navigation light beacon"
+        },
+        {
+          "start": null,
+          "direction": "in a northwesterly direction",
+          "follow": "other",
+          "feature": "navigation light beacon towers",
+          "side_or_bank": null,
+          "until": "the beacon tower located immediately southwest of the westernmost point of the terminal loading pod",
+          "distance": null,
+          "quote": "thence in a northwesterly direction, following the line of navigation light beacon towers to the beacon tower located immediately southwest of the westernmost point of the terminal loading pod"
+        },
+        {
+          "start": null,
+          "direction": null,
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the intersection of the westerly boundary of the Tsawwassen Indian Reserve",
+          "distance": null,
+          "quote": "thence in a straight line to a point perpendicular to the axis of the causeway at any point, to the intersection of the westerly boundary of the Tsawwassen Indian Reserve"
+        },
+        {
+          "start": null,
+          "direction": "in a southerly direction",
+          "follow": "reserve_boundary",
+          "feature": "Tsawwassen Indian Reserve",
+          "side_or_bank": "westerly boundary",
+          "until": "the extreme southwesterly corner of the Tsawwassen Indian Reserve, being the point of commencement",
+          "distance": "approximately 350 metres",
+          "quote": "thence in a southerly direction for approximately 350 metres following the westerly boundary of the Tsawwassen Indian Reserve, to the extreme southwesterly corner of the Tsawwassen Indian Reserve, being the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "in the Municipality of Delta"
+      },
+      {
+        "field": "geometry.steps[0]",
+        "quote": "Commencing at the point of intersection of the centerline of 27B Avenue, also referred to as Deltaport Way, and the western flood protection dyke at the northerly extremity of the Roberts Bank Superport Causeway"
+      },
+      {
+        "field": "geometry.steps[1]",
+        "quote": "thence northwesterly along the high water mark of the dyke for a distance of 150 metres measured in a straight line perpendicular to the axis of the causeway at that point"
+      },
+      {
+        "field": "geometry.steps[2]",
+        "quote": "thence parallel to the high water mark contour of the banks of the Roberts Bank Superport Causeway and loading pods at a distance 150 m seaward of the high water mark, measured in a straight line perpendicular to the axis of the causeway, in southwesterly and northwesterly directions to a point 150 metres south of the high water mark of the southernmost extremity of the Deltaport loading pods of the Terminal"
+      },
+      {
+        "field": "geometry.steps[3]",
+        "quote": "thence northeasterly in a straight line to the most southerly of the two navigation towers located approximately 750 metres offshore from the south side of the causeway"
+      },
+      {
+        "field": "geometry.steps[4]",
+        "quote": "thence, in a straight line, following a line perpendicular to the axis of the causeway and being the shortest distance to the causeway at that point, to a point 150 metres southeast of the high water mark of the south shore of the causeway, measured in a straight line perpendicular to the axis of the causeway at that point"
+      },
+      {
+        "field": "geometry.steps[5]",
+        "quote": "thence in a northeasterly direction, seaward and parallel to the contour of the high water mark of the causeway, to a point on the high water mark of the western flood protection dyke 150 metres southeast of the high water mark of the causeway"
+      },
+      {
+        "field": "geometry.steps[6]",
+        "quote": "thence, following the high water mark of the dyke to the point of intersection of the center line of 27B Avenue and the western flood protection dyke, being the point of commencement"
+      },
+      {
+        "field": "geometry.steps[7]",
+        "quote": "Commencing at the extreme southernmost corner of the Tsawwassen Indian Reserve"
+      },
+      {
+        "field": "geometry.steps[8]",
+        "quote": "thence in a straight line in a southerly direction, to a point on the high water mark of the western flood protection dyke located 150 metres in a southeasterly direction perpendicular from the high water mark of the Tsawwassen Ferry Terminal Causeway"
+      },
+      {
+        "field": "geometry.steps[9]",
+        "quote": "thence following a line seaward and parallel to the high water mark contours of the causeway and terminal loading pod, which is 150 metres southeast of the high water mark and being the shortest distance to the high water mark at any point, in a southwesterly direction, to a point located 150 metres seaward and southeast of the high water mark of the extreme southernmost point of the Tsawwassen Ferry Terminal loading pod"
+      },
+      {
+        "field": "geometry.steps[10]",
+        "quote": "thence in a straight line in a southeasterly direction, to the easternmost point on the southern edge of the wave protection rock wall"
+      },
+      {
+        "field": "geometry.steps[11]",
+        "quote": "thence to the extreme westernmost end of the wave protection rock wall, being marked by a navigation light beacon"
+      },
+      {
+        "field": "geometry.steps[12]",
+        "quote": "thence in a northwesterly direction, following the line of navigation light beacon towers to the beacon tower located immediately southwest of the westernmost point of the terminal loading pod"
+      },
+      {
+        "field": "geometry.steps[13]",
+        "quote": "thence in a straight line to a point perpendicular to the axis of the causeway at any point, to the intersection of the westerly boundary of the Tsawwassen Indian Reserve"
+      },
+      {
+        "field": "geometry.steps[14]",
+        "quote": "thence in a southerly direction for approximately 350 metres following the westerly boundary of the Tsawwassen Indian Reserve, to the extreme southwesterly corner of the Tsawwassen Indian Reserve, being the point of commencement"
+      }
+    ],
+    "uncertain": []
+  }
+}

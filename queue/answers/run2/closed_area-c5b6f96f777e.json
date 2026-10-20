@@ -1,0 +1,119 @@
+{
+  "task_id": "closed_area-c5b6f96f777e",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:46:22Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": null,
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the point of intersection of the southerly boundary of the B.C. Rail Right of way with the easterly boundary of Lot 2150, Lillooet Land District",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the point of intersection of the southerly boundary of the B.C. Rail Right of way with the easterly boundary of Lot 2150, Lillooet Land District"
+        },
+        {
+          "start": null,
+          "direction": "in a general easterly and southeasterly direction",
+          "follow": "other",
+          "feature": "B.C. Rail Right of way",
+          "side_or_bank": "southerly boundary",
+          "until": "the point of intersection with the boundary of the Cariboo Highway in the southwestern corner of Lot 2137, Lillooet Land District",
+          "distance": null,
+          "quote": "thence in a general easterly and southeasterly direction along the southerly boundary of the B.C. Rail Right of way to the point of intersection with the boundary of the Cariboo Highway in the southwestern corner of Lot 2137, Lillooet Land District"
+        },
+        {
+          "start": null,
+          "direction": "in a general southwesterly direction",
+          "follow": "road",
+          "feature": "Cariboo Highway",
+          "side_or_bank": "midline",
+          "until": "the point of intersection with the northerly boundary of an unnamed road",
+          "distance": null,
+          "quote": "thence in a general southwesterly direction along the midline of the Cariboo Highway to the point of intersection with the northerly boundary of an unnamed road"
+        },
+        {
+          "start": null,
+          "direction": "in a general westerly direction",
+          "follow": "road",
+          "feature": "unnamed road",
+          "side_or_bank": "northerly boundary",
+          "until": "the point of intersection with the easterly boundary of the B.C. Hydro transmission line right of way",
+          "distance": null,
+          "quote": "thence in a general westerly direction along the northerly boundary of the unnamed road to the point of intersection with the easterly boundary of the B.C. Hydro transmission line right of way"
+        },
+        {
+          "start": null,
+          "direction": "in a northerly direction",
+          "follow": "other",
+          "feature": "B.C. Hydro transmission line right of way",
+          "side_or_bank": "easterly boundary",
+          "until": "the point of intersection with the northerly boundary of Lot 2150, Lillooet Land District",
+          "distance": null,
+          "quote": "thence in a northerly direction along the easterly boundary of the B.C. Hydro transmission line right of way to the point of intersection with the northerly boundary of Lot 2150, Lillooet Land District"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "lot_line",
+          "feature": "Lot 2150",
+          "side_or_bank": "northerly boundary",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence easterly along the northerly boundary of Lot 2150 to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "geometry.steps[0]",
+        "quote": "Commencing at the point of intersection of the southerly boundary of the B.C. Rail Right of way with the easterly boundary of Lot 2150, Lillooet Land District"
+      },
+      {
+        "field": "geometry.steps[1]",
+        "quote": "thence in a general easterly and southeasterly direction along the southerly boundary of the B.C. Rail Right of way to the point of intersection with the boundary of the Cariboo Highway in the southwestern corner of Lot 2137, Lillooet Land District"
+      },
+      {
+        "field": "geometry.steps[2]",
+        "quote": "thence in a general southwesterly direction along the midline of the Cariboo Highway to the point of intersection with the northerly boundary of an unnamed road"
+      },
+      {
+        "field": "geometry.steps[3]",
+        "quote": "thence in a general westerly direction along the northerly boundary of the unnamed road to the point of intersection with the easterly boundary of the B.C. Hydro transmission line right of way"
+      },
+      {
+        "field": "geometry.steps[4]",
+        "quote": "thence in a northerly direction along the easterly boundary of the B.C. Hydro transmission line right of way to the point of intersection with the northerly boundary of Lot 2150, Lillooet Land District"
+      },
+      {
+        "field": "geometry.steps[5]",
+        "quote": "thence easterly along the northerly boundary of Lot 2150 to the point of commencement"
+      }
+    ],
+    "uncertain": [
+      "within"
+    ]
+  }
+}

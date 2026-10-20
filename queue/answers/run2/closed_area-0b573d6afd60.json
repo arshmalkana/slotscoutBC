@@ -1,0 +1,132 @@
+{
+  "task_id": "closed_area-0b573d6afd60",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:46:27Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [
+      "excluding any of the area of the Canadian Pacific Railway right of way as shown on Plan 633B"
+    ],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Kootenay Land District"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "Moberly Station on the Canadian Pacific Railway",
+          "direction": null,
+          "follow": null,
+          "feature": "Moberly Station",
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at Moberly Station on the Canadian Pacific Railway"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the centre line of Highway 1",
+          "distance": null,
+          "quote": "thence easterly to the centre line of Highway 1"
+        },
+        {
+          "start": null,
+          "direction": "northwesterly",
+          "follow": "road",
+          "feature": "Highway 1",
+          "side_or_bank": "centre line",
+          "until": "the southerly boundary of Sublot 13 of Section 21, Township 28, Range 22, W5M, Kootenay Land District",
+          "distance": null,
+          "quote": "thence northwesterly along the centre line of Highway 1 to the southerly boundary of Sublot 13 of Section 21, Township 28, Range 22, W5M, Kootenay Land District"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "lot_line",
+          "feature": "Sublot 13 of Section 21, Township 28, Range 22, W5M, Kootenay Land District",
+          "side_or_bank": "southerly boundary",
+          "until": "its intersection with the boundary of Burges and James Gadsden Park",
+          "distance": null,
+          "quote": "thence westerly along the boundary to its intersection with the boundary of Burges and James Gadsden Park"
+        },
+        {
+          "start": null,
+          "direction": "easterly and northerly",
+          "follow": "other",
+          "feature": "Burges and James Gadsden Park",
+          "side_or_bank": null,
+          "until": "the intersection with the south bank of the Blaeberry River",
+          "distance": null,
+          "quote": "thence easterly and northerly along the park boundary to the intersection with the south bank of the Blaeberry River"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "river",
+          "feature": "Blaeberry River",
+          "side_or_bank": "south bank",
+          "until": "the east bank of the Columbia River",
+          "distance": null,
+          "quote": "thence westerly along the south bank of the Blaeberry River to the east bank of the Columbia River"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "river",
+          "feature": "Columbia River",
+          "side_or_bank": "east bank",
+          "until": "a point due West of Moberly Station",
+          "distance": null,
+          "quote": "thence southerly along the east bank of the Columbia River to a point due West of Moberly Station"
+        },
+        {
+          "start": null,
+          "direction": "due East",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence due East to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting, Hunting or Trapping Areas"
+      },
+      {
+        "field": "exemptions[0]",
+        "quote": "excluding any of the area of the Canadian Pacific Railway right of way as shown on Plan 633B"
+      },
+      {
+        "field": "within",
+        "quote": "Kootenay Land District"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within the following boundaries: Commencing at Moberly Station"
+      }
+    ],
+    "uncertain": [
+      "geometry.feature"
+    ]
+  }
+}

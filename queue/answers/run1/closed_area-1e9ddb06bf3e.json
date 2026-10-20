@@ -1,0 +1,52 @@
+{
+  "task_id": "closed_area-1e9ddb06bf3e",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:47:30Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [
+      "organized territory"
+    ],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Kamloops Division of Yale District"
+    },
+    "geometry": {
+      "method": "other",
+      "road": null,
+      "feature": {
+        "type": "lake",
+        "name": "Mara and Shuswap Lakes"
+      },
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting or Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "Kamloops Division of Yale District"
+      },
+      {
+        "field": "exemptions[0]",
+        "quote": "except organized territory"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "All waters of Mara and Shuswap Lakes"
+      }
+    ],
+    "uncertain": []
+  }
+}

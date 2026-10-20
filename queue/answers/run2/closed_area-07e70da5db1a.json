@@ -1,0 +1,215 @@
+{
+  "task_id": "closed_area-07e70da5db1a",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:47:30Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "SDYD"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "Whipsaw Bridge on Highway 3",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at Whipsaw Bridge on Highway 3"
+        },
+        {
+          "start": null,
+          "direction": "downstream",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the junction of Whipsaw Creek and the Similkameen River",
+          "distance": "approximately 1.6 km (1 mile)",
+          "quote": "thence downstream approximately 1.6 km (1 mile) to the junction of Whipsaw Creek and the Similkameen River"
+        },
+        {
+          "start": null,
+          "direction": "upstream",
+          "follow": "river",
+          "feature": "Similkameen River",
+          "side_or_bank": "west bank",
+          "until": "the chain post in the southwest corner of Lot 2164(S), SDYD",
+          "distance": "approximately 0.43 km (0.33 mile)",
+          "quote": "thence upstream on the west bank of the Similkameen River for approximately 0.43 km (0.33 mile) to the chain post in the southwest corner of Lot 2164(S), SDYD"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the southeast corner of Lot 2164(S)",
+          "distance": "455 m (1 501.5 feet)",
+          "quote": "thence easterly 455 m (1 501.5 feet) to the southeast corner of Lot 2164(S)"
+        },
+        {
+          "start": null,
+          "direction": "S. 78° E",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point approximately 2.8 kilometres (1.75 mile) to the northeast corner of Lot 52(S)",
+          "distance": "approximately 2.8 kilometres (1.75 mile)",
+          "quote": "thence S. 78° E to a point approximately 2.8 kilometres (1.75 mile) to the northeast corner of Lot 52(S)"
+        },
+        {
+          "start": null,
+          "direction": "due East",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": "545 metres (1 798.5 feet)",
+          "quote": "thence due East 545 metres (1 798.5 feet)"
+        },
+        {
+          "start": null,
+          "direction": "northeasterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the Ferguson Farm house fenceline",
+          "distance": "approximately 790 metres (2 607 feet)",
+          "quote": "thence northeasterly approximately 790 metres (2 607 feet) to the Ferguson Farm house fenceline"
+        },
+        {
+          "start": null,
+          "direction": "due East",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "Copper Mountain Road",
+          "distance": "approximately 455 metres (1 501.5 feet)",
+          "quote": "thence due East approximately 455 metres (1 501.5 feet) to Copper Mountain Road"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "road",
+          "feature": "Copper Mountain Road",
+          "side_or_bank": null,
+          "until": "Cumont Camp",
+          "distance": "approximately 4.24 kilometres (2.5 miles)",
+          "quote": "thence southerly along said road for approximately 4.24 kilometres (2.5 miles) to Cumont Camp"
+        },
+        {
+          "start": null,
+          "direction": "due South",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point approximately 4 kilometres (2.5 miles) due East of the southern intersection of Highway 3 and the highway relocation",
+          "distance": "approximately 2.2 kilometres (7 216 feet)",
+          "quote": "thence due South approximately 2.2 kilometres (7 216 feet) to a point approximately 4 kilometres (2.5 miles) due East of the southern intersection of Highway 3 and the highway relocation"
+        },
+        {
+          "start": null,
+          "direction": "due West",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "said relocation",
+          "distance": null,
+          "quote": "thence due West to said relocation"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "road",
+          "feature": "Highway 3 relocation",
+          "side_or_bank": null,
+          "until": "point of commencement",
+          "distance": "approximately 8 kilometres (5 miles)",
+          "quote": "thence northerly along Highway 3 relocation for approximately 8 kilometres (5 miles) to point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting or Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "the Smelter Lakes, SDYD"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "Commencing at Whipsaw Bridge on Highway 3"
+      },
+      {
+        "field": "geometry.steps[0]",
+        "quote": "Commencing at Whipsaw Bridge on Highway 3"
+      },
+      {
+        "field": "geometry.steps[1]",
+        "quote": "thence downstream approximately 1.6 km (1 mile) to the junction of Whipsaw Creek and the Similkameen River"
+      },
+      {
+        "field": "geometry.steps[2]",
+        "quote": "thence upstream on the west bank of the Similkameen River for approximately 0.43 km (0.33 mile) to the chain post in the southwest corner of Lot 2164(S), SDYD"
+      },
+      {
+        "field": "geometry.steps[3]",
+        "quote": "thence easterly 455 m (1 501.5 feet) to the southeast corner of Lot 2164(S)"
+      },
+      {
+        "field": "geometry.steps[4]",
+        "quote": "thence S. 78° E to a point approximately 2.8 kilometres (1.75 mile) to the northeast corner of Lot 52(S)"
+      },
+      {
+        "field": "geometry.steps[5]",
+        "quote": "thence due East 545 metres (1 798.5 feet)"
+      },
+      {
+        "field": "geometry.steps[6]",
+        "quote": "thence northeasterly approximately 790 metres (2 607 feet) to the Ferguson Farm house fenceline"
+      },
+      {
+        "field": "geometry.steps[7]",
+        "quote": "thence due East approximately 455 metres (1 501.5 feet) to Copper Mountain Road"
+      },
+      {
+        "field": "geometry.steps[8]",
+        "quote": "thence southerly along said road for approximately 4.24 kilometres (2.5 miles) to Cumont Camp"
+      },
+      {
+        "field": "geometry.steps[9]",
+        "quote": "thence due South approximately 2.2 kilometres (7 216 feet) to a point approximately 4 kilometres (2.5 miles) due East of the southern intersection of Highway 3 and the highway relocation"
+      },
+      {
+        "field": "geometry.steps[10]",
+        "quote": "thence due West to said relocation"
+      },
+      {
+        "field": "geometry.steps[11]",
+        "quote": "thence northerly along Highway 3 relocation for approximately 8 kilometres (5 miles) to point of commencement"
+      }
+    ],
+    "uncertain": [
+      "geometry.steps[1].follow",
+      "geometry.steps[1].feature"
+    ]
+  }
+}

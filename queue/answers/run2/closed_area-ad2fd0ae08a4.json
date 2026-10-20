@@ -1,0 +1,110 @@
+{
+  "task_id": "closed_area-ad2fd0ae08a4",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:46:22Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 1-06"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the northwest corner of Section 2, Lot 1 (Base Flat) on the mean high water mark of Lot 1",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the northwest corner of Section 2, Lot 1 (Base Flat) on the mean high water mark of Lot 1"
+        },
+        {
+          "start": null,
+          "direction": "due North",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point 450 metres offshore",
+          "distance": "450 metres",
+          "quote": "thence due North to a point 450 metres offshore"
+        },
+        {
+          "start": null,
+          "direction": "in an easterly and southerly direction",
+          "follow": "other",
+          "feature": "Lot 1",
+          "side_or_bank": "offshore",
+          "until": "a point 450 metres offshore from the southeast corner of Lot 1 which is also the northeast corner of Lot 44",
+          "distance": "450 metres",
+          "quote": "thence in an easterly and southerly direction maintaining a distance of 450 metres from the mean high water mark of Lot 1 to a point 450 metres offshore from the southeast corner of Lot 1 which is also the northeast corner of Lot 44"
+        },
+        {
+          "start": null,
+          "direction": "in a southerly and westerly direction",
+          "follow": "other",
+          "feature": "Lot 44",
+          "side_or_bank": "offshore",
+          "until": "a point on the east shore of Vancouver Island",
+          "distance": "450 metres",
+          "quote": "thence in a southerly and westerly direction maintaining a distance of 450 metres offshore from the mean high water mark of Lot 44 to a point on the east shore of Vancouver Island"
+        },
+        {
+          "start": null,
+          "direction": "generally northerly",
+          "follow": "shoreline",
+          "feature": "Vancouver Island",
+          "side_or_bank": "east shore",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence generally northerly along the mean high water mark on the east shore of Vancouver Island to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "M.U. 1-06"
+      },
+      {
+        "field": "geometry.steps[0]",
+        "quote": "Commencing at the northwest corner of Section 2, Lot 1 (Base Flat) on the mean high water mark of Lot 1"
+      },
+      {
+        "field": "geometry.steps[1]",
+        "quote": "thence due North to a point 450 metres offshore"
+      },
+      {
+        "field": "geometry.steps[2]",
+        "quote": "thence in an easterly and southerly direction maintaining a distance of 450 metres from the mean high water mark of Lot 1 to a point 450 metres offshore from the southeast corner of Lot 1 which is also the northeast corner of Lot 44"
+      },
+      {
+        "field": "geometry.steps[3]",
+        "quote": "thence in a southerly and westerly direction maintaining a distance of 450 metres offshore from the mean high water mark of Lot 44 to a point on the east shore of Vancouver Island"
+      },
+      {
+        "field": "geometry.steps[4]",
+        "quote": "thence generally northerly along the mean high water mark on the east shore of Vancouver Island to the point of commencement"
+      }
+    ],
+    "uncertain": []
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "task_id": "closed_area-6e88d0855982",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:47:30Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "7-21"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the confluence of Murray River and Quality Creek",
+          "direction": "northwesterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the summit of Mt. Bergeron",
+          "distance": null,
+          "quote": "Commencing at the confluence of Murray River and Quality Creek and proceeding northwesterly in a straight line to the summit of Mt. Bergeron"
+        },
+        {
+          "start": null,
+          "direction": "turning 90° to the southwest and proceeding southwesterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point on the middle thread of Bullmoose Creek",
+          "distance": null,
+          "quote": "thence turning 90° to the southwest and proceeding southwesterly in a straight line to a point on the middle thread of Bullmoose Creek"
+        },
+        {
+          "start": null,
+          "direction": "downstream",
+          "follow": "creek",
+          "feature": "Bullmoose Creek",
+          "side_or_bank": "middle thread",
+          "until": "its confluence with Wolverine River",
+          "distance": null,
+          "quote": "thence proceeding downstream along the middle thread of Bullmoose Creek to its confluence with Wolverine River"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the southerly bank of Wolverine River",
+          "distance": null,
+          "quote": "thence southerly to the southerly bank of Wolverine River"
+        },
+        {
+          "start": null,
+          "direction": "downstream",
+          "follow": "river",
+          "feature": "Wolverine River",
+          "side_or_bank": "southerly bank",
+          "until": "the westerly bank of Murray River",
+          "distance": null,
+          "quote": "thence downstream along the southerly bank of Wolverine River to the westerly bank of Murray River"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "river",
+          "feature": "Murray River",
+          "side_or_bank": "westerly bank",
+          "until": "a point opposite the southerly bank of Flatbed Creek",
+          "distance": null,
+          "quote": "thence southerly along the westerly bank of Murray River to a point opposite the southerly bank of Flatbed Creek"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the southerly bank of Flatbed Creek",
+          "distance": null,
+          "quote": "thence easterly to the southerly bank of Flatbed Creek"
+        },
+        {
+          "start": null,
+          "direction": "upstream",
+          "follow": "creek",
+          "feature": "Flatbed Creek",
+          "side_or_bank": "southerly bank",
+          "until": "Highway 52",
+          "distance": null,
+          "quote": "thence upstream along the southerly bank of Flatbed Creek to Highway 52"
+        },
+        {
+          "start": null,
+          "direction": "due North",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the Tumbler Ridge height of land",
+          "distance": null,
+          "quote": "thence due North to the Tumbler Ridge height of land"
+        },
+        {
+          "start": null,
+          "direction": "northwesterly",
+          "follow": "other",
+          "feature": null,
+          "side_or_bank": "the top of the ridge",
+          "until": "a point due East of the southeast corner of Lot 304 Peace River District",
+          "distance": null,
+          "quote": "thence northwesterly along the top of the ridge to a point due East of the southeast corner of Lot 304 Peace River District"
+        },
+        {
+          "start": null,
+          "direction": "due West",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the easterly bank of Murray River",
+          "distance": null,
+          "quote": "thence due West to the easterly bank of Murray River"
+        },
+        {
+          "start": null,
+          "direction": "northeasterly",
+          "follow": "river",
+          "feature": "Murray River",
+          "side_or_bank": "easterly bank",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence northeasterly along the bank to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting or Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "M.U. 7-21"
+      }
+    ],
+    "uncertain": [
+      "geometry.steps[3].follow",
+      "geometry.steps[6].follow"
+    ]
+  }
+}

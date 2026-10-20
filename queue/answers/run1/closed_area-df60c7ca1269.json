@@ -1,0 +1,116 @@
+{
+ "task_id": "closed_area-df60c7ca1269",
+ "run": 1,
+ "mode": "agent",
+ "model": "Claude Code agent mode",
+ "prompt_version": "closed_area.v1",
+ "schema_id": "closed_area.v1",
+ "produced_at": "2026-10-20T21:47:52Z",
+ "answer": {
+  "effect": "no_shooting",
+  "exemptions": [],
+  "period": null,
+  "within": {
+   "type": "wildlife_management_unit",
+   "name": "M.U. 8-08"
+  },
+  "geometry": {
+   "method": "metes_and_bounds",
+   "road": null,
+   "feature": null,
+   "buffer_m": null,
+   "side": null,
+   "from": null,
+   "to": null,
+   "steps": [
+    {
+     "start": "a point 917 m (3 000 feet) north of MacDonald Lake at claim post ally 15 and 16",
+     "direction": null,
+     "follow": null,
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "917 m (3 000 feet)",
+     "quote": "Commencing at a point 917 m (3 000 feet) north of MacDonald Lake at claim post ally 15 and 16"
+    },
+    {
+     "start": null,
+     "direction": "southerly",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": "the BC Hydro transmission line, near claim post McEwer No. 32 and 33",
+     "distance": "2.8 km (1.75 miles)",
+     "quote": "thence southerly between MacDonald Lake and Brenda Lake 2.8 km (1.75 miles) to the BC Hydro transmission line, near claim post McEwer No. 32 and 33"
+    },
+    {
+     "start": null,
+     "direction": "southwesterly",
+     "follow": "other",
+     "feature": "BC Hydro Transmission line",
+     "side_or_bank": null,
+     "until": null,
+     "distance": "approximately 7.7 km (4.78 miles)",
+     "quote": "thence southwesterly along the BC Hydro Transmission line approximately 7.7 km (4.78 miles)"
+    },
+    {
+     "start": null,
+     "direction": "N. 25° E",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": "claim post Bill No. 27 and 28 located 800 m (0.5 mile) east of the tailings dam",
+     "distance": "2.4 km (1.5 miles)",
+     "quote": "thence N. 25° E 2.4 km (1.5 miles) over the ridge on the south side of MacDonald Creek to claim post Bill No. 27 and 28 located 800 m (0.5 mile) east of the tailings dam"
+    },
+    {
+     "start": null,
+     "direction": "northwest",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": "the east end (outlet) of Long Lake",
+     "distance": "approximately 7.2 km (4.5 miles)",
+     "quote": "thence northwest approximately 7.2 km (4.5 miles) to the east end (outlet) of Long Lake"
+    },
+    {
+     "start": null,
+     "direction": "west",
+     "follow": null,
+     "feature": null,
+     "side_or_bank": null,
+     "until": "the ridge north of MacDonald Lake to claim post ally No. 15 and 16",
+     "distance": null,
+     "quote": "thence west to the ridge north of MacDonald Lake to claim post ally No. 15 and 16"
+    },
+    {
+     "start": null,
+     "direction": "southerly",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": "the point of commencement",
+     "distance": null,
+     "quote": "thence southerly to the point of commencement"
+    }
+   ]
+  },
+  "quotes": [
+   {
+    "field": "effect",
+    "quote": "No Shooting Areas"
+   },
+   {
+    "field": "within",
+    "quote": "M.U. 8-08"
+   },
+   {
+    "field": "geometry.method",
+    "quote": "contained within the following described boundaries"
+   }
+  ],
+  "uncertain": [
+   "geometry.steps[5].follow"
+  ]
+ }
+}

@@ -1,0 +1,52 @@
+{
+  "task_id": "closed_area-aae222e7e928",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:46:22Z",
+  "answer": {
+    "effect": "no_shooting_seasonal",
+    "exemptions": [],
+    "period": {
+      "start": "February 1",
+      "end": "September 30"
+    },
+    "within": null,
+    "geometry": {
+      "method": "admin_boundary",
+      "road": null,
+      "feature": {
+        "type": "lake",
+        "name": "Cultus Lake"
+      },
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "Seasonal No Shooting Areas"
+      },
+      {
+        "field": "period",
+        "quote": "February 1 to September 30"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "Those waters of Cultus Lake to the maximum high water mark"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "Cultus Lake"
+      }
+    ],
+    "uncertain": [
+      "within"
+    ]
+  }
+}

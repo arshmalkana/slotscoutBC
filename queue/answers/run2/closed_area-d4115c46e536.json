@@ -1,0 +1,105 @@
+{
+  "task_id": "closed_area-d4115c46e536",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:46:22Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": null,
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the point of intersection of the mean low water mark of Howe Sound and the midline of Magnesia Creek",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the point of intersection of the mean low water mark of Howe Sound and the midline of Magnesia Creek"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "creek",
+          "feature": "Magnesia Creek",
+          "side_or_bank": "midline",
+          "until": "the apex of Mt. Harvey",
+          "distance": null,
+          "quote": "thence easterly along the midline of Magnesia Creek and along the easterly prolongation thereof to the apex of Mt. Harvey"
+        },
+        {
+          "start": null,
+          "direction": "in a general easterly, southerly and westerly direction",
+          "follow": "other",
+          "feature": "watershed of Harvey Creek",
+          "side_or_bank": "northerly, easterly and southerly boundaries",
+          "until": "the point of intersection with the southerly boundary of the watershed of Rundle Creek",
+          "distance": null,
+          "quote": "thence in a general easterly, southerly and westerly direction along the northerly, easterly and southerly boundaries of the watershed of Harvey Creek to the point of intersection with the southerly boundary of the watershed of Rundle Creek"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "other",
+          "feature": "watershed of Rundle Creek",
+          "side_or_bank": "southerly boundary",
+          "until": "the point of intersection with the mean low water mark of Howe Sound",
+          "distance": null,
+          "quote": "thence westerly along the southerly boundary of the watershed of Rundle Creek and along the prolongation thereof to the point of intersection with the mean low water mark of Howe Sound"
+        },
+        {
+          "start": null,
+          "direction": "in a general northerly direction",
+          "follow": "shoreline",
+          "feature": "Howe Sound",
+          "side_or_bank": "mean low water mark",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence in a general northerly direction along the mean low water mark of Howe Sound to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "geometry.steps[0]",
+        "quote": "Commencing at the point of intersection of the mean low water mark of Howe Sound and the midline of Magnesia Creek"
+      },
+      {
+        "field": "geometry.steps[1]",
+        "quote": "thence easterly along the midline of Magnesia Creek and along the easterly prolongation thereof to the apex of Mt. Harvey"
+      },
+      {
+        "field": "geometry.steps[2]",
+        "quote": "thence in a general easterly, southerly and westerly direction along the northerly, easterly and southerly boundaries of the watershed of Harvey Creek to the point of intersection with the southerly boundary of the watershed of Rundle Creek"
+      },
+      {
+        "field": "geometry.steps[3]",
+        "quote": "thence westerly along the southerly boundary of the watershed of Rundle Creek and along the prolongation thereof to the point of intersection with the mean low water mark of Howe Sound"
+      },
+      {
+        "field": "geometry.steps[4]",
+        "quote": "thence in a general northerly direction along the mean low water mark of Howe Sound to the point of commencement"
+      }
+    ],
+    "uncertain": [
+      "within"
+    ]
+  }
+}

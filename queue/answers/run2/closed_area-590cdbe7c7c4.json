@@ -1,0 +1,60 @@
+{
+  "task_id": "closed_area-590cdbe7c7c4",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:46:27Z",
+  "answer": {
+    "effect": "no_rifle",
+    "exemptions": [
+      "excepting those portions of Valdes Island, Sidney Island or James Island located above the mean high water mark"
+    ],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "1-1"
+    },
+    "geometry": {
+      "method": "admin_boundary",
+      "road": null,
+      "feature": {
+        "type": "other",
+        "name": "M.U. 1-1"
+      },
+      "buffer_m": null,
+      "side": "inside",
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "Prohibited Discharge Areas — Rifles"
+      },
+      {
+        "field": "exemptions[0]",
+        "quote": "excepting those portions of Valdes Island, Sidney Island or James Island located above the mean high water mark"
+      },
+      {
+        "field": "within",
+        "quote": "within the boundaries of M.U. 1-1"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within the boundaries of M.U. 1-1"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "M.U. 1-1"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "within the boundaries of M.U. 1-1"
+      }
+    ],
+    "uncertain": []
+  }
+}

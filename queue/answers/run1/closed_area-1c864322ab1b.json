@@ -1,0 +1,48 @@
+{
+  "task_id": "closed_area-1c864322ab1b",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:48:00Z",
+  "answer": {
+    "effect": "shot_only",
+    "exemptions": [],
+    "period": null,
+    "within": null,
+    "geometry": {
+      "method": "road_buffer",
+      "road": null,
+      "feature": null,
+      "buffer_m": 150,
+      "side": "both",
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "Firearms Using Shot Only Areas"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within 150 m of the travelled portion of the following highways"
+      },
+      {
+        "field": "geometry.buffer_m",
+        "quote": "within 150 m of the travelled portion"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "all areas within 150 m of the travelled portion"
+      }
+    ],
+    "uncertain": [
+      "geometry.road",
+      "geometry.from",
+      "geometry.to"
+    ]
+  }
+}

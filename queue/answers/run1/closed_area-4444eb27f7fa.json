@@ -1,0 +1,61 @@
+{
+  "task_id": "closed_area-4444eb27f7fa",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:47:30Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "7-50, 7-51 and 7-54"
+    },
+    "geometry": {
+      "method": "road_buffer",
+      "road": {
+        "name": "Alaska Highway",
+        "source_hint": "unknown"
+      },
+      "feature": {
+        "type": "park",
+        "name": "Stone Mountain Provincial Park"
+      },
+      "buffer_m": 1600,
+      "side": "both",
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting or Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "M.U.s 7-50, 7-51 and 7-54"
+      },
+      {
+        "field": "geometry.road",
+        "quote": "the Alaska Highway"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "within the described boundaries of Stone Mountain Provincial Park"
+      },
+      {
+        "field": "geometry.buffer_m",
+        "quote": "within a distance of one mile (1.6 kilometres)"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "within a distance of one mile (1.6 kilometres) of the Alaska Highway"
+      }
+    ],
+    "uncertain": []
+  }
+}

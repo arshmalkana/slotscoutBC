@@ -1,0 +1,148 @@
+{
+  "item_id": "closed-area-8f4cfe26f3",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 1, section 5 (Lucy Island)",
+  "rule_id": "W1-005",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: side: run 1 null vs run 2 \"inside\"",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 1 No Shooting, Hunting or Trapping Areas (Section 2)\nLucy Island\n5 That portion of the Province, in the vicinity of Langara Island, Queen Charlotte Land District, that is within the following boundaries: All of Lucy Island above the low water mark, designated as Lot 678, Queen Charlotte Land District.",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-d22d12dfbac7",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:47:24Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Queen Charlotte Land District"
+        },
+        "geometry": {
+          "method": "admin_boundary",
+          "road": null,
+          "feature": {
+            "type": "island",
+            "name": "Lucy Island"
+          },
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting, Hunting or Trapping Areas"
+          },
+          {
+            "field": "within",
+            "quote": "Queen Charlotte Land District"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "All of Lucy Island above the low water mark"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "All of Lucy Island above the low water mark, designated as Lot 678"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-d22d12dfbac7",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:46:27Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Queen Charlotte Land District"
+        },
+        "geometry": {
+          "method": "admin_boundary",
+          "road": null,
+          "feature": {
+            "type": "island",
+            "name": "Lucy Island"
+          },
+          "buffer_m": null,
+          "side": "inside",
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting, Hunting or Trapping Areas"
+          },
+          {
+            "field": "within",
+            "quote": "Queen Charlotte Land District"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "All of Lucy Island above the low water mark, designated as Lot 678"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "All of Lucy Island"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "All of Lucy Island above the low water mark"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "Queen Charlotte Land District",
+    "geometry.feature": "All of Lucy Island above the low water mark, designated as Lot 678",
+    "effect": "No Shooting, Hunting or Trapping Areas"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "side: run 1 null vs run 2 \"inside\""
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T21:47:35.558Z",
+  "updated": "2026-10-20T21:47:35.558Z"
+}

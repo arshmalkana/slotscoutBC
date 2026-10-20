@@ -1,0 +1,211 @@
+{
+  "task_id": "closed_area-3de27ca3ef20",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:48:02Z",
+  "answer": {
+    "effect": "shot_only",
+    "exemptions": [],
+    "period": null,
+    "within": null,
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": "inside",
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the point of intersection of the centrelines of Highway 99 and the British Columbia Railway right of way, within Lot 4096, Lillooet Land District",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the point of intersection of the centrelines of Highway 99 and the British Columbia Railway right of way, within Lot 4096, Lillooet Land District"
+        },
+        {
+          "start": null,
+          "direction": "due North",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the 450 m elevation contour",
+          "distance": null,
+          "quote": "thence due North to the 450 m elevation contour"
+        },
+        {
+          "start": null,
+          "direction": "in a general northeasterly direction",
+          "follow": "contour",
+          "feature": "450 m elevation contour",
+          "side_or_bank": null,
+          "until": "the point of intersection with the midline of Pemberton Creek",
+          "distance": null,
+          "quote": "thence in a general northeasterly direction along said elevation contour to the point of intersection with the midline of Pemberton Creek"
+        },
+        {
+          "start": null,
+          "direction": "in a general northeasterly direction",
+          "follow": "creek",
+          "feature": "Pemberton Creek",
+          "side_or_bank": "midline",
+          "until": "the point of intersection with the 350 m elevation contour",
+          "distance": null,
+          "quote": "thence in a general northeasterly direction along said midline to the point of intersection with the 350 m elevation contour"
+        },
+        {
+          "start": null,
+          "direction": "in a general northwesterly direction",
+          "follow": "contour",
+          "feature": "350 m elevation contour",
+          "side_or_bank": null,
+          "until": "the point due West of the intersection of the centreline of Pemberton Valley road and the midline of Ryan River",
+          "distance": null,
+          "quote": "thence in a general northwesterly direction along said elevation contour to the point due West of the intersection of the centreline of Pemberton Valley road and the midline of Ryan River"
+        },
+        {
+          "start": null,
+          "direction": "northeasterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the natural boundary of Ryan River, on the northern bank thereof",
+          "distance": null,
+          "quote": "thence northeasterly in a straight line to the natural boundary of Ryan River, on the northern bank thereof"
+        },
+        {
+          "start": null,
+          "direction": "in a general southeasterly direction",
+          "follow": "river",
+          "feature": "Ryan River",
+          "side_or_bank": "northern bank",
+          "until": "the point of intersection with the natural boundary of Lillooet River, on the western bank thereof",
+          "distance": null,
+          "quote": "thence in a general southeasterly direction along said natural boundary to the point of intersection with the natural boundary of Lillooet River, on the western bank thereof"
+        },
+        {
+          "start": null,
+          "direction": "due East",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the natural boundary of Lillooet River, on the eastern bank thereof",
+          "distance": null,
+          "quote": "thence due East to the natural boundary of Lillooet River, on the eastern bank thereof"
+        },
+        {
+          "start": null,
+          "direction": "in a general southeasterly direction",
+          "follow": "river",
+          "feature": "Lillooet River",
+          "side_or_bank": "eastern bank",
+          "until": "the point of intersection with the northern boundary of the right of way of British Columbia Railway",
+          "distance": null,
+          "quote": "thence in a general southeasterly direction along said natural boundary to the point of intersection with the northern boundary of the right of way of British Columbia Railway"
+        },
+        {
+          "start": null,
+          "direction": "in a general easterly and northerly direction",
+          "follow": "other",
+          "feature": "British Columbia Railway",
+          "side_or_bank": "northern boundary",
+          "until": "the point of intersection with the northern boundary of Mount Currie IR 10",
+          "distance": null,
+          "quote": "thence in a general easterly and northerly direction along said right of way boundary to the point of intersection with the northern boundary of Mount Currie IR 10"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "reserve_boundary",
+          "feature": "Mount Currie IR 10",
+          "side_or_bank": "northern boundary",
+          "until": "the point of intersection with the boundary of Mount IR 6",
+          "distance": null,
+          "quote": "thence easterly along said northern boundary and along the prolongation thereof to the point of intersection with the boundary of Mount IR 6"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "reserve_boundary",
+          "feature": "Mount Currie IR 6",
+          "side_or_bank": null,
+          "until": "the point due North of the midline of Gravell Creek, at its confluence with Lillooet River",
+          "distance": null,
+          "quote": "thence easterly along the boundary of Mount Currie IR 6 to the point due North of the midline of Gravell Creek, at its confluence with Lillooet River"
+        },
+        {
+          "start": null,
+          "direction": "due South",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "midline of Gravell Creek",
+          "distance": null,
+          "quote": "thence due South to said midline"
+        },
+        {
+          "start": null,
+          "direction": "in a general southerly direction",
+          "follow": "creek",
+          "feature": "Gravell Creek",
+          "side_or_bank": "midline",
+          "until": "the 350 m elevation contour",
+          "distance": null,
+          "quote": "thence in a general southerly direction along said midline to the 350 m elevation contour"
+        },
+        {
+          "start": null,
+          "direction": "in a general westerly direction",
+          "follow": "contour",
+          "feature": "350 m elevation contour",
+          "side_or_bank": null,
+          "until": "the point of intersection with the boundary of Nairn Falls Provincial Park",
+          "distance": null,
+          "quote": "thence in a general westerly direction along said elevation contour to the point of intersection with the boundary of Nairn Falls Provincial Park"
+        },
+        {
+          "start": null,
+          "direction": "southwesterly",
+          "follow": "other",
+          "feature": "Nairn Falls Provincial Park",
+          "side_or_bank": null,
+          "until": "the southwest corner of said Park",
+          "distance": null,
+          "quote": "thence southwesterly along said boundary to the southwest corner of said Park"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence northerly in a straight line to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "Firearms Using Shot Only Areas"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "Commencing at the point of intersection of the centrelines of Highway 99"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "within the following described boundaries"
+      }
+    ],
+    "uncertain": []
+  }
+}

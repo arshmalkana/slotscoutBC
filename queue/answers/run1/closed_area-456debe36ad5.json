@@ -1,0 +1,233 @@
+{
+  "task_id": "closed_area-456debe36ad5",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:46:22Z",
+  "answer": {
+    "effect": "no_shooting_seasonal",
+    "exemptions": [],
+    "period": {
+      "start": "March 1",
+      "end": "September 30"
+    },
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U.8-01"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "point of intersection of the natural boundary of Osoyoos Lake on the northerly shore thereof and the midline of the main oxbow east of Okanagan River channel",
+          "direction": null,
+          "follow": null,
+          "feature": "Osoyoos Lake",
+          "side_or_bank": "northerly shore",
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the point of intersection at approximately 119° 30' 40\" west longitude and 49° 04' 30\" north latitude of the natural boundary of Osoyoos Lake on the northerly shore thereof and the midline of the main oxbow east of Okanagan River channel"
+        },
+        {
+          "start": null,
+          "direction": "general westerly",
+          "follow": "shoreline",
+          "feature": "Osoyoos Lake",
+          "side_or_bank": "northerly shore",
+          "until": "point of intersection with the midline of the main oxbow west of the Okanagan River channel",
+          "distance": null,
+          "quote": "thence in a general westerly direction along the natural boundary of Osoyoos Lake on the northerly shore thereof to the point of intersection with the midline of the main oxbow west of the Okanagan River channel"
+        },
+        {
+          "start": null,
+          "direction": "general northerly, westerly and again northerly",
+          "follow": "other",
+          "feature": "main oxbow west of the Okanagan River channel",
+          "side_or_bank": "midline",
+          "until": "point of intersection with the midline of Okanagan River channel",
+          "distance": null,
+          "quote": "thence in a general northerly, westerly and again northerly direction along the midline of the said oxbow to the point of intersection with the midline of Okanagan River channel"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "river",
+          "feature": "Okanagan River channel",
+          "side_or_bank": "midline",
+          "until": "a point approximately 350 m past the first Sluice Gate",
+          "distance": "approximately 350 m past the first Sluice Gate",
+          "quote": "thence northerly along the midline of Okanagan River channel to a point approximately 350 m past the first Sluice Gate"
+        },
+        {
+          "start": null,
+          "direction": "N 50° E",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "point of intersection with the midline of the main oxbow east of the Okanagan River channel",
+          "distance": null,
+          "quote": "thence N 50° E to the point of intersection with the midline of the main oxbow east of the Okanagan River channel"
+        },
+        {
+          "start": null,
+          "direction": "general northerly, easterly, again northerly and westerly",
+          "follow": "other",
+          "feature": "main oxbow east of the Okanagan River channel",
+          "side_or_bank": "midline",
+          "until": "point of intersection with the midline of Okanagan River channel",
+          "distance": null,
+          "quote": "thence in a general northerly, easterly, again northerly and westerly direction along the midline of the said oxbow to the point of intersection with the midline of Okanagan River channel"
+        },
+        {
+          "start": null,
+          "direction": "more or less west",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "point of intersection with the midline of the main oxbow west of Okanagan River channel",
+          "distance": null,
+          "quote": "thence more or less west in a straight line to the point of intersection with the midline of the main oxbow west of Okanagan River channel"
+        },
+        {
+          "start": null,
+          "direction": "general westerly and northerly",
+          "follow": "other",
+          "feature": "main oxbow west of Okanagan River channel",
+          "side_or_bank": "midline",
+          "until": "point of intersection with the midline of Okanagan River channel approximately 50 m past the second Sluice Gate",
+          "distance": "approximately 50 m past the second Sluice Gate",
+          "quote": "thence in a general westerly and northerly direction along the midline of the said oxbow to the point of intersection with the midline of Okanagan River channel approximately 50 m past the second Sluice Gate"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "river",
+          "feature": "Okanagan River channel",
+          "side_or_bank": "midline",
+          "until": null,
+          "distance": "approximately 500 m",
+          "quote": "thence northerly along the midline of Okanagan River channel for approximately 500 m"
+        },
+        {
+          "start": null,
+          "direction": "N 65° E",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "point of intersection with the 1 000 m elevational contour",
+          "distance": null,
+          "quote": "thence N 65° E to the point of intersection with the 1 000 m elevational contour"
+        },
+        {
+          "start": null,
+          "direction": "general southerly",
+          "follow": "contour",
+          "feature": "1 000 m elevation contour",
+          "side_or_bank": null,
+          "until": null,
+          "distance": "approximately 600 m",
+          "quote": "thence in a general southerly direction along the 1 000 m elevation contour for approximately 600 m"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point on the midline of the power transmission line right of way at 1 000 m elevation",
+          "distance": null,
+          "quote": "thence southerly in a straight line to a point on the midline of the power transmission line right of way at 1 000 m elevation"
+        },
+        {
+          "start": null,
+          "direction": "more or less east",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "thence more or less east in a straight line to a point at approximately 119° 32' 15\" west longitude and 49° 06' 00\" north latitude"
+        },
+        {
+          "start": null,
+          "direction": "S 50° E",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point on the 1 000 m elevational contour",
+          "distance": "approximately 650 m",
+          "quote": "thence S 50° E approximately 650 m to a point on the 1 000 m elevational contour"
+        },
+        {
+          "start": null,
+          "direction": "more or less east",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "adjacent southwest corner of Indian Reserve 1",
+          "distance": null,
+          "quote": "thence more or less east in a straight line to the adjacent southwest corner of Indian Reserve 1 at approximately 119° 31' 20\" west longitude and 49° 05' 48\" north latitude"
+        },
+        {
+          "start": null,
+          "direction": "S 45° E",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": "approximately 600 m",
+          "quote": "thence S 45° E approximately 600 m"
+        },
+        {
+          "start": null,
+          "direction": "due South",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "point of intersection with the midline of the main oxbow east of Okanagan River channel",
+          "distance": null,
+          "quote": "thence due South to the point of intersection with the midline of the main oxbow east of Okanagan River channel"
+        },
+        {
+          "start": null,
+          "direction": "general easterly and southerly",
+          "follow": "other",
+          "feature": "main oxbow east of Okanagan River channel",
+          "side_or_bank": "midline",
+          "until": "point of commencement",
+          "distance": null,
+          "quote": "thence in a general easterly and southerly direction along the midline of the said oxbow to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "Seasonal No Shooting Areas"
+      },
+      {
+        "field": "period",
+        "quote": "March 1 to September 30"
+      },
+      {
+        "field": "within",
+        "quote": "M.U.8-01"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundaries"
+      }
+    ],
+    "uncertain": [
+      "geometry.steps[12].until"
+    ]
+  }
+}

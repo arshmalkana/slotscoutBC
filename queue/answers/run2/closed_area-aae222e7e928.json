@@ -1,0 +1,61 @@
+{
+  "task_id": "closed_area-aae222e7e928",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:48:51Z",
+  "answer": {
+    "effect": "no_shooting_seasonal",
+    "exemptions": [],
+    "period": {
+      "start": "February 1",
+      "end": "September 30"
+    },
+    "within": {
+      "type": "other",
+      "name": "New Westminster District"
+    },
+    "geometry": {
+      "method": "admin_boundary",
+      "road": null,
+      "feature": {
+        "type": "lake",
+        "name": "Cultus Lake"
+      },
+      "buffer_m": null,
+      "side": "inside",
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "Seasonal No Shooting Areas"
+      },
+      {
+        "field": "period",
+        "quote": "February 1 to September 30"
+      },
+      {
+        "field": "within",
+        "quote": "New Westminster District"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "Those waters of Cultus Lake to the maximum high water mark"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "Those waters of Cultus Lake"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "Those waters of Cultus Lake to the maximum high water mark"
+      }
+    ],
+    "uncertain": []
+  }
+}

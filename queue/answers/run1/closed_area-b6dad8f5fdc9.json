@@ -1,0 +1,48 @@
+{
+  "task_id": "closed_area-b6dad8f5fdc9",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:48:00Z",
+  "answer": {
+    "effect": "shot_only",
+    "exemptions": [],
+    "period": null,
+    "within": null,
+    "geometry": {
+      "method": "road_buffer",
+      "road": null,
+      "feature": null,
+      "buffer_m": 400,
+      "side": "both",
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "Firearms Using Shot Only Areas"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within 0.4 km (0.25 mile) of either side of the road allowance"
+      },
+      {
+        "field": "geometry.buffer_m",
+        "quote": "0.4 km (0.25 mile)"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "either side of the road allowance"
+      }
+    ],
+    "uncertain": [
+      "geometry.road",
+      "geometry.from",
+      "geometry.to"
+    ]
+  }
+}

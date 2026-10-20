@@ -1,0 +1,89 @@
+{
+  "task_id": "closed_area-be412adb6737",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:46:27Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": null,
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the intersection of the Sage Creek Forest access road and the northern boundary of Lot 7335, Kootenay Land District",
+          "direction": "in an easterly direction",
+          "follow": "road",
+          "feature": "Sage Creek Forest access road",
+          "side_or_bank": null,
+          "until": "the western boundary of Lot 7277",
+          "distance": null,
+          "quote": "Commencing at the intersection of the Sage Creek Forest access road and the northern boundary of Lot 7335, Kootenay Land District, and proceeding in an easterly direction along the access road to the western boundary of Lot 7277"
+        },
+        {
+          "start": null,
+          "direction": "northeast",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": "50 m",
+          "quote": "thence proceeding northeast in a straight line for 50 m"
+        },
+        {
+          "start": null,
+          "direction": "due South",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "Sage Creek",
+          "distance": null,
+          "quote": "thence proceeding due South to Sage Creek"
+        },
+        {
+          "start": null,
+          "direction": "southwesterly",
+          "follow": "creek",
+          "feature": "Sage Creek",
+          "side_or_bank": null,
+          "until": "the access road which joins with the Sage Creek Forest road",
+          "distance": null,
+          "quote": "thence southwesterly along Sage Creek to the access road which joins with the Sage Creek Forest road"
+        },
+        {
+          "start": null,
+          "direction": "easterly then northerly",
+          "follow": "road",
+          "feature": "the access road which joins with the Sage Creek Forest road",
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence proceeding easterly then northerly along that access road to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting, Hunting or Trapping Areas"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within the following boundaries: Commencing at the intersection"
+      }
+    ],
+    "uncertain": [
+      "within"
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "task_id": "closed_area-fdf49db5ccbb",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:48:02Z",
+  "answer": {
+    "effect": "no_hunting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "New Westminster District"
+    },
+    "geometry": {
+      "method": "other",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Hunting or Trapping Areas"
+      },
+      {
+        "field": "within",
+        "quote": "New Westminster District"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "That portion of the Province of British Columbia described as follows: (a)Parcel identifier 000-914-991"
+      }
+    ],
+    "uncertain": [
+      "geometry.feature"
+    ]
+  }
+}

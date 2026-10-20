@@ -1,0 +1,153 @@
+{
+  "item_id": "closed-area-7d1ef02887",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 11, section 3 (Keats Island)",
+  "rule_id": "W11-003",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "named area \"M.U. 2-16\": failed (fetch failed)",
+    "the geometry builder does not draw \"admin_boundary\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 11 Prohibited Discharge Areas — Rifles (Section 10 (1) (c))\nKeats Island\n3 That portion of the Province of British Columbia in M.U. 2-16 that is all of Keats Island together with the adjacent foreshore between the natural boundary of Keats Island and the mean low water mark. [en. B.C. Reg. 204/91, s. 14.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-e17e750d7522",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T15:19:05Z",
+      "answer": {
+        "effect": "no_rifle",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 2-16"
+        },
+        "geometry": {
+          "method": "admin_boundary",
+          "road": null,
+          "feature": {
+            "type": "island",
+            "name": "Keats Island"
+          },
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "Prohibited Discharge Areas — Rifles"
+          },
+          {
+            "field": "within",
+            "quote": "in M.U. 2-16"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "all of Keats Island together with the adjacent foreshore between the natural boundary of Keats Island and the mean low water mark"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "all of Keats Island"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-e17e750d7522",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T15:19:15Z",
+      "answer": {
+        "effect": "no_rifle",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 2-16"
+        },
+        "geometry": {
+          "method": "admin_boundary",
+          "road": null,
+          "feature": {
+            "type": "island",
+            "name": "Keats Island"
+          },
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "Prohibited Discharge Areas — Rifles"
+          },
+          {
+            "field": "within",
+            "quote": "in M.U. 2-16"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "all of Keats Island"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "all of Keats Island"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "in M.U. 2-16",
+    "geometry.feature": "all of Keats Island",
+    "effect": "Prohibited Discharge Areas — Rifles"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [
+    {
+      "query": "M.U. 2-16",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "failed",
+      "matches": 0,
+      "ids": [],
+      "note": "fetch failed",
+      "sample": []
+    }
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T21:47:43.020Z",
+  "updated": "2026-10-20T21:47:43.020Z"
+}

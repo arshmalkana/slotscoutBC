@@ -1,0 +1,313 @@
+{
+  "item_id": "closed-area-600cc79557",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 1, section 13 (Wasa Slough)",
+  "rule_id": "W1-013",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: steps: run 1 [\"|||\",\"canadian pacific railway right of way|its intersection with the south boundary of lot 131 kootenay land district||other\",\"lot 131 kootenay land district|the east side of hwy 93||lot_line\",\"hwy 93|the abandoned right of way of hwy 93||road\",\"the abandoned right of way of hwy 93|its intersection with hwy 93||other\",\"hwy 93|a point due east of wasa station||road\",\"|the point of commencement||\"] vs run 2 [\"wasa station|||\",\"railway right of way|its intersection with the south boundary of lot 131 kootenay land district||other\",\"lot 131|the east side of hwy 93||lot_line\",\"hwy 93|the abandoned right of way of hwy 93||road\",\"abandoned right of way of hwy 93|its intersection with hwy 93||other\",\"hwy 93|a point due east of wasa station||road\",\"|the point of commencement||\"]",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 1 No Shooting, Hunting or Trapping Areas (Section 2)\nWasa Slough\n13 That portion of the Province, in the vicinity of Wasa Station, Kootenay Land District, that is within the following boundaries: Commencing at Wasa Station on the Canadian Pacific Railway, thence southerly along the railway right of way to its intersection with the south boundary of Lot 131, Kootenay Land District; thence easterly along the boundary to the east side of Highway 93; thence northerly along Highway 93 to the abandoned right of way of Highway 93; thence northerly and westerly along the abandoned right of way to its intersection with Highway 93; thence northerly along the east side of Highway 93 to a point due East of Wasa Station; thence due West to the point of commencement.",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-ccd09dd05a2e",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:47:24Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Kootenay Land District"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "Wasa Station on the Canadian Pacific Railway",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at Wasa Station on the Canadian Pacific Railway"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "other",
+              "feature": "Canadian Pacific Railway right of way",
+              "side_or_bank": null,
+              "until": "its intersection with the south boundary of Lot 131, Kootenay Land District",
+              "distance": null,
+              "quote": "thence southerly along the railway right of way to its intersection with the south boundary of Lot 131, Kootenay Land District"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "lot_line",
+              "feature": "Lot 131, Kootenay Land District",
+              "side_or_bank": "south boundary",
+              "until": "the east side of Highway 93",
+              "distance": null,
+              "quote": "thence easterly along the boundary to the east side of Highway 93"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "road",
+              "feature": "Highway 93",
+              "side_or_bank": null,
+              "until": "the abandoned right of way of Highway 93",
+              "distance": null,
+              "quote": "thence northerly along Highway 93 to the abandoned right of way of Highway 93"
+            },
+            {
+              "start": null,
+              "direction": "northerly and westerly",
+              "follow": "other",
+              "feature": "the abandoned right of way of Highway 93",
+              "side_or_bank": null,
+              "until": "its intersection with Highway 93",
+              "distance": null,
+              "quote": "thence northerly and westerly along the abandoned right of way to its intersection with Highway 93"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "road",
+              "feature": "Highway 93",
+              "side_or_bank": "east side",
+              "until": "a point due East of Wasa Station",
+              "distance": null,
+              "quote": "thence northerly along the east side of Highway 93 to a point due East of Wasa Station"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence due West to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting, Hunting or Trapping Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in the vicinity of Wasa Station, Kootenay Land District"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within the following boundaries: Commencing at Wasa Station"
+          },
+          {
+            "field": "geometry.steps[0]",
+            "quote": "Commencing at Wasa Station on the Canadian Pacific Railway"
+          },
+          {
+            "field": "geometry.steps[1]",
+            "quote": "thence southerly along the railway right of way to its intersection with the south boundary of Lot 131, Kootenay Land District"
+          },
+          {
+            "field": "geometry.steps[2]",
+            "quote": "thence easterly along the boundary to the east side of Highway 93"
+          },
+          {
+            "field": "geometry.steps[3]",
+            "quote": "thence northerly along Highway 93 to the abandoned right of way of Highway 93"
+          },
+          {
+            "field": "geometry.steps[4]",
+            "quote": "thence northerly and westerly along the abandoned right of way to its intersection with Highway 93"
+          },
+          {
+            "field": "geometry.steps[5]",
+            "quote": "thence northerly along the east side of Highway 93 to a point due East of Wasa Station"
+          },
+          {
+            "field": "geometry.steps[6]",
+            "quote": "thence due West to the point of commencement"
+          }
+        ],
+        "uncertain": [
+          "geometry.steps[6].follow"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-ccd09dd05a2e",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:46:27Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Kootenay Land District"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "Wasa Station on the Canadian Pacific Railway",
+              "direction": null,
+              "follow": null,
+              "feature": "Wasa Station",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at Wasa Station on the Canadian Pacific Railway"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "other",
+              "feature": "railway right of way",
+              "side_or_bank": null,
+              "until": "its intersection with the south boundary of Lot 131, Kootenay Land District",
+              "distance": null,
+              "quote": "thence southerly along the railway right of way to its intersection with the south boundary of Lot 131, Kootenay Land District"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "lot_line",
+              "feature": "Lot 131",
+              "side_or_bank": "south boundary",
+              "until": "the east side of Highway 93",
+              "distance": null,
+              "quote": "thence easterly along the boundary to the east side of Highway 93"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "road",
+              "feature": "Highway 93",
+              "side_or_bank": null,
+              "until": "the abandoned right of way of Highway 93",
+              "distance": null,
+              "quote": "thence northerly along Highway 93 to the abandoned right of way of Highway 93"
+            },
+            {
+              "start": null,
+              "direction": "northerly and westerly",
+              "follow": "other",
+              "feature": "abandoned right of way of Highway 93",
+              "side_or_bank": null,
+              "until": "its intersection with Highway 93",
+              "distance": null,
+              "quote": "thence northerly and westerly along the abandoned right of way to its intersection with Highway 93"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "road",
+              "feature": "Highway 93",
+              "side_or_bank": "east side",
+              "until": "a point due East of Wasa Station",
+              "distance": null,
+              "quote": "thence northerly along the east side of Highway 93 to a point due East of Wasa Station"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence due West to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting, Hunting or Trapping Areas"
+          },
+          {
+            "field": "within",
+            "quote": "Kootenay Land District"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within the following boundaries: Commencing at Wasa Station"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "in the vicinity of Wasa Station, Kootenay Land District",
+    "effect": "No Shooting, Hunting or Trapping Areas",
+    "geometry.steps[0]": "Commencing at Wasa Station on the Canadian Pacific Railway",
+    "geometry.steps[1]": "thence southerly along the railway right of way to its intersection with the south boundary of Lot 131, Kootenay Land District",
+    "geometry.steps[2]": "thence easterly along the boundary to the east side of Highway 93",
+    "geometry.steps[3]": "thence northerly along Highway 93 to the abandoned right of way of Highway 93",
+    "geometry.steps[4]": "thence northerly and westerly along the abandoned right of way to its intersection with Highway 93",
+    "geometry.steps[5]": "thence northerly along the east side of Highway 93 to a point due East of Wasa Station",
+    "geometry.steps[6]": "thence due West to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "steps: run 1 [\"|||\",\"canadian pacific railway right of way|its intersection with the south boundary of lot 131 kootenay land district||other\",\"lot 131 kootenay land district|the east side of hwy 93||lot_line\",\"hwy 93|the abandoned right of way of hwy 93||road\",\"the abandoned right of way of hwy 93|its intersection with hwy 93||other\",\"hwy 93|a point due east of wasa station||road\",\"|the point of commencement||\"] vs run 2 [\"wasa station|||\",\"railway right of way|its intersection with the south boundary of lot 131 kootenay land district||other\",\"lot 131|the east side of hwy 93||lot_line\",\"hwy 93|the abandoned right of way of hwy 93||road\",\"abandoned right of way of hwy 93|its intersection with hwy 93||other\",\"hwy 93|a point due east of wasa station||road\",\"|the point of commencement||\"]"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T21:47:35.535Z",
+  "updated": "2026-10-20T21:47:35.535Z"
+}

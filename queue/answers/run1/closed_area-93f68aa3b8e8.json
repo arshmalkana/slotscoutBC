@@ -1,0 +1,56 @@
+{
+  "task_id": "closed_area-93f68aa3b8e8",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:47:24Z",
+  "answer": {
+    "effect": "shot_only",
+    "exemptions": [
+      "a portion of land that is reserve within the meaning of the Indian Act (Canada)"
+    ],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Vancouver Island"
+    },
+    "geometry": {
+      "method": "other",
+      "road": null,
+      "feature": {
+        "type": "other",
+        "name": "Closed Area 9-29/22"
+      },
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "Firearms Using Shot Only Areas"
+      },
+      {
+        "field": "exemptions[0]",
+        "quote": "other than a portion of land that is reserve within the meaning of the Indian Act (Canada)"
+      },
+      {
+        "field": "within",
+        "quote": "on Vancouver Island"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "shown outlined in red on the attached map 'Closed Area 9-29/22'"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "shown outlined in red on the attached map 'Closed Area 9-29/22'"
+      }
+    ],
+    "uncertain": []
+  }
+}

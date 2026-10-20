@@ -1,0 +1,54 @@
+{
+  "task_id": "closed_area-645422c3e1ed",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:46:22Z",
+  "answer": {
+    "effect": "no_hunting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 2-16"
+    },
+    "geometry": {
+      "method": "other",
+      "road": null,
+      "feature": {
+        "type": "island",
+        "name": "Bowen Island"
+      },
+      "buffer_m": 150,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "M.U. 2-16"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within 150 m of any public highway, school building, school yard, public park, playground, church, workshop, place of business, dwelling house or farm building"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "being Bowen Island"
+      },
+      {
+        "field": "geometry.buffer_m",
+        "quote": "150 m"
+      }
+    ],
+    "uncertain": []
+  }
+}

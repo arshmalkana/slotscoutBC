@@ -1,0 +1,248 @@
+{
+  "item_id": "closed-area-371e24dcb4",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 1, section 6 (McDougall)",
+  "rule_id": "W1-006",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 1 No Shooting, Hunting or Trapping Areas (Section 2)\nMcDougall\n6 That portion of the Province that is within the following boundaries: Commencing at the intersection of the Sage Creek Forest access road and the northern boundary of Lot 7335, Kootenay Land District, and proceeding in an easterly direction along the access road to the western boundary of Lot 7277; thence proceeding northeast in a straight line for 50 m; thence proceeding due South to Sage Creek; thence southwesterly along Sage Creek to the access road which joins with the Sage Creek Forest road; thence proceeding easterly then northerly along that access road to the point of commencement.",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-be412adb6737",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:47:24Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the intersection of the Sage Creek Forest access road and the northern boundary of Lot 7335, Kootenay Land District",
+              "direction": "easterly",
+              "follow": "road",
+              "feature": "Sage Creek Forest access road",
+              "side_or_bank": null,
+              "until": "the western boundary of Lot 7277",
+              "distance": null,
+              "quote": "Commencing at the intersection of the Sage Creek Forest access road and the northern boundary of Lot 7335, Kootenay Land District, and proceeding in an easterly direction along the access road to the western boundary of Lot 7277"
+            },
+            {
+              "start": null,
+              "direction": "northeast",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": "50 m",
+              "quote": "thence proceeding northeast in a straight line for 50 m"
+            },
+            {
+              "start": null,
+              "direction": "due South",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "Sage Creek",
+              "distance": null,
+              "quote": "thence proceeding due South to Sage Creek"
+            },
+            {
+              "start": null,
+              "direction": "southwesterly",
+              "follow": "creek",
+              "feature": "Sage Creek",
+              "side_or_bank": null,
+              "until": "the access road which joins with the Sage Creek Forest road",
+              "distance": null,
+              "quote": "thence southwesterly along Sage Creek to the access road which joins with the Sage Creek Forest road"
+            },
+            {
+              "start": null,
+              "direction": "easterly then northerly",
+              "follow": "road",
+              "feature": "the access road which joins with the Sage Creek Forest road",
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence proceeding easterly then northerly along that access road to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting, Hunting or Trapping Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within the following boundaries: Commencing at the intersection"
+          },
+          {
+            "field": "geometry.steps[0]",
+            "quote": "Commencing at the intersection of the Sage Creek Forest access road and the northern boundary of Lot 7335, Kootenay Land District, and proceeding in an easterly direction along the access road to the western boundary of Lot 7277"
+          },
+          {
+            "field": "geometry.steps[1]",
+            "quote": "thence proceeding northeast in a straight line for 50 m"
+          },
+          {
+            "field": "geometry.steps[2]",
+            "quote": "thence proceeding due South to Sage Creek"
+          },
+          {
+            "field": "geometry.steps[3]",
+            "quote": "thence southwesterly along Sage Creek to the access road which joins with the Sage Creek Forest road"
+          },
+          {
+            "field": "geometry.steps[4]",
+            "quote": "thence proceeding easterly then northerly along that access road to the point of commencement"
+          }
+        ],
+        "uncertain": [
+          "within",
+          "geometry.steps[2].follow"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-be412adb6737",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:46:27Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the intersection of the Sage Creek Forest access road and the northern boundary of Lot 7335, Kootenay Land District",
+              "direction": "in an easterly direction",
+              "follow": "road",
+              "feature": "Sage Creek Forest access road",
+              "side_or_bank": null,
+              "until": "the western boundary of Lot 7277",
+              "distance": null,
+              "quote": "Commencing at the intersection of the Sage Creek Forest access road and the northern boundary of Lot 7335, Kootenay Land District, and proceeding in an easterly direction along the access road to the western boundary of Lot 7277"
+            },
+            {
+              "start": null,
+              "direction": "northeast",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": "50 m",
+              "quote": "thence proceeding northeast in a straight line for 50 m"
+            },
+            {
+              "start": null,
+              "direction": "due South",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "Sage Creek",
+              "distance": null,
+              "quote": "thence proceeding due South to Sage Creek"
+            },
+            {
+              "start": null,
+              "direction": "southwesterly",
+              "follow": "creek",
+              "feature": "Sage Creek",
+              "side_or_bank": null,
+              "until": "the access road which joins with the Sage Creek Forest road",
+              "distance": null,
+              "quote": "thence southwesterly along Sage Creek to the access road which joins with the Sage Creek Forest road"
+            },
+            {
+              "start": null,
+              "direction": "easterly then northerly",
+              "follow": "road",
+              "feature": "the access road which joins with the Sage Creek Forest road",
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence proceeding easterly then northerly along that access road to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting, Hunting or Trapping Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within the following boundaries: Commencing at the intersection"
+          }
+        ],
+        "uncertain": [
+          "within"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "effect": "No Shooting, Hunting or Trapping Areas",
+    "geometry.steps[0]": "Commencing at the intersection of the Sage Creek Forest access road and the northern boundary of Lot 7335, Kootenay Land District, and proceeding in an easterly direction along the access road to the western boundary of Lot 7277",
+    "geometry.steps[1]": "thence proceeding northeast in a straight line for 50 m",
+    "geometry.steps[2]": "thence proceeding due South to Sage Creek",
+    "geometry.steps[3]": "thence southwesterly along Sage Creek to the access road which joins with the Sage Creek Forest road",
+    "geometry.steps[4]": "thence proceeding easterly then northerly along that access road to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T21:47:33.034Z",
+  "updated": "2026-10-20T21:47:33.034Z"
+}

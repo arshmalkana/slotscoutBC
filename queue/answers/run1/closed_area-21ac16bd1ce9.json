@@ -1,0 +1,50 @@
+{
+  "task_id": "closed_area-21ac16bd1ce9",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:47:24Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Cariboo Land District"
+    },
+    "geometry": {
+      "method": "admin_boundary",
+      "road": null,
+      "feature": {
+        "type": "lot",
+        "name": "Lots 7127, 7128, 7129, 7130, 7132, 7133, 7134, 7139, 7140, 8351, 8352, 8353, 8357, 8358 and 8454"
+      },
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting, Hunting or Trapping Areas"
+      },
+      {
+        "field": "within",
+        "quote": "Cariboo Land District"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within the following boundaries: Lots 7127, 7128, 7129, 7130, 7132, 7133, 7134, 7139, 7140, 8351, 8352, 8353, 8357, 8358 and 8454"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "Lots 7127, 7128, 7129, 7130, 7132, 7133, 7134, 7139, 7140, 8351, 8352, 8353, 8357, 8358 and 8454"
+      }
+    ],
+    "uncertain": []
+  }
+}

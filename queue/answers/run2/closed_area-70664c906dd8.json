@@ -1,0 +1,111 @@
+{
+  "task_id": "closed_area-70664c906dd8",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:46:27Z",
+  "answer": {
+    "effect": "shot_only_seasonal",
+    "exemptions": [],
+    "period": {
+      "start": "June 1",
+      "end": "October 31"
+    },
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "7-21"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the northeast corner of the Groundbirch Community Pasture (situated at the southeast corner of the northeast quarter of Section 2, Tp 78, R 19, W6M)",
+          "direction": null,
+          "follow": null,
+          "feature": "Groundbirch Community Pasture",
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the northeast corner of the Groundbirch Community Pasture (situated at the southeast corner of the northeast quarter of Section 2, Tp 78, R 19, W6M)"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the headwaters of the north fork of the unnamed creek (locally known as Rainey Creek)",
+          "distance": "5.6 km (3.5 miles)",
+          "quote": "thence southerly 5.6 km (3.5 miles) to the headwaters of the north fork of the unnamed creek (locally known as Rainey Creek)"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "creek",
+          "feature": "the unnamed creek (locally known as Rainey Creek)",
+          "side_or_bank": "middle thread",
+          "until": "the confluence with Coldstream Creek",
+          "distance": null,
+          "quote": "thence westerly along the middle thread of the unnamed creek to the confluence with Coldstream Creek"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "creek",
+          "feature": "Coldstream Creek",
+          "side_or_bank": "middle thread",
+          "until": "the confluence with an unnamed creek being the north fork of Coldstream Creek",
+          "distance": null,
+          "quote": "thence westerly along the middle thread of Coldstream Creek to the confluence with an unnamed creek being the north fork of Coldstream Creek"
+        },
+        {
+          "start": null,
+          "direction": "northeasterly",
+          "follow": "creek",
+          "feature": "an unnamed creek being the north fork of Coldstream Creek",
+          "side_or_bank": "middle thread",
+          "until": "a point due West of the southeast corner of the northeast quarter of Section 2, Tp 78, R 19, W6M",
+          "distance": null,
+          "quote": "thence northeasterly along the middle thread of the unnamed creek to a point due West of the southeast corner of the northeast quarter of Section 2, Tp 78, R 19, W6M"
+        },
+        {
+          "start": null,
+          "direction": "due East",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence due East to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "Firearms Using Shot Only Areas (Seasonal)"
+      },
+      {
+        "field": "period",
+        "quote": "During the period June 1 to October 31"
+      },
+      {
+        "field": "within",
+        "quote": "in that portion of M.U. 7-21"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within the following described boundaries: Commencing at"
+      }
+    ],
+    "uncertain": []
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "task_id": "closed_area-195cdbe9083d",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:46:27Z",
+  "answer": {
+    "effect": "shot_only_seasonal",
+    "exemptions": [],
+    "period": {
+      "start": "June 1",
+      "end": "October 15"
+    },
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "7-20"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the northeast corner of District Lot 36, Tp 24",
+          "direction": "southerly",
+          "follow": "lot_line",
+          "feature": "District Lots 36 and 25, Tp 24",
+          "side_or_bank": "East boundaries",
+          "until": "the middle point on the west boundary of District Lot 30, Tp 25",
+          "distance": null,
+          "quote": "Commencing at the northeast corner of District Lot 36, Tp 24 and proceeding southerly along the East boundaries of District Lots 36 and 25, Tp 24 to the middle point on the west boundary of District Lot 30, Tp 25"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the middle point on the east boundary of Lot 30",
+          "distance": null,
+          "quote": "thence easterly in a straight line to the middle point on the east boundary of Lot 30"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "lot_line",
+          "feature": "Lot 30",
+          "side_or_bank": "east boundary",
+          "until": "the southeast corner of Lot 30",
+          "distance": null,
+          "quote": "thence southerly along the boundary to the southeast corner of Lot 30"
+        },
+        {
+          "start": null,
+          "direction": "west",
+          "follow": "lot_line",
+          "feature": "Lot 30",
+          "side_or_bank": "south boundary",
+          "until": "the southwest corner of Lot 30",
+          "distance": null,
+          "quote": "thence west along the south boundary of Lot 30 to the southwest corner of Lot 30"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "lot_line",
+          "feature": "District Lot 24, Tp 24",
+          "side_or_bank": "east boundary",
+          "until": "its intersection with the fence which forms the southerly and westerly boundaries of the community pasture",
+          "distance": null,
+          "quote": "thence southerly along the east boundary of District Lot 24, Tp 24 to its intersection with the fence which forms the southerly and westerly boundaries of the community pasture"
+        },
+        {
+          "start": null,
+          "direction": "westerly then in a general northwesterly direction",
+          "follow": "other",
+          "feature": "the fence which forms the southerly and westerly boundaries of the community pasture",
+          "side_or_bank": null,
+          "until": "its intersection with the north boundary of District Lot 34, Tp 24",
+          "distance": null,
+          "quote": "thence westerly then in a general northwesterly direction along the fence to its intersection with the north boundary of District Lot 34, Tp 24"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "lot_line",
+          "feature": "District Lots 34, 35 and 36, Tp 24",
+          "side_or_bank": "north boundaries",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence easterly along the north boundaries of District Lots 34, 35 and 36, Tp 24 to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "Firearms Using Shot Only Areas (Seasonal)"
+      },
+      {
+        "field": "period",
+        "quote": "During the period June 1 to October 15"
+      },
+      {
+        "field": "within",
+        "quote": "in that portion of M.U. 7-20"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within the following described boundaries: Commencing at"
+      }
+    ],
+    "uncertain": []
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "task_id": "closed_area-bb2003a9e247",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:46:27Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "6-12"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": {
+        "type": "island",
+        "name": "Moresby Island"
+      },
+      "buffer_m": null,
+      "side": "south",
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting, Hunting or Trapping Areas"
+      },
+      {
+        "field": "within",
+        "quote": "in M.U. 6-12"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "South of a line described as follows: Commencing at the intersection"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "being Moresby Island"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "Moresby Island South of a line"
+      }
+    ],
+    "uncertain": [
+      "geometry.steps"
+    ]
+  }
+}

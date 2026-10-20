@@ -1,0 +1,45 @@
+{
+  "task_id": "closed_area-cf077be575c9",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:47:30Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "British Columbia"
+    },
+    "geometry": {
+      "method": "other",
+      "road": null,
+      "feature": null,
+      "buffer_m": 100,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting or Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "That portion of British Columbia"
+      },
+      {
+        "field": "geometry.buffer_m",
+        "quote": "within 100 m"
+      }
+    ],
+    "uncertain": [
+      "geometry.feature"
+    ]
+  }
+}

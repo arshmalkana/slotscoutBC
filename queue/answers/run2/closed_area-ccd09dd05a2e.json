@@ -1,0 +1,114 @@
+{
+  "task_id": "closed_area-ccd09dd05a2e",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:46:27Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Kootenay Land District"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "Wasa Station on the Canadian Pacific Railway",
+          "direction": null,
+          "follow": null,
+          "feature": "Wasa Station",
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at Wasa Station on the Canadian Pacific Railway"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "other",
+          "feature": "railway right of way",
+          "side_or_bank": null,
+          "until": "its intersection with the south boundary of Lot 131, Kootenay Land District",
+          "distance": null,
+          "quote": "thence southerly along the railway right of way to its intersection with the south boundary of Lot 131, Kootenay Land District"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "lot_line",
+          "feature": "Lot 131",
+          "side_or_bank": "south boundary",
+          "until": "the east side of Highway 93",
+          "distance": null,
+          "quote": "thence easterly along the boundary to the east side of Highway 93"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "road",
+          "feature": "Highway 93",
+          "side_or_bank": null,
+          "until": "the abandoned right of way of Highway 93",
+          "distance": null,
+          "quote": "thence northerly along Highway 93 to the abandoned right of way of Highway 93"
+        },
+        {
+          "start": null,
+          "direction": "northerly and westerly",
+          "follow": "other",
+          "feature": "abandoned right of way of Highway 93",
+          "side_or_bank": null,
+          "until": "its intersection with Highway 93",
+          "distance": null,
+          "quote": "thence northerly and westerly along the abandoned right of way to its intersection with Highway 93"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "road",
+          "feature": "Highway 93",
+          "side_or_bank": "east side",
+          "until": "a point due East of Wasa Station",
+          "distance": null,
+          "quote": "thence northerly along the east side of Highway 93 to a point due East of Wasa Station"
+        },
+        {
+          "start": null,
+          "direction": "due West",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence due West to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting, Hunting or Trapping Areas"
+      },
+      {
+        "field": "within",
+        "quote": "Kootenay Land District"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within the following boundaries: Commencing at Wasa Station"
+      }
+    ],
+    "uncertain": []
+  }
+}

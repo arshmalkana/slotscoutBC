@@ -1,0 +1,50 @@
+{
+  "task_id": "closed_area-4b9727d32439",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:47:30Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 4-17"
+    },
+    "geometry": {
+      "method": "admin_boundary",
+      "road": null,
+      "feature": {
+        "type": "lot",
+        "name": "Block 5, District Lot 381, Kootenay District, Plan 725, and Block 8, District Lot 382, Kootenay District, Plan 722"
+      },
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting or Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "That portion of M.U. 4-17"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "which is contained within the following described lots"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "Block 5, District Lot 381, Kootenay District, Plan 725, and Block 8, District Lot 382, Kootenay District, Plan 722"
+      }
+    ],
+    "uncertain": []
+  }
+}

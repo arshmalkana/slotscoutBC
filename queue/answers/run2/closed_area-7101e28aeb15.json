@@ -1,0 +1,74 @@
+{
+  "task_id": "closed_area-7101e28aeb15",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:48:51Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 2-19"
+    },
+    "geometry": {
+      "method": "road_buffer",
+      "road": {
+        "name": "Chehalis Forest Service Road",
+        "source_hint": "FTEN"
+      },
+      "feature": null,
+      "buffer_m": 400,
+      "side": "both",
+      "from": {
+        "type": "road_intersection",
+        "road": "Statlu Forest Service Road",
+        "name": null
+      },
+      "to": {
+        "type": "boundary",
+        "road": null,
+        "name": "northern boundary of the area described in section 33 of Schedule 5"
+      },
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "M.U. 2-19"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within 400 m of the midline of Chehalis Forest Service Road"
+      },
+      {
+        "field": "geometry.road",
+        "quote": "Chehalis Forest Service Road"
+      },
+      {
+        "field": "geometry.buffer_m",
+        "quote": "within 400 m of the midline"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "within 400 m of the midline"
+      },
+      {
+        "field": "geometry.from",
+        "quote": "from the junction with the Statlu Forest Service Road"
+      },
+      {
+        "field": "geometry.to",
+        "quote": "to the northern boundary of the area described in section 33 of Schedule 5"
+      }
+    ],
+    "uncertain": []
+  }
+}

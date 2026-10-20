@@ -1,0 +1,51 @@
+{
+  "task_id": "closed_area-0d2935f2f4a7",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:46:22Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 2-16"
+    },
+    "geometry": {
+      "method": "road_buffer",
+      "road": null,
+      "feature": null,
+      "buffer_m": 200,
+      "side": "both",
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "M.U. 2-16"
+      },
+      {
+        "field": "geometry.buffer_m",
+        "quote": "within 0.2 km of either side of the midline"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "either side of the midline"
+      }
+    ],
+    "uncertain": [
+      "geometry.road",
+      "geometry.from",
+      "geometry.to"
+    ]
+  }
+}

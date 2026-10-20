@@ -1,0 +1,190 @@
+{
+  "item_id": "closed-area-3a30ee15f1",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 16 (Provincial Gaol Camp No. 1)",
+  "rule_id": "W5-016",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: within: run 1 null vs run 2 \"yale district\"",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nProvincial Gaol Camp No. 1\n16 That portion of the Province of British Columbia in the Chilliwack River Valley, Yale District, which is contained within the following described boundaries: Commencing at the point 1.6 km (1 mile) west of the Provincial Gaol Service Camp No. 1 and extending for a distance of 800 m (0.5 mile) north and south of Chilliwack River Road East to Chilliwack Lake, Yale District. The western boundary is indicated by signs erected by the Ministry of the Attorney General.",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-5e64f75a4166",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T15:18:34Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "road_buffer",
+          "road": {
+            "name": "Chilliwack River Road",
+            "source_hint": "DRA"
+          },
+          "feature": null,
+          "buffer_m": 800,
+          "side": "both",
+          "from": {
+            "type": "landmark",
+            "road": null,
+            "name": "point 1.6 km (1 mile) west of the Provincial Gaol Service Camp No. 1"
+          },
+          "to": {
+            "type": "landmark",
+            "road": null,
+            "name": "Chilliwack Lake"
+          },
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "extending for a distance of 800 m (0.5 mile) north and south of Chilliwack River Road"
+          },
+          {
+            "field": "geometry.road",
+            "quote": "Chilliwack River Road"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": "800 m (0.5 mile)"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "north and south of Chilliwack River Road"
+          },
+          {
+            "field": "geometry.from",
+            "quote": "the point 1.6 km (1 mile) west of the Provincial Gaol Service Camp No. 1"
+          },
+          {
+            "field": "geometry.to",
+            "quote": "East to Chilliwack Lake"
+          }
+        ],
+        "uncertain": [
+          "within"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-5e64f75a4166",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T15:19:48Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Yale District"
+        },
+        "geometry": {
+          "method": "road_buffer",
+          "road": {
+            "name": "Chilliwack River Road",
+            "source_hint": "DRA"
+          },
+          "feature": null,
+          "buffer_m": 800,
+          "side": "both",
+          "from": {
+            "type": "landmark",
+            "road": null,
+            "name": "point 1.6 km (1 mile) west of the Provincial Gaol Service Camp No. 1"
+          },
+          "to": {
+            "type": "landmark",
+            "road": null,
+            "name": "Chilliwack Lake"
+          },
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in the Chilliwack River Valley, Yale District"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "extending for a distance of 800 m (0.5 mile) north and south of Chilliwack River Road"
+          },
+          {
+            "field": "geometry.road",
+            "quote": "Chilliwack River Road"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": "800 m (0.5 mile)"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "north and south of Chilliwack River Road"
+          },
+          {
+            "field": "geometry.from",
+            "quote": "Commencing at the point 1.6 km (1 mile) west of the Provincial Gaol Service Camp No. 1"
+          },
+          {
+            "field": "geometry.to",
+            "quote": "to Chilliwack Lake"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "geometry.road": "Chilliwack River Road",
+    "geometry.buffer_m": "800 m (0.5 mile)",
+    "geometry.from": "the point 1.6 km (1 mile) west of the Provincial Gaol Service Camp No. 1",
+    "geometry.to": "East to Chilliwack Lake",
+    "effect": "No Shooting Areas",
+    "geometry.side": "north and south of Chilliwack River Road"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "within: run 1 null vs run 2 \"yale district\""
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T21:47:08.108Z",
+  "updated": "2026-10-20T21:47:08.108Z"
+}

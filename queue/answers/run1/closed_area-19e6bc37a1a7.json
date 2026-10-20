@@ -1,0 +1,174 @@
+{
+  "task_id": "closed_area-19e6bc37a1a7",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:48:00Z",
+  "answer": {
+    "effect": "shot_only",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 2-3"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": "inside",
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the intersection of the easterly boundary of the Soowahlie Number 14 Indian Reserve and the Chilliwack Lake Road",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the intersection of the easterly boundary of the Soowahlie Number 14 Indian Reserve and the Chilliwack Lake Road"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "reserve_boundary",
+          "feature": "Soowahlie Number 14 Indian Reserve",
+          "side_or_bank": null,
+          "until": "its intersection with the southerly boundary of the District of Chilliwack",
+          "distance": null,
+          "quote": "thence northerly along the Reserve boundary to its intersection with the southerly boundary of the District of Chilliwack"
+        },
+        {
+          "start": null,
+          "direction": "in an easterly direction",
+          "follow": "district_boundary",
+          "feature": "District of Chilliwack",
+          "side_or_bank": "southerly boundary",
+          "until": "its intersection with an unnamed creek the mouth of which is located approximately 300 m southeasterly of the easterly end of O'Bryan Road",
+          "distance": "approximately 300 m",
+          "quote": "thence in an easterly direction along the District boundary to its intersection with an unnamed creek the mouth of which is located approximately 300 m southeasterly of the easterly end of O'Bryan Road"
+        },
+        {
+          "start": null,
+          "direction": "southwesterly down",
+          "follow": "creek",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "its confluence with the Chilliwack River",
+          "distance": null,
+          "quote": "thence southwesterly down the creek to its confluence with the Chilliwack River"
+        },
+        {
+          "start": null,
+          "direction": "due South",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the line's intersection with the southerly boundary of the Chilliwack Lake Road",
+          "distance": null,
+          "quote": "thence along a line due South to the line's intersection with the southerly boundary of the Chilliwack Lake Road"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "road",
+          "feature": "Chilliwack Lake Road",
+          "side_or_bank": "road right of way boundary",
+          "until": "its intersection with a forestry access road on the south bank of the Chilliwack River which intersects the Chilliwack Lake Road at a point adjacent Tamihi Creek",
+          "distance": null,
+          "quote": "thence westerly along the road right of way boundary to its intersection with a forestry access road on the south bank of the Chilliwack River which intersects the Chilliwack Lake Road at a point adjacent Tamihi Creek"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "road",
+          "feature": null,
+          "side_or_bank": "southerly boundary",
+          "until": "its intersection with the Department of National Defence Military Reserve boundary",
+          "distance": null,
+          "quote": "thence westerly along the southerly boundary of the forest access road to its intersection with the Department of National Defence Military Reserve boundary"
+        },
+        {
+          "start": null,
+          "direction": "in a westerly and northerly direction",
+          "follow": "reserve_boundary",
+          "feature": "Department of National Defence Military Reserve",
+          "side_or_bank": null,
+          "until": "its intersection with the easterly boundary of Soowahlie Indian Reserve Number 14",
+          "distance": null,
+          "quote": "thence in a westerly and northerly direction along the boundary of the Military Reserve to its intersection with the easterly boundary of Soowahlie Indian Reserve Number 14"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "reserve_boundary",
+          "feature": "Soowahlie Indian Reserve Number 14",
+          "side_or_bank": "easterly boundary",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence northerly along the Reserve boundary to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "Firearms Using Shot Only Areas"
+      },
+      {
+        "field": "within",
+        "quote": "in M.U. 2-3"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "Commencing at"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "within the following described boundaries"
+      },
+      {
+        "field": "geometry.steps[0]",
+        "quote": "Commencing at the intersection of the easterly boundary of the Soowahlie Number 14 Indian Reserve and the Chilliwack Lake Road"
+      },
+      {
+        "field": "geometry.steps[1]",
+        "quote": "thence northerly along the Reserve boundary to its intersection with the southerly boundary of the District of Chilliwack"
+      },
+      {
+        "field": "geometry.steps[2]",
+        "quote": "thence in an easterly direction along the District boundary to its intersection with an unnamed creek the mouth of which is located approximately 300 m southeasterly of the easterly end of O'Bryan Road"
+      },
+      {
+        "field": "geometry.steps[3]",
+        "quote": "thence southwesterly down the creek to its confluence with the Chilliwack River"
+      },
+      {
+        "field": "geometry.steps[4]",
+        "quote": "thence along a line due South to the line's intersection with the southerly boundary of the Chilliwack Lake Road"
+      },
+      {
+        "field": "geometry.steps[5]",
+        "quote": "thence westerly along the road right of way boundary to its intersection with a forestry access road on the south bank of the Chilliwack River which intersects the Chilliwack Lake Road at a point adjacent Tamihi Creek"
+      },
+      {
+        "field": "geometry.steps[6]",
+        "quote": "thence westerly along the southerly boundary of the forest access road to its intersection with the Department of National Defence Military Reserve boundary"
+      },
+      {
+        "field": "geometry.steps[7]",
+        "quote": "thence in a westerly and northerly direction along the boundary of the Military Reserve to its intersection with the easterly boundary of Soowahlie Indian Reserve Number 14"
+      },
+      {
+        "field": "geometry.steps[8]",
+        "quote": "thence northerly along the Reserve boundary to the point of commencement"
+      }
+    ],
+    "uncertain": []
+  }
+}
