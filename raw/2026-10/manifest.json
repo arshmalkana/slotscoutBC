@@ -2,17 +2,17 @@
   "month": "2026-10",
   "userAgent": "SlotScoutBot/0.1 (+https://slotscout.ca/about; data@slotscout.ca)",
   "startedAt": "2026-10-19T16:53:43.915Z",
-  "updatedAt": "2026-10-19T18:03:28.531Z",
+  "updatedAt": "2026-10-19T20:25:12.278Z",
   "sources": {
     "bcparks_advisories": {
       "status": "skipped",
       "detail": "planned source, not pulled yet",
-      "at": "2026-10-19T16:58:05.249Z"
+      "at": "2026-10-19T19:56:24.853Z"
     },
     "licensee_notices": {
       "status": "skipped",
       "detail": "planned source, not pulled yet",
-      "at": "2026-10-19T16:58:05.249Z"
+      "at": "2026-10-19T19:56:24.853Z"
     },
     "wmu": {
       "status": "ok",
@@ -92,22 +92,22 @@
     "fire_restrictions": {
       "status": "ok",
       "detail": "0 features, count matches the server",
-      "at": "2026-10-19T16:59:10.812Z"
+      "at": "2026-10-19T20:24:54.767Z"
     },
     "fire_bans": {
       "status": "ok",
       "detail": "0 features, count matches the server",
-      "at": "2026-10-19T16:59:11.813Z"
+      "at": "2026-10-19T20:24:55.770Z"
     },
     "fire_current": {
       "status": "ok",
       "detail": "314 features, count matches the server",
-      "at": "2026-10-19T16:59:13.540Z"
+      "at": "2026-10-19T20:24:57.500Z"
     },
     "fire_history": {
       "status": "ok",
       "detail": "24751 features, count matches the server",
-      "at": "2026-10-19T16:59:28.651Z"
+      "at": "2026-10-19T20:25:12.272Z"
     },
     "parcels": {
       "status": "ok",
@@ -122,17 +122,17 @@
     "closed_areas": {
       "status": "awaiting_person",
       "detail": "0 of 6 regulations from copies a person saved in inbox/bclaws; waiting for 76_84_00_multi, 196_99, 190_84, 180_90, 16_2004, 38_2005; 1 unconfirmed excerpt(s) in inbox/excerpts",
-      "at": "2026-10-19T17:13:23.522Z"
+      "at": "2026-10-19T19:56:24.871Z"
     },
     "road_notices": {
       "status": "ok",
       "detail": "22 of 22 district pages",
-      "at": "2026-10-19T17:14:07.160Z"
+      "at": "2026-10-19T19:57:08.185Z"
     },
     "dm_notices": {
       "status": "ok",
-      "detail": "24 of 24 linked notice PDFs",
-      "at": "2026-10-19T17:14:54.699Z"
+      "detail": "46 of 46 linked notice PDFs",
+      "at": "2026-10-19T20:01:35.969Z"
     },
     "dra_roads": {
       "status": "ok",
@@ -141,8 +141,8 @@
     },
     "bylaws": {
       "status": "partial",
-      "detail": "3 of 34 starter-set jurisdictions with a bylaw document found; the rest need a person",
-      "at": "2026-10-19T17:51:39.028Z"
+      "detail": "5 of 34 starter-set jurisdictions with a bylaw document found; the rest need a person",
+      "at": "2026-10-19T20:24:53.658Z"
     },
     "cutblocks": {
       "status": "ok",
@@ -486,8 +486,8 @@
       "countMatches": true,
       "previousCount": null,
       "countChange": null,
-      "startedAt": "2026-10-19T16:59:09.949Z",
-      "finishedAt": "2026-10-19T16:59:10.812Z"
+      "startedAt": "2026-10-19T20:24:53.660Z",
+      "finishedAt": "2026-10-19T20:24:54.767Z"
     },
     "fire_bans": {
       "id": "fire_bans",
@@ -504,8 +504,8 @@
       "countMatches": true,
       "previousCount": null,
       "countChange": null,
-      "startedAt": "2026-10-19T16:59:10.814Z",
-      "finishedAt": "2026-10-19T16:59:11.813Z"
+      "startedAt": "2026-10-19T20:24:54.769Z",
+      "finishedAt": "2026-10-19T20:24:55.770Z"
     },
     "fire_current": {
       "id": "fire_current",
@@ -513,7 +513,7 @@
       "endpoint": "https://openmaps.gov.bc.ca/geo/pub/wfs",
       "serverCount": 314,
       "pulledCount": 314,
-      "sha256": "d1d05579322a5a1f4d5a9cba669292db8111beeeeab050f8e7b31aadb135b332",
+      "sha256": "d0b283d46bb702e9f11a15f7bec2e322f294a7c234cd9995961690cd9a655df1",
       "bytes": 4397864,
       "pages": 1,
       "sortBy": "OBJECTID",
@@ -522,8 +522,8 @@
       "countMatches": true,
       "previousCount": null,
       "countChange": null,
-      "startedAt": "2026-10-19T16:59:11.814Z",
-      "finishedAt": "2026-10-19T16:59:13.540Z"
+      "startedAt": "2026-10-19T20:24:55.775Z",
+      "finishedAt": "2026-10-19T20:24:57.500Z"
     },
     "fire_history": {
       "id": "fire_history",
@@ -540,8 +540,8 @@
       "countMatches": true,
       "previousCount": null,
       "countChange": null,
-      "startedAt": "2026-10-19T16:59:13.542Z",
-      "finishedAt": "2026-10-19T16:59:28.651Z"
+      "startedAt": "2026-10-19T20:24:57.509Z",
+      "finishedAt": "2026-10-19T20:25:12.272Z"
     },
     "parcels": {
       "id": "parcels",
@@ -798,12 +798,30 @@
   },
   "files": [
     {
+      "path": "raw/2026-10/bylaws/city-of-chilliwack/firearms-regulation-bylaw-2740-c-ca5f2f.pdf",
+      "sha256": "504dc5d4cebc6a21ed33d377a16da475181089759511e91544c33f2b5697b0a2",
+      "bytes": 514918,
+      "source": "bylaws",
+      "url": "https://www.chilliwack.com/main/attachments/attachView.cfm?attachID=1757",
+      "fetchedAt": "2026-10-19T20:05:53.104Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/bylaws/city-of-langley/firearms-bylaw-9a5701.pdf",
+      "sha256": "f46528a1007f2cb99df30e755d2fc42b483606486e2931bb81aeef265ac609ff",
+      "bytes": 77657,
+      "source": "bylaws",
+      "url": "https://www.langleycity.ca/media/file/firearms-bylaw",
+      "fetchedAt": "2026-10-19T20:11:16.409Z",
+      "committed": true
+    },
+    {
       "path": "raw/2026-10/bylaws/city-of-richmond/firearm-discharge-regulation-bylaw-4183-1983-0129f2.pdf",
       "sha256": "f4ec65aa9fb254b220fb6953da717060d7d6ac1b1a31b844e2efaf88856adf0b",
       "bytes": 1453534,
       "source": "bylaws",
       "url": "https://www.richmond.ca/__shared/assets/BL_4183_-_07262158958.pdf",
-      "fetchedAt": "2026-10-19T17:38:56.611Z",
+      "fetchedAt": "2026-10-19T20:13:02.580Z",
       "committed": true
     },
     {
@@ -812,16 +830,7 @@
       "bytes": 441781,
       "source": "bylaws",
       "url": "https://www.slrd.bc.ca/media/file/rb1294-electoral-area-d-firearms-bylaw-consoldiation-bl1317-2014pdf",
-      "fetchedAt": "2026-10-19T17:51:36.753Z",
-      "committed": true
-    },
-    {
-      "path": "raw/2026-10/bylaws/village-of-belcarra/complying-with-sewage-discharge-regulations-fd3484.pdf",
-      "sha256": "6d8c8be1da77960546a1b2c6df78154d898de19a3f6efa2ddb669e75387c5602",
-      "bytes": 803026,
-      "source": "bylaws",
-      "url": "https://belcarra.ca/assets/media/2019/10/Posted-on-Belcarra-Website-publication_OBS_sewagedischarge_aqua.pdf",
-      "fetchedAt": "2026-10-19T17:46:31.046Z",
+      "fetchedAt": "2026-10-19T20:22:06.354Z",
       "committed": true
     },
     {
@@ -830,205 +839,205 @@
       "bytes": 603978,
       "source": "bylaws",
       "url": "https://belcarra.ca/assets/media/2019/05/vob-bylaw-498_firearms-control.pdf",
-      "fetchedAt": "2026-10-19T17:46:32.668Z",
+      "fetchedAt": "2026-10-19T20:20:50.829Z",
       "committed": true
     },
     {
       "path": "raw/2026-10/district_pages/DCC.html",
-      "sha256": "6de4f067c678b9fec351fa6f0a91bc162ece85b34e2165aed45d71b65943bba3",
+      "sha256": "6fc542c9b160dfb7b9376d400565053fac0eaf66a87198ed1c7efdbb98945cee",
       "bytes": 260621,
       "source": "road_notices",
       "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/cariboo-chilcotin-road-safety-information",
-      "fetchedAt": "2026-10-19T17:13:28.635Z",
+      "fetchedAt": "2026-10-19T19:56:30.277Z",
       "committed": true
     },
     {
       "path": "raw/2026-10/district_pages/DCK.html",
-      "sha256": "b068cd8d8c8175ba14d7d3d0614673817bc64ae5ee472416663ce446e463ac59",
+      "sha256": "37cc21cd3df372c083a35baa0fe45851606f909593666b6ada1a60b584eb3eef",
       "bytes": 286067,
       "source": "road_notices",
       "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack-natural-resource-district-district-road-safety-information",
-      "fetchedAt": "2026-10-19T17:13:32.722Z",
+      "fetchedAt": "2026-10-19T19:56:34.183Z",
       "committed": true
     },
     {
       "path": "raw/2026-10/district_pages/DCR.html",
-      "sha256": "05149061a3ba0c4607fe9bf44e0ad221c180c1cbccad76657c33604c45eb649e",
+      "sha256": "9285d1c1eed11006e7b77c36ea61aa2f4403f1feb14a374da11bbb1d0c48a761",
       "bytes": 251867,
       "source": "road_notices",
       "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/campbell-river-road-safety-information",
-      "fetchedAt": "2026-10-19T17:13:26.752Z",
+      "fetchedAt": "2026-10-19T19:56:28.253Z",
       "committed": true
     },
     {
       "path": "raw/2026-10/district_pages/DCS.html",
-      "sha256": "3717fc1e619195bc94a067b875a6ca34ce8b62cfa642eddedb1966d9a16c7f4b",
+      "sha256": "d1508bad05bb7ce8e25ec5b09c765567dfb9d13f0349590d705cb6a719683643",
       "bytes": 260200,
       "source": "road_notices",
       "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/cascades-road-safety-information",
-      "fetchedAt": "2026-10-19T17:13:30.813Z",
+      "fetchedAt": "2026-10-19T19:56:32.267Z",
       "committed": true
     },
     {
       "path": "raw/2026-10/district_pages/DFN.html",
-      "sha256": "af34f22eb8725348871aabba2e1daac9dcd43a798776cd1b5d9d75fa9792f576",
+      "sha256": "4cc75b93af012f7a740ed189e9ddd86a35b7125dbdcba476b7d8b462ff037f16",
       "bytes": 225745,
       "source": "road_notices",
       "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/fort-nelson-natural-resource-district-road-safety-information",
-      "fetchedAt": "2026-10-19T17:13:37.018Z",
+      "fetchedAt": "2026-10-19T19:56:38.154Z",
       "committed": true
     },
     {
       "path": "raw/2026-10/district_pages/DKA.html",
-      "sha256": "69847a9468bdc0c94229b34073d96c4c3a235bac357f2601af3042b3bf49e66f",
+      "sha256": "9ba3c444257377d3d137c866c5a8e56a6be958bffce98cfdef887b0b2f0ce862",
       "bytes": 257310,
       "source": "road_notices",
       "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/thompson-rivers-natural-resource-district-road-safety-information",
-      "fetchedAt": "2026-10-19T17:14:07.152Z",
+      "fetchedAt": "2026-10-19T19:57:08.156Z",
       "committed": true
     },
     {
       "path": "raw/2026-10/district_pages/DKM.html",
-      "sha256": "b6943a3c079041f229e1e190e70d54ccbb1c2e5de4cd8bd0a73097ebc165dbb4",
+      "sha256": "76512bb8851a0996ef0e497af4f0646f74079e5524c41befc348d0d4154ccd83",
       "bytes": 240023,
       "source": "road_notices",
       "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/coast-mountain-road-safety-information",
-      "fetchedAt": "2026-10-19T17:13:34.644Z",
+      "fetchedAt": "2026-10-19T19:56:36.225Z",
       "committed": true
     },
     {
       "path": "raw/2026-10/district_pages/DMH.html",
-      "sha256": "1500d283e5ae5343829c02d30bda3c6f3af18d9188818a3e167417aabdfe2d4b",
+      "sha256": "22f8b397283f7aa89e7d3a2173a2fc37513bb88993fd44e03d4adda32d250f70",
       "bytes": 247404,
       "source": "road_notices",
       "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/100-mile-house-road-safety-information",
-      "fetchedAt": "2026-10-19T17:13:24.889Z",
+      "fetchedAt": "2026-10-19T19:56:26.432Z",
       "committed": true
     },
     {
       "path": "raw/2026-10/district_pages/DMK.html",
-      "sha256": "2f5b3766339d02a76c52762f219fd001f5e2cf91c04c9d6401b5fa543c8f6130",
+      "sha256": "6561d5422b7517ccc56002018a735f8c818592f5690961cd728637cc50b76788",
       "bytes": 241570,
       "source": "road_notices",
       "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/mackenzie-road-safety-information",
-      "fetchedAt": "2026-10-19T17:13:40.706Z",
+      "fetchedAt": "2026-10-19T19:56:42.271Z",
       "committed": true
     },
     {
       "path": "raw/2026-10/district_pages/DND.html",
-      "sha256": "dbb3dcb967273a81ed80c37b649ba7683e2976c4938b83ae446fd8049f68eb91",
+      "sha256": "ead40c822a95a5108a5e7e29c857d2961dc987938b0448b79201395b3e9f7911",
       "bytes": 243612,
       "source": "road_notices",
       "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/nadina-natural-resource-district-road-safety-information",
-      "fetchedAt": "2026-10-19T17:13:42.645Z",
+      "fetchedAt": "2026-10-19T19:56:44.143Z",
       "committed": true
     },
     {
       "path": "raw/2026-10/district_pages/DNI.html",
-      "sha256": "b32170b2873db04722317e8a20edac553fab9626a25c2ffb2d0f3f7b62f56404",
+      "sha256": "1226acddd8248763e14f90fd7382771fe263a36186d99dd375d030b3880b7bbf",
       "bytes": 235723,
       "source": "road_notices",
       "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/noth-island-natural-resource-district-road-safety-information",
-      "fetchedAt": "2026-10-19T17:13:44.702Z",
+      "fetchedAt": "2026-10-19T19:56:46.173Z",
       "committed": true
     },
     {
       "path": "raw/2026-10/district_pages/DOS.html",
-      "sha256": "5b180ad7cb31e7b5f238ff983d10e85f056e0c5d59909624cce855ed5cc95ecf",
+      "sha256": "7b389e291d8188b1c9776712e1d90c2b5e6208c7ed71086008989901b4fc6008",
       "bytes": 243855,
       "source": "road_notices",
       "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/okanagan-shuswap-road-safety-information",
-      "fetchedAt": "2026-10-19T17:13:46.654Z",
+      "fetchedAt": "2026-10-19T19:56:48.165Z",
       "committed": true
     },
     {
       "path": "raw/2026-10/district_pages/DPG.html",
-      "sha256": "69d7b3dee80a0afe413d1f911053598bb114bc666d4fe3c706b96bdf9a80b28d",
+      "sha256": "50ddd05ac57e7fa158eafd4b2c5d1b4946e642bb2c97e6e16bccb64e1c2e17f4",
       "bytes": 285441,
       "source": "road_notices",
       "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/prince-george-natural-resource-district-road-safety-information",
-      "fetchedAt": "2026-10-19T17:13:48.719Z",
+      "fetchedAt": "2026-10-19T19:56:50.379Z",
       "committed": true
     },
     {
       "path": "raw/2026-10/district_pages/DQC.html",
-      "sha256": "50ec2ff7967070a3cb77daa4783a943a80834185a1260cda0e575dbbb590e6dc",
+      "sha256": "0aa555726db00cf568f798cad9b723ccd0cfa355f42d3b02074988eff251b33a",
       "bytes": 256837,
       "source": "road_notices",
       "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/haida-gwaii-natural-resource-district-road-safety-information",
-      "fetchedAt": "2026-10-19T17:13:38.690Z",
+      "fetchedAt": "2026-10-19T19:56:40.152Z",
       "committed": true
     },
     {
       "path": "raw/2026-10/district_pages/DQU.html",
-      "sha256": "cae69edae6006845df672a5735db75f9a6cdbbdaa83641e884c4d6bbcca9a9ea",
+      "sha256": "af5ca8096f17ebb0fa876318c03e3ccda514360e096fe7b5b7a42c5058ef309e",
       "bytes": 260833,
       "source": "road_notices",
       "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/quesnel-road-safety-information",
-      "fetchedAt": "2026-10-19T17:13:50.869Z",
+      "fetchedAt": "2026-10-19T19:56:52.269Z",
       "committed": true
     },
     {
       "path": "raw/2026-10/district_pages/DRM.html",
-      "sha256": "24e1b65a66074c9700d926be8187b2a1cda05904f2c6eab4d3f03913edcea4cd",
+      "sha256": "ef0a6cf2952acf993576381dcea3e009dc79998315cbe80eb42929077b5c6084",
       "bytes": 237156,
       "source": "road_notices",
       "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/rocky-mountain-natural-resource-district-road-safety-information",
-      "fetchedAt": "2026-10-19T17:13:52.650Z",
+      "fetchedAt": "2026-10-19T19:56:54.461Z",
       "committed": true
     },
     {
       "path": "raw/2026-10/district_pages/DSC.html",
-      "sha256": "098cc80a80bb19297d08a42ec6d70f93f80751a91f6531c23919cfd60d19a996",
+      "sha256": "2970f93fb5975a019b2ae3cd7cfb377491ff6ebf0d100155032344e001c3bfc0",
       "bytes": 254249,
       "source": "road_notices",
       "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/sunshine-coast-road-safety-information",
-      "fetchedAt": "2026-10-19T17:14:04.916Z",
+      "fetchedAt": "2026-10-19T19:57:06.944Z",
       "committed": true
     },
     {
       "path": "raw/2026-10/district_pages/DSE.html",
-      "sha256": "c52c4d7ae808d44de3df0452532a71a67c98082d2e112c512a13736450172e09",
+      "sha256": "f7051c8502d00732cd68748bef13ca156e599ad50ef9fbcc3d068b491308733e",
       "bytes": 251439,
       "source": "road_notices",
       "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/selkirk-natural-resource-district-road-safety-information",
-      "fetchedAt": "2026-10-19T17:13:56.670Z",
+      "fetchedAt": "2026-10-19T19:56:58.655Z",
       "committed": true
     },
     {
       "path": "raw/2026-10/district_pages/DSI.html",
-      "sha256": "2f1a9f2f787d33245bf320fe1b436019300926705956866370ebe17cc15f61b4",
+      "sha256": "7cb30971fe72624a3297762eb1f34bb94e8e42ac1a068b03ffa019a1d1e839db",
       "bytes": 239893,
       "source": "road_notices",
       "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/south-island-natural-resource-district-road-safety-information",
-      "fetchedAt": "2026-10-19T17:14:00.818Z",
+      "fetchedAt": "2026-10-19T19:57:02.237Z",
       "committed": true
     },
     {
       "path": "raw/2026-10/district_pages/DSQ.html",
-      "sha256": "7b492b7b31fc09217f03cddf5bdab58a0d56d83c3b2bf6a4efce1d2c8614c051",
+      "sha256": "8139619693cf1e72a35d099de75b478a40477e3c631bd382e165304e1751bc7d",
       "bytes": 287311,
       "source": "road_notices",
       "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/sea-to-sky-natural-resource-district-road-safety-information",
-      "fetchedAt": "2026-10-19T17:13:54.725Z",
+      "fetchedAt": "2026-10-19T19:56:56.245Z",
       "committed": true
     },
     {
       "path": "raw/2026-10/district_pages/DSS.html",
-      "sha256": "78a30cf1939b91126ce966124e2adab8fe305f2151453f6d313c2a4b13f644b1",
+      "sha256": "dfe29a6e7ee3c05525ee740a924fe8f200738c6060750e7207bd72f34c9e421a",
       "bytes": 253936,
       "source": "road_notices",
       "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/skeena-stikine-natural-resource-district-road-safety-information",
-      "fetchedAt": "2026-10-19T17:13:58.668Z",
+      "fetchedAt": "2026-10-19T19:57:00.143Z",
       "committed": true
     },
     {
       "path": "raw/2026-10/district_pages/DVA.html",
-      "sha256": "f3f3f623093f443981ea322cc0ce2ecf689453857548fad994b47919a4dcc0c7",
+      "sha256": "7f377383c54a0f1be8f2b994e033a176ef82b89ba4e3d2ba37600b26a12698e8",
       "bytes": 291719,
       "source": "road_notices",
       "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/stuart-nechako-natural-resource-district-road-safety-information",
-      "fetchedAt": "2026-10-19T17:14:02.823Z",
+      "fetchedAt": "2026-10-19T19:57:04.843Z",
       "committed": true
     },
     {
@@ -1037,7 +1046,7 @@
       "bytes": 399706,
       "source": "dm_notices",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/bucklin_fsr_-_2019_road_closure.pdf",
-      "fetchedAt": "2026-10-19T17:14:18.654Z",
+      "fetchedAt": "2026-10-19T19:57:48.669Z",
       "committed": true
     },
     {
@@ -1046,7 +1055,7 @@
       "bytes": 511219,
       "source": "dm_notices",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/radium_fsr_fs301.pdf",
-      "fetchedAt": "2026-10-19T17:14:38.684Z",
+      "fetchedAt": "2026-10-19T19:58:51.783Z",
       "committed": true
     },
     {
@@ -1055,7 +1064,7 @@
       "bytes": 226934,
       "source": "dm_notices",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/east_anderson_fsr_road_closure_april_24_2026.pdf",
-      "fetchedAt": "2026-10-19T17:14:20.662Z",
+      "fetchedAt": "2026-10-19T19:57:50.687Z",
       "committed": true
     },
     {
@@ -1064,7 +1073,7 @@
       "bytes": 674272,
       "source": "dm_notices",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/cypress_lake_fsr_fs301.pdf",
-      "fetchedAt": "2026-10-19T17:14:36.691Z",
+      "fetchedAt": "2026-10-19T19:58:47.048Z",
       "committed": true
     },
     {
@@ -1073,7 +1082,7 @@
       "bytes": 666801,
       "source": "dm_notices",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/1045201_-_discontinue_and_close_with_exhibit_a.pdf",
-      "fetchedAt": "2026-10-19T17:14:40.700Z",
+      "fetchedAt": "2026-10-19T19:58:54.413Z",
       "committed": true
     },
     {
@@ -1082,7 +1091,16 @@
       "bytes": 335001,
       "source": "dm_notices",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/american_fsr_road_closure_february_9_2026.pdf",
-      "fetchedAt": "2026-10-19T17:14:14.645Z",
+      "fetchedAt": "2026-10-19T19:57:44.789Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DCK-668dd9ac-rup_obligations_and_expectations_-_august_18_2021_signed.pdf",
+      "sha256": "0d48f067da9ad4230fb01b2d92e9f3efd6470accfab85e871ded967037eddaf0",
+      "bytes": 938083,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/rup_obligations_and_expectations_-_august_18_2021_signed.pdf",
+      "fetchedAt": "2026-10-19T19:58:30.503Z",
       "committed": true
     },
     {
@@ -1091,7 +1109,7 @@
       "bytes": 313927,
       "source": "dm_notices",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/hunter_fsr_variance_to_closure.pdf",
-      "fetchedAt": "2026-10-19T17:14:30.664Z",
+      "fetchedAt": "2026-10-19T19:58:28.424Z",
       "committed": true
     },
     {
@@ -1100,7 +1118,7 @@
       "bytes": 1346252,
       "source": "dm_notices",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/fs301_december_13_2024.pdf",
-      "fetchedAt": "2026-10-19T17:14:34.825Z",
+      "fetchedAt": "2026-10-19T19:58:37.818Z",
       "committed": true
     },
     {
@@ -1109,7 +1127,7 @@
       "bytes": 202397,
       "source": "dm_notices",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/71w27vb_fsr_closures_amended_july_22.pdf",
-      "fetchedAt": "2026-10-19T17:14:10.641Z",
+      "fetchedAt": "2026-10-19T19:57:39.686Z",
       "committed": true
     },
     {
@@ -1118,7 +1136,7 @@
       "bytes": 392800,
       "source": "dm_notices",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/squeah_fsr_-_2020_road_closure.pdf",
-      "fetchedAt": "2026-10-19T17:14:28.662Z",
+      "fetchedAt": "2026-10-19T19:58:26.417Z",
       "committed": true
     },
     {
@@ -1127,7 +1145,7 @@
       "bytes": 288241,
       "source": "dm_notices",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/mowhokam_east_fsr_closure.pdf",
-      "fetchedAt": "2026-10-19T17:14:24.669Z",
+      "fetchedAt": "2026-10-19T19:58:21.470Z",
       "committed": true
     },
     {
@@ -1136,7 +1154,7 @@
       "bytes": 405167,
       "source": "dm_notices",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/notice_of_clousre_harrison_east_fsr_-_rescinded.pdf",
-      "fetchedAt": "2026-10-19T17:14:08.995Z",
+      "fetchedAt": "2026-10-19T19:57:37.682Z",
       "committed": true
     },
     {
@@ -1145,7 +1163,7 @@
       "bytes": 312747,
       "source": "dm_notices",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/fsr_road_closure_notice_december_storm_damage.pdf",
-      "fetchedAt": "2026-10-19T17:14:12.703Z",
+      "fetchedAt": "2026-10-19T19:57:41.694Z",
       "committed": true
     },
     {
@@ -1154,7 +1172,7 @@
       "bytes": 237992,
       "source": "dm_notices",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/bench_fsr_road_closure.pdf",
-      "fetchedAt": "2026-10-19T17:14:16.662Z",
+      "fetchedAt": "2026-10-19T19:57:46.657Z",
       "committed": true
     },
     {
@@ -1163,7 +1181,7 @@
       "bytes": 1023118,
       "source": "dm_notices",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/ac8126-19-01_bcts.pdf",
-      "fetchedAt": "2026-10-19T17:14:26.734Z",
+      "fetchedAt": "2026-10-19T19:58:23.768Z",
       "committed": true
     },
     {
@@ -1172,7 +1190,61 @@
       "bytes": 641065,
       "source": "dm_notices",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/807402_03_04_05_06_fs_301_-_fsr_discontinue_and_close.pdf",
-      "fetchedAt": "2026-10-19T17:14:32.712Z",
+      "fetchedAt": "2026-10-19T19:58:35.795Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DCR-13a23bfb-johnhart_cw_nocamporder.pdf",
+      "sha256": "3babcd05d075fee2ef6cba7dea6b173b0eb5db65ef40591a6421238f5f8089e2",
+      "bytes": 431212,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/campbell-river/johnhart_cw_nocamporder.pdf",
+      "fetchedAt": "2026-10-19T19:57:10.284Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DQC-25fa270a-hanagover_fsr_822906_closure.pdf",
+      "sha256": "f7a39a0b68f0e386440ce14b5b51e9701c589299fb98c563d1fdee0a2bcce66c",
+      "bytes": 1194308,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/haida-gwaii/hanagover_fsr_822906_closure.pdf",
+      "fetchedAt": "2026-10-19T19:59:26.526Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DQC-57ce8ede-delkatla_10891_closure.pdf",
+      "sha256": "6e7d05f84cd6f09e3821ffdb8d5bfc93d144fb9c7977814ed5f3c1c1fb86e87a",
+      "bytes": 1217830,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/haida-gwaii/delkatla_10891_closure.pdf",
+      "fetchedAt": "2026-10-19T19:59:16.302Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DQC-6a1cfbef-2024_06_07_bill_brown_closure.pdf",
+      "sha256": "588f48a6a77b39f3ccaf3689b6c6b605762b7f1552b39f832fbc39780982320f",
+      "bytes": 977848,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/haida-gwaii/2024_06_07_bill_brown_closure.pdf",
+      "fetchedAt": "2026-10-19T19:58:57.270Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DQC-8d4c7fb4-bonanza_fsr_822907_closure.pdf",
+      "sha256": "d2c5d8259dec08390a02e5b1caf65ed57c548781e83408e27505d84ba2b8e7d6",
+      "bytes": 1168763,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/haida-gwaii/bonanza_fsr_822907_closure.pdf",
+      "fetchedAt": "2026-10-19T19:59:04.156Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DSC-335a98d1-a94817_bk_forest_service_road.pdf",
+      "sha256": "351e8723ffc1f3b62ac8282e4837da7c8249719ea2aa318bbf1786e8a38f9e52",
+      "bytes": 267809,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/forestry/bc-timber-sales/updates-information-releases/a94817_bk_forest_service_road.pdf",
+      "fetchedAt": "2026-10-19T20:01:32.748Z",
       "committed": true
     },
     {
@@ -1181,7 +1253,88 @@
       "bytes": 206654,
       "source": "dm_notices",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/selkirk/faq_document_for_incomappleux_deactivation.pdf",
-      "fetchedAt": "2026-10-19T17:14:48.672Z",
+      "fetchedAt": "2026-10-19T20:00:02.133Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DSI-2654b71d-camper_creek_mainline_gate_map.pdf",
+      "sha256": "ac272fba023684cbd2cc33edc0ffcd0b2e3588e71e5d715e92195f8463bfaa1f",
+      "bytes": 1977968,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/camper_creek_mainline_gate_map.pdf",
+      "fetchedAt": "2026-10-19T20:01:11.922Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DSI-66e61e93-gate_location_map_braden_mainline_and_tr11.pdf",
+      "sha256": "cfdb648da2101309561722ee339507dc288c7dbca686cb2f9e662cfe64bf6b53",
+      "bytes": 705459,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/gate_location_map_braden_mainline_and_tr11.pdf",
+      "fetchedAt": "2026-10-19T20:01:00.593Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DSI-7d1cff67-canal_main_closure.pdf",
+      "sha256": "5c08ed5c449fb60f904a3aae305037f1d11c46431b3d41863dbeafd212288e97",
+      "bytes": 1569803,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/canal_main_closure.pdf",
+      "fetchedAt": "2026-10-19T20:00:34.404Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DSI-8a4bec36-news_release_-_access_changes_implemented_to_protect_local_watershed.pdf",
+      "sha256": "9ea7af0a7f213925bf7603488950ad7fc906293d6f4de419f9a9b4bfa315636e",
+      "bytes": 84593,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/news_release_-_access_changes_implemented_to_protect_local_watershed.pdf",
+      "fetchedAt": "2026-10-19T20:00:46.775Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DSI-98c8d0df-map_gate_fsr5833_br01.pdf",
+      "sha256": "c4293e8c9ccae284dc22e404edf08995fc50e137c01d7bec2933d7c0c43c4eba",
+      "bytes": 326270,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/map_gate_fsr5833_br01.pdf",
+      "fetchedAt": "2026-10-19T20:01:13.555Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DSI-a9fec493-walbran700_gate_location_map_2026mar9.pdf",
+      "sha256": "f6589c831ae56463f425d636378f69ae1eba5227c16ef641b7324a1cf9ada8dc",
+      "bytes": 398162,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/walbran700_gate_location_map_2026mar9.pdf",
+      "fetchedAt": "2026-10-19T20:01:18.207Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DSI-c2357ace-map-banon_fsr_gate_location.pdf",
+      "sha256": "8610bde3b5a5c880818af1f0d4fe9d841f4b4786699c4f562fbee6b24ae1dcdc",
+      "bytes": 1166825,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/map-banon_fsr_gate_location.pdf",
+      "fetchedAt": "2026-10-19T20:00:48.893Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DSI-c4f696e7-map_tfl46_bugaboo_main_gate_location.pdf",
+      "sha256": "ef6a089434fc3ee44f709e927ac07584fe39aa154972088a17cc8e69b2dc7aeb",
+      "bytes": 584251,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/map_tfl46_bugaboo_main_gate_location.pdf",
+      "fetchedAt": "2026-10-19T20:01:06.118Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DSI-dc65a045-lucky_fsr_road_closure.pdf",
+      "sha256": "167e5215ee6d81768c96316146bb4d458c4ecdb6e4a6e49d296014f76380a102",
+      "bytes": 376046,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/lucky_fsr_road_closure.pdf",
+      "fetchedAt": "2026-10-19T20:00:31.148Z",
       "committed": true
     },
     {
@@ -1190,7 +1343,7 @@
       "bytes": 189493,
       "source": "dm_notices",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/stuart-nechako/dsn_road_restictions_2026_spring_road_bans_bulletin_3.pdf",
-      "fetchedAt": "2026-10-19T17:14:54.676Z",
+      "fetchedAt": "2026-10-19T20:01:22.167Z",
       "committed": true
     },
     {
@@ -1199,7 +1352,25 @@
       "bytes": 257819,
       "source": "dm_notices",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/stuart-nechako/dsn_road_restrictions_bulletin_4.pdf",
-      "fetchedAt": "2026-10-19T17:14:52.634Z",
+      "fetchedAt": "2026-10-19T20:01:20.222Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DVA-792bd4d5-project_flyer_driftwood_rebuild.pdf",
+      "sha256": "ee4f49221155f5ff5f982f40eddef74ad3ea03967db3dcc9616322d5ec7d9e57",
+      "bytes": 407944,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/stuart-nechako/project_flyer_driftwood_rebuild.pdf",
+      "fetchedAt": "2026-10-19T20:01:24.207Z",
+      "committed": true
+    },
+    {
+      "path": "raw/2026-10/dm_notices/DVA-d66840c9-upper_driftwood_deactivation_advertisement.pdf",
+      "sha256": "b36ac009fa5d19482589d91bd0ed1031b56a0ffed8c400a07b9182be8752d6ef",
+      "bytes": 1196224,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/stuart-nechako/upper_driftwood_deactivation_advertisement.pdf",
+      "fetchedAt": "2026-10-19T20:01:30.130Z",
       "committed": true
     },
     {
@@ -1208,7 +1379,37 @@
       "bytes": 2215982,
       "source": "dm_notices",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/ck-2519_-_2024_inspection_signed.pdf",
-      "fetchedAt": "2026-10-19T17:14:23.114Z",
+      "fetchedAt": "2026-10-19T19:57:52.859Z",
+      "committed": false,
+      "note": "over 2 MB: hash kept, file not committed"
+    },
+    {
+      "path": "raw/2026-10/dm_notices/large/DCR-9ef086bc-dcr_sdfmap.pdf",
+      "sha256": "47dd9770d8c926d218b3e7a502840ed70d8fffc4713adff97f25a367d624084f",
+      "bytes": 3444698,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/campbell-river/dcr_sdfmap.pdf",
+      "fetchedAt": "2026-10-19T19:57:15.602Z",
+      "committed": false,
+      "note": "over 2 MB: hash kept, file not committed"
+    },
+    {
+      "path": "raw/2026-10/dm_notices/large/DCS-01301b15-bridge_inspections_2015_hillshade_south_cascades_all_structures_april2015.pdf",
+      "sha256": "a2231c27cd1a98b2bfb903f0ec8cc6705bb7f6eca2cb8f2b493028a33da77628",
+      "bytes": 27723473,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/cascades/bridge_inspections_2015_hillshade_south_cascades_all_structures_april2015.pdf",
+      "fetchedAt": "2026-10-19T19:57:31.083Z",
+      "committed": false,
+      "note": "over 2 MB: hash kept, file not committed"
+    },
+    {
+      "path": "raw/2026-10/dm_notices/large/DCS-8f7c4b60-cascades_bridges2011dli.pdf",
+      "sha256": "e40d10a5d339d1050e22353f97200e1181fd783ba44d7e59876242a9a8c1e9f8",
+      "bytes": 36120357,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/cascades/cascades_bridges2011dli.pdf",
+      "fetchedAt": "2026-10-19T19:57:36.706Z",
       "committed": false,
       "note": "over 2 MB: hash kept, file not committed"
     },
@@ -1218,7 +1419,7 @@
       "bytes": 6158250,
       "source": "dm_notices",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/selkirk/incomappleux_br2deact.pdf",
-      "fetchedAt": "2026-10-19T17:14:45.142Z",
+      "fetchedAt": "2026-10-19T19:59:39.480Z",
       "committed": false,
       "note": "over 2 MB: hash kept, file not committed"
     },
@@ -1228,7 +1429,7 @@
       "bytes": 8504145,
       "source": "dm_notices",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/selkirk/incomappleux_road_deactivation_appendix_a.pdf",
-      "fetchedAt": "2026-10-19T17:14:47.193Z",
+      "fetchedAt": "2026-10-19T19:59:41.482Z",
       "committed": false,
       "note": "over 2 MB: hash kept, file not committed"
     },
@@ -1238,7 +1439,7 @@
       "bytes": 6966871,
       "source": "dm_notices",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/selkirk/incomappleux_road_deactivation_prescription_overview_2024_contour_new.pdf",
-      "fetchedAt": "2026-10-19T17:14:43.440Z",
+      "fetchedAt": "2026-10-19T19:59:37.580Z",
       "committed": false,
       "note": "over 2 MB: hash kept, file not committed"
     },
@@ -1248,7 +1449,17 @@
       "bytes": 6787379,
       "source": "dm_notices",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/selkirk/trout_lake_rady_creek_deactivation_prescription_map.pdf",
-      "fetchedAt": "2026-10-19T17:14:51.327Z",
+      "fetchedAt": "2026-10-19T20:00:03.328Z",
+      "committed": false,
+      "note": "over 2 MB: hash kept, file not committed"
+    },
+    {
+      "path": "raw/2026-10/dm_notices/large/DSI-5f111aca-kmu_gate_location_overview_map.pdf",
+      "sha256": "8369934ad420dcf1c8b9fd3f9eaf5347c02412aab7c4f3c177858e0aeaf2a86b",
+      "bytes": 3164149,
+      "source": "dm_notices",
+      "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/kmu_gate_location_overview_map.pdf",
+      "fetchedAt": "2026-10-19T20:01:16.597Z",
       "committed": false,
       "note": "over 2 MB: hash kept, file not committed"
     },
@@ -1267,13 +1478,13 @@
       "source": "closed_areas",
       "what": "legal text",
       "error": "no dated copy of 76_84_00_multi, 196_99, 190_84, 180_90, 16_2004, 38_2005: waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)",
-      "at": "2026-10-19T17:13:23.522Z"
+      "at": "2026-10-19T19:56:24.871Z"
     },
     {
       "source": "bylaws",
       "what": "muni:Bowen Island Municipality",
       "error": "robots.txt for www.bimbc.ca could not be read, so automated access is not assumed",
-      "at": "2026-10-19T17:46:56.838Z"
+      "at": "2026-10-19T20:21:18.643Z"
     }
   ]
 }
