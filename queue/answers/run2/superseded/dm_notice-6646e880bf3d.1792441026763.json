@@ -1,0 +1,35 @@
+{
+  "task_id": "dm_notice-6646e880bf3d",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:16:13Z",
+  "answer": {
+    "legible": true,
+    "document_type": "other",
+    "signed_on": "2015-04-27",
+    "rescinded": false,
+    "roads": [],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "Cascades Forest District (South) All Structures - 2015",
+        "shows": "Title of a district-wide bridge inspection map (\"Sourcedata: Corporate Bridge Registry (Accessed April 2015)\", \"Print Date: April 27, 2015\"). Star and dot symbols mark bridges (legend \"Bridge Inspections (Year Required)\": All Bridges, 2015), labelled with crossing IDs. No closure, gate, washout or deactivation marks are shown."
+      },
+      {
+        "page": 1,
+        "label": "LEGEND",
+        "shows": "Road line types: Road (Paved), TRIM Road Gravel, Forest Service Road (FSR), Status Road, and Forest District Boundary. The legend has no closure or gate symbol."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "Print Date: April 27, 2015"
+      }
+    ],
+    "uncertain": []
+  }
+}

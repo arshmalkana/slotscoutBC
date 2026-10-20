@@ -1,0 +1,52 @@
+{
+  "task_id": "dm_notice-8e8150866b7d",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:13:03Z",
+  "answer": {
+    "legible": true,
+    "document_type": "gate_map",
+    "signed_on": null,
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "McKay Lake FSR 5833 Br.01",
+        "file_section": "5833.01",
+        "quote": "McKay Lake FSR 5833 Br.01",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 0.8,
+            "km_end": null,
+            "extent": "at",
+            "status": "gated",
+            "seen_on": "text",
+            "quote": "Gate Location Station 0+800 FSR 5833 - Br.01"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "Gate Location Station 0+800 FSR 5833 - Br.01",
+        "shows": "A red callout box with an arrow pointing at one spot on the green road line labelled 5833-01, near where that line meets the orange road line labelled 5833-02 and a green branch road; a recreation polygon labelled REC205630 is beside it. The map title reads Gate Location McKay Lake FSR 5833 Br.01. No other gate or closure marks."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "rescinded",
+        "quote": "Gate Location McKay Lake FSR 5833 Br.01"
+      }
+    ],
+    "uncertain": [
+      "signed_on",
+      "roads[0].effective_from",
+      "roads[0].effective_to"
+    ]
+  }
+}

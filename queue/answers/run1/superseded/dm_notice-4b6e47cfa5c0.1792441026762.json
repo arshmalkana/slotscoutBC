@@ -1,0 +1,111 @@
+{
+  "task_id": "dm_notice-4b6e47cfa5c0",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:15:32Z",
+  "answer": {
+    "legible": true,
+    "document_type": "gate_map",
+    "signed_on": "2026-03-18",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Walbran Main",
+        "file_section": null,
+        "quote": "Walbran Main",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 11.6,
+            "km_end": null,
+            "extent": "at",
+            "status": "gated",
+            "seen_on": "text",
+            "quote": "Gate on Walbran Main - Station 11+600"
+          }
+        ]
+      },
+      {
+        "name": "WA700",
+        "file_section": null,
+        "quote": "WA700",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 0.01,
+            "km_end": null,
+            "extent": "at",
+            "status": "gated",
+            "seen_on": "text",
+            "quote": "Gate on WA700 - Station 0+010"
+          }
+        ]
+      },
+      {
+        "name": "WA900",
+        "file_section": null,
+        "quote": "WA900",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 0.372,
+            "km_end": null,
+            "extent": "at",
+            "status": "gated",
+            "seen_on": "text",
+            "quote": "Gate on WA900 - Station 0+372"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "Gate on Walbran Main - Station 11+600",
+        "shows": "A green-bordered callout with an arrow pointing to a spot on the road labelled WALBRAN MAIN (WA), near where the roads labelled WA702 and WA703 branch off."
+      },
+      {
+        "page": 1,
+        "label": "Gate on WA700 - Station 0+010",
+        "shows": "A green-bordered callout with an arrow pointing to the start of the road labelled WA700, near the WA702 and WA703 labels."
+      },
+      {
+        "page": 1,
+        "label": "Gate on WA900 - Station 0+372",
+        "shows": "A green-bordered callout with an arrow pointing to a spot on the road labelled WA900-PAO, near the WA1000-PAO and WA931 labels."
+      },
+      {
+        "page": 1,
+        "label": "Temporary Gate Locations Map",
+        "shows": "Map title, scale 1:25,000, dated Date: 2026-03-18."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "Date: 2026-03-18"
+      },
+      {
+        "field": "rescinded",
+        "quote": "Temporary Gate Locations Map"
+      }
+    ],
+    "uncertain": [
+      "roads[0].file_section",
+      "roads[0].effective_from",
+      "roads[0].effective_to",
+      "roads[1].file_section",
+      "roads[1].effective_from",
+      "roads[1].effective_to",
+      "roads[2].file_section",
+      "roads[2].effective_from",
+      "roads[2].effective_to"
+    ]
+  }
+}

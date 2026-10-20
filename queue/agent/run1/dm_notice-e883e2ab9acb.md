@@ -1,0 +1,2893 @@
+# Extraction task dm_notice-e883e2ab9acb (run 1)
+
+Write your answer to `queue/answers/run1/dm_notice-e883e2ab9acb.json` as:
+
+```json
+{ "task_id": "dm_notice-e883e2ab9acb", "run": 1, "mode": "agent", "model": "Claude Code agent mode", "prompt_version": "dm_notice.v1", "schema_id": "dm_notice.v1", "produced_at": "<ISO time>", "answer": { ...matching schema/dm_notice.v1.json... } }
+```
+
+The answer must match `schema/dm_notice.v1.json` exactly. Use only the source text below and the page images listed. Never write coordinates. Every filled field needs its exact quote.
+
+## Instructions
+
+# dm_notice.v1
+
+You read one document linked from a British Columbia natural resource district road safety page: a District Manager closure order, a notice that rescinds one, a gate location map, a road restriction bulletin, a deactivation notice, or something else (an inspection report, a news release, a flyer). Return every road it closes, restricts, gates or deactivates, in the JSON schema `dm_notice.v1`. Code places km points on the official road line; a person checks every reading before it counts on the map.
+
+You get:
+
+- the document's text: its text layer, followed by text read by OCR from pages that are pictures (each OCR page starts with `[Page N: text read by OCR from the page image]`);
+- when the PDF has map or scan pages, images of those pages.
+
+Read only this document. Do not use anything you know about the road from elsewhere.
+
+How to use the page images:
+
+- Read printed words the text missed: road names, file and section numbers, km labels, "Gate", "Closed", "Deactivated", legends and titles.
+- See what the map marks: a gate symbol on a road, a stretch drawn as closed or deactivated, a closure point.
+- Never write coordinates, never measure distances from the map or its scale, and never say where something is except by the words printed on the map. If the map marks a gate or closure with no km label, give the point with `km` null and `extent` `unknown`, and describe the mark in `map_readings`.
+
+How to fill the fields:
+
+- `legible`: false only if neither the text nor the images can be read at all; then leave `roads` empty and add `roads` to `uncertain`.
+- `document_type`: what the document is.
+- `signed_on`: the date it was signed or issued, as YYYY-MM-DD, or null.
+- `rescinded`: true only if the document rescinds, lifts or cancels a closure, or says the road has reopened.
+- `roads`: one entry per road the document closes, restricts, gates or deactivates (none for a document that closes nothing), with:
+  - `name` as written, `file_section` ("5748.01", or the road file number such as "FSR 5833" written as "5833") or null, and `quote`: the exact words that name the road, from the text or printed on the map;
+  - `effective_from` and `effective_to` as YYYY-MM-DD, or null;
+  - `points`: one entry per km point or stretch, with `km`, `km_end`, `extent` (`at`, `beyond`, `range`, `whole_road`, `unknown`), `status` (`closed`, `restricted`, `gated`, `washout`, `bridge_out`, `deactivated`, `caution`), `seen_on` (`text` or `map`) and `quote`: the full sentence from the text, or the label printed on the map exactly as printed. A road closed with no km point gets one point with `km` null and `extent` `whole_road` or `unknown`.
+- `map_readings`: for each marked place on a map page, the page number, the words printed there, and what the map shows there in plain words.
+
+Rules:
+
+1. Every filled top-level field (`signed_on`, `rescinded`) needs an entry in `quotes` with the exact words it came from. Each road and each point carries its own `quote`. Quotes are checked against the text and the OCR text; a value whose quote is not found is not counted, and a person checks it on the image instead.
+2. Never write coordinates or place km points yourself.
+3. If you cannot tell a point's status, use the stricter reading only if the document supports it; otherwise leave the point out and add the road's `points` to `uncertain`.
+4. Return only the JSON.
+
+
+## Schema
+
+```json
+{
+ "type": "object",
+ "properties": {
+  "legible": {
+   "type": "boolean",
+   "description": "False only when neither the text nor the page images can be read at all."
+  },
+  "document_type": {
+   "type": "string",
+   "enum": [
+    "closure_order",
+    "closure_rescinded",
+    "gate_map",
+    "restriction_bulletin",
+    "deactivation_notice",
+    "other"
+   ]
+  },
+  "signed_on": {
+   "type": [
+    "string",
+    "null"
+   ],
+   "description": "Date the notice was signed or issued, as YYYY-MM-DD."
+  },
+  "rescinded": {
+   "type": "boolean"
+  },
+  "roads": {
+   "type": "array",
+   "description": "Every road the document closes, restricts, gates or deactivates. Empty when it closes nothing.",
+   "items": {
+    "type": "object",
+    "properties": {
+     "name": {
+      "type": "string"
+     },
+     "file_section": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "quote": {
+      "type": "string",
+      "description": "The exact words that name this road, copied from the text or printed on the map."
+     },
+     "effective_from": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "effective_to": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "points": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "properties": {
+        "km": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "km_end": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "extent": {
+         "type": "string",
+         "enum": [
+          "at",
+          "beyond",
+          "range",
+          "whole_road",
+          "unknown"
+         ]
+        },
+        "status": {
+         "type": "string",
+         "enum": [
+          "caution",
+          "restricted",
+          "closed",
+          "gated",
+          "washout",
+          "bridge_out",
+          "deactivated"
+         ]
+        },
+        "seen_on": {
+         "type": "string",
+         "enum": [
+          "text",
+          "map"
+         ]
+        },
+        "quote": {
+         "type": "string"
+        }
+       },
+       "required": [
+        "km",
+        "km_end",
+        "extent",
+        "status",
+        "seen_on",
+        "quote"
+       ],
+       "additionalProperties": false
+      }
+     }
+    },
+    "required": [
+     "name",
+     "file_section",
+     "quote",
+     "effective_from",
+     "effective_to",
+     "points"
+    ],
+    "additionalProperties": false
+   }
+  },
+  "map_readings": {
+   "type": "array",
+   "description": "What the page images show, one entry per marked place: the words printed there and what the map marks.",
+   "items": {
+    "type": "object",
+    "properties": {
+     "page": {
+      "type": "integer"
+     },
+     "label": {
+      "type": "string",
+      "description": "The words printed on the map at that place, exactly as printed."
+     },
+     "shows": {
+      "type": "string",
+      "description": "What the map marks there, in plain words (no coordinates)."
+     }
+    },
+    "required": [
+     "page",
+     "label",
+     "shows"
+    ],
+    "additionalProperties": false
+   }
+  },
+  "quotes": {
+   "type": "array",
+   "description": "One entry per filled top-level field (signed_on, rescinded): the exact words it came from.",
+   "items": {
+    "type": "object",
+    "properties": {
+     "field": {
+      "type": "string"
+     },
+     "quote": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "field",
+     "quote"
+    ],
+    "additionalProperties": false
+   }
+  },
+  "uncertain": {
+   "type": "array",
+   "description": "Field paths the document does not settle. Leave those fields null.",
+   "items": {
+    "type": "string"
+   }
+  }
+ },
+ "required": [
+  "legible",
+  "document_type",
+  "signed_on",
+  "rescinded",
+  "roads",
+  "map_readings",
+  "quotes",
+  "uncertain"
+ ],
+ "additionalProperties": false
+}
+```
+
+## Page images
+
+Open each image with the Read tool and look at it before answering. Read the words printed on the map; never write coordinates or measure from the map.
+
+- `raw/2026-10/dm_notices/images/DSE-e4e6b5f8-trout_lake_rady_creek_deactivation_prescription_map.p1.jpg` (page 1)
+- `raw/2026-10/dm_notices/images/DSE-e4e6b5f8-trout_lake_rady_creek_deactivation_prescription_map.p3.jpg` (page 3)
+- `raw/2026-10/dm_notices/images/DSE-e4e6b5f8-trout_lake_rady_creek_deactivation_prescription_map.p13.jpg` (page 13)
+- `raw/2026-10/dm_notices/images/DSE-e4e6b5f8-trout_lake_rady_creek_deactivation_prescription_map.p15.jpg` (page 15)
+- `raw/2026-10/dm_notices/images/DSE-e4e6b5f8-trout_lake_rady_creek_deactivation_prescription_map.p17.jpg` (page 17)
+- `raw/2026-10/dm_notices/images/DSE-e4e6b5f8-trout_lake_rady_creek_deactivation_prescription_map.p18.jpg` (page 18)
+
+## Source
+
+Source: District Manager notice DSE-e4e6b5f8-trout_lake_rady_creek_deactivation_prescription_map (2026-10-19T20:00:03.328Z)
+
+<source_text>
+Suite #4, 385 Baker Street
+  Nelson, BC, V1L 4H6
+  250 509 1009
+
+
+
+
+  Ministry of Forests – Selkirk Natural Resource District
+  845 Columbia Avenue
+  Castlegar, BC
+  V1N 1H3
+
+  Rady Forest Service Road (FSR)
+  Road Deactivation Prescription
+
+  September 8, 2026
+
+
+
+
+Report Number: 26.510.01.01.16
+Distribution:
+Ministry of Forests – 1 copy
+SNT Geotechnical Ltd. – 1 copy
+
+  Rady FSR Road Deactivation  September 8, 2026
+
+Table of Contents
+1.  Introduction ........................................................................................................................................... 2
+2.  Forest Planning and Practices Regulation – Road Deactivation ........................................................... 3
+3.  Road Deactivation Plan......................................................................................................................... 4
+4.  General Site Description and Background Information ........................................................................ 5
+  4.1. Background Information ............................................................................................................... 5
+  4.2. Physiographic Description ............................................................................................................ 5
+  4.3. Climate .......................................................................................................................................... 5
+  4.4. Aerial Photography and Satellite Orthoimagery Review .............................................................. 7
+  4.5. Elements at Risk ........................................................................................................................... 7
+5. Field Assessment .................................................................................................................................. 8
+6. SNTG Road Deactivation Prescription ................................................................................................. 8
+7. Field Reviews During Road Deactivation Works ............................................................................... 18
+8. Closure – Report Use and Limitations ................................................................................................ 19
+
+Appendix A: Site Photos……………………………………….…………………………………………A1
+Appendix B: Road Deactivation & General Site Location Maps...………………………………………B1
+Appendix C: Road Deactivation General Terminology and Descriptions……….……………………….C1
+
+
+
+
+  1
+
+  Rady FSR Road Deactivation  September 8, 2026
+
+
+1. Introduction
+At the request of Michael Ferguson, RFT, of the Ministry of Forests – Selkirk Natural Resource District
+(MOF), SNT Geotechnical Ltd. (SNTG) has completed a permanent road deactivation prescription for the
+Rady FSR. Road Permit Road R07745 extends off of Highway 31 approximately 15km southeast of the
+community of Trout Lake, BC and Rady FSR begins at the end of R07745 approximately 5km upchain of
+the highway junction. The road ascends the face unit slopes of the northeast sidewall of the Trout Lake
+valley between Rady Creek and an unnamed creek to the north. The location of the Rady FSR is indicated
+on Figure 1 below.
+
+
+
+
+  N
+
+  Rady FSR slated for
+  deactivation
+
+
+
+
+Figure 1 – Location key map.
+
+As per the MOF Engineering Manual, a Qualified Registered Professional (QRP – RFT, RPF, P. Eng., or
+P. Geo.) must prepare, sign, and seal a prescription for road deactivation works and provide the results of
+the assessment in a letter or report that accompanies the deactivation prescription. This report is intended
+to meet this requirement for the Rady FSR.
+
+
+
+
+  2
+
+  Rady FSR Road Deactivation  September 8, 2026
+
+
+2. Forest Planning and Practices Regulation – Road
+  Deactivation
+The management of forest roads is regulated by the Forest Planning and Practices Regulation (FPPR) of
+the Forest and Range Practices Act (FRPA).
+
+The two main sections of the FPPR related to road deactivation are Sections 37 and 82 (1):
+
+  Section 37
+
+  An authorized person who carries out a primary forest activity must ensure that the primary forest
+  activity does not cause a landslide that has a material adverse effect in relation to one or more of
+  the subjects listed in Section 149 (1) of the Forest and Range Practices Act.
+
+  Section 82 (1) A person who deactivates a road must do the following:
+
+  (a)  barricade the road surface width in a clearly visible manner to prevent access by motor
+  vehicles, other than all-terrain vehicles;
+  (b)  remove bridge and log culvert superstructures and stream pipe culverts;
+  (c)  remove bridge and log culvert substructures, if the failure of these substructures would
+  have a material adverse effect on downstream property, improvements or forest
+  resources;
+  (d)  stabilization of the road prism or clearing width of the road if the stabilization is
+  necessary to reduce the likelihood of a material adverse effect in relation to one or more
+  of the subjects listed in section 149 (1) of the Act.
+
+Professional Guidance and Best Management Practices
+
+The following professional practice guidelines and practice advisories are to be used for professional
+services related to forest roads including road deactivation prescriptions. Each of these was jointly
+released by Engineers and Geoscientists BC (EGBC) and Forest Professionals BC (FPBC).
+
+Guidelines:
+  x Professional Services in the Forest Sector: Forest Roads, version 2.0 (2024).
+  x Professional Roles and Responsibilities for the Life Cycle of Forests Roads (2022)
+  x Professional Services in the Forest Sector - Crossings (2021).
+  x Watershed Assessment and Management of Hydrologic and Geomorphic Risk in the Forest Sector
+  (2020).
+  x Professional Services in the Forest Sector – Terrain Stability Assessments (2010).
+  x Management of Terrain Stability in the Forest Sector (2008).
+
+Other indirect EGBC professional practice guidelines that may be required include the following:
+
+  3
+
+  Rady FSR Road Deactivation  September 8, 2026
+
+  x  EGBC Professional Practice Guideline: Retaining Wall Design (2024).
+  x  EGBC Professional Practice Guideline: Erosion and Sediment Control (2024).
+  x  EGBC Professional Practice Guideline: Landslide Assessments in BC (2023)
+
+Practice Advisories:
+  x Professional Roles and Responsibilities for the Life Cycle of Forest Roads (2022).
+  x Professional Roles and Responsibilities for the Life Cycle of Forest Road Crossings (2019).
+
+Professional practice guidelines state that other related documents guide professionals in executing their
+work. These include:
+  x The MOF Engineering Manual (2026), which states that “the intent of road deactivation is to
+  place a road in a self-maintaining state that will indefinitely protect adjacent resources.”
+  x Hillslope Restoration Guidebook Best Management Practices Handbook (2001):
+  x MoF Kamloops Forest Region (1997) – Typical road deactivation prescription drawings and
+  figures.
+
+The MOF has indicated that the road is intended to be deactivated to a permanent standard, and
+that post-deactivation vehicular access is not required.
+
+
+
+3. Road Deactivation Plan
+As per the Ministry of Forests (MOF) Engineering Manual, “the intent of road deactivation is to place a
+road in a self-maintaining state that will indefinitely protect adjacent resources.” Where vehicle access is
+not required and where local slopes are unstable, road deactivation generally consists of returning the
+terrain and drainage patterns along the road alignment to as close to a pre-road construction state as is
+practical. This will typically reduce the likelihood of a landslide associated with the deactivated road
+alignment to Low or Very Low.
+
+EGBC-ABCFP 20241 indicates that Road Deactivation Plans must be prepared by the Road Activity
+Professional of Record (POR), and there must be a Coordinating Registered Professional (CRP). The
+Road Activity POR and CRP will retain Specialists where required for development of road deactivation
+plans. In the case of the Rady FSR Road deactivation, Jordan Pyette, RFT representing the MOF is
+acting as the Road Activity POR and the CRP. SNTG is acting as the Specialist for this project.
+
+EGBC-ABCFP 2024 indicates a detailed deactivation plan may include:
+
+  x  dates and details of Road Deactivation works;
+  x  proposed deactivation measures for Forest Roads and engineered structures, including those
+  specified by Specialists, or by reference to SOPs;
+  x  requirements for Field Reviews and professional assurance statements, where required;
+
+1 Professional Services in the Forest Sector – Forest Roads, EGBC-ABCFP, Version 2.0, October 2024.
+
+
+
+  4
+
+  Rady FSR Road Deactivation  September 8, 2026
+
+  x  a station-by-station description of conditions and mitigation measures prescribed;
+  x  a map showing the locations of the measures prescribed;
+  x  identification of site conditions that may be a concern for worker safety;
+  x  identification of special concerns that affect the timing or conduct of the work; and
+  x  recommendations for equipment or special work procedures necessary to complete the work.
+
+
+
+4. General Site Description and Background Information
+4.1.  Background Information
+
+The following background information was reviewed by SNTG:
+
+  x  1:5,000 scale Contour, Ortho, and Road Deactivation Prescription maps of the Rady FSR and
+  surrounding terrain. The maps were created by the MOF and are dated August 25, 2025.
+  x  Previous road deactivation prescription for the Rady FSR created by the MOF. The deactivation
+  prescription is not dated.
+  x  iMapBC2: BC provincial government web-based map database (water licenses, bedrock geology,
+  biogeoclimatic zones, historic wildfires, etc.).
+  x  Google Earth orthoimagery and digital terrain model.
+  x  Environment Canada weather station #1145297 (Nakusp)3.
+  x  ClimateBC web application4.
+
+4.2.  Physiographic Description
+
+The Rady FSR is situated in the Selkirk Mountains of the Columbia Mountain System of BC (Holland,
+1976)5. The topography of the valley sidewall slope where the Rady FSR is located is that of generally
+moderate to moderately steep gradient irregular terrain extending out of Trout Lake for approximately
+4400m. Upslope of this point, rugged alpine terrain is present making up the west side of Fays NW3
+Peak. The portion of the Rady FSR slated for deactivation spans an elevation range of 1570m to 2240m.
+The valley bottom adjacent to the road is located at an elevation of 722m while the height of land to the
+northeast at the top of Fays NW3 Peak is 2690m.
+
+Bedrock underlying the road is mapped as Cambrian to Devonian limestone, slate, siltstone, and argillite
+of the Lardeau Group – Broadview Formation. Bedrock observed in the field consisted of heavily
+fractured, weak to medium strong phyllite to schist. The observed lithology is consistent with mid grade
+metamorphism of the mapped lithology.
+
+4.3.  Climate
+
+2 Available at: https://www2.gov.bc.ca/gov/content/data/geographic-data-services/web-based-mapping/imapbc
+3 Available at: https://climate.weather.gc.ca/climate_normals/index_e.html
+4 Available at: https://climatebc.ca/mapVersion
+5 Holland, S. 1976. Landforms of British Columbia – A Physiographic Outline. BC Government.
+
+
+
+  5
+
+  Rady FSR Road Deactivation  September 8, 2026
+
+
+Based on the available biogeoclimatic (BEC – iMapBC) data, the road spans the following BEC zones:
+  x Columbia variant of the Wet Hot Engelmann Spruce – Subalpine Fir zone (ESSF wh1).
+  x Selkirk variant of the Wet Cold Engelmann Spruce – Subalpine Fir zone (ESSF wc4).
+  x Wet Cold Woodland Engelmann Spruce – Subalpine Fir zone (ESSF wcw).
+  x Wet Cold parkland Engelmann Spruce – Subalpine Fir zone (ESSF wcp).
+
+The Nakusp weather station, located 48km to the southwest of the road, records a Mean Annual
+Precipitation (MAP) of 842mm with 650mm falling as rain and is located at an elevation of 457m. The
+ClimateBC web application provides an estimated MAP by interpolating known climate data to the study
+area. The ClimateBC estimated MAP ranges from 1275mm at 1570m to 1595mm at 2240m. Given the
+differing geographical locations and elevation of the road when compared to the weather station, the MAP
+provided by ClimateBC is considered to be more accurate for the Rady FSR.
+
+Based on the ClimateBC data, the road falls mostly within Zone 2 of the MOF Southern Engineering
+Group wet weather shutdown criteria (Brayshaw 20216). A summary of the wet weather shutdown criteria
+(WWSC) is provided in Table 1 below. The reader is referred to the Brayshaw report for the details of the
+shutdown criteria as there are criteria in addition to those listed in Table 1 (such as snowmelt) that require
+consideration. SNTG recommends that the Zone 2 WWSC be implemented for the proposed
+deactivation of the Rady FSR.
+
+Table 1 – Proposed Shutdown Criteria by Zone
+  Time Period
+  Zone (annual  At start of or
+  Zone
+  precipitation)  One hour  before end of  24-hr  48-hr
+  shift (12-hr)
+  Very wet (1500 mm
+  1  n/a  28mm  35mm  60mm
+  to 3000 mm)
+  Wet (1100 mm to
+  2  n/a  25mm  30mm  50mm
+  1500 mm)
+  Average (600 mm to
+  3  10mm  22mm  25mm  40mm
+  1100 mm)
+  Dry (100 mm to 600
+  4  8mm  18mm  20mm  30mm
+  mm)
+  Identified Unstable
+  5  6mm  10mm  15mm  20mm
+  Conditions
+
+Note that, in addition to the Wet Weather Shutdown criteria indicated, and the site-specific criteria (if
+required) specified in the report, caution must also be exercised when working or parking equipment
+adjacent to streams in the vicinity of the road. Streams may be subject to hydrogeomorphic events (i.e.,
+debris flow, debris flood, or flood) during periods of prolonged or intense precipitation or snowmelt. As
+
+
+
+6 Brayshaw, D. 2021 Wet Weather Shutdown Criteria – MFLNRORD Southern Engineering Group.
+
+
+
+  6
+
+  Rady FSR Road Deactivation  September 8, 2026
+
+such, it is recommended that Zone 5 shutdown criteria be implemented when working or parking
+equipment within or adjacent to streams in the vicinity of the proposed development.
+
+4.4.  Aerial Photography and Satellite Orthoimagery Review
+
+SNTG reviewed historic aerial photography for the area between 1968 and 2011 to understand the history
+of development around the site and to help identify large-scale geologic features that would be difficult to
+identify in the field. Identification of features is limited to the resolution and the elevation at which the
+photographs were taken. The aerial photographs reviewed as part of this assessment are listed below:
+
+  x  BCD11201  #071-072  (2011)
+  x  30BCC06066  #015-017  (2006)
+  x  30BCC05035  #116-118  (2005)
+  x  15BCC01009  #164-165  (2001)
+  x  15BCB00032  #020-022  (2000)
+  x  30BCB97098  #039-041  (1997)
+  x  30BCB95114  #056-057  (1995)
+  x  30BC85058  #083-085  (1985)
+  x  15BC81118  #170-172  (1981)
+  x  BC7089  #084-086  (1968)
+
+No timber development or road related landslides are visible on the face unit slope where the Rady FSR is
+located for the duration of the air photo record or on the 2025 Google Earth orthoimagery for the site. The
+landslide incidence on the face unit slope appears to be low.
+
+4.5.  Elements at Risk
+
+The elements at potential risk from a landslide originating on or downslope of the road addressed in this
+report were identified by SNTG and include the following:
+
+x  Impact to water quality pertaining to fish habitat in Rady Creek located 300-400m to the southeast of
+  the Rady FSR.
+x  Impact to water quality pertaining to fish habitat in unnamed creek located 100-400m to the northwest
+  of the Rady FSR.
+x  Impact to Highway 31 located 1700m downslope of the Rady FSR.
+x  Impact to water quality pertaining to fish habitat in Trout Lake located 2400m downslope of the Rady
+  FSR.
+
+Highway 31 and Trout Lake are located 1700m and 2400m downslope of the Rady FSR, respectively.
+Gentle to moderate gradient benched terrain is present 700m downslope of the lowermost portion of the
+Rady FSR extending for 1000m to Highway 31 and 1700m to Trout Lake. Given this separation distance,
+a landslide originating on the Rady FSR and propagating down the face unit slope will likely runout prior
+to either Highway 31 or Trout Lake. However, a landslide originating on the Rady FSR and entering
+
+  7
+
+  Rady FSR Road Deactivation  September 8, 2026
+
+either the Unnamed Creek to the north or Rady Creek to the south could become entrained and a
+subsequent debris flow could propagate to valley bottom potentially impacting either Highway 31 or
+Trout Lake.
+
+Other downslope resources which have not been addressed in this report include; timber and soil
+resources, wildlife habitat and visual resources.
+
+Note that this report does not include a partial risk assessment for the stated elements at risk due to
+a resultant low to very low residual hazard of a road related landslide once the deactivation
+recommendations in this report are implemented. Road segments with a residual landslide likelihood
+exceeding low are identified in Section 5 of this report.
+
+
+
+5. Field Assessment
+Fieldwork was completed by Ryan Williams, P.Geo. of SNTG on August 18, 2026. Fieldwork consisted
+of a walking traverse of the road. Conditions at the time of fieldwork were warm and sunny with no
+recent precipitation. Waypoints were collected at points of interest using a GPS-enabled phone with an
+accuracy estimated to be on the order of ±5m. Waypoints were flagged in the field with plain orange
+flagging tape.
+
+Note that dead and damaged trees were noted in close proximity to the segment of the Rady FSR
+slated for deactivation. SNTG recommends that the MOF retain a Qualified Professional (QP) to
+complete a Danger Tree Assessment (DTA) prior to the commencement of road deactivation works.
+
+
+
+6. SNTG Road Deactivation Prescription
+Details of the road deactivation prescription are provided in Table 2 below. The location of the
+deactivation prescription points referenced in Table 2 are also provided in the road deactivation map
+contained in Appendix B. The specific locations for the deactivation prescription listed in Table 2 have
+been referenced to UTM coordinates in Zone 11U. Culverts are noted as being metal (CMP) or plastic
+(CPP) with the diameter provided in mm.
+
+General Deactivation Requirements and Terminology
+
+Pullback Fill 1 (PF1) – Pullback fill for 0-3m slope distance.
+
+Pullback Fill 2 (PF2) – Pullback fill for 3-6m slope distance.
+
+Pullback Fill 3 (PF3) – Pullback fill for >6m slope distance.
+
+
+
+
+  8
+
+  Rady FSR Road Deactivation  September 8, 2026
+
+Cross ditches are required in numerous locations along the road segment proposed for deactivation and
+must have a minimum base width of 1m, a minimum depth of 1m, and a sidewall slope not to exceed 50%
+(2H:1V). Refer to Map 1 in Appendix B for locations.
+
+Further details of deactivation methods and best practices are contained in Appendix C.
+
+General observations and recommendations are as follows:
+
+∆1 to ∆16
+The road is situated on gentle to moderate gradient alpine to subalpine terrain. The road is mostly
+constructed on ground with minimal cuts and fills. Proposed deactivation works consist of cross ditching
+to better manage water along the alignment. Refer to Table 2 below for the details of the road deactivation
+prescription. Implementation of the deactivation prescription will result in an estimated residual very low
+likelihood of a road related landslide occurring.
+
+∆16 to ∆18
+The road traverses moderately steep gradient terrain to a switchback location at ∆17. Cutslopes extend up
+to 15m up the slope and there are several cutslope failures on the order of 50m 3 in size. The road fill at the
+switchback location is up to 15m in length and has a small erosion track present. The deactivation
+prescription for this road segment consists of recontouring the road prism with pullback of all fill material
+within reach of an excavator. Fill must be pulled back to a minimum of 10m length from the running
+surface of the road. These works will result in loss of vehicle access along the alignment, including All
+Terrain Vehicle (ATV) access. It may be possible to cut a narrow ATV trail across the recontoured road
+surface at the time of deactivation works, however, the excess material generated from constructing the
+trail will need to be transported to a suitable waste site. This will result in an increased cost for the works
+above that of the prescribed recontouring.
+
+Refer to Table 2 below for the details of the road deactivation prescription. Implementation of the
+deactivation prescription will result in an estimated residual low likelihood of a road related landslide
+occurring.
+
+∆18 to ∆71
+The road is situated on mainly moderate with some sections of moderately steep gradient terrain. Cuts and
+fills are relatively small for the most part and deactivation works primarily consist of cross ditching for
+water management purposes with isolated sections of light pullback. Refer to Table 2 below for the
+details of the road deactivation prescription. Implementation of the deactivation prescription will result in
+an estimated residual very low to low likelihood of a road related landslide occurring.
+
+
+
+
+  9
+
+  Rady FSR Road Deactivation  September 8, 2026
+
+
+Table 2: Rady FSR Road Deactivation Prescription
+ Road Location
+  Existing Road and Adjacent Terrain Conditions  Deactivation Prescription
+(GPS waypoints)
+  The road is situated on gentle to moderate gradient irregular
+  terrain.
+
+  The running surface of the road has a width of 3m to 4m. The
+  cutslope of the road has a length of 0m to 1m and a gradient of
+  70%. The fillslope of the road has a length of 0m to 1m and a
+  gradient of 70%.
+
+  The road prism is intact aside from erosion on the running surface.
+  ∆1
+  Drainage paths/structures are present at the following locations:
+  475307mE
+  x  ∆2 (UTM 475248mE, 5604563mN) - Cross ditch required.
+  5604614mN
+  x  ∆3 (UTM 475191mE, 5604531mN) - Cross ditch required.
+  x  ∆4 (UTM 475139mE, 5604511mN) - Cross ditch required.
+  to  x  ∆5 (UTM 475104mE, 5604508mN) - Cross ditch required.  x  Leave the road prism intact.
+  x  ∆6 (UTM 475065mE, 5604489mN) - Cross ditch required.
+  ∆16  x  ∆7 (UTM 475066mE, 5604434mN) - Cross ditch required.
+  474861mE  x  Install cross ditches at ∆2, ∆3, ∆4, ∆5, ∆6, ∆7, ∆8, ∆9, ∆10, ∆11,
+  x  ∆8 (UTM 475044mE, 5604384mN) - Cross ditch required.  ∆12, ∆13, ∆14, ∆15, and ∆16.
+  5604230mN  x  ∆9 (UTM 475013mE, 5604325mN) - Cross ditch required.
+  x  ∆10 (UTM 474981mE, 5604309mN) - Cross ditch required.
+  (Approximate  x  ∆11 (UTM 474941mE, 5604347mN) - Cross ditch required.
+ section length =  x  ∆12 (UTM 474951mE, 5604243mN) - Cross ditch required.
+  800m)  x  ∆13 (UTM 474971mE, 5604208mN) - Cross ditch required.
+  x  ∆14 (UTM 474925mE, 5604215mN) - Cross ditch required.
+  x  ∆15 (UTM 474883mE, 5604223mN) - Cross ditch required.
+  x  ∆16 (UTM 474861mE, 5604230mN) - Cross ditch required.
+
+  The local surficial material consists of a veneer of well drained,
+  compact rubble derived from weathering of local bedrock.
+  Bedrock outcrops are visible in numerous locations and are
+  composed of heavily fractured, weak to medium strong phyllite
+  and schist.
+
+
+
+
+  10
+
+  Rady FSR Road Deactivation  September 8, 2026
+
+
+Table 2: Rady FSR Road Deactivation Prescription
+ Road Location
+  Existing Road and Adjacent Terrain Conditions  Deactivation Prescription
+(GPS waypoints)
+  The road is situated on moderately steep gradient irregular
+  terrain. The road turns a switchback at ∆17. Large cuts and  x  Pullback and recontour (PF2 to PF3)
+  fills are present at the switchback location.  o Ensure the road surface is decompacted (0.3m) prior to pullback
+  of the fill material;
+  The running surface of the road has a width of 3m to 4m.  o Pullback all fill material within reach of the excavator
+  ∆16
+  The cutslope of the road has a length of 5m to 15m and a  (estimated at 5-10m slope length) and place the pulled back
+  474861mE
+  gradient of 100% to 120%. The fillslope of the road has a  material along the inner edge of the decompacted road surface;
+  5604230mN
+  length of 5m to 15m and a gradient of 80% to 120%.  o Scatter organic material and woody debris across the pulled
+  back surface; and
+  to
+  The road prism is intact for the most part aside from a small  o Consider grass seeding the pulled back surface if replanting is
+  erosion track at the switchback at ∆17 and several cutslope  not expected to occur.
+  ∆18
+  474828mE  failures up to 50m3 in size between ∆16 and ∆17.
+  x  Note that some unretrieved fill will likely remain in place at the
+  5604271mN
+  Drainage paths/structures are present at the following  switchback location at ∆17. Fill must be pulled back to a minimum
+  (Approximate  locations:  of 10m length from the running surface of the road. The volume of
+ section length =  x ∆18 (UTM 474828mE, 5604271mN) – Cross ditch  unretrieved fill will be a small enough that it is not expected to
+  115m)  required.  significantly increase the likelihood of a road related landslide
+  following deactivation works.
+  The local surficial material consists of a blanket of
+  compact, well drained gravelly silt and sand till intermixed  x  Install a cross ditch at ∆18.
+  with colluvium.
+
+
+
+
+  11
+
+  Rady FSR Road Deactivation  September 8, 2026
+
+
+Table 2: Rady FSR Road Deactivation Prescription
+ Road Location
+  Existing Road and Adjacent Terrain Conditions  Deactivation Prescription
+(GPS waypoints)
+  The road is situated on moderate to moderately steep
+  gradient irregular terrain.
+
+  The running surface of the road has a width of 3m to 4m.
+  The cutslope of the road has a length of 1m to 2m and a
+  gradient of 80% to 100%. The fillslope of the road has a
+  length of 1m to 4m and a gradient of 70% to 90%.
+
+  The road prism is intact with no signs of instability.
+
+  Drainage paths/structures are present at the following
+  ∆18  locations:
+  474828mE  x ∆19 (UTM 474814mE, 5604190mN) - Cross ditch  x  Leave the road prism intact
+  5604271mN  required.
+  x ∆20 (UTM 474832mE, 5604135mN) - Cross ditch  x  Install cross ditches at ∆19, ∆20, ∆21, ∆23, ∆24, ∆25, and ∆26.
+  to  required.
+  x ∆21 (UTM 474849mE, 5604098mN) - Cross ditch  x  Remove the fill from the base of the draw at ∆22. Ensure the
+  ∆26  required.
+  474676mE  resulting channel has a minimum base width of 2m. Armour the base
+  x ∆22 (UTM 474861mE, 5604065mN) – Base of a large,  and sides of the channel (3m armouring width) with keyed in
+  5604111mN
+  broad draw feature. The draw likely conveys flow  angular rock meeting a minimum of the MoTT Class 50kg riprap
+  during the spring freshet.  standard. The volume of rock required is estimated at 12m 3.
+  (Approximate
+  x ∆23 (UTM 474812mE, 5604096mN) - Cross ditch
+ section length =
+  required.
+  430m)
+  x ∆24 (UTM 474773mE, 5604113mN) - Cross ditch
+  required.
+  x ∆25 (UTM 474735mE, 5604144mN) - Cross ditch
+  required.
+  x ∆26 (UTM 474676mE, 5604111mN) - Cross ditch
+  required.
+
+  The local surficial material consists of a thin blanket well
+  drained, compact silty sand with some gravel till.
+  Occasional pockets of colluvium overlie the till deposits.
+
+
+  12
+
+  Rady FSR Road Deactivation  September 8, 2026
+
+
+Table 2: Rady FSR Road Deactivation Prescription
+ Road Location
+  Existing Road and Adjacent Terrain Conditions  Deactivation Prescription
+(GPS waypoints)
+  The road is situated on moderate to moderately steep gradient
+  irregular terrain.
+
+  The running surface of the road has a width of 3m to 4m. The
+  cutslope of the road has a length of 1m to 2m and a gradient of
+  100% to 120%. The fillslope of the road has a length of 2m to 4m
+  and a gradient of 70% to 100%.
+  ∆26
+  474676mE  The fillslope of the road is oversteepened and supported by
+  5604111mN  organic material in places. Mature timber is growing on the fill
+  and providing sufficient support such that pullback of the fill will  x  Leave the road prism intact.
+  cause greater site disturbance than is worthwhile when compared
+  to  to leaving the fill in place.  x  Install cross ditches at ∆27, ∆28, ∆29, ∆30, ∆31, ∆32, ∆33, ∆34, and
+  ∆35.
+  ∆35  Drainage paths/structures are present at the following locations:
+  474438mE  x  ∆27 (UTM 474661mE, 5604064mN) - Cross ditch required.
+  5604050mN  x  ∆28 (UTM 474635mE, 5603993mN) - Cross ditch required.
+  x  Armour the cross ditch at ∆35 with keyed in angular rock meeting a
+  x  ∆29 (UTM 474609mE, 5603941mN) - Cross ditch required.  minimum of the MoTT Class 10kg riprap standard. The volume of
+  (Approximate  x  ∆30 (UTM 474556mE, 5603913mN) - Cross ditch required.  rock required is estimated at 6m3.
+ section length =  x  ∆31 (UTM 474535mE, 5603863mN) - Cross ditch required.
+  540m)  x  ∆32 (UTM 474497mE, 5603866mN) - Cross ditch required.
+  x  ∆33 (UTM 474462mE, 5603912mN) - Cross ditch required.
+  x  ∆34 (UTM 474429mE, 5603978mN) - Cross ditch required.
+  x  ∆35 (UTM 474438mE, 5604050mN) – Seepage emanating
+  from the road cut and running down the road surface.
+
+  The local surficial material consists of a veneer of compact, well
+  drained rubble colluvium.
+
+
+
+
+  13
+
+  Rady FSR Road Deactivation  September 8, 2026
+
+
+Table 2: Rady FSR Road Deactivation Prescription
+ Road Location
+  Existing Road and Adjacent Terrain Conditions  Deactivation Prescription
+(GPS waypoints)
+  The road is situated on moderate to moderately steep
+  gradient irregular terrain.
+
+  The running surface of the road has a width of 3m to 4m.
+  The cutslope of the road has a length of 2m to 5m and a
+  gradient of 80% to 120%. The fillslope of the road has a
+  length of 2m to 5m and a gradient of 70% to 90%.
+
+  The fillslope of the road is oversteepened and supported by
+  organic material in places. Mature timber is growing on the
+  ∆35  fill and providing sufficient support such that pullback of
+  474438mE  the fill will cause greater site disturbance than is
+  5604050mN  worthwhile when compared to leaving the fill in place.
+  x  Leave the road prism intact.
+  to  Drainage paths/structures are present at the following
+  locations:  x  Install cross ditches at ∆36, ∆37, ∆38, ∆39, ∆40, and ∆41.
+  ∆41  x ∆36 (UTM 474406mE, 5604041mN) - Cross ditch
+  474319mE  required.  x  Armour the cross ditches at ∆38 and ∆40 with keyed in angular rock
+  5604041mN  x ∆37 (UTM 474382mE, 5604063mN) - Cross ditch  meeting a minimum of the MoTT Class 10kg riprap standard. The
+  required.  volume of rock required for each cross ditch is estimated at 6m 3.
+  (Approximate  x ∆38 (UTM 474361mE, 5604101mN) - Seepage
+ section length =  emanating from the road cut and running down the
+  185m)  road surface.
+  x ∆39 (UTM 474357mE, 5604076mN) - Cross ditch
+  required.
+  x ∆40 (UTM 474343mE, 5604065mN) - Seepage
+  emanating from the road cut and running down the
+  road surface.
+  x ∆41 (UTM 474319mE, 5604041mN) - Cross ditch
+  required.
+
+  The local surficial material consists of a veneer of compact
+  well drained silty sand with some gravel till.
+
+
+
+  14
+
+  Rady FSR Road Deactivation  September 8, 2026
+
+
+Table 2: Rady FSR Road Deactivation Prescription
+ Road Location
+  Existing Road and Adjacent Terrain Conditions  Deactivation Prescription
+(GPS waypoints)
+  The road is situated on moderately steep gradient planar
+  terrain.
+
+  The running surface of the road has a width of 3m to 4m.
+  The cutslope of the road has a length of 2m to 3m and a
+  gradient of 100% to 120%. The fillslope of the road has a
+  length of 3m to 5m and a gradient of 80% to 100%.
+  x  Light pullback of the oversteepened upper 1-2m of the fillslope
+  ∆41  The upper 1-2m of the fillslope is oversteepened close to  of the road.
+  474319mE  vertical along much of this road section. Mature timber is  o Pullback should extend approximately 1m into the running
+  5604041mN  growing along much of the fillslope providing support  surface of the road.
+  however, light pullback of the oversteepened crest of the  o The upper portion of the fillslope of the road should be
+  to  fillslope is recommended.  pulled back to a slope angle of 70% (1.5H:1V).
+  o Pulled back material must be placed along the inner edge
+  ∆45  Drainage paths/structures are present at the following  (toe of the cutslope) of the running surface of the road.
+  474250mE  locations:  o Efforts should be made to retain and avoid damaging
+  5603756mN  x ∆42 (UTM 474299mE, 5603954mN) - Cross ditch  mature timber growing on the fillslope.
+  required.
+  (Approximate  x ∆43 (UTM 474303mE, 5603903mN) - Cross ditch  x  Install cross ditches at ∆42, ∆43, ∆44, and ∆45.
+ section length =  required.  x  Avoid placing pulled back fill adjacent to the location of the
+  295m)  x ∆44 (UTM 474297mE, 5603875mN) - Cross ditch  proposed cross ditches.
+  required.
+  x ∆45 (UTM 474250mE, 5603756mN) - Cross ditch
+  required.
+
+  The local surficial material consists of a veneer of compact
+  well drained silty sand with some gravel till intermixed
+  with rubble colluvium.
+
+
+
+
+  15
+
+  Rady FSR Road Deactivation  September 8, 2026
+
+
+Table 2: Rady FSR Road Deactivation Prescription
+ Road Location
+  Existing Road and Adjacent Terrain Conditions  Deactivation Prescription
+(GPS waypoints)
+  The road is situated on moderate gradient irregular terrain.
+
+  The running surface of the road has a width of 3m to 4m.
+  The cutslope of the road has a length of 1m to 2m and a
+  gradient of 80% to 100%. The fillslope of the road has a
+  length of 1m to 3m and a gradient of 70% to 90%.
+
+  Drainage paths/structures are present at the following
+  locations:
+  ∆45  x ∆46 (UTM 474218mE, 5603705mN) - Cross ditch
+  474250mE  required.
+  5603756mN  x ∆47 (UTM 474166mE, 5603633mN) - Cross ditch
+  required.
+  to  x ∆48 (UTM 474156mE, 5603582mN) - Cross ditch
+  required.  x  Leave the road prism intact
+  ∆71  x ∆49 (UTM 474147mE, 5603516mN) - Cross ditch
+  473610mE  required.  x  Install cross ditches at ∆46, ∆47, ∆48, ∆49, ∆50, ∆51, ∆52, ∆53,
+  5603380mN  x ∆50 (UTM 474149mE, 5603460mN) - Cross ditch  ∆54, ∆55, ∆56, ∆57, ∆58, ∆59, ∆60, ∆61, ∆62, ∆63, ∆64, ∆65, ∆66,
+  required.  ∆67, ∆68, ∆69, ∆70, and ∆71.
+  (Approximate  x ∆51 (UTM 474153mE, 5603412mN) - Cross ditch
+ section length =  required.
+  1615m)  x ∆52 (UTM 474147mE, 5603342mN) - Cross ditch
+  required.
+Continued below  x ∆53 (UTM 474122mE, 5603354mN) - Cross ditch
+  required.
+  x ∆54 (UTM 474078mE, 5603338mN) - Cross ditch
+  required.
+  x ∆55 (UTM 474045mE, 5603332mN) - Cross ditch
+  required.
+  x ∆56 (UTM 474015mE, 5603362mN) - Cross ditch
+  required.
+  x ∆57 (UTM 473968mE, 5603427mN) - Cross ditch
+  required.
+
+
+  16
+
+  Rady FSR Road Deactivation  September 8, 2026
+
+
+Table 2: Rady FSR Road Deactivation Prescription
+ Road Location
+  Existing Road and Adjacent Terrain Conditions  Deactivation Prescription
+(GPS waypoints)
+  Drainage paths/structures are present at the following
+  locations:
+  x ∆58 (UTM 473923mE, 5603482mN) - Cross ditch
+  required.
+  x ∆59 (UTM 473889mE, 5603527mN) - Cross ditch
+  required.
+  x ∆60 (UTM 473842mE, 5603570mN) - Cross ditch
+  required.
+  Continued  x ∆61 (UTM 473816mE, 5603541mN) - Cross ditch
+  required.
+  ∆45  x ∆62 (UTM 473811mE, 5603478mN) - Cross ditch
+  474250mE  required.
+  5603756mN
+  x ∆63 (UTM 473802mE, 5603379mN) - Cross ditch
+  required.
+  to  x  Leave the road prism intact
+  x ∆64 (UTM 473817mE, 5603321mN) - Cross ditch
+  required.
+  ∆71
+  x ∆65 (UTM 473815mE, 5603262mN) - Cross ditch  x  Install cross ditches at ∆46, ∆47, ∆48, ∆49, ∆50, ∆51, ∆52, ∆53,
+  473610mE
+  required.  ∆54, ∆55, ∆56, ∆57, ∆58, ∆59, ∆60, ∆61, ∆62, ∆63, ∆64, ∆65, ∆66,
+  5603380mN
+  x ∆66 (UTM 473820mE, 5603159mN) - Cross ditch  ∆67, ∆68, ∆69, ∆70, and ∆71.
+  (Approximate  required.
+ section length =  x ∆67 (UTM 473794mE, 5603150mN) - Cross ditch
+  1615m)  required.
+  x ∆68 (UTM 473734mE, 5603207mN) - Cross ditch
+  End of  required.
+  Assessment  x ∆69 (UTM 473698mE, 5603246mN) - Cross ditch
+  required.
+  x ∆70 (UTM 473623mE, 5603333mN) - Cross ditch
+  required.
+  x ∆71 (UTM 473610mE, 5603380mN) - Cross ditch
+  required.
+
+  The local surficial material consists of a blanket of well
+  drained compact silty sand with some gravel till.
+
+
+  17
+
+  Rady FSR Road Deactivation  September 8, 2026
+
+
+
+
+7. Field Reviews During Road Deactivation Works
+The road deactivation works must be periodically reviewed by an appropriate QRP (RFT, RPF, P. Eng.,
+or P. Geo.) either working directly for, or contracted by MOF, who is experienced with road deactivation
+works, slope stability, material movement, safety relating to steep slope works, and the road deactivation
+objectives. The QRP will review the site objectives presented in this report with the road foreman and
+confirm that the works are appropriately flagged before road deactivation commences.
+
+If site conditions encountered vary significantly from those described in this report (e.g., unexpected and
+significant seepage, unexpected material textures encountered in excavations, etc.), or if any stability or
+erosional concerns become apparent during operations, then a QRP should be consulted to confirm if a
+field review is warranted. Mitigation of problems in a timely manner can significantly reduce potential
+adverse effects.
+
+Sufficient supervision should be carried out by an experienced and qualified road foreman to ensure
+generally accepted good deactivation practices are implemented along with all recommendations
+presented in this report.
+
+Field review by SNTG upon commencement and completion of the deactivation works in the road
+section from ∆16 to ∆18 is recommended. An additional field review upon the completion of
+deactivation works is recommended to ensure general conformance with the road deactivation
+prescription.
+
+
+
+
+  18
+
+
+Appendix A
+
+Site Photos
+
+
+
+
+  A1
+
+Photo 1 – Typical condition of the Rady FSR from ∆1 to ∆16
+
+
+
+
+Photo 2 – Large cuts and associated cutslope instability from ∆16 to ∆18.
+
+
+
+
+  A2
+
+Photo 3 – Fillslope erosion at ∆17.
+
+
+
+
+Photo 4 – Draw crossing at ∆22.
+
+
+
+
+  A3
+
+Photo 5 – Typical road condition ∆18 to ∆71.
+
+
+
+
+  A4
+
+  Appendix B
+
+Road Deactivation Map
+
+
+
+
+  B1
+
+Stn. 22 - Remove all fill
+from the draw. Refer to
+Table 2 for the details of
+the deactivation works.
+
+  Deactivation Prescription General Requirements  September 8, 2026
+
+
+
+
+  Appendix C
+
+
+
+  General Terminology and Descriptions
+
+Modified from Best Management Practices Handbook: Hillslope Restoration in
+  B.C. November 2001
+
+  Deactivation Prescription General Requirements  September 8, 2026
+
+Cross Ditch with Road Intact (no fill pull back)
+Objective: To capture road surface and ditch line water, and route it across the road to stable, non-
+erodible slopes below the road. If constructed properly, cross-ditches are maintenance free.
+A cross-ditch is a ditch across a road excavated to a depth equal to, or greater than, the depth of the ditch
+at the road cut. Cross-ditches generally have a berm on the lower side, and a compacted ditch block. For
+areas with fine soils where vehicle access is intended, it may be better to use a broad deep swale without a
+berm to contain water flow (since berms will become rutted and ineffective due to ongoing traffic).
+Suggested Construction Tips for Cross-ditches (Road Intact): As the outlet location is more important
+than the inlet to establish the gradient of the cross-ditch, start at the outlet by pulling back all woody
+debris and potentially unstable/erodible road fill. Make sure the cross-ditch inlet is deeper than the base of
+the existing road ditch, and the entire cross-ditch excavation is adequately sloped to resist sediment
+deposition. The size, depth, and shape of the cross-ditch will depend on the access requirements and the
+expected flows. If vehicle access is to be retained, gently slope the cross-ditch approaches. Note that on
+steep grades, the large berm needed to contain flow in the cross-ditch may preclude access. For steep
+grades an increase in skew may be necessary to reduce deposition in the cross-ditch.
+The ditch block must be relatively impermeable and non-erodible and large enough to divert expected
+flows into the cross-ditch. When no access is required the ditch block is normally higher than the road
+surface. It preferably contains a mix of rock and soil, keyed into the road cut where necessary. Berms
+must be compacted and large enough to contain the expected flows, and located on the downgrade side of
+the cross-ditch for both favourable and adverse grades.
+For areas of fine soils, consider using a broad, deep swale to contain flow instead of a berm. Armour base
+of cross-ditch if erosion is expected to occur or where excessive erosion could cause a problem for future
+road access. Use angular or sub-angular rock large enough for armouring against expected flows but small
+enough to allow for safe vehicle passage. Armour the outlet of the cross-ditch, unless noted in the
+prescriptions. Size and placement of the armour will depend on the anticipated flows and downstream
+consequences. Use angular rock large enough to protect exposed soil, but small enough not to divert or
+obstruct flows. For areas without coarse rock, suitable alternatives may include careful grading to form
+gentle sidewall slopes, revegetation, erosion control mats, sand bags, soil bioengineering structures, or
+appropriately sized and placed woody debris.
+All road fill material must be removed from the outlet area; this is particularly important for preventing
+landslides and erosion. Outlets of cross-ditches should not divert water onto erodible or unstable slopes.
+Larger expected flows and steeper road grades will usually require more frequent cross-ditches of greater
+size. Where ditches are deeply eroded, regrading of the ditch line may be needed. Backup cross-ditches at
+culvert locations are generally installed directly downgrade of the culvert location. At some locations, it
+may be appropriate to install these directly above or alongside the culvert; however, care must be taken to
+leave an adequate thickness of fill over the existing culvert. For backup cross-ditches of cross-drain
+culverts in erodible soils, locating the cross-ditch about 5m downgrade of the culvert may prevent a
+culvert washout and reduce maintenance costs. The backup cross-ditches must be large enough to handle
+the expected flow, and similar in design and construction to a regular cross-ditch. Where backup cross-
+ditches are used at stream crossings they must maintain the pre-construction stream location. Cross-
+ditches that are located at low points in the road grade (receive water from both directions along road)
+
+  C1
+
+  Deactivation Prescription General Requirements  September 8, 2026
+
+need neither a ditch block nor a berm. In this case, the cross-ditch can be constructed as a broad, gentle
+swale.
+Careful assessment is necessary for outlet locations where significant flows are expected in the cross-
+ditch, and the outlet is located outside a natural channel. In these cases, the flow may cause erosion or
+stability problems downslope. Cross-ditches should be constructed to allow vehicle access commensurate
+with the access requirements.
+
+
+
+
+Figure C1 Crossditch
+
+
+Cross Ditch or swale through road pullback
+Objective: To restore the natural hillslope drainage paths to historic (pre-construction) locations along the
+hillslope, through road fill pullback. A cross-ditch in pullback is a ditch across the old roadbed
+connecting a natural hillslope drainage path (streams, gully channels, and swales with flow). Cross-
+ditches in pullback usually must be excavated down to natural (undisturbed), non-erodible material.
+
+
+Suggested Construction Tips for Cross-ditches (Road Fill Pullback): If armouring is needed, stockpile
+available rock during road fill pullback approaching the cross-ditch. Decompact and outslope the road
+surface as part of road fill pullback adjacent to the cross-ditch. Remove ballast from cross-ditch location
+
+  C2
+
+  Deactivation Prescription General Requirements  September 8, 2026
+
+and excavate a bench to position machine for further reach downslope. Place material on the woods side
+bench. Clear outlet of debris and road fill. Place material on the woods side bench. Do not leave
+excavated material on the outside of the road if potentially unstable. Excavate cross-ditch from outlet to
+inlet, exposing native ground for the full length of the cross-ditch. Place as much material on the woods
+side, and fill the bench to the top of the slope. Place armour as required. Excavate as “steps” if insufficient
+armour is available to cover all flow areas. Do not leave oversteepened sideslopes on the cross-ditch,
+particularly in fine soils. Finish the sidewall on town side prior to finishing cross-ditch pullback.
+At gully locations, blend slopes of pullback into existing slopes above and below the road, in and out of
+the gully. Cross-ditch locations at gully crossings typically involve the removal of more road fill and less
+space on the bench for pullback (consider endhauling). The connectivity of the cross-ditch to fish habitat
+or water supply areas increases the need for sediment control and adherence to timing windows and
+measures during cross-ditch excavation.
+All road fill material must be removed from the outlet area; this is particularly important for preventing
+landslides. Outlets of cross-ditches should not divert water onto erodible or unstable slopes. Armour
+placement (volume and size) is dependent on anticipated flows and downstream consequences.
+Armouring may not be needed in cases of very low flow or where the flow is not hydraulically connected
+to larger streams in the watershed (fish habitat or water supply areas). Outlets and the cross-ditch base
+should be armoured if the cross-ditch is located in erodible material (as compared to the natural stream
+channel materials). The armour must be small enough so that it does not divert flows. Armouring may
+not be needed if the cross-ditch is excavated into natural (undisturbed) ground, or if no erosion is
+expected. In pullback, skew is only necessary to line up natural hillslope drainage paths.
+Stream restoration at stream crossings is similar to cross-ditch construction but requires restoring the
+width of the stream as well as armouring the channel. Reconstruction of streambanks should mimic
+upstream and downstream channel geometry and bank materials. Consider also excavating a stepped
+channel in non-erodible materials to reduce the flow energy if erodible materials are present downslope.
+These sites may warrant specific comments as part of the prescriptions. At critical sites it may be
+necessary to consult a specialist with expertise in stream hydrology.
+
+
+
+
+  C3
+
+  Deactivation Prescription General Requirements  September 8, 2026
+
+
+
+
+Figure C2 Crossditch/swale through fill pullback
+
+
+
+
+Waterbars
+Objective: To divert water off the road onto the fillslope to prevent erosion of road surface. Reverse
+waterbars direct flow off the road into the ditch. A waterbar is a shallow ditch across a road, skid trail, or
+backspar trail to prevent excessive flow down the road surface (or trail). Waterbars are not intended to
+intercept ditch lines; thus, the base of the waterbar is above the base of the ditch and no ditch block is
+required. Waterbars are used where a road is kept open for vehicle traffic, or where cross-ditches cannot
+be used (such as throughcuts) or where there are no ditches. Waterbars may not include a berm if traffic
+along the road is expected to cause rutting and render the berms ineffective.
+Suggested Construction Tips for Waterbars: In coarse soil and rock, place excavated material from the
+waterbar immediately downgrade to form a berm (as with cross-ditches); use excavator bucket to compact
+if road traffic is expected. In fine soil, consider using a broad swale with no berm. Waterbars do not have
+to cross the entire road surface to be effective; they must only intercept flow on the road and divert it off
+the road. Waterbars must be shallow enough to allow for unimpeded vehicle access. Consider using a
+herringbone pattern in throughcuts to divide the flow between the two sides. Ditching may also be
+necessary if the road is not sloped, or the surface is erodible. Waterbars can be constructed with
+bulldozers or graders, depending on material type and amount of intended use of the road; however, these
+
+  C4
+
+  Deactivation Prescription General Requirements  September 8, 2026
+
+machines are not suited for placement of armour. Typically, waterbars are skewed to better divert water
+off the road surface. Skew will depend on road gradient, anticipated flows, and potential erodibility of the
+soil.
+Frequency of waterbars along a road section will depend on anticipated flow on road surface and potential
+for slope instability. In erodible materials, armouring of the outlet area is needed. In cases where the
+ditch is likely to plug, consider using a cross-ditch instead of a waterbar to provide greater flow capacity
+and more controlled water management. Depending on the volume of vehicle traffic and the road grade,
+periodic maintenance may be necessary to ensure long term effectiveness.
+
+
+
+
+Figure C3 - Waterbars
+
+
+Culvert Removal
+Objective: To remove the existing stream culvert with the least amount of sedimentation possible and
+leave a cross-ditch and re-established stream channel. This technique is recommended where running
+water is present and the stream is hydraulically connected to fish habitat or community water supplies
+(subject to the requirements discussed in ‘works in and about a stream’ below). If no water is present the
+cross-ditch technique can be used keeping in mind that the cross ditch must be adequately sloped and
+armoured to prevent sedimentation upon stream flow re-establishment. The following technique can
+allow for culvert removal while water is present in the channel. In cases where traffic use is expected to
+continue, an armoured swale or ford can be constructed following the removal of the pipe culvert. If fish
+
+
+  C5
+
+  Deactivation Prescription General Requirements  September 8, 2026
+
+are present or downstream, designate the site for work during a timing window or have an environmental
+monitor on site. Fish exclusion and salvage may be necessary prior to culvert removal.
+Suggested Construction Tips for Culvert Removal (Sediment Control): Assess the potential adverse
+environmental effects at the site. Divert flows if practical. If water cannot be diverted, install sediment
+control downstream prior to work at the site. Remove road fill to expose the woods side of the culvert;
+then remove the road fill over the culvert. While flow is in the culvert, excavate the road fill from the
+downstream side to the upstream side, exposing the side of the culvert. Leave some material on the
+upslope side of the road to continue to divert flow into the culvert. Armour the new channel beside the
+culvert with rock if necessary. Breach the remaining road fill to route the flow into the new channel.
+Remove the culvert and the remaining road fill on the camp side. Armour exposed soil as required. The
+connectivity of the cross-ditch to fish habitat or water supply areas increases the need for sediment control
+and adherence to timing windows and measures during excavation.
+Coarse rock for armouring is much more important for pipe locations at stream crossings. Culverts that
+only drain ditch water may not need armouring. For complex sites, discuss options for work at the site
+with experienced staff and/or fisheries agencies to reduce the potential sedimentation to acceptable levels.
+Making and keeping the site as dry as possible is often the most effective means to prevent sedimentation.
+Methods may include: diverting water down the ditch line until the cross-ditch is constructed and
+armoured provided the ditch line is not compromised; diverting stream flow using polyurethane pipe (or
+similar) with gravity flow; constructing a secondary cross-ditch in non-erodible materials until the main
+cross-ditch is complete; pumping flows around working area (if reliable pump equipment is available).
+The size, depth, and shape of the cross-ditch depends on the expected flows. Blend sidewalls of the
+structure to match adjacent slopes.
+If no water is present, removal of culverts in deep road fills often requires four steps: 1) remove surfacing
+and road fill on woods side, to expose top of culvert; 2) slope approach to a suitable grade on woods side
+if vehicle access is to be maintained; 3) expose and remove culvert; 4) move to town side and complete
+cross-ditch excavation (slope approach to a suitable grade if vehicle access is to be maintained).
+
+
+
+
+Figure C4 Culvert Removal
+
+
+
+  C6
+
+  Deactivation Prescription General Requirements  September 8, 2026
+
+Wood Box Culvert (WBC) Removal
+Objective: To remove the existing stream WBC with the least amount of sedimentation possible and leave
+a cross-ditch and re-established stream channel. This technique is recommended where running water is
+present and the stream is hydraulically connected to fish habitat or community water supplies (subject to
+the requirements discussed in ‘works in and about a stream’ below). If no water is present the cross-ditch
+technique can be used keeping in mind that the cross ditch must be adequately sloped and armoured to
+prevent sedimentation upon stream flow re-establishment. The following technique can allow for WBC
+removal while water is present in the channel. In cases where traffic use is expected to continue, an
+armoured swale or ford can be constructed following the removal of the WBC. If fish are present or
+downstream, designate the site for work during a timing window or have an environmental monitor on
+site. Fish exclusion and salvage may be necessary prior to culvert removal.
+Suggested Construction Tips for WBC Removal (Sediment Control): Assess the potential adverse
+environmental effects at the site. Divert flows if practical. If water cannot be diverted, install sediment
+control downstream prior to work at the site. Excavate the road fill to expose the ends of the WBC and
+remove the material for the deck. Excavate the road fill on woods side to within 0.3m of the sill log, and
+leave enough material to keep flow in the existing channel. Move to the town side of the WBC. Remove
+the woods side sill log, pushing retained material up and out of the channel. Excavate the town side road
+fill and pullback the town side sill log, pulling soil back and away from the creek.
+Coarse rock for armouring is much more important for WBC locations at stream crossings. WBC that
+only drain ditch water may not need armouring. For complex sites, discuss options for work at the site
+with experienced staff and/or fisheries agencies to reduce the potential sedimentation to acceptable levels.
+Making and keeping the site as dry as possible is often the most effective means to prevent sedimentation.
+Methods may include: diverting water down the ditch line until the cross-ditch is constructed and
+armoured provided the ditch line is not compromised; diverting stream flow using polyurethane pipe (or
+similar) with gravity flow; constructing a secondary cross-ditch in non-erodible materials until the main
+cross-ditch is complete; pumping flows around working area (if reliable pump equipment is available).
+The size, depth, and shape of the cross-ditch depends on the expected flows. Blend sidewalls of the
+structure to match adjacent slopes.
+
+
+
+
+Figure C5 Wood Box Culvert Removal
+
+  C7
+
+  Deactivation Prescription General Requirements  September 8, 2026
+
+Works in and about a fish bearing stream
+The following are a partial list of terms and conditions (Ministry of Environment 2005) for conducting
+works in and about a stream. In addition to these terms and conditions other federal and provincial
+regulations and guidelines may apply or supersede these requirements.
+  The natural rate of water flow must be maintained upstream and downstream of the worksite during
+  all phases of instream activity.
+
+  The permanent removal of stable, naturally occurring material from the stream or stream channel
+  must be minimized and completed only as necessary to make the change in accordance with Part 7 of
+  the Water Regulation.
+
+  All activities in and about streams must be conducted in a manner that does not cause harm to fish or
+  fish habitat and species at risk or their habitat. The services of a Qualified Professional are to be
+  engaged if the works could impact species at risk or their habitat.
+
+  The removal of material must not lead to stream channel instability or increase the risk of
+  sedimentation into the watercourse immediately downstream of the worksite. Any spoil materials
+  must be deposited in a stable area and in such a way that the excavated material will not contribute
+  sediment or debris to the stream or adversely impact riparian habitats or species at risk and their
+  habitats.
+
+  Instream activities must be conducted in the dry with the worksite isolated from water flowing in that
+  portion of the stream channel.
+
+  Any materials placed within the stream channel (e.g., rip-rap) that are required in connection with the
+  change, must not result in a constriction of the natural stream channel width.
+
+  Machinery must be located and operated from outside of the wetted perimeter of the stream (e.g.,
+  from the top of the bank or from within a naturally dry stream channel).
+
+  Measures must be taken to ensure that no deleterious substances (e.g., fuel and other hydrocarbons,
+  soil, road fill, or sediment), which could adversely impact water quality, fish and fish habitat and
+  other aquatic life, can enter the stream channel. Equipment used in close proximity to the stream
+  must be free of exposed deleterious substances.
+
+  Care shall be taken during all phases of the work to prevent downstream delivery of sediment or
+  debris from the immediate worksite. Sediment control structures such as silt fences, straw bale dikes,
+  settling basins, ditch blocks, or filter cloth must be placed and remain functioning in all instances
+  where there is any risk of sediment delivery into streams from work activities, road surfaces and
+  ditches. Sediment control structures must be maintained and cleaned out on a regular basis to remain
+  functional and cleaned out prior to removal.
+
+
+
+
+  C8
+
+  Deactivation Prescription General Requirements  September 8, 2026
+
+Work is to be suspended if the sediment control measures are ineffective. In the event of uncontrolled
+sediment release, proponents are directed to stabilize and correct the uncontrolled sediment release
+into streams as soon as possible and to notify the Ecosystem Section of the Ministry of Water, Land
+and Air Protection and Fisheries and Oceans Canada.
+
+During periods of heavy or persistent precipitation, work must stop if continuing the work will result
+in sediment delivery downstream of the immediate worksite. Measures must be taken to minimize the
+risk of on-going sediment delivery to the stream during the shutdown period.
+
+Fueling and servicing of vehicles and equipment must occur away from the streams and any spills
+must be properly cleaned up and reported as required by the Spill Reporting Regulation (B.C. Reg.
+263/90). Every effort must be made to contain the spill and prevent adverse impacts to the
+environment.
+
+For the purposes of implementing works where machinery access is required from both sides of the
+stream and where there are no other practicable alternatives, 1 crossing (over and back) of the stream
+is allowed, provided the selected location serves to avoid significant disturbance to stream banks,
+riparian vegetation and instream fish habitat such as large organic debris. If a suitable crossing
+location which serves to avoid the above-described damage cannot be found, a temporary crossing
+structure must be installed to facilitate the works from both sides of the stream. Use of machinery to
+install the temporary structure is restricted to one side of the stream. If the above-stated conditions
+cannot be met, the proponent must retain the services of a Qualified Professional to develop an impact
+mitigation plan. This mitigation plan must be submitted to WLAP for information purposes prior to
+the commencement of works. If the stream is not fish bearing, the proponent can proceed with the
+proposed works and must implement the impact mitigation measures specified by the Qualified
+Professional. If the stream is fish bearing, the proponent must also submit the Qualified
+Professional’s impact mitigation plan to Fisheries and Oceans Canada (DFO) Habitat Management
+staff for consideration and await their decision prior to commencing any instream works.
+
+If diversion of water is required to isolate the worksite, proponents must salvage all fish within the
+area where water will be removed. A “Scientific Collection Permit” is required to salvage fish.
+Measures must be taken to ensure that equipment such as water pumps do not harm fish, reptiles or
+amphibians.
+
+Damage above the high-water mark to values such as banks and stream side (riparian) vegetation in
+the vicinity of the work area must be minimized. Unavoidable damage that occurs must be remedied
+as noted below.
+
+Any trees at the work site or within the clearing width area adjacent to streams that must be removed
+must be felled away from the stream to the fullest extent possible. Where this is not possible, the
+tree(s) and all resultant debris must be removed from the stream channel as soon as possible after
+felling, or at most, within the same workday by means that avoid machinery being placed within the
+stream channel.
+
+
+
+
+  C9
+
+  Deactivation Prescription General Requirements  September 8, 2026
+
+  Minimize disturbance to natural materials, including but not necessarily limited to embedded logs and
+  boulders, as well as vegetation that contribute to fish and wildlife habitat or stream channel stability.
+
+  Complete required restoration works on disturbed areas including erosion control measures that will
+  function as close as possible to natural pre-disturbance conditions.
+
+  Soils exposed as a result of work activities that have the potential for sediment delivery to the stream
+  must be promptly re-vegetated. All disturbed soils adjacent to the stream shall be re-vegetated with a
+  suitable mix of grass and some shrubs and/or trees as soon as works are completed or as soon as site
+  conditions are conducive to growth. Unpalatable species are to be used where livestock grazing
+  occurs.
+
+  Proponents are responsible for complying with the federal Fisheries Act.
+
+  Proponents are responsible for determining whether the federal Department of Fisheries and Oceans
+  (DFO) Habitat Management staff must be consulted with and whether an authorization from DFO is
+  required prior to making the change.
+
+Ford and Armoured Swale
+Objective: The main purpose of a ford and armoured swale is to provide an erosion resistant and
+stormproof wet crossing for motor vehicle access. A ford structure is used to cross a stream, whereas an
+armoured swale is constructed where a cross-ditch would normally be used. The reduction of sediment
+generation and sediment transport during the intended period of road use is a paramount consideration in
+the design of both structures. Fords are generally restricted to crossings of non-fish-bearing streams
+unless otherwise approved by the fisheries agencies. Armoured swales are intended to route road surface
+runoff, ditch water or cut bank seepage across a road where vehicle access is required.
+A ford is a dip in the road grade installed to facilitate crossing a stream (perennial or ephemeral stream
+flows) and is typically designed and built as a permanent feature at the time of original road construction,
+or during semi-permanent or permanent road deactivation. Fords are a suitable road deactivation option
+where existing bridges or culverts must be removed but where vehicle access must be maintained.
+Installation during deactivation requires excavation of all road fill to expose the original streambed. This
+is followed by careful placement of coarse angular rock armour. The rock armour may be graded upward
+to provide a more drivable surface but all material must be coarse enough to withstand mobilization
+during peak flows. The finished width of the ford and the approaches should mimic the adjacent natural
+stream channel to avoid constraining stream flow and to provide for passage of the Q100 flow. A properly
+designed and constructed ford should allow low flows to infiltrate though the coarse rock base and peak
+flows to pass over the structure with no alteration of the structure. Metal pipes may also be incorporated
+to aid in conveying low flows.
+An armoured swale is a dip in the road grade installed to convey seasonal/ephemeral flows across the
+road while continuing to provide access where it is critical to minimize sedimentation during short-term
+works such as road deactivation. The fill below the road grade is only partially removed and the
+excavated dip or swale is armoured with rock carefully placed and graded.
+
+
+
+  C10
+
+  Deactivation Prescription General Requirements  September 8, 2026
+
+
+
+
+Figure C6 Armoured Swale – road fill partially removed
+
+
+Insloping/outsloping
+Objective: To control water without the use of ditches or cross-ditches. Insloping is the sloping
+(reshaping) of the road surface to direct road surface water toward the road cut and away from unstable or
+erodible road fill materials. Outsloping is the sloping (reshaping) of the road surface to direct water across
+the road and onto the road fill in a dispersed fashion. Insloping may not be effective on significant grades
+(6% or greater) as the water may run down the road (possibly in wheel ruts).
+
+
+Suggested Construction Tips for Insloping/Outsloping: The slope of the road surface laterally must be
+greater than the grade of the road to effectively direct water. Insloping/outsloping may not be suitable for
+areas with fine grained soil where rutting due to vehicle traffic is expected. Traffic rutting can reduce or
+eliminate the effectiveness of insloping and outsloping. In these cases, consider importing road surfacing
+material and compacting adequately to resist rutting. A ditch is optional for insloping/outsloping;
+however, a ditch can prevent some of the water from reaching the outsloped road surface and may
+improve trafficability. Where no maintenance will be carried out, the ditch line should be removed or
+filled in during outsloping. Outsloping may present a safety hazard on snow-covered roads where traffic
+use continues through the winter. Insloping and outsloping may require constant, careful re-grading in
+areas of heavy truck traffic.
+
+
+
+
+  C11
+
+  Deactivation Prescription General Requirements  September 8, 2026
+
+Berm Pullback
+Objective: To restore natural hillslope drainage paths where road maintenance activities have left a berm
+or windrow on the outer edge (or inner edge) of the road. Larger berms may also be pulled back to reduce
+the weight on the outside edge of the road and/or for silvicultural reasons. Pullback of berms allows
+water to pass over the shoulder of the road. Pullback of berms may also be carried out in conjunction with
+outsloping and/or cross-ditching to restore hillslope drainage paths.
+Scarification
+Objective: Scarification (also known as Silvicultural Fluffing) is carried out to increase the site
+productivity of compacted road surfaces. It entails the breaking up of the road surface to a minimum
+depth of approximately 400 mm or 16-20 inches. Scarification should not be confused with decompaction
+associated with road fill pullback.
+Suggested Construction Tips for Scarification: Scarification is more important for road surfaces where
+the materials are well graded, and/or high traffic volumes have compacted the road surface. Consider
+consulting with a silviculture forester to determine the benefit of scarification relative to planned tree
+species and site index parameters along the road. Evaluate the effective compaction in both the traveled
+and untraveled parts of the road running width. Mixing soil with rock during scarification may also
+increase site productivity. Where practical, scatter organics and woody debris on scarified road surface.
+
+
+Partial Road Fill Pullback Access Maintained
+Objective: To reduce stability problems along the road yet maintain vehicle access. Partial road fill
+pullback is carried out when full restoration is not needed for immediate stability, or when road access is
+required. Partial road fill pullback retrieves the currently or imminently unstable portions of the road fill
+and leaves those portions with no evidence of immediate instability intact. Retrieved road fill is placed
+tight to the road cut with organic soil and woody debris on top to promote revegetation. Endhauling of
+material is necessary when the unstable volumes of road fill exceed the available room in the ditch line.
+Carrying out partial road fill pullback may not reduce the landslide hazard to the fullest extent possible.
+Suggested Construction Tips for Partial Road Fill Pullback. Decompaction is not needed for partial road
+fill pullback where access will be maintained. Pullback currently unstable road fill. Endhauling may be
+necessary if placement of unstable road fill will result in excessive loss of road running width. Place
+retrieved road fill material in the following order: 1. Road surface materials and shot rock (non-organic
+soils) 2. Organic soils and fine grained soil 3. Woody debris and other vegetation (organics). Often
+pullback in gully areas requires more endhaul or movement of material out of the gully. Some endhaul
+may be necessary. Cross-ditches must be constructed immediately upgrade of the start of road fill
+pullback to prevent erosion of the retrieved road fill. Consider constructing cross-ditches immediately
+downgrade of the retrieved road fill also, especially if the ditch line is intact under the road fill pullback.
+All natural watercourses must remain free of pullback material. Accommodate water flow in these areas
+using cross-ditches.
+
+
+
+
+  C12
+
+  Deactivation Prescription General Requirements  September 8, 2026
+
+Endhauling may not be necessary when continued access is not planned; most material can be placed
+directly on the bench. If access is required, endhaul requirements can be lessened by placing removed
+brush and woody debris back onto the pulled back fillslope. This material will aid in short-term erosion
+control as well as enhance soil nutrients. It may be cost-effective to complete all required pullback for a
+road section, then replace the brush and woody debris in conjunction with installation of water
+management structures. Do not inslope or outslope the road unless specified. Consider decompaction if no
+access will be needed following deactivation.
+
+
+
+
+Figure C7 – Partial Fill Pullback
+
+
+Full Road Fill Pullback
+Objective: To retrieve all potentially unstable sidecast road fill and place it tight against the road cut. Full
+road fill pullback reduces the road fill landslide hazard to the fullest extent possible. Typically, no access
+or only limited access for foot or ATV traffic is possible after full road fill pullback has been carried out.
+Full road fill pullback, also known as “re-contouring” or “de-building”, is the de-construction of the road
+subgrade to restore the original hillslope profile and contours.
+Full road fill pullback typically involves decompaction and removal of the road surface. Where very long
+and deep road fills are present, benching and/or ramping may be needed to adequately retrieve all the road
+fill present. In cases where all of the retrieved material cannot be placed on a stable bench, endhauling
+may be needed. Woody debris is randomly scattered on the surface of the pullback material, promoting
+revegetation.
+Decompaction may be necessary for full road fill pullback especially in areas of heavy seepage.
+Decompaction is the breaking up of road fill materials (ballast and subgrade) to a depth equal to, or
+greater than, the depth of the ditch. The decompacted surface is outsloped, to provide better downslope
+reach and promote water flow across the road under the pullback material. Decompaction of the road fill
+can also define the width of the natural bench so that a safe working limit for the excavator can be
+established.
+
+  C13
+
+  Deactivation Prescription General Requirements  September 8, 2026
+
+Suggested Construction Tips for Full Road Fill Pullback: Walk site to evaluate safety concerns prior to
+starting road fill pullback and ensure a safe approach is implemented. Prior to starting pullback at the
+station, visualize the ground profile and contours above and below the road. As appropriate, decompact
+the road surface to a depth below the ditch line. Sitting the excavator on the lowered (decompacted)
+surface will extend the effective reach of the excavator during pullback. Note that decompaction may not
+be possible in areas where a portion of the road bench is blasted into solid bedrock. In this case, complete
+fill retrieval may not be possible. Consider using a log to push any residual unstable fill downslope. It
+may be preferable to unload this material in a controlled manner during dry conditions, rather than have it
+fail during wet conditions. Retrieve all fill to expose native material. Place road fill material tight to the
+road cut. Place retrieved road fill material in the following order; road surface materials and shot rock
+(non-organic soils), organic soils and fine grained soil, and woody debris and other vegetation (organics).
+Benching-Ramping may be necessary in areas where unstable road fill is present beyond the reach of the
+excavator. All road fill must be retrieved from gully channels, gully headwalls, and creek channels.
+Consider removing all road fill from open slope depressions and wet hillslope areas. Cross-ditches and if
+required drains must be used to restore the natural hillslope drainage paths concurrent with full road fill
+pullback. The ditch line must be eliminated using decompaction for roads with moderate to steep grades;
+otherwise the ditch will continue to divert water. In areas with road cut instability, full roadfill pullback
+can also partially support the road cut and reduce the landslide hazard. Placing road fill during wet
+conditions may result in small slumps in the retrieved road fill, or problems retaining retrieved material
+on the bench. Consider suspending operations during extremely wet conditions for safety and/or
+environmental reasons. Assess the stability of the site continually during pullback in terms of machine
+stability and safety of the operator. Change the positioning of the machine or suspend operations in wet
+weather as required. When required consider modifying the work plan as appropriate to ensure safety.
+
+
+
+
+Figure C8 Full Fill Pullback
+
+
+  C14
+
+  Deactivation Prescription General Requirements  September 8, 2026
+
+
+
+
+Figure C9 – Full fill pullback sequencing
+
+
+Gully Restoration
+Objective: To restore the gully channel to its historic (pre-construction) conditions and decrease the
+landslide hazard along the road approaches on the sidewall of the gully. Gully restoration typically
+involves pulling all of the material out of the gully channel during deactivation activities, and is carried
+out during full road fill pullback. The size, depth, and shape of the pullback must mimic the natural
+ground profiles and contours of the gully system above and below the road. Armouring of the gully
+channel at the road location, and endhauling of excess road fill material is often required. Similar
+techniques can also be used for entrenched creeks.
+Some sidecast material on gully sidewalls can be difficult to retrieve. This occurs frequently in gully areas
+where bulldozers were used for construction and bedrock prevents benching down to retrieve the material.
+Also, large woody debris in gully channels can be difficult to excavate due to its interlocking nature. In
+these cases, the decision to remove it during deactivation should consider the gully processes and the
+consequence of leaving the woody debris in place.
+
+
+
+  C15
+
+[Page 1: text read by OCR from the page image]
+od
+
+BRITISH Ministry of
+COLUMBIA © Forests
+
+Ministry of Forests — Selkirk Natural Resource District
+845 Columbia Avenue
+Castlegar, BC
+VIN 1H3
+
+Rady Forest Service Road (FSR)
+Road Deactivation Prescription
+
+September 8, 2026
+
+Report Number: 26.510.01.01.16
+Distribution:
+Ministry of Forests — 1 copy
+
+[Page 3: text read by OCR from the page image]
+Rady FSR Road Deactivation September 8, 2026
+
+1. Introduction
+
+At the request of the Ministry of Forests — Selkirk Natural Resource District
+(MOF), has completed a permanent road deactivation prescription for the
+Rady FSR. Road Permit Road RO7745 extends off of Highway 31 approximately 15km southeast of the
+community of Trout Lake, BC and Rady FSR begins at the end of RO7745 approximately 5km upchain of
+the highway junction. The road ascends the face unit slopes of the northeast sidewall of the Trout Lake
+valley between Rady Creek and an unnamed creek to the north. The location of the Rady FSR is indicated
+on Figure | below.
+
+Five Mile
+
+‘
+~
+a
+
+cm.
+
+Rady FSR slated for tn
+deactivation Np
+
+Figure 1 — Location key map.
+
+As per the MOF Engineering Manual, a Qualified Registered Professional (QRP — RFT, RPF, P. Eng., or
+P. Geo.) must prepare, sign, and seal a prescription for road deactivation works and provide the results of
+the assessment in a letter or report that accompanies the deactivation prescription. This report is intended
+to meet this requirement for the Rady FSR.
+
+[Page 20: text read by OCR from the page image]
+Rady FSR Road Deactivation September 8, 2026
+
+8. Closure — Report Use and Limitations
+
+This report was prepared for the exclusive use of the Ministry of Forests. The material in it reflects SNT
+Geotechnical Ltd.'s best judgment and professional opinion in light of the information available to it at the
+time of preparation. Any use that a third party makes of this report or any reliance on or decision to be
+made based on it is the responsibility of such third parties. SNT Geotechnical Ltd. accepts no
+responsibility for damages, if any, suffered by any third party as a result of decisions made or action
+based, or lack thereof, on this report. No other warranty is made, either expressed or implied.
+
+The report and assessment have been carried out in accordance with generally accepted professional
+practices in B.C. The discussion and recommendations presented are based on available information and
+limited field investigation and inferences from surficial features. No subsurface investigation was carried
+out as part of this assessment or in the development of conclusions or recommendations. Inherent
+variability in local precipitation, run-off conditions, surface and subsurface conditions may create
+unforeseen situations.
+
+19
+
+[Page 21: text read by OCR from the page image]
+Appendix A
+
+Site Photos
+
+Al
+
+[Page 22: text read by OCR from the page image]
+7 ¢
+
+a
+
+“f
+
+=
+
+F
+
+7
+
+s+
+
+==
+
+at
+
+fe
+
+i
+
+¢.
+
+oe
+
+aur
+
+.
+
+a
+
+~aa-
+
+ae
+
+a
+
+~~
+
+“ts
+
+ee
+
+=
+
+=
+
+=>
+
+aw
+
+at
+
+=u¥
+
+.
+
+Sea -
+
+= Po
+
+ae
+
+~ ¥
+
+“=
+
+vt
+
+ag Lt
+
+Rie
+
+Photo 1 — Typical condition of the Rady FSR from Al to Al6
+
+aaa,
+
+Saas
+
+wy
+
+Be eee
+
+we
+
+‘apd.
+
+4
+
+~~
+
+rag
+
+tz
+
+ee
+
+oe
+
+ke.
+
+road
+
+ea
+
+wif
+
+scape
+
+Py cad
+
+a
+
+A
+
+~
+
+ss
+
+ie
+
+aes
+
+>
+
+Aah
+
+we? pee
+
+a:
+
+1g FS
+
+fh.
+
+ae
+
+“aay
+
+NA
+
+Js
+
+"+
+
+i]
+
+a
+
+a7)
+
+agg
+
+-
+
+aoe
+
+ae hte
+
+ie
+
+oe
+
+ee
+
+ae
+
+oe
+
+=
+
+a?
+
+ek
+
+os
+
+ree
+
+oa
+
+Pat
+
+Fax
+
+eG
+
+ar
+
+Le
+
+oe
+
+#
+
+os
+
+fie
+
+=a
+
+. ad
+
+z
+
+ae
+
+Pa
+
+re
+
+ice
+
+pieced
+
+Pate
+
+ay
+
+=
+
+x
+
+a?
+
+“yet?
+
+5!
+
+Ne
+
+eco
+
+>.
+
+ie:
+
+=
+
+can
+
+x
+
+Co
+
+Fat de
+
+es Te
+
+LT eS
+
+Mee
+
+> 3)
+
+Photo 2
+
+- Large cuts and as
+
+sociated cutslope instability from A16 to AL8.
+
+A2
+
+[Page 23: text read by OCR from the page image]
+=~.
+
+ad
+
+-
+
+Bier
+
+i
+
+= *.
+
+4
+
+ro 4
+
+is
+
+bei
+
+we
+
+f
+
+am
+
+=a
+
+Sass;
+
+feu
+
+a
+
+oi eal
+
+oe
+
+Rtas
+
+Ve )
+
+be al
+
+=
+
+i,
+
+ae
+
+ae
+
+i
+
+i -
+
+wh
+
+P ed
+
+is
+
+o-
+
+(
+
+‘>
+
+ae at
+
++e
+
+A> 4
+
+By
+
+re
+
+af
+
+Ls,
+
+4,
+
+beg
+
+Bis
+
+ake 3
+
+wt
+
+be 7
+
+aig
+
+Ga
+
+B..
+
+ri
+
+‘or
+
+te
+
+a FY
+
+>
+
+aH
+
+ot
+
+He.
+
+Pia
+
+ea
+
+SY
+
+C=
+
+7
+
+ve.
+
+>
+
+ei
+
+i
+
+oe
+
+e
+
+aie)
+
+ae
+
+=
+
+Fx.
+
+See
+
+Bie
+
+~
+
+2
+
+4 ie
+
+a
+
+=
+
+AS
+
+te
+
+a
+
+te
+
+BS
+
+Ree
+
+at
+
+i hese
+
+a eae
+
+=>-%
+
+‘p
+
+ye
+
+yee
+
+Sapa
+
+vo
+
+=
+
+mee
+
+<7
+
+aS
+
+—
+
+a
+
+Soe
+
+nt
+
+veh
+
+Mies ae
+
+te
+
+mb
+
+Ps Sah
+
+é
+
+44
+
+v4
+
+sy
+
+“08
+
+.f aes
+
+a}
+
+“sas
+
+Santa
+
+Ts
+
+yom
+
+x
+
+eid
+
+tit
+
+“3
+
+44
+
+=
+
+on
+
+ao
+
+> al
+
+~
+
+ee
+
+ae
+
+re
+
+iv
+
+gr
+
+Bs
+
+‘
+
+PS.
+
+a
+
+A
+
+a
+
+Photo 3 — Fil
+
+Islope erosion at A17.
+
+Woe
+
+Agi et
+
+—
+
+a 9
+
+=a
+
+7
+
+-
+
+oy
+
+a
+
+a»
+
+<
+
+Ny?
+
+oes
+
+af
+
+~
+
+a
+
+‘ay
+
+pe 38
+
+i A
+
+ge
+
+ae
+
+=
+
+ae.
+
+5
+
+ee,’
+
+wo
+
+pes
+
+ae
+
+Adi
+
+mo
+
+>
+
+ete
+
+oa
+
+als
+
+he
+
+“
+
+‘BI
+
+z
+
+i
+
+—x
+
+a
+
+-
+
+wy
+
+ah
+
+io
+
+~
+
+5
+
+=
+
+Ao
+
++
+
+3
+
+i“
+
+=
+
+a,
+
+st
+
+ee
+
+wk
+
+ot
+
+¥
+
+s
+
+ae.
+
+mh
+
+- Led
+
+ee
+
+ae
+
++s
+
+ees
+
+ax
+
+Se
+
+~
+
+ae
+
+ig
+
+ix
+
+a
+
+~
+
++
+
+.
+
+Nese
+
+A
+
+Ts,
+
+aes
+
+x
+
+‘
+
+=
+
+‘
+
+a
+
+Photo 4 — Dra
+
+Ww crossing at A22.
+
+A3
+
+[Page 24: text read by OCR from the page image]
+Se,
+
+(rn
+
+ae
+
+ar
+
+<i
+
+a
+
+“~
+
+a8
+
+~
+
+ed
+
+Pe
+
+a
+
+vy,
+
+pi
+
+=
+
+“
+
+=
+
+a Be
+
+re
+
+rt
+
+es
+
+ad ae
+
+~~
+
+os
+
+a a
+
+ed
+
++
+
+aa
+
+Pras
+
+it
+
+si
+
+zene
+
+ay
+
+ak
+
+ing
+
+=
+
+Ei
+
+rahe.
+
+4 af
+
+ko
+
+i. ee
+
+ar
+
+rh 18
+
+=.
+
+ex
+
+oe.
+
+yh
+
+Boat
+
+Peae i -.
+
+ie
+
+is
+
+eer
+
+nreme
+
+ae
+
+ae
+
+wee
+
+ey
+
+ey
+
+b
+
+ee
+
+oo
+
+ae
+
+a
+
+S05-—
+
+cee
+
+Sj
+
+EE, *
+
+oe,
+
+ae
+
+&
+
+een
+
+a
+
+os
+
+gee
+
+£
+
+FE?
+
+AES
+
+fie
+
+ae
+
+ak
+
+ie
+
+=
+
+ee
+
+a
+
+tat
+
+ii
+
+sy
+
+ary
+
+Se
+
+bs
+
+ane
+
+-
+
+»
+
+cp ath
+
+~
+
+oY
+
+’
+
+why
+
+34,
+
+wer
+
+eat ©
+
+ihe
+
+lhe
+
+Photo 5 —T
+
+ypical road condition A18 to A71.
+
+A4
+
+[Page 25: text read by OCR from the page image]
+Appendix B
+
+Road Deactivation Map
+
+Bl
+
+[Page 26: text read by OCR from the page image]
+Map 1: Rady FSR Road Deactivation Map
+
+S
+3
+S
+S
+A’
+//))
+JI AT
+ZS fl
+“/
+Ze dd
+Zr FEA
+Yo Hy
+LY iJ J 2p
+Yor T/ ff
+47 // Sf
+V4 if /
+V7 {1 /
+// if Tf
+// (tt
+I (RAN
+I SS)
+| —<N
+\\ “SS
+\\ SS
+\\ ~
+S\
+NS
+Light pullback of oversteepened
+fillslope. Refer to the road
+deactivation prescription for
+details
+N
+ASS
+);
+Z/
+7
+Yj
+oe 9
+hd
+ee
+60 +
+1 - 48
+i a \ fe
+/) 62 59
+1] ae SK a
+/t Ne a
+| LS B « ‘e 151
+i 71 R “ae ee
+Na
+| | a a a + %, 5 54
+\\ Pp
+\\ s 65
+\\ OSE &
+\\
+\\ Neg 6
+\\ yar]
+\ y]
+\\
+\\
+|
+!
+||
+I 8
+‘ , L609 a
+\
+\
+rs \\
+\ S \ \
+\\ \
+\\ \\
+\\ \\
+\ \
+\\ ] \ ENS
+\ i \ .
+\N \
+| \
+\ | } \ )
+Ww Z p \ / /
+‘ i x Hi
+Deactivation Prescription y » ww N
+m= = = Leave road prism intact MNS SSS AN
+. = 7 \
+PF3 (Pullback fill for >6m rw ar AS
+slope distance) S> a SS
+PF2 (Pullback fill for 3-6m wa 7 AN
+slope distance) Ss \\
+PF1 (Pullback fill for 0-3m 7=~—~))
+slope distance) rf C=
+mum Decompact running surface VRI Cutblocks Qe
+Refer to deactivation prescription - >)
+for details " Wetlands 25+ yrs old ees,
+— Install cross ditch Lakes / Rivers 15 - 25 yrs old we ==
+- so.
+— Remove culvert Streams 5-15 yrs old SN i
+——" 1
+—— Remove culvert and install cross ditch Roads <5 yrs old == |
+——— Restore natural drainage channel Paved Contours | }
+— Remove culvert and restore —— Major (100 {
+natural drainage channel == Unpaved “er (100m) \\
+@ Landslide Private Land Minor (20m) \
+Google Satellite \
+e Stations \
+\
+
+Stn. 22 - Remove all fill
+
+from the draw. Refer to
+
+S
+Table 2 for the details of N
+the deactivation works.
+>)
+=]
+oO
+0 200 400m
+SCALE 1:10000
+Project Number | 26.510.01.01.06
+Area Rady Creek
+Name Rady FSR Deactivation Map
+Date Aug 27, 2026
+
+[Page 27: text read by OCR from the page image]
+Deactivation Prescription General Requirements September 8, 2026
+
+Appendix C
+
+General Terminology and Descriptions
+
+Modified from Best Management Practices Handbook: Hillslope Restoration in
+B.C. November 2001
+</source_text>
+
+Page images of the map or scan pages are attached (page 1, page 3, page 13, page 15, page 17, page 18). Look at them as well as the text.
+
+Return the JSON for this document.

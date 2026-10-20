@@ -1,0 +1,108 @@
+{
+  "task_id": "dm_notice-4b6e47cfa5c0",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:17:27Z",
+  "answer": {
+    "legible": true,
+    "document_type": "gate_map",
+    "signed_on": "2026-03-18",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Walbran Main",
+        "file_section": null,
+        "quote": "Gate on Walbran Main - Station 11+600",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 11.6,
+            "km_end": null,
+            "extent": "at",
+            "status": "gated",
+            "seen_on": "text",
+            "quote": "Gate on Walbran Main - Station 11+600"
+          }
+        ]
+      },
+      {
+        "name": "WA700",
+        "file_section": null,
+        "quote": "Gate on WA700 - Station 0+010",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 0.01,
+            "km_end": null,
+            "extent": "at",
+            "status": "gated",
+            "seen_on": "text",
+            "quote": "Gate on WA700 - Station 0+010"
+          }
+        ]
+      },
+      {
+        "name": "WA900",
+        "file_section": null,
+        "quote": "Gate on WA900 - Station 0+372",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 0.372,
+            "km_end": null,
+            "extent": "at",
+            "status": "gated",
+            "seen_on": "text",
+            "quote": "Gate on WA900 - Station 0+372"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "Gate on Walbran Main - Station 11+600",
+        "shows": "Grey callout box with a green arrow pointing to a constructed road where the labels WA702 and WA810-PAO are printed nearby; the road is labelled WALBRAN MAIN (WA) elsewhere on the map."
+      },
+      {
+        "page": 1,
+        "label": "Gate on WA700 - Station 0+010",
+        "shows": "Grey callout box with a green arrow pointing to the start of a constructed road near the WA702 label, beside the Walbran Main gate arrow; the road is labelled WA700-PAO further along."
+      },
+      {
+        "page": 1,
+        "label": "Gate on WA900 - Station 0+372",
+        "shows": "Grey callout box with a green arrow pointing to a constructed road between the labels WA900-PAO and WA1000-PAO, near WA931."
+      },
+      {
+        "page": 1,
+        "label": "Temporary Gate Locations Map",
+        "shows": "Map title (Ćawak ʔqin Forestry), scale 1:25,000, dated Date: 2026-03-18; the gates are marked only by the callout boxes and arrows, with no gate symbol in the legend."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "Date: 2026-03-18"
+      },
+      {
+        "field": "rescinded",
+        "quote": "Temporary Gate Locations Map"
+      }
+    ],
+    "uncertain": [
+      "roads[0].effective_from",
+      "roads[0].effective_to",
+      "roads[1].effective_from",
+      "roads[1].effective_to",
+      "roads[2].effective_from",
+      "roads[2].effective_to"
+    ]
+  }
+}

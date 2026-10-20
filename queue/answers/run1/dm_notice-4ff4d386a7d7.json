@@ -1,0 +1,96 @@
+{
+  "task_id": "dm_notice-4ff4d386a7d7",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:15:00Z",
+  "answer": {
+    "legible": true,
+    "document_type": "closure_order",
+    "signed_on": "2024-06-07",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Bill Brown Forest Service Road",
+        "file_section": "8229.01",
+        "quote": "Bill Brown Forest Service Road (8229.01)",
+        "effective_from": "2024-06-07",
+        "effective_to": null,
+        "points": [
+          {
+            "km": 0.5,
+            "km_end": null,
+            "extent": "at",
+            "status": "closed",
+            "seen_on": "text",
+            "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act that the Bill Brown Forest Service Road (8229.01) is hereby closed at 0.5 km effective immediately until further notice."
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "closed",
+            "seen_on": "map",
+            "quote": "Bridge Closure"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "closed",
+            "seen_on": "map",
+            "quote": "No Vehicle Access"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 3,
+        "label": "Bill Brown Forest Service Road Closure",
+        "shows": "Title of the map page."
+      },
+      {
+        "page": 3,
+        "label": "Bridge Closure",
+        "shows": "Yellow triangle warning symbol (legend: Bridge Closure) on the grey road near where the roads labelled Hangover FSR and Bonanza FSR meet, at the east end of the road labelled Bonanza Bill Brown FSR. No km label is printed at the symbol."
+      },
+      {
+        "page": 3,
+        "label": "Bonanza Bill Brown FSR",
+        "shows": "Road drawn in red (legend: No Vehicle Access) starting just west of the bridge closure symbol and running west along the coast to the edge of the map; the label is printed twice along the red line. No km labels are printed on it."
+      },
+      {
+        "page": 3,
+        "label": "Bonanza Beach Trail",
+        "shows": "Short green line (legend: Bonanza Beach Trail) leaving the road between the bridge closure symbol and the start of the red line, toward the beach; yellow callout with arrow reads: Bonanza Beach trail is accessible by foot. It is located approximately 650m from bridge closure"
+      },
+      {
+        "page": 3,
+        "label": "Hangover FSR",
+        "shows": "Grey forest service road coming from the north to the bridge closure area; no closure marking on it."
+      },
+      {
+        "page": 3,
+        "label": "Bonanza FSR",
+        "shows": "Grey forest service road, labelled in two places, running from the north-east past the bridge closure area and on to the south-east; no closure marking on it."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "June 7, 2024"
+      },
+      {
+        "field": "rescinded",
+        "quote": "is hereby closed at 0.5 km effective immediately until further notice."
+      }
+    ],
+    "uncertain": [
+      "roads[0].points[1].km",
+      "roads[0].points[2].km"
+    ]
+  }
+}

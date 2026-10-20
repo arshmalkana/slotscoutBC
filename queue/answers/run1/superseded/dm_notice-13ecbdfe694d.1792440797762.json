@@ -1,0 +1,181 @@
+{
+ "task_id": "dm_notice-13ecbdfe694d",
+ "run": 1,
+ "mode": "agent",
+ "model": "Claude Code agent mode",
+ "prompt_version": "dm_notice.v1",
+ "schema_id": "dm_notice.v1",
+ "produced_at": "2026-10-19T20:11:13Z",
+ "answer": {
+  "legible": true,
+  "document_type": "closure_order",
+  "signed_on": "2025-03-31",
+  "rescinded": false,
+  "roads": [
+   {
+    "name": "Anderson 7300",
+    "file_section": "8074.02",
+    "quote": "Anderson 7300 (8074.02)",
+    "effective_from": null,
+    "effective_to": null,
+    "points": [
+     {
+      "km": 0,
+      "km_end": 0.209,
+      "extent": "range",
+      "status": "closed",
+      "seen_on": "text",
+      "quote": "0+000              0+209"
+     }
+    ]
+   },
+   {
+    "name": "Anderson 7500",
+    "file_section": "8074.03",
+    "quote": "Anderson 7500 (8074.03)",
+    "effective_from": null,
+    "effective_to": null,
+    "points": [
+     {
+      "km": 0,
+      "km_end": 0.322,
+      "extent": "range",
+      "status": "closed",
+      "seen_on": "text",
+      "quote": "0+000              0+322"
+     }
+    ]
+   },
+   {
+    "name": "Anderson 7400",
+    "file_section": "8074.04",
+    "quote": "Anderson 7400 (8074.04)",
+    "effective_from": null,
+    "effective_to": null,
+    "points": [
+     {
+      "km": 0,
+      "km_end": 0.378,
+      "extent": "range",
+      "status": "closed",
+      "seen_on": "text",
+      "quote": "0+000              0+378"
+     }
+    ]
+   },
+   {
+    "name": "Anderson 7600",
+    "file_section": "8074.05",
+    "quote": "Anderson 7600 (8074.05",
+    "effective_from": null,
+    "effective_to": null,
+    "points": [
+     {
+      "km": 0,
+      "km_end": 0.794,
+      "extent": "range",
+      "status": "closed",
+      "seen_on": "text",
+      "quote": "0+000              0+794"
+     }
+    ]
+   },
+   {
+    "name": "Anderson 8900",
+    "file_section": "8074.06",
+    "quote": "Anderson 8900 (8074.06)",
+    "effective_from": null,
+    "effective_to": null,
+    "points": [
+     {
+      "km": 0,
+      "km_end": 0.222,
+      "extent": "range",
+      "status": "closed",
+      "seen_on": "text",
+      "quote": "0+000              0+222"
+     }
+    ]
+   }
+  ],
+  "map_readings": [
+   {
+    "page": 3,
+    "label": "Schedule A map",
+    "shows": "Map title; the map shows the Anderson road network drawn in green (legend: Road Use Permit Section, RUP_SECTION_STATUS ISSUED). No gate, closure or deactivation symbol is drawn on the roads."
+   },
+   {
+    "page": 3,
+    "label": "Anderson 7300 (8074.02): 0+000m – 0+209m",
+    "shows": "Side panel under 'Occupancy Agreement' and 'BCTS Responsibility:'; lists this road section from 0+000m to 0+209m. The map face carries small road labels too small to read with confidence."
+   },
+   {
+    "page": 3,
+    "label": "Anderson 7500 (8074.03): 0+000m – 0+322m",
+    "shows": "Side panel under 'BCTS Responsibility:'; lists this road section from 0+000m to 0+322m."
+   },
+   {
+    "page": 3,
+    "label": "Anderson 7600 (8074.05): 0+000m – 0+794m",
+    "shows": "Side panel under 'BCTS Responsibility:'; lists this road section from 0+000m to 0+794m."
+   },
+   {
+    "page": 3,
+    "label": "Anderson 8900 (8074.06): 0+000m – 0+222m",
+    "shows": "Side panel under 'BCTS Responsibility:'; lists this road section from 0+000m to 0+222m."
+   },
+   {
+    "page": 3,
+    "label": "District Manager Responsibility: Anderson 7400 (8074.04): 0+000m – 0+378m",
+    "shows": "Side panel; lists this road section from 0+000m to 0+378m under District Manager Responsibility."
+   },
+   {
+    "page": 3,
+    "label": "1 km",
+    "shows": "Km marker dot on the main green road (not a closure or gate mark)."
+   },
+   {
+    "page": 3,
+    "label": "2 km",
+    "shows": "Km marker dot on the main green road (not a closure or gate mark)."
+   },
+   {
+    "page": 3,
+    "label": "4 km",
+    "shows": "Km marker dot on the main green road (not a closure or gate mark)."
+   },
+   {
+    "page": 3,
+    "label": "6 km",
+    "shows": "Km marker dot on the main green road (not a closure or gate mark)."
+   },
+   {
+    "page": 3,
+    "label": "DATE: 3/31/2025",
+    "shows": "Map date printed in the lower right corner."
+   }
+  ],
+  "quotes": [
+   {
+    "field": "signed_on",
+    "quote": "March 31, 2025"
+   },
+   {
+    "field": "rescinded",
+    "quote": "network is hereby Discontinued and Closed."
+   }
+  ],
+  "uncertain": [
+   "roads[0].effective_from",
+   "roads[0].effective_to",
+   "roads[1].effective_from",
+   "roads[1].effective_to",
+   "roads[2].effective_from",
+   "roads[2].effective_to",
+   "roads[3].effective_from",
+   "roads[3].effective_to",
+   "roads[4].effective_from",
+   "roads[4].effective_to"
+  ]
+ }
+}

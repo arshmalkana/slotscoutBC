@@ -1,0 +1,81 @@
+{
+  "task_id": "dm_notice-5d45dcf5b959",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:13:15Z",
+  "answer": {
+    "legible": true,
+    "document_type": "other",
+    "signed_on": null,
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Driftwood FSR",
+        "file_section": null,
+        "quote": "Driftwood FSR",
+        "effective_from": "2026-07-06",
+        "effective_to": "2026-07-24",
+        "points": [
+          {
+            "km": 15.1,
+            "km_end": 16.7,
+            "extent": "range",
+            "status": "caution",
+            "seen_on": "text",
+            "quote": "The Ministry of Forests (FOR) will be contracting out work to rebuild a section of the Driftwood FSR north of Fort St James from 15.1km to 16.7km."
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "WORK SITE",
+        "shows": "Callout with an arrow pointing to the green-drawn road near the printed labels 'G5-012' and '15.1 km' on the upper overview map."
+      },
+      {
+        "page": 1,
+        "label": "Driftwood FSR",
+        "shows": "Callout with an arrow pointing to the green-drawn road on the upper overview map, and a second callout with an arrow pointing to the green-drawn road on the lower detail map."
+      },
+      {
+        "page": 1,
+        "label": "68.5km Leo FSR",
+        "shows": "Callout with an arrow pointing to a point on a road on the upper overview map; not marked as closed."
+      },
+      {
+        "page": 1,
+        "label": "Bridge Site approximately 15km - Start of Work Area",
+        "shows": "Callout on the lower detail map with an arrow pointing to the green-drawn Driftwood FSR near the printed label 'G5-012', marking the start of the work area."
+      },
+      {
+        "page": 1,
+        "label": "End of Work Area - Approximately 16.7km",
+        "shows": "Callout on the lower detail map with an arrow pointing to the green-drawn Driftwood FSR, marking the end of the work area."
+      },
+      {
+        "page": 1,
+        "label": "Detour Route",
+        "shows": "Two callouts on the lower detail map with arrows pointing to a grey line drawn beside the green-drawn Driftwood FSR between the start and end of the work area."
+      },
+      {
+        "page": 1,
+        "label": "Tchentlo FSR",
+        "shows": "Callout on the lower detail map with an arrow pointing to a road drawn in magenta that meets the Driftwood FSR; not marked as closed."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "rescinded",
+        "quote": "Minor delays may be encountered but traffic will be able to bypass the work area either along the FSR itself, or by using a short detour route."
+      }
+    ],
+    "uncertain": [
+      "signed_on",
+      "roads[0].file_section"
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "task_id": "dm_notice-1161790b30f2",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:14:12Z",
+  "answer": {
+    "legible": true,
+    "document_type": "closure_order",
+    "signed_on": null,
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Lucky Creek FSR",
+        "file_section": null,
+        "quote": "Lucky Creek FSR",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "closed",
+            "seen_on": "map",
+            "quote": "POC-Lucky Creek FSR Road Closure"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "Lucky Creek Road Closure- August 31st to September 20th.",
+        "shows": "Map title in the legend panel. It gives closure dates but no year."
+      },
+      {
+        "page": 1,
+        "label": "POC-Lucky Creek FSR Road Closure",
+        "shows": "Red label with a red arrow pointing to the start of a road drawn in thick light blue (cyan). The arrow marks the closure point. No km label is printed there."
+      },
+      {
+        "page": 1,
+        "label": "Lucky Creek FSR",
+        "shows": "Road name printed beside the cyan-highlighted road. The cyan line runs from the arrow's point past the labels '8612 05', 'Lucky Creek FSR', 'Kite Lake' and '8612 09' to its end beside the label '8612 06'. The legend does not explain the cyan line."
+      },
+      {
+        "page": 1,
+        "label": "8612 05",
+        "shows": "Road section label printed on the cyan-highlighted road near the closure arrow."
+      },
+      {
+        "page": 1,
+        "label": "8612 09",
+        "shows": "Road section label printed beside the cyan-highlighted road."
+      },
+      {
+        "page": 1,
+        "label": "8612 06",
+        "shows": "Road section label printed beside the end of the cyan-highlighted road."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "rescinded",
+        "quote": "POC-Lucky Creek FSR Road Closure"
+      }
+    ],
+    "uncertain": [
+      "signed_on",
+      "roads[0].file_section",
+      "roads[0].effective_from",
+      "roads[0].effective_to"
+    ]
+  }
+}

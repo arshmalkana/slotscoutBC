@@ -1,0 +1,66 @@
+{
+  "task_id": "dm_notice-7f66728b5e7d",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:14:12Z",
+  "answer": {
+    "legible": true,
+    "document_type": "closure_order",
+    "signed_on": "2001-10-15",
+    "rescinded": false,
+    "roads": [],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "ROAD CLOSURE - NO MOTORIZED VEHICLE ACCESS",
+        "shows": "Legend: a red dot with a red line marks a road closure with no motorized vehicle access. Four red dots are drawn on the map. No road name or km label is printed on any red line."
+      },
+      {
+        "page": 1,
+        "label": "Loveland Bay Rd",
+        "shows": "A red road-closure dot sits on the road labelled 'Loveland Bay Rd', just before the label 'Brewster Lake Rd', on the outline of the hatched no-camping area. No red line is drawn from this dot."
+      },
+      {
+        "page": 1,
+        "label": "",
+        "shows": "A red road-closure dot on the orange road that runs along the outline of the hatched no-camping area, with an unnamed red line running from it through the hatched area to the shore of the lake labelled 'John Hart Lake'. No words are printed at this dot."
+      },
+      {
+        "page": 1,
+        "label": "CAMPBELL",
+        "shows": "A red road-closure dot beside the river label 'CAMPBELL', with unnamed red lines running from it into the hatched no-camping area toward the lake."
+      },
+      {
+        "page": 1,
+        "label": "",
+        "shows": "A red road-closure dot where an unnamed red line, coming from the red lines near the label 'CAMPBELL', meets an orange road at the grey dashed community watershed boundary. No words are printed at this dot."
+      },
+      {
+        "page": 1,
+        "label": "JOHN HART LAKE NO CAMPING AREA - DAY USE ONLY",
+        "shows": "Legend: hatched area with a dark outline around John Hart Lake marks the no-camping, day-use-only area."
+      },
+      {
+        "page": 1,
+        "label": "JOHN HART LAKE COMMUNITY WATERSHED",
+        "shows": "Legend: grey dashed line marks the community watershed boundary."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "By Order of the Province of British Columbia, October 15, 2001"
+      },
+      {
+        "field": "rescinded",
+        "quote": "ROAD CLOSURE - NO MOTORIZED VEHICLE ACCESS"
+      }
+    ],
+    "uncertain": [
+      "roads"
+    ]
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "task_id": "dm_notice-8f638cc4fa71",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:11:50Z",
+  "answer": {
+    "legible": true,
+    "document_type": "closure_order",
+    "signed_on": "2024-10-25",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Hangover FSR",
+        "file_section": "8229.06",
+        "quote": "Hangover FSR 8229.06",
+        "effective_from": "2024-10-25",
+        "effective_to": null,
+        "points": [
+          {
+            "km": 0.0,
+            "km_end": null,
+            "extent": "beyond",
+            "status": "closed",
+            "seen_on": "text",
+            "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act that the Hangover FSR (8229.06) is hereby closed at 0.0 km effective immediately until further notice."
+          },
+          {
+            "km": 0,
+            "km_end": null,
+            "extent": "at",
+            "status": "caution",
+            "seen_on": "text",
+            "quote": "This action is in response to the current condition of the Bonanza River Bridge at 0km timber rails and a landslide at 3.4km, posing a safety risk to road users."
+          },
+          {
+            "km": 3.4,
+            "km_end": null,
+            "extent": "at",
+            "status": "caution",
+            "seen_on": "text",
+            "quote": "This action is in response to the current condition of the Bonanza River Bridge at 0km timber rails and a landslide at 3.4km, posing a safety risk to road users."
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "closed",
+            "seen_on": "map",
+            "quote": "Closure Location"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 3,
+        "label": "Hangover FSR 8229.06 CLOSURE",
+        "shows": "Map title."
+      },
+      {
+        "page": 3,
+        "label": "Hangover FSR 8229.06",
+        "shows": "The road labelled Hangover FSR 8229.06 is drawn as a thick red line in the legend's Road Closure style along its whole length shown on the map, from the closure location triangle to the edge of the map."
+      },
+      {
+        "page": 3,
+        "label": "Closure Location",
+        "shows": "Legend entry for a yellow warning triangle; one such triangle is drawn at the end of the Hangover FSR 8229.06 road closure line where it meets a road drawn in the legend's Roads style. No km label is printed at the triangle."
+      },
+      {
+        "page": 3,
+        "label": "Road Closure",
+        "shows": "Legend entry: thick red line used for the closed road."
+      },
+      {
+        "page": 3,
+        "label": "(none)",
+        "shows": "A thinner red line with no legend entry and no readable name meets the closure location triangle from the side; a road label at the map's edge is mostly hidden behind the information box. Not described as closed by the text."
+      },
+      {
+        "page": 3,
+        "label": "Date: Oct 25, 2024 Drawn by: HGNRD",
+        "shows": "Map date and author."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "October 25, 2024"
+      },
+      {
+        "field": "rescinded",
+        "quote": "is hereby closed at 0.0 km effective immediately until further notice."
+      }
+    ],
+    "uncertain": []
+  }
+}

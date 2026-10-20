@@ -1,0 +1,181 @@
+{
+  "task_id": "dm_notice-35ed0dd49183",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:23:00Z",
+  "answer": {
+    "legible": true,
+    "document_type": "deactivation_notice",
+    "signed_on": "2024-11-12",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Incomappleux River FSR",
+        "file_section": null,
+        "quote": "Incomappleux River FSR",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "deactivated",
+            "seen_on": "map",
+            "quote": "Incomappleux River FSR Road Deactivation Prescription Map Sections 1, 3, and 4"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "deactivated",
+            "seen_on": "text",
+            "quote": "Road Previousl y Deactivated"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "bridge_out",
+            "seen_on": "map",
+            "quote": "Bridge Previously Removed"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "bridge_out",
+            "seen_on": "map",
+            "quote": "WP 1-11 = N5-037 RB/RNSC Bridge Removal, restore natural stream channel"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "bridge_out",
+            "seen_on": "map",
+            "quote": "WP 1-14 = N5-036 RB/RNSC Remove bridge and restore natural stream channel."
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "bridge_out",
+            "seen_on": "map",
+            "quote": "WP 1-15A = N5-035 RB/RNSC See Appendix A for deactivation prescription."
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "bridge_out",
+            "seen_on": "map",
+            "quote": "WP 1-22B = N5-034 Bridge"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "bridge_out",
+            "seen_on": "map",
+            "quote": "WP 1-29 = N5-125 RB Remove bridge."
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "deactivated",
+            "seen_on": "map",
+            "quote": "WP 1-30 = ISP/IAB Install deactivation sign and sign post. Install lock block wall."
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "Incomappleux River FSR Road Deactivation Prescription Map Sections 1, 3, and 4",
+        "shows": "Map title. A table beside it lists Section 1 10431m, Section 3 663m, Section 4 225m. The legend shows an orange line as 'Deactivation Prescription'; the orange line is drawn along the road between WP 1-30 and WP 1-1."
+      },
+      {
+        "page": 1,
+        "label": "Road Previously Deactivated",
+        "shows": "Callout on the road beyond the end of the orange deactivation prescription line at WP 1-1, near the label Stephney Creek, marking that stretch as previously deactivated."
+      },
+      {
+        "page": 1,
+        "label": "Bridge Previously Removed",
+        "shows": "Callout at a red bridge-removal symbol next to WP 1-1 and WP 1-2, marking a bridge already removed."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-1 = POT End of deactivation Branch 1",
+        "shows": "Point of termination symbol marking the end of deactivation on Branch 1, at the end of the orange prescription line near the label Stephney Creek."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-11 = N5-037 RB/RNSC Bridge Removal, restore natural stream channel",
+        "shows": "Red bridge-removal symbol on the road, between WP 1-10A and WP 1-11A, near the label Scott Creek."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-14 = N5-036 RB/RNSC Remove bridge and restore natural stream channel.",
+        "shows": "Red bridge-removal mark on the road between WP 1-14A and WP 1-14B."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-15A = N5-035 RB/RNSC See Appendix A for deactivation prescription.",
+        "shows": "Red bridge-removal symbol on the road at a river channel crossing, between WP 1-15C and WP 1-15B, near where the road labelled WP 4-1 branches off and near the blue point-of-termination triangle."
+      },
+      {
+        "page": 1,
+        "label": "WP 4-1 = No works required on this road",
+        "shows": "Point on a short side road branching off near WP 1-15B; the road name printed along it is not legible in the image."
+      },
+      {
+        "page": 1,
+        "label": "WP 3-7 = ISP Junction with Branch 1. Install deactivation sign and signpost.",
+        "shows": "Junction of the Section 3 road (WP 3-1 to WP 3-6, cross ditches and water bars) with Branch 1; deactivation sign and signpost to be installed. The Section 3 road name printed along it is not legible in the image."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-22B = N5-034 Bridge",
+        "shows": "Red bridge-removal symbol on the road inside a pink private land area, between WP 1-22A and WP 1-22C."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-25 = PFM/OS Start of pull back section. Partial pull back required over steepened fill. Out slope road surface.",
+        "shows": "Start of a hatched pull back section along the road beside the label Incomappleux River, continuing past WP 1-29 toward WP 1-30."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-29 = N5-125 RB Remove bridge.",
+        "shows": "Red bridge-removal symbol on the road within the hatched pull back section."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-30 = ISP/IAB Install deactivation sign and sign post. Install lock block wall.",
+        "shows": "Green install-deactivation-sign symbol at the end of the orange deactivation prescription line opposite WP 1-1, where the deactivation starts."
+      },
+      {
+        "page": 1,
+        "label": "November 12, 2024",
+        "shows": "Date printed under the map's coordinate system and datum notes."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "November 12, 2024"
+      }
+    ],
+    "uncertain": [
+      "roads[0].file_section",
+      "roads[0].effective_from",
+      "roads[0].effective_to"
+    ]
+  }
+}

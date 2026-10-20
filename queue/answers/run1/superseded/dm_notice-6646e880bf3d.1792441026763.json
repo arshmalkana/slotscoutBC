@@ -1,0 +1,44 @@
+{
+  "task_id": "dm_notice-6646e880bf3d",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:15:06Z",
+  "answer": {
+    "legible": true,
+    "document_type": "other",
+    "signed_on": "2015-04-27",
+    "rescinded": false,
+    "roads": [],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "Cascades Forest District (South) All Structures - 2015",
+        "shows": "Map title. The page is a bridge inspection inventory map showing all bridge structures (star symbols, with 2015 inspections circled) and their crossing ID labels; it marks no closure, gate, restriction or deactivation."
+      },
+      {
+        "page": 1,
+        "label": "Sourcedata: Corporate Bridge Registry (Accessed April 2015) Print Date: April 27, 2015 Created by: Kamloops GeoSpatial Services, MFLNRO (BR), Updated (SC)",
+        "shows": "Map information block giving the data source and print date."
+      },
+      {
+        "page": 1,
+        "label": "LEGEND Bridge Inspections (Year Required) All Bridges 2015 Bridge Label N7-005 Crossing ID Road (Paved) TRIM Road Gravel Forest Service Road (FSR) Status Road Forest District Boundary",
+        "shows": "Legend lists bridge symbols, road types and district boundary only; it has no symbol for gates, closures or deactivated roads."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "Print Date: April 27, 2015"
+      },
+      {
+        "field": "rescinded",
+        "quote": "All Structures - 2015"
+      }
+    ],
+    "uncertain": []
+  }
+}

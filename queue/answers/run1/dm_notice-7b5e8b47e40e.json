@@ -1,0 +1,42 @@
+{
+  "task_id": "dm_notice-7b5e8b47e40e",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:13:40Z",
+  "answer": {
+    "legible": true,
+    "document_type": "other",
+    "signed_on": null,
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "GARNET 9400",
+        "file_section": null,
+        "quote": "Road Name GARNET 9400",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 3.5,
+            "km_end": null,
+            "extent": "at",
+            "status": "restricted",
+            "seen_on": "text",
+            "quote": "Limit loading to 30 tonnes until maintenance items completed."
+          }
+        ]
+      }
+    ],
+    "map_readings": [],
+    "quotes": [],
+    "uncertain": [
+      "signed_on",
+      "roads[0].file_section",
+      "roads[0].effective_from",
+      "roads[0].effective_to"
+    ]
+  }
+}

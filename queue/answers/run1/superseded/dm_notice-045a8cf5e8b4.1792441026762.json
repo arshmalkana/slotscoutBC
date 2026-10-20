@@ -1,0 +1,97 @@
+{
+  "task_id": "dm_notice-045a8cf5e8b4",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:13:40Z",
+  "answer": {
+    "legible": true,
+    "document_type": "deactivation_notice",
+    "signed_on": "2025-12-12",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Incomappleux River FSR",
+        "file_section": null,
+        "quote": "Incomappleux River FSR",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "deactivated",
+            "seen_on": "map",
+            "quote": "Road Deactivation"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "bridge_out",
+            "seen_on": "map",
+            "quote": "Bridge is NOT passable Wet crossing required on high side."
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "Incomappleux River FSR Road Deactivation Prescription Map Section 2",
+        "shows": "Map title. The road is drawn as an orange line (legend: Deactivation Prescription) running south along the east side of the Incomappleux River, continuing north as a green line (legend: To Be Surveyed in 2026). A table gives Section 2 as 7266m and Section 2 (to be surveyed) as 6412m."
+      },
+      {
+        "page": 1,
+        "label": "WP 2-1 = POC Start of deactivation survey for Section 2",
+        "shows": "Green triangle (legend: Point of Commencement (POC)) on the road where the green to-be-surveyed line meets the orange deactivation prescription line."
+      },
+      {
+        "page": 1,
+        "label": "WP 2-6 = BRIDGE/RB/RNSC LEXINGTON CREEK. Remove bridge and restore natural stream channel. Bridge is NOT passable Wet crossing required on high side. 1.5 hrs of machine time expected to create crossing.",
+        "shows": "Red X symbol (legend: Bridge Removal) on the road at the Lexington Creek crossing; no km label."
+      },
+      {
+        "page": 1,
+        "label": "WP 2-3 = PFH - start",
+        "shows": "GPS point on the road marking the start of a full pullback section (about a 40m long section of road per the callout)."
+      },
+      {
+        "page": 1,
+        "label": "WP 2-4 = PFH - end End of full pullback.",
+        "shows": "GPS point on the road marking the end of the full pullback section."
+      },
+      {
+        "page": 1,
+        "label": "WP 2-13 = PFL",
+        "shows": "GPS point on the road marking the start of a 3/4 pullback; callout notes safety concerns with rockfall and danger trees above."
+      },
+      {
+        "page": 1,
+        "label": "WP 2-14 = PFL End of pullback.",
+        "shows": "GPS point on the road marking the end of the pullback."
+      },
+      {
+        "page": 1,
+        "label": "December 12, 2025",
+        "shows": "Date printed in the map information block under the coordinate system and datum."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "December 12, 2025"
+      }
+    ],
+    "uncertain": [
+      "roads[0].file_section",
+      "roads[0].effective_from",
+      "roads[0].effective_to",
+      "roads[0].points[0].km",
+      "roads[0].points[1].km"
+    ]
+  }
+}

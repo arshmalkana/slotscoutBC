@@ -1,0 +1,99 @@
+{
+  "task_id": "dm_notice-045a8cf5e8b4",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:13:53Z",
+  "answer": {
+    "legible": true,
+    "document_type": "deactivation_notice",
+    "signed_on": "2025-12-12",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Incomappleux River FSR",
+        "file_section": null,
+        "quote": "Incomappleux River FSR",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "deactivated",
+            "seen_on": "text",
+            "quote": "Road Deactivation"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "bridge_out",
+            "seen_on": "map",
+            "quote": "WP 2-6 = BRIDGE/RB/RNSC LEXINGTON CREEK. Remove bridge and restore natural stream channel. Bridge is NOT passable"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "Incomappleux River FSR Road Deactivation Prescription Map Section 2",
+        "shows": "Map title. A table beside it lists Road Section 'Section 2' with Length (m) '7266m' and 'Section 2 (to be surveyed)' with '6412m'. No km labels are printed on the road."
+      },
+      {
+        "page": 1,
+        "label": "WP 2-1 = POC Start of deactivation survey for Section 2",
+        "shows": "Green triangle (legend: Point of Commencement (POC)) where the green line (legend: To Be Surveyed in 2026) meets the orange line (legend: Deactivation Prescription)."
+      },
+      {
+        "page": 1,
+        "label": "Deactivation Prescription",
+        "shows": "Legend entry for the orange line drawn along the road from WP 2-1 through WP 2-19, the stretch with prescribed deactivation works (cross ditches, culvert removals, pullbacks, bridge removal)."
+      },
+      {
+        "page": 1,
+        "label": "To Be Surveyed in 2026",
+        "shows": "Legend entry for the green line drawn along the road beyond WP 2-1, the part of Section 2 still to be surveyed."
+      },
+      {
+        "page": 1,
+        "label": "WP 2-6 = BRIDGE/RB/RNSC LEXINGTON CREEK. Remove bridge and restore natural stream channel. Bridge is NOT passable Wet crossing required on high side. 1.5 hrs of machine time expected to create crossing.",
+        "shows": "Red X symbol (legend: Bridge Removal) on the road at Lexington Creek; the callout says the bridge is not passable."
+      },
+      {
+        "page": 1,
+        "label": "WP 2-3 = PFH - start",
+        "shows": "Callout marking the start of a full pullback section along a 40m long section of road; callout WP 2-4 = PFH - end marks its end."
+      },
+      {
+        "page": 1,
+        "label": "WP 2-13 = PFL",
+        "shows": "Callout marking a 3/4 pullback; callout WP 2-14 = PFL marks the end of pullback."
+      },
+      {
+        "page": 1,
+        "label": "December 12, 2025",
+        "shows": "Date printed in the map information block under the coordinate system and datum notes, above the Pioneer Forest Consulting Ltd. logo."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "December 12, 2025"
+      },
+      {
+        "field": "rescinded",
+        "quote": "Road Deactivation"
+      }
+    ],
+    "uncertain": [
+      "roads[0].file_section",
+      "roads[0].effective_from",
+      "roads[0].effective_to"
+    ]
+  }
+}

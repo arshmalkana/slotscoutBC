@@ -1,0 +1,81 @@
+{
+ "task_id": "dm_notice-21679d9bdf82",
+ "run": 1,
+ "mode": "agent",
+ "model": "Claude Code agent mode",
+ "prompt_version": "dm_notice.v1",
+ "schema_id": "dm_notice.v1",
+ "produced_at": "2026-10-19T20:11:56Z",
+ "answer": {
+  "legible": true,
+  "document_type": "gate_map",
+  "signed_on": "2026-07-07",
+  "rescinded": false,
+  "roads": [
+   {
+    "name": "KMU",
+    "file_section": null,
+    "quote": "KMU Gate Location",
+    "effective_from": null,
+    "effective_to": null,
+    "points": [
+     {
+      "km": 0.05,
+      "km_end": null,
+      "extent": "at",
+      "status": "gated",
+      "seen_on": "map",
+      "quote": "Gate Location 0+050 KMU"
+     }
+    ]
+   }
+  ],
+  "map_readings": [
+   {
+    "page": 1,
+    "label": "KMU Gate Location",
+    "shows": "Map title in the title block (LOCATION MAP, HFN Forestry LP)."
+   },
+   {
+    "page": 1,
+    "label": "Gate Location 0+050 KMU",
+    "shows": "Callout box (which also prints a latitude and longitude, not reproduced here) whose pointer ends on a short road segment just north of the road labelled 'KLANAWA MAIN (KM)', near the road label 'KMC'; it marks the gate at 0+050 on KMU. No separate gate symbol is legible at the pointer."
+   },
+   {
+    "page": 1,
+    "label": "852229 CP025",
+    "shows": "Callout labelling a cutblock (gross/net area outline), not a road closure."
+   },
+   {
+    "page": 1,
+    "label": "852236 CP024",
+    "shows": "Callout labelling a cutblock (gross/net area outline), not a road closure."
+   },
+   {
+    "page": 1,
+    "label": "Deactivated Road",
+    "shows": "Legend entry for dashed road lines; several unlabelled or base-map roads are drawn dashed, but the document does not order any deactivation."
+   },
+   {
+    "page": 1,
+    "label": "Map Date: 07 -Jul -2026",
+    "shows": "Map date in the title block; 'Revised Date: dd-mmm-yyyy' is left blank."
+   }
+  ],
+  "quotes": [
+   {
+    "field": "signed_on",
+    "quote": "Map Date: 07 -Jul -2026"
+   },
+   {
+    "field": "rescinded",
+    "quote": "KMU Gate Location"
+   }
+  ],
+  "uncertain": [
+   "roads[0].effective_from",
+   "roads[0].effective_to",
+   "roads[0].file_section"
+  ]
+ }
+}

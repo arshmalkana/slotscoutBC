@@ -1,0 +1,35 @@
+{
+  "task_id": "dm_notice-db32d58132a3",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:16:13Z",
+  "answer": {
+    "legible": true,
+    "document_type": "other",
+    "signed_on": "2011-04-21",
+    "rescinded": false,
+    "roads": [],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "Cascades District (Lillooet Portion) All Bridges",
+        "shows": "Title of a district-wide bridge inventory map (Map Information: \"Sourcedata: Corporate Bridge Registry\", \"Date: April 21, 2011\"). Small black squares mark bridges, labelled with a bridge identifier and a km point on the road. No closure, gate, washout or deactivation marks are shown."
+      },
+      {
+        "page": 1,
+        "label": "Active Forest Road Sections",
+        "shows": "Legend: thin blue line = Forest Service Road, red line = Road Permit. The legend also lists Bridges, Indian Reserves, Parks and Rec (Prov. Park, Ecological Reserves), Lake and District or Portion of District Boundary, with no closure or gate symbol. The red lines on the map are road permit roads, not closures."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "Date: April 21, 2011"
+      }
+    ],
+    "uncertain": []
+  }
+}

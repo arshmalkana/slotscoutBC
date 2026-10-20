@@ -1,0 +1,87 @@
+{
+  "task_id": "dm_notice-7c778b10b4cb",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:15:32Z",
+  "answer": {
+    "legible": true,
+    "document_type": "gate_map",
+    "signed_on": "2024-05-24",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Camper Creek Mainline",
+        "file_section": null,
+        "quote": "Camper Creek Mainline",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 1.0,
+            "km_end": null,
+            "extent": "at",
+            "status": "gated",
+            "seen_on": "text",
+            "quote": "Gate Location - 1.0 km"
+          }
+        ]
+      },
+      {
+        "name": "Truck Road 11",
+        "file_section": null,
+        "quote": "Truck Road 11",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "gated",
+            "seen_on": "map",
+            "quote": "Truck Road 11 Blockade"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "Camper Creek Mainline Gate Location - 1.0 km",
+        "shows": "A callout box pointing to a red triangle (legend: Gate Location) on the road labelled CAMPER CREEK MAINLINE, just past its km 0 marker."
+      },
+      {
+        "page": 1,
+        "label": "Truck Road 11 Blockade",
+        "shows": "A red triangle (legend: Gate Location) with an orange pentagon (legend: Point of Interest) beside it, at a km 0 marker at the start of the road labelled TR 11, next to the km 30 marker on GORDON RIVER MAIN. No km label is printed for the gate."
+      },
+      {
+        "page": 1,
+        "label": "TFL 46 Camper Creek Mainline Gate Location",
+        "shows": "Map title block (The Teal-Jones Group), dated May 24, 2024, scale 1:75,000."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "May 24, 2024"
+      },
+      {
+        "field": "rescinded",
+        "quote": "Camper Creek Mainline Gate Location"
+      }
+    ],
+    "uncertain": [
+      "roads[0].file_section",
+      "roads[0].effective_from",
+      "roads[0].effective_to",
+      "roads[1].file_section",
+      "roads[1].effective_from",
+      "roads[1].effective_to",
+      "roads[1].points[0].km"
+    ]
+  }
+}

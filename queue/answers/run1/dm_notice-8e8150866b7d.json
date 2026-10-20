@@ -1,0 +1,52 @@
+{
+  "task_id": "dm_notice-8e8150866b7d",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:13:42Z",
+  "answer": {
+    "legible": true,
+    "document_type": "gate_map",
+    "signed_on": null,
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "McKay Lake FSR 5833 Br.01",
+        "file_section": "5833.01",
+        "quote": "McKay Lake FSR 5833 Br.01",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 0.8,
+            "km_end": null,
+            "extent": "at",
+            "status": "gated",
+            "seen_on": "text",
+            "quote": "Gate Location Station 0+800 FSR 5833 - Br.01"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "Gate Location Station 0+800 FSR 5833 - Br.01",
+        "shows": "A red callout box with an arrow pointing to a spot on the green active forest road line that carries the printed label 5833-01; the road labelled 5833-02 is drawn in orange and joins it nearby. No gate symbol is drawn; the arrow marks the gate location."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "rescinded",
+        "quote": "Gate Location McKay Lake FSR 5833 Br.01"
+      }
+    ],
+    "uncertain": [
+      "signed_on",
+      "roads[0].effective_from",
+      "roads[0].effective_to"
+    ]
+  }
+}

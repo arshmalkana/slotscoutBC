@@ -1,0 +1,24 @@
+{
+  "task_id": "dm_notice-e0d6dabd5881",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:12:49Z",
+  "answer": {
+    "legible": true,
+    "document_type": "restriction_bulletin",
+    "signed_on": "2026-06-02",
+    "rescinded": false,
+    "roads": [],
+    "map_readings": [],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "ROAD RESTRICTIONS NOTICE June 2, 2026"
+      }
+    ],
+    "uncertain": []
+  }
+}

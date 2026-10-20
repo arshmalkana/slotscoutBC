@@ -1,0 +1,63 @@
+{
+  "task_id": "dm_notice-dc364be6d8dc",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:13:40Z",
+  "answer": {
+    "legible": true,
+    "document_type": "closure_order",
+    "signed_on": "2025-02-13",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Fifteen Mile",
+        "file_section": "10452.01",
+        "quote": "Fifteen Mile",
+        "effective_from": "2025-02-13",
+        "effective_to": null,
+        "points": [
+          {
+            "km": 0,
+            "km_end": 0.517,
+            "extent": "range",
+            "status": "closed",
+            "seen_on": "text",
+            "quote": "Station From: 0 Station To: 0.517"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 2,
+        "label": "10452.01",
+        "shows": "The road section drawn in bold black with x marks (legend: Retired Road Use Permit), running from the green triangle labelled From to the red triangle labelled To."
+      },
+      {
+        "page": 2,
+        "label": "From",
+        "shows": "Green triangle (legend: Station From) at the south end of section 10452.01, next to Highway 5."
+      },
+      {
+        "page": 2,
+        "label": "To",
+        "shows": "Red triangle (legend: Station To) at the north end of section 10452.01."
+      },
+      {
+        "page": 2,
+        "label": "10452.01 Station From: 0 Station To: 0.517",
+        "shows": "Legend box giving the station range of the mapped section."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "February 13, 2025"
+      }
+    ],
+    "uncertain": []
+  }
+}

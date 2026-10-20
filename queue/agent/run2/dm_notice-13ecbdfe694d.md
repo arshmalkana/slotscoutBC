@@ -1,0 +1,1233 @@
+# Extraction task dm_notice-13ecbdfe694d (run 2)
+
+Write your answer to `queue/answers/run2/dm_notice-13ecbdfe694d.json` as:
+
+```json
+{ "task_id": "dm_notice-13ecbdfe694d", "run": 2, "mode": "agent", "model": "Claude Code agent mode, fresh subagent", "prompt_version": "dm_notice.v1", "schema_id": "dm_notice.v1", "produced_at": "<ISO time>", "answer": { ...matching schema/dm_notice.v1.json... } }
+```
+
+The answer must match `schema/dm_notice.v1.json` exactly. Use only the source text below and the page images listed. Never write coordinates. Every filled field needs its exact quote.
+
+## Instructions
+
+# dm_notice.v1
+
+You read one document linked from a British Columbia natural resource district road safety page: a District Manager closure order, a notice that rescinds one, a gate location map, a road restriction bulletin, a deactivation notice, or something else (an inspection report, a news release, a flyer). Return every road it closes, restricts, gates or deactivates, in the JSON schema `dm_notice.v1`. Code places km points on the official road line; a person checks every reading before it counts on the map.
+
+You get:
+
+- the document's text: its text layer, followed by text read by OCR from pages that are pictures (each OCR page starts with `[Page N: text read by OCR from the page image]`);
+- when the PDF has map or scan pages, images of those pages.
+
+Read only this document. Do not use anything you know about the road from elsewhere.
+
+How to use the page images:
+
+- Read printed words the text missed: road names, file and section numbers, km labels, "Gate", "Closed", "Deactivated", legends and titles.
+- See what the map marks: a gate symbol on a road, a stretch drawn as closed or deactivated, a closure point.
+- Never write coordinates, never measure distances from the map or its scale, and never say where something is except by the words printed on the map. If the map marks a gate or closure with no km label, give the point with `km` null and `extent` `unknown`, and describe the mark in `map_readings`.
+
+How to fill the fields:
+
+- `legible`: false only if neither the text nor the images can be read at all; then leave `roads` empty and add `roads` to `uncertain`.
+- `document_type`: what the document is.
+- `signed_on`: the date it was signed or issued, as YYYY-MM-DD, or null.
+- `rescinded`: true only if the document rescinds, lifts or cancels a closure, or says the road has reopened.
+- `roads`: one entry per road the document closes, restricts, gates or deactivates (none for a document that closes nothing), with:
+  - `name` as written, `file_section` ("5748.01", or the road file number such as "FSR 5833" written as "5833") or null, and `quote`: the exact words that name the road, from the text or printed on the map;
+  - `effective_from` and `effective_to` as YYYY-MM-DD, or null;
+  - `points`: one entry per km point or stretch, with `km`, `km_end`, `extent` (`at`, `beyond`, `range`, `whole_road`, `unknown`), `status` (`closed`, `restricted`, `gated`, `washout`, `bridge_out`, `deactivated`, `caution`), `seen_on` (`text` or `map`) and `quote`: the full sentence from the text, or the label printed on the map exactly as printed. A road closed with no km point gets one point with `km` null and `extent` `whole_road` or `unknown`.
+- `map_readings`: for each marked place on a map page, the page number, the words printed there, and what the map shows there in plain words.
+
+Rules:
+
+1. Every filled top-level field (`signed_on`, `rescinded`) needs an entry in `quotes` with the exact words it came from. Each road and each point carries its own `quote`. Quotes are checked against the text and the OCR text; a value whose quote is not found is not counted, and a person checks it on the image instead.
+2. Never write coordinates or place km points yourself.
+3. If you cannot tell a point's status, use the stricter reading only if the document supports it; otherwise leave the point out and add the road's `points` to `uncertain`.
+4. Return only the JSON.
+
+
+## Schema
+
+```json
+{
+ "type": "object",
+ "properties": {
+  "legible": {
+   "type": "boolean",
+   "description": "False only when neither the text nor the page images can be read at all."
+  },
+  "document_type": {
+   "type": "string",
+   "enum": [
+    "closure_order",
+    "closure_rescinded",
+    "gate_map",
+    "restriction_bulletin",
+    "deactivation_notice",
+    "other"
+   ]
+  },
+  "signed_on": {
+   "type": [
+    "string",
+    "null"
+   ],
+   "description": "Date the notice was signed or issued, as YYYY-MM-DD."
+  },
+  "rescinded": {
+   "type": "boolean"
+  },
+  "roads": {
+   "type": "array",
+   "description": "Every road the document closes, restricts, gates or deactivates. Empty when it closes nothing.",
+   "items": {
+    "type": "object",
+    "properties": {
+     "name": {
+      "type": "string"
+     },
+     "file_section": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "quote": {
+      "type": "string",
+      "description": "The exact words that name this road, copied from the text or printed on the map."
+     },
+     "effective_from": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "effective_to": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "points": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "properties": {
+        "km": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "km_end": {
+         "type": [
+          "number",
+          "null"
+         ]
+        },
+        "extent": {
+         "type": "string",
+         "enum": [
+          "at",
+          "beyond",
+          "range",
+          "whole_road",
+          "unknown"
+         ]
+        },
+        "status": {
+         "type": "string",
+         "enum": [
+          "caution",
+          "restricted",
+          "closed",
+          "gated",
+          "washout",
+          "bridge_out",
+          "deactivated"
+         ]
+        },
+        "seen_on": {
+         "type": "string",
+         "enum": [
+          "text",
+          "map"
+         ]
+        },
+        "quote": {
+         "type": "string"
+        }
+       },
+       "required": [
+        "km",
+        "km_end",
+        "extent",
+        "status",
+        "seen_on",
+        "quote"
+       ],
+       "additionalProperties": false
+      }
+     }
+    },
+    "required": [
+     "name",
+     "file_section",
+     "quote",
+     "effective_from",
+     "effective_to",
+     "points"
+    ],
+    "additionalProperties": false
+   }
+  },
+  "map_readings": {
+   "type": "array",
+   "description": "What the page images show, one entry per marked place: the words printed there and what the map marks.",
+   "items": {
+    "type": "object",
+    "properties": {
+     "page": {
+      "type": "integer"
+     },
+     "label": {
+      "type": "string",
+      "description": "The words printed on the map at that place, exactly as printed."
+     },
+     "shows": {
+      "type": "string",
+      "description": "What the map marks there, in plain words (no coordinates)."
+     }
+    },
+    "required": [
+     "page",
+     "label",
+     "shows"
+    ],
+    "additionalProperties": false
+   }
+  },
+  "quotes": {
+   "type": "array",
+   "description": "One entry per filled top-level field (signed_on, rescinded): the exact words it came from.",
+   "items": {
+    "type": "object",
+    "properties": {
+     "field": {
+      "type": "string"
+     },
+     "quote": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "field",
+     "quote"
+    ],
+    "additionalProperties": false
+   }
+  },
+  "uncertain": {
+   "type": "array",
+   "description": "Field paths the document does not settle. Leave those fields null.",
+   "items": {
+    "type": "string"
+   }
+  }
+ },
+ "required": [
+  "legible",
+  "document_type",
+  "signed_on",
+  "rescinded",
+  "roads",
+  "map_readings",
+  "quotes",
+  "uncertain"
+ ],
+ "additionalProperties": false
+}
+```
+
+## Page images
+
+Open each image with the Read tool and look at it before answering. Read the words printed on the map; never write coordinates or measure from the map.
+
+- `raw/2026-10/dm_notices/images/DCK-d8b34b6d-807402_03_04_05_06_fs_301_-_fsr_discontinue_and_close.p2.jpg` (page 2)
+- `raw/2026-10/dm_notices/images/DCK-d8b34b6d-807402_03_04_05_06_fs_301_-_fsr_discontinue_and_close.p3.jpg` (page 3)
+
+## Source
+
+Source: District Manager notice DCK-d8b34b6d-807402_03_04_05_06_fs_301_-_fsr_discontinue_and_close (2026-10-19T19:58:35.795Z)
+
+<source_text>
+File:  FOR-11250-32/8074.02
+  FOR-11250-32/8074.03
+  FOR-11250-32/8074.04
+  FOR-11250-32/8074.05
+  FOR-11250-32/8074.05
+
+March 31, 2025
+
+BC Timber Sales Chinook
+Business Area 46360
+Airport Rd Chilliwack,
+BC
+V2P 1A5
+
+Dear Trevor Shannon:
+
+We are in receipt of BC Timber Sales, Chinook Business Area “Project Assurance Statements for Forest Service
+Road Discontinue and Close FS301 Form” dated for reference March 31, 2025. As all conditions for road tenure
+closure therein have been fulfilled for use and deactivation of the Forest Service Roads listed in SCHEDULE “A”
+network is hereby Discontinued and Closed.
+
+  Forest Service Road Discontinue and Close
+  SCHEDULE “A”
+ File: FOR-11250-32/8074.02 FOR-11250-32/8074.03, FOR-11250-32/8074.04, FOR-11250-32/8074.05, FOR-
+  11250-32/8074.05
+  FSR Name/Project Number  FSR  Section
+  Branch
+  No.  km to km
+  Anderson 7300 (8074.02)  02
+  0+000  0+209
+  Anderson 7500 (8074.03)  03
+  0+000  0+322
+  Anderson 7400 (8074.04)  04
+  0+000  0+378
+  Anderson 7600 (8074.05  05
+  0+000  0+794
+  Anderson 8900 (8074.06)  06
+  0+000  0+222
+
+If you have any questions regarding this Forest Service Road Discontinue and Closure, please contact the Chilliwack
+District Engineering Officer at 604-702-5700.
+
+Sincerely,
+
+
+Mike Peters
+District Manager
+Chilliwack Natural Resource District
+
+
+
+Ministry of Forests  Chilliwack Natural Resource District  46360 Airport Road
+  Chilliwack BC V2P 1A5
+  Phone: (604) 702-5700
+  Fax:  (604) 702-5711
+
+CC:
+  FLAG@gov.bc.ca
+  Brock.Anderson@gov.bc.ca
+  ForestTenuresBranch@gov.bc.ca
+
+  ³
+  !
+
+
+  A nd
+  er  13
+
+
+
+
+  An
+  so
+
+
+
+
+  de
+  A nd e
+  n
+  N
+
+
+
+
+  rs
+  i
+  T i w a l us
+  12
+
+
+
+
+  on
+  r so
+  ne
+  AN
+
+
+
+
+  FS
+  k
+
+
+
+  MINISTRY OF FORESTS
+
+
+
+
+  n F
+  D
+
+
+
+
+  F
+
+
+
+
+  R
+  S
+  R
+
+
+
+
+  A nd er
+  SR
+  E 8 07
+  RS 4 .
+  -
+
+
+
+
+  3. 567
+  O N 09
+
+
+
+
+  so n
+  1 00
+
+
+
+
+  R iv
+
+
+
+
+  7
+  00
+
+
+
+
+  R0 1 6
+  er
+
+
+
+
+  9
+  56
+  F
+  0
+
+
+
+
+  SR
+
+
+
+
+  3.
+  67
+  Schedule A map
+
+
+
+
+  1
+  R0
+  10
+
+
+
+
+  Occupancy Agreement
+
+
+
+
+  60
+  3. 5
+  67  1
+  R0
+
+
+
+
+  7 3. 563
+  4
+
+  BCTS Responsibility:
+  56
+  3.
+  67
+
+
+
+
+  R0
+
+
+
+
+  R 01 6
+  1
+  67  R0
+  3.
+  Anderson 7300 (8074.02): 0+000m – 0+209m
+
+
+
+
+  1
+
+  56 6
+  Anderson 7500 (8074.03): 0+000m – 0+322m
+  Anderson 7600 (8074.05): 0+000m – 0+794m
+
+
+
+
+  A N 0 74
+  -8
+  DE .0
+  Anderson 8900 (8074.06): 0+000m – 0+222m
+
+
+
+
+  R 6
+  SO
+  9
+
+
+
+
+  N
+  0
+  89
+  00
+  0
+
+
+
+
+  R0
+  A N DE R S
+  1
+  District Manager Responsibility:
+
+
+
+
+  167
+  - 8 07 4. 08
+
+
+
+
+  3 .5
+  ON 9 00 0
+
+
+
+
+  65
+  6 km
+  Anderson 7400 (8074.04): 0+000m – 0+378m
+
+
+
+
+  An
+  !
+
+
+
+
+  de
+  rs
+  nEo
+  ig
+  ht
+  00  F SR
+  un si
+  T
+  r
+  gn e
+
+  a
+  n
+  d
+
+
+  s
+  -
+  C
+  a
+  n
+  a
+  d
+  a
+
+
+
+
+  80
+  7
+  H w
+
+
+
+
+  4-  A
+  09
+
+
+
+
+  F ou r FS R
+  Fr
+  y
+
+
+
+
+  -0
+
+
+
+
+  nd
+  as  1
+
+
+
+
+  er
+  e
+
+
+
+
+  s on
+  8
+  rR
+
+
+
+
+  F SR
+  1
+
+
+
+
+  And er so n
+  i ve
+
+
+
+
+  Se c 2 , TP
+  r
+
+
+
+
+  AN
+  9, R ge 2 6  DE
+  -8
+  Se c 1 , TP  0 7 R SO
+  IR 3 A  4 .0  N7
+  9, R ge 2 6  2  30
+  01
+
+
+
+
+  0
+  g e
+
+
+
+
+  0
+  80 74 -1 6-
+  i d
+
+
+
+
+  And e r s o
+  n
+
+
+
+
+  0
+  6
+  B r
+
+
+
+
+  0
+
+
+
+
+  FS
+  R
+  A
+  0
+  a
+
+
+
+
+  nde
+
+
+
+
+  An d s
+  d r
+
+
+
+
+  rs
+  o
+  Ts
+
+
+
+
+  er o
+  a n
+
+
+
+
+  n
+  il
+  e
+
+
+
+
+  Fi
+  uh
+
+
+
+
+  4 km
+
+
+
+
+  n
+
+
+
+
+  ve
+  e x
+  Ce
+
+
+
+
+  T
+
+
+
+
+  FS
+  7
+
+
+
+
+  hr
+  r e
+
+
+
+
+  !
+
+
+
+
+  e
+
+
+
+
+  R
+  A l
+
+
+
+
+  e
+  k F SR
+
+
+
+
+  FS
+  IR 6
+
+
+
+
+  R
+
+
+
+
+  AN
+  SK U ET
+  1200
+
+
+
+
+  DE
+  RS
+  5
+
+
+
+
+  O
+  1 km
+
+
+
+
+  N 7
+  60 0
+  !
+  2 km
+  1
+
+
+
+
+  80 7-
+  !
+
+
+
+
+  4
+  .05
+  Legend
+  79 78 H -
+  .0 1
+  LE U
+
+
+
+
+  H w y
+
+
+
+
+  2
+  2 km
+  Se c 3 6 , TP
+  4  Road Us e P erm it Se gm ent (Road)
+  TS I
+
+
+
+
+  R S ON
+
+
+
+
+  !
+  8, R ge 2 6
+  - 8 07 4. 01
+
+
+
+
+  1 km  DESIGN AT ED _M AIN TAINER_IN D
+  d a
+
+
+
+
+  A N DE
+
+
+
+
+  Y
+  !
+  n a
+
+
+
+
+  Chil liwack Nat ural
+  C a
+
+
+
+
+  Pl 2 8 7
+  Res ource Dist rict  N
+  s -
+
+
+
+
+  CK -2005
+  Road Us e P erm it Se ction
+  a n
+
+  t
+  1st S
+
+
+
+
+  Bk 3
+  T r
+
+
+
+
+  RUP_SECT ION_STATUS
+  IR 2 B
+  R0
+
+
+
+
+  ay
+  G ilt C ree k  ew
+
+  ISSU ED
+  L 3
+  16
+  iv
+
+
+
+
+  280 8
+  pr iva te d r
+
+  79
+  7 9 78 - 1 1- 0 1
+
+
+
+
+  DRA-Main Hwys
+  .A10 0
+
+
+
+
+  L 7
+
+  Bk A
+  L 6
+  L 5
+  Road Class
+  3
+  R
+
+
+
+
+  L 4
+
+  highway
+  01
+
+
+
+
+  LA , P l
+  d
+
+
+
+
+  67
+
+
+
+
+  KA P6 6 3 1 7
+  m R
+
+
+
+
+  9.A 100A
+
+
+
+
+  L 2
+
+  DRA-Sec ondary Roads
+  zz u
+  00
+
+
+
+
+  L 1
+  u
+  Sp
+  Road Class
+  nt St
+
+
+
+
+  loc al
+  F ro
+
+
+
+
+  Pl
+  A5 2 1
+
+
+  res ource
+  e
+
+
+
+
+  Pl 2 8 6  IR 2
+  n
+  n li
+
+
+
+
+  PA PS IL Q U A
+  ai
+
+
+
+
+  LS 1 6
+
+
+  alleyw ay
+  rM
+  i ve
+
+
+
+
+  20
+  R
+
+
+
+
+  drivew ay
+  son
+
+
+
+
+  .E A1
+  d er
+
+
+
+
+  DRA-Unc las sif ied
+
+
+
+
+  79
+  An
+
+
+
+
+  R01 6
+  Road Class
+  trail
+  LS 9
+
+  R01679 . EA 110
+  SURVE Y PARCELS
+  An d
+  e  rs o
+  n  Ri
+  Surveyed Lots
+  Se c 2 6 , TP
+  Se c 2 5 , TP
+  v  er
+  8, R ge 2 6
+  8, R ge 2 6  IR 2 A
+
+
+
+
+  A 1 00
+  1 6 7 9.E
+  R0
+  R 0167 9 .E 00
+  1  0  337.5  675  1,350 Meters
+  01A
+  9.E0
+  67
+  R 01
+  R 01
+
+
+
+
+  1:24,000
+  6 7 9 . A10 0B
+
+
+
+
+  1
+  00
+  A
+  Spuz z  9 .E
+  1  67
+  R0
+  umC
+
+
+
+
+  An
+  de
+  re ek R
+
+
+
+
+  rs
+  1
+  S0 0
+
+
+
+
+  o
+  9 .E
+
+
+
+
+  n
+  1 67
+
+
+
+
+  Ri
+  d
+
+
+
+
+  R0
+
+
+
+
+  ver
+  Se c 2 3 , TP
+  8, R ge 2 6
+  .A 1 0 D
+
+
+
+
+  Se c 2 4 , TP
+  0
+  R0
+
+
+
+
+  8, R ge 2 6
+  Sources : E sri, HERE , Garmin, I ntermap, inc rement P Corp. , GE BCO, USG S, FA O, NPS , NRCA N, G eoB as e, IGN, K adas t er NL, O rdnanc e S urvey, E s ri J apan, MET I, E sri China (Hong K ong), (c ) OpenS treetM ap c ontributors , and t he GI S Us er Com munit y
+  1  67
+
+
+
+
+  67 9
+00
+
+
+
+
+  9. A
+
+
+
+
+  Pl 6  DL 4
+  01
+  10
+
+
+
+
+ L O C KE R 2 6
+  R
+  0C
+
+
+
+
+  DATE : 3/31/2025
+
+[Page 2: text read by OCR from the page image]
+CC:
+FLAG@gov.be.ca
+Brock.Anderson@gov.be.ca
+ForestTenuresBranch@gov.bc.ca
+</source_text>
+
+Page images of the map or scan pages are attached (page 2, page 3). Look at them as well as the text.
+
+Return the JSON for this document.

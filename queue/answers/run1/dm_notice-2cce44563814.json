@@ -1,0 +1,46 @@
+{
+  "task_id": "dm_notice-2cce44563814",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:14:36Z",
+  "answer": {
+    "legible": true,
+    "document_type": "closure_order",
+    "signed_on": "2025-02-25",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Mowhokam East FSR",
+        "file_section": "8019.03",
+        "quote": "Mowhokam East FSR (8019.03)",
+        "effective_from": "2025-02-25",
+        "effective_to": null,
+        "points": [
+          {
+            "km": 6.3,
+            "km_end": null,
+            "extent": "beyond",
+            "status": "closed",
+            "seen_on": "text",
+            "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the Mowhokam East FSR (8019.03) is hereby closed at Bridge CK-2210 located at approximately 6.3km on the Mowhokam East FSR until further notice."
+          }
+        ]
+      }
+    ],
+    "map_readings": [],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "February 25, 2025"
+      },
+      {
+        "field": "rescinded",
+        "quote": "is hereby closed at Bridge CK-2210 located at"
+      }
+    ],
+    "uncertain": []
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "task_id": "dm_notice-5d45dcf5b959",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:12:26Z",
+  "answer": {
+    "legible": true,
+    "document_type": "other",
+    "signed_on": null,
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Driftwood FSR",
+        "file_section": null,
+        "quote": "Driftwood FSR",
+        "effective_from": "2026-07-06",
+        "effective_to": "2026-07-24",
+        "points": [
+          {
+            "km": 15.1,
+            "km_end": 16.7,
+            "extent": "range",
+            "status": "caution",
+            "seen_on": "text",
+            "quote": "The Ministry of Forests (FOR) will be contracting out work to rebuild a section of the Driftwood FSR north of Fort St James from 15.1km to 16.7km."
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "WORK SITE",
+        "shows": "Upper overview map: an arrow from the WORK SITE box points to a spot on the green line of the Driftwood FSR."
+      },
+      {
+        "page": 1,
+        "label": "Driftwood FSR",
+        "shows": "Arrows from the Driftwood FSR boxes (overview map and inset map) point to the green road line."
+      },
+      {
+        "page": 1,
+        "label": "68.5km Leo FSR",
+        "shows": "Upper overview map: an arrow from this box points to a place on a road; it is a reference label, with no closure or gate mark."
+      },
+      {
+        "page": 1,
+        "label": "Bridge Site approximately 15km - Start of Work Area",
+        "shows": "Lower inset map: an arrow points to the green Driftwood FSR line where the work area starts."
+      },
+      {
+        "page": 1,
+        "label": "End of Work Area - Approximately 16.7km",
+        "shows": "Lower inset map: an arrow points to the green Driftwood FSR line where the work area ends."
+      },
+      {
+        "page": 1,
+        "label": "Detour Route",
+        "shows": "Lower inset map: two arrows labelled Detour Route point to a grey line drawn as a bypass around the work area."
+      },
+      {
+        "page": 1,
+        "label": "Tchentlo FSR",
+        "shows": "Lower inset map: a magenta road line labelled Tchentlo FSR; no closure or gate mark."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "rescinded",
+        "quote": "Driftwood FSR 15km Rebuild"
+      }
+    ],
+    "uncertain": [
+      "signed_on",
+      "roads[0].file_section"
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "task_id": "dm_notice-b07b79e91076",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:12:05Z",
+  "answer": {
+    "legible": true,
+    "document_type": "gate_map",
+    "signed_on": "2019-02-25",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Peers FSR",
+        "file_section": "8126.01",
+        "quote": "Peers FSR 8126.01",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 1.7,
+            "km_end": null,
+            "extent": "at",
+            "status": "gated",
+            "seen_on": "text",
+            "quote": "Pursuant to section 6 of the Forest Service Road Use Regulation regarding traffic control devices to restrict access, authorization for the installation, maintenance and operation of a gate to be located at 1.7 km on the Peers FSR as shown and described on the attached map is hereby granted to:"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 4,
+        "label": "Gate Location 1.7 km Peers FSR 8126.01",
+        "shows": "A gate symbol (circle with an X) on the green Forest Service Road labelled 8126.01, with the road name Peers printed along it; a callout box with this label points to the symbol. The rest of the map shows other Forest Service Roads labelled 8126.02, 8126.03, 8126.04, 8126.05 and 8126.08 and Hwy 5; no other gate or closure marks."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "Date: 2019.02.25"
+      },
+      {
+        "field": "rescinded",
+        "quote": "RE: Authorization for the installation, maintenance and operation of a gate at 1.7 km on the Peers FSR"
+      }
+    ],
+    "uncertain": [
+      "roads[0].effective_from",
+      "roads[0].effective_to"
+    ]
+  }
+}

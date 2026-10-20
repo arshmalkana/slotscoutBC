@@ -1,0 +1,71 @@
+{
+  "task_id": "dm_notice-e883e2ab9acb",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:13:15Z",
+  "answer": {
+    "legible": true,
+    "document_type": "other",
+    "signed_on": "2026-09-08",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Rady Forest Service Road (FSR)",
+        "file_section": null,
+        "quote": "Rady Forest Service Road (FSR)",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "deactivated",
+            "seen_on": "text",
+            "quote": "The MOF has indicated that the road is intended to be deactivated to a permanent standard, and that post-deactivation vehicular access is not required."
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "deactivated",
+            "seen_on": "text",
+            "quote": "These works will result in loss of vehicle access along the alignment, including All Terrain Vehicle (ATV) access."
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 3,
+        "label": "Rady FSR slated for deactivation",
+        "shows": "Figure 1 location key map on an air photo: a callout box with an arrow pointing to a road line drawn in red, marking the road slated for deactivation. No gate, closure symbol or km label is printed on it."
+      },
+      {
+        "page": 3,
+        "label": "31",
+        "shows": "Highway shield on a road drawn in yellow along the lake labelled 'Trout Lake'; not marked as closed or deactivated."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "September 8, 2026"
+      },
+      {
+        "field": "rescinded",
+        "quote": "has completed a permanent road deactivation prescription for the Rady FSR."
+      }
+    ],
+    "uncertain": [
+      "roads[0].file_section",
+      "roads[0].effective_from",
+      "roads[0].effective_to",
+      "roads[0].points[0].km",
+      "roads[0].points[1].km"
+    ]
+  }
+}

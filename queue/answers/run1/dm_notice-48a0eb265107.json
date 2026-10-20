@@ -1,0 +1,77 @@
+{
+  "task_id": "dm_notice-48a0eb265107",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:12:49Z",
+  "answer": {
+    "legible": true,
+    "document_type": "closure_order",
+    "signed_on": "2026-08-27",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Canal Main",
+        "file_section": null,
+        "quote": "Canal Main 27 km - 29 km",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 27,
+            "km_end": 29,
+            "extent": "range",
+            "status": "closed",
+            "seen_on": "map",
+            "quote": "Canal Main 27 km - 29 km"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "Forest Service Road Closure Canal Main 27 km - 29 km",
+        "shows": "Map title. A red line (legend: Canal Main Closure) is drawn on Canal Main between the km signs labelled 27 and 29."
+      },
+      {
+        "page": 1,
+        "label": "27",
+        "shows": "Canal Main km sign where the red closure line begins."
+      },
+      {
+        "page": 1,
+        "label": "29",
+        "shows": "Canal Main km sign where the red closure line ends."
+      },
+      {
+        "page": 1,
+        "label": "Canal Main 0 km",
+        "shows": "Start of Canal Main; the purple alternate route runs along Canal Main from here."
+      },
+      {
+        "page": 1,
+        "label": "Canal Main11 km Cous Main 0 km",
+        "shows": "Junction where the purple line (legend: Alternate Route) leaves Canal Main onto Cous Main."
+      },
+      {
+        "page": 1,
+        "label": "Canal Main 38 km",
+        "shows": "Point near km sign 39 where the purple alternate route rejoins Canal Main, south of the closure."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "Date: August 27, 2026"
+      }
+    ],
+    "uncertain": [
+      "roads[0].file_section",
+      "roads[0].effective_from",
+      "roads[0].effective_to"
+    ]
+  }
+}

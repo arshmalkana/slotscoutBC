@@ -1,0 +1,62 @@
+{
+  "task_id": "dm_notice-dc364be6d8dc",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:13:53Z",
+  "answer": {
+    "legible": true,
+    "document_type": "closure_order",
+    "signed_on": "2025-02-13",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Fifteen Mile",
+        "file_section": "10452.01",
+        "quote": "Fifteen Mile",
+        "effective_from": "2025-02-13",
+        "effective_to": null,
+        "points": [
+          {
+            "km": 0,
+            "km_end": 0.517,
+            "extent": "range",
+            "status": "closed",
+            "seen_on": "text",
+            "quote": "10452.01 Station From: 0 Station To: 0.517"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 2,
+        "label": "10452.01",
+        "shows": "Road section 10452.01 drawn as a black line with x marks (shown in bold black per the map header) running between the 'From' and 'To' triangles."
+      },
+      {
+        "page": 2,
+        "label": "From",
+        "shows": "Green triangle (legend: Station From) at one end of section 10452.01; the legend box gives Station From: 0."
+      },
+      {
+        "page": 2,
+        "label": "To",
+        "shows": "Red triangle (legend: Station To) at the other end of section 10452.01; the legend box gives Station To: 0.517."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "February 13, 2025"
+      },
+      {
+        "field": "rescinded",
+        "quote": "DISCONTINUANCE AND CLOSURE APPROVED"
+      }
+    ],
+    "uncertain": []
+  }
+}

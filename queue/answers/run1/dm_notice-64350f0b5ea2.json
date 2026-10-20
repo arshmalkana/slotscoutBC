@@ -1,0 +1,133 @@
+{
+  "task_id": "dm_notice-64350f0b5ea2",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:13:42Z",
+  "answer": {
+    "legible": true,
+    "document_type": "closure_order",
+    "signed_on": "2024-12-17",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "CANTELON 8400",
+        "file_section": "8124.03",
+        "quote": "CANTELON 8400 - (8124.03)",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 0,
+            "km_end": 1.861,
+            "extent": "range",
+            "status": "closed",
+            "seen_on": "text",
+            "quote": "CANTELON 8400 - (8124.03): 0+000 to 1+861"
+          }
+        ]
+      },
+      {
+        "name": "EIGHT MILE 5700",
+        "file_section": "8144.02",
+        "quote": "EIGHT MILE 5700 - (8144.02)",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 0,
+            "km_end": 0.7,
+            "extent": "range",
+            "status": "closed",
+            "seen_on": "text",
+            "quote": "EIGHT MILE 5700 - (8144.02): 0+000 to 0+700"
+          }
+        ]
+      },
+      {
+        "name": "ELEVEN MILE",
+        "file_section": "9352.01",
+        "quote": "ELEVEN MILE – (9352.01)",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 0,
+            "km_end": 3.58,
+            "extent": "range",
+            "status": "closed",
+            "seen_on": "text",
+            "quote": "ELEVEN MILE – (9352.01): 0+000 to 3+580"
+          }
+        ]
+      },
+      {
+        "name": "SOUTH AINSLIE TWO",
+        "file_section": "9703.02",
+        "quote": "SOUTH AINSLIE TWO – (9703.02)",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 0,
+            "km_end": 2.418,
+            "extent": "range",
+            "status": "closed",
+            "seen_on": "text",
+            "quote": "SOUTH AINSLIE TWO – (9703.02): 0+000 to 2+418"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 2,
+        "label": "CANTELON 8400 - (8124.03): Discontinue and Close Section 0+000 to 1+861",
+        "shows": "Legend text for the road drawn with a yellow outline and blue dashes on this page, the section to be discontinued and closed. The road number printed along the highlighted road is partly covered by the highlight and cannot be read in full."
+      },
+      {
+        "page": 2,
+        "label": "8124 01",
+        "shows": "Label on a green active forest road; one end of the highlighted section meets this green road."
+      },
+      {
+        "page": 3,
+        "label": "EIGHT MILE 5700 - (8144.02): Discontinue and Close Section 0+000 to 0+700",
+        "shows": "Legend text for the road drawn with a yellow outline and blue dashes on this page, the section to be discontinued and closed. The road number printed along the highlighted road is partly covered by the highlight and cannot be read in full."
+      },
+      {
+        "page": 3,
+        "label": "8144 01",
+        "shows": "Label on a separate green active forest road running beside the highlighted section; one end of the highlighted section meets the green road line."
+      },
+      {
+        "page": 4,
+        "label": "ELEVEN MILE – (9352.01): Discontinue and Close Section 0+000 to 3+580",
+        "shows": "Legend text for the road drawn with a yellow outline and blue dashes on this page, the section to be discontinued and closed. One end of the highlighted road meets a highway drawn in beige with route shields. The road number printed along the highlighted road is partly covered by the highlight and cannot be read in full."
+      },
+      {
+        "page": 5,
+        "label": "SOUTH AINSLIE TWO – (9703.02): Discontinue and Close Section 0+000 to 2+418",
+        "shows": "Legend text for the road drawn with a yellow outline and blue dashes on this page, the section to be discontinued and closed. One end of the highlighted road meets a green road near the printed labels R09448 4 and R01673 SA130-1; the other end stops with no road beyond it. The road number printed along the highlighted road is partly covered by the highlight and cannot be read in full."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "Dec 17, 2024"
+      },
+      {
+        "field": "rescinded",
+        "quote": "DISCONTINUANCE AND CLOSURE APPROVED"
+      }
+    ],
+    "uncertain": [
+      "roads[0].effective_from",
+      "roads[1].effective_from",
+      "roads[2].effective_from",
+      "roads[3].effective_from"
+    ]
+  }
+}

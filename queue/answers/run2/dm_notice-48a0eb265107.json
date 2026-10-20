@@ -1,0 +1,91 @@
+{
+  "task_id": "dm_notice-48a0eb265107",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:13:53Z",
+  "answer": {
+    "legible": true,
+    "document_type": "closure_order",
+    "signed_on": "2026-08-27",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Canal Main",
+        "file_section": null,
+        "quote": "Canal Main",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 27,
+            "km_end": 29,
+            "extent": "range",
+            "status": "closed",
+            "seen_on": "text",
+            "quote": "Canal Main 27 km - 29 km"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "Forest Service Road Closure Canal Main 27 km - 29 km",
+        "shows": "Map title naming the closure."
+      },
+      {
+        "page": 1,
+        "label": "Canal Main Closure",
+        "shows": "Legend entry for the red line; the red line is drawn along Canal Main between the km signs labelled 27 and 29 (sign 28 lies on it)."
+      },
+      {
+        "page": 1,
+        "label": "27",
+        "shows": "Canal Main km sign (legend: Canal Main Km Signs) at one end of the red closure line."
+      },
+      {
+        "page": 1,
+        "label": "29",
+        "shows": "Canal Main km sign (legend: Canal Main Km Signs) at the other end of the red closure line."
+      },
+      {
+        "page": 1,
+        "label": "Alternate Route",
+        "shows": "Legend entry for the purple line, drawn from the callout 'Canal Main 0 km' through the callout 'Canal Main11 km Cous Main 0 km' to the callout 'Canal Main 38 km', bypassing the closed stretch."
+      },
+      {
+        "page": 1,
+        "label": "Canal Main 0 km",
+        "shows": "Callout at the start of Canal Main and of the purple alternate route."
+      },
+      {
+        "page": 1,
+        "label": "Canal Main11 km Cous Main 0 km",
+        "shows": "Callout where the purple alternate route leaves Canal Main onto Cous Main."
+      },
+      {
+        "page": 1,
+        "label": "Canal Main 38 km",
+        "shows": "Callout where the purple alternate route rejoins Canal Main."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "Date: August 27, 2026"
+      },
+      {
+        "field": "rescinded",
+        "quote": "Forest Service Road Closure"
+      }
+    ],
+    "uncertain": [
+      "roads[0].file_section",
+      "roads[0].effective_from",
+      "roads[0].effective_to"
+    ]
+  }
+}
