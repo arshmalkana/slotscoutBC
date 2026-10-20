@@ -42,8 +42,10 @@ const SEED: Record<string, Partial<BylawEntry>> = {
 
 async function main() {
   let existing: BylawEntry[] = [];
+  let previousFile: { entries: BylawEntry[]; provinceCounts?: unknown } | null = null;
   try {
-    existing = (JSON.parse(await readFile(OUT, "utf8")) as { entries: BylawEntry[] }).entries;
+    previousFile = JSON.parse(await readFile(OUT, "utf8")) as { entries: BylawEntry[]; provinceCounts?: unknown };
+    existing = previousFile.entries;
   } catch {
     // first run
   }
@@ -73,6 +75,8 @@ async function main() {
           "Local government firearm bylaw register (PRD Appendix A). A jurisdiction shows grey until its bylaw is digitised, reviewed by a second person and re-confirmed within 45 days. Regenerate with `npm run register:bylaws`; existing rows are kept.",
         generatedOn: new Date().toISOString().slice(0, 10),
         counts,
+        // The Province's own count, kept from the previous file; validate reports any difference.
+        ...(previousFile?.provinceCounts ? { provinceCounts: previousFile.provinceCounts } : {}),
         entries: rows,
       },
       null,

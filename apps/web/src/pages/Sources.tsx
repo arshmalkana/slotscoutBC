@@ -129,7 +129,10 @@ export function Sources() {
         )}
 
         <h2 id="bylaws">Local government bylaw register</h2>
-        <p>One row per municipality, electoral area and Islands Trust local trust area. Every jurisdiction shows grey, with a link to its bylaw, until the bylaw is digitised and reviewed.</p>
+        <p>
+          One row per municipality, electoral area and Islands Trust local trust area. Every jurisdiction shows grey, with a link to its bylaw, until the bylaw is digitised and reviewed. The Province counts 161 municipalities,
+          158 electoral areas and 13 local trust areas; the official boundary map this register is built from currently has 160 municipalities and 159 electoral areas, and a person is checking which one differs.
+        </p>
         <label className="field" style={{ maxWidth: 360 }}>
           <span>Filter</span>
           <input type="search" value={filter} onChange={(e) => setFilter(e.target.value)} placeholder="Name or regional district" />

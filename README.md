@@ -104,7 +104,7 @@ Working now, against live data:
 Still to do before a region can turn green (PRD 13):
 
 * **Wildlife Act closed areas (W1 to W12)** must be digitised, reviewed by a second person and tested, region by region. The pipeline pre-fills candidates from the legal text, but no region is approved yet, so every spot is "Cannot confirm" for the Wildlife Act today. The Region 2 gold set (Addendum A 7.1) is built by hand first. See [docs/digitising.md](docs/digitising.md) and `reports/` for the latest hand-off report.
-* **Local bylaws (L1 to L3)** for 160 municipalities, 159 electoral areas and 13 local trust areas: the register exists (`data/bylaws.json`); each bylaw must be found, digitised and reviewed.
+* **Local bylaws (L1 to L3)** for the Province's 161 municipalities, 158 electoral areas and 13 local trust areas: the register exists (`data/bylaws.json`); each bylaw must be found, digitised and reviewed. The register is built from the official boundary layers, which currently hold 160 municipalities and 159 electoral areas; `make validate` reports the difference until a person identifies the jurisdiction concerned.
 * **Legal review** of every citation marked "pending review" (PRD 11.4).
 * **Imagery licence.** The default satellite and capture-date service is Esri World Imagery; a public launch needs a licence that allows that use (PRD 7.1), or a switch to provincial orthophotos and Sentinel-2.
 * **Release database and verdict tiles.** Checks read live official services today (5 to 6 s uncached, under 1 s cached). The PRD's PostGIS release database, precomputed verdict tiles and spot-finder tables are the next step for the 1.5 s target and the province-wide colour map.

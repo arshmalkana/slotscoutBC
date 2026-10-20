@@ -95,7 +95,13 @@ export function validate(_opts: { month?: string } = {}) {
   }
 
   // Registers.
-  const { entries } = readJson<{ entries: BylawEntry[] }>(join(P.data, "bylaws.json"));
+  const { entries, provinceCounts } = readJson<{ entries: BylawEntry[]; provinceCounts?: Record<string, number | string> }>(join(P.data, "bylaws.json"));
+  // The register follows the official boundary layers; the Province's own count is checked against it.
+  for (const kind of ["municipality", "electoral_area", "local_trust_area"]) {
+    const want = provinceCounts?.[kind];
+    const have = entries.filter((e) => e.kind === kind).length;
+    if (typeof want === "number" && want !== have) warnings.push(`bylaws: ${have} ${kind.replace("_", " ")} rows from the boundary layer, the Province counts ${want}; a person identifies the difference (all stay grey until reviewed)`);
+  }
   const keys = new Set<string>();
   for (const b of entries) {
     if (keys.has(b.key)) errors.push(`bylaws: duplicate key ${b.key}`);
