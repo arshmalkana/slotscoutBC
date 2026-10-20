@@ -1,0 +1,43 @@
+{
+  "task_id": "dm_notice-03c32c50b081",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:13:48Z",
+  "answer": {
+    "legible": true,
+    "document_type": "other",
+    "signed_on": null,
+    "rescinded": false,
+    "roads": [],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "Snowden Demonstration Forest",
+        "shows": "Title of a recreation trail map showing roads, numbered designated trails (1 to 8), parking, picnic tables, viewpoints and one gate symbol; it does not state that any road is closed, restricted or deactivated."
+      },
+      {
+        "page": 1,
+        "label": "Gate",
+        "shows": "One gate symbol (a bar with a circle at each end, which the legend pairs with 'Gate'; the legend labels sit slightly above their symbols) drawn on an unlabelled rough road that runs along the Snowden Demonstration Forest Boundary south of where it meets the road labelled 'Iron River Mainline', next to a parking 'P' symbol and where the trails numbered 7 'The Lost Frog' and 6 'Mudhoney Pass' reach that road. No road name or km label is printed at the gate."
+      },
+      {
+        "page": 1,
+        "label": "Parking",
+        "shows": "Several circled 'P' parking symbols (near 'Snowden Road', near 'Elmer Lake' and 'Frog Lake', and near 'Riley Lake'); these are parking areas, not gates or closures."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "rescinded",
+        "quote": "Snowden Demonstration Forest"
+      }
+    ],
+    "uncertain": [
+      "signed_on",
+      "roads"
+    ]
+  }
+}

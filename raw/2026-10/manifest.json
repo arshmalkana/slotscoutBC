@@ -2,17 +2,17 @@
   "month": "2026-10",
   "userAgent": "SlotScoutBot/0.1 (+https://slotscout.ca/about; data@slotscout.ca)",
   "startedAt": "2026-10-19T16:53:43.915Z",
-  "updatedAt": "2026-10-20T15:26:12.410Z",
+  "updatedAt": "2026-10-20T16:17:44.817Z",
   "sources": {
     "bcparks_advisories": {
       "status": "skipped",
       "detail": "planned source, not pulled yet",
-      "at": "2026-10-20T15:26:12.394Z"
+      "at": "2026-10-20T16:17:02.080Z"
     },
     "licensee_notices": {
       "status": "skipped",
       "detail": "planned source, not pulled yet",
-      "at": "2026-10-20T15:26:12.394Z"
+      "at": "2026-10-20T16:17:02.080Z"
     },
     "wmu": {
       "status": "ok",
@@ -120,19 +120,19 @@
       "at": "2026-10-19T17:11:56.588Z"
     },
     "closed_areas": {
-      "status": "partial",
-      "detail": "1 of 5 regulations from copies a person saved in inbox/bclaws; waiting for 190_84, 180_90, 16_2004, 38_2005; repealed, not pulled: 196_99; 1 unconfirmed excerpt(s) in inbox/excerpts",
-      "at": "2026-10-20T15:26:12.400Z"
+      "status": "ok",
+      "detail": "5 of 5 regulations from copies a person saved in inbox/bclaws; repealed, not pulled: 196_99; 1 unconfirmed excerpt(s) in inbox/excerpts",
+      "at": "2026-10-20T16:17:02.121Z"
     },
     "road_notices": {
       "status": "ok",
       "detail": "22 of 22 district pages",
-      "at": "2026-10-19T19:57:08.185Z"
+      "at": "2026-10-20T16:17:44.660Z"
     },
     "dm_notices": {
       "status": "ok",
       "detail": "46 of 46 linked notice PDFs",
-      "at": "2026-10-19T20:01:35.969Z"
+      "at": "2026-10-20T16:17:44.729Z"
     },
     "dra_roads": {
       "status": "ok",
@@ -142,7 +142,7 @@
     "bylaws": {
       "status": "partial",
       "detail": "5 of 34 starter-set jurisdictions with a bylaw document found; the rest need a person",
-      "at": "2026-10-19T20:24:53.658Z"
+      "at": "2026-10-20T16:17:44.775Z"
     },
     "cutblocks": {
       "status": "ok",
@@ -1507,6 +1507,348 @@
       "fetchedAt": "2026-10-20T15:09:27.238Z",
       "committed": true,
       "note": "copied from inbox/notes/2026-10-20 BC Laws 196_99 page (repealed).txt"
+    },
+    {
+      "path": "raw\\2026-10\\bclaws\\16_2004.txt",
+      "sha256": "d370425ba1e6dcdd1330e57b5e2a7a82e099e39520ce681281ebc0ba0871414d",
+      "bytes": 30155,
+      "source": "closed_areas",
+      "fetchedAt": "2026-10-20T16:16:41.916Z",
+      "committed": true,
+      "note": "copied from inbox\\bclaws\\16_2004.txt"
+    },
+    {
+      "path": "raw\\2026-10\\bclaws\\180_90.txt",
+      "sha256": "bd28e04cc680b7722a6042c00411ef2da6a669925cb54cd0f8d94cb8d3c726df",
+      "bytes": 12831,
+      "source": "closed_areas",
+      "fetchedAt": "2026-10-20T16:16:41.916Z",
+      "committed": true,
+      "note": "copied from inbox\\bclaws\\180_90.txt"
+    },
+    {
+      "path": "raw\\2026-10\\bclaws\\190_84_partial.txt",
+      "sha256": "6c53a2f0d12b95e8e5d1d6391e3dad54a8273f1420f61d25b90bc15170087742",
+      "bytes": 44023,
+      "source": "closed_areas",
+      "fetchedAt": "2026-10-20T16:16:41.915Z",
+      "committed": true,
+      "note": "copied from inbox\\bclaws\\190_84_partial.txt"
+    },
+    {
+      "path": "raw\\2026-10\\bclaws\\190_84.txt",
+      "sha256": "6c53a2f0d12b95e8e5d1d6391e3dad54a8273f1420f61d25b90bc15170087742",
+      "bytes": 44023,
+      "source": "closed_areas",
+      "fetchedAt": "2026-10-20T16:16:41.915Z",
+      "committed": true,
+      "note": "copied from inbox\\bclaws\\190_84.txt"
+    },
+    {
+      "path": "raw\\2026-10\\bclaws\\38_2005.txt",
+      "sha256": "a784e82e269f2d4965ce28cacdd9d97e6df9ae2083c544eb4b21fb1e02535b29",
+      "bytes": 71819,
+      "source": "closed_areas",
+      "fetchedAt": "2026-10-20T16:16:41.917Z",
+      "committed": true,
+      "note": "copied from inbox\\bclaws\\38_2005.txt"
+    },
+    {
+      "path": "raw\\2026-10\\bclaws\\76_84_00_multi.txt",
+      "sha256": "cff911e21e69a33752ce43fe5a86a359029c155895c46f96a5e236daa54949cd",
+      "bytes": 270428,
+      "source": "closed_areas",
+      "fetchedAt": "2026-10-20T15:34:29.998Z",
+      "committed": true,
+      "note": "copied from inbox\\bclaws\\76_84_00_multi.txt"
+    },
+    {
+      "path": "raw\\2026-10\\district_pages\\DCC.html",
+      "sha256": "0e2ce4b3118f4ce10f131b14d23162aec540700d8dd603f9de5fcc692ab2705d",
+      "bytes": 260621,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/cariboo-chilcotin-road-safety-information",
+      "fetchedAt": "2026-10-20T16:17:06.454Z",
+      "committed": true
+    },
+    {
+      "path": "raw\\2026-10\\district_pages\\DCK.html",
+      "sha256": "efc5ddc6039263303115473233cf129ddebd071fa18bf0f1229d81f9cc0d27ac",
+      "bytes": 286067,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack-natural-resource-district-district-road-safety-information",
+      "fetchedAt": "2026-10-20T16:17:10.659Z",
+      "committed": true
+    },
+    {
+      "path": "raw\\2026-10\\district_pages\\DCR.html",
+      "sha256": "2b0ae52cddbd6a3171683ceefff48d67b1e478ea91b1a5f3262e04a3c4edb468",
+      "bytes": 251867,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/campbell-river-road-safety-information",
+      "fetchedAt": "2026-10-20T16:17:04.729Z",
+      "committed": true
+    },
+    {
+      "path": "raw\\2026-10\\district_pages\\DCS.html",
+      "sha256": "c6de494ce597c62f17b6536bbc55129c8c1717fd54db2b389abbd5b94b75945f",
+      "bytes": 260200,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/cascades-road-safety-information",
+      "fetchedAt": "2026-10-20T16:17:08.550Z",
+      "committed": true
+    },
+    {
+      "path": "raw\\2026-10\\district_pages\\DFN.html",
+      "sha256": "0681e95cb2a4e7a9c6fe26d6f48bc9c9d11b9d767a7ff24ac5a7c0dc6f230906",
+      "bytes": 225745,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/fort-nelson-natural-resource-district-road-safety-information",
+      "fetchedAt": "2026-10-20T16:17:14.549Z",
+      "committed": true
+    },
+    {
+      "path": "raw\\2026-10\\district_pages\\DKA.html",
+      "sha256": "a8fab84cccc1cab422908507da2abd8e522bda980f6ee93b218e618b0e0d81ee",
+      "bytes": 257310,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/thompson-rivers-natural-resource-district-road-safety-information",
+      "fetchedAt": "2026-10-20T16:17:44.654Z",
+      "committed": true
+    },
+    {
+      "path": "raw\\2026-10\\district_pages\\DKM.html",
+      "sha256": "101d429cc00d2daf953d4333ccca90c9533b38b7aacf8b1b64886f379ad404d0",
+      "bytes": 240023,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/coast-mountain-road-safety-information",
+      "fetchedAt": "2026-10-20T16:17:12.740Z",
+      "committed": true
+    },
+    {
+      "path": "raw\\2026-10\\district_pages\\DMH.html",
+      "sha256": "0cb7c973c1cce91c110884fd74f90a3bf0a61305f55933700efc7be10e38e3ad",
+      "bytes": 247404,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/100-mile-house-road-safety-information",
+      "fetchedAt": "2026-10-20T16:17:02.692Z",
+      "committed": true
+    },
+    {
+      "path": "raw\\2026-10\\district_pages\\DMK.html",
+      "sha256": "21065a3e6a27670fd5827e50ce35d22038dc24e8552d9154da9b634e9e9b1c9b",
+      "bytes": 241570,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/mackenzie-road-safety-information",
+      "fetchedAt": "2026-10-20T16:17:18.491Z",
+      "committed": true
+    },
+    {
+      "path": "raw\\2026-10\\district_pages\\DND.html",
+      "sha256": "2dae5fe9e9f2d0e4f4d5f1029d8aba630d484774afe359db4b0d95e9163540ae",
+      "bytes": 243612,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/nadina-natural-resource-district-road-safety-information",
+      "fetchedAt": "2026-10-20T16:17:20.541Z",
+      "committed": true
+    },
+    {
+      "path": "raw\\2026-10\\district_pages\\DNI.html",
+      "sha256": "9e54934b9b050b9ec0eb3904fdb136657103de0d5a9262460bcb515d495f078c",
+      "bytes": 235723,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/noth-island-natural-resource-district-road-safety-information",
+      "fetchedAt": "2026-10-20T16:17:22.542Z",
+      "committed": true
+    },
+    {
+      "path": "raw\\2026-10\\district_pages\\DOS.html",
+      "sha256": "1980a5f49eea7c9cae2dcce0b72d9e962a21213a7a9826c25825598a6dc46c43",
+      "bytes": 243855,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/okanagan-shuswap-road-safety-information",
+      "fetchedAt": "2026-10-20T16:17:24.650Z",
+      "committed": true
+    },
+    {
+      "path": "raw\\2026-10\\district_pages\\DPG.html",
+      "sha256": "ed374d3b5803d4880c66cad60196a664cbcba1df108d12ae17bb4507f5deec37",
+      "bytes": 285441,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/prince-george-natural-resource-district-road-safety-information",
+      "fetchedAt": "2026-10-20T16:17:26.733Z",
+      "committed": true
+    },
+    {
+      "path": "raw\\2026-10\\district_pages\\DQC.html",
+      "sha256": "5e6bf066eff8198fe43174c517c5e3eeb360ccd29ca8d55912a173e7a35cd837",
+      "bytes": 256837,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/haida-gwaii-natural-resource-district-road-safety-information",
+      "fetchedAt": "2026-10-20T16:17:16.745Z",
+      "committed": true
+    },
+    {
+      "path": "raw\\2026-10\\district_pages\\DQU.html",
+      "sha256": "8b9db993e6a80a0b38dea549c4c77ee7e846c937c4825c7e946ae4ecc70543a2",
+      "bytes": 260833,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/quesnel-road-safety-information",
+      "fetchedAt": "2026-10-20T16:17:28.842Z",
+      "committed": true
+    },
+    {
+      "path": "raw\\2026-10\\district_pages\\DRM.html",
+      "sha256": "ba95cfad62096a759e3dcb73293045a9874a05d405cdb975898471ba306eb3ba",
+      "bytes": 237156,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/rocky-mountain-natural-resource-district-road-safety-information",
+      "fetchedAt": "2026-10-20T16:17:30.635Z",
+      "committed": true
+    },
+    {
+      "path": "raw\\2026-10\\district_pages\\DSC.html",
+      "sha256": "019a7107d4dc2cb9270fb3b58c42433bbb5b176caf2be812d31e0431a934dcdb",
+      "bytes": 254249,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/sunshine-coast-road-safety-information",
+      "fetchedAt": "2026-10-20T16:17:42.737Z",
+      "committed": true
+    },
+    {
+      "path": "raw\\2026-10\\district_pages\\DSE.html",
+      "sha256": "ddfb2662bffa2e56ced767e6a4b93e1065fc0d868f3518b2906dbc9b6219cf83",
+      "bytes": 251439,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/selkirk-natural-resource-district-road-safety-information",
+      "fetchedAt": "2026-10-20T16:17:34.745Z",
+      "committed": true
+    },
+    {
+      "path": "raw\\2026-10\\district_pages\\DSI.html",
+      "sha256": "f7c6b10fca2ce86105dc1859b77f30a4ffb22bbba986f7a0f21cb507bef5aab5",
+      "bytes": 239893,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/south-island-natural-resource-district-road-safety-information",
+      "fetchedAt": "2026-10-20T16:17:38.828Z",
+      "committed": true
+    },
+    {
+      "path": "raw\\2026-10\\district_pages\\DSQ.html",
+      "sha256": "f16015269a9bf2f415c68f584a016d9c27d5c81490a656d92a163a52f9f4034f",
+      "bytes": 287311,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/sea-to-sky-natural-resource-district-road-safety-information",
+      "fetchedAt": "2026-10-20T16:17:32.562Z",
+      "committed": true
+    },
+    {
+      "path": "raw\\2026-10\\district_pages\\DSS.html",
+      "sha256": "6f32fc6785513b407651a8e794ea896f7ffb2a2a62afd72965c2e68a95778142",
+      "bytes": 253936,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/skeena-stikine-natural-resource-district-road-safety-information",
+      "fetchedAt": "2026-10-20T16:17:37.130Z",
+      "committed": true
+    },
+    {
+      "path": "raw\\2026-10\\district_pages\\DVA.html",
+      "sha256": "da051115dbb17809fecc90de712cfe3fa2c91a5b77154b123968d5bfae2a165e",
+      "bytes": 291719,
+      "source": "road_notices",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/stuart-nechako-natural-resource-district-road-safety-information",
+      "fetchedAt": "2026-10-20T16:17:40.599Z",
+      "committed": true
+    },
+    {
+      "path": "raw\\2026-10\\inbox\\bclaws\\16_2004.txt",
+      "sha256": "d370425ba1e6dcdd1330e57b5e2a7a82e099e39520ce681281ebc0ba0871414d",
+      "bytes": 30155,
+      "source": "inbox",
+      "fetchedAt": "2026-10-20T16:16:41.916Z",
+      "committed": true,
+      "note": "copied from inbox\\bclaws\\16_2004.txt"
+    },
+    {
+      "path": "raw\\2026-10\\inbox\\bclaws\\180_90.txt",
+      "sha256": "bd28e04cc680b7722a6042c00411ef2da6a669925cb54cd0f8d94cb8d3c726df",
+      "bytes": 12831,
+      "source": "inbox",
+      "fetchedAt": "2026-10-20T16:16:41.916Z",
+      "committed": true,
+      "note": "copied from inbox\\bclaws\\180_90.txt"
+    },
+    {
+      "path": "raw\\2026-10\\inbox\\bclaws\\190_84_partial.txt",
+      "sha256": "6c53a2f0d12b95e8e5d1d6391e3dad54a8273f1420f61d25b90bc15170087742",
+      "bytes": 44023,
+      "source": "inbox",
+      "fetchedAt": "2026-10-20T16:16:41.915Z",
+      "committed": true,
+      "note": "copied from inbox\\bclaws\\190_84_partial.txt"
+    },
+    {
+      "path": "raw\\2026-10\\inbox\\bclaws\\190_84.txt",
+      "sha256": "6c53a2f0d12b95e8e5d1d6391e3dad54a8273f1420f61d25b90bc15170087742",
+      "bytes": 44023,
+      "source": "inbox",
+      "fetchedAt": "2026-10-20T16:16:41.915Z",
+      "committed": true,
+      "note": "copied from inbox\\bclaws\\190_84.txt"
+    },
+    {
+      "path": "raw\\2026-10\\inbox\\bclaws\\38_2005.txt",
+      "sha256": "a784e82e269f2d4965ce28cacdd9d97e6df9ae2083c544eb4b21fb1e02535b29",
+      "bytes": 71819,
+      "source": "inbox",
+      "fetchedAt": "2026-10-20T16:16:41.917Z",
+      "committed": true,
+      "note": "copied from inbox\\bclaws\\38_2005.txt"
+    },
+    {
+      "path": "raw\\2026-10\\inbox\\bclaws\\76_84_00_multi.txt",
+      "sha256": "cff911e21e69a33752ce43fe5a86a359029c155895c46f96a5e236daa54949cd",
+      "bytes": 270428,
+      "source": "inbox",
+      "fetchedAt": "2026-10-20T15:34:29.998Z",
+      "committed": true,
+      "note": "copied from inbox\\bclaws\\76_84_00_multi.txt"
+    },
+    {
+      "path": "raw\\2026-10\\inbox\\excerpts\\closed-areas-sch5-s85.txt",
+      "sha256": "70c047196c9f7c8b215bc2c7db8308524ceddf26cc384aa4a7b206607b37de64",
+      "bytes": 417,
+      "source": "inbox",
+      "fetchedAt": "2026-10-20T15:34:29.999Z",
+      "committed": true,
+      "note": "copied from inbox\\excerpts\\closed-areas-sch5-s85.txt"
+    },
+    {
+      "path": "raw\\2026-10\\inbox\\notes\\2026-10-20 BC Laws 190_84 page (404).txt",
+      "sha256": "aff4ca0944babb05fbee9908d3a1790381e2bf7ebf228a01154a75981d06c254",
+      "bytes": 211,
+      "source": "inbox",
+      "fetchedAt": "2026-10-20T15:34:29.999Z",
+      "committed": true,
+      "note": "copied from inbox\\notes\\2026-10-20 BC Laws 190_84 page (404).txt"
+    },
+    {
+      "path": "raw\\2026-10\\inbox\\notes\\2026-10-20 BC Laws 196_99 page (repealed).txt",
+      "sha256": "8c6d3a9bd196de4c01b39744a9e9f9c96a3a7a186df4f8182eb36e48bf89838b",
+      "bytes": 312,
+      "source": "inbox",
+      "fetchedAt": "2026-10-20T15:34:29.999Z",
+      "committed": true,
+      "note": "copied from inbox\\notes\\2026-10-20 BC Laws 196_99 page (repealed).txt"
+    },
+    {
+      "path": "raw\\2026-10\\inbox\\synopsis\\2026-synopsis-page.txt",
+      "sha256": "c10295b9bfe443ea86f5402e4a6c1c242c876df1852591971104720feea479f7",
+      "bytes": 16032,
+      "source": "inbox",
+      "fetchedAt": "2026-10-20T16:16:41.917Z",
+      "committed": true,
+      "note": "copied from inbox\\synopsis\\2026-synopsis-page.txt"
     }
   ],
   "failures": [
@@ -1518,21 +1860,15 @@
     },
     {
       "source": "closed_areas",
-      "what": "legal text",
-      "error": "no dated copy of 180_90, 16_2004, 38_2005: waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)",
-      "at": "2026-10-20T15:26:12.400Z"
-    },
-    {
-      "source": "closed_areas",
       "what": "190_84",
       "error": "Hunting Regulation, B.C. Reg. 190/84: https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84 returned HTTP 404 to a person on 2026-10-20. The current BC Laws document id is needed.",
-      "at": "2026-10-20T15:26:12.400Z"
+      "at": "2026-10-20T16:02:48.799Z"
     },
     {
       "source": "closed_areas",
       "what": "196_99",
       "error": "Motor Vehicle Prohibition Regulation, B.C. Reg. 196/99: repealed effective March 1, 2024 by B.C. Reg. 18/2024 (BC Laws page saved by a person 2026-10-20). Which regulation now holds the motor vehicle closures is not confirmed yet.",
-      "at": "2026-10-20T15:26:12.400Z"
+      "at": "2026-10-20T16:17:02.121Z"
     }
   ]
 }

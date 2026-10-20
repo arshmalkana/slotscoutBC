@@ -1,0 +1,55 @@
+{
+  "task_id": "dm_notice-e4567d912726",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:12:34Z",
+  "answer": {
+    "legible": true,
+    "document_type": "other",
+    "signed_on": null,
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Incomappleux Forest Service Road",
+        "file_section": null,
+        "quote": "Incomappleux Forest Service Road (FSR)",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "whole_road",
+            "status": "closed",
+            "seen_on": "text",
+            "quote": "The Incomappleux FSR was closed under FRPA Section 22.2(3), with the intent to deactivate it as there is no funding to do repairs or maintenance, and there is no future industrial access need."
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "gated",
+            "seen_on": "text",
+            "quote": "It has been gated since 2017, with the road being slated for deactivation since 2021."
+          }
+        ]
+      }
+    ],
+    "map_readings": [],
+    "quotes": [
+      {
+        "field": "rescinded",
+        "quote": "The Incomappleux FSR was closed under FRPA Section 22.2(3), with the intent to deactivate it as there is no funding to do repairs or maintenance, and there is no future industrial access need."
+      }
+    ],
+    "uncertain": [
+      "signed_on",
+      "roads[0].file_section",
+      "roads[0].effective_from",
+      "roads[0].effective_to"
+    ]
+  }
+}

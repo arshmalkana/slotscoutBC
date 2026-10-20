@@ -1,0 +1,184 @@
+{
+  "task_id": "dm_notice-b993cee8f4fb",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-20T15:11:36Z",
+  "answer": {
+    "legible": true,
+    "document_type": "deactivation_notice",
+    "signed_on": "2024-11-12",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Incomappleux River FSR",
+        "file_section": null,
+        "quote": "Incomappleux River FSR",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "deactivated",
+            "seen_on": "text",
+            "quote": "Sections 1, 3, and 4"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "closed",
+            "seen_on": "text",
+            "quote": "I nstal llock bl ock w al l ."
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "deactivated",
+            "seen_on": "text",
+            "quote": "Road Previousl y Deactivated"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "bridge_out",
+            "seen_on": "text",
+            "quote": "Bridge Previousl y Removed"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "bridge_out",
+            "seen_on": "text",
+            "quote": "WP1- 11=N5-037RB/ Bridge Removal"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "bridge_out",
+            "seen_on": "text",
+            "quote": "WP1-14=N5- 036RB/ RNS C"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "bridge_out",
+            "seen_on": "text",
+            "quote": "WP1- 15A=N5- 035RB/ RNS C"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "bridge_out",
+            "seen_on": "text",
+            "quote": "WP1- 22B=N5- 034Bridge"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "bridge_out",
+            "seen_on": "text",
+            "quote": "WP1-29=N5- 125RB"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "Incomappleux River FSR Road Deactivation Prescription Map Sections 1, 3, and 4",
+        "shows": "Map title; a table beside it lists Section 1 10431m, Section 3 663m and Section 4 225m. The road is drawn with an orange line, which the legend calls \"Deactivation Prescription\". No km labels are printed along the road."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-1 = POT End of deactivation Branch 1.",
+        "shows": "Point of termination symbol at the north end of the orange deactivation line, near Stephney Creek."
+      },
+      {
+        "page": 1,
+        "label": "Road Previously Deactivated",
+        "shows": "Callout pointing to the road line continuing north past WP 1-1 near Stephney Creek."
+      },
+      {
+        "page": 1,
+        "label": "Bridge Previously Removed",
+        "shows": "Red bridge-removal symbol on the road at WP 1-1, near Stephney Creek."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-11 = N5-037 RB/RNSC Bridge Removal, restore natural stream channel",
+        "shows": "Red bridge-removal symbol on the orange deactivation line south of Scott Creek."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-14 = N5-036 RB/RNSC Remove bridge and restore natural stream channel.",
+        "shows": "Red bridge-removal mark on the orange deactivation line."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-15A = N5-035 RB/RNSC See Appendix A for deactivation prescription.",
+        "shows": "Red bridge-removal symbol on the orange deactivation line where it crosses the river channel."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-22B = N5-034 Bridge",
+        "shows": "Red bridge-removal symbol on the orange deactivation line within the pink private land area."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-29 = N5-125 RB Remove bridge.",
+        "shows": "Red bridge-removal symbol on the orange deactivation line near the south end of the map."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-30 = ISP/IAB Install deactivation sign and sign post. Install lock block wall.",
+        "shows": "Green install-deactivation-sign/post-and-access symbol at the south end of the orange deactivation line."
+      },
+      {
+        "page": 1,
+        "label": "WP 3-7 = ISP Junction with Branch 1. Install deactivation sign and signpost.",
+        "shows": "Point at the south junction of the Section 3 loop with the main deactivation line."
+      },
+      {
+        "page": 1,
+        "label": "WP 4-1 = No works required on this road",
+        "shows": "Short orange spur branching off the main line near WP 1-15B (Section 4)."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "November12,2024"
+      },
+      {
+        "field": "rescinded",
+        "quote": "Road Deactivation"
+      }
+    ],
+    "uncertain": [
+      "roads[0].file_section",
+      "roads[0].effective_from",
+      "roads[0].effective_to",
+      "roads[0].points[0].km",
+      "roads[0].points[1].km",
+      "roads[0].points[2].km",
+      "roads[0].points[3].km",
+      "roads[0].points[4].km",
+      "roads[0].points[5].km",
+      "roads[0].points[6].km",
+      "roads[0].points[7].km",
+      "roads[0].points[8].km"
+    ]
+  }
+}

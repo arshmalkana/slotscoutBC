@@ -1,0 +1,68 @@
+{
+  "task_id": "dm_notice-579cf5cd7f21",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:13:53Z",
+  "answer": {
+    "legible": true,
+    "document_type": "other",
+    "signed_on": null,
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "GARNET 9400",
+        "file_section": null,
+        "quote": "Road Name GARNET 9400",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 3.5,
+            "km_end": null,
+            "extent": "at",
+            "status": "restricted",
+            "seen_on": "text",
+            "quote": "Limit loading to 30 tonnes until maintenance items completed."
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 6,
+        "label": "GARNET 9400 3.5km",
+        "shows": "Photo page of the bridge inspection (captions: Approach from Right Bank when facing downstream, Deck, Upstream from Crossing). Photographs only, no map, no gate or closure marks."
+      },
+      {
+        "page": 7,
+        "label": "GARNET 9400 3.5km",
+        "shows": "Photo page of the bridge inspection (captions: Downstream from Crossing, Approach from Left Bank when facing downstream, Approach Barrier, Upstream Profile). Photographs only, no map, no gate or closure marks."
+      },
+      {
+        "page": 8,
+        "label": "GARNET 9400 3.5km",
+        "shows": "Photo page of the bridge inspection (captions: Structure ID, Web corrosion, Deck fasteners). Photographs only, no map, no gate or closure marks."
+      },
+      {
+        "page": 9,
+        "label": "GARNET 9400 3.5km",
+        "shows": "Photo page of the bridge inspection (captions: 10mm timber sill crush, Right Bank Abutment when facing downstream, Soil built up on girder flanges, Left Bank Abutment when facing downstream). Photographs only, no map, no gate or closure marks."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "rescinded",
+        "quote": "Limit loading to 30 tonnes until maintenance items completed."
+      }
+    ],
+    "uncertain": [
+      "signed_on",
+      "roads[0].file_section",
+      "roads[0].effective_from",
+      "roads[0].effective_to"
+    ]
+  }
+}

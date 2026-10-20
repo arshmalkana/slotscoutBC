@@ -1,0 +1,201 @@
+{
+  "item_id": "closed-area-7f8c6b7ba8",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 3, section 54 (Centennial Beach)",
+  "rule_id": "W3-054",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: steps: run 1 [\"international boundary between canada and the united states of america|a concrete marker establishing the international boundary||other\",\"|the mean high water mark in the vicinity of the point where 64 st municipality of delta meets the dyke bordering boundary bay||\",\"mean high water mark|the point of commencement||shoreline\"] vs run 2 [\"international boundary between canada and the united states of america|a concrete marker establishing the international boundary||other\",\"|the mean high water mark in the vicinity of the point where 64 st municipality of delta meets the dyke bordering boundary bay||\",\"|the point of commencement||shoreline\"]",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nCentennial Beach\n54 That portion of M.U. 2-04 in the municipality of Delta from a point at the mean high water mark in Boundary Bay East along the International Boundary between Canada and the United States of America to a concrete marker establishing the International Boundary; thence northwesterly to the mean high water mark in the vicinity of the point where 64 Street, municipality of Delta, meets the dyke bordering Boundary Bay; thence southerly, southwesterly and southeasterly along the mean high water mark to the point of commencement. [en. B.C. Reg. 205/94, s. 7; am. B.C. Reg. 235/97, s. 1.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-712ace3e0b96",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T15:19:05Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 2-04"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "a point at the mean high water mark in Boundary Bay",
+              "direction": "East",
+              "follow": "other",
+              "feature": "International Boundary between Canada and the United States of America",
+              "side_or_bank": null,
+              "until": "a concrete marker establishing the International Boundary",
+              "distance": null,
+              "quote": "from a point at the mean high water mark in Boundary Bay East along the International Boundary between Canada and the United States of America to a concrete marker establishing the International Boundary"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the mean high water mark in the vicinity of the point where 64 Street, municipality of Delta, meets the dyke bordering Boundary Bay",
+              "distance": null,
+              "quote": "thence northwesterly to the mean high water mark in the vicinity of the point where 64 Street, municipality of Delta, meets the dyke bordering Boundary Bay"
+            },
+            {
+              "start": null,
+              "direction": "southerly, southwesterly and southeasterly",
+              "follow": "shoreline",
+              "feature": "mean high water mark",
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence southerly, southwesterly and southeasterly along the mean high water mark to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting or Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "That portion of M.U. 2-04"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "from a point at the mean high water mark"
+          }
+        ],
+        "uncertain": [
+          "geometry.steps[1].follow"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-712ace3e0b96",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T15:19:15Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 2-04"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "a point at the mean high water mark in Boundary Bay",
+              "direction": "East",
+              "follow": "other",
+              "feature": "International Boundary between Canada and the United States of America",
+              "side_or_bank": null,
+              "until": "a concrete marker establishing the International Boundary",
+              "distance": null,
+              "quote": "from a point at the mean high water mark in Boundary Bay East along the International Boundary between Canada and the United States of America to a concrete marker establishing the International Boundary"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the mean high water mark in the vicinity of the point where 64 Street, municipality of Delta, meets the dyke bordering Boundary Bay",
+              "distance": null,
+              "quote": "thence northwesterly to the mean high water mark in the vicinity of the point where 64 Street, municipality of Delta, meets the dyke bordering Boundary Bay"
+            },
+            {
+              "start": null,
+              "direction": "southerly, southwesterly and southeasterly",
+              "follow": "shoreline",
+              "feature": null,
+              "side_or_bank": "mean high water mark",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence southerly, southwesterly and southeasterly along the mean high water mark to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting or Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "That portion of M.U. 2-04"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "from a point at the mean high water mark in Boundary Bay"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "That portion of M.U. 2-04",
+    "effect": "No Shooting or Hunting Areas",
+    "geometry.steps[0]": "from a point at the mean high water mark in Boundary Bay East along the International Boundary between Canada and the United States of America to a concrete marker establishing the International Boundary",
+    "geometry.steps[1]": "thence northwesterly to the mean high water mark in the vicinity of the point where 64 Street, municipality of Delta, meets the dyke bordering Boundary Bay",
+    "geometry.steps[2]": "thence southerly, southwesterly and southeasterly along the mean high water mark to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "steps: run 1 [\"international boundary between canada and the united states of america|a concrete marker establishing the international boundary||other\",\"|the mean high water mark in the vicinity of the point where 64 st municipality of delta meets the dyke bordering boundary bay||\",\"mean high water mark|the point of commencement||shoreline\"] vs run 2 [\"international boundary between canada and the united states of america|a concrete marker establishing the international boundary||other\",\"|the mean high water mark in the vicinity of the point where 64 st municipality of delta meets the dyke bordering boundary bay||\",\"|the point of commencement||shoreline\"]"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T15:59:15.796Z",
+  "updated": "2026-10-20T15:59:15.796Z"
+}

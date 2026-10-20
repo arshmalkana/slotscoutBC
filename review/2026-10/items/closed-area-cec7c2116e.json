@@ -1,0 +1,283 @@
+{
+  "item_id": "closed-area-cec7c2116e",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 66 (Saltery Bay)",
+  "rule_id": "W5-066",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: steps: run 1 [\"|||\",\"rainy day lake creek|a point 300 m upstream of the right of way of the british columbia hydro double power line|300 m|creek\",\"british columbia hydro double power line|a point due north from the northwest corner of the western part of saltery bay provincial park|300 m|other\",\"|a point on the mean low water mark on the natural boundary of jervis inlet||straight_line\",\"jervis inlet|the most southerly tip of an unnamed point of land located approximately 1 100 m southwesterly from the southwest corner of the eastern part of saltery bay provincial park|approximately 1 100 m|shoreline\",\"|a point on the mean low water mark on an unnamed point of land which is the southerly point of the easterly shore of saltery bay||straight_line\",\"saltery bay|the point of commencement||shoreline\"] vs run 2 [\"|||\",\"rainy day lake creek|a point 300 m upstream of the right of way of the british columbia hydro double power line|300 m|creek\",\"british columbia hydro double power line|a point due north from the northwest corner of the western part of saltery bay provincial park|perpendicular distance of 300 m|other\",\"|a point on the mean low water mark on the natural boundary of jervis inlet||straight_line\",\"jervis inlet|the most southerly tip of an unnamed point of land located approximately 1 100 m southwesterly from the southwest corner of the eastern part of saltery bay provincial park|approximately 1 100 m|shoreline\",\"|a point on the mean low water mark on an unnamed point of land which is the southerly point of the easterly shore of saltery bay||straight_line\",\"saltery bay|the point of commencement||shoreline\"]",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nSaltery Bay\n66 That portion of the Province of British Columbia in M.U. 2-12 in the vicinity of Saltery Bay within the following described boundaries: Commencing at a point on the mean low water mark on the southeastern natural boundary of Rainy Day Lake Creek where it flows into Saltery Bay; thence up the creek to a point 300 m upstream of the right of way of the British Columbia Hydro (double) power line; thence westerly parallel to the northerly boundary of the power line at a perpendicular distance of 300 m from it to a point due North from the northwest corner of the western part of Saltery Bay Provincial Park; thence due South in a straight line to a point on the mean low water mark on the natural boundary of Jervis Inlet; thence southeasterly along the natural boundary to the most southerly tip of an unnamed point of land located approximately 1 100 m southwesterly from the southwest corner of the eastern part of Saltery Bay Provincial Park; thence easterly along a line between that point and a point on the mean low water mark on an unnamed point of land which is the southerly point of the easterly shore of Saltery Bay; thence northerly along the mean low water mark on the natural boundary to the point of commencement. [en. B.C. Reg. 205/94, s. 14.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-bbf55687984c",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T15:20:04Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 2-12"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "a point on the mean low water mark on the southeastern natural boundary of Rainy Day Lake Creek where it flows into Saltery Bay",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at a point on the mean low water mark on the southeastern natural boundary of Rainy Day Lake Creek where it flows into Saltery Bay"
+            },
+            {
+              "start": null,
+              "direction": "up",
+              "follow": "creek",
+              "feature": "Rainy Day Lake Creek",
+              "side_or_bank": null,
+              "until": "a point 300 m upstream of the right of way of the British Columbia Hydro (double) power line",
+              "distance": "300 m",
+              "quote": "thence up the creek to a point 300 m upstream of the right of way of the British Columbia Hydro (double) power line"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "other",
+              "feature": "British Columbia Hydro (double) power line",
+              "side_or_bank": "northerly boundary",
+              "until": "a point due North from the northwest corner of the western part of Saltery Bay Provincial Park",
+              "distance": "300 m",
+              "quote": "thence westerly parallel to the northerly boundary of the power line at a perpendicular distance of 300 m from it to a point due North from the northwest corner of the western part of Saltery Bay Provincial Park"
+            },
+            {
+              "start": null,
+              "direction": "due South",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "a point on the mean low water mark on the natural boundary of Jervis Inlet",
+              "distance": null,
+              "quote": "thence due South in a straight line to a point on the mean low water mark on the natural boundary of Jervis Inlet"
+            },
+            {
+              "start": null,
+              "direction": "southeasterly",
+              "follow": "shoreline",
+              "feature": "Jervis Inlet",
+              "side_or_bank": null,
+              "until": "the most southerly tip of an unnamed point of land located approximately 1 100 m southwesterly from the southwest corner of the eastern part of Saltery Bay Provincial Park",
+              "distance": "approximately 1 100 m",
+              "quote": "thence southeasterly along the natural boundary to the most southerly tip of an unnamed point of land located approximately 1 100 m southwesterly from the southwest corner of the eastern part of Saltery Bay Provincial Park"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "a point on the mean low water mark on an unnamed point of land which is the southerly point of the easterly shore of Saltery Bay",
+              "distance": null,
+              "quote": "thence easterly along a line between that point and a point on the mean low water mark on an unnamed point of land which is the southerly point of the easterly shore of Saltery Bay"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "shoreline",
+              "feature": "Saltery Bay",
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence northerly along the mean low water mark on the natural boundary to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in M.U. 2-12"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within the following described boundaries"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-bbf55687984c",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T15:19:29Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 2-12"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "a point on the mean low water mark on the southeastern natural boundary of Rainy Day Lake Creek where it flows into Saltery Bay",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at a point on the mean low water mark on the southeastern natural boundary of Rainy Day Lake Creek where it flows into Saltery Bay"
+            },
+            {
+              "start": null,
+              "direction": "up",
+              "follow": "creek",
+              "feature": "Rainy Day Lake Creek",
+              "side_or_bank": null,
+              "until": "a point 300 m upstream of the right of way of the British Columbia Hydro (double) power line",
+              "distance": "300 m",
+              "quote": "thence up the creek to a point 300 m upstream of the right of way of the British Columbia Hydro (double) power line"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "other",
+              "feature": "British Columbia Hydro (double) power line",
+              "side_or_bank": "northerly boundary",
+              "until": "a point due North from the northwest corner of the western part of Saltery Bay Provincial Park",
+              "distance": "perpendicular distance of 300 m",
+              "quote": "thence westerly parallel to the northerly boundary of the power line at a perpendicular distance of 300 m from it to a point due North from the northwest corner of the western part of Saltery Bay Provincial Park"
+            },
+            {
+              "start": null,
+              "direction": "due South",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "a point on the mean low water mark on the natural boundary of Jervis Inlet",
+              "distance": null,
+              "quote": "thence due South in a straight line to a point on the mean low water mark on the natural boundary of Jervis Inlet"
+            },
+            {
+              "start": null,
+              "direction": "southeasterly",
+              "follow": "shoreline",
+              "feature": "Jervis Inlet",
+              "side_or_bank": null,
+              "until": "the most southerly tip of an unnamed point of land located approximately 1 100 m southwesterly from the southwest corner of the eastern part of Saltery Bay Provincial Park",
+              "distance": "approximately 1 100 m",
+              "quote": "thence southeasterly along the natural boundary to the most southerly tip of an unnamed point of land located approximately 1 100 m southwesterly from the southwest corner of the eastern part of Saltery Bay Provincial Park"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "a point on the mean low water mark on an unnamed point of land which is the southerly point of the easterly shore of Saltery Bay",
+              "distance": null,
+              "quote": "thence easterly along a line between that point and a point on the mean low water mark on an unnamed point of land which is the southerly point of the easterly shore of Saltery Bay"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "shoreline",
+              "feature": "Saltery Bay",
+              "side_or_bank": "mean low water mark",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence northerly along the mean low water mark on the natural boundary to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in M.U. 2-12"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within the following described boundaries"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "in M.U. 2-12",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at a point on the mean low water mark on the southeastern natural boundary of Rainy Day Lake Creek where it flows into Saltery Bay",
+    "geometry.steps[1]": "thence up the creek to a point 300 m upstream of the right of way of the British Columbia Hydro (double) power line",
+    "geometry.steps[2]": "thence westerly parallel to the northerly boundary of the power line at a perpendicular distance of 300 m from it to a point due North from the northwest corner of the western part of Saltery Bay Provincial Park",
+    "geometry.steps[3]": "thence due South in a straight line to a point on the mean low water mark on the natural boundary of Jervis Inlet",
+    "geometry.steps[4]": "thence southeasterly along the natural boundary to the most southerly tip of an unnamed point of land located approximately 1 100 m southwesterly from the southwest corner of the eastern part of Saltery Bay Provincial Park",
+    "geometry.steps[5]": "thence easterly along a line between that point and a point on the mean low water mark on an unnamed point of land which is the southerly point of the easterly shore of Saltery Bay",
+    "geometry.steps[6]": "thence northerly along the mean low water mark on the natural boundary to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "steps: run 1 [\"|||\",\"rainy day lake creek|a point 300 m upstream of the right of way of the british columbia hydro double power line|300 m|creek\",\"british columbia hydro double power line|a point due north from the northwest corner of the western part of saltery bay provincial park|300 m|other\",\"|a point on the mean low water mark on the natural boundary of jervis inlet||straight_line\",\"jervis inlet|the most southerly tip of an unnamed point of land located approximately 1 100 m southwesterly from the southwest corner of the eastern part of saltery bay provincial park|approximately 1 100 m|shoreline\",\"|a point on the mean low water mark on an unnamed point of land which is the southerly point of the easterly shore of saltery bay||straight_line\",\"saltery bay|the point of commencement||shoreline\"] vs run 2 [\"|||\",\"rainy day lake creek|a point 300 m upstream of the right of way of the british columbia hydro double power line|300 m|creek\",\"british columbia hydro double power line|a point due north from the northwest corner of the western part of saltery bay provincial park|perpendicular distance of 300 m|other\",\"|a point on the mean low water mark on the natural boundary of jervis inlet||straight_line\",\"jervis inlet|the most southerly tip of an unnamed point of land located approximately 1 100 m southwesterly from the southwest corner of the eastern part of saltery bay provincial park|approximately 1 100 m|shoreline\",\"|a point on the mean low water mark on an unnamed point of land which is the southerly point of the easterly shore of saltery bay||straight_line\",\"saltery bay|the point of commencement||shoreline\"]"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T15:59:54.705Z",
+  "updated": "2026-10-20T15:59:54.705Z"
+}

@@ -1,0 +1,311 @@
+{
+  "item_id": "closed-area-114e14241f",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 69 (Vananda)",
+  "rule_id": "W5-069",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nVananda\n69 That portion of the Province of British Columbia in the vicinity of Vananda contained within the following described boundaries: Commencing at a point on the mean low water mark on the northern natural boundary of Sturt Creek where it flows into Malaspina Strait and proceeding due South in a straight line to the southerly boundary of the Blubber Bay Highway right of way; thence southeasterly along the southerly boundary of the highway right of way to its intersection with Gillies Bay Highway; thence southwest and southeast along the westerly right of way to its intersection with Vananda Creek; thence in a straight line due East to the westerly right of way of Central Road; thence southeasterly along the right of way to the junction of the Imperial Limestone Road; thence due North in a straight line to a point on the mean low water mark on the natural boundary of Malaspina Strait; thence northwesterly along the natural boundary to the southerly terminus of the Texada Island telephone cable; thence northwesterly in a straight line to the tip of Sturt Point; thence southerly and westerly along the mean low water mark on the natural boundary of Sturt Point to the point of commencement. [en. B.C. Reg. 205/94, s. 17.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-f358473b99fa",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T15:20:04Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "a point on the mean low water mark on the northern natural boundary of Sturt Creek where it flows into Malaspina Strait",
+              "direction": "due South",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the southerly boundary of the Blubber Bay Highway right of way",
+              "distance": null,
+              "quote": "Commencing at a point on the mean low water mark on the northern natural boundary of Sturt Creek where it flows into Malaspina Strait and proceeding due South in a straight line to the southerly boundary of the Blubber Bay Highway right of way"
+            },
+            {
+              "start": null,
+              "direction": "southeasterly",
+              "follow": "road",
+              "feature": "Blubber Bay Highway",
+              "side_or_bank": "southerly boundary",
+              "until": "its intersection with Gillies Bay Highway",
+              "distance": null,
+              "quote": "thence southeasterly along the southerly boundary of the highway right of way to its intersection with Gillies Bay Highway"
+            },
+            {
+              "start": null,
+              "direction": "southwest and southeast",
+              "follow": "road",
+              "feature": "Gillies Bay Highway",
+              "side_or_bank": "westerly right of way",
+              "until": "its intersection with Vananda Creek",
+              "distance": null,
+              "quote": "thence southwest and southeast along the westerly right of way to its intersection with Vananda Creek"
+            },
+            {
+              "start": null,
+              "direction": "due East",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the westerly right of way of Central Road",
+              "distance": null,
+              "quote": "thence in a straight line due East to the westerly right of way of Central Road"
+            },
+            {
+              "start": null,
+              "direction": "southeasterly",
+              "follow": "road",
+              "feature": "Central Road",
+              "side_or_bank": null,
+              "until": "the junction of the Imperial Limestone Road",
+              "distance": null,
+              "quote": "thence southeasterly along the right of way to the junction of the Imperial Limestone Road"
+            },
+            {
+              "start": null,
+              "direction": "due North",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "a point on the mean low water mark on the natural boundary of Malaspina Strait",
+              "distance": null,
+              "quote": "thence due North in a straight line to a point on the mean low water mark on the natural boundary of Malaspina Strait"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly",
+              "follow": "shoreline",
+              "feature": "Malaspina Strait",
+              "side_or_bank": null,
+              "until": "the southerly terminus of the Texada Island telephone cable",
+              "distance": null,
+              "quote": "thence northwesterly along the natural boundary to the southerly terminus of the Texada Island telephone cable"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the tip of Sturt Point",
+              "distance": null,
+              "quote": "thence northwesterly in a straight line to the tip of Sturt Point"
+            },
+            {
+              "start": null,
+              "direction": "southerly and westerly",
+              "follow": "shoreline",
+              "feature": "Sturt Point",
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence southerly and westerly along the mean low water mark on the natural boundary of Sturt Point to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within the following described boundaries"
+          }
+        ],
+        "uncertain": [
+          "within"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-f358473b99fa",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T15:19:29Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "a point on the mean low water mark on the northern natural boundary of Sturt Creek where it flows into Malaspina Strait",
+              "direction": "due South",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the southerly boundary of the Blubber Bay Highway right of way",
+              "distance": null,
+              "quote": "Commencing at a point on the mean low water mark on the northern natural boundary of Sturt Creek where it flows into Malaspina Strait and proceeding due South in a straight line to the southerly boundary of the Blubber Bay Highway right of way"
+            },
+            {
+              "start": null,
+              "direction": "southeasterly",
+              "follow": "road",
+              "feature": "Blubber Bay Highway",
+              "side_or_bank": "southerly boundary",
+              "until": "its intersection with Gillies Bay Highway",
+              "distance": null,
+              "quote": "thence southeasterly along the southerly boundary of the highway right of way to its intersection with Gillies Bay Highway"
+            },
+            {
+              "start": null,
+              "direction": "southwest and southeast",
+              "follow": "road",
+              "feature": "Gillies Bay Highway",
+              "side_or_bank": "westerly right of way",
+              "until": "its intersection with Vananda Creek",
+              "distance": null,
+              "quote": "thence southwest and southeast along the westerly right of way to its intersection with Vananda Creek"
+            },
+            {
+              "start": null,
+              "direction": "due East",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the westerly right of way of Central Road",
+              "distance": null,
+              "quote": "thence in a straight line due East to the westerly right of way of Central Road"
+            },
+            {
+              "start": null,
+              "direction": "southeasterly",
+              "follow": "road",
+              "feature": "Central Road",
+              "side_or_bank": null,
+              "until": "the junction of the Imperial Limestone Road",
+              "distance": null,
+              "quote": "thence southeasterly along the right of way to the junction of the Imperial Limestone Road"
+            },
+            {
+              "start": null,
+              "direction": "due North",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "a point on the mean low water mark on the natural boundary of Malaspina Strait",
+              "distance": null,
+              "quote": "thence due North in a straight line to a point on the mean low water mark on the natural boundary of Malaspina Strait"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly",
+              "follow": "shoreline",
+              "feature": "Malaspina Strait",
+              "side_or_bank": null,
+              "until": "the southerly terminus of the Texada Island telephone cable",
+              "distance": null,
+              "quote": "thence northwesterly along the natural boundary to the southerly terminus of the Texada Island telephone cable"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the tip of Sturt Point",
+              "distance": null,
+              "quote": "thence northwesterly in a straight line to the tip of Sturt Point"
+            },
+            {
+              "start": null,
+              "direction": "southerly and westerly",
+              "follow": "shoreline",
+              "feature": "Sturt Point",
+              "side_or_bank": "mean low water mark",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence southerly and westerly along the mean low water mark on the natural boundary of Sturt Point to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries"
+          }
+        ],
+        "uncertain": [
+          "within"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at a point on the mean low water mark on the northern natural boundary of Sturt Creek where it flows into Malaspina Strait and proceeding due South in a straight line to the southerly boundary of the Blubber Bay Highway right of way",
+    "geometry.steps[1]": "thence southeasterly along the southerly boundary of the highway right of way to its intersection with Gillies Bay Highway",
+    "geometry.steps[2]": "thence southwest and southeast along the westerly right of way to its intersection with Vananda Creek",
+    "geometry.steps[3]": "thence in a straight line due East to the westerly right of way of Central Road",
+    "geometry.steps[4]": "thence southeasterly along the right of way to the junction of the Imperial Limestone Road",
+    "geometry.steps[5]": "thence due North in a straight line to a point on the mean low water mark on the natural boundary of Malaspina Strait",
+    "geometry.steps[6]": "thence northwesterly along the natural boundary to the southerly terminus of the Texada Island telephone cable",
+    "geometry.steps[7]": "thence northwesterly in a straight line to the tip of Sturt Point",
+    "geometry.steps[8]": "thence southerly and westerly along the mean low water mark on the natural boundary of Sturt Point to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T16:00:09.927Z",
+  "updated": "2026-10-20T16:00:09.927Z"
+}

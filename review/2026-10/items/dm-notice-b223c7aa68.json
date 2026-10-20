@@ -1,0 +1,144 @@
+{
+  "item_id": "dm-notice-b223c7aa68",
+  "month": "2026-10",
+  "kind": "dm_notice",
+  "title": "District Manager notice DSI-8a4bec36-news_release_-_access_changes_implemented_to_protect_local_watershed: 1 road closed or restricted (Banon Creek Forest Service Road)",
+  "change_type": "stricter",
+  "decision": "Check each road and km point against the PDF and its page images. Approving lets these closures count on the map; until then P6 shows Cannot confirm on these roads.",
+  "why": [
+    "read from: text layer (2 pages); 1 map or scan page image for reading, and 1 page image(s) looked at by both readings",
+    "a person checks every AI reading before it counts (Addendum A 7.2: the gold set has not passed yet)"
+  ],
+  "source": {
+    "text": "Source: https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/news_release_-_access_changes_implemented_to_protect_local_watershed.pdf\r\nFetched: 2026-10-19T20:00:46.775Z\r\nSHA-256: 9ea7af0a7f213925bf7603488950ad7fc906293d6f4de419f9a9b4bfa315636e\r\nRead: text layer (2 pages); 1 map or scan page image for reading\r\nImages: raw/2026-10/dm_notices/images/DSI-8a4bec36-news_release_-_access_changes_implemented_to_protect_local_watershed.p2.jpg\r\n\r\nFOR IMMEDIATE RELEASE\r\n\r\nAccess Changes Implemented to Protect Local Watershed\r\n\r\nLadysmith, BC — The Town of Ladysmith, the Province and Forestry Stakeholders are\r\nadvising the public of new access controls on the Banon Creek Forest Service Road to\r\nhelp protect drinking water, forest resources, and public safety.\r\n\r\nDue to ongoing issues with unauthorized camping and illegal dumping resulting in an\r\nincreased wildfire risk and possible watershed contamination, weekday access to the\r\narea will be restricted.\r\n\r\nBeginning on May 19, 2026, the access gate to the Banon Creek Forest Service Road\r\nat the end of South Watts Road will be closed Monday to Friday. It will be open on\r\nweekends and statutory holidays from 8:00 am to 4:00 pm.\r\n\r\n“We know the gate closure is disappointing for many community members who use the\r\narea for recreation, especially during the warmer months. Unfortunately, weekday\r\nclosures are necessary due to the increased risk of wildfire,” says Nicholas Pescod, the\r\nTown’s Communications & Engagement Specialist.\r\n\r\nEnvironment and Climate Change Canada is predicting 2026 to be one of the hottest\r\nsummers on record. A major wildfire within the watershed could significantly deplete the\r\nTown’s reservoir, impact water quality, and require severe water restrictions. These\r\nmeasures are intended to reduce risk while still allowing for responsible recreational\r\nuse.\r\n\r\nThe watershed is located outside Town boundaries and is managed under provincial\r\ntimber licences held by private forestry companies and Indigenous forestry operators.\r\nThe Town owns the Holland Lake reservoir and jointly owns the Stocking Lake reservoir\r\nand surrounding lands with the CVRD. Access and watershed projection agreements\r\nare in place with adjacent landowners. As such, the Town does not directly control\r\naccess to the watershed but is working collaboratively with the Ministry of Forests and\r\nland managers to better regulate use of the area.\r\n\r\nThis watershed provides drinking water for approximately 12,000 people in the areas of\r\nthe Town of Ladysmith, the Stz’uminus First Nation, the Diamond and Saltair.\r\n\r\nRecreational access will continue on weekends and statutory holidays. Non-motorized\r\nusers can access the watershed at any time and the Stocking Lake, Heart Lake and\r\nBanon Creek Falls trails will remain open for non-motorized use. Non-motorized users\r\nwishing to reach Banon Creek Falls from Monday to Friday can use the Stocking Lake\r\ntrail to reach the Banon Creek Service Road, then head south to the spur road that\r\nprovides access to the trailhead.\r\n\r\nUpdated access information and maps will be shared through social media, direct\r\nnotifications, and online resources.\r\n\r\nThe Town and the Province will continue to monitor activity in the area and will attempt\r\nto balance recreational access with watershed protection.\r\n\r\nLINK TO MAP PDF HERE\r\nLINK TO GPS DATA HERE\r\n\r\nThe Town of Ladysmith respectfully acknowledges that we gather and work on the\r\nunceded territory of the Stz’uminus First Nation, the traditional keepers of this land.\r\n\r\n-30-\r\n\r\nMedia Contact\r\nNicholas Pescod\r\nCommunications & Engagement Specialist\r\nnpescod@ladysmith.ca\r\n250-268-0606",
+    "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/news_release_-_access_changes_implemented_to_protect_local_watershed.pdf",
+    "version": "2026-10-19T20:00:46.775Z",
+    "confirmed": true,
+    "file": "raw\\2026-10\\dm_notices\\DSI-8a4bec36-news_release_-_access_changes_implemented_to_protect_local_watershed.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "dm_notice-8ec7980480be",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "dm_notice.v1",
+      "schema_id": "dm_notice.v1",
+      "produced_at": "2026-10-19T20:12:51Z",
+      "answer": {
+        "legible": true,
+        "document_type": "other",
+        "signed_on": null,
+        "rescinded": false,
+        "roads": [
+          {
+            "name": "Banon Creek Forest Service Road",
+            "file_section": null,
+            "quote": "Banon Creek Forest Service Road",
+            "effective_from": "2026-05-19",
+            "effective_to": null,
+            "points": [
+              {
+                "km": null,
+                "km_end": null,
+                "extent": "unknown",
+                "status": "gated",
+                "seen_on": "text",
+                "quote": "Beginning on May 19, 2026, the access gate to the Banon Creek Forest Service Road at the end of South Watts Road will be closed Monday to Friday."
+              }
+            ]
+          }
+        ],
+        "map_readings": [],
+        "quotes": [
+          {
+            "field": "rescinded",
+            "quote": "weekday access to the area will be restricted."
+          }
+        ],
+        "uncertain": [
+          "signed_on",
+          "roads[0].file_section",
+          "roads[0].effective_to"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "dm_notice-8ec7980480be",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "dm_notice.v1",
+      "schema_id": "dm_notice.v1",
+      "produced_at": "2026-10-19T20:12:54Z",
+      "answer": {
+        "legible": true,
+        "document_type": "other",
+        "signed_on": null,
+        "rescinded": false,
+        "roads": [
+          {
+            "name": "Banon Creek Forest Service Road",
+            "file_section": null,
+            "quote": "Banon Creek Forest Service Road",
+            "effective_from": "2026-05-19",
+            "effective_to": null,
+            "points": [
+              {
+                "km": null,
+                "km_end": null,
+                "extent": "unknown",
+                "status": "gated",
+                "seen_on": "text",
+                "quote": "Beginning on May 19, 2026, the access gate to the Banon Creek Forest Service Road at the end of South Watts Road will be closed Monday to Friday."
+              }
+            ]
+          }
+        ],
+        "map_readings": [],
+        "quotes": [
+          {
+            "field": "rescinded",
+            "quote": "the access gate to the Banon Creek Forest Service Road at the end of South Watts Road will be closed Monday to Friday."
+          }
+        ],
+        "uncertain": [
+          "signed_on",
+          "roads[0].file_section",
+          "roads[0].effective_to"
+        ]
+      }
+    }
+  },
+  "disagreements": [],
+  "rejected_quotes": [],
+  "placements": [
+    {
+      "road": "Banon Creek Forest Service Road",
+      "file_section": null,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "gated",
+          "quote": "Beginning on May 19, 2026, the access gate to the Banon Creek Forest Service Road at the end of South Watts Road will be closed Monday to Friday."
+        }
+      ],
+      "placement": "no file and section number in the PDF"
+    }
+  ],
+  "images": [
+    "raw/2026-10/dm_notices/images/DSI-8a4bec36-news_release_-_access_changes_implemented_to_protect_local_watershed.p2.jpg"
+  ],
+  "links": [
+    {
+      "label": "Notice PDF",
+      "href": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/news_release_-_access_changes_implemented_to_protect_local_watershed.pdf"
+    }
+  ],
+  "status": "approved",
+  "created": "2026-10-20T16:28:59.671Z",
+  "updated": "2026-10-20T17:13:46.020Z",
+  "decided_by": "Arsh",
+  "decided_on": "2026-10-20"
+}

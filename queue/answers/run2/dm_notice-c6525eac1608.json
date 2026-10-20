@@ -1,0 +1,74 @@
+{
+  "task_id": "dm_notice-c6525eac1608",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:12:34Z",
+  "answer": {
+    "legible": true,
+    "document_type": "closure_order",
+    "signed_on": "2019-01-02",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "RADIUM",
+        "file_section": "5127.19",
+        "quote": "5127.19 CHILLIWACK RIVER RADIUM",
+        "effective_from": "2019-01-02",
+        "effective_to": null,
+        "points": [
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "whole_road",
+            "status": "closed",
+            "seen_on": "text",
+            "quote": "DISCONTINUANCE AND CLOSURE APPROVED"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 2,
+        "label": "5127.19 CHILLIWACK RIVER RADIUM",
+        "shows": "Label box with a leader line to the road drawn in the legend's 'Retired Tenure Road' style (black line with cross ticks), running along the Chillwack River from the 'PofC' marker to the 'PofT' marker; the map title reads 'MAP OF : FSR 5127 Retirement (shown in bold black)'."
+      },
+      {
+        "page": 2,
+        "label": "RADIUM 5127.19",
+        "shows": "Road name printed along the retired road line drawn with cross ticks."
+      },
+      {
+        "page": 2,
+        "label": "PofC",
+        "shows": "Green triangle marker (legend 'P of C') at the start of the retired road line."
+      },
+      {
+        "page": 2,
+        "label": "PofT",
+        "shows": "Red triangle marker (legend 'P of T') at the end of the retired road line."
+      },
+      {
+        "page": 2,
+        "label": "Length: 1.0031 Km, R/W: 75 m",
+        "shows": "Legend note under '5127.19 CHILLIWACK RIVER RADIUM' giving the section length; the note also prints UTM values for PofC and PofT, which are not repeated here."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "Date: 2019.01.02 15:57:36 -08'00'"
+      },
+      {
+        "field": "rescinded",
+        "quote": "DISCONTINUANCE AND CLOSURE APPROVED"
+      }
+    ],
+    "uncertain": [
+      "roads[0].effective_to"
+    ]
+  }
+}

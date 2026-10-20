@@ -1,0 +1,138 @@
+{
+  "item_id": "closed-area-223bcc895f",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 11 (Bowen Island)",
+  "rule_id": "W5-011",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: within: run 1 null vs run 2 \"nwd\"",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nBowen Island\n11 That portion of the Province of British Columbia in Howe Sound, NWD, which is contained within the following described boundaries: All that portion of land, including the foreshore above the low water mark of Bowen Island, situate and lying at the entrance of Howe Sound, NWD.",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-0d1a02e85383",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T15:18:34Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "admin_boundary",
+          "road": null,
+          "feature": {
+            "type": "island",
+            "name": "Bowen Island"
+          },
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "All that portion of land, including the foreshore above the low water mark of Bowen Island"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "Bowen Island"
+          }
+        ],
+        "uncertain": [
+          "within"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-0d1a02e85383",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T15:19:48Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "NWD"
+        },
+        "geometry": {
+          "method": "admin_boundary",
+          "road": null,
+          "feature": {
+            "type": "island",
+            "name": "Bowen Island"
+          },
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in Howe Sound, NWD"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "All that portion of land, including the foreshore above the low water mark of Bowen Island"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "the low water mark of Bowen Island"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "geometry.feature": "Bowen Island",
+    "effect": "No Shooting Areas"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "within: run 1 null vs run 2 \"nwd\""
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T15:58:44.859Z",
+  "updated": "2026-10-20T15:58:44.859Z"
+}

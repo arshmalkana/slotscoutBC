@@ -1,0 +1,49 @@
+{
+  "task_id": "dm_notice-7b2528a6e93b",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:14:12Z",
+  "answer": {
+    "legible": true,
+    "document_type": "closure_rescinded",
+    "signed_on": "2021-07-05",
+    "rescinded": true,
+    "roads": [
+      {
+        "name": "Harrison East FSR",
+        "file_section": "5748.01",
+        "quote": "Harrison East FSR (5748.01)",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 13.0,
+            "km_end": null,
+            "extent": "at",
+            "status": "caution",
+            "seen_on": "text",
+            "quote": "Please be aware of \u201cRockfall hazard \u2013 NO stopping\u201d signs located at 13.0 km."
+          }
+        ]
+      }
+    ],
+    "map_readings": [],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "Date: July 5, 2021"
+      },
+      {
+        "field": "rescinded",
+        "quote": "rescinding the notice of closure dated June 25, 2021 to public and industrial traffic"
+      }
+    ],
+    "uncertain": [
+      "roads[0].effective_from",
+      "roads[0].effective_to"
+    ]
+  }
+}

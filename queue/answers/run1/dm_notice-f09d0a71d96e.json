@@ -1,0 +1,63 @@
+{
+  "task_id": "dm_notice-f09d0a71d96e",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:19:30Z",
+  "answer": {
+    "legible": true,
+    "document_type": "gate_map",
+    "signed_on": null,
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Banon FSR Branch 01",
+        "file_section": null,
+        "quote": "Banon FSR Branch 01",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "gated",
+            "seen_on": "map",
+            "quote": "Planned Gate Location"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "Banon FSR - Gate Location",
+        "shows": "Map title, with the subtitle 'Banon FSR Branch 01'."
+      },
+      {
+        "page": 1,
+        "label": "Planned Gate Location",
+        "shows": "Yellow pin on the gravel road that runs from the pin labelled 'S. Watts Road' past 'Heidelberg Materials, Concrete'; it sits just before the pin labelled 'Banon FSR Br.01'. No km label is printed."
+      },
+      {
+        "page": 1,
+        "label": "Banon FSR Br.01",
+        "shows": "Yellow pin on the same gravel road just past the planned gate pin, naming the road there."
+      },
+      {
+        "page": 1,
+        "label": "S. Watts Road",
+        "shows": "Yellow pin where the gravel road leading to the planned gate meets the paved highway, beside 'Taylormade Landscapes'."
+      }
+    ],
+    "quotes": [],
+    "uncertain": [
+      "signed_on",
+      "roads[0].file_section",
+      "roads[0].effective_from",
+      "roads[0].effective_to"
+    ]
+  }
+}

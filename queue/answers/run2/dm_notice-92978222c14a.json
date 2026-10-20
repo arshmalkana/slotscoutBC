@@ -1,0 +1,135 @@
+{
+  "task_id": "dm_notice-92978222c14a",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:14:40Z",
+  "answer": {
+    "legible": true,
+    "document_type": "deactivation_notice",
+    "signed_on": null,
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Driftwood FSR",
+        "file_section": "7822.01",
+        "quote": "Driftwood FSR",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 82,
+            "km_end": 95,
+            "extent": "range",
+            "status": "deactivated",
+            "seen_on": "text",
+            "quote": "Driftwood and Fall FSR Deactivation of bypassed road sections, between 82 and 95km Driftwood FSR"
+          },
+          {
+            "km": 92.8,
+            "km_end": null,
+            "extent": "at",
+            "status": "deactivated",
+            "seen_on": "text",
+            "quote": "The Teegee Creek crossing is a 15.2m clear-span bridge, which is located at 92.8 km on the Driftwood FSR."
+          }
+        ]
+      },
+      {
+        "name": "Fall FSR",
+        "file_section": "7785.01",
+        "quote": "Fall FSR",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 0.1,
+            "km_end": null,
+            "extent": "at",
+            "status": "deactivated",
+            "seen_on": "text",
+            "quote": "There is a 2800mm culvert on this site, which is located at 0.1 km on the Fall FSR."
+          },
+          {
+            "km": 4.3,
+            "km_end": null,
+            "extent": "at",
+            "status": "deactivated",
+            "seen_on": "text",
+            "quote": "at 4.3 km on the Fall FSR."
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "deactivated",
+            "seen_on": "map",
+            "quote": "Deleted_section_of_Fall_FSR"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 2,
+        "label": "DRIFTWOOD 7822.01",
+        "shows": "Road name and number printed along a brown road line, the Driftwood FSR."
+      },
+      {
+        "page": 2,
+        "label": "FALL 7785.01",
+        "shows": "Road name and number printed along a brown road line near Diver Lake, the Fall FSR."
+      },
+      {
+        "page": 2,
+        "label": "Deleted_section_of_Driftwood_FSR",
+        "shows": "A dark orange line (legend: Deleted_section_of_Driftwood_FSR) running from the G5-024A structure near Cheztainya Lake east and then south, alongside a light orange line (legend: portion_of_RP_rolled_over_to_Driftwood_FSR) that replaces it."
+      },
+      {
+        "page": 2,
+        "label": "Deleted_section_of_Fall_FSR",
+        "shows": "A purple line (legend: Deleted_section_of_Fall_FSR) running from the G5-060 structure north to the G5-061 structure, alongside a pale green line (legend: portion_of_RP_rolled_over_to_Fall_FSR)."
+      },
+      {
+        "page": 2,
+        "label": "G5-024A",
+        "shows": "A green bridge symbol on the deleted Driftwood section near Cheztainya Lake; the text names it the Teegee Creek temporary bridge at 92.8 km on the Driftwood FSR."
+      },
+      {
+        "page": 2,
+        "label": "G5-060",
+        "shows": "A yellow structure symbol at the southern end of the purple deleted Fall FSR section; the text names it the Teegee Creek culvert at 0.1 km on the Fall FSR."
+      },
+      {
+        "page": 2,
+        "label": "G5-061",
+        "shows": "A yellow structure symbol at the northern end of the purple deleted Fall FSR section; the text names it the Teegee Creek culvert at 4.3 km on the Fall FSR."
+      },
+      {
+        "page": 2,
+        "label": "LOVELL 7822.04",
+        "shows": "Road label beside a teal line (legend: Driftwood_FSR_rolled_into_Lovel_FSR), a section renamed rather than deactivated."
+      },
+      {
+        "page": 2,
+        "label": "Information Map Driftwood and Fall FSR Realignments",
+        "shows": "Map title block, produced for Stuart Nechako Forest District Engineering Group, Ministry of Forests; Date: 2025-03-20, Created by: WWILKINS."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "rescinded",
+        "quote": "The Ministry of Forests (MOF) is working to deactivate a portion of the Driftwood and Fall Forest Service Roads (FSR)."
+      }
+    ],
+    "uncertain": [
+      "signed_on",
+      "roads[0].effective_from",
+      "roads[0].effective_to",
+      "roads[1].effective_from",
+      "roads[1].effective_to"
+    ]
+  }
+}

@@ -117,7 +117,7 @@ export function test(opts: { month?: string; regression?: boolean } = {}) {
   const gold = goldMetrics();
   let regression: { ran: boolean; exitCode: number | null; output: string } = { ran: false, exitCode: null, output: "" };
   if (opts.regression !== false) {
-    const r = spawnSync("npx", ["tsx", "scripts/regression.ts"], { cwd: P.root, encoding: "utf8", timeout: 20 * 60_000, env: process.env });
+    const r = spawnSync("npx", ["tsx", "scripts/regression.ts"], { cwd: P.root, encoding: "utf8", timeout: 20 * 60_000, env: process.env, shell: true });
     regression = { ran: true, exitCode: r.status, output: `${r.stdout ?? ""}${r.stderr ?? ""}`.trim() };
   }
   const falseGreen = /false green/i.test(regression.output) && regression.exitCode !== 0;

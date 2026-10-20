@@ -1,0 +1,209 @@
+{
+  "item_id": "dm-notice-1091c1a777",
+  "month": "2026-10",
+  "kind": "dm_notice",
+  "title": "District Manager notice DSI-dc65a045-lucky_fsr_road_closure: 1 road closed or restricted (Lucky Creek FSR)",
+  "change_type": "stricter",
+  "decision": "Check each road and km point against the PDF and its page images. Approving lets these closures count on the map; until then P6 shows Cannot confirm on these roads.",
+  "why": [
+    "read from: text layer (1 page); OCR by tesseract 5.3.4 on page 1; 1 map or scan page image for reading, and 1 page image(s) looked at by both readings",
+    "a person checks every AI reading before it counts (Addendum A 7.2: the gold set has not passed yet)"
+  ],
+  "source": {
+    "text": "Source: https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/lucky_fsr_road_closure.pdf\r\nFetched: 2026-10-19T20:00:31.148Z\r\nSHA-256: 167e5215ee6d81768c96316146bb4d458c4ecdb6e4a6e49d296014f76380a102\r\nRead: text layer (1 page); OCR by tesseract 5.3.4 on page 1; 1 map or scan page image for reading\r\nImages: raw/2026-10/dm_notices/images/DSI-dc65a045-lucky_fsr_road_closure.p1.jpg\r\n\r\n  Lucky Creek Road\r\n  Closure- August 31st to\r\n  Legend20th.\r\n  September\r\n  All Forest Road Sections - FTEN - Colo\r\n  Themed\r\n  tilecache\r\n\r\n\r\n\r\n\r\nPOC-Lucky Creek FSR\r\nRoad Closure\r\n\r\n  0  2.03  4.06 km\r\n\r\n\r\n\r\n  1: 100,000\r\n\r\n  Copyright/Disclaimer\r\n  The material contained in this web site is owned by the\r\n  Government of British Columbia and protected by\r\n  copyright law. It may not be reproduced or redistributed\r\n  without the prior written permission of the Province of\r\n  British Columbia. To request permission to reproduce\r\n  all or part of the material on this web site please\r\n  complete the Copyright Permission Request Form\r\n  which can be accessed through the Copyright\r\n  Information Page.\r\n  CAUTION: Maps obtained using this site are not\r\n  designed to assist in navigation. These maps may be\r\n  generalized and may not reflect current conditions.\r\n  Uncharted hazards may exist. DO NOT USE THESE\r\n  MAPS FOR NAVIGATIONAL PURPOSES.\r\n\r\n\r\n\r\n  Datum:  NAD83\r\n  Projection: WGS_1984_Web_Mercator_Auxiliary\r\n  _Sphere\r\n\r\n\r\n  Key Map of British Columbia\r\n\r\n[Page 1: text read by OCR from the page image]\r\nnorel' ”\r\n\r\n40-4662\r\n\r\nPOGsLucky Creek FSR &..\r\nRoad Closure 5\r\n\r\nR130554\r\n\r\nZe\r\nx Op\r\n™\r\n2\r\nOs S\r\n*—Lucky Creek FSR els\r\ns got? 09 of\r\nre fae WD ~.\r\no\r\n\r\nV 429204 of E498\r\n\r\n9614-94\r\n\r\nBRITISH\r\n\r\nRaed COLUMBIA\r\nLucky Creek Road\r\n\r\nSep eRdel oth\r\n\r\nAll Forest Road Sections - F\r\nThemed\r\n\r\ntilecache\r\n\r\n0 2.03 4.06 km\r\n\r\n|\r\n1: 100,000\r\n\r\nCopyright/Disclaimer\r\n\r\nThe material contained in this web site is owned by the\r\nGovernment of British Columbia and protected by\r\ncopyright law. It may not be reproduced or redistributed\r\nwithout the prior written permission of the Province of\r\nBritish Columbia. To request permission to reproduce\r\nall or part of the material on this web site please\r\ncomplete the Copyright Permission Request Form\r\nwhich can be accessed through the Copyright\r\nInfarmatinn Pane\r\n\r\nCAUTION: Maps obtained using this site are not\r\ndesigned to assist in navigation. These maps may be\r\ngeneralized and may not reflect current conditions.\r\nUncharted hazards may exist. DO NOT USE THESE\r\nMAPS FOR NAVIGATIONAL PURPOSES.\r\n\r\nDatum: NAD83\r\n\r\nProjection: WGS_1984_Web_Mercator_Auxiliary\r\n_Sphere\r\n\r\nKey Map of British Columbia",
+    "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/lucky_fsr_road_closure.pdf",
+    "version": "2026-10-19T20:00:31.148Z",
+    "confirmed": true,
+    "file": "raw\\2026-10\\dm_notices\\DSI-dc65a045-lucky_fsr_road_closure.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "dm_notice-44498c299211",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "dm_notice.v1",
+      "schema_id": "dm_notice.v1",
+      "produced_at": "2026-10-19T20:15:00Z",
+      "answer": {
+        "legible": true,
+        "document_type": "closure_order",
+        "signed_on": null,
+        "rescinded": false,
+        "roads": [
+          {
+            "name": "Lucky Creek FSR",
+            "file_section": null,
+            "quote": "Lucky Creek FSR",
+            "effective_from": null,
+            "effective_to": null,
+            "points": [
+              {
+                "km": null,
+                "km_end": null,
+                "extent": "unknown",
+                "status": "closed",
+                "seen_on": "map",
+                "quote": "POC-Lucky Creek FSR Road Closure"
+              }
+            ]
+          }
+        ],
+        "map_readings": [
+          {
+            "page": 1,
+            "label": "Lucky Creek Road Closure- August 31st to September 20th.",
+            "shows": "Title in the legend panel (overprinted by the word Legend). No year is printed."
+          },
+          {
+            "page": 1,
+            "label": "POC-Lucky Creek FSR Road Closure",
+            "shows": "Red text with a red arrow pointing at the western end of the road highlighted in cyan: the point of closure. No km label is printed."
+          },
+          {
+            "page": 1,
+            "label": "Lucky Creek FSR",
+            "shows": "Road highlighted in thick cyan from the POC arrow east past Kite Lake, south-east and then north to where the highlight ends; the highlighted road is the closed road. No km labels are printed along it."
+          },
+          {
+            "page": 1,
+            "label": "8612 05",
+            "shows": "Road section label printed beside the highlighted road between the POC arrow and Kite Lake."
+          },
+          {
+            "page": 1,
+            "label": "8612 06",
+            "shows": "Road section label printed beside the highlighted road near its north-eastern end."
+          },
+          {
+            "page": 1,
+            "label": "8612",
+            "shows": "Further 8612 section labels printed along the southern and eastern parts of the highlighted road are partly hidden under the cyan line and cannot be read in full."
+          }
+        ],
+        "quotes": [
+          {
+            "field": "rescinded",
+            "quote": "POC-Lucky Creek FSR Road Closure"
+          }
+        ],
+        "uncertain": [
+          "signed_on",
+          "roads[0].file_section",
+          "roads[0].effective_from",
+          "roads[0].effective_to",
+          "roads[0].points[0].km"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "dm_notice-44498c299211",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "dm_notice.v1",
+      "schema_id": "dm_notice.v1",
+      "produced_at": "2026-10-19T20:14:12Z",
+      "answer": {
+        "legible": true,
+        "document_type": "closure_order",
+        "signed_on": null,
+        "rescinded": false,
+        "roads": [
+          {
+            "name": "Lucky Creek FSR",
+            "file_section": null,
+            "quote": "Lucky Creek FSR",
+            "effective_from": null,
+            "effective_to": null,
+            "points": [
+              {
+                "km": null,
+                "km_end": null,
+                "extent": "unknown",
+                "status": "closed",
+                "seen_on": "map",
+                "quote": "POC-Lucky Creek FSR Road Closure"
+              }
+            ]
+          }
+        ],
+        "map_readings": [
+          {
+            "page": 1,
+            "label": "Lucky Creek Road Closure- August 31st to September 20th.",
+            "shows": "Map title in the legend panel. It gives closure dates but no year."
+          },
+          {
+            "page": 1,
+            "label": "POC-Lucky Creek FSR Road Closure",
+            "shows": "Red label with a red arrow pointing to the start of a road drawn in thick light blue (cyan). The arrow marks the closure point. No km label is printed there."
+          },
+          {
+            "page": 1,
+            "label": "Lucky Creek FSR",
+            "shows": "Road name printed beside the cyan-highlighted road. The cyan line runs from the arrow's point past the labels '8612 05', 'Lucky Creek FSR', 'Kite Lake' and '8612 09' to its end beside the label '8612 06'. The legend does not explain the cyan line."
+          },
+          {
+            "page": 1,
+            "label": "8612 05",
+            "shows": "Road section label printed on the cyan-highlighted road near the closure arrow."
+          },
+          {
+            "page": 1,
+            "label": "8612 09",
+            "shows": "Road section label printed beside the cyan-highlighted road."
+          },
+          {
+            "page": 1,
+            "label": "8612 06",
+            "shows": "Road section label printed beside the end of the cyan-highlighted road."
+          }
+        ],
+        "quotes": [
+          {
+            "field": "rescinded",
+            "quote": "POC-Lucky Creek FSR Road Closure"
+          }
+        ],
+        "uncertain": [
+          "signed_on",
+          "roads[0].file_section",
+          "roads[0].effective_from",
+          "roads[0].effective_to"
+        ]
+      }
+    }
+  },
+  "disagreements": [],
+  "rejected_quotes": [],
+  "placements": [
+    {
+      "road": "Lucky Creek FSR",
+      "file_section": null,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "POC-Lucky Creek FSR Road Closure"
+        }
+      ],
+      "placement": "no file and section number in the PDF"
+    }
+  ],
+  "images": [
+    "raw/2026-10/dm_notices/images/DSI-dc65a045-lucky_fsr_road_closure.p1.jpg"
+  ],
+  "links": [
+    {
+      "label": "Notice PDF",
+      "href": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/lucky_fsr_road_closure.pdf"
+    }
+  ],
+  "status": "approved",
+  "created": "2026-10-20T16:28:59.851Z",
+  "updated": "2026-10-20T17:13:41.190Z",
+  "decided_by": "Arsh",
+  "decided_on": "2026-10-20"
+}

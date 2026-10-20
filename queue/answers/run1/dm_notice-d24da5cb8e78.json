@@ -1,0 +1,150 @@
+{
+  "task_id": "dm_notice-d24da5cb8e78",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:13:54Z",
+  "answer": {
+    "legible": true,
+    "document_type": "gate_map",
+    "signed_on": "2021-10-25",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Bugaboo M/L",
+        "file_section": "R05413",
+        "quote": "Bugaboo M/L",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 0.1,
+            "km_end": null,
+            "extent": "at",
+            "status": "gated",
+            "seen_on": "text",
+            "quote": "Bugaboo M/L sta. 0+100 Gate or Access Restriction"
+          }
+        ]
+      },
+      {
+        "name": "Gordon River Main",
+        "file_section": null,
+        "quote": "GORDON RIVER MAIN",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "gated",
+            "seen_on": "map",
+            "quote": "Gate Location"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "gated",
+            "seen_on": "map",
+            "quote": "Gate Location"
+          }
+        ]
+      },
+      {
+        "name": "Braden M/L",
+        "file_section": null,
+        "quote": "BRADEN M/L",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "gated",
+            "seen_on": "map",
+            "quote": "Gate Location"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "TFL 46 Bugaboo M/L Gate / Access Restriction Location",
+        "shows": "Map title (The Teal-Jones Group), dated October 25, 2021."
+      },
+      {
+        "page": 1,
+        "label": "Bugaboo M/L sta. 0+100 Gate or Access Restriction Road Permit R05413",
+        "shows": "Callout box with an arrow pointing to a red Gate Location triangle at the start of the road labelled BUG1000 / BUGABOO M/L where it meets the red mainline, beside the km markers \"0\" and \"36\"."
+      },
+      {
+        "page": 1,
+        "label": "Gate Location",
+        "shows": "Legend: red triangle marks a gate location. Six red triangles appear on the map."
+      },
+      {
+        "page": 1,
+        "label": "GORDON RIVER MAIN",
+        "shows": "Red Gate Location triangle on the red mainline between the km markers \"32\" and \"34\", where the yellow TFL 46 Boundary line and the road labelled GD5000 meet it. No km label at the triangle."
+      },
+      {
+        "page": 1,
+        "label": "GORDON RIVER MAIN",
+        "shows": "Red Gate Location triangle on the red mainline between the km markers \"44\" and \"46\", just past where the road labelled LOWER BROWNS M/L branches off. No km label at the triangle."
+      },
+      {
+        "page": 1,
+        "label": "BRADEN M/L",
+        "shows": "Red Gate Location triangle on the road labelled BRADEN M/L, beside the km marker \"4\" near the words \"Braden Creek\", with an orange pentagon symbol drawn next to it."
+      },
+      {
+        "page": 1,
+        "label": "0 44",
+        "shows": "Red Gate Location triangle beside the km markers \"0\" and \"44\", at the start of a red road leaving the mainline; no road name is printed beside this triangle."
+      },
+      {
+        "page": 1,
+        "label": "PANDORA M/L",
+        "shows": "Red Gate Location triangle, partly covered by an orange pentagon, beside a \"0\" marker at the junction where the roads labelled PANDORA M/L and GRIERSON M/L meet the mainline; a black arrow points to it from a blank white box whose label has been removed. Which road the gate is on is not printed."
+      },
+      {
+        "page": 1,
+        "label": "(no legible legend text)",
+        "shows": "Orange pentagon symbols appear in four places (on BUGABOO M/L between km markers \"4\" and \"6\", beside a \"0\" marker near the road labelled GO3100 and km marker \"38\", at the BRADEN M/L gate and at the PANDORA M/L junction gate). The legend text for this symbol is blanked out, so its meaning cannot be read."
+      },
+      {
+        "page": 1,
+        "label": "(blank)",
+        "shows": "Several white boxes cover parts of the map (near the Bugaboo M/L labels, below the GO-3000 label, near GR-12 and at the start of the arrow to the Pandora M/L junction); any labels under them cannot be read."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "October 25, 2021"
+      },
+      {
+        "field": "rescinded",
+        "quote": "Bugaboo M/L Gate / Access"
+      }
+    ],
+    "uncertain": [
+      "roads[0].effective_from",
+      "roads[0].effective_to",
+      "roads[0].points",
+      "roads[1].effective_from",
+      "roads[1].effective_to",
+      "roads[1].points[0].km",
+      "roads[1].points[1].km",
+      "roads[2].effective_from",
+      "roads[2].effective_to",
+      "roads[2].points[0].km"
+    ]
+  }
+}

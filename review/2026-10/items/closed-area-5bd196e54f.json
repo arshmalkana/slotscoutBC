@@ -1,0 +1,228 @@
+{
+  "item_id": "closed-area-5bd196e54f",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 67 (Blubber Bay)",
+  "rule_id": "W5-067",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "named area \"M.U. 2-16\": none",
+    "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nBlubber Bay\n67 That portion of the Province of British Columbia in M.U. 2-16 in the vicinity of Blubber Bay contained within the following described boundaries: (1)within a 1 kilometre radius of the Blubber Bay Ferry Terminal, and (2)commencing at Blubber Point; thence westerly, southerly and southeasterly along the mean low water mark to the midpoint of Limekiln Bay; thence due North to the point of commencement. [en. B.C. Reg. 205/94, s. 15.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-b734f9a7c42b",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T15:20:04Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 2-16"
+        },
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": {
+            "type": "other",
+            "name": "Blubber Bay Ferry Terminal"
+          },
+          "buffer_m": 1000,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "Blubber Point",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "commencing at Blubber Point"
+            },
+            {
+              "start": null,
+              "direction": "westerly, southerly and southeasterly",
+              "follow": "shoreline",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the midpoint of Limekiln Bay",
+              "distance": null,
+              "quote": "thence westerly, southerly and southeasterly along the mean low water mark to the midpoint of Limekiln Bay"
+            },
+            {
+              "start": null,
+              "direction": "due North",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence due North to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in M.U. 2-16"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "(1)within a 1 kilometre radius of the Blubber Bay Ferry Terminal, and (2)commencing at Blubber Point"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "the Blubber Bay Ferry Terminal"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": "within a 1 kilometre radius"
+          }
+        ],
+        "uncertain": [
+          "geometry.method"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-b734f9a7c42b",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T15:19:29Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 2-16"
+        },
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": {
+            "type": "other",
+            "name": "Blubber Bay Ferry Terminal"
+          },
+          "buffer_m": 1000,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "Blubber Point",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "commencing at Blubber Point"
+            },
+            {
+              "start": null,
+              "direction": "westerly, southerly and southeasterly",
+              "follow": "shoreline",
+              "feature": null,
+              "side_or_bank": "mean low water mark",
+              "until": "the midpoint of Limekiln Bay",
+              "distance": null,
+              "quote": "thence westerly, southerly and southeasterly along the mean low water mark to the midpoint of Limekiln Bay"
+            },
+            {
+              "start": null,
+              "direction": "due North",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence due North to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in M.U. 2-16"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within a 1 kilometre radius of the Blubber Bay Ferry Terminal"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "Blubber Bay Ferry Terminal"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": "1 kilometre radius"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "in M.U. 2-16",
+    "geometry.feature": "the Blubber Bay Ferry Terminal",
+    "geometry.buffer_m": "within a 1 kilometre radius",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "commencing at Blubber Point",
+    "geometry.steps[1]": "thence westerly, southerly and southeasterly along the mean low water mark to the midpoint of Limekiln Bay",
+    "geometry.steps[2]": "thence due North to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [
+    {
+      "query": "M.U. 2-16",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "none",
+      "matches": 0,
+      "ids": [],
+      "sample": []
+    }
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T15:59:54.468Z",
+  "updated": "2026-10-20T15:59:54.468Z"
+}

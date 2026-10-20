@@ -1,0 +1,67 @@
+{
+  "task_id": "dm_notice-f78eb0b3d8dc",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:13:19Z",
+  "answer": {
+    "legible": true,
+    "document_type": "closure_order",
+    "signed_on": "2019-01-02",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "CYPRESS LAKE",
+        "file_section": "8337.01",
+        "quote": "8337.01 CYPRESS LAKE CYPRESS LAKE ( Length: 6.3745 Km, R/W: 75 m )",
+        "effective_from": "2019-01-02",
+        "effective_to": null,
+        "points": [
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "whole_road",
+            "status": "closed",
+            "seen_on": "text",
+            "quote": "DISCONTINUANCE AND CLOSURE APPROVED"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 2,
+        "label": "MAP OF : FSR 8337 Retirement Amendment # 4 (shown in bold black)",
+        "shows": "Exhibit A map title; the road being retired is drawn in bold black with cross marks, matching the legend entry 'Retired Tenure Road'."
+      },
+      {
+        "page": 2,
+        "label": "8337.01 CYPRESS LAKE CYPRESS LAKE",
+        "shows": "Label on the bold black crossed line (Retired Tenure Road) running from the PofC marker in the southeast, past Cypress Lake, to the PofT marker in the northwest."
+      },
+      {
+        "page": 2,
+        "label": "PofC",
+        "shows": "Green P of C arrow at the southeast end of the retired road, near Partridge Creek."
+      },
+      {
+        "page": 2,
+        "label": "PofT",
+        "shows": "Red P of T marker at the northwest end of the retired road, near Buntzen Creek."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "Date: 2019.01.02 14:12:55"
+      },
+      {
+        "field": "rescinded",
+        "quote": "DISCONTINUANCE AND CLOSURE APPROVED"
+      }
+    ],
+    "uncertain": []
+  }
+}

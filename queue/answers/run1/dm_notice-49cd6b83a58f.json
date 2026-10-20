@@ -1,0 +1,58 @@
+{
+  "task_id": "dm_notice-49cd6b83a58f",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:12:26Z",
+  "answer": {
+    "legible": true,
+    "document_type": "closure_order",
+    "signed_on": "2025-12-16",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Hunter Creek Forest Service Road FSR",
+        "file_section": "6086.01",
+        "quote": "Hunter Creek Forest Service Road FSR (6086.01)",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "closed",
+            "seen_on": "text",
+            "quote": "Structure CK-2157 remains CLOSED and requires further assessment before any vehicle crossings can be authorized."
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "closed",
+            "seen_on": "text",
+            "quote": "The variance is to provide access and use of the FSR beyond structure CK-2157 and is limited to Hunter Creek Hydro Power L.P. Logging Ltd. (holder of Road Use Permit # 6086-16-02)."
+          }
+        ]
+      }
+    ],
+    "map_readings": [],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "December 16, 2025"
+      },
+      {
+        "field": "rescinded",
+        "quote": "Structure CK-2157 remains CLOSED"
+      }
+    ],
+    "uncertain": [
+      "roads[0].effective_from",
+      "roads[0].points[0].km",
+      "roads[0].points[1].km"
+    ]
+  }
+}

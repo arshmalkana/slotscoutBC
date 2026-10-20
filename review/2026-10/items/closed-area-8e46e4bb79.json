@@ -1,0 +1,288 @@
+{
+  "item_id": "closed-area-8e46e4bb79",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 3, section 64 (Callaghan Road)",
+  "rule_id": "W3-064",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nCallaghan Road\n64 That portion of the Province of British Columbia within 400 metres of the road allowance of Callaghan Road between the northwest corner of the Resort Municipality of Whistler and the gate at Whistler Olympic Park. [en. B.C. Reg. 169/2020, App. 1, s. 1.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-8b3b6ff8fff4",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T15:18:34Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "road_buffer",
+          "road": {
+            "name": "Callaghan Road",
+            "source_hint": "DRA"
+          },
+          "feature": null,
+          "buffer_m": 400,
+          "side": "both",
+          "from": {
+            "type": "boundary",
+            "road": null,
+            "name": "northwest corner of the Resort Municipality of Whistler"
+          },
+          "to": {
+            "type": "landmark",
+            "road": null,
+            "name": "gate at Whistler Olympic Park"
+          },
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting or Hunting Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within 400 metres of the road allowance of Callaghan Road"
+          },
+          {
+            "field": "geometry.road",
+            "quote": "Callaghan Road"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": "within 400 metres"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "within 400 metres of the road allowance"
+          },
+          {
+            "field": "geometry.from",
+            "quote": "the northwest corner of the Resort Municipality of Whistler"
+          },
+          {
+            "field": "geometry.to",
+            "quote": "the gate at Whistler Olympic Park"
+          }
+        ],
+        "uncertain": [
+          "within"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-8b3b6ff8fff4",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T15:19:48Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "road_buffer",
+          "road": {
+            "name": "Callaghan Road",
+            "source_hint": "DRA"
+          },
+          "feature": null,
+          "buffer_m": 400,
+          "side": "both",
+          "from": {
+            "type": "boundary",
+            "road": null,
+            "name": "northwest corner of the Resort Municipality of Whistler"
+          },
+          "to": {
+            "type": "landmark",
+            "road": null,
+            "name": "gate at Whistler Olympic Park"
+          },
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting or Hunting Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within 400 metres of the road allowance of Callaghan Road"
+          },
+          {
+            "field": "geometry.road",
+            "quote": "Callaghan Road"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": "400 metres"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "within 400 metres of the road allowance of Callaghan Road"
+          },
+          {
+            "field": "geometry.from",
+            "quote": "the northwest corner of the Resort Municipality of Whistler"
+          },
+          {
+            "field": "geometry.to",
+            "quote": "the gate at Whistler Olympic Park"
+          }
+        ],
+        "uncertain": [
+          "within"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "geometry.road": "Callaghan Road",
+    "geometry.buffer_m": "within 400 metres",
+    "geometry.from": "the northwest corner of the Resort Municipality of Whistler",
+    "geometry.to": "the gate at Whistler Olympic Park",
+    "effect": "No Shooting or Hunting Areas",
+    "geometry.side": "within 400 metres of the road allowance"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [
+    {
+      "query": "Callaghan Road",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "438222",
+        "438225",
+        "438227",
+        "438228",
+        "571515",
+        "571516",
+        "571517",
+        "571518",
+        "571526",
+        "571527",
+        "571528",
+        "571529",
+        "571531",
+        "1637210",
+        "1968600",
+        "2309473",
+        "2512895",
+        "2512896",
+        "2599428",
+        "2599442",
+        "2599462",
+        "2599479",
+        "2599480",
+        "2599486",
+        "2599487",
+        "2599488",
+        "2647733",
+        "2693671",
+        "2693672",
+        "2693673",
+        "2684980",
+        "2684981"
+      ],
+      "sample": [
+        {
+          "DIGITAL_ROAD_ATLAS_LINE_ID": 438222,
+          "FEATURE_TYPE": "Road",
+          "HIGHWAY_EXIT_NUMBER": null,
+          "HIGHWAY_ROUTE_NUMBER": null,
+          "SEGMENT_LENGTH_2D": 98.542,
+          "SEGMENT_LENGTH_3D": null,
+          "ROAD_NAME_ALIAS1": null,
+          "ROAD_NAME_ALIAS2": null,
+          "ROAD_NAME_ALIAS3": null,
+          "ROAD_NAME_ALIAS4": null,
+          "ROAD_NAME_FULL": "Callaghan Valley Rd",
+          "ROAD_SURFACE": "paved",
+          "ROAD_CLASS": "resource",
+          "NUMBER_OF_LANES": 2,
+          "DATA_CAPTURE_DATE": null,
+          "FEATURE_CODE": null,
+          "OBJECTID": 261532718,
+          "SE_ANNO_CAD_DATA": null,
+          "FEATURE_LENGTH_M": 98.5418
+        },
+        {
+          "DIGITAL_ROAD_ATLAS_LINE_ID": 438225,
+          "FEATURE_TYPE": "Road",
+          "HIGHWAY_EXIT_NUMBER": null,
+          "HIGHWAY_ROUTE_NUMBER": null,
+          "SEGMENT_LENGTH_2D": 1004.294,
+          "SEGMENT_LENGTH_3D": null,
+          "ROAD_NAME_ALIAS1": null,
+          "ROAD_NAME_ALIAS2": null,
+          "ROAD_NAME_ALIAS3": null,
+          "ROAD_NAME_ALIAS4": null,
+          "ROAD_NAME_FULL": "Callaghan Valley Rd",
+          "ROAD_SURFACE": "paved",
+          "ROAD_CLASS": "resource",
+          "NUMBER_OF_LANES": 2,
+          "DATA_CAPTURE_DATE": null,
+          "FEATURE_CODE": null,
+          "OBJECTID": 261532720,
+          "SE_ANNO_CAD_DATA": null,
+          "FEATURE_LENGTH_M": 1004.2936
+        },
+        {
+          "DIGITAL_ROAD_ATLAS_LINE_ID": 438227,
+          "FEATURE_TYPE": "Road",
+          "HIGHWAY_EXIT_NUMBER": null,
+          "HIGHWAY_ROUTE_NUMBER": null,
+          "SEGMENT_LENGTH_2D": 99.715,
+          "SEGMENT_LENGTH_3D": null,
+          "ROAD_NAME_ALIAS1": null,
+          "ROAD_NAME_ALIAS2": null,
+          "ROAD_NAME_ALIAS3": null,
+          "ROAD_NAME_ALIAS4": null,
+          "ROAD_NAME_FULL": "Callaghan Valley Rd",
+          "ROAD_SURFACE": "paved",
+          "ROAD_CLASS": "resource",
+          "NUMBER_OF_LANES": 2,
+          "DATA_CAPTURE_DATE": null,
+          "FEATURE_CODE": null,
+          "OBJECTID": 261532721,
+          "SE_ANNO_CAD_DATA": null,
+          "FEATURE_LENGTH_M": 99.715
+        }
+      ]
+    }
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T15:59:53.869Z",
+  "updated": "2026-10-20T16:42:08.827Z"
+}

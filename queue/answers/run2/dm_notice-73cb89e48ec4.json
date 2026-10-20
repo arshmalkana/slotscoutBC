@@ -1,0 +1,86 @@
+{
+  "task_id": "dm_notice-73cb89e48ec4",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-20T15:11:36Z",
+  "answer": {
+    "legible": true,
+    "document_type": "deactivation_notice",
+    "signed_on": "2025-12-12",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Incomappleux River FSR",
+        "file_section": null,
+        "quote": "Incomappleux River FSR",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "deactivated",
+            "seen_on": "text",
+            "quote": "Section 2"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "bridge_out",
+            "seen_on": "text",
+            "quote": "channel. Bridge is NOT passable Wet crossing required on high"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "Incomappleux River FSR Road Deactivation Prescription Map Section 2",
+        "shows": "Map title; a table beside it lists Section 2 7266m and Section 2 (to be surveyed) 6412m. The southern part of the road is drawn with an orange line, which the legend calls \"Deactivation Prescription\". No km labels are printed along the road."
+      },
+      {
+        "page": 1,
+        "label": "WP 2-1 = POC Start of deactivation survey for Section 2",
+        "shows": "Green point-of-commencement triangle where the orange deactivation line ends and a green line continues north along the road."
+      },
+      {
+        "page": 1,
+        "label": "To Be Surveyed in 2026",
+        "shows": "Legend entry for the green line drawn on the road north of WP 2-1."
+      },
+      {
+        "page": 1,
+        "label": "WP 2-6 = BRIDGE/RB/RNSC LEXINGTON CREEK. Remove bridge and restore natural stream channel. Bridge is NOT passable Wet crossing required on high side. 1.5 hrs of machine time expected to create crossing.",
+        "shows": "Red bridge-removal symbol on the orange deactivation line at Lexington Creek."
+      },
+      {
+        "page": 1,
+        "label": "WP 2-3 = PFH - start Start of full pull back required along a 40m long section of rd.",
+        "shows": "Start of a pull back section on the orange deactivation line beside the river."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "December 12, 2025"
+      },
+      {
+        "field": "rescinded",
+        "quote": "Road Deactivation"
+      }
+    ],
+    "uncertain": [
+      "roads[0].file_section",
+      "roads[0].effective_from",
+      "roads[0].effective_to",
+      "roads[0].points[0].km",
+      "roads[0].points[1].km"
+    ]
+  }
+}

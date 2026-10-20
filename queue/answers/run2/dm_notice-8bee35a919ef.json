@@ -1,0 +1,48 @@
+{
+  "task_id": "dm_notice-8bee35a919ef",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:14:02Z",
+  "answer": {
+    "legible": true,
+    "document_type": "restriction_bulletin",
+    "signed_on": "2026-04-10",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "All Forest Service Roads within the Stuart Nechako Forest District",
+        "file_section": null,
+        "quote": "All Forest Service Roads within the Stuart Nechako Forest District",
+        "effective_from": "2026-04-13",
+        "effective_to": null,
+        "points": [
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "whole_road",
+            "status": "restricted",
+            "seen_on": "text",
+            "quote": "Effective April 13, 2026, at 12:00:01am \u2013 restricted"
+          }
+        ]
+      }
+    ],
+    "map_readings": [],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "ROAD RESTRICTIONS NOTICE April 10, 2026"
+      },
+      {
+        "field": "rescinded",
+        "quote": "road restrictions will be implemented on Forest Service Roads (FSRs) within the Stuart Nechako Forest District as follows:"
+      }
+    ],
+    "uncertain": [
+      "roads[0].effective_to"
+    ]
+  }
+}

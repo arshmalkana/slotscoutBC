@@ -1,0 +1,34 @@
+{
+  "task_id": "dm_notice-05c0310fae1e",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-20T15:09:35Z",
+  "answer": {
+    "legible": true,
+    "document_type": "other",
+    "signed_on": "2011-04-21",
+    "rescinded": false,
+    "roads": [],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "Cascades District (Lillooet Portion) All Bridges",
+        "shows": "District-wide overview map of bridge locations from the Corporate Bridge Registry (legend: Bridges; Bridge Label with Bridge Identifer # and Km point on Road), over Active Forest Road Sections styled as Forest Service Road and Road Permit. The km labels on the map give bridge positions along roads, not closures; no gates, closures, washouts or deactivated roads are marked."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "Date: April 21, 2011"
+      },
+      {
+        "field": "rescinded",
+        "quote": "Sourcedata: Corporate CBridge"
+      }
+    ],
+    "uncertain": []
+  }
+}

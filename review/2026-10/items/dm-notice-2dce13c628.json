@@ -1,0 +1,140 @@
+{
+  "item_id": "dm-notice-2dce13c628",
+  "month": "2026-10",
+  "kind": "dm_notice",
+  "title": "District Manager notice DCK-94372f1a-mowhokam_east_fsr_closure: 1 road closed or restricted (Mowhokam East FSR)",
+  "change_type": "stricter",
+  "decision": "Check each road and km point against the PDF and its page images. Approving lets these closures count on the map; until then P6 shows Cannot confirm on these roads.",
+  "why": [
+    "read from: text layer (2 pages)",
+    "a person checks every AI reading before it counts (Addendum A 7.2: the gold set has not passed yet)"
+  ],
+  "source": {
+    "text": "Source: https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/mowhokam_east_fsr_closure.pdf\r\nFetched: 2026-10-19T19:58:21.470Z\r\nSHA-256: 9b7762b3e8f857ed7a1002d28b49b69d88e09585c804c0d3b830dc73b875a1a4\r\nRead: text layer (2 pages)\r\n\r\nFebruary 25, 2025\r\n\r\nNotice is given under Section 22.2(3) of the Forest and Range Practices Act, the\r\nMowhokam East FSR (8019.03) is hereby closed at Bridge CK-2210 located at\r\napproximately 6.3km on the Mowhokam East FSR until further notice.\r\n\r\nThis notice is effective immediately.\r\n\r\nForest and Range Practices Act\r\n  Non-industrial use of a road\r\n  22.2  (1) Subject to subsections (2) to (4) and to regulations respecting roads made under\r\n  the Industrial Roads Act, a road that is\r\n  (a) a forest service road, or\r\n\r\n  (b) authorized under a road permit or a woodlot licence\r\n\r\n\r\n  may be used by any person without charge for a purpose other than a timber\r\n  harvesting purpose, silviculture purpose or natural resource development purpose.\r\n  (2) The\r\n\r\n  (a) district manager, for a forest service road, or\r\n\r\n  (b) holder of a road permit or a woodlot licence, for a road\r\n\r\n  under the permit or licence,\r\n\r\n  may take action under subsection (3) if\r\n  (c) use of the road under subsection (1) would likely\r\n\r\n  (i) cause significant damage to the road,\r\n\r\n  (ii) cause significant sediment delivery, or\r\n\r\n  (iii) endanger property, public health or public safety, or\r\n\r\n  (d) the presence on the road of a vehicle or animal would\r\n\r\n  likely cause damage to the road or environment or endanger\r\n  life or property.\r\n\r\nMinistry of Forests  Chilliwack Forest District  46360 Airport Road\r\n  Chilliwack, BC V2P 1A5\r\n  Phone: (604) 702-5700\r\n  Fax: (604) 702-5711\r\n\r\n  (3) In the circumstances described in subsection (2),\r\n\r\n  (a) the district manager, for a forest service road, may\r\n\r\n  (i) close the road or restrict its use, or\r\n\r\n  (ii) remove a vehicle or an animal from the road at the\r\n\r\n  expense of the owner of the vehicle or animal, and\r\n\r\n  (b) the holder of a road permit or a woodlot licence, for\r\n\r\n  a road under the permit or licence,\r\n  (i) with the prior consent of the minister, may close the\r\n\r\n  road or restrict its use, or\r\n  (ii) may remove a vehicle or an animal from the road at\r\n\r\n  the expense of the owner of the vehicle or animal.\r\n\r\n\r\nPlease check Chilliwack's Forest Service Road Safety Information web page for Forest\r\nService Road advisories and closure updates.\r\nhttps://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-\r\nsafety-information/chilliwack-natural-resource-district-district-road-safety-information\r\n\r\nAll resource road users are advised to check local weather and safety advisories, drive to the\r\ncondition of the road and watch for hazards if heading into the backcountry.\r\n\r\nThank you for your patience and cooperation during this time.\r\n\r\n\r\n\r\n\r\nMike Peters\r\nDistrict Manager\r\nChilliwack Forest District\r\n\r\n\r\n\r\n\r\nMinistry of Forests  Chilliwack Forest District  46360 Airport Road\r\n  Chilliwack, BC V2P 1A5\r\n  Phone: (604) 702-5700\r\n  Fax: (604) 702-5711",
+    "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/mowhokam_east_fsr_closure.pdf",
+    "version": "2026-10-19T19:58:21.470Z",
+    "confirmed": true,
+    "file": "raw\\2026-10\\dm_notices\\DCK-94372f1a-mowhokam_east_fsr_closure.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "dm_notice-97424f8299a4",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "dm_notice.v1",
+      "schema_id": "dm_notice.v1",
+      "produced_at": "2026-10-19T20:14:36Z",
+      "answer": {
+        "legible": true,
+        "document_type": "closure_order",
+        "signed_on": "2025-02-25",
+        "rescinded": false,
+        "roads": [
+          {
+            "name": "Mowhokam East FSR",
+            "file_section": "8019.03",
+            "quote": "Mowhokam East FSR (8019.03)",
+            "effective_from": "2025-02-25",
+            "effective_to": null,
+            "points": [
+              {
+                "km": 6.3,
+                "km_end": null,
+                "extent": "beyond",
+                "status": "closed",
+                "seen_on": "text",
+                "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the Mowhokam East FSR (8019.03) is hereby closed at Bridge CK-2210 located at approximately 6.3km on the Mowhokam East FSR until further notice."
+              }
+            ]
+          }
+        ],
+        "map_readings": [],
+        "quotes": [
+          {
+            "field": "signed_on",
+            "quote": "February 25, 2025"
+          },
+          {
+            "field": "rescinded",
+            "quote": "is hereby closed at Bridge CK-2210 located at"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "dm_notice-97424f8299a4",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "dm_notice.v1",
+      "schema_id": "dm_notice.v1",
+      "produced_at": "2026-10-19T20:16:13Z",
+      "answer": {
+        "legible": true,
+        "document_type": "closure_order",
+        "signed_on": "2025-02-25",
+        "rescinded": false,
+        "roads": [
+          {
+            "name": "Mowhokam East FSR",
+            "file_section": "8019.03",
+            "quote": "Mowhokam East FSR (8019.03)",
+            "effective_from": "2025-02-25",
+            "effective_to": null,
+            "points": [
+              {
+                "km": 6.3,
+                "km_end": null,
+                "extent": "beyond",
+                "status": "closed",
+                "seen_on": "text",
+                "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the Mowhokam East FSR (8019.03) is hereby closed at Bridge CK-2210 located at approximately 6.3km on the Mowhokam East FSR until further notice."
+              }
+            ]
+          }
+        ],
+        "map_readings": [],
+        "quotes": [
+          {
+            "field": "signed_on",
+            "quote": "February 25, 2025"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "disagreements": [],
+  "rejected_quotes": [],
+  "placements": [
+    {
+      "road": "Mowhokam East FSR",
+      "file_section": "8019.03",
+      "points": [
+        {
+          "km": 6.3,
+          "extent": "beyond",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the Mowhokam East FSR (8019.03) is hereby closed at Bridge CK-2210 located at approximately 6.3km on the Mowhokam East FSR until further notice.",
+          "lat": 50.097581,
+          "lon": -121.354052
+        }
+      ],
+      "placement": "section 8019.03 is 10.3 km long as mapped"
+    }
+  ],
+  "images": [],
+  "links": [
+    {
+      "label": "Notice PDF",
+      "href": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/mowhokam_east_fsr_closure.pdf"
+    }
+  ],
+  "status": "approved",
+  "created": "2026-10-20T16:28:57.269Z",
+  "updated": "2026-10-20T17:13:41.699Z",
+  "decided_by": "Arsh",
+  "decided_on": "2026-10-20"
+}

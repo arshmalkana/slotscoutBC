@@ -1,6 +1,6 @@
 {
   "build: District Manager PDFs": {
-    "at": "2026-10-20T15:23:20.521Z",
+    "at": "2026-10-20T16:43:06.303Z",
     "done": 46,
     "last": "DVA-d66840c9-upper_driftwood_deactivation_advertisement",
     "left": 0,
@@ -10,17 +10,17 @@
     "total": 46
   },
   "build: closed areas": {
-    "at": "2026-10-20T15:16:17.787Z",
-    "done": 254,
-    "last": "Closed Areas Regulation, Schedule 3, section 65 (Kalamalka Lake Park): waiting for extraction",
+    "at": "2026-10-20T16:42:22.285Z",
+    "done": 341,
+    "last": "Closed Areas Regulation, Schedule 8, section 4 (1***): waiting for extraction",
     "left": 0,
     "part": "closed areas",
     "percent": 100,
     "step": "build",
-    "total": 254
+    "total": 341
   },
   "build: parts": {
-    "at": "2026-10-20T15:23:23.074Z",
+    "at": "2026-10-20T16:43:06.630Z",
     "done": 4,
     "last": "build summary written",
     "left": 0,
@@ -30,39 +30,49 @@
     "total": 4
   },
   "extract: run 1 answers": {
-    "at": "2026-10-20T15:12:20.836Z",
-    "done": 103,
-    "last": "258 brief(s) in queue/agent/run1",
-    "left": 258,
+    "at": "2026-10-20T16:18:08.234Z",
+    "done": 72,
+    "last": "354 brief(s) in queue/agent/run1",
+    "left": 354,
     "part": "run 1 answers",
-    "percent": 28,
+    "percent": 16,
     "step": "extract",
-    "total": 361
+    "total": 426
   },
   "extract: run 2 answers": {
-    "at": "2026-10-20T15:12:20.836Z",
-    "done": 103,
-    "last": "258 brief(s) in queue/agent/run2",
-    "left": 258,
+    "at": "2026-10-20T16:18:08.236Z",
+    "done": 72,
+    "last": "354 brief(s) in queue/agent/run2",
+    "left": 354,
     "part": "run 2 answers",
-    "percent": 28,
+    "percent": 16,
     "step": "extract",
-    "total": 361
+    "total": 426
+  },
+  "monthly: steps": {
+    "at": "2026-10-20T16:05:30.939Z",
+    "done": 9,
+    "last": "cycle finished",
+    "left": 0,
+    "part": "steps",
+    "percent": 100,
+    "step": "monthly",
+    "total": 9
   },
   "pull: BC Laws regulations in hand": {
-    "at": "2026-10-20T15:26:12.399Z",
-    "done": 1,
-    "last": "waiting for 190_84, 180_90, 16_2004, 38_2005",
-    "left": 4,
+    "at": "2026-10-20T16:17:02.121Z",
+    "done": 5,
+    "last": "all in hand",
+    "left": 0,
     "part": "BC Laws regulations in hand",
-    "percent": 20,
+    "percent": 100,
     "step": "pull",
     "total": 5
   },
   "pull: District Manager PDFs": {
-    "at": "2026-10-19T20:01:35.968Z",
+    "at": "2026-10-20T16:17:44.729Z",
     "done": 46,
-    "last": "DSC-335a98d1-a94817_bk_forest_service_road.pdf",
+    "last": "DSC-335a98d1-a94817_bk_forest_service_road.pdf already pulled",
     "left": 0,
     "part": "District Manager PDFs",
     "percent": 100,
@@ -80,19 +90,19 @@
     "total": 46
   },
   "pull: GIS layers": {
-    "at": "2026-10-19T20:25:12.277Z",
-    "done": 4,
-    "last": "fire_history ok",
+    "at": "2026-10-20T16:17:44.816Z",
+    "done": 33,
+    "last": "federal_protected already pulled",
     "left": 0,
     "part": "GIS layers",
     "percent": 100,
     "step": "pull",
-    "total": 4
+    "total": 33
   },
   "pull: bylaw sites": {
-    "at": "2026-10-19T20:24:53.420Z",
+    "at": "2026-10-20T16:17:44.775Z",
     "done": 34,
-    "last": "District of Lillooet: not_found",
+    "last": "District of Lillooet already checked",
     "left": 0,
     "part": "bylaw sites",
     "percent": 100,
@@ -100,7 +110,7 @@
     "total": 34
   },
   "pull: district road pages": {
-    "at": "2026-10-19T19:57:08.171Z",
+    "at": "2026-10-20T16:17:44.660Z",
     "done": 22,
     "last": "DKA",
     "left": 0,
@@ -110,27 +120,27 @@
     "total": 22
   },
   "pull: inbox files": {
-    "at": "2026-10-20T15:12:16.142Z",
-    "done": 4,
-    "last": "inbox/notes/2026-10-20 BC Laws 196_99 page (repealed).txt",
+    "at": "2026-10-20T16:17:02.108Z",
+    "done": 10,
+    "last": "inbox\\synopsis\\2026-synopsis-page.txt",
     "left": 0,
     "part": "inbox files",
     "percent": 100,
     "step": "pull",
-    "total": 4
+    "total": 10
   },
   "queue: AI tasks written": {
-    "at": "2026-10-20T15:12:19.977Z",
-    "done": 339,
-    "last": "bylaw-1af291427d0b",
+    "at": "2026-10-20T16:18:02.298Z",
+    "done": 426,
+    "last": "bylaw-235ffc2cecf6",
     "left": 0,
     "part": "AI tasks written",
     "percent": 100,
     "step": "queue",
-    "total": 339
+    "total": 426
   },
   "split: District Manager PDFs": {
-    "at": "2026-10-20T15:12:18.949Z",
+    "at": "2026-10-20T16:17:57.469Z",
     "done": 46,
     "last": "DVA-d66840c9-upper_driftwood_deactivation_advertisement",
     "left": 0,
@@ -140,7 +150,7 @@
     "total": 46
   },
   "split: bylaw sites": {
-    "at": "2026-10-20T15:12:18.957Z",
+    "at": "2026-10-20T16:17:57.483Z",
     "done": 34,
     "last": "District of Lillooet",
     "left": 0,
@@ -150,7 +160,7 @@
     "total": 34
   },
   "split: district road pages": {
-    "at": "2026-10-20T15:12:17.030Z",
+    "at": "2026-10-20T16:17:52.797Z",
     "done": 22,
     "last": "DVA",
     "left": 0,

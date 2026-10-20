@@ -1,0 +1,275 @@
+{
+  "item_id": "closed-area-67be7a428e",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 23 (Nanaimo)",
+  "rule_id": "W5-023",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: steps: run 1 [\"dumont rd|the b.c. hydro transmission line rw763||road\",\"b.c. hydro transmission line rw763|the nanaimo city boundary near the junction of jingle pot and east wellington roads||other\",\"nanaimo city boundary|the point of commencement||district_boundary\",\"|||\",\"nanaimo city boundary|its intersection with said transmission line rw||district_boundary\",\"b.c. hydro transmission line rw763|the point of commencement||other\"] vs run 2 [\"dumont rd|the b.c. hydro transmission line rw763||road\",\"b.c. hydro transmission line rw763|its intersection with the nanaimo city boundary near the junction of jingle pot and east wellington roads||other\",\"nanaimo city boundary|the point of commencement||district_boundary\",\"|||\",\"nanaimo city boundary|its intersection with said transmission line rw||district_boundary\",\"b.c. hydro transmission line rw763|the point of commencement||other\"]",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nNanaimo\n23 Those 2 portions of the Province of British Columbia in the vicinity of the City of Nanaimo, Nanaimo Mountain and Cranberry Districts, which are contained within the following described boundaries: (1)Commencing at the intersection of Dumont Road and the Nanaimo City boundary near Brannen Lake: southerly along the east side of Dumont Road to the B.C. Hydro Transmission Line RW763; then southeasterly along the East side of said right of way to its intersection with the Nanaimo City boundary near the junction of Jingle Pot and East Wellington roads; thence easterly and northerly along the City boundary to the point of commencement. (2)Commencing at the intersection of the Nanaimo City boundary, the B.C. Hydro Transmission Line RW763, and Harewood Mines Road; thence easterly and southerly along the Nanaimo City boundary to its intersection with said transmission line RW; thence northwesterly along the east side of the transmission line RW to the point of commencement.",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-d583d82de69a",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T15:18:34Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the intersection of Dumont Road and the Nanaimo City boundary near Brannen Lake",
+              "direction": "southerly",
+              "follow": "road",
+              "feature": "Dumont Road",
+              "side_or_bank": "east side",
+              "until": "the B.C. Hydro Transmission Line RW763",
+              "distance": null,
+              "quote": "Commencing at the intersection of Dumont Road and the Nanaimo City boundary near Brannen Lake: southerly along the east side of Dumont Road to the B.C. Hydro Transmission Line RW763"
+            },
+            {
+              "start": null,
+              "direction": "southeasterly",
+              "follow": "other",
+              "feature": "B.C. Hydro Transmission Line RW763",
+              "side_or_bank": "East side",
+              "until": "the Nanaimo City boundary near the junction of Jingle Pot and East Wellington roads",
+              "distance": null,
+              "quote": "then southeasterly along the East side of said right of way to its intersection with the Nanaimo City boundary near the junction of Jingle Pot and East Wellington roads"
+            },
+            {
+              "start": null,
+              "direction": "easterly and northerly",
+              "follow": "district_boundary",
+              "feature": "Nanaimo City boundary",
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence easterly and northerly along the City boundary to the point of commencement"
+            },
+            {
+              "start": "the intersection of the Nanaimo City boundary, the B.C. Hydro Transmission Line RW763, and Harewood Mines Road",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the intersection of the Nanaimo City boundary, the B.C. Hydro Transmission Line RW763, and Harewood Mines Road"
+            },
+            {
+              "start": null,
+              "direction": "easterly and southerly",
+              "follow": "district_boundary",
+              "feature": "Nanaimo City boundary",
+              "side_or_bank": null,
+              "until": "its intersection with said transmission line RW",
+              "distance": null,
+              "quote": "thence easterly and southerly along the Nanaimo City boundary to its intersection with said transmission line RW"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly",
+              "follow": "other",
+              "feature": "B.C. Hydro Transmission Line RW763",
+              "side_or_bank": "east side",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence northwesterly along the east side of the transmission line RW to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within the following described boundaries: (1)Commencing at"
+          }
+        ],
+        "uncertain": [
+          "within"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-d583d82de69a",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T15:19:48Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the intersection of Dumont Road and the Nanaimo City boundary near Brannen Lake",
+              "direction": "southerly",
+              "follow": "road",
+              "feature": "Dumont Road",
+              "side_or_bank": "east side",
+              "until": "the B.C. Hydro Transmission Line RW763",
+              "distance": null,
+              "quote": "Commencing at the intersection of Dumont Road and the Nanaimo City boundary near Brannen Lake: southerly along the east side of Dumont Road to the B.C. Hydro Transmission Line RW763"
+            },
+            {
+              "start": null,
+              "direction": "southeasterly",
+              "follow": "other",
+              "feature": "B.C. Hydro Transmission Line RW763",
+              "side_or_bank": "East side",
+              "until": "its intersection with the Nanaimo City boundary near the junction of Jingle Pot and East Wellington roads",
+              "distance": null,
+              "quote": "then southeasterly along the East side of said right of way to its intersection with the Nanaimo City boundary near the junction of Jingle Pot and East Wellington roads"
+            },
+            {
+              "start": null,
+              "direction": "easterly and northerly",
+              "follow": "district_boundary",
+              "feature": "Nanaimo City boundary",
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence easterly and northerly along the City boundary to the point of commencement"
+            },
+            {
+              "start": "the intersection of the Nanaimo City boundary, the B.C. Hydro Transmission Line RW763, and Harewood Mines Road",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the intersection of the Nanaimo City boundary, the B.C. Hydro Transmission Line RW763, and Harewood Mines Road"
+            },
+            {
+              "start": null,
+              "direction": "easterly and southerly",
+              "follow": "district_boundary",
+              "feature": "Nanaimo City boundary",
+              "side_or_bank": null,
+              "until": "its intersection with said transmission line RW",
+              "distance": null,
+              "quote": "thence easterly and southerly along the Nanaimo City boundary to its intersection with said transmission line RW"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly",
+              "follow": "other",
+              "feature": "B.C. Hydro Transmission Line RW763",
+              "side_or_bank": "east side",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence northwesterly along the east side of the transmission line RW to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within the following described boundaries: (1)Commencing at the intersection of Dumont Road"
+          },
+          {
+            "field": "geometry.steps[0]",
+            "quote": "Commencing at the intersection of Dumont Road and the Nanaimo City boundary near Brannen Lake: southerly along the east side of Dumont Road to the B.C. Hydro Transmission Line RW763"
+          },
+          {
+            "field": "geometry.steps[1]",
+            "quote": "then southeasterly along the East side of said right of way to its intersection with the Nanaimo City boundary near the junction of Jingle Pot and East Wellington roads"
+          },
+          {
+            "field": "geometry.steps[2]",
+            "quote": "thence easterly and northerly along the City boundary to the point of commencement"
+          },
+          {
+            "field": "geometry.steps[3]",
+            "quote": "Commencing at the intersection of the Nanaimo City boundary, the B.C. Hydro Transmission Line RW763, and Harewood Mines Road"
+          },
+          {
+            "field": "geometry.steps[4]",
+            "quote": "thence easterly and southerly along the Nanaimo City boundary to its intersection with said transmission line RW"
+          },
+          {
+            "field": "geometry.steps[5]",
+            "quote": "thence northwesterly along the east side of the transmission line RW to the point of commencement"
+          }
+        ],
+        "uncertain": [
+          "within"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at the intersection of Dumont Road and the Nanaimo City boundary near Brannen Lake: southerly along the east side of Dumont Road to the B.C. Hydro Transmission Line RW763",
+    "geometry.steps[1]": "then southeasterly along the East side of said right of way to its intersection with the Nanaimo City boundary near the junction of Jingle Pot and East Wellington roads",
+    "geometry.steps[2]": "thence easterly and northerly along the City boundary to the point of commencement",
+    "geometry.steps[3]": "Commencing at the intersection of the Nanaimo City boundary, the B.C. Hydro Transmission Line RW763, and Harewood Mines Road",
+    "geometry.steps[4]": "thence easterly and southerly along the Nanaimo City boundary to its intersection with said transmission line RW",
+    "geometry.steps[5]": "thence northwesterly along the east side of the transmission line RW to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "steps: run 1 [\"dumont rd|the b.c. hydro transmission line rw763||road\",\"b.c. hydro transmission line rw763|the nanaimo city boundary near the junction of jingle pot and east wellington roads||other\",\"nanaimo city boundary|the point of commencement||district_boundary\",\"|||\",\"nanaimo city boundary|its intersection with said transmission line rw||district_boundary\",\"b.c. hydro transmission line rw763|the point of commencement||other\"] vs run 2 [\"dumont rd|the b.c. hydro transmission line rw763||road\",\"b.c. hydro transmission line rw763|its intersection with the nanaimo city boundary near the junction of jingle pot and east wellington roads||other\",\"nanaimo city boundary|the point of commencement||district_boundary\",\"|||\",\"nanaimo city boundary|its intersection with said transmission line rw||district_boundary\",\"b.c. hydro transmission line rw763|the point of commencement||other\"]"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T16:00:09.406Z",
+  "updated": "2026-10-20T16:00:09.406Z"
+}

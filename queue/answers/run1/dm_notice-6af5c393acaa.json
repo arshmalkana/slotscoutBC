@@ -1,0 +1,61 @@
+{
+  "task_id": "dm_notice-6af5c393acaa",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:15:00Z",
+  "answer": {
+    "legible": true,
+    "document_type": "closure_order",
+    "signed_on": "2001-10-15",
+    "rescinded": false,
+    "roads": [],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "ROAD CLOSURE - NO MOTORIZED VEHICLE ACCESS",
+        "shows": "Legend entry: a red dot with a red line marks a road closure with no motorized vehicle access. Four such red dots are drawn on the map; none of the red closed roads has a name or km label printed on it."
+      },
+      {
+        "page": 1,
+        "label": "Loveland Bay Rd",
+        "shows": "Red road-closure dot on the road labelled Loveland Bay Rd, just south-west of where Brewster Lake Rd is printed, on the north edge of the no camping area; no red closed-road line is drawn from this dot."
+      },
+      {
+        "page": 1,
+        "label": "Loveland Bay Rd",
+        "shows": "Red road-closure dot at the north-west corner of the no camping area, on the road along the no camping area boundary that carries the Loveland Bay Rd label further north-east (the label is not printed at the dot); an unnamed road drawn in red runs from this dot south and then east to the shore of John Hart Lake."
+      },
+      {
+        "page": 1,
+        "label": "C A M P B E L L",
+        "shows": "Red road-closure dot beside the printed word CAMPBELL (river), at the edge of the no camping area; unnamed roads drawn in red run from it north-west into the no camping area along the John Hart Lake shore and a short way east."
+      },
+      {
+        "page": 1,
+        "label": "",
+        "shows": "Red road-closure dot with no words printed beside it, on an unnamed road just north of the transmission line and north-west of where John Hart Rd is printed; an unnamed road drawn in red runs from it north-west to the red roads near CAMPBELL."
+      },
+      {
+        "page": 1,
+        "label": "JOHN HART LAKE NO CAMPING AREA - DAY USE ONLY",
+        "shows": "Hatched area with a dark grey outline around John Hart Lake: no camping, day use only."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "By Order of the Province of British Columbia, October 15, 2001"
+      },
+      {
+        "field": "rescinded",
+        "quote": "ROAD CLOSURE - NO MOTORIZED VEHICLE ACCESS"
+      }
+    ],
+    "uncertain": [
+      "roads"
+    ]
+  }
+}

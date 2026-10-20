@@ -1,0 +1,91 @@
+{
+  "task_id": "dm_notice-73cb89e48ec4",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-20T15:11:19Z",
+  "answer": {
+    "legible": true,
+    "document_type": "deactivation_notice",
+    "signed_on": "2025-12-12",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Incomappleux River FSR",
+        "file_section": null,
+        "quote": "Incomappleux River FSR",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "deactivated",
+            "seen_on": "map",
+            "quote": "Incomappleux River FSR Road Deactivation Prescription Map Section 2"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "bridge_out",
+            "seen_on": "map",
+            "quote": "WP 2-6 = BRIDGE/RB/RNSC LEXINGTON CREEK. Remove bridge and restore natural stream channel. Bridge is NOT passable Wet crossing required on high side. 1.5 hrs of machine time expected to create crossing."
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "Incomappleux River FSR Road Deactivation Prescription Map Section 2",
+        "shows": "Map title. Section table: Section 2 7266m; Section 2 (to be surveyed) 6412m. The prescribed stretch is drawn as an orange line (legend: Deactivation Prescription). No km labels are printed."
+      },
+      {
+        "page": 1,
+        "label": "WP 2-1 = POC Start of deactivation survey for Section 2",
+        "shows": "Point of Commencement (green triangle) where the orange deactivation line meets the green line."
+      },
+      {
+        "page": 1,
+        "label": "To Be Surveyed in 2026",
+        "shows": "Legend entry for the green line that continues the road beyond WP 2-1; no prescription is marked on that stretch."
+      },
+      {
+        "page": 1,
+        "label": "WP 2-6 = BRIDGE/RB/RNSC LEXINGTON CREEK. Remove bridge and restore natural stream channel. Bridge is NOT passable Wet crossing required on high side. 1.5 hrs of machine time expected to create crossing.",
+        "shows": "Bridge Removal symbol (red X) on the orange deactivation line at Lexington Creek."
+      },
+      {
+        "page": 1,
+        "label": "WP 2-3 = PFH - start Start of full pull back required along a 40m long section of rd.",
+        "shows": "GPS point on the orange line marking the start of a full pull back section (ends at WP 2-4 = PFH - end)."
+      },
+      {
+        "page": 1,
+        "label": "KEY MAP",
+        "shows": "Inset satellite map at 1:500,000 showing the road in orange and green north of the labels Arrow Lake, Trout Lake, Hwy 31 and Hwy 23 S; no closures marked."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "December 12, 2025"
+      },
+      {
+        "field": "rescinded",
+        "quote": "Road Deactivation"
+      }
+    ],
+    "uncertain": [
+      "roads[0].file_section",
+      "roads[0].effective_from",
+      "roads[0].effective_to",
+      "roads[0].points[0].km",
+      "roads[0].points[1].km"
+    ]
+  }
+}

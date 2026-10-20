@@ -1,0 +1,67 @@
+{
+  "task_id": "dm_notice-f09d0a71d96e",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:13:19Z",
+  "answer": {
+    "legible": true,
+    "document_type": "gate_map",
+    "signed_on": null,
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Banon FSR Branch 01",
+        "file_section": null,
+        "quote": "Banon FSR Branch 01",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "gated",
+            "seen_on": "map",
+            "quote": "Planned Gate Location"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "Banon FSR - Gate Location",
+        "shows": "Map title, with the subtitle 'Banon FSR Branch 01'. The map is a Google Earth satellite image with yellow pins."
+      },
+      {
+        "page": 1,
+        "label": "Planned Gate Location",
+        "shows": "Yellow pin on the gravel road running south from the industrial area (south of the 'Heidelberg Materials, Concrete' label), marking where a gate is planned. No km label is printed."
+      },
+      {
+        "page": 1,
+        "label": "Banon FSR Br.01",
+        "shows": "Yellow pin on the same road a little further south of the Planned Gate Location pin, naming the road as Banon FSR Branch 01."
+      },
+      {
+        "page": 1,
+        "label": "S. Watts Road",
+        "shows": "Yellow pin at the north end of the access road, by the highway near 'Taylormade Landscapes'."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "rescinded",
+        "quote": "Banon FSR - Gate Location"
+      }
+    ],
+    "uncertain": [
+      "signed_on",
+      "roads[0].file_section",
+      "roads[0].effective_from"
+    ]
+  }
+}

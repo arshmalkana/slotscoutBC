@@ -1,0 +1,125 @@
+{
+  "item_id": "closed-area-3ba8d97f14",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 28 (Highways)",
+  "rule_id": "W5-028",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "the geometry builder does not draw \"road_buffer\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nHighways\n28 (1)to (4) Repealed. [B.C. Reg. 211/93, s. 7.] (5)Those portions of the Province of British Columbia within 50 m of the travelled portion of the following described highways: (a)to (c) Repealed. [B.C. Reg. 211/93, s. 7.] (d)the Hemlock Valley Recreation Area Road from its junction with the Weaver Creek Road to the second bridge across Sakwi Creek. (6)That portion of the Province of British Columbia within 150 m of the travelled portion of the Hemlock Valley Recreation Area Road north of the second bridge across Sakwi Creek. (7)Those portions of the Province of British Columbia (a)Repealed. [B.C. Reg. 167/88, s. 3.] (b)within 0.4 km west of the centerline and 1.0 km east of the centerline of Highway 99 between the northern boundary of the District Municipality of West Vancouver and the southern boundary of the District Municipality of Squamish, and (c)Repealed. [B.C. Reg. 211/93, s. 7.] (d)Repealed. [B.C. Reg. 97/2026, App. 1, s. 3.] (8)Repealed. [B.C. Reg. 211/93, s. 7.] (9)Repealed. [B.C. Reg. 151/2006, s. 4 (a).] (10)Repealed. [B.C. Reg. 211/93, s. 7.] (11)Repealed. [B.C. Reg. 235/97, s. 3 (b).] [am. B.C. Regs. 204/85, s. 2 (1); 172/86, s. 2; 162/87, s. 15; 325/87, s. 1; 167/88, s. 3; 309/88, s. 1; 176/89, s. 3; 185/90, ss. 4 to 7; 459/90, s. 2; 204/91, s. 5; 277/91, Sch. 2, s. 1; 211/93, s. 7; 190/96, s. 5 (a); 235/97, s. 3 (b); 151/2006, s. 4 (a); 175/2010, App. 1, s. 2; 97/2026, App. 1, s. 3.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-0b6276017c6b",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T15:18:34Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "road_buffer",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within 50 m of the travelled portion of the following described highways"
+          }
+        ],
+        "uncertain": [
+          "within",
+          "geometry.road",
+          "geometry.buffer_m",
+          "geometry.side",
+          "geometry.from",
+          "geometry.to"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-0b6276017c6b",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T15:19:48Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "road_buffer",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within 50 m of the travelled portion of the following described highways"
+          }
+        ],
+        "uncertain": [
+          "within",
+          "geometry.road",
+          "geometry.buffer_m",
+          "geometry.side",
+          "geometry.from",
+          "geometry.to"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "effect": "No Shooting Areas"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T15:58:44.853Z",
+  "updated": "2026-10-20T15:58:44.853Z"
+}

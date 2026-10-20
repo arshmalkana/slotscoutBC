@@ -1,0 +1,185 @@
+{
+  "item_id": "dm-notice-9a64c1324a",
+  "month": "2026-10",
+  "kind": "dm_notice",
+  "title": "District Manager notice DSI-c2357ace-map-banon_fsr_gate_location: 1 road closed or restricted (Banon FSR Branch 01)",
+  "change_type": "stricter",
+  "decision": "Check each road and km point against the PDF and its page images. Approving lets these closures count on the map; until then P6 shows Cannot confirm on these roads.",
+  "why": [
+    "read from: text layer (1 page); OCR by tesseract 5.3.4 on page 1; 1 map or scan page image for reading, and 1 page image(s) looked at by both readings",
+    "a person checks every AI reading before it counts (Addendum A 7.2: the gold set has not passed yet)",
+    "read from the map image but not found in the text or OCR text, so not counted: Banon FSR Branch 01 gated: \"Planned Gate Location\" (map)"
+  ],
+  "source": {
+    "text": "Source: https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/map-banon_fsr_gate_location.pdf\r\nFetched: 2026-10-19T20:00:48.893Z\r\nSHA-256: 8610bde3b5a5c880818af1f0d4fe9d841f4b4786699c4f562fbee6b24ae1dcdc\r\nRead: text layer (1 page); OCR by tesseract 5.3.4 on page 1; 1 map or scan page image for reading\r\nImages: raw/2026-10/dm_notices/images/DSI-c2357ace-map-banon_fsr_gate_location.p1.jpg\r\n\r\n  Legend\r\n  Banon FSR - Gate Location\r\n  Banon FSR Branch 01  Bazan Road Beach Access\r\n  Feature 1\r\n  Feature 2\r\n  Feature 3\r\n  Saltair Self Storage\r\n  Stocking\r\n  Stocking Creek Falls\r\n  Thanks A Latte\r\n  Town & Country Mobile Park\r\n\r\n\r\n\r\n\r\n  ➤\r\n  N\r\nImage © 2026 Airbus  600 m\r\n\r\n[Page 1: text read by OCR from the page image]\r\na : Legend\r\n\r\nBanon FSR - Gate Location Mh Yh eee\r\nBanon FSR Branch 01 m\\\\\r\n\r\nf\r\n\r\n;\r\n\r\nGoogle E\r\n\r\nImage © 2026 Airbus\r\n\r\n, }\r\narth\r\n\r\n—\r\n\r\ner © Bazan Road Beach Access\r\n\r\n-=4\r\n\r\nact 2 > ox 2 Feature 1\r\nFz LOW NS Country, Mobile Park ;\r\n= ae. | *. eS — Feature 2\r\n\r\nFeature 3\r\n\r\nSaltair Self Storage\r\n© Stocking\r\n; Stocking Creek Falls\r\nat ae: Shane's At Your Door Auto Thanks A Latte\r\n\r\nTown & Country Mobile Park\r\n\r\nStocking\r\n\r\nwihanks A Latte\r\n\r\nve\r\n\r\nP<\r\nOtter\" Rountalimber\r\n\r\nPy\r\nne?\r\n\r\n> “O} “> 4. : . ,\r\n“~ Heidelber Matenials® Coneretes= ~\r\n7 g <= \\\r\n\r\n\\\r\n\r\nPlanned Gate*kocation y\r\n\r\neanon RSR Br.01\r\n\r\nX",
+    "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/map-banon_fsr_gate_location.pdf",
+    "version": "2026-10-19T20:00:48.893Z",
+    "confirmed": true,
+    "file": "raw\\2026-10\\dm_notices\\DSI-c2357ace-map-banon_fsr_gate_location.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "dm_notice-f09d0a71d96e",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "dm_notice.v1",
+      "schema_id": "dm_notice.v1",
+      "produced_at": "2026-10-19T20:19:30Z",
+      "answer": {
+        "legible": true,
+        "document_type": "gate_map",
+        "signed_on": null,
+        "rescinded": false,
+        "roads": [
+          {
+            "name": "Banon FSR Branch 01",
+            "file_section": null,
+            "quote": "Banon FSR Branch 01",
+            "effective_from": null,
+            "effective_to": null,
+            "points": [
+              {
+                "km": null,
+                "km_end": null,
+                "extent": "unknown",
+                "status": "gated",
+                "seen_on": "map",
+                "quote": "Planned Gate Location"
+              }
+            ]
+          }
+        ],
+        "map_readings": [
+          {
+            "page": 1,
+            "label": "Banon FSR - Gate Location",
+            "shows": "Map title, with the subtitle 'Banon FSR Branch 01'."
+          },
+          {
+            "page": 1,
+            "label": "Planned Gate Location",
+            "shows": "Yellow pin on the gravel road that runs from the pin labelled 'S. Watts Road' past 'Heidelberg Materials, Concrete'; it sits just before the pin labelled 'Banon FSR Br.01'. No km label is printed."
+          },
+          {
+            "page": 1,
+            "label": "Banon FSR Br.01",
+            "shows": "Yellow pin on the same gravel road just past the planned gate pin, naming the road there."
+          },
+          {
+            "page": 1,
+            "label": "S. Watts Road",
+            "shows": "Yellow pin where the gravel road leading to the planned gate meets the paved highway, beside 'Taylormade Landscapes'."
+          }
+        ],
+        "quotes": [],
+        "uncertain": [
+          "signed_on",
+          "roads[0].file_section",
+          "roads[0].effective_from",
+          "roads[0].effective_to"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "dm_notice-f09d0a71d96e",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "dm_notice.v1",
+      "schema_id": "dm_notice.v1",
+      "produced_at": "2026-10-19T20:13:19Z",
+      "answer": {
+        "legible": true,
+        "document_type": "gate_map",
+        "signed_on": null,
+        "rescinded": false,
+        "roads": [
+          {
+            "name": "Banon FSR Branch 01",
+            "file_section": null,
+            "quote": "Banon FSR Branch 01",
+            "effective_from": null,
+            "effective_to": null,
+            "points": [
+              {
+                "km": null,
+                "km_end": null,
+                "extent": "unknown",
+                "status": "gated",
+                "seen_on": "map",
+                "quote": "Planned Gate Location"
+              }
+            ]
+          }
+        ],
+        "map_readings": [
+          {
+            "page": 1,
+            "label": "Banon FSR - Gate Location",
+            "shows": "Map title, with the subtitle 'Banon FSR Branch 01'. The map is a Google Earth satellite image with yellow pins."
+          },
+          {
+            "page": 1,
+            "label": "Planned Gate Location",
+            "shows": "Yellow pin on the gravel road running south from the industrial area (south of the 'Heidelberg Materials, Concrete' label), marking where a gate is planned. No km label is printed."
+          },
+          {
+            "page": 1,
+            "label": "Banon FSR Br.01",
+            "shows": "Yellow pin on the same road a little further south of the Planned Gate Location pin, naming the road as Banon FSR Branch 01."
+          },
+          {
+            "page": 1,
+            "label": "S. Watts Road",
+            "shows": "Yellow pin at the north end of the access road, by the highway near 'Taylormade Landscapes'."
+          }
+        ],
+        "quotes": [
+          {
+            "field": "rescinded",
+            "quote": "Banon FSR - Gate Location"
+          }
+        ],
+        "uncertain": [
+          "signed_on",
+          "roads[0].file_section",
+          "roads[0].effective_from"
+        ]
+      }
+    }
+  },
+  "disagreements": [],
+  "rejected_quotes": [
+    "roads[0].points[0]"
+  ],
+  "placements": [
+    {
+      "road": "Banon FSR Branch 01",
+      "file_section": null,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Banon FSR Branch 01"
+        }
+      ],
+      "placement": "no file and section number in the PDF"
+    }
+  ],
+  "images": [
+    "raw/2026-10/dm_notices/images/DSI-c2357ace-map-banon_fsr_gate_location.p1.jpg"
+  ],
+  "links": [
+    {
+      "label": "Notice PDF",
+      "href": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/map-banon_fsr_gate_location.pdf"
+    }
+  ],
+  "status": "approved",
+  "created": "2026-10-20T16:28:59.842Z",
+  "updated": "2026-10-20T17:13:45.103Z",
+  "decided_by": "Arsh",
+  "decided_on": "2026-10-20"
+}

@@ -1,0 +1,71 @@
+{
+  "task_id": "dm_notice-d9d8ff1688d2",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-20T15:10:14Z",
+  "answer": {
+    "legible": true,
+    "document_type": "deactivation_notice",
+    "signed_on": "2026-09-08",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Rady Forest Service Road (FSR)",
+        "file_section": null,
+        "quote": "Rady Forest Service Road (FSR)",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "deactivated",
+            "seen_on": "text",
+            "quote": "The MOF has indicated that the road is intended to be deactivated to a permanent standard, and that post-deactivation vehicular access is not required."
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "deactivated",
+            "seen_on": "text",
+            "quote": "These works will result in loss of vehicle access along the alignment, including All Terrain Vehicle (ATV) access."
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 3,
+        "label": "Rady FSR slated for deactivation",
+        "shows": "Location key map (Figure 1): a callout arrow points to a road drawn in red, marking the Rady FSR as slated for deactivation. No km labels, gates or closure points are printed."
+      },
+      {
+        "page": 3,
+        "label": "31",
+        "shows": "Highway 31 drawn as a yellow line with route shields; nothing is marked closed or gated on it."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "September 8, 2026"
+      },
+      {
+        "field": "rescinded",
+        "quote": "Road Deactivation Prescription"
+      }
+    ],
+    "uncertain": [
+      "roads[0].file_section",
+      "roads[0].effective_from",
+      "roads[0].effective_to",
+      "roads[0].points[0].km",
+      "roads[0].points[1].km"
+    ]
+  }
+}

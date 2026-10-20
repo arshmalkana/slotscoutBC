@@ -1,0 +1,152 @@
+{
+  "task_id": "bylaw-48033c8b463c",
+  "run": 1,
+  "mode": "agent",
+  "model": "claude-opus-5-5 (Claude Code)",
+  "prompt_version": "bylaw.v1",
+  "schema_id": "bylaw.v1",
+  "produced_at": "2026-10-19T17:45:11Z",
+  "answer": {
+    "bylaw": {
+      "title": "Regulating the Discharge of Firearms Bylaw",
+      "number": "4183",
+      "adopted_on": "1983-03-29",
+      "amended_by": [
+        "6106",
+        "6491",
+        "6941",
+        "8538",
+        "10278"
+      ]
+    },
+    "definitions": [
+      {
+        "term": "FIREARM",
+        "meaning": "a rifle, pistol, or shotgun and includes air guns, air rifles, air pistols and spring guns but does not include firearms used for the discharge of blank ammunition in connection with an athletic or sporting event",
+        "quote": "\"FIREARM\" means a rifle, pistol, or shotgun and includes air guns, air rifles, air pistols and spring guns but does not include firearms used for the discharge of blank ammunition in connection with an athletic or sporting event."
+      },
+      {
+        "term": "PUBLIC HIGHWAY",
+        "meaning": "highway as defined in the Municipal Act",
+        "quote": "\"PUBLIC HIGHWAY\" means highway as defined in the Municipal Act."
+      }
+    ],
+    "prohibitions": [
+      {
+        "what": "discharge a firearm",
+        "firearm_types": [
+          "all_firearms"
+        ],
+        "where": "within or into the area designated as \"closed\" on Schedule \"A\"",
+        "quote": "No person shall discharge a firearm within or into the area designated as \"closed\" on Schedule \"A\" attached hereto and forming part of this Bylaw."
+      },
+      {
+        "what": "discharge a firearm utilizing a single projectile",
+        "firearm_types": [
+          "all_firearms"
+        ],
+        "where": "within the Municipality",
+        "quote": "No person shall discharge a firearm utilizing a single projectile within the Municipality except as specifically provided under section 6 and section 7 hereof."
+      },
+      {
+        "what": "discharge a firearm unless aimed into an adjacent open area",
+        "firearm_types": [
+          "all_firearms"
+        ],
+        "where": "the area designated as \"no discharge toward shore\" on Schedule \"A\"",
+        "quote": "No person shall discharge a firearm in the area designated as \"no discharge toward shore\" on Schedule \"A\" attached hereto and forming part of this Bylaw unless the firearm is aimed into an adjacent area designated as \"open area\" on Schedule \"A\" attached hereto and forming part of this Bylaw."
+      }
+    ],
+    "exceptions": [
+      {
+        "applies_to": "all provisions",
+        "firearm_type": null,
+        "hunting_only": null,
+        "permit": null,
+        "season": null,
+        "quote": "The provisions of this Bylaw shall not apply to Peace Officers, employees of the Fisheries & Wildlife Branch, employees of the Ministries of Fisheries & Oceans, employees of the Canadian Wildlife Service, or employees of the Society for the Prevention of Cruelty to Animals required to use firearms in the line of duty."
+      },
+      {
+        "applies_to": "sections 4 and 5",
+        "firearm_type": null,
+        "hunting_only": false,
+        "permit": "permit from Council for a shooting range, an organized trap or skeet event, or a licensed trapper with the owner's written permission",
+        "season": null,
+        "quote": "A permit to allow the discharge of firearms within the Municipality shall be required: (a) for the operation of a pistol, rifle, trap and/or skeet shooting range"
+      },
+      {
+        "applies_to": "sections 4 and 5",
+        "firearm_type": null,
+        "hunting_only": false,
+        "permit": null,
+        "season": null,
+        "quote": "Notwithstanding sections 4 and 5 hereof, but subject to the Migratory Birds Convention Act, the Wildlife Act and regulations thereto, a person may discharge a firearm within the Municipality without first obtaining a permit therefor when:"
+      },
+      {
+        "applies_to": "section 4",
+        "firearm_type": null,
+        "hunting_only": true,
+        "permit": "valid provincial hunting licence",
+        "season": "when the hunting of wildlife may be carried out in accordance with the laws of the Province of British Columbia",
+        "quote": "Notwithstanding the provisions of section 4 hereof a person may, in that portion of the Municipality designated as open hunting on Schedule \"A\" attached hereto and forming part of this Bylaw"
+      },
+      {
+        "applies_to": "section 4",
+        "firearm_type": null,
+        "hunting_only": true,
+        "permit": "hunting by permission pass issued by the Richmond Rod and Gun Club and validated by the owner of the property",
+        "season": "when the hunting of wildlife may be carried out in accordance with the laws of the Province of British Columbia",
+        "quote": "Notwithstanding the provisions of section 4 hereof, a person may, in the area designated as \"hunting by permission only\" on Schedule \"A\""
+      },
+      {
+        "applies_to": "section 10",
+        "firearm_type": null,
+        "hunting_only": null,
+        "permit": "written permission of the Manager of Vancouver International Airport",
+        "season": null,
+        "quote": "it shall be lawful for a person to discharge a firearm within or into the Vancouver International Airport with the written permission of the Manager of Vancouver International Airport."
+      }
+    ],
+    "distance_rules": [
+      {
+        "distance_m": 135,
+        "from_what": "any school building, school yard, public park, playground, church, workshop, place of business, dwelling house, farm building, public highway, or other place where persons may be assembled or engaged in work of any kind",
+        "quote": "no person shall discharge, within the limits of the Municipality, any firearm within 135 metres of any school building, school yard, public park, playground, church, workshop, place of business, dwelling house, farm building, public highway, or other place where persons may be assembled or engaged in work of any kind"
+      },
+      {
+        "distance_m": 180,
+        "from_what": "the shore on the outside foot of the dyke (the \"no discharge toward shore\" strip)",
+        "quote": "The area designated as \"no discharge toward shore\" shall be a strip l80 metres wide measured out from a line drawn parallel to and perpendicularly distant l80 metres from the shore on the outside foot of the dyke as the case may be."
+      }
+    ],
+    "schedule_maps": [
+      {
+        "name": "Schedule \"A\"",
+        "description": "Map of areas designated \"closed\", \"open hunting\", \"hunting by permission only\", \"no discharge toward shore\" and \"open area\"",
+        "quote": "SCHEDULE A to BYLAW NO. 4183"
+      }
+    ],
+    "target_shooting": "zoned",
+    "quotes": [
+      {
+        "field": "bylaw.title",
+        "quote": "REGULATING THE DISCHARGE OF FIREARMS"
+      },
+      {
+        "field": "bylaw.number",
+        "quote": "BYLAW NO. 4183"
+      },
+      {
+        "field": "bylaw.adopted_on",
+        "quote": "March 29, 1983"
+      },
+      {
+        "field": "target_shooting",
+        "quote": "No person shall discharge a firearm within or into the area designated as \"closed\" on Schedule \"A\""
+      }
+    ],
+    "uncertain": [
+      "schedule_maps"
+    ]
+  }
+}

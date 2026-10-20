@@ -1,0 +1,120 @@
+{
+  "task_id": "closed_area-021e54f769c2",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T15:18:34Z",
+  "answer": {
+    "effect": "no_shooting_seasonal",
+    "exemptions": [],
+    "period": null,
+    "within": null,
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the intersection of Koerner Road and Rannie Road",
+          "direction": "due West",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the easterly Coquitlam District Municipal Boundary",
+          "distance": null,
+          "quote": "Commencing at the intersection of Koerner Road and Rannie Road and proceeding due West to the easterly Coquitlam District Municipal Boundary"
+        },
+        {
+          "start": null,
+          "direction": "northerly and northeasterly",
+          "follow": "district_boundary",
+          "feature": "Coquitlam District Municipal Boundary",
+          "side_or_bank": null,
+          "until": "the northern boundary of the Coquitlam District Municipality",
+          "distance": null,
+          "quote": "thence proceeding northerly and northeasterly along the boundary to the northern boundary of the Coquitlam District Municipality"
+        },
+        {
+          "start": null,
+          "direction": "southeasterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point where the dyke bordering the eastern side of Fox Reach intersects a dyke running southeasterly from the western end of Grant Narrows",
+          "distance": null,
+          "quote": "thence proceeding southeasterly to the point where the dyke bordering the eastern side of Fox Reach intersects a dyke running southeasterly from the western end of Grant Narrows"
+        },
+        {
+          "start": null,
+          "direction": "southeasterly, easterly and northeasterly",
+          "follow": "other",
+          "feature": "dyke",
+          "side_or_bank": "southerly and westerly sides",
+          "until": "the western Maple Ridge District Municipal Boundary",
+          "distance": null,
+          "quote": "thence proceeding southeasterly, easterly and northeasterly along the southerly and westerly sides of the dyke to the western Maple Ridge District Municipal Boundary"
+        },
+        {
+          "start": null,
+          "direction": "southerly and westerly",
+          "follow": "district_boundary",
+          "feature": "Maple Ridge District Municipal Boundary",
+          "side_or_bank": null,
+          "until": "Koerner Road (also known as the X-Y line)",
+          "distance": null,
+          "quote": "thence proceeding southerly and westerly along the boundary to Koerner Road (also known as the X-Y line)"
+        },
+        {
+          "start": null,
+          "direction": "west",
+          "follow": "road",
+          "feature": "Koerner Road",
+          "side_or_bank": null,
+          "until": "a dyke (completed March 1978) running generally north and northwest from Koerner Road to Rannie Road",
+          "distance": null,
+          "quote": "thence proceeding west along Koerner Road to a dyke (completed March 1978) running generally north and northwest from Koerner Road to Rannie Road"
+        },
+        {
+          "start": null,
+          "direction": "north and northwest",
+          "follow": "other",
+          "feature": "dyke",
+          "side_or_bank": "easterly side",
+          "until": "Rannie Road",
+          "distance": null,
+          "quote": "thence proceeding north and northwest along the easterly side of the dyke to Rannie Road"
+        },
+        {
+          "start": null,
+          "direction": "southwesterly and southerly",
+          "follow": "road",
+          "feature": "Rannie Road",
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence proceeding southwesterly and southerly along Rannie Road to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "Seasonal No Shooting or Hunting Areas"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within the following described boundaries: Commencing at"
+      }
+    ],
+    "uncertain": [
+      "period",
+      "within"
+    ]
+  }
+}

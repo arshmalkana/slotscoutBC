@@ -1,0 +1,147 @@
+{
+  "task_id": "dm_notice-5f3168c65333",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:15:37Z",
+  "answer": {
+    "legible": true,
+    "document_type": "gate_map",
+    "signed_on": "2021-05-27",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Braden Mainline",
+        "file_section": null,
+        "quote": "Braden Mainline",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 0.1,
+            "km_end": null,
+            "extent": "at",
+            "status": "gated",
+            "seen_on": "text",
+            "quote": "Braden Mainline - Station 0+100"
+          }
+        ]
+      },
+      {
+        "name": "TR11",
+        "file_section": null,
+        "quote": "TR11",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 0.2,
+            "km_end": null,
+            "extent": "at",
+            "status": "gated",
+            "seen_on": "text",
+            "quote": "TR11 - Station 0+200"
+          }
+        ]
+      },
+      {
+        "name": "Braden 2000",
+        "file_section": null,
+        "quote": "Braden 2000",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "gated",
+            "seen_on": "text",
+            "quote": "Existing Gate on Braden 2000"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "TR11 Station 0+200",
+        "shows": "A red callout with an arrow, and a separate Gate Location callout, pointing to a red triangle (legend: Gate Location) next to the km 0 marker at the start of the road labelled TR11, near the km 30 marker on GORDON RIVER MAIN."
+      },
+      {
+        "page": 1,
+        "label": "Braden Mainline Station 0+100",
+        "shows": "A red callout with an arrow, and a separate Gate Location callout, pointing to a red triangle (legend: Gate Location) next to the km 0 marker at the start of BRADEN M/L, near the km 44 marker on GORDON RIVER MAIN."
+      },
+      {
+        "page": 1,
+        "label": "Existing Gate on Braden 2000",
+        "shows": "A callout pointing to a red triangle (legend: Gate Location) at the start of the road labelled BD2000/BD-2000, beside the km 4 marker on BRADEN M/L. No station or km is printed for this gate."
+      },
+      {
+        "page": 1,
+        "label": "Truck Road 11 Blockade",
+        "shows": "An orange pentagon (legend: Blockade Location) on TR11 just past the TR11 gate."
+      },
+      {
+        "page": 1,
+        "label": "BD-2000 Blockade",
+        "shows": "An orange pentagon (legend: Blockade Location) on the BD-2000 road right beside the Existing Gate on Braden 2000."
+      },
+      {
+        "page": 1,
+        "label": "Edinburgh Blockade",
+        "shows": "An orange pentagon (legend: Blockade Location) at the km 0 marker at the start of EDINBURGH M/L, near the km 38 marker on GORDON RIVER MAIN."
+      },
+      {
+        "page": 1,
+        "label": "Grierson Blockade",
+        "shows": "An orange pentagon (legend: Blockade Location) at the km 0 marker on GRIERSON M/L, near where it meets GORDON RIVER MAIN."
+      },
+      {
+        "page": 1,
+        "label": "Fairy Creek Blockade #1",
+        "shows": "An orange pentagon (legend: Blockade Location) on the road labelled BD-4000 near Braden Creek, by the km 8 marker on BRADEN M/L."
+      },
+      {
+        "page": 1,
+        "label": "Fairy Creek Blockade #2",
+        "shows": "An orange pentagon (legend: Blockade Location) near the road labelled RD-1300."
+      },
+      {
+        "page": 1,
+        "label": "Granite Cre Blockade",
+        "shows": "An orange pentagon (legend: Blockade Location) on GRANITE MAINLINE; the label is cut off at the right edge of the map."
+      },
+      {
+        "page": 1,
+        "label": "TFL 46 Braden Area Gate Locations Braden Mainline - Station 0+100 TR11 - Station 0+200",
+        "shows": "Map title block, scale 1:75,000, dated May 27, 2021."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "May 27, 2021"
+      },
+      {
+        "field": "rescinded",
+        "quote": "Gate Locations"
+      }
+    ],
+    "uncertain": [
+      "roads[0].file_section",
+      "roads[0].effective_from",
+      "roads[0].effective_to",
+      "roads[1].file_section",
+      "roads[1].effective_from",
+      "roads[1].effective_to",
+      "roads[2].file_section",
+      "roads[2].effective_from",
+      "roads[2].effective_to",
+      "roads[2].points[0].km"
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "task_id": "dm_notice-95ecee4475f1",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:13:42Z",
+  "answer": {
+    "legible": true,
+    "document_type": "closure_order",
+    "signed_on": "2026-04-24",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "American FSR",
+        "file_section": "7972.02",
+        "quote": "American FSR 7972.02",
+        "effective_from": "2026-04-24",
+        "effective_to": null,
+        "points": [
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "whole_road",
+            "status": "closed",
+            "seen_on": "text",
+            "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the American FSR 7972.02 is CLOSED due to a road washout at 6.0 km."
+          },
+          {
+            "km": 6.0,
+            "km_end": null,
+            "extent": "at",
+            "status": "washout",
+            "seen_on": "text",
+            "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the American FSR 7972.02 is CLOSED due to a road washout at 6.0 km."
+          }
+        ]
+      }
+    ],
+    "map_readings": [],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "Date: 2026.04.24"
+      },
+      {
+        "field": "rescinded",
+        "quote": "the American FSR 7972.02 is CLOSED due to a road washout at 6.0 km."
+      }
+    ],
+    "uncertain": []
+  }
+}

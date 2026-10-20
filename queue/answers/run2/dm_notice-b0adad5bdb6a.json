@@ -1,0 +1,28 @@
+{
+  "task_id": "dm_notice-b0adad5bdb6a",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:13:53Z",
+  "answer": {
+    "legible": true,
+    "document_type": "restriction_bulletin",
+    "signed_on": "2026-06-02",
+    "rescinded": false,
+    "roads": [],
+    "map_readings": [],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "ROAD RESTRICTIONS NOTICE June 2, 2026"
+      },
+      {
+        "field": "rescinded",
+        "quote": "Effective June 2, 2026, at 12:01 AM \u2013 Unrestricted \u2013 100% Legal Axle Loading"
+      }
+    ],
+    "uncertain": []
+  }
+}

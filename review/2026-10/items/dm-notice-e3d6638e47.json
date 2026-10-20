@@ -1,0 +1,221 @@
+{
+  "item_id": "dm-notice-e3d6638e47",
+  "month": "2026-10",
+  "kind": "dm_notice",
+  "title": "District Manager notice DSI-7d1cff67-canal_main_closure: 1 road closed or restricted (Canal Main)",
+  "change_type": "stricter",
+  "decision": "Check each road and km point against the PDF and its page images. Approving lets these closures count on the map; until then P6 shows Cannot confirm on these roads.",
+  "why": [
+    "read from: no text layer; OCR by tesseract 5.3.4 on page 1; 1 map or scan page image for reading, and 1 page image(s) looked at by both readings",
+    "a person checks every AI reading before it counts (Addendum A 7.2: the gold set has not passed yet)"
+  ],
+  "source": {
+    "text": "Source: https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/canal_main_closure.pdf\r\nFetched: 2026-10-19T20:00:34.404Z\r\nSHA-256: 5c08ed5c449fb60f904a3aae305037f1d11c46431b3d41863dbeafd212288e97\r\nRead: no text layer; OCR by tesseract 5.3.4 on page 1; 1 map or scan page image for reading\r\nImages: raw/2026-10/dm_notices/images/DSI-7d1cff67-canal_main_closure.p1.jpg\r\n\r\n[Page 1: text read by OCR from the page image]\r\n\\\r\n\r\n2 4\r\nJohnstone Isiand\r\n: r\r\n: Hoik Island 1 as =\r\nCanal Main 0 km Port Alberni\r\nHohm Isian«\r\n8 Res,\r\n9\r\n\\ : s\r\ni\r\n4 t\r\n; 13\r\nF ~\r\n14\r\nz 14\r\nWe 7, uM\r\n_— c\r\n‘ 15 8\r\n, 16\r\n: 17\r\nCanal Maini1 km is\r\n’ Cous Main 0 km\r\nNahmint Like “a Uy\r\n. 0\r\n21\r\n22\r\n~~\r\n23\r\n24\r\n6\r\n44\r\n43 p\r\n42 28\r\n) Canal Main 38 km ,\r\n41 9\r\n40 3 t\r\n37 ry\r\nN 36 ue 1\r\nY\r\n4\r\n_ 35 2\r\n0 1.25 2.5 5 Kilomet 34° a\r\nee\r\n} i ¢ AN\r\nOverview Map\r\ne if j\r\nTae\r\nForest Service Road Closure a)\r\n4 “2\r\nCanal Main 27 km - 29 km oe %, Rae\r\n= Canal Main Km Signs %e5 _Port Alberni *\r\n——= Canal Main Closure ie\r\nCreated by: South Island District —— Alternate Route\r\nDatum: NAD 83 Active Forest Roads\r\nDate: August 27, 2026 Bates Local Roads\r\nBRITISH Cowichan\r\nScale: 1:100,000 COLUMBIA Untenured Resource Roads Lake\r\nPacific Rim\r\n\r\nTrail\r\n\r\nNational Park",
+    "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/canal_main_closure.pdf",
+    "version": "2026-10-19T20:00:34.404Z",
+    "confirmed": true,
+    "file": "raw\\2026-10\\dm_notices\\DSI-7d1cff67-canal_main_closure.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "dm_notice-ab3397e9c6ff",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "dm_notice.v1",
+      "schema_id": "dm_notice.v1",
+      "produced_at": "2026-10-19T20:12:49Z",
+      "answer": {
+        "legible": true,
+        "document_type": "closure_order",
+        "signed_on": "2026-08-27",
+        "rescinded": false,
+        "roads": [
+          {
+            "name": "Canal Main",
+            "file_section": null,
+            "quote": "Canal Main 27 km - 29 km",
+            "effective_from": null,
+            "effective_to": null,
+            "points": [
+              {
+                "km": 27,
+                "km_end": 29,
+                "extent": "range",
+                "status": "closed",
+                "seen_on": "map",
+                "quote": "Canal Main 27 km - 29 km"
+              }
+            ]
+          }
+        ],
+        "map_readings": [
+          {
+            "page": 1,
+            "label": "Forest Service Road Closure Canal Main 27 km - 29 km",
+            "shows": "Map title. A red line (legend: Canal Main Closure) is drawn on Canal Main between the km signs labelled 27 and 29."
+          },
+          {
+            "page": 1,
+            "label": "27",
+            "shows": "Canal Main km sign where the red closure line begins."
+          },
+          {
+            "page": 1,
+            "label": "29",
+            "shows": "Canal Main km sign where the red closure line ends."
+          },
+          {
+            "page": 1,
+            "label": "Canal Main 0 km",
+            "shows": "Start of Canal Main; the purple alternate route runs along Canal Main from here."
+          },
+          {
+            "page": 1,
+            "label": "Canal Main11 km Cous Main 0 km",
+            "shows": "Junction where the purple line (legend: Alternate Route) leaves Canal Main onto Cous Main."
+          },
+          {
+            "page": 1,
+            "label": "Canal Main 38 km",
+            "shows": "Point near km sign 39 where the purple alternate route rejoins Canal Main, south of the closure."
+          }
+        ],
+        "quotes": [
+          {
+            "field": "signed_on",
+            "quote": "Date: August 27, 2026"
+          }
+        ],
+        "uncertain": [
+          "roads[0].file_section",
+          "roads[0].effective_from",
+          "roads[0].effective_to"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "dm_notice-ab3397e9c6ff",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "dm_notice.v1",
+      "schema_id": "dm_notice.v1",
+      "produced_at": "2026-10-19T20:13:53Z",
+      "answer": {
+        "legible": true,
+        "document_type": "closure_order",
+        "signed_on": "2026-08-27",
+        "rescinded": false,
+        "roads": [
+          {
+            "name": "Canal Main",
+            "file_section": null,
+            "quote": "Canal Main",
+            "effective_from": null,
+            "effective_to": null,
+            "points": [
+              {
+                "km": 27,
+                "km_end": 29,
+                "extent": "range",
+                "status": "closed",
+                "seen_on": "text",
+                "quote": "Canal Main 27 km - 29 km"
+              }
+            ]
+          }
+        ],
+        "map_readings": [
+          {
+            "page": 1,
+            "label": "Forest Service Road Closure Canal Main 27 km - 29 km",
+            "shows": "Map title naming the closure."
+          },
+          {
+            "page": 1,
+            "label": "Canal Main Closure",
+            "shows": "Legend entry for the red line; the red line is drawn along Canal Main between the km signs labelled 27 and 29 (sign 28 lies on it)."
+          },
+          {
+            "page": 1,
+            "label": "27",
+            "shows": "Canal Main km sign (legend: Canal Main Km Signs) at one end of the red closure line."
+          },
+          {
+            "page": 1,
+            "label": "29",
+            "shows": "Canal Main km sign (legend: Canal Main Km Signs) at the other end of the red closure line."
+          },
+          {
+            "page": 1,
+            "label": "Alternate Route",
+            "shows": "Legend entry for the purple line, drawn from the callout 'Canal Main 0 km' through the callout 'Canal Main11 km Cous Main 0 km' to the callout 'Canal Main 38 km', bypassing the closed stretch."
+          },
+          {
+            "page": 1,
+            "label": "Canal Main 0 km",
+            "shows": "Callout at the start of Canal Main and of the purple alternate route."
+          },
+          {
+            "page": 1,
+            "label": "Canal Main11 km Cous Main 0 km",
+            "shows": "Callout where the purple alternate route leaves Canal Main onto Cous Main."
+          },
+          {
+            "page": 1,
+            "label": "Canal Main 38 km",
+            "shows": "Callout where the purple alternate route rejoins Canal Main."
+          }
+        ],
+        "quotes": [
+          {
+            "field": "signed_on",
+            "quote": "Date: August 27, 2026"
+          },
+          {
+            "field": "rescinded",
+            "quote": "Forest Service Road Closure"
+          }
+        ],
+        "uncertain": [
+          "roads[0].file_section",
+          "roads[0].effective_from",
+          "roads[0].effective_to"
+        ]
+      }
+    }
+  },
+  "disagreements": [],
+  "rejected_quotes": [],
+  "placements": [
+    {
+      "road": "Canal Main",
+      "file_section": null,
+      "points": [
+        {
+          "km": 27,
+          "kmEnd": 29,
+          "extent": "range",
+          "status": "closed",
+          "quote": "Canal Main 27 km - 29 km"
+        }
+      ],
+      "placement": "no file and section number in the PDF"
+    }
+  ],
+  "images": [
+    "raw/2026-10/dm_notices/images/DSI-7d1cff67-canal_main_closure.p1.jpg"
+  ],
+  "links": [
+    {
+      "label": "Notice PDF",
+      "href": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/canal_main_closure.pdf"
+    }
+  ],
+  "status": "approved",
+  "created": "2026-10-20T16:28:59.667Z",
+  "updated": "2026-10-20T17:13:47.497Z",
+  "decided_by": "Arsh",
+  "decided_on": "2026-10-20"
+}

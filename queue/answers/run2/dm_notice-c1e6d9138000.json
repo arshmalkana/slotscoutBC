@@ -1,0 +1,49 @@
+{
+  "task_id": "dm_notice-c1e6d9138000",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:13:53Z",
+  "answer": {
+    "legible": true,
+    "document_type": "closure_order",
+    "signed_on": "2019-11-08",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Bucklin Forest Service Road",
+        "file_section": null,
+        "quote": "Bucklin Forest Service Road",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 0.8,
+            "km_end": null,
+            "extent": "beyond",
+            "status": "closed",
+            "seen_on": "text",
+            "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act the Bucklin Forest Service Road is hereby closed effective immediately beyond 0.8 km in the vicinity of Second Canyon Creek until further notice."
+          }
+        ]
+      }
+    ],
+    "map_readings": [],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "Date: 2019.11.08"
+      },
+      {
+        "field": "rescinded",
+        "quote": "the Bucklin Forest Service Road is hereby closed effective immediately beyond 0.8 km in the vicinity of Second Canyon Creek until further notice."
+      }
+    ],
+    "uncertain": [
+      "roads[0].file_section",
+      "roads[0].effective_from"
+    ]
+  }
+}

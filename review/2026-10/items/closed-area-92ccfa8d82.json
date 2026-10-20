@@ -1,0 +1,304 @@
+{
+  "item_id": "closed-area-92ccfa8d82",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 62 (Squamish)",
+  "rule_id": "W5-062",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nSquamish\n62 That portion of the Province of British Columbia within the following described boundaries: Commencing at the southeast corner of the District Municipality of Squamish; thence due East to the 400 m contour line; thence northerly along the contour to the point of its intersection with Gonzales Creek; thence up the creek to the 600 m contour line; thence northeasterly to its intersection with a road which lies between the Stawamus River and Shannon Creek; thence northeasterly down the road to its crossing of the Stawamus River; thence down the river to its intersection with the boundary of the District of Squamish; thence westerly and southerly along the boundary line of the District to the point of commencement, excepting any Indian Reserve lands.",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-127444e32082",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T15:20:04Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [
+          "excepting any Indian Reserve lands"
+        ],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the southeast corner of the District Municipality of Squamish",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the southeast corner of the District Municipality of Squamish"
+            },
+            {
+              "start": null,
+              "direction": "due East",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the 400 m contour line",
+              "distance": null,
+              "quote": "thence due East to the 400 m contour line"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "contour",
+              "feature": "400 m contour line",
+              "side_or_bank": null,
+              "until": "the point of its intersection with Gonzales Creek",
+              "distance": null,
+              "quote": "thence northerly along the contour to the point of its intersection with Gonzales Creek"
+            },
+            {
+              "start": null,
+              "direction": "up",
+              "follow": "creek",
+              "feature": "Gonzales Creek",
+              "side_or_bank": null,
+              "until": "the 600 m contour line",
+              "distance": null,
+              "quote": "thence up the creek to the 600 m contour line"
+            },
+            {
+              "start": null,
+              "direction": "northeasterly",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "its intersection with a road which lies between the Stawamus River and Shannon Creek",
+              "distance": null,
+              "quote": "thence northeasterly to its intersection with a road which lies between the Stawamus River and Shannon Creek"
+            },
+            {
+              "start": null,
+              "direction": "northeasterly",
+              "follow": "road",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "its crossing of the Stawamus River",
+              "distance": null,
+              "quote": "thence northeasterly down the road to its crossing of the Stawamus River"
+            },
+            {
+              "start": null,
+              "direction": "down",
+              "follow": "river",
+              "feature": "Stawamus River",
+              "side_or_bank": null,
+              "until": "its intersection with the boundary of the District of Squamish",
+              "distance": null,
+              "quote": "thence down the river to its intersection with the boundary of the District of Squamish"
+            },
+            {
+              "start": null,
+              "direction": "westerly and southerly",
+              "follow": "district_boundary",
+              "feature": "District of Squamish",
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence westerly and southerly along the boundary line of the District to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within the following described boundaries"
+          },
+          {
+            "field": "exemptions[0]",
+            "quote": "excepting any Indian Reserve lands"
+          }
+        ],
+        "uncertain": [
+          "within",
+          "geometry.steps[4].follow"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-127444e32082",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T15:19:29Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [
+          "excepting any Indian Reserve lands"
+        ],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the southeast corner of the District Municipality of Squamish",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the southeast corner of the District Municipality of Squamish"
+            },
+            {
+              "start": null,
+              "direction": "due East",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the 400 m contour line",
+              "distance": null,
+              "quote": "thence due East to the 400 m contour line"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "contour",
+              "feature": "400 m contour line",
+              "side_or_bank": null,
+              "until": "the point of its intersection with Gonzales Creek",
+              "distance": null,
+              "quote": "thence northerly along the contour to the point of its intersection with Gonzales Creek"
+            },
+            {
+              "start": null,
+              "direction": "up",
+              "follow": "creek",
+              "feature": "Gonzales Creek",
+              "side_or_bank": null,
+              "until": "the 600 m contour line",
+              "distance": null,
+              "quote": "thence up the creek to the 600 m contour line"
+            },
+            {
+              "start": null,
+              "direction": "northeasterly",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "its intersection with a road which lies between the Stawamus River and Shannon Creek",
+              "distance": null,
+              "quote": "thence northeasterly to its intersection with a road which lies between the Stawamus River and Shannon Creek"
+            },
+            {
+              "start": null,
+              "direction": "northeasterly down",
+              "follow": "road",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "its crossing of the Stawamus River",
+              "distance": null,
+              "quote": "thence northeasterly down the road to its crossing of the Stawamus River"
+            },
+            {
+              "start": null,
+              "direction": "down",
+              "follow": "river",
+              "feature": "Stawamus River",
+              "side_or_bank": null,
+              "until": "its intersection with the boundary of the District of Squamish",
+              "distance": null,
+              "quote": "thence down the river to its intersection with the boundary of the District of Squamish"
+            },
+            {
+              "start": null,
+              "direction": "westerly and southerly",
+              "follow": "district_boundary",
+              "feature": "District of Squamish",
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence westerly and southerly along the boundary line of the District to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "exemptions[0]",
+            "quote": "excepting any Indian Reserve lands"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within the following described boundaries"
+          }
+        ],
+        "uncertain": [
+          "within"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "effect": "No Shooting Areas",
+    "exemptions[0]": "excepting any Indian Reserve lands",
+    "geometry.steps[0]": "Commencing at the southeast corner of the District Municipality of Squamish",
+    "geometry.steps[1]": "thence due East to the 400 m contour line",
+    "geometry.steps[2]": "thence northerly along the contour to the point of its intersection with Gonzales Creek",
+    "geometry.steps[3]": "thence up the creek to the 600 m contour line",
+    "geometry.steps[4]": "thence northeasterly to its intersection with a road which lies between the Stawamus River and Shannon Creek",
+    "geometry.steps[5]": "thence northeasterly down the road to its crossing of the Stawamus River",
+    "geometry.steps[6]": "thence down the river to its intersection with the boundary of the District of Squamish",
+    "geometry.steps[7]": "thence westerly and southerly along the boundary line of the District to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T15:58:44.875Z",
+  "updated": "2026-10-20T15:58:44.875Z"
+}

@@ -1,0 +1,108 @@
+{
+  "task_id": "dm_notice-9c489efe855d",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-20T15:09:35Z",
+  "answer": {
+    "legible": true,
+    "document_type": "gate_map",
+    "signed_on": "2026-03-18",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "WA700",
+        "file_section": null,
+        "quote": "WA700",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 0.01,
+            "km_end": null,
+            "extent": "at",
+            "status": "gated",
+            "seen_on": "text",
+            "quote": "Gate on WA700 - Station 0+010"
+          }
+        ]
+      },
+      {
+        "name": "Walbran Main",
+        "file_section": null,
+        "quote": "Walbran Main",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 11.6,
+            "km_end": null,
+            "extent": "at",
+            "status": "gated",
+            "seen_on": "text",
+            "quote": "Gate on Walbran Main - Station 11+600"
+          }
+        ]
+      },
+      {
+        "name": "WA900",
+        "file_section": null,
+        "quote": "WA900",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 0.372,
+            "km_end": null,
+            "extent": "at",
+            "status": "gated",
+            "seen_on": "text",
+            "quote": "Gate on WA900 - Station 0+372"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "Temporary Gate Locations Map",
+        "shows": "Map title. The map shows three grey callout boxes with green arrows marking gate locations; no other closure or deactivation symbols, and the legend lists only Constructed, Located, Streams, Adjacent Blocks, Parks & Protected Areas and Waterbody."
+      },
+      {
+        "page": 1,
+        "label": "Gate on WA700 - Station 0+010",
+        "shows": "Callout box with a green arrow pointing to a spot on a road just east of the road labelled WA702, beside the point the Walbran Main gate arrow marks; the roads labelled WA703 and WA700-PAO are nearby."
+      },
+      {
+        "page": 1,
+        "label": "Gate on Walbran Main - Station 11+600",
+        "shows": "Callout box with a green arrow pointing to a spot on a road at the top of the road labelled WA702, just west of the WA700 gate arrow; the road labelled WALBRAN MAIN (WA) runs from the south-west toward this area."
+      },
+      {
+        "page": 1,
+        "label": "Gate on WA900 - Station 0+372",
+        "shows": "Callout box with a green arrow pointing to a spot on a road near the labels WA900-PAO and WA1000-PAO, where a road branches east toward the roads labelled WA931 and WA932."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "Date: 2026-03-18"
+      },
+      {
+        "field": "rescinded",
+        "quote": "Temporary Gate Locations Map"
+      }
+    ],
+    "uncertain": [
+      "roads[0].effective_from",
+      "roads[0].effective_to",
+      "roads[1].effective_from",
+      "roads[1].effective_to",
+      "roads[2].effective_from",
+      "roads[2].effective_to"
+    ]
+  }
+}

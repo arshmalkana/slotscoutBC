@@ -1,0 +1,34 @@
+{
+  "task_id": "dm_notice-6398af6abce1",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:12:26Z",
+  "answer": {
+    "legible": true,
+    "document_type": "other",
+    "signed_on": "2026-06-02",
+    "rescinded": false,
+    "roads": [],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "",
+        "shows": "A red location pin with no words printed beside it on a street map; the map shows no closure, gate or deactivation mark."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "June 2, 2026"
+      },
+      {
+        "field": "rescinded",
+        "quote": "Road Construction Notice:"
+      }
+    ],
+    "uncertain": []
+  }
+}

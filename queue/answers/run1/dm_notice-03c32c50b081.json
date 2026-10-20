@@ -1,0 +1,48 @@
+{
+  "task_id": "dm_notice-03c32c50b081",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:13:59Z",
+  "answer": {
+    "legible": true,
+    "document_type": "other",
+    "signed_on": null,
+    "rescinded": false,
+    "roads": [],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "Snowden Demonstration Forest",
+        "shows": "Map title; a recreation trail map of the demonstration forest with numbered designated trails (1 to 8), parking, picnic and viewpoint symbols. No closure or deactivation marks."
+      },
+      {
+        "page": 1,
+        "label": "Gate",
+        "shows": "Legend entry. The legend symbols sit slightly below their labels; read in order, the bar-with-two-circles symbol is 'Gate' and the circled P is 'Parking'."
+      },
+      {
+        "page": 1,
+        "label": "P",
+        "shows": "One gate symbol (bar with two circles) drawn across an unnamed rough road (dash-dot line) on the east side of the forest, beside a circled P, where a dotted designated trail meets that road. The road runs along the Snowden Demonstration Forest boundary south from its junction with the road labelled 'Iron River Mainline', toward lots labelled 'Private'. No road name or km label is printed at the gate."
+      },
+      {
+        "page": 1,
+        "label": "Iron River Mainline",
+        "shows": "Road label on the secondary road near the gated rough road's junction; no gate or closure mark on Iron River Mainline itself."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "rescinded",
+        "quote": "Snowden Demonstration Forest"
+      }
+    ],
+    "uncertain": [
+      "signed_on",
+      "roads"
+    ]
+  }
+}

@@ -1,0 +1,251 @@
+{
+  "item_id": "closed-area-acdd03f779",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 1, section 7 (McGillivray Creek)",
+  "rule_id": "W1-007",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: steps: run 1 [\"|||\",\"little sumas river|the south shoreline of the fraser river||river\",\"fraser river|miller slough where it enters the fraser river||river\",\"miller slough|the south boundary of the provincial dyke||other\",\"provincial dyke|the north bank of mcgillivray creek||other\",\"mcgillivray creek|the point of commencement||creek\"] vs run 2 [\"|||\",\"little sumas river|the south shoreline of the fraser river||river\",\"fraser river|miller slough where it enters the fraser river||shoreline\",\"miller slough|the south boundary of the provincial dyke||other\",\"dyke|the north bank of mcgillivray creek||other\",\"mcgillivray creek|the point of commencement||creek\"]",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 1 No Shooting, Hunting or Trapping Areas (Section 2)\nMcGillivray Creek\n7 That portion of the Province, in the vicinity of the City of Chilliwack, that is within the following boundaries: Commencing at the junction of the north bank of McGillivray Creek and Little Sumas River; thence in a northerly and westerly direction following the east and north banks of the Little Sumas River to the south shoreline of the Fraser River; thence following the south shoreline of the Fraser River in a northeasterly, southeasterly and easterly direction to Miller Slough where it enters the Fraser River; thence southerly following the west bank of Miller Slough to the south boundary of the Provincial Dyke; thence southwesterly and southerly along the south boundary of the dyke to the north bank of McGillivray Creek; thence westerly along the north bank of McGillivray Creek to the point of commencement.",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-5041d362c8c5",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T15:19:05Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the junction of the north bank of McGillivray Creek and Little Sumas River",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the junction of the north bank of McGillivray Creek and Little Sumas River"
+            },
+            {
+              "start": null,
+              "direction": "northerly and westerly",
+              "follow": "river",
+              "feature": "Little Sumas River",
+              "side_or_bank": "east and north banks",
+              "until": "the south shoreline of the Fraser River",
+              "distance": null,
+              "quote": "thence in a northerly and westerly direction following the east and north banks of the Little Sumas River to the south shoreline of the Fraser River"
+            },
+            {
+              "start": null,
+              "direction": "northeasterly, southeasterly and easterly",
+              "follow": "river",
+              "feature": "Fraser River",
+              "side_or_bank": "south shoreline",
+              "until": "Miller Slough where it enters the Fraser River",
+              "distance": null,
+              "quote": "thence following the south shoreline of the Fraser River in a northeasterly, southeasterly and easterly direction to Miller Slough where it enters the Fraser River"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "other",
+              "feature": "Miller Slough",
+              "side_or_bank": "west bank",
+              "until": "the south boundary of the Provincial Dyke",
+              "distance": null,
+              "quote": "thence southerly following the west bank of Miller Slough to the south boundary of the Provincial Dyke"
+            },
+            {
+              "start": null,
+              "direction": "southwesterly and southerly",
+              "follow": "other",
+              "feature": "Provincial Dyke",
+              "side_or_bank": "south boundary",
+              "until": "the north bank of McGillivray Creek",
+              "distance": null,
+              "quote": "thence southwesterly and southerly along the south boundary of the dyke to the north bank of McGillivray Creek"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "creek",
+              "feature": "McGillivray Creek",
+              "side_or_bank": "north bank",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence westerly along the north bank of McGillivray Creek to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting, Hunting or Trapping Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within the following boundaries: Commencing"
+          }
+        ],
+        "uncertain": [
+          "within"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-5041d362c8c5",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T15:19:15Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the junction of the north bank of McGillivray Creek and Little Sumas River",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the junction of the north bank of McGillivray Creek and Little Sumas River"
+            },
+            {
+              "start": null,
+              "direction": "northerly and westerly",
+              "follow": "river",
+              "feature": "Little Sumas River",
+              "side_or_bank": "east and north banks",
+              "until": "the south shoreline of the Fraser River",
+              "distance": null,
+              "quote": "thence in a northerly and westerly direction following the east and north banks of the Little Sumas River to the south shoreline of the Fraser River"
+            },
+            {
+              "start": null,
+              "direction": "northeasterly, southeasterly and easterly",
+              "follow": "shoreline",
+              "feature": "Fraser River",
+              "side_or_bank": "south shoreline",
+              "until": "Miller Slough where it enters the Fraser River",
+              "distance": null,
+              "quote": "thence following the south shoreline of the Fraser River in a northeasterly, southeasterly and easterly direction to Miller Slough where it enters the Fraser River"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "other",
+              "feature": "Miller Slough",
+              "side_or_bank": "west bank",
+              "until": "the south boundary of the Provincial Dyke",
+              "distance": null,
+              "quote": "thence southerly following the west bank of Miller Slough to the south boundary of the Provincial Dyke"
+            },
+            {
+              "start": null,
+              "direction": "southwesterly and southerly",
+              "follow": "other",
+              "feature": "dyke",
+              "side_or_bank": "south boundary",
+              "until": "the north bank of McGillivray Creek",
+              "distance": null,
+              "quote": "thence southwesterly and southerly along the south boundary of the dyke to the north bank of McGillivray Creek"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "creek",
+              "feature": "McGillivray Creek",
+              "side_or_bank": "north bank",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence westerly along the north bank of McGillivray Creek to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting, Hunting or Trapping Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within the following boundaries: Commencing at"
+          }
+        ],
+        "uncertain": [
+          "within"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "effect": "No Shooting, Hunting or Trapping Areas",
+    "geometry.steps[0]": "Commencing at the junction of the north bank of McGillivray Creek and Little Sumas River",
+    "geometry.steps[1]": "thence in a northerly and westerly direction following the east and north banks of the Little Sumas River to the south shoreline of the Fraser River",
+    "geometry.steps[2]": "thence following the south shoreline of the Fraser River in a northeasterly, southeasterly and easterly direction to Miller Slough where it enters the Fraser River",
+    "geometry.steps[3]": "thence southerly following the west bank of Miller Slough to the south boundary of the Provincial Dyke",
+    "geometry.steps[4]": "thence southwesterly and southerly along the south boundary of the dyke to the north bank of McGillivray Creek",
+    "geometry.steps[5]": "thence westerly along the north bank of McGillivray Creek to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "steps: run 1 [\"|||\",\"little sumas river|the south shoreline of the fraser river||river\",\"fraser river|miller slough where it enters the fraser river||river\",\"miller slough|the south boundary of the provincial dyke||other\",\"provincial dyke|the north bank of mcgillivray creek||other\",\"mcgillivray creek|the point of commencement||creek\"] vs run 2 [\"|||\",\"little sumas river|the south shoreline of the fraser river||river\",\"fraser river|miller slough where it enters the fraser river||shoreline\",\"miller slough|the south boundary of the provincial dyke||other\",\"dyke|the north bank of mcgillivray creek||other\",\"mcgillivray creek|the point of commencement||creek\"]"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T15:58:47.525Z",
+  "updated": "2026-10-20T15:58:47.525Z"
+}

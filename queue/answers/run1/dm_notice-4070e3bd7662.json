@@ -1,0 +1,39 @@
+{
+  "task_id": "dm_notice-4070e3bd7662",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:15:00Z",
+  "answer": {
+    "legible": true,
+    "document_type": "other",
+    "signed_on": null,
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Incomappleux Rd",
+        "file_section": null,
+        "quote": "Incomappleux Rd Bridge Deactivation Prescription",
+        "effective_from": null,
+        "effective_to": null,
+        "points": []
+      }
+    ],
+    "map_readings": [],
+    "quotes": [
+      {
+        "field": "rescinded",
+        "quote": "Incomappleux Rd Bridge Deactivation Prescription"
+      }
+    ],
+    "uncertain": [
+      "signed_on",
+      "roads[0].file_section",
+      "roads[0].effective_from",
+      "roads[0].effective_to",
+      "roads[0].points"
+    ]
+  }
+}

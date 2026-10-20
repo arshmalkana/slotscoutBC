@@ -1,0 +1,162 @@
+{
+  "item_id": "closed-area-4813e69d57",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 2 (University of British Columbia Endowment Lands)",
+  "rule_id": "W5-002",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: within: run 1 null vs run 2 \"nwd\"",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nUniversity of British Columbia Endowment Lands\n2 That portion of the Province of British Columbia in the vicinity of the City of Vancouver, NWD, which is contained within the following described boundaries: All lands within District Lot 140, Group 1, NWD (except thereout Lots 3044, 4804, 4805 and 6494, Group, NWD, and except thereout those portions within the City of Vancouver). The above description includes Lots 3045, 4806, 4807 and 7184, Group, NWD, formerly portions of said Lot 140.",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-e9f649f8a86b",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T15:18:34Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [
+          "except thereout Lots 3044, 4804, 4805 and 6494, Group, NWD",
+          "except thereout those portions within the City of Vancouver"
+        ],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "admin_boundary",
+          "road": null,
+          "feature": {
+            "type": "lot",
+            "name": "District Lot 140, Group 1, NWD"
+          },
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "exemptions[0]",
+            "quote": "except thereout Lots 3044, 4804, 4805 and 6494, Group, NWD"
+          },
+          {
+            "field": "exemptions[1]",
+            "quote": "except thereout those portions within the City of Vancouver"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "All lands within District Lot 140, Group 1, NWD"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "District Lot 140, Group 1, NWD"
+          }
+        ],
+        "uncertain": [
+          "within"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-e9f649f8a86b",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T15:19:48Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [
+          "except thereout Lots 3044, 4804, 4805 and 6494, Group, NWD",
+          "except thereout those portions within the City of Vancouver"
+        ],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "NWD"
+        },
+        "geometry": {
+          "method": "admin_boundary",
+          "road": null,
+          "feature": {
+            "type": "lot",
+            "name": "District Lot 140, Group 1, NWD"
+          },
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "exemptions[0]",
+            "quote": "except thereout Lots 3044, 4804, 4805 and 6494, Group, NWD"
+          },
+          {
+            "field": "exemptions[1]",
+            "quote": "except thereout those portions within the City of Vancouver"
+          },
+          {
+            "field": "within",
+            "quote": "in the vicinity of the City of Vancouver, NWD"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "All lands within District Lot 140, Group 1, NWD"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "District Lot 140, Group 1, NWD"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "geometry.feature": "District Lot 140, Group 1, NWD",
+    "effect": "No Shooting Areas",
+    "exemptions[0]": "except thereout Lots 3044, 4804, 4805 and 6494, Group, NWD",
+    "exemptions[1]": "except thereout those portions within the City of Vancouver"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "within: run 1 null vs run 2 \"nwd\""
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-20T16:00:09.917Z",
+  "updated": "2026-10-20T16:00:09.917Z"
+}

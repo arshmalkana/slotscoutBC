@@ -1,0 +1,68 @@
+{
+  "task_id": "dm_notice-f78eb0b3d8dc",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-19T20:16:30Z",
+  "answer": {
+    "legible": true,
+    "document_type": "closure_order",
+    "signed_on": "2019-01-02",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "CYPRESS LAKE",
+        "file_section": "8337.01",
+        "quote": "8337.01 CYPRESS LAKE CYPRESS LAKE ( Length: 6.3745 Km, R/W: 75 m )",
+        "effective_from": "2019-01-02",
+        "effective_to": null,
+        "points": [
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "whole_road",
+            "status": "closed",
+            "seen_on": "text",
+            "quote": "DISCONTINUANCE AND CLOSURE APPROVED"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 2,
+        "label": "MAP OF : FSR 8337 Retirement Amendment # 4 (shown in bold black)",
+        "shows": "Exhibit A map title; the road is drawn in bold black with the crossed-line symbol the legend calls 'Retired Tenure Road'."
+      },
+      {
+        "page": 2,
+        "label": "8337.01 CYPRESS LAKE CYPRESS LAKE",
+        "shows": "Boxed road label beside the bold black crossed line, which runs from the PofC marker past Cypress Lake to the PofT marker."
+      },
+      {
+        "page": 2,
+        "label": "PofC",
+        "shows": "Green point of commencement arrow at one end of the retired road, near the label Partridge Creek."
+      },
+      {
+        "page": 2,
+        "label": "PofT",
+        "shows": "Red point of termination arrow at the other end of the retired road, near the labels Buntzen Creek and EAGLE MTN."
+      },
+      {
+        "page": 2,
+        "label": "8337.01 CYPRESS LAKE CYPRESS LAKE ( Length: 6.3745 Km, R/W: 75 m )",
+        "shows": "Legend entry giving the road name, file and section, length and right-of-way width."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "Date: 2019.01.02 14:12:55"
+      }
+    ],
+    "uncertain": []
+  }
+}

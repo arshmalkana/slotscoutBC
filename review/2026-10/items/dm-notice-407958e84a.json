@@ -1,0 +1,146 @@
+{
+  "item_id": "dm-notice-407958e84a",
+  "month": "2026-10",
+  "kind": "dm_notice",
+  "title": "District Manager notice DVA-3faae646-dsn_road_restictions_2026_spring_road_bans_bulletin_3: 1 road closed or restricted (All Forest Service Roads within the Stuart Nechako Forest District)",
+  "change_type": "stricter",
+  "decision": "Check each road and km point against the PDF and its page images. Approving lets these closures count on the map; until then P6 shows Cannot confirm on these roads.",
+  "why": [
+    "read from: text layer (1 page)",
+    "a person checks every AI reading before it counts (Addendum A 7.2: the gold set has not passed yet)"
+  ],
+  "source": {
+    "text": "Source: https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/stuart-nechako/dsn_road_restictions_2026_spring_road_bans_bulletin_3.pdf\r\nFetched: 2026-10-19T20:01:22.167Z\r\nSHA-256: 8754e6af44a81aed666446608dabbbacaed001fdf7fe1d4b603512377a20ae3e\r\nRead: text layer (1 page)\r\n\r\n  Ministry of Forests\r\n\r\n\r\n  ROAD RESTRICTIONS NOTICE April 10, 2026\r\n  for the Stuart Nechako Forest District\r\n  This notice becomes effective April 13, 2026,\r\n  at 12:00:01 am.\r\n  Bulletin #3\r\n\r\n  Be advised, pursuant to Section 6 (2) (e) of the Forest Service Road Use Regulation, road\r\n  restrictions will be implemented on Forest Service Roads (FSRs) within the Stuart Nechako\r\n  Forest District as follows:\r\n\r\n\r\n  All Forest Service Roads within the Stuart Nechako Forest District\r\n\r\n  Effective April 13, 2026, at 12:00:01am – restricted\r\n\r\n  70% Highway legal axle loading.\r\n\r\n\r\n  Road users must monitor roads for damage. If any subgrade damage occurs, activity\r\n  must cease immediately.\r\n\r\n  Use of the FSR’s for the following are not restricted:\r\n\r\n  •  Road maintenance activities\r\n  •  Tree planting activities.\r\n  •  Grocery, fuel, and other essential deliveries to communities.\r\n\r\n\r\n  Restrictions subject to change on short notice.\r\n  The District will continue to monitor road conditions and may change restrictions.\r\n\r\n\r\n\r\n\r\nJill Park RPF\r\nDistrict Manager\r\nStuart Nechako Forest District",
+    "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/stuart-nechako/dsn_road_restictions_2026_spring_road_bans_bulletin_3.pdf",
+    "version": "2026-10-19T20:01:22.167Z",
+    "confirmed": true,
+    "file": "raw\\2026-10\\dm_notices\\DVA-3faae646-dsn_road_restictions_2026_spring_road_bans_bulletin_3.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "dm_notice-8bee35a919ef",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "dm_notice.v1",
+      "schema_id": "dm_notice.v1",
+      "produced_at": "2026-10-19T20:14:14Z",
+      "answer": {
+        "legible": true,
+        "document_type": "restriction_bulletin",
+        "signed_on": "2026-04-10",
+        "rescinded": false,
+        "roads": [
+          {
+            "name": "All Forest Service Roads within the Stuart Nechako Forest District",
+            "file_section": null,
+            "quote": "All Forest Service Roads within the Stuart Nechako Forest District",
+            "effective_from": "2026-04-13",
+            "effective_to": null,
+            "points": [
+              {
+                "km": null,
+                "km_end": null,
+                "extent": "whole_road",
+                "status": "restricted",
+                "seen_on": "text",
+                "quote": "Effective April 13, 2026, at 12:00:01am – restricted"
+              }
+            ]
+          }
+        ],
+        "map_readings": [],
+        "quotes": [
+          {
+            "field": "signed_on",
+            "quote": "ROAD RESTRICTIONS NOTICE April 10, 2026"
+          },
+          {
+            "field": "rescinded",
+            "quote": "road restrictions will be implemented on Forest Service Roads (FSRs) within the Stuart Nechako Forest District as follows:"
+          }
+        ],
+        "uncertain": [
+          "roads[0].effective_to"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "dm_notice-8bee35a919ef",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "dm_notice.v1",
+      "schema_id": "dm_notice.v1",
+      "produced_at": "2026-10-19T20:14:02Z",
+      "answer": {
+        "legible": true,
+        "document_type": "restriction_bulletin",
+        "signed_on": "2026-04-10",
+        "rescinded": false,
+        "roads": [
+          {
+            "name": "All Forest Service Roads within the Stuart Nechako Forest District",
+            "file_section": null,
+            "quote": "All Forest Service Roads within the Stuart Nechako Forest District",
+            "effective_from": "2026-04-13",
+            "effective_to": null,
+            "points": [
+              {
+                "km": null,
+                "km_end": null,
+                "extent": "whole_road",
+                "status": "restricted",
+                "seen_on": "text",
+                "quote": "Effective April 13, 2026, at 12:00:01am – restricted"
+              }
+            ]
+          }
+        ],
+        "map_readings": [],
+        "quotes": [
+          {
+            "field": "signed_on",
+            "quote": "ROAD RESTRICTIONS NOTICE April 10, 2026"
+          },
+          {
+            "field": "rescinded",
+            "quote": "road restrictions will be implemented on Forest Service Roads (FSRs) within the Stuart Nechako Forest District as follows:"
+          }
+        ],
+        "uncertain": [
+          "roads[0].effective_to"
+        ]
+      }
+    }
+  },
+  "disagreements": [],
+  "rejected_quotes": [],
+  "placements": [
+    {
+      "road": "All Forest Service Roads within the Stuart Nechako Forest District",
+      "file_section": null,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "restricted",
+          "quote": "Effective April 13, 2026, at 12:00:01am – restricted"
+        }
+      ],
+      "placement": "no file and section number in the PDF"
+    }
+  ],
+  "images": [],
+  "links": [
+    {
+      "label": "Notice PDF",
+      "href": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/stuart-nechako/dsn_road_restictions_2026_spring_road_bans_bulletin_3.pdf"
+    }
+  ],
+  "status": "approved",
+  "created": "2026-10-20T16:28:59.855Z",
+  "updated": "2026-10-20T17:13:42.349Z",
+  "decided_by": "Arsh",
+  "decided_on": "2026-10-20"
+}
