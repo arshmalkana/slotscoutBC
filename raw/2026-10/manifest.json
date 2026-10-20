@@ -2,17 +2,17 @@
   "month": "2026-10",
   "userAgent": "SlotScoutBot/0.1 (+https://slotscout.ca/about; data@slotscout.ca)",
   "startedAt": "2026-10-19T16:53:43.915Z",
-  "updatedAt": "2026-10-19T20:25:12.278Z",
+  "updatedAt": "2026-10-20T15:12:16.166Z",
   "sources": {
     "bcparks_advisories": {
       "status": "skipped",
       "detail": "planned source, not pulled yet",
-      "at": "2026-10-19T19:56:24.853Z"
+      "at": "2026-10-20T15:12:16.133Z"
     },
     "licensee_notices": {
       "status": "skipped",
       "detail": "planned source, not pulled yet",
-      "at": "2026-10-19T19:56:24.853Z"
+      "at": "2026-10-20T15:12:16.133Z"
     },
     "wmu": {
       "status": "ok",
@@ -120,9 +120,9 @@
       "at": "2026-10-19T17:11:56.588Z"
     },
     "closed_areas": {
-      "status": "awaiting_person",
-      "detail": "0 of 6 regulations from copies a person saved in inbox/bclaws; waiting for 76_84_00_multi, 196_99, 190_84, 180_90, 16_2004, 38_2005; 1 unconfirmed excerpt(s) in inbox/excerpts",
-      "at": "2026-10-19T19:56:24.871Z"
+      "status": "partial",
+      "detail": "1 of 5 regulations from copies a person saved in inbox/bclaws; waiting for 190_84, 180_90, 16_2004, 38_2005; repealed, not pulled: 196_99; 1 unconfirmed excerpt(s) in inbox/excerpts",
+      "at": "2026-10-20T15:12:16.162Z"
     },
     "road_notices": {
       "status": "ok",
@@ -798,6 +798,15 @@
   },
   "files": [
     {
+      "path": "raw/2026-10/bclaws/76_84_00_multi.txt",
+      "sha256": "8d13512755a1e2ee97e7c4c4adefdf8be9cc7e5a5292ad34cdbf1fa281969181",
+      "bytes": 267969,
+      "source": "closed_areas",
+      "fetchedAt": "2026-10-20T15:09:27.233Z",
+      "committed": true,
+      "note": "copied from inbox/bclaws/76_84_00_multi.txt"
+    },
+    {
       "path": "raw/2026-10/bylaws/city-of-chilliwack/firearms-regulation-bylaw-2740-c-ca5f2f.pdf",
       "sha256": "504dc5d4cebc6a21ed33d377a16da475181089759511e91544c33f2b5697b0a2",
       "bytes": 514918,
@@ -1464,6 +1473,15 @@
       "note": "over 2 MB: hash kept, file not committed"
     },
     {
+      "path": "raw/2026-10/inbox/bclaws/76_84_00_multi.txt",
+      "sha256": "8d13512755a1e2ee97e7c4c4adefdf8be9cc7e5a5292ad34cdbf1fa281969181",
+      "bytes": 267969,
+      "source": "inbox",
+      "fetchedAt": "2026-10-20T15:09:27.233Z",
+      "committed": true,
+      "note": "copied from inbox/bclaws/76_84_00_multi.txt"
+    },
+    {
       "path": "raw/2026-10/inbox/excerpts/closed-areas-sch5-s85.txt",
       "sha256": "2fb42e0f9ec992c28b06027d61d39869daad9e7c8c75a7f5f4ac6c187181965e",
       "bytes": 414,
@@ -1471,20 +1489,50 @@
       "fetchedAt": "2026-10-19T17:13:14.158Z",
       "committed": true,
       "note": "copied from inbox/excerpts/closed-areas-sch5-s85.txt"
+    },
+    {
+      "path": "raw/2026-10/inbox/notes/2026-10-20 BC Laws 190_84 page (404).txt",
+      "sha256": "b59742277ac172b2f447552483fe06a8b7e223c954463929dd68ddc0fad4b9a9",
+      "bytes": 208,
+      "source": "inbox",
+      "fetchedAt": "2026-10-20T15:09:27.239Z",
+      "committed": true,
+      "note": "copied from inbox/notes/2026-10-20 BC Laws 190_84 page (404).txt"
+    },
+    {
+      "path": "raw/2026-10/inbox/notes/2026-10-20 BC Laws 196_99 page (repealed).txt",
+      "sha256": "8ae96716f19e4e34c2495e86c293f2aec33010fc5f2a88166909af8c7199d8b8",
+      "bytes": 301,
+      "source": "inbox",
+      "fetchedAt": "2026-10-20T15:09:27.238Z",
+      "committed": true,
+      "note": "copied from inbox/notes/2026-10-20 BC Laws 196_99 page (repealed).txt"
     }
   ],
   "failures": [
-    {
-      "source": "closed_areas",
-      "what": "legal text",
-      "error": "no dated copy of 76_84_00_multi, 196_99, 190_84, 180_90, 16_2004, 38_2005: waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)",
-      "at": "2026-10-19T19:56:24.871Z"
-    },
     {
       "source": "bylaws",
       "what": "muni:Bowen Island Municipality",
       "error": "robots.txt for www.bimbc.ca could not be read, so automated access is not assumed",
       "at": "2026-10-19T20:21:18.643Z"
+    },
+    {
+      "source": "closed_areas",
+      "what": "legal text",
+      "error": "no dated copy of 180_90, 16_2004, 38_2005: waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)",
+      "at": "2026-10-20T15:12:16.162Z"
+    },
+    {
+      "source": "closed_areas",
+      "what": "190_84",
+      "error": "Hunting Regulation, B.C. Reg. 190/84: https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84 returned HTTP 404 to a person on 2026-10-20. The current BC Laws document id is needed.",
+      "at": "2026-10-20T15:12:16.162Z"
+    },
+    {
+      "source": "closed_areas",
+      "what": "196_99",
+      "error": "Motor Vehicle Prohibition Regulation, B.C. Reg. 196/99: repealed effective March 1, 2024 by B.C. Reg. 18/2024 (BC Laws page saved by a person 2026-10-20). Which regulation now holds the motor vehicle closures is not confirmed yet.",
+      "at": "2026-10-20T15:12:16.162Z"
     }
   ]
 }

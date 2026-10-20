@@ -1,0 +1,161 @@
+{
+  "task_id": "dm_notice-13ecbdfe694d",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-20T15:09:29Z",
+  "answer": {
+    "legible": true,
+    "document_type": "closure_order",
+    "signed_on": "2025-03-31",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Anderson 7300",
+        "file_section": "8074.02",
+        "quote": "Anderson 7300 (8074.02)",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 0,
+            "km_end": 0.209,
+            "extent": "range",
+            "status": "closed",
+            "seen_on": "text",
+            "quote": "Anderson 7300 (8074.02) 02 0+000 0+209"
+          }
+        ]
+      },
+      {
+        "name": "Anderson 7500",
+        "file_section": "8074.03",
+        "quote": "Anderson 7500 (8074.03)",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 0,
+            "km_end": 0.322,
+            "extent": "range",
+            "status": "closed",
+            "seen_on": "text",
+            "quote": "Anderson 7500 (8074.03) 03 0+000 0+322"
+          }
+        ]
+      },
+      {
+        "name": "Anderson 7400",
+        "file_section": "8074.04",
+        "quote": "Anderson 7400 (8074.04)",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 0,
+            "km_end": 0.378,
+            "extent": "range",
+            "status": "closed",
+            "seen_on": "text",
+            "quote": "Anderson 7400 (8074.04) 04 0+000 0+378"
+          }
+        ]
+      },
+      {
+        "name": "Anderson 7600",
+        "file_section": "8074.05",
+        "quote": "Anderson 7600 (8074.05",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 0,
+            "km_end": 0.794,
+            "extent": "range",
+            "status": "closed",
+            "seen_on": "text",
+            "quote": "Anderson 7600 (8074.05 05 0+000 0+794"
+          }
+        ]
+      },
+      {
+        "name": "Anderson 8900",
+        "file_section": "8074.06",
+        "quote": "Anderson 8900 (8074.06)",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 0,
+            "km_end": 0.222,
+            "extent": "range",
+            "status": "closed",
+            "seen_on": "text",
+            "quote": "Anderson 8900 (8074.06) 06 0+000 0+222"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 3,
+        "label": "Schedule A map",
+        "shows": "Map title of the Schedule A map; green lines are drawn for road use permit sections shown in the legend as ISSUED. No gate or closure symbol is drawn on any road."
+      },
+      {
+        "page": 3,
+        "label": "BCTS Responsibility: Anderson 7300 (8074.02): 0+000m – 0+209m Anderson 7500 (8074.03): 0+000m – 0+322m Anderson 7600 (8074.05): 0+000m – 0+794m Anderson 8900 (8074.06): 0+000m – 0+222m",
+        "shows": "Side panel under 'Occupancy Agreement' listing four Schedule A road sections and their station ranges as BCTS responsibility."
+      },
+      {
+        "page": 3,
+        "label": "District Manager Responsibility: Anderson 7400 (8074.04): 0+000m – 0+378m",
+        "shows": "Side panel listing the Anderson 7400 section and its station range as District Manager responsibility."
+      },
+      {
+        "page": 3,
+        "label": "CK-2005",
+        "shows": "Labelled point where a dashed road meets the start of a green (issued permit) road; no gate or closure mark."
+      },
+      {
+        "page": 3,
+        "label": "1 km",
+        "shows": "Km marker on a green road climbing from the CK-2005 point; the road's own name label is not legible at this resolution."
+      },
+      {
+        "page": 3,
+        "label": "2 km",
+        "shows": "Km marker on the same green road."
+      },
+      {
+        "page": 3,
+        "label": "4 km",
+        "shows": "Km marker on the same green road, before a junction with several short green spur roads whose small labels are not legible."
+      },
+      {
+        "page": 3,
+        "label": "6 km",
+        "shows": "Km marker on the green road north of the junction of spur roads."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "March 31, 2025"
+      },
+      {
+        "field": "rescinded",
+        "quote": "network is hereby Discontinued and Closed."
+      }
+    ],
+    "uncertain": [
+      "roads[0].effective_from",
+      "roads[1].effective_from",
+      "roads[2].effective_from",
+      "roads[3].effective_from",
+      "roads[4].effective_from"
+    ]
+  }
+}

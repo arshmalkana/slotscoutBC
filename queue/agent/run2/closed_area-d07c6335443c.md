@@ -1,0 +1,448 @@
+# Extraction task closed_area-d07c6335443c (run 2)
+
+Write your answer to `queue/answers/run2/closed_area-d07c6335443c.json` as:
+
+```json
+{ "task_id": "closed_area-d07c6335443c", "run": 2, "mode": "agent", "model": "Claude Code agent mode, fresh subagent", "prompt_version": "closed_area.v1", "schema_id": "closed_area.v1", "produced_at": "<ISO time>", "answer": { ...matching schema/closed_area.v1.json... } }
+```
+
+The answer must match `schema/closed_area.v1.json` exactly. Use only the source text below. Never write coordinates. Every filled field needs its exact quote.
+
+## Instructions
+
+# closed_area.v1
+
+You read one section of British Columbia's Closed Areas Regulation (B.C. Reg. 76/84) and return the named things and numbers in it, in the JSON schema `closed_area.v1`. Code, not you, finds those names in official datasets and draws the shape, and a person reviews every shape before it counts. Your answer is checked word for word against the source.
+
+The text you get has the schedule heading and then the section. Read only that text. Do not use anything you know about the place from elsewhere.
+
+How to fill the fields:
+
+- `effect`: what the schedule heading or the section itself says is not allowed in the area: `no_shooting` (no shooting, or no shooting or hunting), `no_shooting_seasonal` (the same, only between dates), `no_shooting_hunting_exempt` (no shooting, but licensed hunting is allowed), `no_hunting` (closed to hunting only), `shot_only` or `shot_only_seasonal` (shotguns with shot only), `no_rifle` (no rifles), `non_toxic` (non-toxic shot only). Code also derives the effect from the schedule number and the two must agree. If neither heading nor section says it, leave `effect` null and list it in `uncertain`.
+- `exemptions`: each exception the text states, in the text's words (for example a firearm type or a permit). Empty if none.
+- `period`: only when the text gives dates. Copy them as written (for example "September 10" and "June 30").
+- `within`: the regional district, municipality, management unit or region the text names ("That portion of Fraser Valley Regional District").
+- `geometry.method`: `road_buffer` for a strip either side of a road, `waterbody_buffer` for a strip along a creek, river or lake, `admin_boundary` when the whole of a named area is closed, `metes_and_bounds` for a description that walks from landmark to landmark ("commencing at … thence …"), `other` otherwise.
+- `geometry.road`: the road a buffer follows, with `source_hint` `highway` for numbered highways, `FTEN` for forest service roads, `DRA` for other named roads, `unknown` if unclear.
+- `geometry.feature`: the creek, lake, reserve, park, lot or area a buffer or boundary follows.
+- `geometry.buffer_m`: the distance in metres, as a number. Convert only when the text gives a unit (for example 0.4 km is 400). Never guess.
+- `geometry.side`: `both` for "either side" or "each side".
+- `geometry.from`, `geometry.to`: the limits of a road or creek strip ("between the midline of Farms Road and the midline of Dale Road").
+- `geometry.steps`: for metes and bounds only, one step per "commencing" or "thence" clause, in order: `start`, `direction` (the direction words), `follow` (what the line follows), `feature` (the named feature), `side_or_bank`, `until` (the next landmark), `distance` (any stated distance, as written), and `quote` (the full clause).
+
+Rules:
+
+1. Every field you fill must have an entry in `quotes`: `field` is the field path (`effect`, `within`, `geometry.road`, `geometry.buffer_m`, `geometry.from`, `geometry.to`, `geometry.feature`, `geometry.side`, `period`, `exemptions[0]`, …) and `quote` is the shortest run of words from the text, copied exactly, that supports it. A field whose quote is not found in the text is thrown away.
+2. Never write coordinates, bearings you computed, or place names that are not in the text.
+3. Leave a field null when the text does not settle it, and add its path to `uncertain`. An empty answer with a clear `uncertain` list is better than a guess.
+4. Do not decide whether the area is safe to shoot in, and do not summarise. Return only the JSON.
+
+
+## Schema
+
+```json
+{
+ "type": "object",
+ "properties": {
+  "effect": {
+   "type": [
+    "string",
+    "null"
+   ],
+   "enum": [
+    "no_shooting",
+    "no_shooting_seasonal",
+    "shot_only",
+    "shot_only_seasonal",
+    "no_rifle",
+    "non_toxic",
+    "no_shooting_hunting_exempt",
+    "no_hunting",
+    null
+   ]
+  },
+  "exemptions": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "period": {
+   "anyOf": [
+    {
+     "type": "null"
+    },
+    {
+     "type": "object",
+     "properties": {
+      "start": {
+       "type": "string"
+      },
+      "end": {
+       "type": "string"
+      }
+     },
+     "required": [
+      "start",
+      "end"
+     ],
+     "additionalProperties": false
+    }
+   ]
+  },
+  "within": {
+   "anyOf": [
+    {
+     "type": "null"
+    },
+    {
+     "type": "object",
+     "properties": {
+      "type": {
+       "type": "string",
+       "enum": [
+        "regional_district",
+        "municipality",
+        "electoral_area",
+        "wildlife_management_unit",
+        "region",
+        "other"
+       ]
+      },
+      "name": {
+       "type": "string"
+      }
+     },
+     "required": [
+      "type",
+      "name"
+     ],
+     "additionalProperties": false
+    }
+   ]
+  },
+  "geometry": {
+   "type": "object",
+   "properties": {
+    "method": {
+     "type": "string",
+     "enum": [
+      "road_buffer",
+      "waterbody_buffer",
+      "admin_boundary",
+      "metes_and_bounds",
+      "other"
+     ]
+    },
+    "road": {
+     "anyOf": [
+      {
+       "type": "null"
+      },
+      {
+       "type": "object",
+       "properties": {
+        "name": {
+         "type": "string"
+        },
+        "source_hint": {
+         "type": "string",
+         "enum": [
+          "DRA",
+          "FTEN",
+          "highway",
+          "unknown"
+         ]
+        }
+       },
+       "required": [
+        "name",
+        "source_hint"
+       ],
+       "additionalProperties": false
+      }
+     ]
+    },
+    "feature": {
+     "anyOf": [
+      {
+       "type": "null"
+      },
+      {
+       "type": "object",
+       "properties": {
+        "type": {
+         "type": "string",
+         "enum": [
+          "creek",
+          "river",
+          "lake",
+          "reserve",
+          "park",
+          "municipality",
+          "electoral_area",
+          "lot",
+          "island",
+          "other"
+         ]
+        },
+        "name": {
+         "type": "string"
+        }
+       },
+       "required": [
+        "type",
+        "name"
+       ],
+       "additionalProperties": false
+      }
+     ]
+    },
+    "buffer_m": {
+     "type": [
+      "number",
+      "null"
+     ]
+    },
+    "side": {
+     "type": [
+      "string",
+      "null"
+     ],
+     "enum": [
+      "both",
+      "left",
+      "right",
+      "north",
+      "south",
+      "east",
+      "west",
+      "inside",
+      "unknown",
+      null
+     ]
+    },
+    "from": {
+     "anyOf": [
+      {
+       "type": "null"
+      },
+      {
+       "type": "object",
+       "properties": {
+        "type": {
+         "type": "string",
+         "enum": [
+          "road_intersection",
+          "landmark",
+          "km_point",
+          "boundary",
+          "shoreline",
+          "other"
+         ]
+        },
+        "road": {
+         "type": [
+          "string",
+          "null"
+         ]
+        },
+        "name": {
+         "type": [
+          "string",
+          "null"
+         ]
+        }
+       },
+       "required": [
+        "type",
+        "road",
+        "name"
+       ],
+       "additionalProperties": false
+      }
+     ]
+    },
+    "to": {
+     "anyOf": [
+      {
+       "type": "null"
+      },
+      {
+       "type": "object",
+       "properties": {
+        "type": {
+         "type": "string",
+         "enum": [
+          "road_intersection",
+          "landmark",
+          "km_point",
+          "boundary",
+          "shoreline",
+          "other"
+         ]
+        },
+        "road": {
+         "type": [
+          "string",
+          "null"
+         ]
+        },
+        "name": {
+         "type": [
+          "string",
+          "null"
+         ]
+        }
+       },
+       "required": [
+        "type",
+        "road",
+        "name"
+       ],
+       "additionalProperties": false
+      }
+     ]
+    },
+    "steps": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "start": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "direction": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "follow": {
+        "type": [
+         "string",
+         "null"
+        ],
+        "enum": [
+         "road",
+         "creek",
+         "river",
+         "contour",
+         "lot_line",
+         "reserve_boundary",
+         "district_boundary",
+         "shoreline",
+         "straight_line",
+         "other",
+         null
+        ]
+       },
+       "feature": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "side_or_bank": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "until": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "distance": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "quote": {
+        "type": "string"
+       }
+      },
+      "required": [
+       "start",
+       "direction",
+       "follow",
+       "feature",
+       "side_or_bank",
+       "until",
+       "distance",
+       "quote"
+      ],
+      "additionalProperties": false
+     }
+    }
+   },
+   "required": [
+    "method",
+    "road",
+    "feature",
+    "buffer_m",
+    "side",
+    "from",
+    "to",
+    "steps"
+   ],
+   "additionalProperties": false
+  },
+  "quotes": {
+   "type": "array",
+   "description": "One entry per extracted field: the field path and the exact words of the source text it came from, copied verbatim.",
+   "items": {
+    "type": "object",
+    "properties": {
+     "field": {
+      "type": "string"
+     },
+     "quote": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "field",
+     "quote"
+    ],
+    "additionalProperties": false
+   }
+  },
+  "uncertain": {
+   "type": "array",
+   "description": "Field paths the text does not settle. Leave those fields null.",
+   "items": {
+    "type": "string"
+   }
+  }
+ },
+ "required": [
+  "effect",
+  "exemptions",
+  "period",
+  "within",
+  "geometry",
+  "quotes",
+  "uncertain"
+ ],
+ "additionalProperties": false
+}
+```
+
+## Source
+
+Source: Closed Areas Regulation, Schedule 7, section 42 (Eskers Park) (BC Laws consolidation current to October 13, 2026)
+
+<source_text>
+Schedule 7 No Hunting Areas (Section 8)
+Eskers Park
+42 That portion of the Province of British Columbia in Cariboo Land District that is land and land covered by water contained within the following described boundaries: Commencing at a point the said point being the SE corner of the NW 1/4 of L 2734; thence north 804 m, more or less, to the SE corner of the SW 1/4 of L 8784; thence East 402 m, more or less, to the SE corner of the W 1/2 of the SE 1/4 of L 8784; thence north 804 m, more or less, to the NE corner of the W 1/2 of the SE 1/4 of L 8784; thence east 1206 m, more or less, to the SE corner of the W 1/2 of L 8441; thence north 1 609 m, more or less, to the SE corner of the NW 1/4 of L 8796; thence west 804 m, more or less, to the SW corner of the NW 1/4 of L 8796; thence north 1 206 m, more or less, to the NE corner of the SE 1/4 of the SE 1/4 of L 8388; thence in a general northwesterly direction 898 m, more or less, to the SE corner of the NW 1/4 of L 8388; thence north 402 m, more or less, to the SE corner of the NE 1/4 of the NW 1/4 of L 8388; thence west 804 m, more or less, to the SE corner of the NE 1/4 of the NE 1/4 of L 8798; thence in a general northwesterly direction 898 m, more or less, to the NE corner of the NW 1/4 of L 8798; thence west 804 m, more or less, to the SE corner of the SE 1/4 of L 2245; thence north 402 m, more or less, to the SE corner of the NE 1/4 of the SE 1/4 of L 2245; thence in a general northwesterly direction 1 137 m, more or less, to the SE corner of the NE 1/4 of the NW 1/4 of L 2245; thence west 402 m, more or less, to the SE corner of the NW 1/4 of the NW 1/4 of L 2245; thence south 1 609 m, more or less, to the SE corner of the NW 1/4 of the NW 1/4 of L 8797; thence east 402 m, more or less, to the SE corner of the NE 1/4 of the NW 1/4 of L 8797; thence south 402 m, more or less, to the SE corner of the SE 1/4 of the NW 1/4 of L 8797; thence in a general southeasterly direction 568 m, more or less, to the SE corner of the NW 1/4 of the SE 1/4 of L 8797; thence east 402 m, more or less, to the SE corner of the NE 1/4 of the SE 1/4 of L 8797; thence in a general southeasterly direction 1 136 m, more or less, to the SE corner of the NE 1/4 of the NW 1/4 of L 8794; thence east 402 m, more or less, to the SE corner of the NW 1/4 of the NE 1/4 of L 8794; thence in a general southeasterly direction 899 m, more or less to the SE corner of the NE 1/4 of the SE 1/4 of L 8794; thence south 2 815 m, more or less, along the easterly boundaries of Lots 8794, 8785 and 8783 to the SE corner of the NE 1/4 of L 8783; thence west along the north boundary of the SE 1/4 of L 8783 to the point of intersection with the natural boundary of Circle Lake; thence in a general westerly direction along the natural boundary of Circle Lake to the southerly boundary of the NW 1/4 of L 8783; thence west 215 m, more or less, to Vivian Lake Road; thence in a general southwesterly direction along the southern boundary of said road right of way to the western boundary of the SW 1/4 of L 8783; thence south to the SW corner of the SW 1/4 of L 8783; thence east 1 609 m, more or less, to the SE corner of the SE 1/4 of L 8783; thence south 370 m, more or less, to the SW corner of Block A of L 2733; thence east 680 m, more or less, to the road right of way; thence in a general northeasterly direction along the northern then western boundary of the road right of way to the southern boundary of the SE 1/4 of L 2724; thence west 1 948 m, more or less, along the southern boundary of L 2724 and the southern boundary of the NE 1/4 of L 2734 to the point of commencement; and containing approximately 1 603 hectares, more or less. [en. B.C. Reg. 204/91, s. 13; am. B.C. Reg. 151/2006, s. 5 (b).]
+</source_text>
+
+Return the JSON for this text.

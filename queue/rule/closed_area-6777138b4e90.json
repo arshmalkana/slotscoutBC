@@ -1,0 +1,63 @@
+{
+  "task_id": "closed_area-6777138b4e90",
+  "mode": "rule",
+  "parser": "ruleparse.v1",
+  "produced_at": "2026-10-20T15:12:19.920Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "regional_district",
+      "name": "Fraser Valley Regional District"
+    },
+    "geometry": {
+      "method": "road_buffer",
+      "road": {
+        "name": "Sylvester Road",
+        "source_hint": "DRA"
+      },
+      "feature": null,
+      "buffer_m": 50,
+      "side": "both",
+      "from": {
+        "type": "road_intersection",
+        "road": "Farms Road",
+        "name": null
+      },
+      "to": {
+        "type": "road_intersection",
+        "road": "Dale Road",
+        "name": null
+      },
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "within",
+        "quote": "That portion of Fraser Valley Regional District"
+      },
+      {
+        "field": "geometry.buffer_m",
+        "quote": "50 m either side of the centreline"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "either side"
+      },
+      {
+        "field": "geometry.road",
+        "quote": "Sylvester Road"
+      },
+      {
+        "field": "geometry.from",
+        "quote": "between the midline of Farms Road"
+      },
+      {
+        "field": "geometry.to",
+        "quote": "and the midline of Dale Road"
+      }
+    ],
+    "uncertain": []
+  }
+}

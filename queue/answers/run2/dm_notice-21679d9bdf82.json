@@ -1,0 +1,60 @@
+{
+  "task_id": "dm_notice-21679d9bdf82",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-20T15:09:29Z",
+  "answer": {
+    "legible": true,
+    "document_type": "gate_map",
+    "signed_on": "2026-07-07",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "KMU",
+        "file_section": null,
+        "quote": "KMU Gate Location",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 0.05,
+            "km_end": null,
+            "extent": "at",
+            "status": "gated",
+            "seen_on": "text",
+            "quote": "0+050 KMU"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "Gate Location 0+050 KMU",
+        "shows": "Callout box with a leader line pointing to a road just south of the road labelled KMC, near where it meets the road labelled KLANAWA MAIN (KM); marks the gate location."
+      },
+      {
+        "page": 1,
+        "label": "KMU Gate Location",
+        "shows": "Map title in the title block; the map is a location map for the KMU gate."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "Map Date: 07 -Jul -2026"
+      },
+      {
+        "field": "rescinded",
+        "quote": "KMU Gate Location"
+      }
+    ],
+    "uncertain": [
+      "roads[0].effective_from",
+      "roads[0].effective_to"
+    ]
+  }
+}

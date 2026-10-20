@@ -1,0 +1,82 @@
+{
+  "task_id": "dm_notice-7c778b10b4cb",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-20T15:11:36Z",
+  "answer": {
+    "legible": true,
+    "document_type": "gate_map",
+    "signed_on": "2024-05-24",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Camper Creek Mainline",
+        "file_section": null,
+        "quote": "Camper Creek Mainline",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 1.0,
+            "km_end": null,
+            "extent": "at",
+            "status": "gated",
+            "seen_on": "text",
+            "quote": "Gate Location - 1.0 km"
+          }
+        ]
+      },
+      {
+        "name": "Truck Road 11",
+        "file_section": null,
+        "quote": "Truck Road 11",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "closed",
+            "seen_on": "map",
+            "quote": "Truck Road 11 Blockade"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "Camper Creek Mainline Gate Location - 1.0 km",
+        "shows": "Red triangle gate-location symbol on the red mainline labelled CAMPER CREEK MAINLINE, with a callout box; small km marker circles \"0\" and \"2\" are printed on the mainline nearby."
+      },
+      {
+        "page": 1,
+        "label": "Truck Road 11 Blockade",
+        "shows": "Red triangle gate-location symbol with an orange point-of-interest symbol on a road at the top of the map, beside km marker circles \"0\" and \"30\" and the labels \"TR.11\", \"GOR50A\" and \"GORDON RIVER MAIN\"."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "May 24, 2024"
+      },
+      {
+        "field": "rescinded",
+        "quote": "Camper Creek Mainline Gate Location"
+      }
+    ],
+    "uncertain": [
+      "roads[0].file_section",
+      "roads[0].effective_from",
+      "roads[0].effective_to",
+      "roads[1].file_section",
+      "roads[1].effective_from",
+      "roads[1].effective_to",
+      "roads[1].points[0].km"
+    ]
+  }
+}

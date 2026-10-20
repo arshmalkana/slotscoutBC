@@ -1,0 +1,40 @@
+{
+  "task_id": "closed_area-da396085511d",
+  "mode": "rule",
+  "parser": "ruleparse.v1",
+  "produced_at": "2026-10-20T15:12:19.922Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": null,
+    "geometry": {
+      "method": "road_buffer",
+      "road": {
+        "name": "Tatlow Road",
+        "source_hint": "DRA"
+      },
+      "feature": null,
+      "buffer_m": 4000,
+      "side": "both",
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "geometry.buffer_m",
+        "quote": "4 km on either side of the midline"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "on either side"
+      },
+      {
+        "field": "geometry.road",
+        "quote": "Tatlow Road"
+      }
+    ],
+    "uncertain": []
+  }
+}

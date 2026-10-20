@@ -1,0 +1,40 @@
+{
+  "task_id": "closed_area-313c49b86faa",
+  "mode": "rule",
+  "parser": "ruleparse.v1",
+  "produced_at": "2026-10-20T15:12:19.922Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": null,
+    "geometry": {
+      "method": "road_buffer",
+      "road": {
+        "name": "Westcan Terminals Road",
+        "source_hint": "DRA"
+      },
+      "feature": null,
+      "buffer_m": 25,
+      "side": "both",
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "geometry.buffer_m",
+        "quote": "25 metres on either side of the midline"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "on either side"
+      },
+      {
+        "field": "geometry.road",
+        "quote": "Westcan Terminals Road"
+      }
+    ],
+    "uncertain": []
+  }
+}

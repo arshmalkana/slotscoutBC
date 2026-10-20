@@ -1,0 +1,66 @@
+{
+  "task_id": "dm_notice-21679d9bdf82",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-20T15:09:35Z",
+  "answer": {
+    "legible": true,
+    "document_type": "gate_map",
+    "signed_on": "2026-07-07",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "KMU",
+        "file_section": null,
+        "quote": "KMU",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": 0.05,
+            "km_end": null,
+            "extent": "at",
+            "status": "gated",
+            "seen_on": "text",
+            "quote": "0+050 KMU"
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "KMU Gate Location",
+        "shows": "Map title (also printed as \"KMU Gate Location\" in the side bar). The map marks one gate, by a callout box; there is no separate gate symbol."
+      },
+      {
+        "page": 1,
+        "label": "Gate Location 0+050 KMU",
+        "shows": "Yellow callout box (it also prints a latitude and longitude, not copied here) with a leader line to a road junction just below the road labelled KMC, where the road labelled KLANAWA MAIN (KM) runs off to the south-west, at the south-east edge of the cutblock outlined in green."
+      },
+      {
+        "page": 1,
+        "label": "Deactivated Road",
+        "shows": "Legend entry drawn as a black dashed line. Several roads on the map are drawn in this dashed style, for example those labelled BM2700, BM2710, BM2720 and BM2730 west of the cutblock; they are base-map road status, and the document does not say it deactivates them."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "Map Date: 07 -Jul -2026"
+      },
+      {
+        "field": "rescinded",
+        "quote": "KMU Gate Location"
+      }
+    ],
+    "uncertain": [
+      "roads[0].file_section",
+      "roads[0].effective_from",
+      "roads[0].effective_to"
+    ]
+  }
+}

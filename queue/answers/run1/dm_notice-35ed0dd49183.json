@@ -1,0 +1,329 @@
+{
+  "task_id": "dm_notice-35ed0dd49183",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "dm_notice.v1",
+  "schema_id": "dm_notice.v1",
+  "produced_at": "2026-10-20T15:10:14Z",
+  "answer": {
+    "legible": true,
+    "document_type": "deactivation_notice",
+    "signed_on": "2024-11-12",
+    "rescinded": false,
+    "roads": [
+      {
+        "name": "Incomappleux River FSR",
+        "file_section": null,
+        "quote": "Incomappleux River FSR",
+        "effective_from": null,
+        "effective_to": null,
+        "points": [
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "deactivated",
+            "seen_on": "map",
+            "quote": "Incomappleux River FSR Road Deactivation Prescription Map Sections 1, 3, and 4"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "deactivated",
+            "seen_on": "map",
+            "quote": "Road Previously Deactivated"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "bridge_out",
+            "seen_on": "map",
+            "quote": "Bridge Previously Removed"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "bridge_out",
+            "seen_on": "map",
+            "quote": "WP 1-11 = N5-037 RB/RNSC Bridge Removal, restore natural stream channel"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "bridge_out",
+            "seen_on": "map",
+            "quote": "WP 1-14 = N5-036 RB/RNSC Remove bridge and restore natural stream channel."
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "bridge_out",
+            "seen_on": "map",
+            "quote": "WP 1-15A = N5-035 RB/RNSC See Appendix A for deactivation prescription."
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "bridge_out",
+            "seen_on": "map",
+            "quote": "WP 1-22B = N5-034 Bridge"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "bridge_out",
+            "seen_on": "map",
+            "quote": "WP 1-29 = N5-125 RB Remove bridge."
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "closed",
+            "seen_on": "map",
+            "quote": "WP 1-2A = IAB"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "closed",
+            "seen_on": "map",
+            "quote": "WP 1-10A = ISP/IAB"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "closed",
+            "seen_on": "map",
+            "quote": "WP 1-11A = ISP/IAB"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "closed",
+            "seen_on": "map",
+            "quote": "WP 1-14A = ISP/IAB"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "closed",
+            "seen_on": "map",
+            "quote": "WP 1-14B = ISP/IAB"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "closed",
+            "seen_on": "map",
+            "quote": "WP 1-15B = ISP/IAB"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "closed",
+            "seen_on": "map",
+            "quote": "WP 1-15C = ISP/IAB"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "closed",
+            "seen_on": "map",
+            "quote": "WP 1-22A = ISP/IAB"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "closed",
+            "seen_on": "map",
+            "quote": "WP 1-22C = ISP/IAB"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "closed",
+            "seen_on": "map",
+            "quote": "WP 1-29A = ISP/IAB"
+          },
+          {
+            "km": null,
+            "km_end": null,
+            "extent": "unknown",
+            "status": "closed",
+            "seen_on": "map",
+            "quote": "WP 1-30 = ISP/IAB Install deactivation sign and sign post. Install lock block wall."
+          }
+        ]
+      }
+    ],
+    "map_readings": [
+      {
+        "page": 1,
+        "label": "Incomappleux River FSR Road Deactivation Prescription Map Sections 1, 3, and 4",
+        "shows": "Map title. The road is drawn as an orange line (legend: Deactivation Prescription). Section table: Section 1 10431m, Section 3 663m, Section 4 225m. No km labels are printed."
+      },
+      {
+        "page": 1,
+        "label": "Road Previously Deactivated",
+        "shows": "Callout on the dashed road line continuing past the end of the orange deactivation line, near Stephney Creek."
+      },
+      {
+        "page": 1,
+        "label": "Bridge Previously Removed",
+        "shows": "Callout at the end of the orange deactivation line, beside the WP 1-1 = POT label."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-1 = POT End of deactivation Branch 1.",
+        "shows": "Point of Termination label at the end of the orange deactivation line."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-11 = N5-037 RB/RNSC Bridge Removal, restore natural stream channel",
+        "shows": "Bridge Removal symbol (red X) on the orange deactivation line."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-14 = N5-036 RB/RNSC Remove bridge and restore natural stream channel.",
+        "shows": "Bridge Removal symbol (red X) on the orange deactivation line."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-15A = N5-035 RB/RNSC See Appendix A for deactivation prescription.",
+        "shows": "Bridge Removal symbol (red X) on the orange deactivation line."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-22B = N5-034 Bridge",
+        "shows": "Bridge Removal symbol (red X) on the orange deactivation line."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-29 = N5-125 RB Remove bridge.",
+        "shows": "Bridge Removal symbol (red X) on the orange deactivation line, within the hatched pull back section."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-2A = IAB",
+        "shows": "Green 'Install Deactivation Sign/Post and Access' symbol on the orange deactivation line; IAB is listed in the symbol table as install access barrier/berm."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-10A = ISP/IAB",
+        "shows": "Green 'Install Deactivation Sign/Post and Access' symbol on the orange deactivation line; IAB is listed in the symbol table as install access barrier/berm."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-11A = ISP/IAB",
+        "shows": "Green 'Install Deactivation Sign/Post and Access' symbol on the orange deactivation line; IAB is listed in the symbol table as install access barrier/berm."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-14A = ISP/IAB",
+        "shows": "Green 'Install Deactivation Sign/Post and Access' symbol on the orange deactivation line; IAB is listed in the symbol table as install access barrier/berm."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-14B = ISP/IAB",
+        "shows": "Green 'Install Deactivation Sign/Post and Access' symbol on the orange deactivation line; IAB is listed in the symbol table as install access barrier/berm."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-15B = ISP/IAB",
+        "shows": "Green 'Install Deactivation Sign/Post and Access' symbol on the orange deactivation line; IAB is listed in the symbol table as install access barrier/berm."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-15C = ISP/IAB",
+        "shows": "Green 'Install Deactivation Sign/Post and Access' symbol on the orange deactivation line; IAB is listed in the symbol table as install access barrier/berm."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-22A = ISP/IAB",
+        "shows": "Green 'Install Deactivation Sign/Post and Access' symbol on the orange deactivation line; IAB is listed in the symbol table as install access barrier/berm."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-22C = ISP/IAB",
+        "shows": "Green 'Install Deactivation Sign/Post and Access' symbol on the orange deactivation line; IAB is listed in the symbol table as install access barrier/berm."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-29A = ISP/IAB",
+        "shows": "Green 'Install Deactivation Sign/Post and Access' symbol on the orange deactivation line; IAB is listed in the symbol table as install access barrier/berm."
+      },
+      {
+        "page": 1,
+        "label": "WP 1-30 = ISP/IAB Install deactivation sign and sign post. Install lock block wall.",
+        "shows": "Green 'Install Deactivation Sign/Post and Access' symbol on the orange deactivation line; IAB is listed in the symbol table as install access barrier/berm."
+      },
+      {
+        "page": 1,
+        "label": "WP 3-7 = ISP Junction with Branch 1. Install deactivation sign and signpost.",
+        "shows": "Signpost point where the Section 3 line meets Branch 1, inside the pink private land area."
+      },
+      {
+        "page": 1,
+        "label": "WP 4-1 = No works required on this road",
+        "shows": "Callout on a short side road branching off the orange deactivation line."
+      },
+      {
+        "page": 1,
+        "label": "KEY MAP",
+        "shows": "Inset satellite map at 1:1,000,000 with the deactivated road drawn in orange north of the labels Arrow Lake and Trout Lake; no closures marked."
+      }
+    ],
+    "quotes": [
+      {
+        "field": "signed_on",
+        "quote": "November12,2024"
+      },
+      {
+        "field": "rescinded",
+        "quote": "Road Deactivation"
+      }
+    ],
+    "uncertain": [
+      "roads[0].file_section",
+      "roads[0].effective_from",
+      "roads[0].effective_to",
+      "roads[0].points[0].km",
+      "roads[0].points[1].km",
+      "roads[0].points[2].km",
+      "roads[0].points[3].km",
+      "roads[0].points[4].km",
+      "roads[0].points[5].km",
+      "roads[0].points[6].km",
+      "roads[0].points[7].km",
+      "roads[0].points[8].km",
+      "roads[0].points[9].km",
+      "roads[0].points[10].km",
+      "roads[0].points[11].km",
+      "roads[0].points[12].km",
+      "roads[0].points[13].km",
+      "roads[0].points[14].km",
+      "roads[0].points[15].km",
+      "roads[0].points[16].km",
+      "roads[0].points[17].km",
+      "roads[0].points[18].km"
+    ]
+  }
+}

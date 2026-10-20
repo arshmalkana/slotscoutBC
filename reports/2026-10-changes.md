@@ -15,7 +15,7 @@ First pull: this is the baseline every later month is compared with.
 | electoral_areas | 159 | 159 | yes | first pull | `7348791d69067e83` |
 | federal_protected | 21 | 21 | yes | first pull | `6b79792f324b6cea` |
 | fire_bans | 0 | 0 | yes | first pull | `e3b0c44298fc1c14` |
-| fire_current | 314 | 314 | yes | first pull | `d1d05579322a5a1f` |
+| fire_current | 314 | 314 | yes | first pull | `d0b283d46bb702e9` |
 | fire_history | 24,751 | 24,751 | yes | first pull | `96ca2fda10a6041d` |
 | fire_restrictions | 0 | 0 | yes | first pull | `e3b0c44298fc1c14` |
 | fsr_roads | 286,301 | 286,301 | yes | first pull | `97371be5a9f59014` |
@@ -44,17 +44,15 @@ First pull: this is the baseline every later month is compared with.
 
 | Kind | Units | New | Changed | Removed | Unchanged |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| bylaw_clause | 12 | 12 | 0 | 0 | 0 |
+| bylaw_clause | 59 | 59 | 0 | 0 | 0 |
 | dm_notice | 46 | 46 | 0 | 0 | 0 |
 | notice_block | 13 | 13 | 0 | 0 | 0 |
-| regulation_section | 1 | 1 | 0 | 0 | 0 |
+| regulation_section | 254 | 254 | 0 | 0 | 0 |
 | road_notice | 327 | 327 | 0 | 0 | 0 |
-
-## Unconfirmed text
-
-- Closed Areas Regulation, Schedule 5, section 85: Unconfirmed excerpt: BC Shoot Check Addendum A, section 4.1, quoting the Closed Areas Regulation (B.C. Reg. 76/84), Schedule 5, section 85. Unconfirmed: check against the current BC Laws consolidation before approving anything built from it.. Nothing built from it can be approved until it is checked against the official consolidation.
 
 ## Failed or missing sources
 
 - **bylaws** muni:Bowen Island Municipality: robots.txt for www.bimbc.ca could not be read, so automated access is not assumed
-- **closed_areas** legal text: no dated copy of 76_84_00_multi, 196_99, 190_84, 180_90, 16_2004, 38_2005: waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)
+- **closed_areas** legal text: no dated copy of 180_90, 16_2004, 38_2005: waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)
+- **closed_areas** 190_84: Hunting Regulation, B.C. Reg. 190/84: https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84 returned HTTP 404 to a person on 2026-10-20. The current BC Laws document id is needed.
+- **closed_areas** 196_99: Motor Vehicle Prohibition Regulation, B.C. Reg. 196/99: repealed effective March 1, 2024 by B.C. Reg. 18/2024 (BC Laws page saved by a person 2026-10-20). Which regulation now holds the motor vehicle closures is not confirmed yet.
