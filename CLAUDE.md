@@ -36,6 +36,8 @@ data/               Registers the site reads (release pointer, coverage, bylaw r
 
 `make extract` writes `queue/AGENT_TASKS.md` and one brief per task in `queue/agent/run1/` and `queue/agent/run2/` when no API key is set. Run 1: read each run-1 brief and write the answer file it names, quoting the source verbatim for every field, leaving unknown fields null and listing them in `uncertain`. Run 2: start a fresh subagent per batch, give it only the run-2 briefs, and tell it to reply with the file paths it wrote and nothing else. Its summary would otherwise reach the session doing run 1 and the runs would no longer be independent. If a run-2 summary does reach you before your run 1 is done, hand the remaining run-1 briefs to fresh subagents too. Never read `queue/answers/run2/` before your run 1 is written. Then `make build`.
 
+If work stops part-way (usage limit, restart), resume rather than redo: `make extract` lists only the tasks still missing an answer; hand just those to readers. Tell every reader to write each answer file as soon as it is finished (never all at the end) and to keep scratch files in a folder of its own. Commit and push answers as they land.
+
 ## Checks before committing
 
 `npm run typecheck && npm test && make validate`. Run `make test` (regression) before any release candidate: it stops on any false green.

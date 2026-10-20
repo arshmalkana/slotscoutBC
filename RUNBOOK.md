@@ -22,6 +22,15 @@ Open Claude Code and say "Run the monthly update in RUNBOOK.md", or let `api` mo
 
 `make monthly` runs steps 1 to 9 and stops before anything a person must do. Every step prints work done and work left (`[pull] District Manager PDFs 12/46 (26%), 34 left`), keeps the same counts in `reports/<YYYY-MM>-progress.json`, and `make status` (or the site's Sources page) shows them. To re-run part of a month with fresh copies, add `--force` (`make pull MONTH=2026-10 ARGS="--force --only road_notices,bylaws"`): it replaces that month's earlier copy of those sources, and the steps after it pick up the change.
 
+### Resuming after an interruption (usage limit, restart)
+
+Nothing finished is ever done twice. Every extraction answer is its own file in `queue/answers/run1/` or `run2/`, written the moment it is finished and committed as it lands. To pick up again:
+
+1. `make extract` rewrites `queue/AGENT_TASKS.md` with only the tasks still missing an answer (and the done/left counts).
+2. Give those briefs, and only those, to fresh readers in batches (run 1 and run 2 separately). A reader writes each answer file as soon as it is done, keeps any scratch files in a folder of its own, and replies with file paths only.
+3. A reader that was stopped part-way can be resumed: it carries on with the briefs it has not written yet.
+4. `make build` at any point builds whatever has both runs; the rest stays "waiting for extraction" (grey).
+
 ### Scans and maps
 
 PDFs are read by `pdftotext` first. A page with no usable text layer (a scan, or a map saved as a picture) is read by OCR (`tesseract`), marked `[Page N: text read by OCR from the page image]` in the text, and map or scan pages are also saved as page images (`raw/<YYYY-MM>/dm_notices/images/`). The extraction looks at the images as well as the text: District Manager letters, bulletins and gate maps use `dm_notice.v1`, which lists every road the document closes. Quotes are still checked against the text and OCR text; anything seen only on the image is shown to a person but not counted. A PDF goes to a person as unreadable only when OCR and the page images both fail.
