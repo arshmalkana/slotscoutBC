@@ -44,8 +44,8 @@ First pull: this is the baseline every later month is compared with.
 
 | Kind | Units | New | Changed | Removed | Unchanged |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| bylaw_clause | 31 | 31 | 0 | 0 | 0 |
-| dm_notice | 24 | 24 | 0 | 0 | 0 |
+| bylaw_clause | 12 | 12 | 0 | 0 | 0 |
+| dm_notice | 46 | 46 | 0 | 0 | 0 |
 | notice_block | 13 | 13 | 0 | 0 | 0 |
 | regulation_section | 1 | 1 | 0 | 0 | 0 |
 | road_notice | 327 | 327 | 0 | 0 | 0 |
@@ -56,5 +56,5 @@ First pull: this is the baseline every later month is compared with.
 
 ## Failed or missing sources
 
-- **closed_areas** legal text: no dated copy of 76_84_00_multi, 196_99, 190_84, 180_90, 16_2004, 38_2005: waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)
 - **bylaws** muni:Bowen Island Municipality: robots.txt for www.bimbc.ca could not be read, so automated access is not assumed
+- **closed_areas** legal text: no dated copy of 76_84_00_multi, 196_99, 190_84, 180_90, 16_2004, 38_2005: waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)
