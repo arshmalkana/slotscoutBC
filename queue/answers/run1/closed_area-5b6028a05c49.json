@@ -1,0 +1,90 @@
+{
+  "task_id": "closed_area-5b6028a05c49",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:59:51Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 1-04"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the northern edge of the right of way of Cowichan Bay Road opposite the southeastern point of Lot 9, Section 8, Range 3, Plan 8313, Cowichan Bay",
+          "direction": null,
+          "follow": null,
+          "feature": "Cowichan Bay Road",
+          "side_or_bank": "northern edge of the right of way",
+          "until": null,
+          "distance": null,
+          "quote": "Commencing on the northern edge of the right of way of Cowichan Bay Road opposite the southeastern point of Lot 9, Section 8, Range 3, Plan 8313, Cowichan Bay"
+        },
+        {
+          "start": null,
+          "direction": "northwesterly",
+          "follow": "road",
+          "feature": "Cowichan Bay Road",
+          "side_or_bank": "northern edge of said right of way",
+          "until": "a point opposite the northwest corner of Lot 2, Section 8, Range 2, Plan 12543",
+          "distance": null,
+          "quote": "thence northwesterly along the northern edge of said right of way to a point opposite the northwest corner of Lot 2, Section 8, Range 2, Plan 12543"
+        },
+        {
+          "start": null,
+          "direction": "directly north",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the low water level mark on the northern shore of the southernmost channel of the Koksilah River",
+          "distance": null,
+          "quote": "thence directly north to the low water level mark on the northern shore of the southernmost channel of the Koksilah River"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "river",
+          "feature": "southernmost channel of the Koksilah River",
+          "side_or_bank": "northern shore",
+          "until": "the southeasternmost point of Lot 1, section 9, Range 3, Plan 1725",
+          "distance": null,
+          "quote": "thence easterly along the northern shore of said channel to the southeasternmost point of Lot 1, section 9, Range 3, Plan 1725"
+        },
+        {
+          "start": null,
+          "direction": "southeasterly",
+          "follow": "other",
+          "feature": "Lots 19A and 19B (commonly known as Widgeon island)",
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence southeasterly in an arc that passes between Lots 19A and 19B (commonly known as Widgeon island), to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "M.U. 1-04"
+      }
+    ],
+    "uncertain": []
+  }
+}

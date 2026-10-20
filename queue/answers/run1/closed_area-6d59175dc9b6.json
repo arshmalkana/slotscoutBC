@@ -1,0 +1,193 @@
+{
+  "task_id": "closed_area-6d59175dc9b6",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T22:00:00Z",
+  "answer": {
+    "effect": "no_shooting_seasonal",
+    "exemptions": [],
+    "period": {
+      "start": "April 1",
+      "end": "September 14"
+    },
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 6-13"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "a point on the northerly boundary of lot 59 Queen Charlotte Land District, said point lying 50 m due East of the natural boundary of Tlell River on the right bank thereof",
+          "direction": null,
+          "follow": null,
+          "feature": "lot 59 Queen Charlotte Land District",
+          "side_or_bank": "right bank",
+          "until": null,
+          "distance": "50 m",
+          "quote": "Commencing at a point on the northerly boundary of lot 59 Queen Charlotte Land District, said point lying 50 m due East of the natural boundary of Tlell River on the right bank thereof"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "lot_line",
+          "feature": "Lot 59",
+          "side_or_bank": "northerly boundary",
+          "until": "the point of intersection with the natural boundary of Hecate Strait",
+          "distance": null,
+          "quote": "thence easterly along the northerly boundary of Lot 59 to the point of intersection with the natural boundary of Hecate Strait"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "straight_line",
+          "feature": "Hecate Strait",
+          "side_or_bank": null,
+          "until": "a point in Hecate Strait",
+          "distance": "201 m",
+          "quote": "thence easterly 201 m in a straight line to a point in Hecate Strait"
+        },
+        {
+          "start": null,
+          "direction": "in a general northerly direction",
+          "follow": "shoreline",
+          "feature": "Hecate Strait",
+          "side_or_bank": "east of the natural boundary",
+          "until": "a point due East of the most northerly point of Lot 1350A",
+          "distance": "201 m",
+          "quote": "thence in a general northerly direction along a line 201 m east of the natural boundary of Hecate Strait to a point due East of the most northerly point of Lot 1350A"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "thence westerly in a straight line to the point"
+        },
+        {
+          "start": null,
+          "direction": "in a general southerly direction",
+          "follow": "river",
+          "feature": "Tlell River",
+          "side_or_bank": "right bank",
+          "until": "the point of intersection with the northerly boundary of Lot 1350",
+          "distance": "50 m",
+          "quote": "thence in a general southerly direction along a line 50 m easterly of the natural boundary of Tlell River on the right bank thereof to the point of intersection with the northerly boundary of Lot 1350"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "straight_line",
+          "feature": "Lot 1350",
+          "side_or_bank": null,
+          "until": "the northeast corner of Lot 1350",
+          "distance": null,
+          "quote": "thence easterly in a straight line to the northeast corner of Lot 1350"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "straight_line",
+          "feature": "Lot 1350",
+          "side_or_bank": null,
+          "until": "the southeast corner of Lot 1350",
+          "distance": null,
+          "quote": "thence southerly in a straight line to the southeast corner of Lot 1350"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "lot_line",
+          "feature": "Lot 1350",
+          "side_or_bank": "southerly boundary",
+          "until": "a point 50 m due East of the natural boundary of Tlell River on the right bank thereof",
+          "distance": "50 m",
+          "quote": "thence westerly along the southerly boundary of Lot 1350 to a point 50 m due East of the natural boundary of Tlell River on the right bank thereof"
+        },
+        {
+          "start": null,
+          "direction": "in a general southerly direction",
+          "follow": "river",
+          "feature": "Tlell River",
+          "side_or_bank": "right bank",
+          "until": "the point of commencement",
+          "distance": "50 m",
+          "quote": "thence in a general southerly direction along a line 50 m easterly of the natural boundary of Tlell River on the right bank thereof to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "Seasonal No Shooting or Hunting Areas"
+      },
+      {
+        "field": "period",
+        "quote": "during the period April 1 to September 14"
+      },
+      {
+        "field": "within",
+        "quote": "That portion of M.U. 6-13"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundaries: Commencing at"
+      },
+      {
+        "field": "geometry.steps[0]",
+        "quote": "Commencing at a point on the northerly boundary of lot 59 Queen Charlotte Land District, said point lying 50 m due East of the natural boundary of Tlell River on the right bank thereof"
+      },
+      {
+        "field": "geometry.steps[1]",
+        "quote": "thence easterly along the northerly boundary of Lot 59 to the point of intersection with the natural boundary of Hecate Strait"
+      },
+      {
+        "field": "geometry.steps[2]",
+        "quote": "thence easterly 201 m in a straight line to a point in Hecate Strait"
+      },
+      {
+        "field": "geometry.steps[3]",
+        "quote": "thence in a general northerly direction along a line 201 m east of the natural boundary of Hecate Strait to a point due East of the most northerly point of Lot 1350A"
+      },
+      {
+        "field": "geometry.steps[4]",
+        "quote": "thence westerly in a straight line to the point"
+      },
+      {
+        "field": "geometry.steps[5]",
+        "quote": "thence in a general southerly direction along a line 50 m easterly of the natural boundary of Tlell River on the right bank thereof to the point of intersection with the northerly boundary of Lot 1350"
+      },
+      {
+        "field": "geometry.steps[6]",
+        "quote": "thence easterly in a straight line to the northeast corner of Lot 1350"
+      },
+      {
+        "field": "geometry.steps[7]",
+        "quote": "thence southerly in a straight line to the southeast corner of Lot 1350"
+      },
+      {
+        "field": "geometry.steps[8]",
+        "quote": "thence westerly along the southerly boundary of Lot 1350 to a point 50 m due East of the natural boundary of Tlell River on the right bank thereof"
+      },
+      {
+        "field": "geometry.steps[9]",
+        "quote": "thence in a general southerly direction along a line 50 m easterly of the natural boundary of Tlell River on the right bank thereof to the point of commencement"
+      }
+    ],
+    "uncertain": [
+      "geometry.steps[4].until"
+    ]
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "task_id": "closed_area-9b7d9de9b9cb",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T22:00:15Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": null,
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": "inside",
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the outlet of an unnamed lake on Moul Creek, on the southerly shore thereof, said outlet being 2 100 metres east and 4 650 metres south, more or less, of the southeast corner of Lot 2889",
+          "direction": null,
+          "follow": null,
+          "feature": "an unnamed lake on Moul Creek",
+          "side_or_bank": "southerly shore",
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the outlet of an unnamed lake on Moul Creek, on the southerly shore thereof, said outlet being 2 100 metres east and 4 650 metres south, more or less, of the southeast corner of Lot 2889"
+        },
+        {
+          "start": null,
+          "direction": "due South",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": "500 metres",
+          "quote": "thence due South 500 metres"
+        },
+        {
+          "start": null,
+          "direction": "due East",
+          "follow": "straight_line",
+          "feature": "Moul Creek watershed",
+          "side_or_bank": null,
+          "until": "an intersection with the 1 450 metre contour of the southerly slope of the Moul Creek watershed",
+          "distance": "1 300 metres more or less",
+          "quote": "thence due East 1 300 metres more or less to an intersection with the 1 450 metre contour of the southerly slope of the Moul Creek watershed"
+        },
+        {
+          "start": null,
+          "direction": "due South",
+          "follow": "straight_line",
+          "feature": "Trophy Mountain",
+          "side_or_bank": null,
+          "until": "an intersection with the 1 800 metre contour of a southwesterly slope of Trophy Mountain, said point of intersection being 4 900 metres west and 2 500 metres south, more or less, of the summit of Trophy Mountain",
+          "distance": "7 600 metres, more of less",
+          "quote": "thence due South 7 600 metres, more of less, to an intersection with the 1 800 metre contour of a southwesterly slope of Trophy Mountain, said point of intersection being 4 900 metres west and 2 500 metres south, more or less, of the summit of Trophy Mountain"
+        },
+        {
+          "start": null,
+          "direction": "in a general southeasterly direction",
+          "follow": "contour",
+          "feature": "1 800 metre contour",
+          "side_or_bank": null,
+          "until": "the northwesterly prolongation of an unnamed creek which is tributary to the main stream of the unnamed northerly fork of Spahats Creek",
+          "distance": null,
+          "quote": "thence in a general southeasterly direction along said 1 800 metre contour to the northwesterly prolongation of an unnamed creek which is tributary to the main stream of the unnamed northerly fork of Spahats Creek"
+        },
+        {
+          "start": null,
+          "direction": "southeasterly",
+          "follow": "creek",
+          "feature": "an unnamed creek which is tributary to the main stream of the unnamed northerly fork of Spahats Creek",
+          "side_or_bank": "right bank",
+          "until": "the point of intersection of said right bank, with the right bank of the main stream of the unnamed northerly fork of Spahats Creek",
+          "distance": null,
+          "quote": "thence southeasterly along said northwesterly prolongation and continuing south easterly along the aforementioned unnamed tributary, on the right bank thereof, to the point of intersection of said right bank, with the right bank of the main stream of the unnamed northerly fork of Spahats Creek"
+        },
+        {
+          "start": null,
+          "direction": "due East",
+          "follow": "straight_line",
+          "feature": "unnamed northerly fork of Spahats Creek",
+          "side_or_bank": null,
+          "until": "the point of intersection with the 1 750 metre contour of the easterly slope of the watershed of the aforementioned unnamed northerly fork of Spahats Creek",
+          "distance": "750 metres, more or less",
+          "quote": "thence due East 750 metres, more or less, to the point of intersection with the 1 750 metre contour of the easterly slope of the watershed of the aforementioned unnamed northerly fork of Spahats Creek"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "contour",
+          "feature": "1 750 metre contour",
+          "side_or_bank": null,
+          "until": "a point 2 300 metres west and 3 750 metres south, more or less, of the summit of Trophy Mountain",
+          "distance": null,
+          "quote": "thence northerly along said 1 750 metre contour to a point 2 300 metres west and 3 750 metres south, more or less, of the summit of Trophy Mountain"
+        },
+        {
+          "start": null,
+          "direction": "due East",
+          "follow": "straight_line",
+          "feature": "Trophy Mountain",
+          "side_or_bank": null,
+          "until": "a point 4 400 metres east and 3 750 metres south, more or less, of the summit of Trophy Mountain",
+          "distance": "6 800 metres, more or less",
+          "quote": "thence due East 6 800 metres, more or less, to a point 4 400 metres east and 3 750 metres south, more or less, of the summit of Trophy Mountain"
+        },
+        {
+          "start": null,
+          "direction": "due North",
+          "follow": "straight_line",
+          "feature": "the unnamed creek flowing in an easterly direction into Raft River",
+          "side_or_bank": null,
+          "until": "an intersection with the 1 750 metre contour of a southerly boundary of the watershed of the unnamed creek flowing in an easterly direction into Raft River",
+          "distance": "3 300 metres, more or less",
+          "quote": "thence due North 3 300 metres, more or less, to an intersection with the 1 750 metre contour of a southerly boundary of the watershed of the unnamed creek flowing in an easterly direction into Raft River"
+        },
+        {
+          "start": null,
+          "direction": "in a general westerly and northeasterly direction",
+          "follow": "contour",
+          "feature": "1 750 metre contour",
+          "side_or_bank": null,
+          "until": "a point 4 400 metres east and 3 650 metres north, more or less, of the summit of Trophy Mountain",
+          "distance": null,
+          "quote": "thence following said 1 750 metre contour in a general westerly and northeasterly direction to a point 4 400 metres east and 3 650 metres north, more or less, of the summit of Trophy Mountain"
+        },
+        {
+          "start": null,
+          "direction": "due West",
+          "follow": "straight_line",
+          "feature": "Moul Creek",
+          "side_or_bank": "left bank",
+          "until": "the point of intersection with the natural boundary of Moul Creek, on the left bank thereof",
+          "distance": "2 000 metres, more or less",
+          "quote": "thence due West 2 000 metres, more or less, to the point of intersection with the natural boundary of Moul Creek, on the left bank thereof"
+        },
+        {
+          "start": null,
+          "direction": "in a general westerly direction",
+          "follow": "creek",
+          "feature": "Moul Creek",
+          "side_or_bank": "left bank",
+          "until": "the outlet of said unnamed lake, being the point of commencement",
+          "distance": null,
+          "quote": "thence in a general westerly direction along said left bank of Moul Creek, the natural boundary of Moul Lake, on the southerly shore thereof and continuing along the aforementioned left bank of Moul Creek, and the natural boundary of an unnamed lake on Moul Creek, on the southerly shore thereof to the outlet of said unnamed lake, being the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting or Hunting Areas"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundaries"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "contained within the following described boundaries"
+      }
+    ],
+    "uncertain": [
+      "within"
+    ]
+  }
+}

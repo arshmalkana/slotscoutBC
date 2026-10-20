@@ -1,0 +1,68 @@
+{
+  "task_id": "closed_area-36c6775829a4",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:59:41Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Province of British Columbia"
+    },
+    "geometry": {
+      "method": "road_buffer",
+      "road": {
+        "name": "Highway 113",
+        "source_hint": "highway"
+      },
+      "feature": null,
+      "buffer_m": 400,
+      "side": "both",
+      "from": {
+        "type": "landmark",
+        "road": "Highway 113",
+        "name": "Sterling Mountain Parking Lot Recreation Site"
+      },
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting or Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "That portion of the Province of British Columbia"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within 400 metres of the road allowance of Highway 113"
+      },
+      {
+        "field": "geometry.road",
+        "quote": "Highway 113"
+      },
+      {
+        "field": "geometry.buffer_m",
+        "quote": "within 400 metres"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "within 400 metres of the road allowance"
+      },
+      {
+        "field": "geometry.from",
+        "quote": "between Sterling Mountain Parking Lot Recreation Site"
+      }
+    ],
+    "uncertain": [
+      "geometry.to"
+    ]
+  }
+}

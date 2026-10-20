@@ -1,0 +1,132 @@
+{
+  "task_id": "closed_area-0eb03c49fc60",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:59:31Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [
+      "Indian reserve lands",
+      "organized territory"
+    ],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Cowichan Lake District"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": "inside",
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "on Highway 18 at the junction of the Youbou Road and Lake Cowichan road",
+          "direction": null,
+          "follow": null,
+          "feature": "Highway 18",
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing on Highway 18 at the junction of the Youbou Road and Lake Cowichan road"
+        },
+        {
+          "start": null,
+          "direction": "due North",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "100 m due North of the centre line of said junction",
+          "distance": "100 m",
+          "quote": "thence 100 m due North of the centre line of said junction"
+        },
+        {
+          "start": null,
+          "direction": null,
+          "follow": "road",
+          "feature": "the Youbou section of Highway 18",
+          "side_or_bank": null,
+          "until": "Youbou",
+          "distance": null,
+          "quote": "thence following parallel to the Youbou section of Highway 18 to Youbou"
+        },
+        {
+          "start": null,
+          "direction": "north",
+          "follow": "road",
+          "feature": "the main private industrial road along the north shore of Cowichan Lake",
+          "side_or_bank": "north",
+          "until": "the most western point of the lake",
+          "distance": "100 m",
+          "quote": "thence continuing 100 m north and parallel of the main private industrial road along the north shore of Cowichan Lake to the most western point of the lake"
+        },
+        {
+          "start": null,
+          "direction": null,
+          "follow": "road",
+          "feature": "the main private industrial road along the west and south shore of Cowichan Lake",
+          "side_or_bank": null,
+          "until": "Honeymoon Bay",
+          "distance": null,
+          "quote": "thence following the main private industrial road along the west and south shore of Cowichan Lake to Honeymoon Bay"
+        },
+        {
+          "start": "Honeymoon Bay",
+          "direction": null,
+          "follow": "road",
+          "feature": "Highway 18",
+          "side_or_bank": null,
+          "until": "the village of Lake Cowichan",
+          "distance": null,
+          "quote": "thence along Highway 18 from Honeymoon Bay to the village of Lake Cowichan"
+        },
+        {
+          "start": null,
+          "direction": null,
+          "follow": "road",
+          "feature": "Highway 18",
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence continuing along the said highway to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting or Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "Cowichan Lake District"
+      },
+      {
+        "field": "exemptions[0]",
+        "quote": "except Indian reserve lands"
+      },
+      {
+        "field": "exemptions[1]",
+        "quote": "organized territory"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundaries"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "including all of the intervening land and waters"
+      }
+    ],
+    "uncertain": [
+      "geometry.steps[2].side_or_bank",
+      "geometry.steps[2].distance"
+    ]
+  }
+}

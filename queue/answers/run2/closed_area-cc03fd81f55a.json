@@ -1,0 +1,55 @@
+{
+  "task_id": "closed_area-cc03fd81f55a",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:58:48Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": null,
+    "geometry": {
+      "method": "road_buffer",
+      "road": {
+        "name": "Number 248 Road",
+        "source_hint": "DRA"
+      },
+      "feature": null,
+      "buffer_m": 50,
+      "side": "both",
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting or Hunting Areas"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within 50 metres of either side of the midline of Number 248 Road"
+      },
+      {
+        "field": "geometry.road",
+        "quote": "the midline of Number 248 Road"
+      },
+      {
+        "field": "geometry.buffer_m",
+        "quote": "within 50 metres"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "either side"
+      }
+    ],
+    "uncertain": [
+      "within",
+      "geometry.from",
+      "geometry.to"
+    ]
+  }
+}

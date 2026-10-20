@@ -1,0 +1,132 @@
+{
+  "task_id": "closed_area-6c4ef7212408",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:59:35Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {"type": "wildlife_management_unit", "name": "M.U.s 4-25 and 4-35"},
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the southwest corner of District Lot 9009",
+          "direction": null,
+          "follow": null,
+          "feature": "District Lot 9009",
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the southwest corner of District Lot 9009"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "lot_line",
+          "feature": "District Lot 9009",
+          "side_or_bank": "western boundary",
+          "until": "the point of intersection with the northern boundary of the right of way of the B.C. Hydro power line",
+          "distance": null,
+          "quote": "thence northerly along the western boundary of said Lot to the point of intersection with the northern boundary of the right of way of the B.C. Hydro power line"
+        },
+        {
+          "start": null,
+          "direction": "southwesterly",
+          "follow": "other",
+          "feature": "B.C. Hydro power line",
+          "side_or_bank": "northern boundary of the right of way",
+          "until": "the point of intersection with the eastern boundary of the right of way of the Canadian Pacific Railway",
+          "distance": null,
+          "quote": "thence southwesterly along said right of way boundary to the point of intersection with the eastern boundary of the right of way of the Canadian Pacific Railway"
+        },
+        {
+          "start": null,
+          "direction": "in a general northerly direction",
+          "follow": "other",
+          "feature": "Canadian Pacific Railway",
+          "side_or_bank": "eastern boundary of the right of way",
+          "until": "the point of intersection with the southern boundary of District Lot 2580",
+          "distance": null,
+          "quote": "thence in a general northerly direction along said right of way boundary to the point of intersection with the southern boundary of District Lot 2580"
+        },
+        {
+          "start": null,
+          "direction": "easterly, northerly",
+          "follow": "lot_line",
+          "feature": "District Lot 2580",
+          "side_or_bank": "southern boundary, eastern boundary",
+          "until": "the point of intersection with the southern boundary of District Lot 10113",
+          "distance": null,
+          "quote": "thence easterly along said southern boundary, and northerly along the eastern boundary of said Lot, to the point of intersection with the southern boundary of District Lot 10113"
+        },
+        {
+          "start": null,
+          "direction": "easterly, northerly",
+          "follow": "lot_line",
+          "feature": "District Lot 10113",
+          "side_or_bank": "southern boundary, eastern boundary",
+          "until": "the point of intersection with the northern boundary of District Lot 9565A",
+          "distance": null,
+          "quote": "thence easterly along said southern boundary and northerly along the eastern boundary of said Lot to the point of intersection with the northern boundary of District Lot 9565A"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "lot_line",
+          "feature": "District Lot 9565A, District Lot 9560",
+          "side_or_bank": "northern boundary",
+          "until": "the northeast corner of District Lot 9560",
+          "distance": null,
+          "quote": "thence easterly along said northern boundary and along the northern boundary of District Lot 9560 to the northeast corner of District Lot 9560"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "lot_line",
+          "feature": "District Lots 9560, 9010 and 9567",
+          "side_or_bank": "eastern boundaries",
+          "until": "the northwest corner of District Lot 8207",
+          "distance": null,
+          "quote": "thence southerly along the eastern boundaries of District Lots 9560, 9010 and 9567 to the northwest corner of District Lot 8207"
+        },
+        {
+          "start": null,
+          "direction": "easterly, southerly and westerly",
+          "follow": "lot_line",
+          "feature": "District Lot 8207",
+          "side_or_bank": "northern, eastern and southern boundaries",
+          "until": "the southeast corner of District Lot 9009",
+          "distance": null,
+          "quote": "thence easterly, southerly and westerly along the northern, eastern and southern boundaries of said Lot to the southeast corner of District Lot 9009"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence westerly to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {"field": "effect", "quote": "No Shooting or Hunting Areas"},
+      {"field": "within", "quote": "in M.U.s 4-25 and 4-35"},
+      {"field": "geometry.method", "quote": "Thirdly, that area described as follows: Commencing at the southwest corner of District Lot 9009"}
+    ],
+    "uncertain": ["geometry.feature", "geometry.steps[9].follow"]
+  }
+}

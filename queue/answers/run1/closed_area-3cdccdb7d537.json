@@ -1,0 +1,76 @@
+{
+  "task_id": "closed_area-3cdccdb7d537",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T22:00:20Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [
+      "except organized territory"
+    ],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Cowichan District"
+    },
+    "geometry": {
+      "method": "other",
+      "road": null,
+      "feature": {
+        "type": "other",
+        "name": "Ganges Harbour"
+      },
+      "buffer_m": null,
+      "side": "north",
+      "from": {
+        "type": "landmark",
+        "road": null,
+        "name": "Scott Point"
+      },
+      "to": {
+        "type": "shoreline",
+        "road": null,
+        "name": "the nearest point on the west shoreline of said harbour"
+      },
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "exemptions[0]",
+        "quote": "except organized territory"
+      },
+      {
+        "field": "within",
+        "quote": "Cowichan District"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "All of that area known as Ganges Harbour below the high water mark lying north of a straight line"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "that area known as Ganges Harbour below the high water mark"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "lying north of a straight line"
+      },
+      {
+        "field": "geometry.from",
+        "quote": "a straight line running from Scott Point"
+      },
+      {
+        "field": "geometry.to",
+        "quote": "due West to the nearest point on the west shoreline of said harbour"
+      }
+    ],
+    "uncertain": []
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "task_id": "closed_area-45759128e829",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T22:00:26Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Nanoose Land District"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the northeast corner of Lot 1, Nanoose Land District, being a point on the high water mark on the Strait of Georgia",
+          "direction": null,
+          "follow": null,
+          "feature": "Lot 1, Nanoose Land District",
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the northeast corner of Lot 1, Nanoose Land District, being a point on the high water mark on the Strait of Georgia"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "lot_line",
+          "feature": "Lots 1, 96 and 129",
+          "side_or_bank": "easterly boundaries",
+          "until": "the point of intersection, on the easterly boundary of said Lot 129, with the centreline of Island Highway 19, Registered Plan 812 R/W",
+          "distance": null,
+          "quote": "thence southerly along the easterly boundaries of Lots 1, 96 and 129 to the point of intersection, on the easterly boundary of said Lot 129, with the centreline of Island Highway 19, Registered Plan 812 R/W"
+        },
+        {
+          "start": null,
+          "direction": "in a generally westerly direction",
+          "follow": "road",
+          "feature": "Island Highway 19",
+          "side_or_bank": "centreline",
+          "until": "the point of intersection with the centreline of the Englishman River",
+          "distance": null,
+          "quote": "thence in a generally westerly direction along said centreline to the point of intersection with the centreline of the Englishman River"
+        },
+        {
+          "start": null,
+          "direction": "in a generally northerly direction",
+          "follow": "river",
+          "feature": "Englishman River",
+          "side_or_bank": "centreline of the main channel",
+          "until": "a point due West of the most westerly part of Lot 9, Plan 19158, Lot 181",
+          "distance": null,
+          "quote": "thence in a generally northerly direction along the centreline of the main channel of said Englishman River to a point due West of the most westerly part of Lot 9, Plan 19158, Lot 181"
+        },
+        {
+          "start": null,
+          "direction": "due East",
+          "follow": "straight_line",
+          "feature": "Lot 9, Plan 19158",
+          "side_or_bank": null,
+          "until": "a point on the high water mark of the Strait of Georgia, being the westerly extremity of said Lot 9, Plan 19158",
+          "distance": null,
+          "quote": "thence due East to a point on the high water mark of the Strait of Georgia, being the westerly extremity of said Lot 9, Plan 19158"
+        },
+        {
+          "start": null,
+          "direction": "in a generally easterly direction",
+          "follow": "shoreline",
+          "feature": "Strait of Georgia",
+          "side_or_bank": "high water mark",
+          "until": "the northeast corner of Lot 1, Nanoose District, being point of commencement",
+          "distance": null,
+          "quote": "thence in a generally easterly direction along the high water mark of the Strait of Georgia, being the northerly boundary of Lot 181 (all lots herein above mentioned, beginning with Lot 1, being in the Nanoose District) to the northeast corner of Lot 1, Nanoose District, being point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "in the vicinity of the Village of Parksville, Nanoose Land District"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundaries"
+      }
+    ],
+    "uncertain": []
+  }
+}

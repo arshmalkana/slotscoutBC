@@ -1,0 +1,32 @@
+{
+  "task_id": "closed_area-7e3c4fc75330",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:59:11Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {"type": "wildlife_management_unit", "name": "M.U. 1-1"},
+    "geometry": {
+      "method": "admin_boundary",
+      "road": null,
+      "feature": {"type": "island", "name": "De Courcey Island"},
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {"field": "effect", "quote": "No Shooting or Hunting Areas"},
+      {"field": "within", "quote": "That portion of M.U. 1-1"},
+      {"field": "geometry.method", "quote": "contained within the following described boundary: The mean low water mark of De Courcey Island"},
+      {"field": "geometry.feature", "quote": "The mean low water mark of De Courcey Island"}
+    ],
+    "uncertain": []
+  }
+}

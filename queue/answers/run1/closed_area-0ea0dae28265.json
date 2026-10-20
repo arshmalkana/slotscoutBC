@@ -1,0 +1,47 @@
+{
+  "task_id": "closed_area-0ea0dae28265",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:59:31Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 7-22"
+    },
+    "geometry": {
+      "method": "other",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting or Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "That portion of M.U. 7-22"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "outlined in red on the attached map 'Closed Area No. 3-68/26'"
+      }
+    ],
+    "uncertain": [
+      "geometry.road",
+      "geometry.feature",
+      "geometry.buffer_m"
+    ]
+  }
+}

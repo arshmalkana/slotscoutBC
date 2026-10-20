@@ -1,0 +1,143 @@
+{
+  "task_id": "closed_area-5009e9ffd0e5",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:58:09Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Range 3, Coast District"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the southwest corner of Lot 1153, Range 3, Coast District",
+          "direction": null,
+          "follow": null,
+          "feature": "Lot 1153",
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the southwest corner of Lot 1153, Range 3, Coast District"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "lot_line",
+          "feature": "Lot 1153",
+          "side_or_bank": null,
+          "until": "the south shore of Ikt Lake",
+          "distance": null,
+          "quote": "thence northerly along said lot to the south shore of Ikt Lake"
+        },
+        {
+          "start": null,
+          "direction": "northwesterly",
+          "follow": "shoreline",
+          "feature": "Ikt Lake",
+          "side_or_bank": "south shore",
+          "until": "unnamed river entering Ikt Lake at its most northerly point",
+          "distance": null,
+          "quote": "thence northwesterly along the said shore of said lake to unnamed river entering Ikt Lake at its most northerly point"
+        },
+        {
+          "start": null,
+          "direction": "northerly and northwesterly",
+          "follow": "river",
+          "feature": "unnamed river",
+          "side_or_bank": "west bank",
+          "until": "the northwest corner of Lot 209",
+          "distance": null,
+          "quote": "thence northerly and northwesterly up the west bank of unnamed river to the northwest corner of Lot 209"
+        },
+        {
+          "start": null,
+          "direction": "due East",
+          "follow": "straight_line",
+          "feature": "Lot 209",
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "thence due East of the northeast corner of said lot"
+        },
+        {
+          "start": null,
+          "direction": "due East",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the height of land between the Martin River drainage and Link Lake",
+          "distance": "3.2 km (2 miles)",
+          "quote": "thence due East for 3.2 km (2 miles) to the height of land between the Martin River drainage and Link Lake"
+        },
+        {
+          "start": null,
+          "direction": "southerly, easterly and southerly",
+          "follow": "other",
+          "feature": "height of land through Mount Caro Marion",
+          "side_or_bank": null,
+          "until": "the west shore of Link Lake, approximately 400 m (0.25 mile) from the northeast corner of Lot 1170",
+          "distance": "approximately 400 m (0.25 mile)",
+          "quote": "thence southerly, easterly and southerly following the height of land through Mount Caro Marion to the west shore of Link Lake, approximately 400 m (0.25 mile) from the northeast corner of Lot 1170"
+        },
+        {
+          "start": null,
+          "direction": "in a southerly direction",
+          "follow": null,
+          "feature": "unnamed bay",
+          "side_or_bank": null,
+          "until": "the southeast corner of Lot 1151",
+          "distance": null,
+          "quote": "thence in a southerly direction, including unnamed bay to the southeast corner of Lot 1151"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the southwest corner of Lot 1176",
+          "distance": null,
+          "quote": "thence westerly in a straight line to the southwest corner of Lot 1176"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "straight_line",
+          "feature": "Cousins Inlet",
+          "side_or_bank": null,
+          "until": "point of commencement",
+          "distance": null,
+          "quote": "thence westerly in a straight line across Cousins Inlet to point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "in Range 3, Coast District"
+      }
+    ],
+    "uncertain": [
+      "geometry.steps[4].until",
+      "geometry.steps[7].follow"
+    ]
+  }
+}

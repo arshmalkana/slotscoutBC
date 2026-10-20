@@ -1,0 +1,39 @@
+{
+  "task_id": "closed_area-641094842b62",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:57:30Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 3-27"
+    },
+    "geometry": {
+      "method": "other",
+      "road": null,
+      "feature": {
+        "type": "other",
+        "name": "Sun Peaks Resort"
+      },
+      "buffer_m": 400,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      { "field": "effect", "quote": "No Shooting or Hunting Areas" },
+      { "field": "within", "quote": "That portion of M.U. 3-27" },
+      { "field": "geometry.method", "quote": "All land and waters within 400 metres of any ski lift, run, facility or development of the Sun Peaks Resort" },
+      { "field": "geometry.feature", "quote": "any ski lift, run, facility or development of the Sun Peaks Resort" },
+      { "field": "geometry.buffer_m", "quote": "within 400 metres" }
+    ],
+    "uncertain": []
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "task_id": "closed_area-60c1985e638c",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T22:00:28Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 3-37"
+    },
+    "geometry": {
+      "method": "other",
+      "road": {
+        "name": "Squilax-Anglement Road",
+        "source_hint": "DRA"
+      },
+      "feature": {
+        "type": "park",
+        "name": "Roderick Haig-Brown Recreation Area"
+      },
+      "buffer_m": null,
+      "side": "south",
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting or Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "That portion of M.U. 3-37"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "That portion of the Roderick Haig-Brown Recreation Area being south of the Squilax-Anglement Road and downstream of the Adams River bridge"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "That portion of the Roderick Haig-Brown Recreation Area"
+      },
+      {
+        "field": "geometry.road",
+        "quote": "the Squilax-Anglement Road"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "south of the Squilax-Anglement Road"
+      }
+    ],
+    "uncertain": []
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "task_id": "closed_area-0f804b062df6",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:59:34Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Peace River District"
+    },
+    "geometry": {
+      "method": "waterbody_buffer",
+      "road": null,
+      "feature": null,
+      "buffer_m": 91,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "Peace River District"
+      },
+      {
+        "field": "geometry.buffer_m",
+        "quote": "within 91 m (100 yards)"
+      }
+    ],
+    "uncertain": [
+      "geometry.feature",
+      "geometry.side",
+      "geometry.from",
+      "geometry.to"
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "task_id": "closed_area-f4d1342fedfb",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:59:56Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Range 5, Coast District"
+    },
+    "geometry": {
+      "method": "other",
+      "road": null,
+      "feature": {
+        "type": "lake",
+        "name": "Kathlyn Lake"
+      },
+      "buffer_m": null,
+      "side": "inside",
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "Those waters of Kathlyn Lake to the maximum high water mark situate and lying within portions of Lots 10, 11, 14 and 15 of Township 1A"
+      },
+      {
+        "field": "within",
+        "quote": "Range 5, Coast District"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "Those waters of Kathlyn Lake"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "Those waters of Kathlyn Lake to the maximum high water mark"
+      }
+    ],
+    "uncertain": []
+  }
+}

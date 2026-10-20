@@ -1,0 +1,66 @@
+{
+  "task_id": "closed_area-54fb2ce0f1ac",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:57:28Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Cariboo District"
+    },
+    "geometry": {
+      "method": "other",
+      "road": null,
+      "feature": {
+        "type": "lake",
+        "name": "Williams Lake"
+      },
+      "buffer_m": null,
+      "side": "inside",
+      "from": {
+        "type": "boundary",
+        "road": null,
+        "name": "eastern Williams Lake town boundary"
+      },
+      "to": {
+        "type": "boundary",
+        "road": null,
+        "name": "western boundary of Indian Reserve 1 (Sugarcane)"
+      },
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "Cariboo District"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "Those waters of Williams Lake"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "Those waters of Williams Lake to the maximum high water mark"
+      },
+      {
+        "field": "geometry.from",
+        "quote": "the eastern Williams Lake town boundary"
+      },
+      {
+        "field": "geometry.to",
+        "quote": "the western boundary of Indian Reserve 1 (Sugarcane)"
+      }
+    ],
+    "uncertain": []
+  }
+}

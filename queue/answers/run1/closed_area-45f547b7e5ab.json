@@ -1,0 +1,70 @@
+{
+  "task_id": "closed_area-45f547b7e5ab",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T22:00:03Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Shawnigan District"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "Cherry Point, Satellite Channel",
+          "direction": null,
+          "follow": null,
+          "feature": "Cherry Point",
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at Cherry Point, Satellite Channel"
+        },
+        {
+          "start": null,
+          "direction": "southerly and southeasterly",
+          "follow": "shoreline",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "Hatch Point",
+          "distance": null,
+          "quote": "thence southerly and southeasterly following the high water mark to Hatch Point"
+        },
+        {
+          "start": null,
+          "direction": "in a northwesterly direction",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "Cherry Point, being point of commencement",
+          "distance": null,
+          "quote": "thence in a northwesterly direction in a straight line from Hatch Point to Cherry Point, being point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "Shawnigan District"
+      }
+    ],
+    "uncertain": []
+  }
+}

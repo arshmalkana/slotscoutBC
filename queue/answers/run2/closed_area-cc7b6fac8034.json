@@ -1,0 +1,58 @@
+{
+  "task_id": "closed_area-cc7b6fac8034",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T21:59:53Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 3-28"
+    },
+    "geometry": {
+      "method": "waterbody_buffer",
+      "road": null,
+      "feature": {
+        "type": "lake",
+        "name": "McQueen, Griffin and Isobel Lakes"
+      },
+      "buffer_m": 1000,
+      "side": "both",
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "in M.U. 3-28"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within 1 km of the mean high water mark of McQueen, Griffin and Isobel Lakes"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "McQueen, Griffin and Isobel Lakes"
+      },
+      {
+        "field": "geometry.buffer_m",
+        "quote": "within 1 km"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "All land and waters within 1 km of the mean high water mark"
+      }
+    ],
+    "uncertain": []
+  }
+}
