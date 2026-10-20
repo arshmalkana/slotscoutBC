@@ -1,0 +1,205 @@
+{
+  "item_id": "bylaw-230d956800",
+  "month": "2026-10",
+  "kind": "bylaw",
+  "title": "City of Langley: Firearms Regulation Bylaw, 2015, No. 2961 (Bylaw 2961)",
+  "change_type": "new_source",
+  "decision": "Check every extracted rule against the bylaw before first use (Addendum A 5.3). Zone maps are traced by hand. Approving marks the register entry reviewed today.",
+  "why": [
+    "a person checks every extracted bylaw rule before first use"
+  ],
+  "source": {
+    "text": "FIREARMS REGULATION BYLAW, 2015, BYLAW NO. 2961 A Bylaw to regulate the use of firearms and bows in the City of Langley. The Council of the City of Langley, in open meeting assembled, enacts as follows:\n1. Title This bylaw shall be cited as the “Firearms Regulation Bylaw, 2015, No. 2961”.\n2. Definitions In this bylaw: (1) Bow includes a long bow, recurve bow, composite bow, or crossbow. (2) Firearm includes any barreled weapon using a propellant, compressed air, explosives, or gas from which any shot, bullet, or other projectile can be discharged but does not include: (a) Starting pistols when used in connection with an athletic or sporting event where blank ammunition is used; (b) paintball guns when used in a licensed and insured facility designed for organized paintball games. (3) City means the City of Langley. (4) Inspector means the Bylaw Enforcement Officer, the Chief Building Inspector, a Peace Officer and any other person who is authorized by the City Council to enter and inspect property in accordance with this Bylaw.\n3. Exemptions This Bylaw, does not apply to: (1) a peace officer, a conservation officer under the Wildlife Act, an enforcement officer of the Department of Fisheries and Oceans, an employee of the Canadian Wildlife service, or a person appointed to enforce the City’s Animal Control Bylaw, when engaged in the lawful performance of their duties; Firearms Regulation Bylaw Page 2 Bylaw No. 2961 (2) land located in the Agricultural Land Reserve where a firearm or bow is discharged for the purpose of: (a) the protection of agricultural crops, livestock, or domestic animals from wildlife; or (b) the humane destruction of livestock.\n4. General Regulations No person shall discharge a firearm or bow within the City.\n5. General Nothing contained in or permitted in this Bylaw shall abrogate or relieve any obligation of any person pursuant to any applicable provincial or federal act or regulations with regard to the discharge of firearms.\n6. Enforcement (1) No person shall obstruct an Inspector in the administration or enforcement of this Bylaw. (2) Every person who violates any of the provisions of this Bylaw or who suffers or permits any act or thing to be done in contravention or in violation of any of the provisions of this Bylaw, who neglects to do or refrains from doing anything required to be done by any of the provisions of this Bylaw or who does any act which violates any of the provisions of this Bylaw, is guilty of an offence against this Bylaw and liable to the penalties hereby imposed. (3) Each day that a violation continues to exist shall constitute a separate offence. (4) Every person who commits an offence against this Bylaw is liable to a fine and penalty of no more than $2000.00 and not less than $100.00 for each offence, and in default of payment thereof, forthwith or within such time as the presiding Provincial Court Judge of the Province shall direct the fine imposed shall be recoverable under the provisions of the Offence Act R.S.B.C. 1996, Chapter 338 and all amendments.\n7. Severability If a court of competent jurisdiction should declare any section of part of a section of this Bylaw to be invalid, such declaration shall not affect the validity of the remainder of this Bylaw all of which shall remain valid and in force.\n8. Repeal Bylaw No. 1046 and all amendments are hereby repealed. Firearms Regulation Bylaw Page 3 Bylaw No. 2961 READ A FIRST, SECOND AND THIRD TIME this twenty ninth day of June, 2015. FINALLY ADOPTED this thirteenth day of July, 2015. _________________________ MAYOR _________________________ CORPORATE OFFICER [Page 3: text read by OCR from the page image] Firearms Regulation Bylaw Page 3 Bylaw No. 2961 READ A FIRST, SECOND AND THIRD TIME this twenty ninth day of June, 2015. FINALLY ADOPTED this thirteenth day of July, 2015. MAYOR CMhughare CORPORATE OFFICER",
+    "url": "https://www.langleycity.ca/media/file/firearms-bylaw",
+    "version": "Captured 2026-10-19",
+    "confirmed": true,
+    "file": "raw/2026-10/bylaws/city-of-langley/firearms-bylaw-9a5701.txt"
+  },
+  "runs": {
+    "run1": [
+      {
+        "task_id": "bylaw-51575dc90ee6",
+        "run": 1,
+        "mode": "agent",
+        "model": "Claude Code agent mode",
+        "prompt_version": "bylaw.v1",
+        "schema_id": "bylaw.v1",
+        "produced_at": "2026-10-20T15:16:07Z",
+        "answer": {
+          "bylaw": {
+            "title": "Firearms Regulation Bylaw, 2015, No. 2961",
+            "number": "2961",
+            "adopted_on": "2015-07-13",
+            "amended_by": []
+          },
+          "definitions": [
+            {
+              "term": "Bow",
+              "meaning": "includes a long bow, recurve bow, composite bow, or crossbow",
+              "quote": "Bow includes a long bow, recurve bow, composite bow, or crossbow."
+            },
+            {
+              "term": "Firearm",
+              "meaning": "includes any barreled weapon using a propellant, compressed air, explosives, or gas from which any shot, bullet, or other projectile can be discharged but does not include: (a) Starting pistols when used in connection with an athletic or sporting event where blank ammunition is used; (b) paintball guns when used in a licensed and insured facility designed for organized paintball games",
+              "quote": "Firearm includes any barreled weapon using a propellant, compressed air, explosives, or gas from which any shot, bullet, or other projectile can be discharged but does not include: (a) Starting pistols when used in connection with an athletic or sporting event where blank ammunition is used; (b) paintball guns when used in a licensed and insured facility designed for organized paintball games."
+            },
+            {
+              "term": "City",
+              "meaning": "the City of Langley",
+              "quote": "City means the City of Langley."
+            }
+          ],
+          "prohibitions": [
+            {
+              "what": "discharge a firearm or bow",
+              "firearm_types": [
+                "all_firearms",
+                "air_gun",
+                "bow"
+              ],
+              "where": "within the City",
+              "quote": "No person shall discharge a firearm or bow within the City."
+            }
+          ],
+          "exceptions": [
+            {
+              "applies_to": "This Bylaw",
+              "firearm_type": null,
+              "hunting_only": false,
+              "permit": null,
+              "season": null,
+              "quote": "This Bylaw, does not apply to: (1) a peace officer, a conservation officer under the Wildlife Act, an enforcement officer of the Department of Fisheries and Oceans, an employee of the Canadian Wildlife service, or a person appointed to enforce the City’s Animal Control Bylaw, when engaged in the lawful performance of their duties;"
+            },
+            {
+              "applies_to": "This Bylaw",
+              "firearm_type": "firearm or bow",
+              "hunting_only": false,
+              "permit": null,
+              "season": null,
+              "quote": "(2) land located in the Agricultural Land Reserve where a firearm or bow is discharged for the purpose of: (a) the protection of agricultural crops, livestock, or domestic animals from wildlife; or (b) the humane destruction of livestock."
+            }
+          ],
+          "distance_rules": [],
+          "schedule_maps": [],
+          "target_shooting": "prohibited",
+          "quotes": [
+            {
+              "field": "bylaw.title",
+              "quote": "This bylaw shall be cited as the “Firearms Regulation Bylaw, 2015, No. 2961”."
+            },
+            {
+              "field": "bylaw.number",
+              "quote": "BYLAW NO. 2961"
+            },
+            {
+              "field": "bylaw.adopted_on",
+              "quote": "FINALLY ADOPTED this thirteenth day of July, 2015."
+            },
+            {
+              "field": "target_shooting",
+              "quote": "No person shall discharge a firearm or bow within the City."
+            }
+          ],
+          "uncertain": []
+        }
+      }
+    ],
+    "run2": [
+      {
+        "task_id": "bylaw-51575dc90ee6",
+        "run": 2,
+        "mode": "agent",
+        "model": "Claude Code agent mode, fresh subagent",
+        "prompt_version": "bylaw.v1",
+        "schema_id": "bylaw.v1",
+        "produced_at": "2026-10-20T15:17:06Z",
+        "answer": {
+          "bylaw": {
+            "title": "Firearms Regulation Bylaw, 2015, No. 2961",
+            "number": "2961",
+            "adopted_on": "2015-07-13",
+            "amended_by": []
+          },
+          "definitions": [
+            {
+              "term": "Bow",
+              "meaning": "includes a long bow, recurve bow, composite bow, or crossbow",
+              "quote": "Bow includes a long bow, recurve bow, composite bow, or crossbow."
+            },
+            {
+              "term": "Firearm",
+              "meaning": "includes any barreled weapon using a propellant, compressed air, explosives, or gas from which any shot, bullet, or other projectile can be discharged but does not include starting pistols when used in connection with an athletic or sporting event where blank ammunition is used, or paintball guns when used in a licensed and insured facility designed for organized paintball games",
+              "quote": "Firearm includes any barreled weapon using a propellant, compressed air, explosives, or gas from which any shot, bullet, or other projectile can be discharged but does not include: (a) Starting pistols when used in connection with an athletic or sporting event where blank ammunition is used; (b) paintball guns when used in a licensed and insured facility designed for organized paintball games."
+            },
+            {
+              "term": "City",
+              "meaning": "the City of Langley",
+              "quote": "City means the City of Langley."
+            }
+          ],
+          "prohibitions": [
+            {
+              "what": "discharge a firearm or bow",
+              "firearm_types": [
+                "all_firearms",
+                "air_gun",
+                "bow"
+              ],
+              "where": "within the City",
+              "quote": "No person shall discharge a firearm or bow within the City."
+            }
+          ],
+          "exceptions": [
+            {
+              "applies_to": "This Bylaw",
+              "firearm_type": null,
+              "hunting_only": false,
+              "permit": null,
+              "season": null,
+              "quote": "(1) a peace officer, a conservation officer under the Wildlife Act, an enforcement officer of the Department of Fisheries and Oceans, an employee of the Canadian Wildlife service, or a person appointed to enforce the City’s Animal Control Bylaw, when engaged in the lawful performance of their duties;"
+            },
+            {
+              "applies_to": "This Bylaw",
+              "firearm_type": "firearm or bow",
+              "hunting_only": false,
+              "permit": null,
+              "season": null,
+              "quote": "(2) land located in the Agricultural Land Reserve where a firearm or bow is discharged for the purpose of: (a) the protection of agricultural crops, livestock, or domestic animals from wildlife; or (b) the humane destruction of livestock."
+            }
+          ],
+          "distance_rules": [],
+          "schedule_maps": [],
+          "target_shooting": "prohibited",
+          "quotes": [
+            {
+              "field": "bylaw.title",
+              "quote": "This bylaw shall be cited as the “Firearms Regulation Bylaw, 2015, No. 2961”."
+            },
+            {
+              "field": "bylaw.number",
+              "quote": "BYLAW NO. 2961"
+            },
+            {
+              "field": "bylaw.adopted_on",
+              "quote": "FINALLY ADOPTED this thirteenth day of July, 2015."
+            },
+            {
+              "field": "target_shooting",
+              "quote": "No person shall discharge a firearm or bow within the City."
+            }
+          ],
+          "uncertain": []
+        }
+      }
+    ]
+  },
+  "links": [
+    {
+      "label": "Bylaw document",
+      "href": "https://www.langleycity.ca/media/file/firearms-bylaw"
+    }
+  ],
+  "status": "open",
+  "created": "2026-10-20T15:23:23.039Z",
+  "updated": "2026-10-20T15:23:23.039Z"
+}

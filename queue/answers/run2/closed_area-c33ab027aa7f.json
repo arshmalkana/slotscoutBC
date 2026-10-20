@@ -1,0 +1,204 @@
+{
+  "task_id": "closed_area-c33ab027aa7f",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T15:19:48Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [
+      "except thereout any lands which may lie within the corporate limits of any city, town, village or district municipality or any lands which may be hereinafter incorporated therein"
+    ],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "New Westminster District"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the southwest corner of Lot 226, Group 1, NWD",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the southwest corner of Lot 226, Group 1, NWD, being a point on the high water mark of the waters of Port Moody, on the northerly shore thereof"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "lot_line",
+          "feature": "Lot 226",
+          "side_or_bank": "westerly boundary",
+          "until": "the northwest corner thereof",
+          "distance": null,
+          "quote": "thence northerly along the westerly boundary of said Lot 226 to the northwest corner thereof"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "lot_line",
+          "feature": "Lots 226 and 227",
+          "side_or_bank": "northerly boundaries",
+          "until": "the northeast corner of said Lot 227",
+          "distance": null,
+          "quote": "thence easterly along the northerly boundaries of Lots 226 and 227 to the northeast corner of said Lot 227"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "lot_line",
+          "feature": "Lot 227",
+          "side_or_bank": "easterly boundary",
+          "until": "the northerly boundary of Lot 350",
+          "distance": null,
+          "quote": "thence southerly along the easterly boundary of said Lot 227 to the northerly boundary of Lot 350"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "lot_line",
+          "feature": "Lot 350",
+          "side_or_bank": "northerly boundary",
+          "until": "the northeast corner thereof",
+          "distance": null,
+          "quote": "thence easterly along said northerly boundary of Lot 350 to the northeast corner thereof"
+        },
+        {
+          "start": null,
+          "direction": "easterly, northerly and easterly",
+          "follow": "lot_line",
+          "feature": "Lot 348",
+          "side_or_bank": "northerly, westerly and northerly boundaries",
+          "until": "the northeast corner thereof",
+          "distance": null,
+          "quote": "thence easterly, northerly and easterly along the northerly, westerly and northerly boundaries of Lot 348 to the northeast corner thereof"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "lot_line",
+          "feature": "Sections 16, 21, 28 and 33, Township 39, WCM",
+          "side_or_bank": "easterly boundaries",
+          "until": "the northeast corner of said Section 33",
+          "distance": null,
+          "quote": "thence northerly along the easterly boundaries of Sections 16, 21, 28 and 33, Township 39, WCM, to the northeast corner of said Section 33"
+        },
+        {
+          "start": "the northeast corner of said Section 33",
+          "direction": null,
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the northeast corner of the District Municipality of North Vancouver",
+          "distance": null,
+          "quote": "and from the northeast corner of said Section 33 in a straight line to the northeast corner of the District Municipality of North Vancouver"
+        },
+        {
+          "start": null,
+          "direction": "general southerly and easterly",
+          "follow": "other",
+          "feature": "Indian Arm, Burrard Inlet, and the waters of Port Moody",
+          "side_or_bank": "middle lines",
+          "until": "a point 365 m (1 200 feet) due North of the intersection of the centreline of North Road with the high water mark of the waters of Port Moody, on the southerly shore thereof",
+          "distance": "365 m (1 200 feet)",
+          "quote": "thence in a general southerly and easterly direction along the middle lines of Indian Arm, Burrard Inlet, and the waters of Port Moody to a point 365 m (1 200 feet) due North of the intersection of the centreline of North Road with the high water mark of the waters of Port Moody, on the southerly shore thereof"
+        },
+        {
+          "start": null,
+          "direction": "due East",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point due South of the aforesaid southwest corner of Lot 226",
+          "distance": null,
+          "quote": "thence due East to a point due South of the aforesaid southwest corner of Lot 226"
+        },
+        {
+          "start": null,
+          "direction": "North",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "said southeast corner of Lot 226, being point of commencement",
+          "distance": null,
+          "quote": "thence North to said southeast corner of Lot 226, being point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "exemptions[0]",
+        "quote": "except thereout any lands which may lie within the corporate limits of any city, town, village or district municipality or any lands which may be hereinafter incorporated therein"
+      },
+      {
+        "field": "within",
+        "quote": "in New Westminster District"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within the following described boundaries: Commencing at the southwest corner of Lot 226"
+      },
+      {
+        "field": "geometry.steps[0]",
+        "quote": "Commencing at the southwest corner of Lot 226, Group 1, NWD, being a point on the high water mark of the waters of Port Moody, on the northerly shore thereof"
+      },
+      {
+        "field": "geometry.steps[1]",
+        "quote": "thence northerly along the westerly boundary of said Lot 226 to the northwest corner thereof"
+      },
+      {
+        "field": "geometry.steps[2]",
+        "quote": "thence easterly along the northerly boundaries of Lots 226 and 227 to the northeast corner of said Lot 227"
+      },
+      {
+        "field": "geometry.steps[3]",
+        "quote": "thence southerly along the easterly boundary of said Lot 227 to the northerly boundary of Lot 350"
+      },
+      {
+        "field": "geometry.steps[4]",
+        "quote": "thence easterly along said northerly boundary of Lot 350 to the northeast corner thereof"
+      },
+      {
+        "field": "geometry.steps[5]",
+        "quote": "thence easterly, northerly and easterly along the northerly, westerly and northerly boundaries of Lot 348 to the northeast corner thereof"
+      },
+      {
+        "field": "geometry.steps[6]",
+        "quote": "thence northerly along the easterly boundaries of Sections 16, 21, 28 and 33, Township 39, WCM, to the northeast corner of said Section 33"
+      },
+      {
+        "field": "geometry.steps[7]",
+        "quote": "and from the northeast corner of said Section 33 in a straight line to the northeast corner of the District Municipality of North Vancouver"
+      },
+      {
+        "field": "geometry.steps[8]",
+        "quote": "thence in a general southerly and easterly direction along the middle lines of Indian Arm, Burrard Inlet, and the waters of Port Moody to a point 365 m (1 200 feet) due North of the intersection of the centreline of North Road with the high water mark of the waters of Port Moody, on the southerly shore thereof"
+      },
+      {
+        "field": "geometry.steps[9]",
+        "quote": "thence due East to a point due South of the aforesaid southwest corner of Lot 226"
+      },
+      {
+        "field": "geometry.steps[10]",
+        "quote": "thence North to said southeast corner of Lot 226, being point of commencement"
+      }
+    ],
+    "uncertain": []
+  }
+}

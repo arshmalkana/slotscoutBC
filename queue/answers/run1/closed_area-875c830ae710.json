@@ -1,0 +1,69 @@
+{
+  "task_id": "closed_area-875c830ae710",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T15:18:34Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": null,
+    "geometry": {
+      "method": "road_buffer",
+      "road": {
+        "name": "Highway 99",
+        "source_hint": "highway"
+      },
+      "feature": null,
+      "buffer_m": 400,
+      "side": "both",
+      "from": {
+        "type": "boundary",
+        "road": null,
+        "name": "northern boundary of the District of Squamish"
+      },
+      "to": {
+        "type": "boundary",
+        "road": null,
+        "name": "southern boundary of the Resort Municipality of Whistler"
+      },
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting or Hunting Areas"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within 400 metres of the road allowance of Highway 99"
+      },
+      {
+        "field": "geometry.road",
+        "quote": "Highway 99"
+      },
+      {
+        "field": "geometry.buffer_m",
+        "quote": "within 400 metres"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "within 400 metres of the road allowance"
+      },
+      {
+        "field": "geometry.from",
+        "quote": "the northern boundary of the District of Squamish"
+      },
+      {
+        "field": "geometry.to",
+        "quote": "the southern boundary of the Resort Municipality of Whistler"
+      }
+    ],
+    "uncertain": [
+      "within"
+    ]
+  }
+}

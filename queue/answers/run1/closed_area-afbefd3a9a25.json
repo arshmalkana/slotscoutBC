@@ -1,0 +1,726 @@
+{
+ "task_id": "closed_area-afbefd3a9a25",
+ "run": 1,
+ "mode": "agent",
+ "model": "Claude Code agent mode",
+ "prompt_version": "closed_area.v1",
+ "schema_id": "closed_area.v1",
+ "produced_at": "2026-10-20T15:19:05Z",
+ "answer": {
+  "effect": "no_shooting",
+  "exemptions": [
+   "Block A of District Lot 7132"
+  ],
+  "period": null,
+  "within": null,
+  "geometry": {
+   "method": "metes_and_bounds",
+   "road": null,
+   "feature": null,
+   "buffer_m": null,
+   "side": null,
+   "from": null,
+   "to": null,
+   "steps": [
+    {
+     "start": "a point lying 4.023 km south and 201.1 m east of the southeast corner of District Lot 5316, New Westminster District",
+     "direction": null,
+     "follow": null,
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": null,
+     "quote": "Commencing at a point lying 4.023 km south and 201.1 m east of the southeast corner of District Lot 5316, New Westminster District"
+    },
+    {
+     "start": null,
+     "direction": "due South",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "3.25 km",
+     "quote": "thence due South 3.25 km"
+    },
+    {
+     "start": null,
+     "direction": "due West",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "5.631 km",
+     "quote": "thence due West 5.631 km"
+    },
+    {
+     "start": null,
+     "direction": "due South",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "4.827 km, more or less",
+     "quote": "thence due South 4.827 km, more or less"
+    },
+    {
+     "start": null,
+     "direction": "due West",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": "the southeast corner of District Lot 7224, Group 1, New Westminster District",
+     "distance": null,
+     "quote": "thence due West to the southeast corner of District Lot 7224, Group 1, New Westminster District"
+    },
+    {
+     "start": null,
+     "direction": "west",
+     "follow": "lot_line",
+     "feature": "Lot 7224",
+     "side_or_bank": "southerly boundary and the westerly production of the southerly boundary",
+     "until": null,
+     "distance": "2.575 km",
+     "quote": "thence west along the southerly boundary and the westerly production of the southerly boundary of said Lot 7224 a distance of 2.575 km"
+    },
+    {
+     "start": null,
+     "direction": "due South",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": "a point, said point lying 1.65 km east and 1.85 km south of the southeast corner of Lot 3113, Group l, New Westminster District",
+     "distance": null,
+     "quote": "thence due South to a point, said point lying 1.65 km east and 1.85 km south of the southeast corner of Lot 3113, Group l, New Westminster District"
+    },
+    {
+     "start": null,
+     "direction": "northwesterly",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": "the most easterly southeast corner of Lot 6421, Group l, New Westminster District",
+     "distance": null,
+     "quote": "thence in a northwesterly direction to the most easterly southeast corner of Lot 6421, Group l, New Westminster District"
+    },
+    {
+     "start": null,
+     "direction": "westerly, then southerly, then westerly",
+     "follow": "lot_line",
+     "feature": "Lot 6421",
+     "side_or_bank": "easterly and southerly boundaries",
+     "until": "a point of intersection with the easterly boundary of Lot 3116, Group 1, New Westminster District",
+     "distance": null,
+     "quote": "thence westerly, then southerly, then westerly along the easterly and southerly boundaries of said Lot 6421 to a point of intersection with the easterly boundary of Lot 3116, Group 1, New Westminster District"
+    },
+    {
+     "start": null,
+     "direction": "southerly",
+     "follow": "lot_line",
+     "feature": "Lot 3116",
+     "side_or_bank": "easterly boundary",
+     "until": "the southeast corner and a point thereon",
+     "distance": null,
+     "quote": "thence southerly along the easterly boundary of said Lot 3116 to the southeast corner and a point thereon"
+    },
+    {
+     "start": null,
+     "direction": "southerly",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": "a point, said point lying 1.65 km east and 4.445 km south of the southeast corner of Lot 3113, Group 1, New Westminster District",
+     "distance": null,
+     "quote": "thence in a southerly direction to a point, said point lying 1.65 km east and 4.445 km south of the southeast corner of Lot 3113, Group 1, New Westminster District"
+    },
+    {
+     "start": null,
+     "direction": "due South",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "7.230 km",
+     "quote": "thence due South 7.230 km"
+    },
+    {
+     "start": null,
+     "direction": "east",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "4.827 km",
+     "quote": "thence east 4.827 km"
+    },
+    {
+     "start": null,
+     "direction": "due South",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "9.654 km",
+     "quote": "thence due South 9.654 km"
+    },
+    {
+     "start": null,
+     "direction": "due West",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "980 m",
+     "quote": "thence due West 980 m"
+    },
+    {
+     "start": null,
+     "direction": "due South",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "985 m",
+     "quote": "thence due South 985 m"
+    },
+    {
+     "start": null,
+     "direction": "due West",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": "a point due North of the northeast corner of District Lot 7132, Group 1, New Westminster District",
+     "distance": "842 m, more or less",
+     "quote": "thence due West 842 m, more or less, to a point due North of the northeast corner of District Lot 7132, Group 1, New Westminster District"
+    },
+    {
+     "start": null,
+     "direction": "due South",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": "said point lying 500 m north of the northeast corner of Lot 7132, Group 1, New Westminster District",
+     "distance": "1.420 km",
+     "quote": "thence due South 1.420 km, said point lying 500 m north of the northeast corner of Lot 7132, Group 1, New Westminster District"
+    },
+    {
+     "start": null,
+     "direction": "due West",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "200 m",
+     "quote": "thence due West 200 m"
+    },
+    {
+     "start": null,
+     "direction": "due South",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": "the northerly boundary of Lot 7132, Group 1, New Westminster District",
+     "distance": "500 m",
+     "quote": "thence due South 500 m to the northerly boundary of Lot 7132, Group 1, New Westminster District"
+    },
+    {
+     "start": null,
+     "direction": "due West",
+     "follow": "lot_line",
+     "feature": "Lot 7132",
+     "side_or_bank": "northerly boundary of Lot 7132 and the westerly prolongation thereof",
+     "until": null,
+     "distance": "500 m",
+     "quote": "thence due West 500 m along the said northerly boundary of Lot 7132 and the westerly prolongation thereof"
+    },
+    {
+     "start": null,
+     "direction": "due South",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "480 m",
+     "quote": "thence due South 480 m"
+    },
+    {
+     "start": null,
+     "direction": "southeasterly",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": "a point, said point lying 1.02 km south of the northeast corner of Lot 7132, Group 1, New Westminster District",
+     "distance": "860 m",
+     "quote": "thence in a southeasterly direction 860 m to a point, said point lying 1.02 km south of the northeast corner of Lot 7132, Group 1, New Westminster District"
+    },
+    {
+     "start": null,
+     "direction": "due South",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "300 m",
+     "quote": "thence due South 300 m"
+    },
+    {
+     "start": null,
+     "direction": "due East",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "804 m",
+     "quote": "thence due East 804 m"
+    },
+    {
+     "start": null,
+     "direction": "due South",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "342 m",
+     "quote": "thence due South 342 m"
+    },
+    {
+     "start": null,
+     "direction": "due East",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "3.226 km",
+     "quote": "thence due East 3.226 km"
+    },
+    {
+     "start": null,
+     "direction": "due North",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "1.811 km",
+     "quote": "thence due North 1.811 km"
+    },
+    {
+     "start": null,
+     "direction": "due East",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "1.609 km",
+     "quote": "thence due East 1.609 km"
+    },
+    {
+     "start": null,
+     "direction": "due North",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "804 m",
+     "quote": "thence due North 804 m"
+    },
+    {
+     "start": null,
+     "direction": "due East",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "1.609 km",
+     "quote": "thence due East 1.609 km"
+    },
+    {
+     "start": null,
+     "direction": "due North",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "2 km",
+     "quote": "thence due North 2 km"
+    },
+    {
+     "start": null,
+     "direction": "due East",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "3.5 km",
+     "quote": "thence due East 3.5 km"
+    },
+    {
+     "start": null,
+     "direction": "due South",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "4.827 km",
+     "quote": "thence due South 4.827 km"
+    },
+    {
+     "start": null,
+     "direction": "due East",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "38.5 km",
+     "quote": "thence due East 38.5 km"
+    },
+    {
+     "start": null,
+     "direction": "due North",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "10.49 km",
+     "quote": "thence due North 10.49 km"
+    },
+    {
+     "start": null,
+     "direction": "due West",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "5.705 km",
+     "quote": "thence due West 5.705 km"
+    },
+    {
+     "start": null,
+     "direction": "north",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": "the southeast corner of District Lot 5533, being Indian Reserve No. 12 \"Glazier Creek\", Group 1, New Westminster District",
+     "distance": "2.415 km, more or less",
+     "quote": "thence north 2.415 km, more or less, to the southeast corner of District Lot 5533, being Indian Reserve No. 12 \"Glazier Creek\", Group 1, New Westminster District"
+    },
+    {
+     "start": null,
+     "direction": "east, and then in a general northerly then southeasterly direction",
+     "follow": "lot_line",
+     "feature": "District Lot 5533",
+     "side_or_bank": "south, west and north boundaries",
+     "until": "the northeast corner thereof, said corner lying on the natural boundary of Glacier Lake, on the easterly shore thereof",
+     "distance": null,
+     "quote": "thence east, and then in a general northerly then southeasterly direction along the south, west and north boundaries of said District Lot 5533 to the northeast corner thereof, said corner lying on the natural boundary of Glacier Lake, on the easterly shore thereof"
+    },
+    {
+     "start": null,
+     "direction": "general northerly, westerly then southerly",
+     "follow": "shoreline",
+     "feature": "Glacier Lake",
+     "side_or_bank": "easterly, northerly and westerly shores",
+     "until": "a point thereon, said point lying 5.02 km north and 935 m east of the southeast corner of aforesaid District Lot 5533",
+     "distance": null,
+     "quote": "thence in a general northerly, westerly then southerly direction along the natural boundary of Glacier Lake on the easterly, northerly and westerly shores thereof to a point thereon, said point lying 5.02 km north and 935 m east of the southeast corner of aforesaid District Lot 5533"
+    },
+    {
+     "start": null,
+     "direction": "due West",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "3.195 km",
+     "quote": "thence due West 3.195 km"
+    },
+    {
+     "start": null,
+     "direction": "due North",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "7.242 km",
+     "quote": "thence due North 7.242 km"
+    },
+    {
+     "start": null,
+     "direction": "due West",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "6.437 km",
+     "quote": "thence due West 6.437 km"
+    },
+    {
+     "start": null,
+     "direction": "due North",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": "the 50 degree 14 minutes parallel of north latitude",
+     "distance": "30.578 km, more or less",
+     "quote": "thence due North 30.578 km, more or less, to the 50 degree 14 minutes parallel of north latitude"
+    },
+    {
+     "start": null,
+     "direction": "west",
+     "follow": "other",
+     "feature": "said parallel",
+     "side_or_bank": null,
+     "until": null,
+     "distance": "19.312 km",
+     "quote": "thence west 19.312 km along said parallel"
+    },
+    {
+     "start": null,
+     "direction": "due South",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "9.254 km",
+     "quote": "thence due South 9.254 km"
+    },
+    {
+     "start": null,
+     "direction": "due West",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "4.705 km",
+     "quote": "thence due West 4.705 km"
+    },
+    {
+     "start": null,
+     "direction": "due South",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": "a point of intersection with the natural boundary of Blackcomb Creek, on the left bank thereof",
+     "distance": null,
+     "quote": "thence due South to a point of intersection with the natural boundary of Blackcomb Creek, on the left bank thereof"
+    },
+    {
+     "start": null,
+     "direction": "due South",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "50 m",
+     "quote": "thence due South 50 m"
+    },
+    {
+     "start": null,
+     "direction": "general southerly",
+     "follow": "creek",
+     "feature": "Blackcomb Creek",
+     "side_or_bank": "left bank",
+     "until": "a point lying due East of the northeast corner of Lot 4750 as shown on NTS Map 92J/2",
+     "distance": "50 m perpendicularly distant",
+     "quote": "thence in a general southerly direction parallel to and 50 m perpendicularly distant from the left bank of the natural boundary of Blackcomb Creek to a point lying due East of the northeast corner of Lot 4750 as shown on NTS Map 92J/2"
+    },
+    {
+     "start": null,
+     "direction": "due South",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "1.15 km",
+     "quote": "thence due South 1.15 km"
+    },
+    {
+     "start": null,
+     "direction": "due East",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "100 m",
+     "quote": "thence due East 100 m"
+    },
+    {
+     "start": null,
+     "direction": null,
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "325 m",
+     "quote": "thence due 325 m"
+    },
+    {
+     "start": null,
+     "direction": "due East",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "130 m",
+     "quote": "thence due East 130 m"
+    },
+    {
+     "start": null,
+     "direction": "due South",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "370 m",
+     "quote": "thence due South 370 m"
+    },
+    {
+     "start": null,
+     "direction": "due East",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "220 m",
+     "quote": "thence due East 220 m"
+    },
+    {
+     "start": null,
+     "direction": "due South",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "1.3 km",
+     "quote": "thence due South 1.3 km"
+    },
+    {
+     "start": null,
+     "direction": "due West",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "300 m",
+     "quote": "thence due West 300 m"
+    },
+    {
+     "start": null,
+     "direction": "due South",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "700 m",
+     "quote": "thence due South 700 m"
+    },
+    {
+     "start": null,
+     "direction": "due West",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "1.75 km",
+     "quote": "thence due West 1.75 km"
+    },
+    {
+     "start": null,
+     "direction": "due South",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "1.5 km",
+     "quote": "thence due South 1.5 km"
+    },
+    {
+     "start": null,
+     "direction": "due West",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "1.1 km",
+     "quote": "thence due West 1.1 km"
+    },
+    {
+     "start": null,
+     "direction": "due South",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "545 m",
+     "quote": "thence due South 545 m"
+    },
+    {
+     "start": null,
+     "direction": "due East",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "350 m",
+     "quote": "thence due East 350 m"
+    },
+    {
+     "start": null,
+     "direction": "southerly and westerly",
+     "follow": "other",
+     "feature": "height of land",
+     "side_or_bank": null,
+     "until": "Flute Peak",
+     "distance": null,
+     "quote": "thence southerly and westerly along the height of land to Flute Peak"
+    },
+    {
+     "start": null,
+     "direction": "northwest",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": "Piccolo Peak",
+     "distance": null,
+     "quote": "thence northwest in a straight line to Piccolo Peak"
+    },
+    {
+     "start": null,
+     "direction": "northwest",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": "1.86 km",
+     "quote": "thence continuing northwest along the production of said straight line 1.86 km"
+    },
+    {
+     "start": null,
+     "direction": "west",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": "the point of commencement",
+     "distance": null,
+     "quote": "thence west in a straight line to the point of commencement"
+    }
+   ]
+  },
+  "quotes": [
+   {
+    "field": "effect",
+    "quote": "No Shooting or Hunting Areas"
+   },
+   {
+    "field": "exemptions[0]",
+    "quote": "EXCEPT Block A of District Lot 7132"
+   },
+   {
+    "field": "geometry.method",
+    "quote": "described as: Commencing"
+   }
+  ],
+  "uncertain": [
+   "within",
+   "geometry.steps[52].direction"
+  ]
+ }
+}

@@ -1,0 +1,92 @@
+{
+  "jurisdiction": "muni:Village of Belcarra",
+  "covers": [
+    "muni:Village of Belcarra"
+  ],
+  "doc": "muni:Village of Belcarra:42e9b2b6",
+  "title": "Village of Belcarra Firearms Control Bylaw No. 498, 2016",
+  "number": "498, 2016",
+  "url": "https://belcarra.ca/assets/media/2019/05/vob-bylaw-498_firearms-control.pdf",
+  "source_version": "Captured 2026-10-19",
+  "status": "candidate",
+  "run_agreement": true,
+  "extracted_on": "2026-10-20",
+  "parts": [
+    {
+      "task_id": "bylaw-3578174fd5ce",
+      "state": "agreed",
+      "answer": {
+        "bylaw": {
+          "title": "Village of Belcarra Firearms Control Bylaw No. 498, 2016",
+          "number": "498, 2016",
+          "adopted_on": "2016-04-25",
+          "amended_by": []
+        },
+        "definitions": [
+          {
+            "term": "firearm",
+            "meaning": "a barrelled weapon from which any shot, bullet or other projectile can be discharged and that is capable of causing serious bodily injury or death to a person, and includes any frame or receiver of such a barrelled weapon and anything that can be adapted for use as a firearm",
+            "quote": "“firearm” means a barrelled weapon from which any shot, bullet or other projectile can be discharged and that is capable of causing serious bodily injury or death to a person, and includes any frame or receiver of such a barrelled weapon and anything that can be adapted for use as a firearm."
+          },
+          {
+            "term": "bow",
+            "meaning": "a bow as defined in the Wildlife Act",
+            "quote": "“bow” means a bow as defined in the Wildlife Act."
+          }
+        ],
+        "prohibitions": [
+          {
+            "what": "fire or discharge, or permit to be fired or discharged, any firearm",
+            "firearm_types": [
+              "all_firearms"
+            ],
+            "where": "within the Village of Belcarra",
+            "quote": "No person shall fire or discharge, or permit to be fired or discharged, any firearm within the Village of Belcarra."
+          },
+          {
+            "what": "fire or discharge, permit to be fired or discharged, a bow",
+            "firearm_types": [
+              "bow"
+            ],
+            "where": "within the Village of Belcarra",
+            "quote": "No person shall fire or discharge, permit to be fired or discharged, a bow within the Village of Belcarra."
+          }
+        ],
+        "exceptions": [
+          {
+            "applies_to": "Section 3",
+            "firearm_type": null,
+            "hunting_only": false,
+            "permit": null,
+            "season": null,
+            "quote": "Section 3 does not apply to a person who is: a) a peace Officer; b) an officer under the Wildlife Act; C) a fishery officer under the Fisheries Act; or, d) otherwise authorized by a provincial or federal enactment to possess and discharge firearms in the course of his or her duties, and who is engaged in, and acting in only accordance with, the lawful performance of his or her duties."
+          }
+        ],
+        "distance_rules": [],
+        "schedule_maps": [],
+        "target_shooting": "prohibited",
+        "quotes": [
+          {
+            "field": "bylaw.title",
+            "quote": "This Bylaw may be cited as the “Village of Belcarra Firearms Control Bylaw No. 498, 2016”."
+          },
+          {
+            "field": "bylaw.number",
+            "quote": "Bylaw No. 498, 2016"
+          },
+          {
+            "field": "bylaw.adopted_on",
+            "quote": "ADOPTED by the Council on April 25, 2016."
+          },
+          {
+            "field": "target_shooting",
+            "quote": "No person shall fire or discharge, or permit to be fired or discharged, any firearm within the Village of Belcarra."
+          }
+        ],
+        "uncertain": []
+      },
+      "rejected_quotes": [],
+      "disagreements": []
+    }
+  ]
+}

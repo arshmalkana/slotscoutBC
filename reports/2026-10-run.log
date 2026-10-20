@@ -1234,3 +1234,995 @@
 2026-10-20T15:12:20.836Z [extract] run 1 answers 103/361 (28%), 258 left: 258 brief(s) in queue/agent/run1
 2026-10-20T15:12:20.836Z [extract] run 2 answers 103/361 (28%), 258 left: 258 brief(s) in queue/agent/run2
 2026-10-20T15:12:20.837Z [extract] agent mode: 258 run-1 and 258 run-2 answers needed; see queue/AGENT_TASKS.md
+2026-10-20T15:15:01.669Z [validate] 1 rule features, 332 bylaw rows, 9 regions, 41 sources: 0 errors, 3 warnings
+2026-10-20T15:16:17.685Z [build] parts 0/4 (0%), 4 left: closed areas
+2026-10-20T15:16:17.688Z [build] closed areas 1/254 (0%), 253 left: Closed Areas Regulation, Schedule 5, section 45 (Lakelse Lake): waiting for extraction
+2026-10-20T15:16:17.688Z [build] closed areas 2/254 (0%), 252 left: Closed Areas Regulation, Schedule 9, section 4 (Barnston Island): waiting for extraction
+2026-10-20T15:16:17.689Z [build] closed areas 3/254 (1%), 251 left: Closed Areas Regulation, Schedule 5, section 95 (Equity Mines): waiting for extraction
+2026-10-20T15:16:17.689Z [build] closed areas 4/254 (1%), 250 left: Closed Areas Regulation, Schedule 3, section 10 (Similkameen Mining Company Limited): waiting for extraction
+2026-10-20T15:16:17.689Z [build] closed areas 5/254 (1%), 249 left: Closed Areas Regulation, Schedule 3, section 61 (Elkview Operations): waiting for extraction
+2026-10-20T15:16:17.690Z [build] closed areas 6/254 (2%), 248 left: Closed Areas Regulation, Schedule 5, section 55 (Yale): waiting for extraction
+2026-10-20T15:16:17.690Z [build] closed areas 7/254 (2%), 247 left: Closed Areas Regulation, Schedule 3, section 44 (Nitinat River): waiting for extraction
+2026-10-20T15:16:17.690Z [build] closed areas 8/254 (3%), 246 left: Closed Areas Regulation, Schedule 1, section 1 (Bergenham and Moberly): waiting for extraction
+2026-10-20T15:16:17.691Z [build] closed areas 9/254 (3%), 245 left: Closed Areas Regulation, Schedule 5, section 28 (Highways): waiting for extraction
+2026-10-20T15:16:17.691Z [build] closed areas 10/254 (3%), 244 left: Closed Areas Regulation, Schedule 3, section 40 (Lazo Marsh): waiting for extraction
+2026-10-20T15:16:17.692Z [build] closed areas 11/254 (4%), 243 left: Closed Areas Regulation, Schedule 5, section 11 (Bowen Island): waiting for extraction
+2026-10-20T15:16:17.692Z [build] closed areas 12/254 (4%), 242 left: Closed Areas Regulation, Schedule 5, section 124 (Gillies Bay and Shelter Point Roads): waiting for extraction
+2026-10-20T15:16:17.692Z [build] closed areas 13/254 (5%), 241 left: Closed Areas Regulation, Schedule 5, section 110 (Windermere): waiting for extraction
+2026-10-20T15:16:17.693Z [build] closed areas 14/254 (5%), 240 left: Closed Areas Regulation, Schedule 3, section 68 (Burnt River): waiting for extraction
+2026-10-20T15:16:17.693Z [build] closed areas 15/254 (5%), 239 left: Closed Areas Regulation, Schedule 1, section 4 (George C. Reifel): waiting for extraction
+2026-10-20T15:16:17.693Z [build] closed areas 16/254 (6%), 238 left: Closed Areas Regulation, Schedule 3, section 45 (Cowichan Lake): waiting for extraction
+2026-10-20T15:16:17.694Z [build] closed areas 17/254 (6%), 237 left: Closed Areas Regulation, Schedule 5, section 20 (Charlie Lake): waiting for extraction
+2026-10-20T15:16:17.694Z [build] closed areas 18/254 (7%), 236 left: Closed Areas Regulation, Schedule 5, section 62 (Squamish): waiting for extraction
+2026-10-20T15:16:17.694Z [build] closed areas 19/254 (7%), 235 left: Closed Areas Regulation, Schedule 3, section 57 (Edgewater): waiting for extraction
+2026-10-20T15:16:17.695Z [build] closed areas 20/254 (7%), 234 left: Closed Areas Regulation, Schedule 9, section 28 (Quadra Island): waiting for extraction
+2026-10-20T15:16:17.695Z [build] closed areas 21/254 (8%), 233 left: Closed Areas Regulation, Schedule 7, section 35 (Creston Valley Wildlife Management Area): waiting for extraction
+2026-10-20T15:16:17.696Z [build] closed areas 22/254 (8%), 232 left: Closed Areas Regulation, Schedule 5, section 56 (Popkum): waiting for extraction
+2026-10-20T15:16:17.697Z [build] closed areas 23/254 (9%), 231 left: Closed Areas Regulation, Schedule 1, section 10 (Serpentine River): waiting for extraction
+2026-10-20T15:16:17.697Z [build] closed areas 24/254 (9%), 230 left: Closed Areas Regulation, Schedule 5, section 130 (Roberts Bank Superport and Tsawwassen Ferry Terminal Causeways): waiting for extraction
+2026-10-20T15:16:17.697Z [build] closed areas 25/254 (9%), 229 left: Closed Areas Regulation, Schedule 3, section 16 (Argenta Marsh Wildlife Management Area): waiting for extraction
+2026-10-20T15:16:17.698Z [build] closed areas 26/254 (10%), 228 left: Closed Areas Regulation, Schedule 10, section 3 (One Island Pasture): waiting for extraction
+2026-10-20T15:16:17.698Z [build] closed areas 27/254 (10%), 227 left: Closed Areas Regulation, Schedule 9, section 10 (Chilliwack Valley): waiting for extraction
+2026-10-20T15:16:17.698Z [build] closed areas 28/254 (11%), 226 left: Closed Areas Regulation, Schedule 9, section 1: waiting for extraction
+2026-10-20T15:16:17.699Z [build] closed areas 29/254 (11%), 225 left: Closed Areas Regulation, Schedule 5, section 48 (Naramata): waiting for extraction
+2026-10-20T15:16:17.699Z [build] closed areas 30/254 (11%), 224 left: Closed Areas Regulation, Schedule 5, section 49 (Huntingdon and Sumas Mountain): waiting for extraction
+2026-10-20T15:16:17.700Z [build] closed areas 31/254 (12%), 223 left: Closed Areas Regulation, Schedule 3, section 4 (Sicamous): waiting for extraction
+2026-10-20T15:16:17.700Z [build] closed areas 32/254 (12%), 222 left: Closed Areas Regulation, Schedule 1, section 9 (Robert W. Starratt): waiting for extraction
+2026-10-20T15:16:17.701Z [build] closed areas 33/254 (12%), 221 left: Closed Areas Regulation, Schedule 2, section 1 (Stum Lake): waiting for extraction
+2026-10-20T15:16:17.701Z [build] closed areas 34/254 (13%), 220 left: Closed Areas Regulation, Schedule 7, section 37 (Silver Star Recreation Area): waiting for extraction
+2026-10-20T15:16:17.701Z [build] closed areas 35/254 (13%), 219 left: Closed Areas Regulation, Schedule 3, section 58 (Mudge Island): waiting for extraction
+2026-10-20T15:16:17.701Z [build] closed areas 36/254 (14%), 218 left: Closed Areas Regulation, Schedule 5, section 75 (Okanagan Falls): waiting for extraction
+2026-10-20T15:16:17.702Z [build] closed areas 37/254 (14%), 217 left: Closed Areas Regulation, Schedule 5.1, section 13 (Squamish River Valley): waiting for extraction
+2026-10-20T15:16:17.702Z [build] closed areas 38/254 (14%), 216 left: Closed Areas Regulation, Schedule 5, section 58 (Masset): waiting for extraction
+2026-10-20T15:16:17.703Z [build] closed areas 39/254 (15%), 215 left: Closed Areas Regulation, Schedule 5, section 47 (Sandspit): waiting for extraction
+2026-10-20T15:16:17.703Z [build] closed areas 40/254 (15%), 214 left: Closed Areas Regulation, Schedule 7, section 54 (Fontas): waiting for extraction
+2026-10-20T15:16:17.704Z [build] closed areas 41/254 (16%), 213 left: Closed Areas Regulation, Schedule 5, section 122 (Quinsam Coal Mine): waiting for extraction
+2026-10-20T15:16:17.704Z [build] closed areas 42/254 (16%), 212 left: Closed Areas Regulation, Schedule 7, section 39 (Cody Caves): waiting for extraction
+2026-10-20T15:16:17.704Z [build] closed areas 43/254 (16%), 211 left: Closed Areas Regulation, Schedule 5, section 114 (Westcan Terminals): waiting for extraction
+2026-10-20T15:16:17.705Z [build] closed areas 44/254 (17%), 210 left: Closed Areas Regulation, Schedule 3, section 66 (Marble Canyon Park): waiting for extraction
+2026-10-20T15:16:17.705Z [build] closed areas 45/254 (17%), 209 left: Closed Areas Regulation, Schedule 7, section 7 (Murtle Lake Nature Conservancy): waiting for extraction
+2026-10-20T15:16:17.705Z [build] closed areas 46/254 (18%), 208 left: Closed Areas Regulation, Schedule 1, section 3 (Delkatla): waiting for extraction
+2026-10-20T15:16:17.705Z [build] closed areas 47/254 (18%), 207 left: Closed Areas Regulation, Schedule 3, section 69 (Nisg̱a'a Highway): waiting for extraction
+2026-10-20T15:16:17.706Z [build] closed areas 48/254 (18%), 206 left: Closed Areas Regulation, Schedule 4, section 3 (Pitt Wildlife Management Area): waiting for extraction
+2026-10-20T15:16:17.706Z [build] closed areas 49/254 (19%), 205 left: Closed Areas Regulation, Schedule 7, section 53 (Highway 3 — Loop Bridge and Alexander Bridge): waiting for extraction
+2026-10-20T15:16:17.706Z [build] closed areas 50/254 (19%), 204 left: Closed Areas Regulation, Schedule 5, section 100 (Snootli Creek Park): waiting for extraction
+2026-10-20T15:16:17.707Z [build] closed areas 51/254 (20%), 203 left: Closed Areas Regulation, Schedule 8, section 5 (K'waal and Kitkiata Watersheds): waiting for extraction
+2026-10-20T15:16:17.707Z [build] closed areas 52/254 (20%), 202 left: Closed Areas Regulation, Schedule 7, section 6 (Lot 495 N.W.D.): waiting for extraction
+2026-10-20T15:16:17.707Z [build] closed areas 53/254 (20%), 201 left: Closed Areas Regulation, Schedule 5, section 3 (Ganges): waiting for extraction
+2026-10-20T15:16:17.707Z [build] closed areas 54/254 (21%), 200 left: Closed Areas Regulation, Schedule 9, section 2 (Pemberton): waiting for extraction
+2026-10-20T15:16:17.708Z [build] closed areas 55/254 (21%), 199 left: Closed Areas Regulation, Schedule 5.1, section 6 (Jones Lake and Lorenzetta Forest Service Roads): waiting for extraction
+2026-10-20T15:16:17.709Z [build] closed areas 56/254 (22%), 198 left: Closed Areas Regulation, Schedule 3, section 24 (Kamloops): waiting for extraction
+2026-10-20T15:16:17.709Z [build] closed areas 57/254 (22%), 197 left: Closed Areas Regulation, Schedule 5, section 113 (Fort St. John Sewage Lagoons): waiting for extraction
+2026-10-20T15:16:17.710Z [build] closed areas 58/254 (22%), 196 left: Closed Areas Regulation, Schedule 3, section 5 (Salmon Arm): waiting for extraction
+2026-10-20T15:16:17.710Z [build] closed areas 59/254 (23%), 195 left: Closed Areas Regulation, Schedule 5, section 106 (Babine River): waiting for extraction
+2026-10-20T15:16:17.710Z [build] closed areas 60/254 (23%), 194 left: Closed Areas Regulation, Schedule 7, section 44 (Gwillim Lake Park): waiting for extraction
+2026-10-20T15:16:17.711Z [build] closed areas 61/254 (24%), 193 left: Closed Areas Regulation, Schedule 5, section 93 (Cold Fish Lake Camp): waiting for extraction
+2026-10-20T15:16:17.711Z [build] closed areas 62/254 (24%), 192 left: Closed Areas Regulation, Schedule 5, section 125 (Comox Harbour): waiting for extraction
+2026-10-20T15:16:17.711Z [build] closed areas 63/254 (24%), 191 left: Closed Areas Regulation, Schedule 5, section 32 (Sooke and Metchosin): waiting for extraction
+2026-10-20T15:16:17.711Z [build] closed areas 64/254 (25%), 190 left: Closed Areas Regulation, Schedule 4, section 6 (Kennedy Siding): waiting for extraction
+2026-10-20T15:16:17.712Z [build] closed areas 65/254 (25%), 189 left: Closed Areas Regulation, Schedule 9, section 7 (Cultus Lake): waiting for extraction
+2026-10-20T15:16:17.712Z [build] closed areas 66/254 (25%), 188 left: Closed Areas Regulation, Schedule 3, section 25 (Stone Mountain): waiting for extraction
+2026-10-20T15:16:17.712Z [build] closed areas 67/254 (26%), 187 left: Closed Areas Regulation, Schedule 5, section 37 (Red Rock Seed Orchard): waiting for extraction
+2026-10-20T15:16:17.712Z [build] closed areas 68/254 (26%), 186 left: Closed Areas Regulation, Schedule 6, section 6 (Osoyoos Oxbows): waiting for extraction
+2026-10-20T15:16:17.713Z [build] closed areas 69/254 (27%), 185 left: Closed Areas Regulation, Schedule 5, section 7 (Englishman River): waiting for extraction
+2026-10-20T15:16:17.713Z [build] closed areas 70/254 (27%), 184 left: Closed Areas Regulation, Schedule 5, section 27 (Cherry Point): waiting for extraction
+2026-10-20T15:16:17.713Z [build] closed areas 71/254 (27%), 183 left: Closed Areas Regulation, Schedule 9, section 3 (Naramata): waiting for extraction
+2026-10-20T15:16:17.713Z [build] closed areas 72/254 (28%), 182 left: Closed Areas Regulation, Schedule 5, section 127 (Willow Heights Wildlife Reserve): waiting for extraction
+2026-10-20T15:16:17.714Z [build] closed areas 73/254 (28%), 181 left: Closed Areas Regulation, Schedule 9, section 26 (Stamp Lagoon): waiting for extraction
+2026-10-20T15:16:17.714Z [build] closed areas 74/254 (29%), 180 left: Closed Areas Regulation, Schedule 5, section 53 (Hope): waiting for extraction
+2026-10-20T15:16:17.714Z [build] closed areas 75/254 (29%), 179 left: Closed Areas Regulation, Schedule 5.1, section 1 (Definition): waiting for extraction
+2026-10-20T15:16:17.715Z [build] closed areas 76/254 (29%), 178 left: Closed Areas Regulation, Schedule 3, section 15 (Walter Clough Wildlife Management Area): waiting for extraction
+2026-10-20T15:16:17.715Z [build] closed areas 77/254 (30%), 177 left: Closed Areas Regulation, Schedule 1, section 8 (Reidemann): waiting for extraction
+2026-10-20T15:16:17.715Z [build] closed areas 78/254 (30%), 176 left: Closed Areas Regulation, Schedule 5, section 17 (Ocean Falls): waiting for extraction
+2026-10-20T15:16:17.716Z [build] closed areas 79/254 (31%), 175 left: Closed Areas Regulation, Schedule 1, section 7 (McGillivray Creek): waiting for extraction
+2026-10-20T15:16:17.716Z [build] closed areas 80/254 (31%), 174 left: Closed Areas Regulation, Schedule 5, section 64 (Sechelt): waiting for extraction
+2026-10-20T15:16:17.716Z [build] closed areas 81/254 (31%), 173 left: Closed Areas Regulation, Schedule 5, section 35 (Mayo Lake): waiting for extraction
+2026-10-20T15:16:17.716Z [build] closed areas 82/254 (32%), 172 left: Closed Areas Regulation, Schedule 5.1, section 11 (Francis Lake, Sts'ailes (West) and Weaver Lake Forest Service Roads): waiting for extraction
+2026-10-20T15:16:17.717Z [build] closed areas 83/254 (32%), 171 left: Closed Areas Regulation, Schedule 7, section 27 (Provincial Parks): waiting for extraction
+2026-10-20T15:16:17.717Z [build] closed areas 84/254 (33%), 170 left: Closed Areas Regulation, Schedule 5, section 57 (Greenhills Operations): waiting for extraction
+2026-10-20T15:16:17.717Z [build] closed areas 85/254 (33%), 169 left: Closed Areas Regulation, Schedule 3, section 28 (North Kitsumkalum): waiting for extraction
+2026-10-20T15:16:17.717Z [build] closed areas 86/254 (33%), 168 left: Closed Areas Regulation, Schedule 5, section 15 (Williams Lake): waiting for extraction
+2026-10-20T15:16:17.718Z [build] closed areas 87/254 (34%), 167 left: Closed Areas Regulation, Schedule 5, section 116 (Fry Creek Recreation Area): waiting for extraction
+2026-10-20T15:16:17.718Z [build] closed areas 88/254 (34%), 166 left: Closed Areas Regulation, Schedule 11, section 5 (Management Unit 1-1): waiting for extraction
+2026-10-20T15:16:17.718Z [build] closed areas 89/254 (35%), 165 left: Closed Areas Regulation, Schedule 5, section 76 (Kaleden): waiting for extraction
+2026-10-20T15:16:17.718Z [build] closed areas 90/254 (35%), 164 left: Closed Areas Regulation, Schedule 9, section 14 (Sechelt): waiting for extraction
+2026-10-20T15:16:17.719Z [build] closed areas 91/254 (35%), 163 left: Closed Areas Regulation, Schedule 5, section 21 (Cowichan Bay): waiting for extraction
+2026-10-20T15:16:17.719Z [build] closed areas 92/254 (36%), 162 left: Closed Areas Regulation, Schedule 3, section 49 (Kinuseo Falls): waiting for extraction
+2026-10-20T15:16:17.719Z [build] closed areas 93/254 (36%), 161 left: Closed Areas Regulation, Schedule 5, section 16 (Provincial Gaol Camp No. 1): waiting for extraction
+2026-10-20T15:16:17.720Z [build] closed areas 94/254 (37%), 160 left: Closed Areas Regulation, Schedule 5, section 77 (Coal Mountain Operations): waiting for extraction
+2026-10-20T15:16:17.720Z [build] closed areas 95/254 (37%), 159 left: Closed Areas Regulation, Schedule 3, section 31 (Roderick Haig-Brown Recreation Area): waiting for extraction
+2026-10-20T15:16:17.720Z [build] closed areas 96/254 (37%), 158 left: Closed Areas Regulation, Schedule 7, section 40 (Norbury Lake Park): waiting for extraction
+2026-10-20T15:16:17.720Z [build] closed areas 97/254 (38%), 157 left: Closed Areas Regulation, Schedule 11, section 1 (Nicomen): waiting for extraction
+2026-10-20T15:16:17.721Z [build] closed areas 98/254 (38%), 156 left: Closed Areas Regulation, Schedule 1, section 14 (Ward Lake): waiting for extraction
+2026-10-20T15:16:17.721Z [build] closed areas 99/254 (38%), 155 left: Closed Areas Regulation, Schedule 7, section 34 (Golden Bear Access Road): waiting for extraction
+2026-10-20T15:16:17.721Z [build] closed areas 100/254 (39%), 154 left: Closed Areas Regulation, Schedule 5, section 84 (Upper Halfway): waiting for extraction
+2026-10-20T15:16:17.722Z [build] closed areas 101/254 (39%), 153 left: Closed Areas Regulation, Schedule 3, section 55 (Sun Peaks Resort): waiting for extraction
+2026-10-20T15:16:17.722Z [build] closed areas 102/254 (40%), 152 left: Closed Areas Regulation, Schedule 7, section 5 (Bowen Island): waiting for extraction
+2026-10-20T15:16:17.722Z [build] closed areas 103/254 (40%), 151 left: Closed Areas Regulation, Schedule 5, section 85 (Sylvester Road): waiting for extraction
+2026-10-20T15:16:17.723Z [build] closed areas 104/254 (40%), 150 left: Closed Areas Regulation, Schedule 3, section 13 (Tabor Mountain): waiting for extraction
+2026-10-20T15:16:17.723Z [build] closed areas 105/254 (41%), 149 left: Closed Areas Regulation, Schedule 8, section 3 (Sunset Prairie): waiting for extraction
+2026-10-20T15:16:17.723Z [build] closed areas 106/254 (41%), 148 left: Closed Areas Regulation, Schedule 3, section 56 (Radium): waiting for extraction
+2026-10-20T15:16:17.724Z [build] closed areas 107/254 (42%), 147 left: Closed Areas Regulation, Schedule 1, section 12 (Tunkwa Lake): waiting for extraction
+2026-10-20T15:16:17.724Z [build] closed areas 108/254 (42%), 146 left: Closed Areas Regulation, Schedule 7, section 49 (Khutzeymateen Park): waiting for extraction
+2026-10-20T15:16:17.724Z [build] closed areas 109/254 (42%), 145 left: Closed Areas Regulation, Schedule 7, section 52 (Whistler Olympic Park): waiting for extraction
+2026-10-20T15:16:17.724Z [build] closed areas 110/254 (43%), 144 left: Closed Areas Regulation, Schedule 4, section 5 (Naikoon Park): waiting for extraction
+2026-10-20T15:16:17.725Z [build] closed areas 111/254 (43%), 143 left: Closed Areas Regulation, Schedule 3, section 23 (Mt. Bergeron — Tumbler Ridge): waiting for extraction
+2026-10-20T15:16:17.725Z [build] closed areas 112/254 (44%), 142 left: Closed Areas Regulation, Schedule 10, section 2 (Groundbirch): waiting for extraction
+2026-10-20T15:16:17.725Z [build] closed areas 113/254 (44%), 141 left: Closed Areas Regulation, Schedule 5.1, section 12 (Chehalis Forest Service Road): waiting for extraction
+2026-10-20T15:16:17.726Z [build] closed areas 114/254 (44%), 140 left: Closed Areas Regulation, Schedule 3, section 54 (Centennial Beach): waiting for extraction
+2026-10-20T15:16:17.726Z [build] closed areas 115/254 (45%), 139 left: Closed Areas Regulation, Schedule 5, section 94 (Williams Lake River): waiting for extraction
+2026-10-20T15:16:17.726Z [build] closed areas 116/254 (45%), 138 left: Closed Areas Regulation, Schedule 5, section 115 (Mount Judge Howay Park): waiting for extraction
+2026-10-20T15:16:17.726Z [build] closed areas 117/254 (46%), 137 left: Closed Areas Regulation, Schedule 5, section 14 (Gibralter Mines): waiting for extraction
+2026-10-20T15:16:17.727Z [build] closed areas 118/254 (46%), 136 left: Closed Areas Regulation, Schedule 5.1, section 3 (Liumchen East Forest Service Road etc.): waiting for extraction
+2026-10-20T15:16:17.727Z [build] closed areas 119/254 (46%), 135 left: Closed Areas Regulation, Schedule 5, section 63 (Nicomen): waiting for extraction
+2026-10-20T15:16:17.728Z [build] closed areas 120/254 (47%), 134 left: Closed Areas Regulation, Schedule 7, section 46 (Lukwa Lake): waiting for extraction
+2026-10-20T15:16:17.728Z [build] closed areas 121/254 (47%), 133 left: Closed Areas Regulation, Schedule 5, section 41 (Line Creek Operations): waiting for extraction
+2026-10-20T15:16:17.728Z [build] closed areas 122/254 (48%), 132 left: Closed Areas Regulation, Schedule 11, section 4 (Grand Forks): waiting for extraction
+2026-10-20T15:16:17.728Z [build] closed areas 123/254 (48%), 131 left: Closed Areas Regulation, Schedule 9, section 15 (Skaha Lake): waiting for extraction
+2026-10-20T15:16:17.729Z [build] closed areas 124/254 (48%), 130 left: Closed Areas Regulation, Schedule 3, section 29 (Pacific Rim (Westcoast) National Park): waiting for extraction
+2026-10-20T15:16:17.729Z [build] closed areas 125/254 (49%), 129 left: Closed Areas Regulation, Schedule 3, section 53 (De Courcey Island): waiting for extraction
+2026-10-20T15:16:17.729Z [build] closed areas 126/254 (49%), 128 left: Closed Areas Regulation, Schedule 9, section 17 (Lakelse Lake): waiting for extraction
+2026-10-20T15:16:17.729Z [build] closed areas 127/254 (50%), 127 left: Closed Areas Regulation, Schedule 7, section 21 (Atlin Park): waiting for extraction
+2026-10-20T15:16:17.730Z [build] closed areas 128/254 (50%), 126 left: Closed Areas Regulation, Schedule 9, section 9 (Nicomen): waiting for extraction
+2026-10-20T15:16:17.730Z [build] closed areas 129/254 (50%), 125 left: Closed Areas Regulation, Schedule 5, section 61 (Evans Lake): waiting for extraction
+2026-10-20T15:16:17.730Z [build] closed areas 130/254 (51%), 124 left: Closed Areas Regulation, Schedule 7, section 55 (Lord River): waiting for extraction
+2026-10-20T15:16:17.730Z [build] closed areas 131/254 (51%), 123 left: Closed Areas Regulation, Schedule 5, section 60 (Whistler): waiting for extraction
+2026-10-20T15:16:17.731Z [build] closed areas 132/254 (51%), 122 left: Closed Areas Regulation, Schedule 5, section 46 (Queen Charlotte City): waiting for extraction
+2026-10-20T15:16:17.731Z [build] closed areas 133/254 (52%), 121 left: Closed Areas Regulation, Schedule 3, section 63 (Sea to Sky Highway): waiting for extraction
+2026-10-20T15:16:17.731Z [build] closed areas 134/254 (52%), 120 left: Closed Areas Regulation, Schedule 5.1, section 5 (Bench, Foley and Nesakwatch Forest Service Roads): waiting for extraction
+2026-10-20T15:16:17.732Z [build] closed areas 135/254 (53%), 119 left: Closed Areas Regulation, Schedule 9, section 19 (Naikoon Park): waiting for extraction
+2026-10-20T15:16:17.732Z [build] closed areas 136/254 (53%), 118 left: Closed Areas Regulation, Schedule 5, section 98 (Texada Junction): waiting for extraction
+2026-10-20T15:16:17.732Z [build] closed areas 137/254 (53%), 117 left: Closed Areas Regulation, Schedule 3, section 64 (Callaghan Road): waiting for extraction
+2026-10-20T15:16:17.733Z [build] closed areas 138/254 (54%), 116 left: Closed Areas Regulation, Schedule 5, section 44 (Link Island): waiting for extraction
+2026-10-20T15:16:17.733Z [build] closed areas 139/254 (54%), 115 left: Closed Areas Regulation, Schedule 5, section 34 (Rose Lake): waiting for extraction
+2026-10-20T15:16:17.733Z [build] closed areas 140/254 (55%), 114 left: Closed Areas Regulation, Schedule 5, section 103 (Sea Island): waiting for extraction
+2026-10-20T15:16:17.733Z [build] closed areas 141/254 (55%), 113 left: Closed Areas Regulation, Schedule 3, section 67 (Shaman Island): waiting for extraction
+2026-10-20T15:16:17.734Z [build] closed areas 142/254 (55%), 112 left: Closed Areas Regulation, Schedule 5, section 89 (Grantham Road): waiting for extraction
+2026-10-20T15:16:17.734Z [build] closed areas 143/254 (56%), 111 left: Closed Areas Regulation, Schedule 9, section 29 (Nanaimo to Ladysmith): waiting for extraction
+2026-10-20T15:16:17.734Z [build] closed areas 144/254 (56%), 110 left: Closed Areas Regulation, Schedule 13, section 1 (Delta/Surrey Dykes): waiting for extraction
+2026-10-20T15:16:17.734Z [build] closed areas 145/254 (57%), 109 left: Closed Areas Regulation, Schedule 5.1, section 10 (Norrish Creek watershed): waiting for extraction
+2026-10-20T15:16:17.735Z [build] closed areas 146/254 (57%), 108 left: Closed Areas Regulation, Schedule 5, section 129 (Dokie): waiting for extraction
+2026-10-20T15:16:17.735Z [build] closed areas 147/254 (57%), 107 left: Closed Areas Regulation, Schedule 7, section 45 (Woodhus Slough): waiting for extraction
+2026-10-20T15:16:17.735Z [build] closed areas 148/254 (58%), 106 left: Closed Areas Regulation, Schedule 5, section 135 (Cowichan River Park): waiting for extraction
+2026-10-20T15:16:17.735Z [build] closed areas 149/254 (58%), 105 left: Closed Areas Regulation, Schedule 7, section 13 (Mount Assiniboine Park): waiting for extraction
+2026-10-20T15:16:17.736Z [build] closed areas 150/254 (59%), 104 left: Closed Areas Regulation, Schedule 3, section 46 (Trophy Mountain): waiting for extraction
+2026-10-20T15:16:17.736Z [build] closed areas 151/254 (59%), 103 left: Closed Areas Regulation, Schedule 3, section 50 (Ucluelet): waiting for extraction
+2026-10-20T15:16:17.736Z [build] closed areas 152/254 (59%), 102 left: Closed Areas Regulation, Schedule 5, section 59 (Shoemaker Bay): waiting for extraction
+2026-10-20T15:16:17.736Z [build] closed areas 153/254 (60%), 101 left: Closed Areas Regulation, Schedule 5, section 6 (Skookumchuck Pulp Mill): waiting for extraction
+2026-10-20T15:16:17.737Z [build] closed areas 154/254 (60%), 100 left: Closed Areas Regulation, Schedule 5, section 96 (Miworth): waiting for extraction
+2026-10-20T15:16:17.737Z [build] closed areas 155/254 (61%), 99 left: Closed Areas Regulation, Schedule 5, section 73 (Michael Lake): waiting for extraction
+2026-10-20T15:16:17.737Z [build] closed areas 156/254 (61%), 98 left: Closed Areas Regulation, Schedule 5, section 140 (Lafarge to Pritchard): waiting for extraction
+2026-10-20T15:16:17.737Z [build] closed areas 157/254 (61%), 97 left: Closed Areas Regulation, Schedule 5, section 105 (Dawson Creek Environmental Demonstration Areas): waiting for extraction
+2026-10-20T15:16:17.738Z [build] closed areas 158/254 (62%), 96 left: Closed Areas Regulation, Schedule 7, section 15 (Tweedsmuir Park): waiting for extraction
+2026-10-20T15:16:17.738Z [build] closed areas 159/254 (62%), 95 left: Closed Areas Regulation, Schedule 5.1, section 14 (Chehalis Fleetwood): waiting for extraction
+2026-10-20T15:16:17.744Z [build] closed areas 160/254 (62%), 94 left: Closed Areas Regulation, Schedule 3, section 38 (Okanagan Connector Highway): waiting for extraction
+2026-10-20T15:16:17.745Z [build] closed areas 161/254 (63%), 93 left: Closed Areas Regulation, Schedule 5, section 136 (Crawford Bay): waiting for extraction
+2026-10-20T15:16:17.745Z [build] closed areas 162/254 (63%), 92 left: Closed Areas Regulation, Schedule 5.1, section 9 (Hatzic): waiting for extraction
+2026-10-20T15:16:17.746Z [build] closed areas 163/254 (64%), 91 left: Closed Areas Regulation, Schedule 1, section 15 (Elizabeth Lake): waiting for extraction
+2026-10-20T15:16:17.746Z [build] closed areas 164/254 (64%), 90 left: Closed Areas Regulation, Schedule 6, section 3 (Cultus Lake): waiting for extraction
+2026-10-20T15:16:17.747Z [build] closed areas 165/254 (64%), 89 left: Closed Areas Regulation, Schedule 9, section 30 (Ladysmith to Malahat): waiting for extraction
+2026-10-20T15:16:17.747Z [build] closed areas 166/254 (65%), 88 left: Closed Areas Regulation, Schedule 9, section 11 (Sechelt): waiting for extraction
+2026-10-20T15:16:17.748Z [build] closed areas 167/254 (65%), 87 left: Closed Areas Regulation, Schedule 5, section 133 (Buckley Bay): waiting for extraction
+2026-10-20T15:16:17.749Z [build] closed areas 168/254 (66%), 86 left: Closed Areas Regulation, Schedule 3, section 30 (Garibaldi Park): waiting for extraction
+2026-10-20T15:16:17.750Z [build] closed areas 169/254 (66%), 85 left: Closed Areas Regulation, Schedule 5.1, section 8 (Lost Creek Forest Service Road etc.): waiting for extraction
+2026-10-20T15:16:17.750Z [build] closed areas 170/254 (66%), 84 left: Closed Areas Regulation, Schedule 9, section 23 (Savary Island): waiting for extraction
+2026-10-20T15:16:17.751Z [build] closed areas 171/254 (67%), 83 left: Closed Areas Regulation, Schedule 5, section 128 (Upper Carmi Road): waiting for extraction
+2026-10-20T15:16:17.752Z [build] closed areas 172/254 (67%), 82 left: Closed Areas Regulation, Schedule 5, section 134 (Nanoose Bay): waiting for extraction
+2026-10-20T15:16:17.753Z [build] closed areas 173/254 (68%), 81 left: Closed Areas Regulation, Schedule 3, section 22 (Pitt Wildlife Management Area): waiting for extraction
+2026-10-20T15:16:17.753Z [build] closed areas 174/254 (68%), 80 left: Closed Areas Regulation, Schedule 5, section 81 (Fording Mountain): waiting for extraction
+2026-10-20T15:16:17.754Z [build] closed areas 175/254 (68%), 79 left: Closed Areas Regulation, Schedule 6, section 4 (Garibaldi Park): waiting for extraction
+2026-10-20T15:16:17.755Z [build] closed areas 176/254 (69%), 78 left: Closed Areas Regulation, Schedule 3, section 26 (Nekite River): waiting for extraction
+2026-10-20T15:16:17.758Z [build] closed areas 177/254 (69%), 77 left: Closed Areas Regulation, Schedule 7, section 38 (Sunshine Meadows): waiting for extraction
+2026-10-20T15:16:17.759Z [build] closed areas 178/254 (70%), 76 left: Closed Areas Regulation, Schedule 5, section 120 (Tow Hill): waiting for extraction
+2026-10-20T15:16:17.760Z [build] closed areas 179/254 (70%), 75 left: Closed Areas Regulation, Schedule 5, section 91 (Waugh Lake — Skookumchuck): waiting for extraction
+2026-10-20T15:16:17.761Z [build] closed areas 180/254 (70%), 74 left: Closed Areas Regulation, Schedule 3, section 6 (Swan Lake): waiting for extraction
+2026-10-20T15:16:17.761Z [build] closed areas 181/254 (71%), 73 left: Closed Areas Regulation, Schedule 9, section 22 (Highways): waiting for extraction
+2026-10-20T15:16:17.762Z [build] closed areas 182/254 (71%), 72 left: Closed Areas Regulation, Schedule 5, section 67 (Blubber Bay): waiting for extraction
+2026-10-20T15:16:17.762Z [build] closed areas 183/254 (72%), 71 left: Closed Areas Regulation, Schedule 3, section 60 (East Moberly Lake 169): waiting for extraction
+2026-10-20T15:16:17.762Z [build] closed areas 184/254 (72%), 70 left: Closed Areas Regulation, Schedule 5, section 68 (Lund): waiting for extraction
+2026-10-20T15:16:17.763Z [build] closed areas 185/254 (72%), 69 left: Closed Areas Regulation, Schedule 1, section 2 (Columbia Lake and River): waiting for extraction
+2026-10-20T15:16:17.763Z [build] closed areas 186/254 (73%), 68 left: Closed Areas Regulation, Schedule 1, section 17 (Gwaii Haanas National Park Reserve): waiting for extraction
+2026-10-20T15:16:17.763Z [build] closed areas 187/254 (73%), 67 left: Closed Areas Regulation, Schedule 5, section 66 (Saltery Bay): waiting for extraction
+2026-10-20T15:16:17.764Z [build] closed areas 188/254 (74%), 66 left: Closed Areas Regulation, Schedule 5, section 18 (Kumdis Bay): waiting for extraction
+2026-10-20T15:16:17.764Z [build] closed areas 189/254 (74%), 65 left: Closed Areas Regulation, Schedule 5.1, section 4 (McGuire and Tamihi Creek Forest Service Roads): waiting for extraction
+2026-10-20T15:16:17.764Z [build] closed areas 190/254 (74%), 64 left: Closed Areas Regulation, Schedule 1, section 6 (McDougall): waiting for extraction
+2026-10-20T15:16:17.765Z [build] closed areas 191/254 (75%), 63 left: Closed Areas Regulation, Schedule 7, section 33 (Tweedsmuir Park): waiting for extraction
+2026-10-20T15:16:17.765Z [build] closed areas 192/254 (75%), 62 left: Closed Areas Regulation, Schedule 3, section 62 (Coal Mountain Operations): waiting for extraction
+2026-10-20T15:16:17.765Z [build] closed areas 193/254 (75%), 61 left: Closed Areas Regulation, Schedule 5, section 31 (Blind Bay): waiting for extraction
+2026-10-20T15:16:17.766Z [build] closed areas 194/254 (76%), 60 left: Closed Areas Regulation, Schedule 5.1, section 2 (Silver Skagit Forest Service Road): waiting for extraction
+2026-10-20T15:16:17.766Z [build] closed areas 195/254 (76%), 59 left: Closed Areas Regulation, Schedule 3, section 9 (Highway 3): waiting for extraction
+2026-10-20T15:16:17.766Z [build] closed areas 196/254 (77%), 58 left: Closed Areas Regulation, Schedule 5, section 5 (Buntzen Lake): waiting for extraction
+2026-10-20T15:16:17.767Z [build] closed areas 197/254 (77%), 57 left: Closed Areas Regulation, Schedule 5.1, section 7 (Florence Lake Forest Service Road): waiting for extraction
+2026-10-20T15:16:17.767Z [build] closed areas 198/254 (77%), 56 left: Closed Areas Regulation, Schedule 5, section 123 (Selkirk): waiting for extraction
+2026-10-20T15:16:17.767Z [build] closed areas 199/254 (78%), 55 left: Closed Areas Regulation, Schedule 5, section 99 (Village of 100 Mile House): waiting for extraction
+2026-10-20T15:16:17.768Z [build] closed areas 200/254 (78%), 54 left: Closed Areas Regulation, Schedule 3, section 52 (JeweI Lake): waiting for extraction
+2026-10-20T15:16:17.768Z [build] closed areas 201/254 (79%), 53 left: Closed Areas Regulation, Schedule 6, section 7 (Cowichan Bay): waiting for extraction
+2026-10-20T15:16:17.768Z [build] closed areas 202/254 (79%), 52 left: Closed Areas Regulation, Schedule 5, section 8 (Todagin Mountain): waiting for extraction
+2026-10-20T15:16:17.769Z [build] closed areas 203/254 (79%), 51 left: Closed Areas Regulation, Schedule 5, section 88 (City of Terrace): waiting for extraction
+2026-10-20T15:16:17.769Z [build] closed areas 204/254 (80%), 50 left: Closed Areas Regulation, Schedule 5, section 74 (Burrard Inlet): waiting for extraction
+2026-10-20T15:16:17.769Z [build] closed areas 205/254 (80%), 49 left: Closed Areas Regulation, Schedule 5, section 92 (Hemlock Valley): waiting for extraction
+2026-10-20T15:16:17.770Z [build] closed areas 206/254 (81%), 48 left: Closed Areas Regulation, Schedule 5, section 9 (Logan Lake): waiting for extraction
+2026-10-20T15:16:17.770Z [build] closed areas 207/254 (81%), 47 left: Closed Areas Regulation, Schedule 3, section 43 (Road 248): waiting for extraction
+2026-10-20T15:16:17.770Z [build] closed areas 208/254 (81%), 46 left: Closed Areas Regulation, Schedule 3, section 36 (Conkle Lake Park): waiting for extraction
+2026-10-20T15:16:17.770Z [build] closed areas 209/254 (82%), 45 left: Closed Areas Regulation, Schedule 5, section 4 (McQueen, Griffin and Isobel Lakes): waiting for extraction
+2026-10-20T15:16:17.771Z [build] closed areas 210/254 (82%), 44 left: Closed Areas Regulation, Schedule 1, section 13 (Wasa Slough): waiting for extraction
+2026-10-20T15:16:17.771Z [build] closed areas 211/254 (83%), 43 left: Closed Areas Regulation, Schedule 9, section 27 (Campbell River to Nanaimo): waiting for extraction
+2026-10-20T15:16:17.771Z [build] closed areas 212/254 (83%), 42 left: Closed Areas Regulation, Schedule 3, section 12 (Addington Marsh): waiting for extraction
+2026-10-20T15:16:17.772Z [build] closed areas 213/254 (83%), 41 left: Closed Areas Regulation, Schedule 5, section 78 (Highland Valley): waiting for extraction
+2026-10-20T15:16:17.772Z [build] closed areas 214/254 (84%), 40 left: Closed Areas Regulation, Schedule 3, section 2 (Tranquille Wildlife Management Area): waiting for extraction
+2026-10-20T15:16:17.772Z [build] closed areas 215/254 (84%), 39 left: Closed Areas Regulation, Schedule 3, section 19 (The Province): waiting for extraction
+2026-10-20T15:16:17.773Z [build] closed areas 216/254 (85%), 38 left: Closed Areas Regulation, Schedule 7, section 42 (Eskers Park): waiting for extraction
+2026-10-20T15:16:17.773Z [build] closed areas 217/254 (85%), 37 left: Closed Areas Regulation, Schedule 7, section 56 (Chilko — Newton): waiting for extraction
+2026-10-20T15:16:17.773Z [build] closed areas 218/254 (85%), 36 left: Closed Areas Regulation, Schedule 5, section 139 (Hudson Bay Mountain/Smithers Community Forest): waiting for extraction
+2026-10-20T15:16:17.773Z [build] closed areas 219/254 (86%), 35 left: Closed Areas Regulation, Schedule 1, section 5 (Lucy Island): waiting for extraction
+2026-10-20T15:16:17.774Z [build] closed areas 220/254 (86%), 34 left: Closed Areas Regulation, Schedule 5, section 65 (Gillies Bay): waiting for extraction
+2026-10-20T15:16:17.774Z [build] closed areas 221/254 (87%), 33 left: Closed Areas Regulation, Schedule 5, section 126 (Houston Community Forest): waiting for extraction
+2026-10-20T15:16:17.774Z [build] closed areas 222/254 (87%), 32 left: Closed Areas Regulation, Schedule 5, section 119 (Lion's Bay): waiting for extraction
+2026-10-20T15:16:17.775Z [build] closed areas 223/254 (87%), 31 left: Closed Areas Regulation, Schedule 5, section 23 (Nanaimo): waiting for extraction
+2026-10-20T15:16:17.775Z [build] closed areas 224/254 (88%), 30 left: Closed Areas Regulation, Schedule 3, section 42 (Cathedral Park): waiting for extraction
+2026-10-20T15:16:17.775Z [build] closed areas 225/254 (88%), 29 left: Closed Areas Regulation, Schedule 9, section 25 (Port Clements): waiting for extraction
+2026-10-20T15:16:17.776Z [build] closed areas 226/254 (88%), 28 left: Closed Areas Regulation, Schedule 5, section 87 (Mascot Gold Mines Limited): waiting for extraction
+2026-10-20T15:16:17.776Z [build] closed areas 227/254 (89%), 27 left: Closed Areas Regulation, Schedule 5, section 137 (White-Moscow Forest Service Road): waiting for extraction
+2026-10-20T15:16:17.776Z [build] closed areas 228/254 (89%), 26 left: Closed Areas Regulation, Schedule 5, section 104 (Tatlow Road): waiting for extraction
+2026-10-20T15:16:17.777Z [build] closed areas 229/254 (90%), 25 left: Closed Areas Regulation, Schedule 8, section 1 (Cecil Lake): waiting for extraction
+2026-10-20T15:16:17.777Z [build] closed areas 230/254 (90%), 24 left: Closed Areas Regulation, Schedule 5, section 118 (Central Road): waiting for extraction
+2026-10-20T15:16:17.777Z [build] closed areas 231/254 (90%), 23 left: Closed Areas Regulation, Schedule 9, section 20 (Canal Flats): waiting for extraction
+2026-10-20T15:16:17.778Z [build] closed areas 232/254 (91%), 22 left: Closed Areas Regulation, Schedule 5, section 121 (Brenda Mines): waiting for extraction
+2026-10-20T15:16:17.778Z [build] closed areas 233/254 (91%), 21 left: Closed Areas Regulation, Schedule 3, section 17 (North Thormanby Island): waiting for extraction
+2026-10-20T15:16:17.779Z [build] closed areas 234/254 (92%), 20 left: Closed Areas Regulation, Schedule 11, section 3 (Keats Island): waiting for extraction
+2026-10-20T15:16:17.779Z [build] closed areas 235/254 (92%), 19 left: Closed Areas Regulation, Schedule 5, section 33 (Elbow Lake): waiting for extraction
+2026-10-20T15:16:17.780Z [build] closed areas 236/254 (92%), 18 left: Closed Areas Regulation, Schedule 5, section 138 (Whiteswan Forest Service Road): waiting for extraction
+2026-10-20T15:16:17.780Z [build] closed areas 237/254 (93%), 17 left: Closed Areas Regulation, Schedule 9, section 12 (Powell River): waiting for extraction
+2026-10-20T15:16:17.780Z [build] closed areas 238/254 (93%), 16 left: Closed Areas Regulation, Schedule 5, section 38 (Wells): waiting for extraction
+2026-10-20T15:16:17.781Z [build] closed areas 239/254 (94%), 15 left: Closed Areas Regulation, Schedule 5, section 2 (University of British Columbia Endowment Lands): waiting for extraction
+2026-10-20T15:16:17.781Z [build] closed areas 240/254 (94%), 14 left: Closed Areas Regulation, Schedule 7, section 50 (Spatsizi Plateau Wilderness Park): waiting for extraction
+2026-10-20T15:16:17.781Z [build] closed areas 241/254 (94%), 13 left: Closed Areas Regulation, Schedule 8, section 4 (Bear Mountain): waiting for extraction
+2026-10-20T15:16:17.782Z [build] closed areas 242/254 (95%), 12 left: Closed Areas Regulation, Schedule 5, section 111 (Fairmont): waiting for extraction
+2026-10-20T15:16:17.782Z [build] closed areas 243/254 (95%), 11 left: Closed Areas Regulation, Schedule 3, section 59 (Fording River/Greenhills Operations): waiting for extraction
+2026-10-20T15:16:17.783Z [build] closed areas 244/254 (96%), 10 left: Closed Areas Regulation, Schedule 5, section 69 (Vananda): waiting for extraction
+2026-10-20T15:16:17.784Z [build] closed areas 245/254 (96%), 9 left: Closed Areas Regulation, Schedule 7, section 36 (Kakwa Recreation Area): waiting for extraction
+2026-10-20T15:16:17.784Z [build] closed areas 246/254 (96%), 8 left: Closed Areas Regulation, Schedule 5, section 19 (Kathlyn Lake): waiting for extraction
+2026-10-20T15:16:17.784Z [build] closed areas 247/254 (97%), 7 left: Closed Areas Regulation, Schedule 5, section 86 (York Lake): waiting for extraction
+2026-10-20T15:16:17.785Z [build] closed areas 248/254 (97%), 6 left: Closed Areas Regulation, Schedule 3, section 48 (Radar Lake): waiting for extraction
+2026-10-20T15:16:17.785Z [build] closed areas 249/254 (98%), 5 left: Closed Areas Regulation, Schedule 3, section 37 (Line Creek Operations): waiting for extraction
+2026-10-20T15:16:17.785Z [build] closed areas 250/254 (98%), 4 left: Closed Areas Regulation, Schedule 7, section 48 (Beaver Lodge Trust Lands): waiting for extraction
+2026-10-20T15:16:17.786Z [build] closed areas 251/254 (98%), 3 left: Closed Areas Regulation, Schedule 3, section 47 (Saturna Island East End): waiting for extraction
+2026-10-20T15:16:17.786Z [build] closed areas 252/254 (99%), 2 left: Closed Areas Regulation, Schedule 5, section 29 (Paaren's Beach): waiting for extraction
+2026-10-20T15:16:17.787Z [build] closed areas 253/254 (99%), 1 left: Closed Areas Regulation, Schedule 8.1, section 1 (Burns Bog): waiting for extraction
+2026-10-20T15:16:17.787Z [build] closed areas 254/254 (100%), all done: Closed Areas Regulation, Schedule 3, section 65 (Kalamalka Lake Park): waiting for extraction
+2026-10-20T15:16:17.787Z [build] parts 1/4 (25%), 3 left: road notices and District Manager PDFs
+2026-10-20T15:16:17.877Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:18.360Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:19.111Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:20.111Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:20.363Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:20.861Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:21.612Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:22.610Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:22.861Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:23.362Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:24.112Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:25.115Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:25.364Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:25.866Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:26.616Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:27.617Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:27.867Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:28.367Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:29.118Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:30.119Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:30.371Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:30.869Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:31.620Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:32.622Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:32.873Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:33.374Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:34.122Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:35.121Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:35.374Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:35.874Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:36.625Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:37.624Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:37.877Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:38.377Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:39.127Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:40.128Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:40.379Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:40.877Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:41.632Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:42.630Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:42.880Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:43.380Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:44.129Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:45.133Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:45.382Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:45.882Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:46.633Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:47.632Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:47.883Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:48.383Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:49.134Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:50.135Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:50.384Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:50.886Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:51.638Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:52.639Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:52.890Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:53.390Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:54.140Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:55.141Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:55.392Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:55.893Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:56.641Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:57.644Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:57.895Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:58.393Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:16:59.143Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:00.143Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:00.393Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:00.895Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:01.649Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:02.647Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:02.896Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:03.400Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:04.151Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:05.151Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:05.403Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:05.901Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:06.654Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:07.654Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:07.904Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:08.403Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:09.156Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:10.156Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:10.405Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:10.906Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:11.658Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:12.659Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:12.909Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:13.406Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:14.160Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:15.161Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:15.411Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:15.912Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:16.660Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:17.663Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:17.913Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:18.411Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:19.163Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:20.163Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:20.415Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:20.916Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:21.665Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:22.666Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:22.915Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:23.416Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:24.168Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:25.169Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:25.419Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:25.920Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:26.670Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:27.668Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:27.922Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:28.425Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:29.175Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:30.175Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:30.426Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:30.927Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:31.679Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:32.678Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:32.931Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:33.432Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:34.183Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:35.182Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:35.433Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:35.932Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:36.684Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:37.684Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:37.933Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:38.434Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:39.186Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:40.187Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:40.438Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:40.938Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:41.689Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:42.689Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:42.941Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:43.440Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:44.192Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:45.194Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:45.441Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:45.942Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:46.694Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:47.693Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:47.944Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:48.443Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:49.195Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:50.193Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:50.446Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:50.946Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:51.697Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:52.695Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:52.950Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:53.449Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:54.199Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:55.203Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:55.450Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:55.950Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:56.702Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:57.701Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:57.953Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:58.453Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:17:59.203Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:00.206Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:00.456Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:00.954Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:01.707Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:02.707Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:02.957Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:03.459Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:04.208Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:05.210Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:05.459Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:05.962Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:06.710Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:07.713Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:07.962Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:08.461Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:09.213Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:10.214Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:10.465Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:10.966Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:11.717Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:12.718Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:12.969Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:13.469Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:14.219Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:15.220Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:15.472Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:15.973Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:16.729Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:17.727Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:17.979Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:18.477Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:19.226Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:20.227Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:20.479Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:20.980Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:21.729Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:22.731Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:22.980Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:23.482Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:24.232Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:25.232Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:25.483Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:25.980Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:26.731Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:27.732Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:27.982Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:28.484Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:29.235Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:30.235Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:30.484Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:30.985Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:31.738Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:32.738Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:32.988Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:33.490Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:34.241Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:35.240Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:35.493Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:35.990Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:36.743Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:37.744Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:37.996Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:38.494Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:39.244Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:40.247Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:40.494Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:40.997Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:41.747Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:42.748Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:42.999Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:43.500Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:44.250Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:45.254Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:45.503Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:46.002Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:46.755Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:47.752Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:48.006Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:48.505Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:49.257Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:50.258Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:50.508Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:51.007Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:51.759Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:52.759Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:53.009Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:53.510Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:54.261Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:55.262Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:55.512Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:56.012Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:56.763Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:57.764Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:58.015Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:58.517Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:18:59.268Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:00.270Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:00.520Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:01.018Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:01.771Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:02.771Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:03.020Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:03.524Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:04.273Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:05.273Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:05.522Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:06.022Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:06.774Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:07.773Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:08.025Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:08.526Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:09.277Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:10.275Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:10.527Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:11.025Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:11.779Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:12.780Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:13.030Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:13.530Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:14.282Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:15.283Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:15.533Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:16.033Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:16.785Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:17.785Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:18.036Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:18.537Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:19.288Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:20.287Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:20.537Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:21.041Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:21.789Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:22.790Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:23.041Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:23.542Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:24.292Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:25.292Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:25.542Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:26.045Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:26.793Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:27.793Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:28.044Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:28.546Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:29.295Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:30.299Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:30.548Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:31.049Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:31.798Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:32.799Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:33.050Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:33.551Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:34.302Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:35.303Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:35.554Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:36.054Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:36.804Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:37.803Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:38.055Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:38.555Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:39.305Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:40.305Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:40.554Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:41.056Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:41.809Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:42.808Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:43.058Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:43.560Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:44.311Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:45.309Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:45.562Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:46.061Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:46.812Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:47.814Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:48.063Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:48.563Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:49.313Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:50.314Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:50.563Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:51.063Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:51.814Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:52.813Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:53.065Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:53.565Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:54.316Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:55.315Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:55.566Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:56.066Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:56.814Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:57.815Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:58.064Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:58.567Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:19:59.318Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:00.318Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:00.567Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:01.066Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:01.818Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:02.817Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:03.066Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:03.569Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:04.318Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:05.318Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:05.570Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:06.068Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:06.821Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:07.819Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:08.072Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:08.570Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:09.321Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:10.323Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:10.573Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:11.072Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:11.825Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:12.822Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:13.073Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:13.572Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:14.324Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:15.321Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:15.571Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:16.074Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:16.824Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:17.827Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:18.078Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:18.578Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:19.329Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:20.332Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:20.581Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:21.082Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:21.832Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:22.832Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:23.083Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:23.583Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:24.333Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:25.334Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:25.584Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:26.084Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:26.834Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:27.835Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:28.086Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:28.588Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:29.335Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:30.336Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:30.589Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:31.088Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:31.838Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:32.837Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:33.090Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:33.588Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:34.337Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:35.339Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:35.590Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:36.090Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:36.841Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:37.843Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:38.092Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:38.591Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:39.342Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:40.342Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:40.592Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:41.094Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:41.847Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:42.847Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:43.097Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:43.602Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:44.352Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:45.350Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:45.601Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:46.102Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:46.853Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:47.852Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:48.103Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:48.603Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:49.357Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:50.352Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:50.603Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:51.104Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:51.855Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:52.855Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:53.104Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:53.604Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:54.354Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:55.356Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:55.606Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:56.105Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:56.857Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:57.858Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:58.107Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:58.607Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:20:59.358Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:00.359Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:00.610Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:01.110Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:01.863Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:02.863Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:03.115Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:03.617Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:04.365Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:05.365Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:05.615Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:06.115Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:06.868Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:07.868Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:08.117Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:08.619Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:09.369Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:10.370Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:10.620Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:11.119Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:11.870Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:12.871Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:13.124Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:13.622Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:14.372Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:15.376Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:15.625Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:16.124Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:16.876Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:17.876Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:18.126Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:18.628Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:19.378Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:20.379Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:20.631Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:21.130Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:21.883Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:22.881Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:23.133Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:23.633Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:24.385Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:25.383Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:25.636Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:26.136Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:26.886Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:27.888Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:28.138Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:28.641Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:29.391Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:30.391Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:30.642Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:31.145Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:31.894Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:32.895Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:33.144Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:33.644Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:34.394Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:35.396Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:35.645Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:36.147Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:36.896Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:37.897Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:38.149Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:38.649Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:39.400Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:40.402Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:40.654Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:41.153Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:41.906Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:42.906Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:43.156Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:43.657Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:44.407Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:45.407Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:45.657Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:46.157Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:46.909Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:47.908Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:48.161Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:48.661Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:49.411Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:50.411Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:50.662Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:51.164Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:51.912Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:52.912Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:53.163Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:53.664Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:54.415Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:55.415Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:55.664Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:56.166Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:56.916Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:57.915Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:58.165Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:58.666Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:21:59.417Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:00.418Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:00.667Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:01.168Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:01.918Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:02.918Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:03.168Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:03.669Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:04.419Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:05.421Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:05.671Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:06.172Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:06.921Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:07.922Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:08.173Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:08.672Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:09.422Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:10.422Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:10.673Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:11.173Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:11.926Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:12.925Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:13.176Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:13.676Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:14.425Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:15.427Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:15.677Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:16.180Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:16.929Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:17.928Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:18.180Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:18.680Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:19.430Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:20.430Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:20.679Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:21.180Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:21.930Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:22.930Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:23.181Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:23.681Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:24.432Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:25.432Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:25.683Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:26.183Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:26.934Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:27.934Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:28.185Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:28.686Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:29.434Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:30.434Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:30.686Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:31.185Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:31.936Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:32.940Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:33.189Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:33.689Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:34.442Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:35.440Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:35.692Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:36.190Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:36.941Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:37.943Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:38.191Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:38.693Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:39.442Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:40.444Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:40.694Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:41.194Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:41.946Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:42.945Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:42.982Z [build] District Manager PDFs 1/46 (2%), 45 left: DCK-0c70d269-bucklin_fsr_-_2019_road_closure
+2026-10-20T15:22:42.997Z [build] District Manager PDFs 2/46 (4%), 44 left: DCK-1379e235-radium_fsr_fs301
+2026-10-20T15:22:43.001Z [build] District Manager PDFs 3/46 (6%), 43 left: DCK-15d8fff4-east_anderson_fsr_road_closure_april_24_2026
+2026-10-20T15:22:43.005Z [build] District Manager PDFs 4/46 (8%), 42 left: DCK-1f93b9e0-cypress_lake_fsr_fs301
+2026-10-20T15:22:43.009Z [build] District Manager PDFs 5/46 (10%), 41 left: DCK-42f99435-1045201_-_discontinue_and_close_with_exhibit_a
+2026-10-20T15:22:43.197Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:43.697Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:44.445Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:45.447Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:45.450Z [build] District Manager PDFs 6/46 (13%), 40 left: DCK-4d024dd5-american_fsr_road_closure_february_9_2026
+2026-10-20T15:22:45.454Z [build] District Manager PDFs 7/46 (15%), 39 left: DCK-668dd9ac-rup_obligations_and_expectations_-_august_18_2021_signed
+2026-10-20T15:22:45.457Z [build] District Manager PDFs 8/46 (17%), 38 left: DCK-691e2b1a-hunter_fsr_variance_to_closure
+2026-10-20T15:22:45.461Z [build] District Manager PDFs 9/46 (19%), 37 left: DCK-79c52629-fs301_december_13_2024
+2026-10-20T15:22:45.695Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:46.196Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:46.947Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:47.947Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:48.197Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:48.699Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:49.449Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:50.450Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:50.701Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:51.201Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:51.953Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:52.951Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:53.203Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:53.702Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:54.452Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:55.453Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:55.458Z [build] District Manager PDFs 10/46 (21%), 36 left: DCK-8347a650-71w27vb_fsr_closures_amended_july_22
+2026-10-20T15:22:55.467Z [build] District Manager PDFs 11/46 (23%), 35 left: DCK-8eb16f04-squeah_fsr_-_2020_road_closure
+2026-10-20T15:22:55.471Z [build] District Manager PDFs 12/46 (26%), 34 left: DCK-94372f1a-mowhokam_east_fsr_closure
+2026-10-20T15:22:55.475Z [build] District Manager PDFs 13/46 (28%), 33 left: DCK-9a9e782c-notice_of_clousre_harrison_east_fsr_-_rescinded
+2026-10-20T15:22:55.479Z [build] District Manager PDFs 14/46 (30%), 32 left: DCK-a36f6f84-fsr_road_closure_notice_december_storm_damage
+2026-10-20T15:22:55.702Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:56.202Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:56.953Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:57.956Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:58.205Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:58.706Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:22:59.458Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:00.458Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:00.709Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:01.210Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:01.960Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:02.962Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:03.211Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:03.713Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:04.464Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:05.463Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:05.468Z [build] District Manager PDFs 15/46 (32%), 31 left: DCK-cdff3673-bench_fsr_road_closure
+2026-10-20T15:23:05.473Z [build] District Manager PDFs 16/46 (34%), 30 left: DCK-cfd72836-ac8126-19-01_bcts
+2026-10-20T15:23:05.481Z [build] District Manager PDFs 17/46 (36%), 29 left: DCK-d8b34b6d-807402_03_04_05_06_fs_301_-_fsr_discontinue_and_close
+2026-10-20T15:23:05.714Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:06.217Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:06.967Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:07.969Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:08.217Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:08.717Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:09.467Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:10.468Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:10.718Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:11.221Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:11.970Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:12.972Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:13.222Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:13.722Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:14.475Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:15.474Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:15.725Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:16.262Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:16.981Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:17.982Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:17.988Z [build] District Manager PDFs 18/46 (39%), 28 left: DCK-e487c48e-ck-2519_-_2024_inspection_signed
+2026-10-20T15:23:17.994Z [build] District Manager PDFs 19/46 (41%), 27 left: DCR-13a23bfb-johnhart_cw_nocamporder
+2026-10-20T15:23:17.995Z [build] District Manager PDFs 20/46 (43%), 26 left: DCR-9ef086bc-dcr_sdfmap
+2026-10-20T15:23:17.996Z [build] District Manager PDFs 21/46 (45%), 25 left: DCS-01301b15-bridge_inspections_2015_hillshade_south_cascades_all_structures_april2015
+2026-10-20T15:23:17.999Z [build] District Manager PDFs 22/46 (47%), 24 left: DCS-8f7c4b60-cascades_bridges2011dli
+2026-10-20T15:23:18.001Z [build] District Manager PDFs 23/46 (50%), 23 left: DQC-25fa270a-hanagover_fsr_822906_closure
+2026-10-20T15:23:18.009Z [build] District Manager PDFs 24/46 (52%), 22 left: DQC-57ce8ede-delkatla_10891_closure
+2026-10-20T15:23:18.014Z [build] District Manager PDFs 25/46 (54%), 21 left: DQC-6a1cfbef-2024_06_07_bill_brown_closure
+2026-10-20T15:23:18.019Z [build] District Manager PDFs 26/46 (56%), 20 left: DQC-8d4c7fb4-bonanza_fsr_822907_closure
+2026-10-20T15:23:18.026Z [build] District Manager PDFs 27/46 (58%), 19 left: DSC-335a98d1-a94817_bk_forest_service_road
+2026-10-20T15:23:18.027Z [build] District Manager PDFs 28/46 (60%), 18 left: DSE-2cb2b189-incomappleux_br2deact
+2026-10-20T15:23:18.034Z [build] District Manager PDFs 29/46 (63%), 17 left: DSE-68d293da-faq_document_for_incomappleux_deactivation
+2026-10-20T15:23:18.042Z [build] District Manager PDFs 30/46 (65%), 16 left: DSE-b217a506-incomappleux_road_deactivation_appendix_a
+2026-10-20T15:23:18.050Z [build] District Manager PDFs 31/46 (67%), 15 left: DSE-c3a0aaa8-incomappleux_road_deactivation_prescription_overview_2024_contour_new
+2026-10-20T15:23:18.062Z [build] District Manager PDFs 32/46 (69%), 14 left: DSE-e4e6b5f8-trout_lake_rady_creek_deactivation_prescription_map
+2026-10-20T15:23:18.088Z [build] District Manager PDFs 33/46 (71%), 13 left: DSI-2654b71d-camper_creek_mainline_gate_map
+2026-10-20T15:23:18.095Z [build] District Manager PDFs 34/46 (73%), 12 left: DSI-5f111aca-kmu_gate_location_overview_map
+2026-10-20T15:23:18.101Z [build] District Manager PDFs 35/46 (76%), 11 left: DSI-66e61e93-gate_location_map_braden_mainline_and_tr11
+2026-10-20T15:23:18.107Z [build] District Manager PDFs 36/46 (78%), 10 left: DSI-7d1cff67-canal_main_closure
+2026-10-20T15:23:18.114Z [build] District Manager PDFs 37/46 (80%), 9 left: DSI-8a4bec36-news_release_-_access_changes_implemented_to_protect_local_watershed
+2026-10-20T15:23:18.120Z [build] District Manager PDFs 38/46 (82%), 8 left: DSI-98c8d0df-map_gate_fsr5833_br01
+2026-10-20T15:23:18.232Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:18.733Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:19.485Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:20.485Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:20.489Z [build] District Manager PDFs 39/46 (84%), 7 left: DSI-a9fec493-walbran700_gate_location_map_2026mar9
+2026-10-20T15:23:20.494Z [build] District Manager PDFs 40/46 (86%), 6 left: DSI-c2357ace-map-banon_fsr_gate_location
+2026-10-20T15:23:20.500Z [build] District Manager PDFs 41/46 (89%), 5 left: DSI-c4f696e7-map_tfl46_bugaboo_main_gate_location
+2026-10-20T15:23:20.505Z [build] District Manager PDFs 42/46 (91%), 4 left: DSI-dc65a045-lucky_fsr_road_closure
+2026-10-20T15:23:20.510Z [build] District Manager PDFs 43/46 (93%), 3 left: DVA-3faae646-dsn_road_restictions_2026_spring_road_bans_bulletin_3
+2026-10-20T15:23:20.515Z [build] District Manager PDFs 44/46 (95%), 2 left: DVA-70228e68-dsn_road_restrictions_bulletin_4
+2026-10-20T15:23:20.517Z [build] District Manager PDFs 45/46 (97%), 1 left: DVA-792bd4d5-project_flyer_driftwood_rebuild
+2026-10-20T15:23:20.521Z [build] District Manager PDFs 46/46 (100%), all done: DVA-d66840c9-upper_driftwood_deactivation_advertisement
+2026-10-20T15:23:20.735Z [http] retry 1/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:21.235Z [http] retry 2/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:21.987Z [http] retry 3/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:22.987Z [http] retry 4/3 for openmaps.gov.bc.ca/geo/pub/wfs: fetch failed
+2026-10-20T15:23:23.000Z [build] road notices: 401 kept (0 gone from their page, held for a person), 0 km points placed, 33 AI-read; District Manager PDFs: 46 read, 74 road(s) closed or restricted in them, 0 waiting for extraction, 0 unreadable
+2026-10-20T15:23:23.000Z [build] parts 2/4 (50%), 2 left: bylaws
+2026-10-20T15:23:23.066Z [build] bylaws: 6 document(s), 5 with agreeing runs; all wait for a person
+2026-10-20T15:23:23.066Z [build] parts 3/4 (75%), 1 left: change classes
+2026-10-20T15:23:23.074Z [build] 21 open item(s) from an earlier build of 2026-10 withdrawn: their source changed or went away
+2026-10-20T15:23:23.074Z [build] parts 4/4 (100%), all done: build summary written
+2026-10-20T15:23:23.074Z [build] done: {"month":"2026-10","builtAt":"2026-10-20T15:16:17.685Z","closedAreas":{"waiting for extraction":254},"roadNotices":{"notices":401,"placed":0,"removed":0,"aiRead":33,"dmNotices":{"read":46,"roads":74,"waiting":0,"unreadable":0,"disagree":6}},"bylaws":{"docs":6,"agreed":5},"changeClasses":0,"withdrawnItems":21}
+2026-10-20T15:23:23.986Z [validate] 1 rule features, 332 bylaw rows, 9 regions, 41 sources: 0 errors, 3 warnings
+2026-10-20T15:23:24.542Z [review-packet] review/2026-10/index.html: 91 item(s), 91 open

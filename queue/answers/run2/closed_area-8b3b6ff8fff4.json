@@ -1,0 +1,69 @@
+{
+  "task_id": "closed_area-8b3b6ff8fff4",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T15:19:48Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": null,
+    "geometry": {
+      "method": "road_buffer",
+      "road": {
+        "name": "Callaghan Road",
+        "source_hint": "DRA"
+      },
+      "feature": null,
+      "buffer_m": 400,
+      "side": "both",
+      "from": {
+        "type": "boundary",
+        "road": null,
+        "name": "northwest corner of the Resort Municipality of Whistler"
+      },
+      "to": {
+        "type": "landmark",
+        "road": null,
+        "name": "gate at Whistler Olympic Park"
+      },
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting or Hunting Areas"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within 400 metres of the road allowance of Callaghan Road"
+      },
+      {
+        "field": "geometry.road",
+        "quote": "Callaghan Road"
+      },
+      {
+        "field": "geometry.buffer_m",
+        "quote": "400 metres"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "within 400 metres of the road allowance of Callaghan Road"
+      },
+      {
+        "field": "geometry.from",
+        "quote": "the northwest corner of the Resort Municipality of Whistler"
+      },
+      {
+        "field": "geometry.to",
+        "quote": "the gate at Whistler Olympic Park"
+      }
+    ],
+    "uncertain": [
+      "within"
+    ]
+  }
+}

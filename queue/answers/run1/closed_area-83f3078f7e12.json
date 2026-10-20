@@ -1,0 +1,209 @@
+{
+  "task_id": "closed_area-83f3078f7e12",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T15:18:34Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": null,
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the center line of Highway 99 at its junction with the easterly boundary of the Resort Municipality of Whistler",
+          "direction": "in a northerly and westerly direction",
+          "follow": "district_boundary",
+          "feature": "Resort Municipality of Whistler",
+          "side_or_bank": null,
+          "until": "its intersection with the 1 200 m contour line immediately east of Nineteen Mile Creek",
+          "distance": null,
+          "quote": "Commencing at the center line of Highway 99 at its junction with the easterly boundary of the Resort Municipality of Whistler, hereinafter referred to as Whistler, and proceeding in a northerly and westerly direction along the boundary of Whistler to its intersection with the 1 200 m contour line immediately east of Nineteen Mile Creek"
+        },
+        {
+          "start": null,
+          "direction": "easterly and northerly",
+          "follow": "contour",
+          "feature": "1 200 m contour line",
+          "side_or_bank": null,
+          "until": "a point on the contour line, above Sixteen Mile Creek, at the junction of the easterly and southerly slopes of Rainbow Mountain",
+          "distance": "approximately 2 km",
+          "quote": "thence easterly and northerly along the contour line approximately 2 km to a point on the contour line, above Sixteen Mile Creek, at the junction of the easterly and southerly slopes of Rainbow Mountain"
+        },
+        {
+          "start": null,
+          "direction": "due northeast",
+          "follow": "straight_line",
+          "feature": "Sixteen Mile Creek",
+          "side_or_bank": null,
+          "until": "the 1 050 m contour line",
+          "distance": null,
+          "quote": "thence due northeast in a straight line across Sixteen Mile Creek to the 1 050 m contour line"
+        },
+        {
+          "start": null,
+          "direction": "easterly and northerly",
+          "follow": "contour",
+          "feature": "1 050 m contour line",
+          "side_or_bank": null,
+          "until": "a point due West of the intersection of the power line and Highway 99 approximately 3 km northeast of the point of commencement",
+          "distance": "approximately 3 km",
+          "quote": "thence easterly and northerly along the contour line to a point due West of the intersection of the power line and Highway 99 approximately 3 km northeast of the point of commencement"
+        },
+        {
+          "start": null,
+          "direction": "due East",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "that intersection",
+          "distance": null,
+          "quote": "thence due East to that intersection"
+        },
+        {
+          "start": null,
+          "direction": null,
+          "follow": "road",
+          "feature": "Highway 99",
+          "side_or_bank": "southerly and the easterly boundary",
+          "until": "a point due North of the junction of Rethel Creek and the Green River",
+          "distance": null,
+          "quote": "thence along the southerly and the easterly boundary of Highway 99 to a point due North of the junction of Rethel Creek and the Green River"
+        },
+        {
+          "start": null,
+          "direction": null,
+          "follow": "creek",
+          "feature": "Rethel Creek",
+          "side_or_bank": "northern and eastern natural boundary",
+          "until": "its intersection with the boundary of Garibaldi Provincial Park",
+          "distance": null,
+          "quote": "thence across the Green River and up the northern and eastern natural boundary of Rethel Creek to its intersection with the boundary of Garibaldi Provincial Park"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "other",
+          "feature": "Garibaldi Provincial Park",
+          "side_or_bank": null,
+          "until": "its intersection with the eastern boundary of Whistler",
+          "distance": null,
+          "quote": "thence westerly along the boundary of the park to its intersection with the eastern boundary of Whistler"
+        },
+        {
+          "start": null,
+          "direction": "northerly and easterly and northerly",
+          "follow": "district_boundary",
+          "feature": "Resort Municipality of Whistler",
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence northerly and easterly and northerly along the boundary of Whistler to the point of commencement"
+        },
+        {
+          "start": "the southwest corner of the Brandywine Falls Provincial Park boundary",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the southwest corner of the Brandywine Falls Provincial Park boundary"
+        },
+        {
+          "start": null,
+          "direction": "due West",
+          "follow": "straight_line",
+          "feature": "Mount Brew",
+          "side_or_bank": null,
+          "until": "the 3 000 ft. (900 m) contour line",
+          "distance": null,
+          "quote": "thence due West up the slope of Mount Brew to the 3 000 ft. (900 m) contour line"
+        },
+        {
+          "start": null,
+          "direction": "in a southerly direction",
+          "follow": "contour",
+          "feature": "3 000 ft. (900 m) contour line",
+          "side_or_bank": null,
+          "until": "the point of its intersection with the unnamed creek originating at Brew Lake",
+          "distance": null,
+          "quote": "thence in a southerly direction along that contour line to the point of its intersection with the unnamed creek originating at Brew Lake"
+        },
+        {
+          "start": null,
+          "direction": "in a southerly direction",
+          "follow": "creek",
+          "feature": "unnamed creek originating at Brew Lake",
+          "side_or_bank": null,
+          "until": "the confluence of the unnamed creek with Roe Creek",
+          "distance": null,
+          "quote": "thence in a southerly direction downstream to the confluence of the unnamed creek with Roe Creek"
+        },
+        {
+          "start": null,
+          "direction": "in an easterly direction",
+          "follow": "creek",
+          "feature": "Roe Creek",
+          "side_or_bank": null,
+          "until": "the mouth of Roe Creek at Shadow Lake",
+          "distance": null,
+          "quote": "thence in an easterly direction, downstream to the mouth of Roe Creek at Shadow Lake"
+        },
+        {
+          "start": null,
+          "direction": "in an easterly direction",
+          "follow": "shoreline",
+          "feature": "Shadow Lake",
+          "side_or_bank": "high water mark of the northerly shore",
+          "until": "the point of intersection of the high water mark with a perpendicular, downward projection of the centerline of Highway 99 from the center of the Highway 99 bridge across the connecting waterway between Daisy Lake and Shadow Lake",
+          "distance": null,
+          "quote": "thence in an easterly direction, along the high water mark of the northerly shore of Shadow Lake to the point of intersection of the high water mark with a perpendicular, downward projection of the centerline of Highway 99 from the center of the Highway 99 bridge across the connecting waterway between Daisy Lake and Shadow Lake"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "road",
+          "feature": "Highway 99",
+          "side_or_bank": "centerline",
+          "until": "the point of intersection with Brandywine Falls Provincial Park boundary",
+          "distance": null,
+          "quote": "thence northerly along the centerline of Highway 99 to the point of intersection with Brandywine Falls Provincial Park boundary"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "other",
+          "feature": "Brandywine Falls Provincial Park",
+          "side_or_bank": "southern boundary",
+          "until": "the southwest corner of Brandywine Falls Provincial Park, being the point of commencement",
+          "distance": null,
+          "quote": "thence westerly along the southern boundary of Brandywine Falls Provincial Park to the southwest corner of Brandywine Falls Provincial Park, being the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "(3)Commencing at the center line of Highway 99"
+      }
+    ],
+    "uncertain": [
+      "within"
+    ]
+  }
+}

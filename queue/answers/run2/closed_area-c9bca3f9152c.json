@@ -1,0 +1,119 @@
+{
+  "task_id": "closed_area-c9bca3f9152c",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T15:19:29Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": null,
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "Point Grey",
+          "direction": "northerly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point on the southerly municipal boundary of West Vancouver due South of Point Atkinson",
+          "distance": null,
+          "quote": "Commencing at Point Grey and proceeding in a straight line northerly to a point on the southerly municipal boundary of West Vancouver due South of Point Atkinson"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "district_boundary",
+          "feature": "West Vancouver",
+          "side_or_bank": null,
+          "until": "the southerly boundary of North Vancouver municipality",
+          "distance": null,
+          "quote": "thence easterly along the boundary to the southerly boundary of North Vancouver municipality"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "district_boundary",
+          "feature": "North Vancouver",
+          "side_or_bank": null,
+          "until": "the easterly boundary of North Vancouver",
+          "distance": null,
+          "quote": "thence easterly along the boundary to the easterly boundary of North Vancouver"
+        },
+        {
+          "start": null,
+          "direction": "due South",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the north boundary of the municipality of Burnaby",
+          "distance": null,
+          "quote": "thence due South to the north boundary of the municipality of Burnaby"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "district_boundary",
+          "feature": "Burnaby",
+          "side_or_bank": null,
+          "until": "the north boundary of the City of Vancouver",
+          "distance": null,
+          "quote": "thence westerly along the boundary to the north boundary of the City of Vancouver"
+        },
+        {
+          "start": null,
+          "direction": "westerly, northwesterly, westerly, southerly and westerly",
+          "follow": "district_boundary",
+          "feature": "City of Vancouver",
+          "side_or_bank": null,
+          "until": "the west boundary of the City of Vancouver",
+          "distance": null,
+          "quote": "thence westerly, northwesterly, westerly, southerly and westerly along the boundary to the west boundary of the City of Vancouver"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "district_boundary",
+          "feature": "City of Vancouver",
+          "side_or_bank": null,
+          "until": "the high water mark on Point Grey beach",
+          "distance": null,
+          "quote": "thence southerly along the boundary to the high water mark on Point Grey beach"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "shoreline",
+          "feature": "Point Grey beach",
+          "side_or_bank": "high water mark",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence westerly along the high water mark to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within the following described boundaries"
+      }
+    ],
+    "uncertain": [
+      "within"
+    ]
+  }
+}

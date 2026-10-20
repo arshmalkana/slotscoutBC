@@ -1,0 +1,50 @@
+{
+ "task_id": "closed_area-e17e750d7522",
+ "run": 1,
+ "mode": "agent",
+ "model": "Claude Code agent mode",
+ "prompt_version": "closed_area.v1",
+ "schema_id": "closed_area.v1",
+ "produced_at": "2026-10-20T15:19:05Z",
+ "answer": {
+  "effect": "no_rifle",
+  "exemptions": [],
+  "period": null,
+  "within": {
+   "type": "wildlife_management_unit",
+   "name": "M.U. 2-16"
+  },
+  "geometry": {
+   "method": "admin_boundary",
+   "road": null,
+   "feature": {
+    "type": "island",
+    "name": "Keats Island"
+   },
+   "buffer_m": null,
+   "side": null,
+   "from": null,
+   "to": null,
+   "steps": []
+  },
+  "quotes": [
+   {
+    "field": "effect",
+    "quote": "Prohibited Discharge Areas — Rifles"
+   },
+   {
+    "field": "within",
+    "quote": "in M.U. 2-16"
+   },
+   {
+    "field": "geometry.method",
+    "quote": "all of Keats Island together with the adjacent foreshore between the natural boundary of Keats Island and the mean low water mark"
+   },
+   {
+    "field": "geometry.feature",
+    "quote": "all of Keats Island"
+   }
+  ],
+  "uncertain": []
+ }
+}

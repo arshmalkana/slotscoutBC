@@ -1,0 +1,54 @@
+{
+ "task_id": "closed_area-c3365bebc244",
+ "run": 1,
+ "mode": "agent",
+ "model": "Claude Code agent mode",
+ "prompt_version": "closed_area.v1",
+ "schema_id": "closed_area.v1",
+ "produced_at": "2026-10-20T15:19:05Z",
+ "answer": {
+  "effect": "no_shooting",
+  "exemptions": [],
+  "period": null,
+  "within": null,
+  "geometry": {
+   "method": "road_buffer",
+   "road": {
+    "name": "Highway 3",
+    "source_hint": "highway"
+   },
+   "feature": null,
+   "buffer_m": 400,
+   "side": "both",
+   "from": null,
+   "to": null,
+   "steps": []
+  },
+  "quotes": [
+   {
+    "field": "effect",
+    "quote": "No Shooting or Hunting Areas"
+   },
+   {
+    "field": "geometry.method",
+    "quote": "All areas within 0.4 km of the centerline of Highway 3"
+   },
+   {
+    "field": "geometry.road",
+    "quote": "Highway 3"
+   },
+   {
+    "field": "geometry.buffer_m",
+    "quote": "within 0.4 km"
+   },
+   {
+    "field": "geometry.side",
+    "quote": "All areas within 0.4 km of the centerline"
+   }
+  ],
+  "uncertain": [
+   "geometry.from",
+   "geometry.to"
+  ]
+ }
+}

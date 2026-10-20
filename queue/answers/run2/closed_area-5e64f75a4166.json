@@ -1,0 +1,74 @@
+{
+  "task_id": "closed_area-5e64f75a4166",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T15:19:48Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Yale District"
+    },
+    "geometry": {
+      "method": "road_buffer",
+      "road": {
+        "name": "Chilliwack River Road",
+        "source_hint": "DRA"
+      },
+      "feature": null,
+      "buffer_m": 800,
+      "side": "both",
+      "from": {
+        "type": "landmark",
+        "road": null,
+        "name": "point 1.6 km (1 mile) west of the Provincial Gaol Service Camp No. 1"
+      },
+      "to": {
+        "type": "landmark",
+        "road": null,
+        "name": "Chilliwack Lake"
+      },
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "in the Chilliwack River Valley, Yale District"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "extending for a distance of 800 m (0.5 mile) north and south of Chilliwack River Road"
+      },
+      {
+        "field": "geometry.road",
+        "quote": "Chilliwack River Road"
+      },
+      {
+        "field": "geometry.buffer_m",
+        "quote": "800 m (0.5 mile)"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "north and south of Chilliwack River Road"
+      },
+      {
+        "field": "geometry.from",
+        "quote": "Commencing at the point 1.6 km (1 mile) west of the Provincial Gaol Service Camp No. 1"
+      },
+      {
+        "field": "geometry.to",
+        "quote": "to Chilliwack Lake"
+      }
+    ],
+    "uncertain": []
+  }
+}

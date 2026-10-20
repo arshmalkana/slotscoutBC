@@ -1,0 +1,144 @@
+{
+  "task_id": "closed_area-b5afb440abe0",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T15:19:29Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 2-5"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the most northerly point of the natural boundary of Agamemnon Channel on the southerly shore thereof adjacent to and west of Earls Cove",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the most northerly point of the natural boundary of Agamemnon Channel on the southerly shore thereof adjacent to and west of Earls Cove"
+        },
+        {
+          "start": null,
+          "direction": "due South",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of intersection with the southerly boundary of the BC Hydro right of way",
+          "distance": null,
+          "quote": "thence due South to the point of intersection with the southerly boundary of the BC Hydro right of way"
+        },
+        {
+          "start": null,
+          "direction": "general easterly and southerly",
+          "follow": "other",
+          "feature": "BC Hydro right of way",
+          "side_or_bank": "southerly boundary",
+          "until": "its intersection with Highway 101",
+          "distance": null,
+          "quote": "thence in a general easterly and southerly direction along the southerly boundary of the BC Hydro right of way to its intersection with Highway 101"
+        },
+        {
+          "start": null,
+          "direction": "due East",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the mean low water mark of the northwest bay of Brown Lake",
+          "distance": null,
+          "quote": "thence along a straight line due East to the mean low water mark of the northwest bay of Brown Lake"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "shoreline",
+          "feature": "Brown Lake",
+          "side_or_bank": "mean low water mark",
+          "until": "its most northeasterly point",
+          "distance": null,
+          "quote": "thence easterly along the mean low water mark of the northwest bay of Brown Lake to its most northeasterly point"
+        },
+        {
+          "start": null,
+          "direction": "more or less east",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the most westerly point on the mean high water mark on Boom Isles",
+          "distance": null,
+          "quote": "thence more or less east in a straight line to the most westerly point on the mean high water mark on Boom Isles"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "straight_line",
+          "feature": "Skookumchuck Narrows",
+          "side_or_bank": null,
+          "until": "the most northerly point on the mean highwater mark of Sutton Islets",
+          "distance": null,
+          "quote": "thence northerly in a straight line along Skookumchuck Narrows to the most northerly point on the mean highwater mark of Sutton Islets"
+        },
+        {
+          "start": null,
+          "direction": "more or less west",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the most northerly point on the natural boundary of Agamemnon Channel on the southerly shore thereof",
+          "distance": null,
+          "quote": "thence more or less west in a straight line to the most northerly point on the natural boundary of Agamemnon Channel on the southerly shore thereof"
+        },
+        {
+          "start": null,
+          "direction": "more or less west",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the most southwesterly point on the natural boundary of Agamemnon Channel on the northerly shore thereof at Nile Point",
+          "distance": null,
+          "quote": "thence more or less west in a straight line to the most southwesterly point on the natural boundary of Agamemnon Channel on the northerly shore thereof at Nile Point"
+        },
+        {
+          "start": null,
+          "direction": "more or less southwesterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence more or less southwesterly in a straight line to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "in M.U. 2-5"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundaries"
+      }
+    ],
+    "uncertain": []
+  }
+}

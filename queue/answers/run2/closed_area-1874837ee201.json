@@ -1,0 +1,47 @@
+{
+  "task_id": "closed_area-1874837ee201",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T15:19:15Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "MU 2-4"
+    },
+    "geometry": {
+      "method": "other",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting, Hunting or Trapping Areas"
+      },
+      {
+        "field": "within",
+        "quote": "The portion of MU 2-4"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "The portion of MU 2-4 between the Serpentine River and Nicomekl River and including Lots 450, Group 2 and 160, Group 2"
+      }
+    ],
+    "uncertain": [
+      "geometry.feature",
+      "geometry.from",
+      "geometry.to"
+    ]
+  }
+}

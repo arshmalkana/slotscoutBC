@@ -1,0 +1,129 @@
+{
+  "task_id": "closed_area-f358473b99fa",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T15:20:04Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": null,
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "a point on the mean low water mark on the northern natural boundary of Sturt Creek where it flows into Malaspina Strait",
+          "direction": "due South",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the southerly boundary of the Blubber Bay Highway right of way",
+          "distance": null,
+          "quote": "Commencing at a point on the mean low water mark on the northern natural boundary of Sturt Creek where it flows into Malaspina Strait and proceeding due South in a straight line to the southerly boundary of the Blubber Bay Highway right of way"
+        },
+        {
+          "start": null,
+          "direction": "southeasterly",
+          "follow": "road",
+          "feature": "Blubber Bay Highway",
+          "side_or_bank": "southerly boundary",
+          "until": "its intersection with Gillies Bay Highway",
+          "distance": null,
+          "quote": "thence southeasterly along the southerly boundary of the highway right of way to its intersection with Gillies Bay Highway"
+        },
+        {
+          "start": null,
+          "direction": "southwest and southeast",
+          "follow": "road",
+          "feature": "Gillies Bay Highway",
+          "side_or_bank": "westerly right of way",
+          "until": "its intersection with Vananda Creek",
+          "distance": null,
+          "quote": "thence southwest and southeast along the westerly right of way to its intersection with Vananda Creek"
+        },
+        {
+          "start": null,
+          "direction": "due East",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the westerly right of way of Central Road",
+          "distance": null,
+          "quote": "thence in a straight line due East to the westerly right of way of Central Road"
+        },
+        {
+          "start": null,
+          "direction": "southeasterly",
+          "follow": "road",
+          "feature": "Central Road",
+          "side_or_bank": null,
+          "until": "the junction of the Imperial Limestone Road",
+          "distance": null,
+          "quote": "thence southeasterly along the right of way to the junction of the Imperial Limestone Road"
+        },
+        {
+          "start": null,
+          "direction": "due North",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point on the mean low water mark on the natural boundary of Malaspina Strait",
+          "distance": null,
+          "quote": "thence due North in a straight line to a point on the mean low water mark on the natural boundary of Malaspina Strait"
+        },
+        {
+          "start": null,
+          "direction": "northwesterly",
+          "follow": "shoreline",
+          "feature": "Malaspina Strait",
+          "side_or_bank": null,
+          "until": "the southerly terminus of the Texada Island telephone cable",
+          "distance": null,
+          "quote": "thence northwesterly along the natural boundary to the southerly terminus of the Texada Island telephone cable"
+        },
+        {
+          "start": null,
+          "direction": "northwesterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the tip of Sturt Point",
+          "distance": null,
+          "quote": "thence northwesterly in a straight line to the tip of Sturt Point"
+        },
+        {
+          "start": null,
+          "direction": "southerly and westerly",
+          "follow": "shoreline",
+          "feature": "Sturt Point",
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence southerly and westerly along the mean low water mark on the natural boundary of Sturt Point to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within the following described boundaries"
+      }
+    ],
+    "uncertain": [
+      "within"
+    ]
+  }
+}

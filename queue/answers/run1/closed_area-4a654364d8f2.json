@@ -1,0 +1,264 @@
+{
+  "task_id": "closed_area-4a654364d8f2",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T15:18:34Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U.s 2-2 and 2-17"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the intersection of the Coquihalla Highway and the easternmost boundary of the Town of Hope west of Thacker Creek",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the intersection of the Coquihalla Highway and the easternmost boundary of the Town of Hope west of Thacker Creek"
+        },
+        {
+          "start": null,
+          "direction": "northerly, westerly and northerly",
+          "follow": "district_boundary",
+          "feature": "Town of Hope",
+          "side_or_bank": "easterly boundary",
+          "until": "the southwest corner of the Aywawwis #15 Indian Reserve",
+          "distance": null,
+          "quote": "thence northerly, westerly and northerly along the easterly boundary of the Town of Hope to its intersection with the southwest corner of the Aywawwis #15 Indian Reserve"
+        },
+        {
+          "start": null,
+          "direction": "easterly and northerly",
+          "follow": "reserve_boundary",
+          "feature": "Aywawwis #15 Indian Reserve",
+          "side_or_bank": "southerly and easterly boundary",
+          "until": "a private logging company road",
+          "distance": null,
+          "quote": "thence easterly and northerly along the southerly and easterly boundary of the reserve to a private logging company road"
+        },
+        {
+          "start": null,
+          "direction": "southeasterly",
+          "follow": "road",
+          "feature": "private logging company road",
+          "side_or_bank": "northern boundary",
+          "until": "its intersection with Othello Road",
+          "distance": null,
+          "quote": "thence southeasterly along the northern boundary of the road to its intersection with Othello Road"
+        },
+        {
+          "start": null,
+          "direction": "in an easterly direction",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the pipeline pumping station",
+          "distance": null,
+          "quote": "thence in an easterly direction to the pipeline pumping station"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "other",
+          "feature": "gas pipeline right of way",
+          "side_or_bank": null,
+          "until": "its intersection with the old Kettle Valley Railway right of way",
+          "distance": null,
+          "quote": "thence westerly along the gas pipeline right of way to its intersection with the old Kettle Valley Railway right of way"
+        },
+        {
+          "start": null,
+          "direction": "southeasterly",
+          "follow": "other",
+          "feature": "old Kettle Valley Railway right of way",
+          "side_or_bank": "northern edge",
+          "until": "the point of its intersection with a line due North from the mouth of Two Mile Creek",
+          "distance": null,
+          "quote": "thence southeasterly along the northern edge of the right of way to the point of its intersection with a line due North from the mouth of Two Mile Creek"
+        },
+        {
+          "start": null,
+          "direction": "due South",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the mouth of Two Mile creek",
+          "distance": null,
+          "quote": "thence due South to the mouth of Two Mile creek"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "creek",
+          "feature": "Two Mile Creek",
+          "side_or_bank": null,
+          "until": "the Coquihalla Highway",
+          "distance": null,
+          "quote": "thence southerly up Two Mile Creek to the Coquihalla Highway"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "road",
+          "feature": "Coquihalla Highway",
+          "side_or_bank": null,
+          "until": "its point of commencement",
+          "distance": null,
+          "quote": "thence westerly along the Coquihalla Highway to its point of commencement"
+        },
+        {
+          "start": "the intersection of the No. 1 Highway and Chawuthen Creek",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the intersection of the No. 1 Highway and Chawuthen Creek"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "creek",
+          "feature": "Chawuthen Creek",
+          "side_or_bank": null,
+          "until": "its mouth",
+          "distance": null,
+          "quote": "thence northerly along the creek to its mouth"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "river",
+          "feature": "Fraser River",
+          "side_or_bank": "natural boundary",
+          "until": "the southerly end of the Bristol Island causeway",
+          "distance": null,
+          "quote": "thence easterly along the natural boundary of the Fraser River to the southerly end of the Bristol Island causeway"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "other",
+          "feature": "Bristol Island causeway",
+          "side_or_bank": null,
+          "until": "the natural boundary of the Fraser River",
+          "distance": null,
+          "quote": "thence easterly across the causeway to the natural boundary of the Fraser River"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "river",
+          "feature": "Fraser River",
+          "side_or_bank": "natural boundary",
+          "until": "its point of intersection with the southwesterly boundary of the Town of Hope",
+          "distance": null,
+          "quote": "thence easterly along the natural boundary of the Fraser River to its point of intersection with the southwesterly boundary of the Town of Hope"
+        },
+        {
+          "start": null,
+          "direction": "southerly and easterly",
+          "follow": "district_boundary",
+          "feature": "Town of Hope",
+          "side_or_bank": null,
+          "until": "a point 500 m south of its intersection with Highway No. 1",
+          "distance": "500 m",
+          "quote": "thence southerly and easterly along the town boundary to a point 500 m south of its intersection with Highway No. 1"
+        },
+        {
+          "start": null,
+          "direction": "southeasterly and easterly",
+          "follow": "road",
+          "feature": "Highway No. 1",
+          "side_or_bank": null,
+          "until": "a point that is 500 m east of Silverhope Road",
+          "distance": "500 m",
+          "quote": "thence southeasterly and easterly at a perpendicular distance of 500 m and parallel to Highway No. 1 to a point that is 500 m east of Silverhope Road"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "road",
+          "feature": "Silverhope Road",
+          "side_or_bank": null,
+          "until": "a point due North of Eureka Creek",
+          "distance": "500 m",
+          "quote": "thence southerly at a perpendicular distance of 500 m and parallel to Silverhope Road to a point due North of Eureka Creek"
+        },
+        {
+          "start": null,
+          "direction": "due South",
+          "follow": "straight_line",
+          "feature": "Eureka Creek",
+          "side_or_bank": null,
+          "until": "a point 500 m due South of Silverhope Road",
+          "distance": "500 m",
+          "quote": "thence due South along a straight line through the mouth of Eureka Creek to a point 500 m due South of Silverhope Road"
+        },
+        {
+          "start": null,
+          "direction": "westerly and northerly",
+          "follow": "road",
+          "feature": "Silverhope Road",
+          "side_or_bank": null,
+          "until": "a point 500 m due South of Highway No. 1",
+          "distance": "500 m",
+          "quote": "thence westerly and northerly along a line parallel to and 500 m perpendicularly distant from the centerline of Silverhope Road to a point 500 m due South of Highway No. 1"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "road",
+          "feature": "Highway No. 1",
+          "side_or_bank": null,
+          "until": "a point due South of the mouth of Chawuthen Creek",
+          "distance": "500 m",
+          "quote": "thence easterly along a line parallel to and 500 m perpendicularly distant from the centerline of Highway No. 1 to a point due South of the mouth of Chawuthen Creek"
+        },
+        {
+          "start": null,
+          "direction": "due North",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "its point of commencement",
+          "distance": null,
+          "quote": "thence due North along a line to its point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "within M.U.s 2-2 and 2-17"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within the following described boundaries: (1)Commencing at"
+      }
+    ],
+    "uncertain": []
+  }
+}

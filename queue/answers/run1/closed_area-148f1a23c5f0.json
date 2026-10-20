@@ -1,0 +1,119 @@
+{
+  "task_id": "closed_area-148f1a23c5f0",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T15:18:34Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": null,
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the intersection of the easterly boundary of the District of Chilliwack and Highway No. 1",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the intersection of the easterly boundary of the District of Chilliwack and Highway No. 1"
+        },
+        {
+          "start": null,
+          "direction": "northerly, easterly and northerly",
+          "follow": "district_boundary",
+          "feature": "District of Chilliwack",
+          "side_or_bank": null,
+          "until": "the intersection of the District boundary with the southerly boundary of the Cheam No. 1 Indian Reserve",
+          "distance": null,
+          "quote": "thence northerly, easterly and northerly along the district boundary to the intersection of the District boundary with the southerly boundary of the Cheam No. 1 Indian Reserve"
+        },
+        {
+          "start": null,
+          "direction": "easterly and northerly",
+          "follow": "reserve_boundary",
+          "feature": "Cheam No. 1 Indian Reserve",
+          "side_or_bank": null,
+          "until": "the southerly natural boundary of the Fraser River",
+          "distance": null,
+          "quote": "thence easterly and northerly along the reserve boundary to the southerly natural boundary of the Fraser River"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "river",
+          "feature": "Fraser River",
+          "side_or_bank": "natural boundary",
+          "until": "its intersection with the westerly boundary of the Popkum No. I Indian Reserve",
+          "distance": null,
+          "quote": "thence easterly along the natural boundary to its intersection with the westerly boundary of the Popkum No. I Indian Reserve"
+        },
+        {
+          "start": null,
+          "direction": "southeasterly",
+          "follow": "reserve_boundary",
+          "feature": "Popkum No. I Indian Reserve",
+          "side_or_bank": null,
+          "until": "the most southerly corner of the reserve",
+          "distance": null,
+          "quote": "thence southeasterly along the reserve boundary to the most southerly corner of the reserve"
+        },
+        {
+          "start": null,
+          "direction": "southeast",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point 400 m southeast of Highway No. 1",
+          "distance": "400 m",
+          "quote": "thence southeast in a straight line to a point 400 m southeast of Highway No. 1"
+        },
+        {
+          "start": null,
+          "direction": "southwesterly",
+          "follow": "road",
+          "feature": "Highway No. 1",
+          "side_or_bank": null,
+          "until": "a point due South of the point of commencement",
+          "distance": "400 m",
+          "quote": "thence southwesterly parallel to and 400 m distant from the highway to a point due South of the point of commencement"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence northerly to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within the following described boundaries: Commencing at"
+      }
+    ],
+    "uncertain": [
+      "within"
+    ]
+  }
+}

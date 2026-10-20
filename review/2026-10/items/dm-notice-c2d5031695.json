@@ -1,0 +1,356 @@
+{
+  "item_id": "dm-notice-c2d5031695",
+  "month": "2026-10",
+  "kind": "dm_notice",
+  "title": "District Manager notice DSI-c4f696e7-map_tfl46_bugaboo_main_gate_location: 1 road closed or restricted (Bugaboo M/L)",
+  "change_type": "stricter",
+  "decision": "Check each road and km point against the PDF and its page images. Approving lets these closures count on the map; until then P6 shows Cannot confirm on these roads.",
+  "why": [
+    "read from: text layer (1 page); OCR by tesseract 5.3.4 on page 1; 1 map or scan page image for reading, and 1 page image(s) looked at by both readings",
+    "a person checks every AI reading before it counts (Addendum A 7.2: the gold set has not passed yet)",
+    "read from the map image but not found in the text or OCR text, so not counted: Gordon River Main: \"GORDON RIVER MAIN\"; Braden M/L: \"BRADEN M/L\""
+  ],
+  "source": {
+    "text": "Bugaboo M/L sta. 0+100\n  Gate or Access Restriction\n  Road Permit R05413\n\nI\n\\I\n  '  I\n  ......... _,...)\n\n\n\n\n  ,  _.,,,,,--\n  -­  ''\\'\n  /  '\n  I\n\n\n\n  I\n  I  \\\n  '\n  ,\n  ,'  \\  I\n\n  \\I\n  \\\n\n\n  I\n  /'4669\n  I\n  I\n  I\n  ,'\n  / -=�..\n\n\n\n\n  �The  Teal-Jones Group,.\n  TFL 46\n  Bugaboo M/L Gate / Access\n  Restriction Location\n\n  Forest Roads  A  Gate Location\n\n\n  *\n  - Mainline\n\n  = Secondary Road  Point of Interest\n\n  -- Overgrown Road  D  Cutblocks\n\n  Lake/River\n  1:50,000  0  0.5  2 Kilometers\n  October 25, 2021  [��J TFL 46 Boundary  I  I_  I\n\n[Page 1: text read by OCR from the page image]\nOS\nBugaboo M/L sta. 0+100\nGate or Access Restriction\n\n~“\n\n—\n@SXionely pou\ney S/\\\n\nN38) %- 2\n\n2\n') i 2 \\\n¢\n/\nt\nq\n}\n-\nB1100\n(C)\nf\n? 1o CS\n7=— I\" LI\nZ OF\na ER SOS\n‘me\nfi =a FR ig\na\n\nR\nOP ta fi. Nm\nSX,\n\nwe Teal-Jones Group.\nTFL 46\nBugaboo M/L Gate / Access -\nRestriction Location\nForest Roads A Gate Location\ns=a==_ Mainline &\nSecondary Road % Point of interest \\\n—— Overgrown Road Cc Cutblocks\nLake/River \\\n4:50,000 =e) 0 0.5 4 2 Kilometers\nOctober 25, 2021 L ; TFL 46 Boundary (a ‘ js _}\n—a-— . . . ' ‘ a a,",
+    "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/map_tfl46_bugaboo_main_gate_location.pdf",
+    "version": "2026-10-19T20:01:06.118Z",
+    "confirmed": true,
+    "file": "raw/2026-10/dm_notices/DSI-c4f696e7-map_tfl46_bugaboo_main_gate_location.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "dm_notice-d51d9aaf4efa",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "dm_notice.v1",
+      "schema_id": "dm_notice.v1",
+      "produced_at": "2026-10-19T20:13:54Z",
+      "answer": {
+        "legible": true,
+        "document_type": "gate_map",
+        "signed_on": "2021-10-25",
+        "rescinded": false,
+        "roads": [
+          {
+            "name": "Bugaboo M/L",
+            "file_section": "R05413",
+            "quote": "Bugaboo M/L",
+            "effective_from": null,
+            "effective_to": null,
+            "points": [
+              {
+                "km": 0.1,
+                "km_end": null,
+                "extent": "at",
+                "status": "gated",
+                "seen_on": "text",
+                "quote": "Bugaboo M/L sta. 0+100 Gate or Access Restriction"
+              }
+            ]
+          },
+          {
+            "name": "Gordon River Main",
+            "file_section": null,
+            "quote": "GORDON RIVER MAIN",
+            "effective_from": null,
+            "effective_to": null,
+            "points": [
+              {
+                "km": null,
+                "km_end": null,
+                "extent": "unknown",
+                "status": "gated",
+                "seen_on": "map",
+                "quote": "Gate Location"
+              },
+              {
+                "km": null,
+                "km_end": null,
+                "extent": "unknown",
+                "status": "gated",
+                "seen_on": "map",
+                "quote": "Gate Location"
+              }
+            ]
+          },
+          {
+            "name": "Braden M/L",
+            "file_section": null,
+            "quote": "BRADEN M/L",
+            "effective_from": null,
+            "effective_to": null,
+            "points": [
+              {
+                "km": null,
+                "km_end": null,
+                "extent": "unknown",
+                "status": "gated",
+                "seen_on": "map",
+                "quote": "Gate Location"
+              }
+            ]
+          }
+        ],
+        "map_readings": [
+          {
+            "page": 1,
+            "label": "TFL 46 Bugaboo M/L Gate / Access Restriction Location",
+            "shows": "Map title (The Teal-Jones Group), dated October 25, 2021."
+          },
+          {
+            "page": 1,
+            "label": "Bugaboo M/L sta. 0+100 Gate or Access Restriction Road Permit R05413",
+            "shows": "Callout box with an arrow pointing to a red Gate Location triangle at the start of the road labelled BUG1000 / BUGABOO M/L where it meets the red mainline, beside the km markers \"0\" and \"36\"."
+          },
+          {
+            "page": 1,
+            "label": "Gate Location",
+            "shows": "Legend: red triangle marks a gate location. Six red triangles appear on the map."
+          },
+          {
+            "page": 1,
+            "label": "GORDON RIVER MAIN",
+            "shows": "Red Gate Location triangle on the red mainline between the km markers \"32\" and \"34\", where the yellow TFL 46 Boundary line and the road labelled GD5000 meet it. No km label at the triangle."
+          },
+          {
+            "page": 1,
+            "label": "GORDON RIVER MAIN",
+            "shows": "Red Gate Location triangle on the red mainline between the km markers \"44\" and \"46\", just past where the road labelled LOWER BROWNS M/L branches off. No km label at the triangle."
+          },
+          {
+            "page": 1,
+            "label": "BRADEN M/L",
+            "shows": "Red Gate Location triangle on the road labelled BRADEN M/L, beside the km marker \"4\" near the words \"Braden Creek\", with an orange pentagon symbol drawn next to it."
+          },
+          {
+            "page": 1,
+            "label": "0 44",
+            "shows": "Red Gate Location triangle beside the km markers \"0\" and \"44\", at the start of a red road leaving the mainline; no road name is printed beside this triangle."
+          },
+          {
+            "page": 1,
+            "label": "PANDORA M/L",
+            "shows": "Red Gate Location triangle, partly covered by an orange pentagon, beside a \"0\" marker at the junction where the roads labelled PANDORA M/L and GRIERSON M/L meet the mainline; a black arrow points to it from a blank white box whose label has been removed. Which road the gate is on is not printed."
+          },
+          {
+            "page": 1,
+            "label": "(no legible legend text)",
+            "shows": "Orange pentagon symbols appear in four places (on BUGABOO M/L between km markers \"4\" and \"6\", beside a \"0\" marker near the road labelled GO3100 and km marker \"38\", at the BRADEN M/L gate and at the PANDORA M/L junction gate). The legend text for this symbol is blanked out, so its meaning cannot be read."
+          },
+          {
+            "page": 1,
+            "label": "(blank)",
+            "shows": "Several white boxes cover parts of the map (near the Bugaboo M/L labels, below the GO-3000 label, near GR-12 and at the start of the arrow to the Pandora M/L junction); any labels under them cannot be read."
+          }
+        ],
+        "quotes": [
+          {
+            "field": "signed_on",
+            "quote": "October 25, 2021"
+          },
+          {
+            "field": "rescinded",
+            "quote": "Bugaboo M/L Gate / Access"
+          }
+        ],
+        "uncertain": [
+          "roads[0].effective_from",
+          "roads[0].effective_to",
+          "roads[0].points",
+          "roads[1].effective_from",
+          "roads[1].effective_to",
+          "roads[1].points[0].km",
+          "roads[1].points[1].km",
+          "roads[2].effective_from",
+          "roads[2].effective_to",
+          "roads[2].points[0].km"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "dm_notice-d51d9aaf4efa",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "dm_notice.v1",
+      "schema_id": "dm_notice.v1",
+      "produced_at": "2026-10-19T20:16:13Z",
+      "answer": {
+        "legible": true,
+        "document_type": "gate_map",
+        "signed_on": "2021-10-25",
+        "rescinded": false,
+        "roads": [
+          {
+            "name": "Bugaboo M/L",
+            "file_section": "R05413",
+            "quote": "Bugaboo M/L",
+            "effective_from": null,
+            "effective_to": null,
+            "points": [
+              {
+                "km": 0.1,
+                "km_end": null,
+                "extent": "at",
+                "status": "gated",
+                "seen_on": "text",
+                "quote": "Bugaboo M/L sta. 0+100 Gate or Access Restriction"
+              }
+            ]
+          },
+          {
+            "name": "GORDON RIVER MAIN",
+            "file_section": null,
+            "quote": "GORDON RIVER MAIN",
+            "effective_from": null,
+            "effective_to": null,
+            "points": [
+              {
+                "km": null,
+                "km_end": null,
+                "extent": "unknown",
+                "status": "gated",
+                "seen_on": "map",
+                "quote": "Gate Location"
+              },
+              {
+                "km": null,
+                "km_end": null,
+                "extent": "unknown",
+                "status": "gated",
+                "seen_on": "map",
+                "quote": "Gate Location"
+              }
+            ]
+          },
+          {
+            "name": "BRADEN M/L",
+            "file_section": null,
+            "quote": "BRADEN M/L",
+            "effective_from": null,
+            "effective_to": null,
+            "points": [
+              {
+                "km": null,
+                "km_end": null,
+                "extent": "unknown",
+                "status": "gated",
+                "seen_on": "map",
+                "quote": "Gate Location"
+              },
+              {
+                "km": null,
+                "km_end": null,
+                "extent": "unknown",
+                "status": "gated",
+                "seen_on": "map",
+                "quote": "Gate Location"
+              }
+            ]
+          }
+        ],
+        "map_readings": [
+          {
+            "page": 1,
+            "label": "Bugaboo M/L sta. 0+100 Gate or Access Restriction Road Permit R05413",
+            "shows": "Callout box with an arrow pointing to a red Gate Location triangle on the red mainline labelled BUGABOO M/L, where it meets the mainline at the circled markers \"0\" and \"36\". The labels \"BUG1000\" and \"BUG2000\" are printed beside it."
+          },
+          {
+            "page": 1,
+            "label": "Bugaboo M/L Gate / Access Restriction Location",
+            "shows": "Map title under \"The Teal-Jones Group\" and \"TFL 46\". Legend: red triangle = Gate Location; orange pentagon = legend text blanked out and unreadable; purple asterisk = Point of Interest; green outline = Cutblocks; yellow dashed outline = TFL 46 Boundary; red line = Mainline."
+          },
+          {
+            "page": 1,
+            "label": "GORDON RIVER MAIN",
+            "shows": "Red Gate Location triangle on the red mainline between the circled markers \"34\" and \"32\", where the yellow TFL 46 Boundary line meets the road, beside the label \"GD5000\". No km label is printed at the triangle."
+          },
+          {
+            "page": 1,
+            "label": "GORDON RIVER MAIN",
+            "shows": "Red Gate Location triangle on the red mainline between the circled markers \"44\" and \"46\", just past where the road labelled \"LOWER BROWNS M/L\" branches off, at the TFL 46 Boundary. No km label is printed at the triangle."
+          },
+          {
+            "page": 1,
+            "label": "BRADEN M/L",
+            "shows": "Red Gate Location triangle beside the circled marker \"4\" on the red mainline labelled \"BRADEN M/L\", near \"Braden Creek\", with an orange pentagon just below it. No km label is printed on the triangle itself."
+          },
+          {
+            "page": 1,
+            "label": "0",
+            "shows": "Red Gate Location triangle beside a circled \"0\" next to the circled \"44\" on Gordon River Main, at the start of a red mainline running east past the label \"BD250\" to a circled \"2\" below the \"BRADEN M/L\" label. No road name is printed at the triangle. It is listed under BRADEN M/L only because of that run of markers."
+          },
+          {
+            "page": 1,
+            "label": "GRIERSON M/L",
+            "shows": "Red Gate Location triangle mostly hidden behind an orange pentagon beside a circled \"0\", where the mainline labelled \"GRIERSON M/L\" meets the mainline labelled \"PANDORA M/L\". A black arrow points to it from a whited-out box. The map does not print which road the gate is on, so no road entry is given for it."
+          },
+          {
+            "page": 1,
+            "label": "BUGABOO M/L",
+            "shows": "Orange pentagon (legend text blanked out and unreadable) on the red mainline labelled BUGABOO M/L, just below the circled \"4\" junction at its west end. A white box covers the map beside it."
+          },
+          {
+            "page": 1,
+            "label": "Lonely Doug",
+            "shows": "Orange pentagon (meaning unreadable) beside the circled \"0\" at the start of the mainline labelled EDINBURGH M/L, near the Lonely Doug point of interest."
+          },
+          {
+            "page": 1,
+            "label": "GR-12",
+            "shows": "A whited-out box with a red dashed border near \"GR-12\" covers an earlier label, and traces of red text show at its edge. Other white boxes also cover parts of the map. Their content cannot be read."
+          }
+        ],
+        "quotes": [
+          {
+            "field": "signed_on",
+            "quote": "October 25, 2021"
+          }
+        ],
+        "uncertain": [
+          "roads[0].effective_from",
+          "roads[0].effective_to",
+          "roads[1].file_section",
+          "roads[1].effective_from",
+          "roads[1].effective_to",
+          "roads[2].file_section",
+          "roads[2].effective_from",
+          "roads[2].effective_to"
+        ]
+      }
+    }
+  },
+  "disagreements": [],
+  "rejected_quotes": [
+    "roads[1]",
+    "roads[2]"
+  ],
+  "placements": [
+    {
+      "road": "Bugaboo M/L",
+      "file_section": "R05413",
+      "points": [
+        {
+          "km": 0.1,
+          "extent": "at",
+          "status": "gated",
+          "quote": "Bugaboo M/L sta. 0+100 Gate or Access Restriction"
+        }
+      ],
+      "placement": "file R05413"
+    }
+  ],
+  "images": [
+    "raw/2026-10/dm_notices/images/DSI-c4f696e7-map_tfl46_bugaboo_main_gate_location.p1.jpg"
+  ],
+  "links": [
+    {
+      "label": "Notice PDF",
+      "href": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/map_tfl46_bugaboo_main_gate_location.pdf"
+    }
+  ],
+  "status": "open",
+  "created": "2026-10-20T15:23:20.505Z",
+  "updated": "2026-10-20T15:23:20.505Z"
+}

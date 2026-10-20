@@ -1,0 +1,50 @@
+{
+  "task_id": "closed_area-1df0a76d5f63",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T15:18:34Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "regional_district",
+      "name": "Fraser Valley Regional District"
+    },
+    "geometry": {
+      "method": "admin_boundary",
+      "road": null,
+      "feature": {
+        "type": "electoral_area",
+        "name": "Electoral Area H"
+      },
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "Fraser Valley Regional District"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "described as: Electoral Area H of the Fraser Valley Regional District"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "Electoral Area H"
+      }
+    ],
+    "uncertain": []
+  }
+}

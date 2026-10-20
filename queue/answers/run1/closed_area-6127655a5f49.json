@@ -1,0 +1,146 @@
+{
+ "task_id": "closed_area-6127655a5f49",
+ "run": 1,
+ "mode": "agent",
+ "model": "Claude Code agent mode",
+ "prompt_version": "closed_area.v1",
+ "schema_id": "closed_area.v1",
+ "produced_at": "2026-10-20T15:19:05Z",
+ "answer": {
+  "effect": "no_rifle",
+  "exemptions": [],
+  "period": null,
+  "within": {
+   "type": "regional_district",
+   "name": "Fraser Valley Regional District"
+  },
+  "geometry": {
+   "method": "metes_and_bounds",
+   "road": null,
+   "feature": null,
+   "buffer_m": null,
+   "side": null,
+   "from": null,
+   "to": null,
+   "steps": [
+    {
+     "start": "the southeast corner of the Squawkum Creek Indian Reserve Number 3",
+     "direction": null,
+     "follow": null,
+     "feature": null,
+     "side_or_bank": null,
+     "until": null,
+     "distance": null,
+     "quote": "Commencing at the southeast corner of the Squawkum Creek Indian Reserve Number 3"
+    },
+    {
+     "start": null,
+     "direction": "easterly",
+     "follow": "other",
+     "feature": "Canadian Pacific Railway right of way",
+     "side_or_bank": null,
+     "until": "the westerly boundary of the District of Kent",
+     "distance": null,
+     "quote": "thence easterly along the Canadian Pacific Railway right of way to the westerly boundary of the District of Kent"
+    },
+    {
+     "start": null,
+     "direction": "easterly and southerly",
+     "follow": "district_boundary",
+     "feature": "District of Kent",
+     "side_or_bank": null,
+     "until": "the point of its intersection with the northerly boundary of the District of Chilliwack",
+     "distance": null,
+     "quote": "thence easterly and southerly along the district boundary to the point of its intersection with the northerly boundary of the District of Chilliwack"
+    },
+    {
+     "start": null,
+     "direction": "southwesterly",
+     "follow": "district_boundary",
+     "feature": null,
+     "side_or_bank": null,
+     "until": "a point due South of the intersection of the 2 dykes which are the southern boundary of Zaitscullachan Slough and the eastern dyke on Skumalasph Indian Reserve Number 16",
+     "distance": null,
+     "quote": "thence southwesterly along the district boundary to a point due South of the intersection of the 2 dykes which are the southern boundary of Zaitscullachan Slough and the eastern dyke on Skumalasph Indian Reserve Number 16"
+    },
+    {
+     "start": null,
+     "direction": "due North",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": "the intersection of the 2 dykes",
+     "distance": null,
+     "quote": "thence in a straight line due North to the intersection of the 2 dykes"
+    },
+    {
+     "start": null,
+     "direction": "northerly and easterly",
+     "follow": "other",
+     "feature": "the dyke on the eastern side of Skumalasph Indian Reserve Number 16",
+     "side_or_bank": null,
+     "until": "its intersection with Malcolm Road",
+     "distance": null,
+     "quote": "thence northerly and easterly along the dyke on the eastern side of Skumalasph Indian Reserve Number 16 to its intersection with Malcolm Road"
+    },
+    {
+     "start": null,
+     "direction": "westerly and northerly",
+     "follow": "road",
+     "feature": "Malcolm Road",
+     "side_or_bank": null,
+     "until": "its intersection with the channel of an unnamed creek which is approximately 50 m east of the junction of Malcolm Road and Hodgkin Road",
+     "distance": null,
+     "quote": "thence westerly and northerly along Malcolm Road to its intersection with the channel of an unnamed creek which is approximately 50 m east of the junction of Malcolm Road and Hodgkin Road"
+    },
+    {
+     "start": null,
+     "direction": "up",
+     "follow": "creek",
+     "feature": "the unnamed creek",
+     "side_or_bank": null,
+     "until": "its intersection with the 200 m contour line",
+     "distance": null,
+     "quote": "thence up the unnamed creek to its intersection with the 200 m contour line"
+    },
+    {
+     "start": null,
+     "direction": "northerly and easterly",
+     "follow": "contour",
+     "feature": "the 200 m contour line",
+     "side_or_bank": null,
+     "until": "a point due South of the point of commencement",
+     "distance": null,
+     "quote": "thence northerly and easterly along the contour line to a point due South of the point of commencement"
+    },
+    {
+     "start": null,
+     "direction": "due North",
+     "follow": "straight_line",
+     "feature": null,
+     "side_or_bank": null,
+     "until": "the point of commencement",
+     "distance": null,
+     "quote": "thence in a straight line due North to the point of commencement"
+    }
+   ]
+  },
+  "quotes": [
+   {
+    "field": "effect",
+    "quote": "Prohibited Discharge Areas — Rifles"
+   },
+   {
+    "field": "within",
+    "quote": "in Fraser Valley Regional District"
+   },
+   {
+    "field": "geometry.method",
+    "quote": "in the following described boundaries: Commencing"
+   }
+  ],
+  "uncertain": [
+   "geometry.steps[3].feature"
+  ]
+ }
+}

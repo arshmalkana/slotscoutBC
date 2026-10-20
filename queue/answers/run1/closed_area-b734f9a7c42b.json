@@ -1,0 +1,87 @@
+{
+  "task_id": "closed_area-b734f9a7c42b",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T15:20:04Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 2-16"
+    },
+    "geometry": {
+      "method": "other",
+      "road": null,
+      "feature": {
+        "type": "other",
+        "name": "Blubber Bay Ferry Terminal"
+      },
+      "buffer_m": 1000,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "Blubber Point",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "commencing at Blubber Point"
+        },
+        {
+          "start": null,
+          "direction": "westerly, southerly and southeasterly",
+          "follow": "shoreline",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the midpoint of Limekiln Bay",
+          "distance": null,
+          "quote": "thence westerly, southerly and southeasterly along the mean low water mark to the midpoint of Limekiln Bay"
+        },
+        {
+          "start": null,
+          "direction": "due North",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence due North to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "in M.U. 2-16"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "(1)within a 1 kilometre radius of the Blubber Bay Ferry Terminal, and (2)commencing at Blubber Point"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "the Blubber Bay Ferry Terminal"
+      },
+      {
+        "field": "geometry.buffer_m",
+        "quote": "within a 1 kilometre radius"
+      }
+    ],
+    "uncertain": [
+      "geometry.method"
+    ]
+  }
+}

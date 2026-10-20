@@ -1,0 +1,169 @@
+{
+  "task_id": "closed_area-b36506a255f5",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T15:19:15Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": null,
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the midpoint of Grant Narrows on the midline of Pitt River",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the midpoint of Grant Narrows on the midline of Pitt River"
+        },
+        {
+          "start": null,
+          "direction": "general easterly",
+          "follow": "river",
+          "feature": "Pitt River",
+          "side_or_bank": "midline",
+          "until": "a point due West of the Coast Guard navigation marker on the natural boundary of Pitt River on the easterly shore thereof",
+          "distance": null,
+          "quote": "thence in a general easterly direction along the midline of Pitt River to a point due West of the Coast Guard navigation marker on the natural boundary of Pitt River on the easterly shore thereof"
+        },
+        {
+          "start": null,
+          "direction": "due East",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the said Coast Guard navigation marker",
+          "distance": null,
+          "quote": "thence due East to the said Coast Guard navigation marker"
+        },
+        {
+          "start": null,
+          "direction": "general southerly",
+          "follow": "shoreline",
+          "feature": "Pitt River",
+          "side_or_bank": "easterly shore",
+          "until": "the point of intersection with the westerly Maple Ridge Municipal Boundary",
+          "distance": null,
+          "quote": "thence in a general southerly direction along the natural boundary of Pitt River on the easterly shore thereof to the point of intersection with the westerly Maple Ridge Municipal Boundary"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "district_boundary",
+          "feature": "Maple Ridge Municipal Boundary",
+          "side_or_bank": "westerly",
+          "until": "the point of intersection with the Nature Dyke",
+          "distance": "approximately 2 km",
+          "quote": "thence southerly along the westerly Maple Ridge Municipal Boundary for approximately 2 km to the point of intersection with the Nature Dyke"
+        },
+        {
+          "start": null,
+          "direction": "general westerly and northerly",
+          "follow": "other",
+          "feature": "Nature Dyke",
+          "side_or_bank": "southerly and westerly sides",
+          "until": "the point of intersection with the dyke bordering Fox Reach on the easterly shore thereof",
+          "distance": null,
+          "quote": "thence in a general westerly and northerly direction along the southerly and westerly sides of the Nature Dyke to the point of intersection with the dyke bordering Fox Reach on the easterly shore thereof"
+        },
+        {
+          "start": null,
+          "direction": "due North",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of intersection with the midline of Pitt River",
+          "distance": null,
+          "quote": "thence due North to the point of intersection with the midline of Pitt River"
+        },
+        {
+          "start": null,
+          "direction": "general easterly",
+          "follow": "river",
+          "feature": "Pitt River",
+          "side_or_bank": "midline",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence in a general easterly direction along the midline of Pitt River to the point of commencement"
+        },
+        {
+          "start": "the intersection of Koerner Road (also known as the X-Y line) and Rannie Road",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the intersection of Koerner Road (also known as the X-Y line) and Rannie Road"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "road",
+          "feature": "Rannie Road",
+          "side_or_bank": null,
+          "until": null,
+          "distance": "approximately 1.75 km",
+          "quote": "thence northerly along Rannie Road for a distance of approximately 1.75 km"
+        },
+        {
+          "start": null,
+          "direction": "northeasterly",
+          "follow": "road",
+          "feature": "Rannie Road",
+          "side_or_bank": null,
+          "until": "the intersection with the dyke (completed in March 1978), which runs in a general southerly direction",
+          "distance": "approximately 0.6 km",
+          "quote": "thence northeasterly along Rannie Road for a distance of approximately 0.6 km to the intersection with the dyke (completed in March 1978), which runs in a general southerly direction"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "other",
+          "feature": "dyke",
+          "side_or_bank": "east side",
+          "until": "the intersection with Koerner Road",
+          "distance": "approximately 2.4 km",
+          "quote": "thence southerly along the east side of the dyke for a distance of approximately 2.4 km to the intersection with Koerner Road"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "road",
+          "feature": "Koerner Road",
+          "side_or_bank": null,
+          "until": "point of commencement",
+          "distance": null,
+          "quote": "thence westerly along Koerner Road to point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting or Hunting Areas"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundaries: Commencing at"
+      }
+    ],
+    "uncertain": [
+      "within"
+    ]
+  }
+}

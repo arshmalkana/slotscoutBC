@@ -1,0 +1,249 @@
+{
+  "item_id": "dm-notice-c8b124d465",
+  "month": "2026-10",
+  "kind": "dm_notice",
+  "title": "District Manager notice DQC-6a1cfbef-2024_06_07_bill_brown_closure: 1 road closed or restricted (Bill Brown Forest Service Road)",
+  "change_type": "stricter",
+  "decision": "Check each road and km point against the PDF and its page images. Approving lets these closures count on the map; until then P6 shows Cannot confirm on these roads.",
+  "why": [
+    "read from: text layer (3 pages); OCR by tesseract 5.3.4 on page 3; 1 map or scan page image for reading, and 1 page image(s) looked at by both readings",
+    "a person checks every AI reading before it counts (Addendum A 7.2: the gold set has not passed yet)",
+    "AI runs disagree: roads: run 1 [\"bill brown forest service rd|8229.01|0.5-:at:closed,?-:unknown:closed,?-:unknown:closed\"] vs run 2 [\"bill brown forest service rd|8229.01|0.5-:beyond:closed,?-:unknown:closed,?-:unknown:closed\"]"
+  ],
+  "source": {
+    "text": "File:11250-32/8229 Rennell\n\n\nJune 7, 2024\n\n\nNotice is given under Section 22.2(3) of the Forest and Range Practices Act that the Bill Brown\nForest Service Road (8229.01) is hereby closed at 0.5 km effective immediately until further\nnotice.\n\n\nForest and Range Practices Act\nNon-industrial use of a road\n\n  22.2 (1)Subject to subsections (2) to (4) and to regulations respecting roads made\n  under the Industrial Roads Act, a road that is\n  (a)a forest service road, or\n  (b)authorized under a road permit or a woodlot licence\n\n  may be used by any person without charge for a purpose other than a timber harvesting\n  purpose, silviculture purpose or natural resource development purpose.\n  (2)The\n  (a)district manager, for a forest service road, or\n  (b)holder of a road permit or a woodlot licence, for a road under the permit\n  or licence,\n\n  may take action under subsection (3) if\n  (c)use of the road under subsection (1) would likely\n  (i)cause significant damage to the road,\n  (ii)cause significant sediment delivery, or\n  (iii)endanger property, public health or public safety, or\n  (d)the presence on the road of a vehicle or animal would likely cause\n  damage to the road or environment or endanger life or property.\n  (3)In the circumstances described in subsection (2),\n  (a)the district manager, for a forest service road, may\n  (i)close the road or restrict its use, or\n  (ii)remove a vehicle or an animal from the road at the expense of\n  the owner of the vehicle or animal, and\n\nMinistry of Forests  Haida Gwaii Natural Resource  Location:  Mailing Address:\n  District  1229 Oceanview Drive  Box 39\n  Daajing Giids BC  Gaajing Giids BC V0T 1S0\n  Tel:  (250) 559-6200\n  Fax:  (250) 559-8342\n\n  (b)the holder of a road permit or a woodlot licence, for a road under the\n  permit or licence,\n  (i)with the prior consent of the minister, may close the road or\n  restrict its use, or\n  (ii)may remove a vehicle or an animal from the road at the expense\n  of the owner of the vehicle or animal.\n\nThis action is in response to the current condition of wood culverts that pose a risk to road user\nsafety.\nThank you for your cooperation during this time.\n\n\n\n\nRisha Rushton\nDistrict Manager\n\n\n\n\n  Page 2 of 2\n\n  Bill Brown Forest Service Road Closure\n\n\n  ±\n  H an\n  gov\n  er F\n  SR\n  NAD 1983 BC Albers\n  1:50,000\n\n\n  Legend\n  R  Bridge Closure\n  S\n  aF\n  nz  Forest Service Road\n  na\n  Bo  No Vehicle Access\n  Bonanza Beach Trail\n\n  Bill\n  anza\n  Bon n FSR  Caveat:\n  Brow  The Province of British Columbia\n  makes no representation or\n  Bo\n  n  warranties\n  Bro anz  regarding the accuracy,\n  wn a B\n  merchantability, fitness for a\n  FS ill\n  R  particular purpose, or\n  completeness of any information\n  contained in or otherwise\n  !  comprising this map.\nBonanza Beach trail is  Without limiting the foregoing,\naccessible by foot. It is  you are warned not\nlocated approximately 650m  to use this map for navigational\n  purposes.\nfrom bridge closure  This map may be generalized\n  and may not reflect current\n  conditions.\n\n\n\n\n  Esri, USGS, State\n  of Alaska, Esri,\n\n\n\n  0  1  2\n\n  Kilometers\n  R\n  FS\n  a\n  nz\n  na\n  Bo\n\n\n\n\n  Date: June 17, 2024\n  Drawn by: HGNRD\n\n[Page 3: text read by OCR from the page image]\nBill Brown Forest Service Road Closure\n\nBonanza Beach trail is\naccessible by foot. It is\nlocated approximately 650m\n\nAD 1983 BC Albers\n1:50,000\n\nLegend\nA Bridge Closure\nForest Service Road\nNo Vehicle Access\nBonanza Beach Trail\n\nCaveat:\n\nThe Province of British Columbia\nmakes no representation or\nwarranties\nregarding the accuracy,\nmerchantability, fitness for a\nparticular purpose, or\ncompleteness of any information\ncontained in or otherwise\ncomprising this map.\nWithout limiting the foregoing,\nyou are warned not\nto use this map for navigational\npurposes.\n\nThis map may be generalized\nand may not reflect current\nconditions.\n\nEntrance\n\nHecate\nStrait\n\nI&GS, State\nof ANiaska, Esri,\n\nDate: June 17, 2024\nDrawn by: HGNRD",
+    "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/haida-gwaii/2024_06_07_bill_brown_closure.pdf",
+    "version": "2026-10-19T19:58:57.270Z",
+    "confirmed": true,
+    "file": "raw/2026-10/dm_notices/DQC-6a1cfbef-2024_06_07_bill_brown_closure.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "dm_notice-4ff4d386a7d7",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "dm_notice.v1",
+      "schema_id": "dm_notice.v1",
+      "produced_at": "2026-10-19T20:15:00Z",
+      "answer": {
+        "legible": true,
+        "document_type": "closure_order",
+        "signed_on": "2024-06-07",
+        "rescinded": false,
+        "roads": [
+          {
+            "name": "Bill Brown Forest Service Road",
+            "file_section": "8229.01",
+            "quote": "Bill Brown Forest Service Road (8229.01)",
+            "effective_from": "2024-06-07",
+            "effective_to": null,
+            "points": [
+              {
+                "km": 0.5,
+                "km_end": null,
+                "extent": "at",
+                "status": "closed",
+                "seen_on": "text",
+                "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act that the Bill Brown Forest Service Road (8229.01) is hereby closed at 0.5 km effective immediately until further notice."
+              },
+              {
+                "km": null,
+                "km_end": null,
+                "extent": "unknown",
+                "status": "closed",
+                "seen_on": "map",
+                "quote": "Bridge Closure"
+              },
+              {
+                "km": null,
+                "km_end": null,
+                "extent": "unknown",
+                "status": "closed",
+                "seen_on": "map",
+                "quote": "No Vehicle Access"
+              }
+            ]
+          }
+        ],
+        "map_readings": [
+          {
+            "page": 3,
+            "label": "Bill Brown Forest Service Road Closure",
+            "shows": "Title of the map page."
+          },
+          {
+            "page": 3,
+            "label": "Bridge Closure",
+            "shows": "Yellow triangle warning symbol (legend: Bridge Closure) on the grey road near where the roads labelled Hangover FSR and Bonanza FSR meet, at the east end of the road labelled Bonanza Bill Brown FSR. No km label is printed at the symbol."
+          },
+          {
+            "page": 3,
+            "label": "Bonanza Bill Brown FSR",
+            "shows": "Road drawn in red (legend: No Vehicle Access) starting just west of the bridge closure symbol and running west along the coast to the edge of the map; the label is printed twice along the red line. No km labels are printed on it."
+          },
+          {
+            "page": 3,
+            "label": "Bonanza Beach Trail",
+            "shows": "Short green line (legend: Bonanza Beach Trail) leaving the road between the bridge closure symbol and the start of the red line, toward the beach; yellow callout with arrow reads: Bonanza Beach trail is accessible by foot. It is located approximately 650m from bridge closure"
+          },
+          {
+            "page": 3,
+            "label": "Hangover FSR",
+            "shows": "Grey forest service road coming from the north to the bridge closure area; no closure marking on it."
+          },
+          {
+            "page": 3,
+            "label": "Bonanza FSR",
+            "shows": "Grey forest service road, labelled in two places, running from the north-east past the bridge closure area and on to the south-east; no closure marking on it."
+          }
+        ],
+        "quotes": [
+          {
+            "field": "signed_on",
+            "quote": "June 7, 2024"
+          },
+          {
+            "field": "rescinded",
+            "quote": "is hereby closed at 0.5 km effective immediately until further notice."
+          }
+        ],
+        "uncertain": [
+          "roads[0].points[1].km",
+          "roads[0].points[2].km"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "dm_notice-4ff4d386a7d7",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "dm_notice.v1",
+      "schema_id": "dm_notice.v1",
+      "produced_at": "2026-10-19T20:14:12Z",
+      "answer": {
+        "legible": true,
+        "document_type": "closure_order",
+        "signed_on": "2024-06-07",
+        "rescinded": false,
+        "roads": [
+          {
+            "name": "Bill Brown Forest Service Road",
+            "file_section": "8229.01",
+            "quote": "Bill Brown Forest Service Road (8229.01)",
+            "effective_from": "2024-06-07",
+            "effective_to": null,
+            "points": [
+              {
+                "km": 0.5,
+                "km_end": null,
+                "extent": "beyond",
+                "status": "closed",
+                "seen_on": "text",
+                "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act that the Bill Brown Forest Service Road (8229.01) is hereby closed at 0.5 km effective immediately until further notice."
+              },
+              {
+                "km": null,
+                "km_end": null,
+                "extent": "unknown",
+                "status": "closed",
+                "seen_on": "map",
+                "quote": "Bridge Closure"
+              },
+              {
+                "km": null,
+                "km_end": null,
+                "extent": "unknown",
+                "status": "closed",
+                "seen_on": "map",
+                "quote": "No Vehicle Access"
+              }
+            ]
+          }
+        ],
+        "map_readings": [
+          {
+            "page": 3,
+            "label": "Bill Brown Forest Service Road Closure",
+            "shows": "Map title. The map is marked 'Date: June 17, 2024' and 'Drawn by: HGNRD'."
+          },
+          {
+            "page": 3,
+            "label": "Bridge Closure",
+            "shows": "Legend: a yellow triangle marks a bridge closure. One yellow triangle with '!' is drawn on the road where the road labelled 'Bonanza Bill Brown FSR' meets the roads labelled 'Hangover FSR' and 'Bonanza FSR'. No km label is printed at it."
+          },
+          {
+            "page": 3,
+            "label": "No Vehicle Access",
+            "shows": "Legend: a red line marks no vehicle access. The road labelled 'Bonanza Bill Brown FSR' is drawn red on the far side of the bridge closure triangle, running to the end of the road. No km labels are printed on it."
+          },
+          {
+            "page": 3,
+            "label": "Bonanza Bill Brown FSR",
+            "shows": "Road name printed twice along the red no-vehicle-access line; the notice text names this road 'Bill Brown Forest Service Road (8229.01)'."
+          },
+          {
+            "page": 3,
+            "label": "Bonanza Beach trail is accessible by foot. It is located approximately 650m from bridge closure",
+            "shows": "Yellow note with an arrow pointing to a short green line (legend 'Bonanza Beach Trail') that leaves the road close to the bridge closure triangle."
+          }
+        ],
+        "quotes": [
+          {
+            "field": "signed_on",
+            "quote": "June 7, 2024"
+          },
+          {
+            "field": "rescinded",
+            "quote": "is hereby closed at 0.5 km effective immediately until further"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "disagreements": [
+    "roads: run 1 [\"bill brown forest service rd|8229.01|0.5-:at:closed,?-:unknown:closed,?-:unknown:closed\"] vs run 2 [\"bill brown forest service rd|8229.01|0.5-:beyond:closed,?-:unknown:closed,?-:unknown:closed\"]"
+  ],
+  "rejected_quotes": [],
+  "placements": [
+    {
+      "road": "Bill Brown Forest Service Road",
+      "file_section": "8229.01",
+      "points": [
+        {
+          "km": 0.5,
+          "extent": "at",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act that the Bill Brown Forest Service Road (8229.01) is hereby closed at 0.5 km effective immediately until further notice."
+        },
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Bridge Closure"
+        },
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "No Vehicle Access"
+        }
+      ],
+      "placement": "FTEN section 8229.01 not found"
+    }
+  ],
+  "images": [
+    "raw/2026-10/dm_notices/images/DQC-6a1cfbef-2024_06_07_bill_brown_closure.p3.jpg"
+  ],
+  "links": [
+    {
+      "label": "Notice PDF",
+      "href": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/haida-gwaii/2024_06_07_bill_brown_closure.pdf"
+    }
+  ],
+  "status": "open",
+  "created": "2026-10-20T15:23:18.019Z",
+  "updated": "2026-10-20T15:23:18.019Z"
+}

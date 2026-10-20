@@ -1,0 +1,146 @@
+{
+  "item_id": "dm-notice-664460b592",
+  "month": "2026-10",
+  "kind": "dm_notice",
+  "title": "District Manager notice DCK-cdff3673-bench_fsr_road_closure: 1 road closed or restricted (Bench FSR)",
+  "change_type": "stricter",
+  "decision": "Check each road and km point against the PDF and its page images. Approving lets these closures count on the map; until then P6 shows Cannot confirm on these roads.",
+  "why": [
+    "read from: text layer (2 pages)",
+    "a person checks every AI reading before it counts (Addendum A 7.2: the gold set has not passed yet)"
+  ],
+  "source": {
+    "text": "December 10, 2025\n\nNotice is given under Section 22.2(3) of the Forest and Range Practices Act, the Bench FSR\n5127.01 is CLOSED at 16 KM due unstable conditions and debris blocking the road.\n\nForest and Range Practices Act\n  Non-industrial use of a road\n  22.2  (1) Subject to subsections (2) to (4) and to regulations respecting roads made\n  under the Industrial Roads Act, a road that is\n\n  (a) a forest service road, or\n\n  (b) authorized under a road permit or a woodlot\n\n  licence\n\n  may be used by any person without charge for a purpose other than a timber\n  harvesting purpose, silviculture purpose or natural resource development\n  purpose.\n  (2) The\n\n  (a) district manager, for a forest service road, or\n\n  (b) holder of a road permit or a woodlot licence, for a\n\n  road under the permit or licence,\n\n  may take action under subsection (3) if\n  (c) use of the road under subsection (1) would likely\n\n  (i) cause significant damage to the road,\n\n  (ii) cause significant sediment delivery, or\n\n  (iii) endanger property, public health or public\n  safety, or\n\n  (d) the presence on the road of a vehicle or animal would\n\n  likely cause damage to the road or environment or\n\n  endanger life or property.\n  (3) In the circumstances described in subsection (2),\n\n  (a) the district manager, for a forest service road, may\n\n\nMinistry of Forests  Chilliwack Forest District  46360 Airport Road\n  Chilliwack, BC V2P 1A5\n  Phone: (604) 702-5700\n  Fax: (604) 702-5711\n\n  (i) close the road or restrict its use, or\n\n  (ii) remove a vehicle or an animal from the road at\n\n  the expense of the owner of the vehicle or animal,\n\n  and\n\n  (b) the holder of a road permit or a woodlot licence,\n\n  for a road under the permit or licence,\n\n  (i) with the prior consent of the minister, may close\n\n  the road or restrict its use, or\n\n  (ii) may remove a vehicle or an animal from the\n\n  road at the expense of the owner of the vehicle or\n\n  animal.\n\n\nPlease check Chilliwack's Forest Service Road Safety Information web page for Forest\nService Road advisories and closure updates.\nhttps://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-\nroads/local-road-safety-information/chilliwack-natural-resource-district-district-road-\nsafety-information\n\nAll resource road users are advised to check local weather and safety advisories, drive\nto the condition of the road and watch for hazards if heading into the backcountry.\n\nThank you for your patience and cooperation during this time.\n  Digitally signed by\n  Carissa Logue\n  Date: 2025.12.10\n  14:31:01 -08'00'\n\nCarissa Logue\nDistrict Manager\nChilliwack Forest District",
+    "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/bench_fsr_road_closure.pdf",
+    "version": "2026-10-19T19:57:46.657Z",
+    "confirmed": true,
+    "file": "raw/2026-10/dm_notices/DCK-cdff3673-bench_fsr_road_closure.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "dm_notice-2951e5be5db2",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "dm_notice.v1",
+      "schema_id": "dm_notice.v1",
+      "produced_at": "2026-10-19T20:15:37Z",
+      "answer": {
+        "legible": true,
+        "document_type": "closure_order",
+        "signed_on": "2025-12-10",
+        "rescinded": false,
+        "roads": [
+          {
+            "name": "Bench FSR",
+            "file_section": "5127.01",
+            "quote": "Bench FSR 5127.01",
+            "effective_from": null,
+            "effective_to": null,
+            "points": [
+              {
+                "km": 16,
+                "km_end": null,
+                "extent": "at",
+                "status": "closed",
+                "seen_on": "text",
+                "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the Bench FSR 5127.01 is CLOSED at 16 KM due unstable conditions and debris blocking the road."
+              }
+            ]
+          }
+        ],
+        "map_readings": [],
+        "quotes": [
+          {
+            "field": "signed_on",
+            "quote": "December 10, 2025"
+          },
+          {
+            "field": "rescinded",
+            "quote": "5127.01 is CLOSED at 16 KM due unstable conditions and debris blocking the road."
+          }
+        ],
+        "uncertain": [
+          "roads[0].effective_from",
+          "roads[0].effective_to"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "dm_notice-2951e5be5db2",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "dm_notice.v1",
+      "schema_id": "dm_notice.v1",
+      "produced_at": "2026-10-19T20:14:40Z",
+      "answer": {
+        "legible": true,
+        "document_type": "closure_order",
+        "signed_on": "2025-12-10",
+        "rescinded": false,
+        "roads": [
+          {
+            "name": "Bench FSR",
+            "file_section": "5127.01",
+            "quote": "Bench FSR 5127.01",
+            "effective_from": null,
+            "effective_to": null,
+            "points": [
+              {
+                "km": 16,
+                "km_end": null,
+                "extent": "at",
+                "status": "closed",
+                "seen_on": "text",
+                "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the Bench FSR 5127.01 is CLOSED at 16 KM due unstable conditions and debris blocking the road."
+              }
+            ]
+          }
+        ],
+        "map_readings": [],
+        "quotes": [
+          {
+            "field": "signed_on",
+            "quote": "December 10, 2025"
+          },
+          {
+            "field": "rescinded",
+            "quote": "the Bench FSR 5127.01 is CLOSED at 16 KM due unstable conditions and debris blocking the road."
+          }
+        ],
+        "uncertain": [
+          "roads[0].effective_from",
+          "roads[0].effective_to"
+        ]
+      }
+    }
+  },
+  "disagreements": [],
+  "rejected_quotes": [],
+  "placements": [
+    {
+      "road": "Bench FSR",
+      "file_section": "5127.01",
+      "points": [
+        {
+          "km": 16,
+          "extent": "at",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the Bench FSR 5127.01 is CLOSED at 16 KM due unstable conditions and debris blocking the road."
+        }
+      ],
+      "placement": "FTEN section 5127.01 not found"
+    }
+  ],
+  "images": [],
+  "links": [
+    {
+      "label": "Notice PDF",
+      "href": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/bench_fsr_road_closure.pdf"
+    }
+  ],
+  "status": "open",
+  "created": "2026-10-20T15:23:05.473Z",
+  "updated": "2026-10-20T15:23:05.473Z"
+}

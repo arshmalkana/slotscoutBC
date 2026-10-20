@@ -1,0 +1,500 @@
+{
+  "task_id": "closed_area-78cdb74f80b0",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T15:19:29Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [
+      "excepting Indian Reserve lands"
+    ],
+    "period": null,
+    "within": {
+      "type": "regional_district",
+      "name": "Fraser Valley Regional District"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the intersection of Farms Road and Legace Creek",
+          "direction": "northerly",
+          "follow": "road",
+          "feature": "Farms Road",
+          "side_or_bank": null,
+          "until": "its intersection with Durieu Road",
+          "distance": null,
+          "quote": "Commencing at the intersection of Farms Road and Legace Creek and proceeding northerly along Farms Road to its intersection with Durieu Road"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "road",
+          "feature": "Durieu Road",
+          "side_or_bank": "northerly boundary",
+          "until": "the point of intersection of that line with the easterly boundary of the Sylvester Road right of way",
+          "distance": null,
+          "quote": "thence easterly along the line of the northerly boundary of Durieu Road right of way to the point of intersection of that line with the easterly boundary of the Sylvester Road right of way"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "road",
+          "feature": "Sylvester Road",
+          "side_or_bank": null,
+          "until": "the point of its intersection with a line drawn due East from the southerly boundary of the Seux Road right of way",
+          "distance": null,
+          "quote": "thence southerly along the right of way to the point of its intersection with a line drawn due East from the southerly boundary of the Seux Road right of way"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "road",
+          "feature": "Seux Road",
+          "side_or_bank": "southerly boundary",
+          "until": null,
+          "distance": null,
+          "quote": "thence westerly along that line of the southerly boundary of the right of way"
+        },
+        {
+          "start": null,
+          "direction": "westerly and northerly",
+          "follow": "road",
+          "feature": "Seux Road",
+          "side_or_bank": "southerly and westerly boundary",
+          "until": "the point of its intersection with Legace Creek",
+          "distance": null,
+          "quote": "thence westerly and northerly along the southerly and westerly boundary of the Seux Road right of way to the point of its intersection with Legace Creek"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "creek",
+          "feature": "Legace Creek",
+          "side_or_bank": "southerly natural boundary",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence westerly along the southerly natural boundary of the creek to the point of commencement"
+        },
+        {
+          "start": "the intersection of the westerly natural boundary of Hatzic Slough and Dale Road",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the intersection of the westerly natural boundary of Hatzic Slough and Dale Road"
+        },
+        {
+          "start": null,
+          "direction": "northeasterly",
+          "follow": "shoreline",
+          "feature": "Hatzic Slough",
+          "side_or_bank": "northwesterly natural boundary",
+          "until": "its intersection with Farm's Road",
+          "distance": null,
+          "quote": "thence northeasterly along the northwesterly natural boundary of the slough to its intersection with Farm's Road"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "road",
+          "feature": "Farm's Road",
+          "side_or_bank": "easterly boundary",
+          "until": "its intersection with Hatzic Slough, located approximately 1 000 m south of the intersection of Dale Road and Farm's Road",
+          "distance": "approximately 1 000 m",
+          "quote": "thence southerly along the easterly boundary of Farm's Road to its intersection with Hatzic Slough, located approximately 1 000 m south of the intersection of Dale Road and Farm's Road"
+        },
+        {
+          "start": null,
+          "direction": "westerly, northerly and northeasterly",
+          "follow": "shoreline",
+          "feature": "Hatzic Slough",
+          "side_or_bank": "southerly then westerly natural boundary",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence westerly, northerly and northeasterly along the southerly then westerly natural boundary of the slough to the point of commencement"
+        },
+        {
+          "start": "the intersection of Eagle Road and Highway 7",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the intersection of Eagle Road and Highway 7"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "road",
+          "feature": "Highway 7",
+          "side_or_bank": "north side",
+          "until": "its intersection with the boundary of the Municipality of Mission",
+          "distance": null,
+          "quote": "thence westerly along the north side of the right of way of Highway 7 to its intersection with the boundary of the Municipality of Mission"
+        },
+        {
+          "start": null,
+          "direction": "generally northerly and westerly",
+          "follow": "district_boundary",
+          "feature": "Municipality of Mission",
+          "side_or_bank": null,
+          "until": "its intersection with the 20 m contour line south and west of the end of Sward Road",
+          "distance": null,
+          "quote": "thence generally northerly and westerly along the boundary to its intersection with the 20 m contour line south and west of the end of Sward Road"
+        },
+        {
+          "start": null,
+          "direction": null,
+          "follow": "contour",
+          "feature": "20 m contour line",
+          "side_or_bank": null,
+          "until": "a point due West of the most easterly point of the northeast-southwest component of Sward Road",
+          "distance": null,
+          "quote": "thence along the contour line to a point due West of the most easterly point of the northeast-southwest component of Sward Road"
+        },
+        {
+          "start": null,
+          "direction": "due East",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "that point of reference",
+          "distance": null,
+          "quote": "from thence due East to that point of reference"
+        },
+        {
+          "start": null,
+          "direction": "southeasterly",
+          "follow": "straight_line",
+          "feature": "Hatzic Lake",
+          "side_or_bank": null,
+          "until": "a point on the natural boundary of the lake 150 m north of a point due West of the east-west portion of Shore Road",
+          "distance": "150 m",
+          "quote": "thence southeasterly in a straight line across Hatzic Lake to a point on the natural boundary of the lake 150 m north of a point due West of the east-west portion of Shore Road"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "straight_line",
+          "feature": "Shore Road",
+          "side_or_bank": null,
+          "until": "the intersection of the line and Eagle Road",
+          "distance": null,
+          "quote": "thence easterly in a straight line parallel to Shore Road to the intersection of the line and Eagle Road"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "road",
+          "feature": "Eagle Road",
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence southerly along Eagle Road to the point of commencement"
+        },
+        {
+          "start": "the intersection of Ross Road and Highway 7",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the intersection of Ross Road and Highway 7"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "road",
+          "feature": "Ross Road",
+          "side_or_bank": "westerly boundary",
+          "until": null,
+          "distance": null,
+          "quote": "thence northerly along the westerly boundary of Ross Road"
+        },
+        {
+          "start": null,
+          "direction": "due North",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "Taylor Road",
+          "distance": null,
+          "quote": "thence due North to Taylor Road"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "road",
+          "feature": "Taylor Road",
+          "side_or_bank": "northerly boundary",
+          "until": "the point of its intersection with Deroche Creek",
+          "distance": null,
+          "quote": "thence easterly along the northerly boundary of the road right of way to the point of its intersection with Deroche Creek"
+        },
+        {
+          "start": null,
+          "direction": "up",
+          "follow": "creek",
+          "feature": "Deroche Creek",
+          "side_or_bank": "westerly bank",
+          "until": "North Nicomen Road",
+          "distance": null,
+          "quote": "thence up the westerly bank of Deroche Creek to North Nicomen Road"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "road",
+          "feature": "North Nicomen Road",
+          "side_or_bank": "southerly boundary",
+          "until": "a point at the westerly end of a curve located approximately 350 m west of Park Road",
+          "distance": "approximately 350 m",
+          "quote": "thence westerly along the southerly boundary of the road right of way to a point at the westerly end of a curve located approximately 350 m west of Park Road"
+        },
+        {
+          "start": null,
+          "direction": "due North",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the 60 m contour line",
+          "distance": null,
+          "quote": "thence due North to the 60 m contour line"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "contour",
+          "feature": "60 m contour line",
+          "side_or_bank": null,
+          "until": "its intersection with Deroche Creek",
+          "distance": null,
+          "quote": "thence northerly along the contour line to its intersection with Deroche Creek"
+        },
+        {
+          "start": null,
+          "direction": "northerly up",
+          "follow": "creek",
+          "feature": "Deroche Creek",
+          "side_or_bank": null,
+          "until": "its intersection with the 200 m contour line",
+          "distance": null,
+          "quote": "thence northerly up Deroche Creek to its intersection with the 200 m contour line"
+        },
+        {
+          "start": null,
+          "direction": "northeasterly",
+          "follow": "contour",
+          "feature": "200 m contour line",
+          "side_or_bank": null,
+          "until": "its intersection with Sasin Creek",
+          "distance": null,
+          "quote": "thence northeasterly along the contour line to its intersection with Sasin Creek"
+        },
+        {
+          "start": null,
+          "direction": "northerly up",
+          "follow": "creek",
+          "feature": "Sasin Creek",
+          "side_or_bank": null,
+          "until": "the 305 m contour line",
+          "distance": null,
+          "quote": "thence northerly up Sasin Creek to the 305 m contour line"
+        },
+        {
+          "start": null,
+          "direction": "easterly and northerly",
+          "follow": "contour",
+          "feature": "305 m contour line",
+          "side_or_bank": null,
+          "until": "its intersection with an unnamed creek channel whose confluence with Elbow Creek is located approximately 350 m southerly from the outlet of Elbow Lake",
+          "distance": "approximately 350 m",
+          "quote": "thence easterly and northerly along the contour line to its intersection with an unnamed creek channel whose confluence with Elbow Creek is located approximately 350 m southerly from the outlet of Elbow Lake"
+        },
+        {
+          "start": null,
+          "direction": "easterly down",
+          "follow": "creek",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point where it intersects the Elbow Lake Road",
+          "distance": null,
+          "quote": "thence easterly down the creek channel to the point where it intersects the Elbow Lake Road"
+        },
+        {
+          "start": null,
+          "direction": "southerly and easterly",
+          "follow": "road",
+          "feature": "Elbow Lake Road",
+          "side_or_bank": "northerly and easterly boundary",
+          "until": "the southerly end of a curve in the road which is located approximately 600 m north of the intersection of Elbow Lake Road and Highway 7",
+          "distance": "approximately 600 m",
+          "quote": "thence southerly and easterly along the northerly and easterly boundary of the road right of way to the southerly end of a curve in the road which is located approximately 600 m north of the intersection of Elbow Lake Road and Highway 7"
+        },
+        {
+          "start": null,
+          "direction": "due East",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the natural boundary of the Harrison River",
+          "distance": null,
+          "quote": "thence due East to the natural boundary of the Harrison River"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "river",
+          "feature": "Harrison River",
+          "side_or_bank": null,
+          "until": "the No. 7 Highway Harrison River bridge",
+          "distance": null,
+          "quote": "thence southerly along the natural boundary to the No. 7 Highway Harrison River bridge"
+        },
+        {
+          "start": null,
+          "direction": "westerly and southerly",
+          "follow": "shoreline",
+          "feature": "Harrison Bay",
+          "side_or_bank": null,
+          "until": "the southeasterly corner of the Squawkum Creek Indian Reserve Number 3",
+          "distance": null,
+          "quote": "thence westerly and southerly along the natural boundary of Harrison Bay to the southeasterly corner of the Squawkum Creek Indian Reserve Number 3"
+        },
+        {
+          "start": null,
+          "direction": "due South",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the 200 m contour line",
+          "distance": null,
+          "quote": "thence due South to the 200 m contour line"
+        },
+        {
+          "start": null,
+          "direction": "westerly and southerly",
+          "follow": "contour",
+          "feature": "200 m contour line",
+          "side_or_bank": null,
+          "until": "the channel of an unnamed creek which crosses Malcolm Road 50 m southeast of the intersection of Malcolm Road and Hodgkin Road",
+          "distance": "50 m",
+          "quote": "thence westerly and southerly along the contour line to the channel of an unnamed creek which crosses Malcolm Road 50 m southeast of the intersection of Malcolm Road and Hodgkin Road"
+        },
+        {
+          "start": null,
+          "direction": "southwesterly down",
+          "follow": "creek",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "Malcolm Road",
+          "distance": null,
+          "quote": "thence southwesterly down the creek channel to Malcolm Road"
+        },
+        {
+          "start": null,
+          "direction": "northwesterly",
+          "follow": "road",
+          "feature": "Malcolm Road",
+          "side_or_bank": null,
+          "until": "its intersection with the Canadian Pacific Railway right of way",
+          "distance": null,
+          "quote": "thence northwesterly along Malcolm Road to its intersection with the Canadian Pacific Railway right of way"
+        },
+        {
+          "start": null,
+          "direction": "southwesterly",
+          "follow": "other",
+          "feature": "Canadian Pacific Railway",
+          "side_or_bank": "southerly boundary",
+          "until": "its intersection with Highway 7",
+          "distance": null,
+          "quote": "thence southwesterly along the southerly boundary of the railway right of way to its intersection with Highway 7"
+        },
+        {
+          "start": null,
+          "direction": "southeasterly and southwesterly",
+          "follow": "road",
+          "feature": "Highway 7",
+          "side_or_bank": "easterly and southerly boundary",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence southeasterly and southwesterly along the easterly and southerly boundary of the highway right of way to the point of commencement"
+        },
+        {
+          "start": "the intersection of Farms Road and Mountainview Road",
+          "direction": "northerly",
+          "follow": "road",
+          "feature": "Mountainview Road",
+          "side_or_bank": "westerly boundary",
+          "until": "the point of its intersection with Hatzic Slough",
+          "distance": null,
+          "quote": "Commencing at the intersection of Farms Road and Mountainview Road and proceeding northerly along the westerly boundary of the Mountainview Road right of way to the point of its intersection with Hatzic Slough"
+        },
+        {
+          "start": null,
+          "direction": "due North",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the northerly natural boundary of Hatzic Slough",
+          "distance": null,
+          "quote": "thence due North to the northerly natural boundary of Hatzic Slough"
+        },
+        {
+          "start": null,
+          "direction": "southwesterly",
+          "follow": "shoreline",
+          "feature": "Hatzic Slough",
+          "side_or_bank": null,
+          "until": "its intersection with the southerly boundary of the Farms Road right of way",
+          "distance": null,
+          "quote": "thence southwesterly along the natural boundary to its intersection with the southerly boundary of the Farms Road right of way"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "road",
+          "feature": "Farms Road",
+          "side_or_bank": "southerly boundary",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence westerly along that boundary to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "exemptions[0]",
+        "quote": "excepting Indian Reserve lands"
+      },
+      {
+        "field": "within",
+        "quote": "in Fraser Valley Regional District"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within the following described boundaries"
+      }
+    ],
+    "uncertain": []
+  }
+}

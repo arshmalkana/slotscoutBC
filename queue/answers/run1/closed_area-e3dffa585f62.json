@@ -1,0 +1,69 @@
+{
+  "task_id": "closed_area-e3dffa585f62",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T15:18:34Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": null,
+    "geometry": {
+      "method": "road_buffer",
+      "road": {
+        "name": "Canadian Forest Products Chehalis Main Road",
+        "source_hint": "unknown"
+      },
+      "feature": null,
+      "buffer_m": 800,
+      "side": "both",
+      "from": {
+        "type": "landmark",
+        "road": null,
+        "name": "point due West of the most northerly portion of Elbow Lake"
+      },
+      "to": {
+        "type": "km_point",
+        "road": null,
+        "name": "northerly for a distance of 2.4 km (1.5 miles)"
+      },
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "0.8 km (1/2 mile) on either side of the centreline of the portion of the Canadian Forest Products Chehalis Main Road"
+      },
+      {
+        "field": "geometry.road",
+        "quote": "Canadian Forest Products Chehalis Main Road"
+      },
+      {
+        "field": "geometry.buffer_m",
+        "quote": "0.8 km (1/2 mile)"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "on either side"
+      },
+      {
+        "field": "geometry.from",
+        "quote": "the point due West of the most northerly portion of Elbow Lake"
+      },
+      {
+        "field": "geometry.to",
+        "quote": "thence northerly for a distance of 2.4 km (1.5 miles)"
+      }
+    ],
+    "uncertain": [
+      "within"
+    ]
+  }
+}

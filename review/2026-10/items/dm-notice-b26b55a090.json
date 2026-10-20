@@ -1,0 +1,367 @@
+{
+  "item_id": "dm-notice-b26b55a090",
+  "month": "2026-10",
+  "kind": "dm_notice",
+  "title": "District Manager notice DSI-66e61e93-gate_location_map_braden_mainline_and_tr11: 3 roads closed or restricted (Braden Mainline, TR11, Braden 2000)",
+  "change_type": "stricter",
+  "decision": "Check each road and km point against the PDF and its page images. Approving lets these closures count on the map; until then P6 shows Cannot confirm on these roads.",
+  "why": [
+    "read from: text layer (1 page); OCR by tesseract 5.3.4 on page 1; 1 map or scan page image for reading, and 1 page image(s) looked at by both readings",
+    "a person checks every AI reading before it counts (Addendum A 7.2: the gold set has not passed yet)"
+  ],
+  "source": {
+    "text": "TR11\n  Station 0+200\n\n\n\n\nBraden Mainline\nStation 0+100\n\n\n\n\n  TFL46\n  Braden Area\n  Gate Locations\n  Braden Mainline - Station 0+100\n  TR11 - Station 0+200\n\n\n  Forest Roads  £ Gate Location\n  - Mainline  (i)  Blockade Location\n  Secondary Road  Swamp\n  Overgrown Road  Lake/River\n\n  2  4 Kilometers  L��J TFL 46 Boundary\n  1:75,000  May 27, 2021\n\n[Page 1: text read by OCR from the page image]\nSo S Edinburgh\na ev \\Blockade\n\nBraden Mainline\n\nStation 0+100\n\nA GRY A a\n—aRGrierson.\n= Blockade\n(2) WY @)0\noR, AY /\n= MLN Ro\nv\nH\nLe\n\n4\n\nROON\nMAIN\n\nG\nRiver\n\n7,\n\nXs\n\nBraden Creek (6)\n\nFairy Creek\nLS Blockade #2\n\n<8) LSE Existing Gate\n\non Braden 2000\n\nBD-2000\nBlockade\n\n2,\nS.\nWe\n\n4\n\nGate Location k\n\n= Dd\neit,\n\na 4 Ven SY S\n; <a a <x\n=A,\n\nae\n\n8\n> \\ er at nn 5\nHemmingsen emmingsén River S\nTe 09 —\nCreek rea TR\n\nso iD\nfp\nSs y\nKF\n709 coreye? J\n(oR\n\nSRag\n\nTFL 46\nBraden Area\nGate Locations\nBraden Mainline - Station 0+100\n\nTR11 - Station 0+200 ss\nRY\nSanfifan £1 Forest Roads A Gate Location\nAA, River a Mainline @ _ Blockade Location\nSx} == Secondary Road Swamp\nOvergrown Road Lake/River\n=\n4 Kilometers Lt TFL 46 Boundary\nay 1:75,000 May 27, 2021",
+    "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/gate_location_map_braden_mainline_and_tr11.pdf",
+    "version": "2026-10-19T20:01:00.593Z",
+    "confirmed": true,
+    "file": "raw/2026-10/dm_notices/DSI-66e61e93-gate_location_map_braden_mainline_and_tr11.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "dm_notice-13cca27c2143",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "dm_notice.v1",
+      "schema_id": "dm_notice.v1",
+      "produced_at": "2026-10-19T20:15:37Z",
+      "answer": {
+        "legible": true,
+        "document_type": "gate_map",
+        "signed_on": "2021-05-27",
+        "rescinded": false,
+        "roads": [
+          {
+            "name": "Braden Mainline",
+            "file_section": null,
+            "quote": "Braden Mainline",
+            "effective_from": null,
+            "effective_to": null,
+            "points": [
+              {
+                "km": 0.1,
+                "km_end": null,
+                "extent": "at",
+                "status": "gated",
+                "seen_on": "text",
+                "quote": "Braden Mainline - Station 0+100"
+              }
+            ]
+          },
+          {
+            "name": "TR11",
+            "file_section": null,
+            "quote": "TR11",
+            "effective_from": null,
+            "effective_to": null,
+            "points": [
+              {
+                "km": 0.2,
+                "km_end": null,
+                "extent": "at",
+                "status": "gated",
+                "seen_on": "text",
+                "quote": "TR11 - Station 0+200"
+              }
+            ]
+          },
+          {
+            "name": "Braden 2000",
+            "file_section": null,
+            "quote": "Braden 2000",
+            "effective_from": null,
+            "effective_to": null,
+            "points": [
+              {
+                "km": null,
+                "km_end": null,
+                "extent": "unknown",
+                "status": "gated",
+                "seen_on": "text",
+                "quote": "Existing Gate on Braden 2000"
+              }
+            ]
+          }
+        ],
+        "map_readings": [
+          {
+            "page": 1,
+            "label": "TR11 Station 0+200",
+            "shows": "A red callout with an arrow, and a separate Gate Location callout, pointing to a red triangle (legend: Gate Location) next to the km 0 marker at the start of the road labelled TR11, near the km 30 marker on GORDON RIVER MAIN."
+          },
+          {
+            "page": 1,
+            "label": "Braden Mainline Station 0+100",
+            "shows": "A red callout with an arrow, and a separate Gate Location callout, pointing to a red triangle (legend: Gate Location) next to the km 0 marker at the start of BRADEN M/L, near the km 44 marker on GORDON RIVER MAIN."
+          },
+          {
+            "page": 1,
+            "label": "Existing Gate on Braden 2000",
+            "shows": "A callout pointing to a red triangle (legend: Gate Location) at the start of the road labelled BD2000/BD-2000, beside the km 4 marker on BRADEN M/L. No station or km is printed for this gate."
+          },
+          {
+            "page": 1,
+            "label": "Truck Road 11 Blockade",
+            "shows": "An orange pentagon (legend: Blockade Location) on TR11 just past the TR11 gate."
+          },
+          {
+            "page": 1,
+            "label": "BD-2000 Blockade",
+            "shows": "An orange pentagon (legend: Blockade Location) on the BD-2000 road right beside the Existing Gate on Braden 2000."
+          },
+          {
+            "page": 1,
+            "label": "Edinburgh Blockade",
+            "shows": "An orange pentagon (legend: Blockade Location) at the km 0 marker at the start of EDINBURGH M/L, near the km 38 marker on GORDON RIVER MAIN."
+          },
+          {
+            "page": 1,
+            "label": "Grierson Blockade",
+            "shows": "An orange pentagon (legend: Blockade Location) at the km 0 marker on GRIERSON M/L, near where it meets GORDON RIVER MAIN."
+          },
+          {
+            "page": 1,
+            "label": "Fairy Creek Blockade #1",
+            "shows": "An orange pentagon (legend: Blockade Location) on the road labelled BD-4000 near Braden Creek, by the km 8 marker on BRADEN M/L."
+          },
+          {
+            "page": 1,
+            "label": "Fairy Creek Blockade #2",
+            "shows": "An orange pentagon (legend: Blockade Location) near the road labelled RD-1300."
+          },
+          {
+            "page": 1,
+            "label": "Granite Cre Blockade",
+            "shows": "An orange pentagon (legend: Blockade Location) on GRANITE MAINLINE; the label is cut off at the right edge of the map."
+          },
+          {
+            "page": 1,
+            "label": "TFL 46 Braden Area Gate Locations Braden Mainline - Station 0+100 TR11 - Station 0+200",
+            "shows": "Map title block, scale 1:75,000, dated May 27, 2021."
+          }
+        ],
+        "quotes": [
+          {
+            "field": "signed_on",
+            "quote": "May 27, 2021"
+          },
+          {
+            "field": "rescinded",
+            "quote": "Gate Locations"
+          }
+        ],
+        "uncertain": [
+          "roads[0].file_section",
+          "roads[0].effective_from",
+          "roads[0].effective_to",
+          "roads[1].file_section",
+          "roads[1].effective_from",
+          "roads[1].effective_to",
+          "roads[2].file_section",
+          "roads[2].effective_from",
+          "roads[2].effective_to",
+          "roads[2].points[0].km"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "dm_notice-13cca27c2143",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "dm_notice.v1",
+      "schema_id": "dm_notice.v1",
+      "produced_at": "2026-10-19T20:14:40Z",
+      "answer": {
+        "legible": true,
+        "document_type": "gate_map",
+        "signed_on": "2021-05-27",
+        "rescinded": false,
+        "roads": [
+          {
+            "name": "Braden Mainline",
+            "file_section": null,
+            "quote": "Braden Mainline",
+            "effective_from": null,
+            "effective_to": null,
+            "points": [
+              {
+                "km": 0.1,
+                "km_end": null,
+                "extent": "at",
+                "status": "gated",
+                "seen_on": "text",
+                "quote": "Braden Mainline - Station 0+100"
+              }
+            ]
+          },
+          {
+            "name": "TR11",
+            "file_section": null,
+            "quote": "TR11",
+            "effective_from": null,
+            "effective_to": null,
+            "points": [
+              {
+                "km": 0.2,
+                "km_end": null,
+                "extent": "at",
+                "status": "gated",
+                "seen_on": "text",
+                "quote": "TR11 - Station 0+200"
+              }
+            ]
+          },
+          {
+            "name": "Braden 2000",
+            "file_section": null,
+            "quote": "Braden 2000",
+            "effective_from": null,
+            "effective_to": null,
+            "points": [
+              {
+                "km": null,
+                "km_end": null,
+                "extent": "unknown",
+                "status": "gated",
+                "seen_on": "text",
+                "quote": "Existing Gate on Braden 2000"
+              }
+            ]
+          }
+        ],
+        "map_readings": [
+          {
+            "page": 1,
+            "label": "TR11 Station 0+200",
+            "shows": "Red callout box with an arrow, and a second callout reading Gate Location, pointing to a red triangle Gate Location symbol at the start of the road labelled TR 11, beside its km 0 marker and the km 30 marker on GORDON RIVER MAIN."
+          },
+          {
+            "page": 1,
+            "label": "Braden Mainline Station 0+100",
+            "shows": "Red callout box with an arrow, and a second callout reading Gate Location, pointing to a red triangle Gate Location symbol at the start of BRADEN M/L beside its km 0 marker and the km 44 marker on Gordon River Main."
+          },
+          {
+            "page": 1,
+            "label": "Existing Gate on Braden 2000",
+            "shows": "Callout pointing to a red triangle Gate Location symbol where BD-2000 leaves BRADEN M/L by its km 4 marker; an orange Blockade Location symbol labelled BD-2000 Blockade sits beside it. No km is printed for this gate on Braden 2000."
+          },
+          {
+            "page": 1,
+            "label": "Truck Road 11 Blockade",
+            "shows": "Orange pentagon Blockade Location symbol on TR 11 a short way along from the TR11 gate; marked as a blockade location, not as a gate or closure."
+          },
+          {
+            "page": 1,
+            "label": "Edinburgh Blockade",
+            "shows": "Orange pentagon Blockade Location symbol at the start of EDINBURGH M/L near the km 0 marker; marked as a blockade location, not as a gate or closure."
+          },
+          {
+            "page": 1,
+            "label": "Fairy Creek Blockade #1",
+            "shows": "Orange pentagon Blockade Location symbol on the mainline road leading to RED M/L, near Braden Creek; marked as a blockade location, not as a gate or closure."
+          },
+          {
+            "page": 1,
+            "label": "Fairy Creek Blockade #2",
+            "shows": "Orange pentagon Blockade Location symbol near the RD-1300 road; marked as a blockade location, not as a gate or closure."
+          },
+          {
+            "page": 1,
+            "label": "Grierson Blockade",
+            "shows": "Orange pentagon Blockade Location symbol on GRIERSON M/L near its km 0 marker; marked as a blockade location, not as a gate or closure."
+          },
+          {
+            "page": 1,
+            "label": "Granite Cre Blockade",
+            "shows": "Orange pentagon Blockade Location symbol on GRANITE MAINLINE; the label is cut off at the map edge. Marked as a blockade location, not as a gate or closure."
+          },
+          {
+            "page": 1,
+            "label": "G1100",
+            "shows": "Unlabelled orange pentagon Blockade Location symbol at the km 0 marker of the road labelled G1100, near the km 42 marker; marked as a blockade location, not as a gate or closure."
+          },
+          {
+            "page": 1,
+            "label": "TFL 46 Braden Area Gate Locations Braden Mainline - Station 0+100 TR11 - Station 0+200",
+            "shows": "Map title block; legend lists the red triangle as Gate Location and the orange pentagon as Blockade Location; scale 1:75,000, dated May 27, 2021."
+          }
+        ],
+        "quotes": [
+          {
+            "field": "signed_on",
+            "quote": "May 27, 2021"
+          },
+          {
+            "field": "rescinded",
+            "quote": "Gate Locations"
+          }
+        ],
+        "uncertain": [
+          "roads[0].effective_from",
+          "roads[0].effective_to",
+          "roads[1].effective_from",
+          "roads[1].effective_to",
+          "roads[2].effective_from",
+          "roads[2].effective_to",
+          "roads[2].points[0].km"
+        ]
+      }
+    }
+  },
+  "disagreements": [],
+  "rejected_quotes": [],
+  "placements": [
+    {
+      "road": "Braden Mainline",
+      "file_section": null,
+      "points": [
+        {
+          "km": 0.1,
+          "extent": "at",
+          "status": "gated",
+          "quote": "Braden Mainline - Station 0+100"
+        }
+      ],
+      "placement": "no file and section number in the PDF"
+    },
+    {
+      "road": "TR11",
+      "file_section": null,
+      "points": [
+        {
+          "km": 0.2,
+          "extent": "at",
+          "status": "gated",
+          "quote": "TR11 - Station 0+200"
+        }
+      ],
+      "placement": "no file and section number in the PDF"
+    },
+    {
+      "road": "Braden 2000",
+      "file_section": null,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "gated",
+          "quote": "Existing Gate on Braden 2000"
+        }
+      ],
+      "placement": "no file and section number in the PDF"
+    }
+  ],
+  "images": [
+    "raw/2026-10/dm_notices/images/DSI-66e61e93-gate_location_map_braden_mainline_and_tr11.p1.jpg"
+  ],
+  "links": [
+    {
+      "label": "Notice PDF",
+      "href": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/gate_location_map_braden_mainline_and_tr11.pdf"
+    }
+  ],
+  "status": "open",
+  "created": "2026-10-20T15:23:18.107Z",
+  "updated": "2026-10-20T15:23:18.107Z"
+}

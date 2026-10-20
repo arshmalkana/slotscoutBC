@@ -1,0 +1,139 @@
+{
+  "task_id": "closed_area-0eab0fc7d7e1",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T15:19:15Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": null,
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the midpoint of the channel separating District Lot 470 (Albion Island) and District Lot 473 (Harlock Island), NWD",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the midpoint of the channel separating District Lot 470 (Albion Island) and District Lot 473 (Harlock Island), NWD"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "other",
+          "feature": "\"D\" cross dyke on District Lot 194 (Reifel Island)",
+          "side_or_bank": null,
+          "until": "a point in the middle of Ewen Slough to meet a line drawn due North from the property line separating District Lot 192A and the Department of National Defence property",
+          "distance": null,
+          "quote": "thence in a southerly direction parallel to \"D\" cross dyke on District Lot 194 (Reifel Island) to a point in the middle of Ewen Slough to meet a line drawn due North from the property line separating District Lot 192A and the Department of National Defence property"
+        },
+        {
+          "start": null,
+          "direction": "due West",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the north bank of London Slough",
+          "distance": null,
+          "quote": "thence from the southeast corner of said property due West to the north bank of London Slough"
+        },
+        {
+          "start": null,
+          "direction": null,
+          "follow": "other",
+          "feature": "London Slough",
+          "side_or_bank": "north bank",
+          "until": "the point where the slough forks",
+          "distance": null,
+          "quote": "thence along the north bank of London Slough to the point where the slough forks"
+        },
+        {
+          "start": null,
+          "direction": "due West",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point 2 508 m in an east-west line from the sea dyke",
+          "distance": "2 508 m",
+          "quote": "thence due West to a point 2 508 m in an east-west line from the sea dyke"
+        },
+        {
+          "start": null,
+          "direction": "on a bearing of 47 east of north (true)",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": "1 125 m",
+          "quote": "thence on a bearing of 47 east of north (true) for 1 125 m"
+        },
+        {
+          "start": null,
+          "direction": "on a bearing of 17° east of north (true)",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": "894 m",
+          "quote": "thence on a bearing of 17° east of north (true) for 894 m"
+        },
+        {
+          "start": null,
+          "direction": "on a bearing of 31° east of north (true)",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the stone dyke extending west from the northwest corner of Reifel Island",
+          "distance": null,
+          "quote": "thence on a bearing of 31° east of north (true) to intersect the stone dyke extending west from the northwest corner of Reifel Island"
+        },
+        {
+          "start": null,
+          "direction": null,
+          "follow": "other",
+          "feature": "stone dyke",
+          "side_or_bank": "northern edge",
+          "until": "the point of intersection of the Reifel property",
+          "distance": null,
+          "quote": "thence along the northern edge of the stone dyke to the point of intersection of the Reifel property"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "lot_line",
+          "feature": "said property line",
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence easterly along said property line to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting, Hunting or Trapping Areas"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within the following boundaries: Commencing at"
+      }
+    ],
+    "uncertain": [
+      "within"
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "task_id": "closed_area-0b6276017c6b",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T15:18:34Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": null,
+    "geometry": {
+      "method": "road_buffer",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within 50 m of the travelled portion of the following described highways"
+      }
+    ],
+    "uncertain": [
+      "within",
+      "geometry.road",
+      "geometry.buffer_m",
+      "geometry.side",
+      "geometry.from",
+      "geometry.to"
+    ]
+  }
+}

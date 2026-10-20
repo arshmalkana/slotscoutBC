@@ -1,0 +1,144 @@
+{
+  "task_id": "closed_area-ba0d1970b2f0",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T15:19:29Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 2-12"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "a point on the mean high water mark that is the most southerly point of the natural boundary of Thulin Lake",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at a point on the mean high water mark that is the most southerly point of the natural boundary of Thulin Lake"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "shoreline",
+          "feature": "Thulin Lake",
+          "side_or_bank": "westerly natural boundary",
+          "until": "the northernmost tip of the lake",
+          "distance": null,
+          "quote": "thence northerly along the mean high water mark on the westerly natural boundary of the lake to the northernmost tip of the lake"
+        },
+        {
+          "start": null,
+          "direction": "due West",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the right of way of Finn Bay Road",
+          "distance": null,
+          "quote": "thence along a straight line due West to the right of way of Finn Bay Road"
+        },
+        {
+          "start": null,
+          "direction": "northwesterly",
+          "follow": "road",
+          "feature": "Finn Bay Road",
+          "side_or_bank": null,
+          "until": "its intersection with Norlund Road",
+          "distance": null,
+          "quote": "thence northwesterly along the right of way to its intersection with Norlund Road"
+        },
+        {
+          "start": null,
+          "direction": "southwest",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point on the mean low water mark on the natural boundary of Thulin Passage",
+          "distance": null,
+          "quote": "thence in a straight line southwest to a point on the mean low water mark on the natural boundary of Thulin Passage"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "shoreline",
+          "feature": "Thulin Passage",
+          "side_or_bank": null,
+          "until": "the most southwesterly point of land bordering the entrance to Thulin passage",
+          "distance": null,
+          "quote": "thence southerly along the natural boundary to the most southwesterly point of land bordering the entrance to Thulin passage"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of land southwest of Lund which is the northeasterly terminus of the Savary Island marine telephone cable",
+          "distance": null,
+          "quote": "thence along a straight line easterly to the point of land southwest of Lund which is the northeasterly terminus of the Savary Island marine telephone cable"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "shoreline",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a small unnamed bay approximately 500 m southeasterly from the telephone cable terminus point",
+          "distance": "approximately 500 m",
+          "quote": "thence southerly along the natural boundary to a small unnamed bay approximately 500 m southeasterly from the telephone cable terminus point"
+        },
+        {
+          "start": null,
+          "direction": "due East",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the Highway 101 right of way",
+          "distance": null,
+          "quote": "thence along a straight line due East to the Highway 101 right of way"
+        },
+        {
+          "start": null,
+          "direction": "due North",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence along a straight line due North to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "in M.U. 2-12"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundaries"
+      }
+    ],
+    "uncertain": []
+  }
+}

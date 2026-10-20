@@ -1,0 +1,76 @@
+{
+ "task_id": "closed_area-712ace3e0b96",
+ "run": 1,
+ "mode": "agent",
+ "model": "Claude Code agent mode",
+ "prompt_version": "closed_area.v1",
+ "schema_id": "closed_area.v1",
+ "produced_at": "2026-10-20T15:19:05Z",
+ "answer": {
+  "effect": "no_shooting",
+  "exemptions": [],
+  "period": null,
+  "within": {
+   "type": "wildlife_management_unit",
+   "name": "M.U. 2-04"
+  },
+  "geometry": {
+   "method": "metes_and_bounds",
+   "road": null,
+   "feature": null,
+   "buffer_m": null,
+   "side": null,
+   "from": null,
+   "to": null,
+   "steps": [
+    {
+     "start": "a point at the mean high water mark in Boundary Bay",
+     "direction": "East",
+     "follow": "other",
+     "feature": "International Boundary between Canada and the United States of America",
+     "side_or_bank": null,
+     "until": "a concrete marker establishing the International Boundary",
+     "distance": null,
+     "quote": "from a point at the mean high water mark in Boundary Bay East along the International Boundary between Canada and the United States of America to a concrete marker establishing the International Boundary"
+    },
+    {
+     "start": null,
+     "direction": "northwesterly",
+     "follow": null,
+     "feature": null,
+     "side_or_bank": null,
+     "until": "the mean high water mark in the vicinity of the point where 64 Street, municipality of Delta, meets the dyke bordering Boundary Bay",
+     "distance": null,
+     "quote": "thence northwesterly to the mean high water mark in the vicinity of the point where 64 Street, municipality of Delta, meets the dyke bordering Boundary Bay"
+    },
+    {
+     "start": null,
+     "direction": "southerly, southwesterly and southeasterly",
+     "follow": "shoreline",
+     "feature": "mean high water mark",
+     "side_or_bank": null,
+     "until": "the point of commencement",
+     "distance": null,
+     "quote": "thence southerly, southwesterly and southeasterly along the mean high water mark to the point of commencement"
+    }
+   ]
+  },
+  "quotes": [
+   {
+    "field": "effect",
+    "quote": "No Shooting or Hunting Areas"
+   },
+   {
+    "field": "within",
+    "quote": "That portion of M.U. 2-04"
+   },
+   {
+    "field": "geometry.method",
+    "quote": "from a point at the mean high water mark"
+   }
+  ],
+  "uncertain": [
+   "geometry.steps[1].follow"
+  ]
+ }
+}

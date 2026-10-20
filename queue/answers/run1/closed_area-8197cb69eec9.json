@@ -1,0 +1,99 @@
+{
+  "task_id": "closed_area-8197cb69eec9",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T15:20:04Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": null,
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the intersection of the westerly shore of Evans Lake and the boundary of the Cheakamus Indian Reserve Number 11",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the intersection of the westerly shore of Evans Lake and the boundary of the Cheakamus Indian Reserve Number 11"
+        },
+        {
+          "start": null,
+          "direction": "westerly and northerly",
+          "follow": "reserve_boundary",
+          "feature": "Cheakamus Indian Reserve Number 11",
+          "side_or_bank": null,
+          "until": "a point, at an approximate elevation of 300 m, due West of the northernmost point of the shore of Levette Lake",
+          "distance": null,
+          "quote": "thence westerly and northerly along the reserve boundary to a point, at an approximate elevation of 300 m, due West of the northernmost point of the shore of Levette Lake"
+        },
+        {
+          "start": null,
+          "direction": "due northeast",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point at the intersection of the line and the 500 m contour line",
+          "distance": "approximately 1.8 km",
+          "quote": "thence in a straight line due northeast for a distance of approximately 1.8 km to a point at the intersection of the line and the 500 m contour line"
+        },
+        {
+          "start": null,
+          "direction": "due East",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the easterly boundary of the District of Squamish",
+          "distance": null,
+          "quote": "thence due East to the easterly boundary of the District of Squamish"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "district_boundary",
+          "feature": "District of Squamish",
+          "side_or_bank": null,
+          "until": "the point of its intersection with the northerly boundary of the Cheakamus Indian Reserve Number 11",
+          "distance": null,
+          "quote": "thence southerly along the District boundary to the point of its intersection with the northerly boundary of the Cheakamus Indian Reserve Number 11"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "reserve_boundary",
+          "feature": "Cheakamus Indian Reserve Number 11",
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence westerly along the reserve boundary to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within the following described boundaries"
+      }
+    ],
+    "uncertain": [
+      "within"
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "task_id": "closed_area-cdbe692ac085",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-20T15:19:15Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": null,
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the northern extremity of the dyke between Pitt River and Addington marsh",
+          "direction": "due West",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point due North of the end of the surveyed road allowance which divides Section 9 and Section 10, Coquitlam District Municipality",
+          "distance": null,
+          "quote": "Commencing at the northern extremity of the dyke between Pitt River and Addington marsh and proceeding due West to a point due North of the end of the surveyed road allowance which divides Section 9 and Section 10, Coquitlam District Municipality"
+        },
+        {
+          "start": null,
+          "direction": "due South",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the outside edge of the dyke",
+          "distance": null,
+          "quote": "thence proceeding due South to the outside edge of the dyke"
+        },
+        {
+          "start": null,
+          "direction": "easterly, northerly and northwesterly",
+          "follow": "other",
+          "feature": "dyke",
+          "side_or_bank": "outside edge",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence proceeding easterly, northerly and northwesterly along the outside edge of the dyke to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting or Hunting Areas"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within the following described boundaries: Commencing at"
+      }
+    ],
+    "uncertain": [
+      "within"
+    ]
+  }
+}
