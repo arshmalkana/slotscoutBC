@@ -183,7 +183,7 @@ async function findSite(m: Manifest, site: BylawSite): Promise<BylawFind> {
  */
 export function keepEvidenceOnly(dir: string): void {
   const pages = join(dir, "pages");
-  for (const f of listFiles(pages, (x) => /\.(html|jpg)$/.test(x) && !x.includes("/large/") && !/\/doc-\d+\./.test(x))) {
+  for (const f of listFiles(pages, (x) => /\.(html|jpg)$/.test(x) && !/[\\\/]large[\\\/]/.test(x) && !/[\\\/]doc-\d+\./.test(x))) {
     ensureDir(join(pages, "large"));
     renameSync(f, join(pages, "large", basename(f)));
   }

@@ -88,7 +88,7 @@ export function loadItems(month: string): ReviewItem[] {
 
 /** All items across months, newest month first. */
 export function allItems(): ReviewItem[] {
-  return listFiles(P.review, (f) => f.includes("/items/") && f.endsWith(".json"))
+  return listFiles(P.review, (f) => /[\\\/]items[\\\/]/.test(f) && f.endsWith(".json"))
     .map((f) => readJson<ReviewItem>(f))
     .sort((a, b) => b.month.localeCompare(a.month));
 }
