@@ -82,18 +82,23 @@ export async function buildNotices(month: string, units: Unit[], tasks: Task[]) 
   store.updatedAt = new Date().toISOString();
   for (const f of manifest?.files ?? []) if (f.source === "road_notices") store.districts[f.path.split("/").pop()!.replace(".html", "")] = { pageUrl: f.url ?? "", fetchedAt: f.fetchedAt };
 
+  // A section the layer does not have is "not found"; a lookup that could not run is a failure,
+  // recorded as such (the km points stay unplaced and the build summary counts it).
   const sectionCache = new Map<string, Geometry | null>();
+  const lookupErrors = new Map<string, string>();
   const section = async (fs: string): Promise<Geometry | null> => {
     if (!sectionCache.has(fs)) {
       try {
         const feats = await ftenSection(fs);
         sectionCache.set(fs, feats.length === 1 ? feats[0]!.geometry : feats.length ? { type: "MultiLineString", coordinates: feats.flatMap((f) => (f.geometry.type === "LineString" ? [f.geometry.coordinates] : f.geometry.type === "MultiLineString" ? f.geometry.coordinates : [])) } : null);
-      } catch {
+      } catch (e) {
         sectionCache.set(fs, null);
+        lookupErrors.set(fs, (e as Error).message);
       }
     }
     return sectionCache.get(fs)!;
   };
+  const missingNote = (fs: string) => (lookupErrors.has(fs) ? `FTEN lookup for section ${fs} failed (${lookupErrors.get(fs)}); km points not placed` : `FTEN section ${fs} not found`);
 
   let placed = 0;
   let aiRead = 0;
@@ -175,7 +180,7 @@ export async function buildNotices(month: string, units: Unit[], tasks: Task[]) 
           return { ...p, lat: Number(at.lat.toFixed(6)), lon: Number(at.lon.toFixed(6)) };
         });
         s.placement = { sectionLengthKm: Number(lenKm.toFixed(2)), note };
-      } else s.placement = { sectionLengthKm: null, note: `FTEN section ${n.fileSection} not found` };
+      } else s.placement = { sectionLengthKm: null, note: missingNote(n.fileSection) };
     }
     store.notices.push(s);
   }
@@ -227,11 +232,12 @@ export async function buildNotices(month: string, units: Unit[], tasks: Task[]) 
       });
     }
   }
-  const dm = await buildDmNotices(month, units, tasks, store, prev, pagesRead, section);
+  const dm = await buildDmNotices(month, units, tasks, store, prev, pagesRead, section, missingNote);
   store.notices.sort((a, b) => a.orgUnit.localeCompare(b.orgUnit) || a.road.localeCompare(b.road));
   writeJson(STORE(), store);
+  if (lookupErrors.size) log("build", `FTEN LOOKUPS FAILED for ${lookupErrors.size} section(s) (first: ${[...lookupErrors.values()][0]}); their km points are not placed. Check the network, then re-run make build.`);
   log("build", `road notices: ${store.notices.length} kept (${removed} gone from their page, held for a person), ${placed} km points placed, ${aiRead} AI-read; District Manager PDFs: ${dm.read} read, ${dm.roads} road(s) closed or restricted in them, ${dm.waiting} waiting for extraction, ${dm.unreadable} unreadable`);
-  return { notices: store.notices.length, placed, removed, aiRead, dmNotices: dm };
+  return { notices: store.notices.length, placed, removed, aiRead, lookupFailures: lookupErrors.size, dmNotices: dm };
 }
 
 type DmPoint = { km: number | null; km_end: number | null; extent: string; status: NoticePoint["status"]; seen_on: "text" | "map"; quote: string };
@@ -254,6 +260,7 @@ async function buildDmNotices(
   prev: NoticeStore,
   pagesRead: Set<string>,
   section: (fs: string) => Promise<Geometry | null>,
+  missingNote: (fs: string) => string,
 ): Promise<{ read: number; roads: number; waiting: number; unreadable: number; disagree: number }> {
   const now = today();
   const prevById = new Map(prev.notices.filter((n) => n.origin === "dm_notice").map((n) => [n.id!, n]));
@@ -331,7 +338,7 @@ async function buildDmNotices(
             if (at) Object.assign(p, { lat: Number(at.lat.toFixed(6)), lon: Number(at.lon.toFixed(6)) });
             else note += `; km ${p.km} is past the mapped end`;
           }
-        } else note = `FTEN section ${r.file_section} not found`;
+        } else note = missingNote(r.file_section);
       }
       placements.push({ road: r.name, file_section: r.file_section, points: pts, placement: note });
       if (rescinded) continue;
