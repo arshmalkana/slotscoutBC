@@ -1,88 +1,92 @@
-# Hand-off report: Addendum A one-time job, October 2026
+# Hand-off report: Addendum A, October 2026
 
-Prepared by Claude Code on 2026-10-19 (Addendum A 10.3 step 13). Nothing in this job was approved, signed off or published by Claude Code. Every item below that changes what the map shows is waiting for a person.
+Prepared by Claude Code (Addendum A 10.3 step 13), last updated 2026-10-21. Nothing here was approved, signed off or published by Claude Code. Every item below that changes what the map shows is waiting for a person.
 
 ## 1. What was built
 
 | Part | Where | What it does |
 | --- | --- | --- |
-| Hard rules and runbook | `CLAUDE.md`, `RUNBOOK.md` | Addendum A 10.6 rules for every Claude Code session; the monthly steps as commands |
-| Settings | `config.toml`, `.env.example` | Model, prompts, thresholds, validation limits, storage limits; the API key lives only in `.env` |
-| Source register | `sources/registry.yaml` | 41 sources, each with owner, URL, method, cadence and freshness limit (site and pipeline both read it) |
+| Hard rules and runbook | `CLAUDE.md`, `RUNBOOK.md` | Addendum A 10.6 rules for every Claude Code session; the monthly steps as commands; how to resume after an interruption |
+| Settings | `config.toml`, `.env.example` | Model, prompts, thresholds, validation limits, storage limits, BC Laws documents (with what a person found repealed or missing); the API key lives only in `.env` |
+| Source register | `sources/registry.yaml` | 41 sources, each with owner, URL, method, cadence and freshness limit |
 | Pipeline CLI | `packages/pipeline` | `pull`, `split`, `queue`, `extract`, `build`, `validate`, `review-packet`, `test`, `report`, `status`, `monthly`, `release`; `approve` and `signoff` refuse to run inside Claude Code |
-| Prompts and schemas | `prompts/`, `schema/` | `closed_area.v1`, `road_notice.v1`, `bylaw.v1`, `change.v1` |
-| Extraction modes | `packages/pipeline/src/steps/extract.ts` | `api` (Claude API, structured JSON output, server-side refusal fallbacks), `agent` (briefs for Claude Code and fresh subagents), `manual` (a person fills the same files) |
-| Checks | `packages/pipeline/src/lib/answers.ts`, `geometry.ts` | Schema, verbatim quotes, two-run agreement, gazetteer lookups in official layers, deterministic road-buffer geometry, validation 4.5 |
-| Engine changes | `packages/engine` | Review states (candidate, provisional, approved, retired) and the one-way rule; road notice parser with km points and quotes; P6 places km points along the FTEN section; unread page text keeps P6 grey |
-| Site changes | `apps/web`, `apps/api` | Sixth accuracy promise, "how legal text becomes map shapes", privacy line on the model, Sources page "Monthly update" panel, `/v1/pipeline-status`; data reloads when the pipeline writes |
-| Docker | `docker-compose.yml`, `Dockerfile`, `Dockerfile.ingest` | `web` serves the site from the bind-mounted rules and registers; `ingest` runs the pipeline with Playwright, Chromium and poppler. Every step of this job ran in the ingest container |
+| Progress | every step, `reports/2026-10-progress.json`, `status.json`, Sources page | Each step prints work done and left (`[pull] District Manager PDFs 12/46 (26%), 34 left`); the site shows the same table |
+| Scans and maps | `packages/pipeline/src/lib/pdf.ts`, ingest image | Text layer first; pages with no usable text are read by OCR (tesseract); map and scan pages are saved as page images that the extraction looks at |
+| Prompts and schemas | `prompts/`, `schema/` | `closed_area.v1`, `road_notice.v1`, `dm_notice.v1` (every road a District Manager letter, bulletin or gate map closes), `bylaw.v1`, `change.v1` |
+| Extraction modes | `packages/pipeline/src/steps/extract.ts` | `api` (Claude API, structured output, page images sent as images, server-side refusal fallbacks), `agent` (briefs for Claude Code and fresh subagents), `manual` |
+| Checks | `packages/pipeline/src/lib/answers.ts`, `geometry.ts` | Schema, verbatim quotes (text layer and OCR text), two-run agreement, gazetteer lookups in official layers, deterministic geometry, validation 4.5 |
+| Engine and site | `packages/engine`, `apps/api`, `apps/web` | Review states and the one-way rule; District Manager closures count only after approval and keep P6 grey until then; Sources page progress table; About page on OCR and maps |
+| Docker | `docker-compose.yml`, `Dockerfile`, `Dockerfile.ingest` | `web` serves the site; `ingest` runs the pipeline with Playwright, Chromium, poppler and tesseract. Every pipeline step ran in the ingest container |
 
-## 2. What was run, with counts
+## 2. What was run for October, with counts
 
-| Step (10.3) | Result |
+There is one October: `2026-10`. The second cycle that had been run as `2026-10-dryrun` was re-pulled and re-read inside `2026-10`, and the dry-run folders were removed (they remain in git history).
+
+| Step | Result |
 | --- | --- |
-| 2 Source register | 41 sources; `make validate` checks each has owner, URL, method, cadence and freshness limit |
-| 3 GIS pull | 33 layers, 4,135,499 features, every pulled count equals the server's count; content hashes in `raw/2026-10/manifest.json` |
-| 4 Legal text | **Not available.** BC Laws' robots.txt disallows automated clients and API use is not confirmed, so no regulation was fetched. Only Addendum A 4.1's quote of Closed Areas Sch. 5 s. 85 exists, saved as an unconfirmed excerpt |
-| 5 Split | 396 units: 327 road notices, 24 District Manager notice PDFs, 31 bylaw clauses, 13 unread page texts, 1 regulation section |
-| 6 Rule-based parsing | 295 units read by rules (most road notices, and the s. 85 corridor) |
-| 7 AI extraction | Agent mode (no API key): 61 tasks, two independent runs each (run 2 always by a fresh subagent that saw only the source, prompt and schema) |
-| 8 Lookups, shapes, validation | Sch. 5 s. 85: FVRD, Sylvester Rd, Farms Rd and Dale Rd each matched exactly one official feature; a 1.8 km corridor (0.235 km²) passed ring, area, inside-FVRD and agreement checks. The synopsis check could not run (no synopsis shape) |
-| 9 Bylaws | Headless browser visited 34 Region 2 sites: 3 jurisdictions found (Richmond 4183, SLRD Areas A and D, Belcarra 498-2016), 30 not found by navigation, 1 not reachable (Bowen Island). The dry run found 2 more (Chilliwack 2740, City of Langley 2961) |
-| 10 Road notices | 22 of 22 district pages read; 327 notices; 24 linked District Manager PDFs; 183 km points placed along FTEN sections |
-| 11 Review packet | `review/2026-10/index.html`: 70 open items (below) |
-| 12 Release candidate | `releases/2026-10/` is `2026-10-rc`, not published (needs legal sign-off). 100 unit tests pass; regression set: 0 false greens; gold set: none yet |
-| 10.4 First monthly run | `make monthly MONTH=2026-10-dryrun` in the ingest container. GIS: all 33 layers re-pulled with matching counts; only `fire_current` changed (same 314 features, new content hash). Text: 396 units unchanged, 0 changed, 0 removed. New: 22 District Manager PDFs reachable through the fixed parser, and the Chilliwack (2740) and City of Langley (2961) bylaws. 22 tasks extracted twice and built; 22 more review items; no looser change; regression passed. Report: `reports/2026-10-dryrun-monthly.md` |
+| GIS pull | 33 layers, every pulled count equal to the server's count; the four wildfire layers re-pulled on 2026-10-19 |
+| Legal text | The Closed Areas Regulation consolidation current to October 13, 2026 (last amended July 1, 2026 by B.C. Reg. 97/2026), copied in by a person on 2026-10-20 (`inbox/bclaws/76_84_00_multi.txt`). 254 in-force sections across 14 schedules |
+| District road pages | 22 of 22 read; 401 notices; 183 km points placed along FTEN sections |
+| District Manager PDFs | 46 of 46 pulled and read: 28 needed OCR (2 had no text layer at all), 62 map or scan page images read alongside the text. 74 closed or restricted roads went into `rules/road-notices.json` as AI readings waiting for approval. None was unreadable, so no "map or scan with no text" item was raised |
+| Bylaws | 34 Region 2 sites visited by the headless browser; 6 bylaw documents read twice (Belcarra 498-2016 by OCR) |
+| Extraction | 339 tasks, two independent runs each (run 2 always a fresh subagent that saw only its brief): closed-area sections 254 of 254; District Manager PDFs 46 of 46; road notices the parser could not read 33 of 33; bylaw documents 6 of 6 |
+| Build | closed areas: 251 needs person, 3 candidate (137 sections where the two runs disagree, all grey until a person decides); road notices: 401 kept, 0 gone from their page (held), 0 lookup failures; bylaws: 6 documents, 5 with agreeing runs |
+| Review packet | `review/2026-10/index.html`: 345 open items (below) |
+| Tests | regression set: passed, no false greens; gold set: none yet |
+| Release | `releases/2026-10/` is `2026-10-rc`, not published: no rule feature is approved yet and the legal reviewer has not signed off (`make signoff BY=<name>`) |
 
-## 3. Open items waiting for a person (92)
+## 3. Open items waiting for a person (345)
 
-Open `review/2026-10/index.html` (70 items) and `review/2026-10-dryrun/index.html` (22 more: 20 District Manager PDFs, mostly gate and closure maps, and the Chilliwack and Langley bylaws). Approve or reject each with `make approve ITEM=<id> BY=<initials>` (add `DECISION=reject NOTE="why"` to reject). The table covers the one-time packet.
+Open `review/2026-10/index.html`. Approve or reject each with `make approve ITEM=<id> BY=<initials>` (add `DECISION=reject NOTE="why"` to reject).
 
 | Kind | Count | What to decide |
 | --- | ---: | --- |
-| `road_notice_reading` | 33 | km points and status the AI read from notices the parser could not read (runs agree on 14). Approving lets the reading count on the map |
-| `dm_notice` | 19 | District Manager PDFs that disagree with, or have no matching, web notice. Several PDFs close many roads at once; the v1 notice schema holds one road, so these need a person |
-| `road_notice_block` | 13 | Closure or deactivation text on 9 district pages that names no road (mostly links to lists, maps and PDFs). **P6 shows "Cannot confirm" in DCC, DCK, DCR, DCS, DKA, DMH, DQC, DSQ and DSS until these are read.** This is the fastest way to restore P6 answers |
-| `bylaw` | 4 | Richmond 4183 (runs disagree on how finely to split rules), SLRD Area D 1294-2013, SLRD Area A 1293-2013 (only the summary page was captured), Belcarra 498-2016 (scanned PDF with no text layer) |
-| `closed_area` | 1 | Sch. 5 s. 85 corridor. Check it against the current BC Laws consolidation first: its text is an unconfirmed excerpt |
+| `closed_area` | 254 | Closed-area sections: check the extracted places, distances and effect against the consolidation; built shapes are candidates, the rest are pre-filled for drawing by hand |
+| `dm_notice` | 39 | District Manager letters, bulletins and gate maps: each lists the roads read (from text, OCR and page images); approving lets those closures count on the map |
+| `road_notice_reading` | 33 | km points and status the AI read from page notices the parser could not read; approving lets the reading count |
+| `road_notice_block` | 13 | Closure or deactivation text on district pages that names no road; P6 shows Cannot confirm in that district until it is read |
+| `bylaw` | 6 | Bylaw rule lists: check every extracted rule before first use |
 
 ## 4. Failed or missing sources
 
-- **BC Laws (Closed Areas, Motor Vehicle Prohibition, Hunting and the other regulations in `config.toml`)**: waiting for a person to save copies into `inbox/bclaws/` (see `inbox/README.md`), or for the King's Printer's written confirmation of API use (then set `bclaws.api_confirmed = true`). Until then the Wildlife Act checks stay "Cannot confirm" everywhere.
-- **Bowen Island Municipality**: its robots.txt could not be read, so the browser did not visit; a person saves the bylaw into `inbox/bylaws/muni:Bowen Island Municipality/`.
-- **28 Region 2 jurisdictions** (30 after the one-time run, 28 after the dry run): no firearm bylaw link found in up to 10 pages of each site's bylaw section. Add the document URL under `documents` in `data/bylaw-sites.json`, or save a copy in `inbox/bylaws/<register key>/`.
-- **CivicInfo BC bylaw directory**: refuses automated clients (403) and reserves AI use in its robots.txt content signals. Not used; ask CivicInfo BC for permission if it would help.
-- **Synopsis maps**: none in `inbox/synopsis/`, so the 90% overlap check could not run.
-- 5 District Manager PDFs over 2 MB keep only their SHA-256 in the manifest (files git-ignored).
+- **BC Laws, other regulations:** the Hunting Regulation link (`190_84`) returned HTTP 404 to a person on 2026-10-20, so its document id needs correcting in `config.toml`; `180_90`, `16_2004` and `38_2005` are still waiting for a saved copy (or the King's Printer's written API confirmation, then `bclaws.api_confirmed = true`).
+- **Motor Vehicle Prohibition Regulation (196/99):** repealed effective March 1, 2024 by B.C. Reg. 18/2024. It is no longer pulled. Which regulation now holds the motor vehicle closures is not confirmed; the map's motor-vehicle check reads the official MVPR boundary layer.
+- **Bowen Island Municipality:** its robots.txt could not be read, so the browser did not visit; a person saves the bylaw into `inbox/bylaws/muni:Bowen Island Municipality/`.
+- **Region 2 bylaw sites with no firearm bylaw link found** in up to 10 pages of each site's bylaw section: add the document URL under `documents` in `data/bylaw-sites.json`, or save a copy in `inbox/bylaws/<register key>/`.
+- **CivicInfo BC bylaw directory:** refuses automated clients and reserves AI use in its robots.txt; not used.
+- **Synopsis maps:** none in `inbox/synopsis/`, so the 90% overlap check could not run.
+- **Jurisdiction counts:** the Province counts 161 municipalities, 158 electoral areas and 13 local trust areas; the official boundary layers the bylaw register is built from hold 160 and 159. `make validate` warns until a person identifies the one jurisdiction that differs. No spot can turn green from it: every jurisdiction stays grey until its bylaw is reviewed.
 
-## 5. Problems found and fixed during the job
+## 5. Problems found and fixed
 
-- **Road notice parser (affects the live site too):** it read only one page layout, so 9 of 22 district pages returned no notices and P6 could have passed spots next to closed roads. It now reads date ranges, abbreviated dates, undated titles, road-named sub-headings and closures stated in a heading (327 notices, up from 145). Text it still cannot tie to a road keeps P6 grey for that district.
-- **km placement margin:** a closure now clears a spot only when it is more than 1 km or 25% further up the road, instead of changing the regression expectation for Slollicum spot D.
-- **Run independence:** run-2 subagents' summaries reached the main session before run 1 was finished, so the remaining 12 run-1 answers were written by fresh subagents. CLAUDE.md now says run-2 subagents reply with file paths only.
-- **Bylaw finder:** a sewage-discharge bylaw matched "discharge" (now ignored); a regional district bylaw naming one electoral area no longer covers the others.
-- **Found by the dry run:** a dropped connection lost the Digital Road Atlas mid-pull (it was logged as failed, and pages are now retried); capture headers made an unchanged bylaw page look changed (now stripped); District Manager PDFs with no text layer now go to a person instead of the AI; a task shared by two months now belongs to the earliest.
+- **Scans and maps:** PDFs with no text layer are now read by OCR, and map pages are read as images; a District Manager PDF goes to a person as unreadable only when both fail (none did).
+- **Map sheets cut short:** the layout text of large map sheets is mostly spaces, and a 30,000-character cut kept as little as 1% of their words. Spaces are now collapsed and the limit is 90,000; the 9 affected PDFs were re-read from their full text.
+- **Regulation splitter:** the full consolidation has a contents list, titles on their own lines and repealed sections; titles are now kept with their own section and repealed sections are left out.
+- **Forced re-pulls:** a forced pull now replaces that month's earlier copy of a source instead of merging stale entries back.
+- **Proxy port after restarts:** the container's proxy port changes when the session restarts; the Docker override now follows it. A build that ran with the stale port had every official-layer lookup fail, and the notice build labelled those "not found"; a failed lookup is now reported as a failure and counted.
+- **Progress for BC Laws:** the count is regulations in hand (1 of 5), not regulations looked for.
+- **Interruptions:** usage limits stopped the readers several times. Answers are one file each, written as soon as they are finished and auto-committed every five minutes, so every stop was resumed, not redone.
 
 ## 6. Known limits (not fixed here)
 
 - **Gold set:** none yet. Region 2 must be digitised by hand first (Addendum A 7.1); until every threshold passes, AI output only pre-fills a person's work (`ai.autopublish = false`).
-- **Geometry builder:** draws road buffers and whole-area boundaries. Metes-and-bounds walks, creek buffers and contours go to a person with the extracted steps pre-filled.
-- **Multi-road notices:** the v1 road notice schema holds one road; notices closing many roads go to a person. A v2 schema with a list of roads needs a new prompt version and a gold-set re-run.
-- **Scanned bylaws:** there is no OCR in the ingest image.
-- **Rule parser:** "closure in place at 21.7 km" style sentences go to the AI rather than the parser. A small pattern change would let rules read them.
+- **Geometry builder:** draws road buffers and whole-area boundaries. Metes-and-bounds walks, creek buffers, contours and "outlined on the attached map" areas go to a person with the extracted steps pre-filled.
+- **Map-only readings:** a road or km point seen on a map image but not in the text or OCR text is shown to the person but never counted.
 
 ## 7. Model use
 
-- `api` mode is ready but did not run (no `ANTHROPIC_API_KEY`). When it runs it calls `claude-opus-5-5` with structured JSON output, effort `high`, two independent requests per task, and **server-side refusal fallbacks enabled** (`fallbacks: "default"`; turn off with `ai.server_side_fallback = false`). Each answer file records the model that actually served it.
-- Claude Opus 5.5 takes no temperature setting, so "temperature 0" (Addendum A 7.5) cannot be set. Determinism comes from fixed prompts, schemas, quote checks and the two-run agreement check instead.
-- Models receive public legal text and notices only, never user data.
+- `api` mode is ready but did not run (no `ANTHROPIC_API_KEY`). When it runs it sends page images as image blocks with the text, makes two independent requests per task, and records the model that served each answer.
+- This month's answers were written in agent mode by Claude Code subagents: one set for run 1 and separate fresh subagents for run 2, each given only its briefs and replying with file paths only.
+- Models receive public legal text, notices and their page images only, never user data.
 
 ## 8. Checklist for the person (Addendum A 10.7)
 
-- [ ] Save the BC Laws regulations into `inbox/bclaws/` (names in `inbox/README.md`), and email the King's Printer about scheduled API use
 - [ ] Read the 13 `road_notice_block` items first (they keep P6 grey in 9 districts)
-- [ ] Work through `review/2026-10/index.html`; approve only what you have checked against the source
-- [ ] Add Region 2 bylaw document URLs or copies for the 29 jurisdictions still not found (28 by navigation, plus Bowen Island)
+- [ ] Check the District Manager readings (`dm_notice`): each road counts on the map only after you approve it
+- [ ] Work through the closed-area items, starting with Region 2; check each against the consolidation saved on 2026-10-20
+- [ ] Correct the Hunting Regulation document id and save the remaining BC Laws copies; confirm what replaced B.C. Reg. 196/99
+- [ ] Identify the jurisdiction that differs between the Province's count and the boundary layers
+- [ ] Add Region 2 bylaw document URLs or copies for the jurisdictions still not found
 - [ ] Hand-digitise Region 2 closed areas for the gold set; put people's answers in `gold/answers/`
 - [ ] Legal reviewer sign-off (`make signoff BY=<name> MONTH=2026-10`), then `make release MONTH=2026-10`
 - [ ] Decide when to add `ANTHROPIC_API_KEY` to `.env` (switches to `api` mode) and confirm the imagery licence
