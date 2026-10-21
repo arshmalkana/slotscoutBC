@@ -76,6 +76,8 @@ make release                                                             # candi
 * **Three modes** (`config.toml` `extractor`): `api` when `ANTHROPIC_API_KEY` is in `.env` (Claude API, structured JSON output, server-side refusal fallbacks), `agent` (Claude Code reads the queue and a fresh subagent does the second run), `manual` (a person fills the same answer files).
 * **One-way rule.** A stricter change may publish at once only after the gold set passes every threshold; until then AI output only pre-fills a person's work. A looser change (a closure lifted, a notice gone from its page) always waits for a person, and the older, stricter answer stays on the map.
 * **BC Laws** is read only through its official API once the King's Printer confirms scheduled use in writing (`bclaws.api_confirmed`); until then a person saves copies into `inbox/bclaws/`.
+* **Scans and maps.** PDF pages with no text layer are read by OCR, and map pages are saved as images that the extraction reads alongside the text; quotes are still checked against the text and OCR text.
+* **Progress and resuming.** Every step prints work done and left, also shown on the Sources page; extraction answers are saved one file at a time, so an interrupted run resumes where it stopped (`RUNBOOK.md`).
 
 ## How a check works
 
