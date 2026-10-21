@@ -1,16 +1,16 @@
 {
   "id": "2026-10-rc",
   "month": "2026-10",
-  "builtAt": "2026-10-19T18:04:48.540Z",
+  "builtAt": "2026-10-21T16:13:54.707Z",
   "publishable": false,
   "missing": [
     "legal reviewer sign-off (make signoff BY=<name>)"
   ],
   "includes": {
     "approvedRuleFeatures": 0,
-    "candidatesExcluded": 1
+    "candidatesExcluded": 4
   },
-  "openReviewItemsExcluded": 70,
+  "openReviewItemsExcluded": 345,
   "decisions": [],
   "signoff": null,
   "sourceHashes": {
@@ -32,7 +32,7 @@
       "rec_trails": "f3aee1728dfd341f9440d9cfc26ce187aaa3774bcae286683ed380b9f677c50f",
       "fire_restrictions": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "fire_bans": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "fire_current": "d1d05579322a5a1f4d5a9cba669292db8111beeeeab050f8e7b31aadb135b332",
+      "fire_current": "d0b283d46bb702e9f11a15f7bec2e322f294a7c234cd9995961690cd9a655df1",
       "fire_history": "96ca2fda10a6041d18264f10b32a10e0d2742ae4339cc80becdec4d28173a028",
       "parcels": "e3a114d69aa5f2b1317ddb4007c483027dfbd382b7adcec496ba6d94cf061f78",
       "fsr_roads": "97371be5a9f590146db197e33054b0daf1706481d9e4f41f6b98e49957b34fc3",
@@ -49,16 +49,16 @@
       "buildings": "b50d2140ec8f870e85d9be94b52a5cc3d1f4c270bd54f5681e00c64c774c26cc",
       "nr_districts": "0c5b01f36d1dc540735103ecc34b12260fe7835dfe784845b870238315d635b2"
     },
-    "files": 51
+    "files": 78
   },
   "files": [
     {
       "file": "bylaws.json",
-      "sha256": "881e455dcc95962901527ee0fb029cacb6bf4dee15ff7b03786de429ff451ff3"
+      "sha256": "1dd1002c8c324133003b781c0ad81471b42ca64c5da06298a6d638b1d5886e64"
     },
     {
       "file": "config.toml",
-      "sha256": "005f14388892ede4d4611840b544b4cabb5d4848b15085682a00f214f0e0efb2"
+      "sha256": "fc750ef5928f2b674da59d34a3754edfbf6114d961019f58bb3bcf14645e9ae5"
     },
     {
       "file": "registry.yaml",
@@ -66,7 +66,7 @@
     },
     {
       "file": "road-notices.json",
-      "sha256": "1f3db19face17df2794a9bbc8ff549aa07dcd3f4dd4e2a386c08372e1350f75e"
+      "sha256": "2c561317c8d975ad1974cbf1ad6d618b61bb454eb34a563dce3df2ad1503df6b"
     },
     {
       "file": "rules.geojson",

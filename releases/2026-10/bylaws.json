@@ -5,6 +5,13 @@
     "not_started": 331,
     "in_progress": 1
   },
+  "provinceCounts": {
+    "municipality": 161,
+    "electoral_area": 158,
+    "local_trust_area": 13,
+    "source": "Province of British Columbia count, given by a person on 2026-10-20",
+    "note": "The register is built from the official boundary layers (ABMS), which on 2026-10-19 held 160 municipalities and 159 electoral areas. One jurisdiction differs; a person identifies it. Until then every jurisdiction stays grey unless its bylaw is reviewed, so the difference cannot make a spot green."
+  },
   "entries": [
     {
       "key": "muni:Bowen Island Municipality",
@@ -53,7 +60,13 @@
       "kind": "municipality",
       "name": "City of Chilliwack",
       "regionalDistrict": "Fraser Valley Regional District",
-      "status": "not_started"
+      "status": "in_progress",
+      "bylaw": {
+        "title": "Firearms Regulation Bylaw 2001",
+        "number": "2740",
+        "url": "https://www.chilliwack.com/main/attachments/attachView.cfm?attachID=1757"
+      },
+      "notes": "Bylaw document found by the pipeline 2026-10-19; extracted rules wait for a person (review 2026-10-dryrun)."
     },
     {
       "key": "muni:City of Colwood",
@@ -130,7 +143,13 @@
       "kind": "municipality",
       "name": "City of Langley",
       "regionalDistrict": "Metro Vancouver Regional District",
-      "status": "not_started"
+      "status": "in_progress",
+      "bylaw": {
+        "title": "Firearms Regulation Bylaw, 2015",
+        "number": "2961",
+        "url": "https://www.langleycity.ca/media/file/firearms-bylaw"
+      },
+      "notes": "Bylaw document found by the pipeline 2026-10-19; extracted rules wait for a person (review 2026-10-dryrun)."
     },
     {
       "key": "muni:City of Maple Ridge",
@@ -939,7 +958,13 @@
       "kind": "municipality",
       "name": "Village of Belcarra",
       "regionalDistrict": "Metro Vancouver Regional District",
-      "status": "not_started"
+      "status": "in_progress",
+      "bylaw": {
+        "title": "Village of Belcarra Firearms Control Bylaw No. 498, 2016",
+        "number": "498, 2016",
+        "url": "https://belcarra.ca/assets/media/2019/05/vob-bylaw-498_firearms-control.pdf"
+      },
+      "notes": "Bylaw document found by the pipeline 2026-10-20; extracted rules wait for a person (review 2026-10)."
     },
     {
       "key": "muni:Village of Cache Creek",
@@ -2098,7 +2123,7 @@
       "bylaw": {
         "title": "Firearms Electoral Area A",
         "number": "1293-2013",
-        "url": "https://www.slrd.bc.ca/media/file/rb1294-electoral-area-d-firearms-bylaw-consoldiation-bl1317-2014pdf"
+        "url": "https://www.slrd.bc.ca/inside-slrd/bylaws/firearms-electoral-area"
       },
       "notes": "Bylaw document found by the pipeline 2026-10-19; extracted rules wait for a person (review 2026-10)."
     },
@@ -2107,26 +2132,14 @@
       "kind": "electoral_area",
       "name": "SLRD Electoral Area B",
       "regionalDistrict": "Squamish-Lillooet Regional District",
-      "status": "in_progress",
-      "bylaw": {
-        "title": "Firearms Electoral Area A",
-        "number": "1293-2013",
-        "url": "https://www.slrd.bc.ca/media/file/rb1294-electoral-area-d-firearms-bylaw-consoldiation-bl1317-2014pdf"
-      },
-      "notes": "Bylaw document found by the pipeline 2026-10-19; extracted rules wait for a person (review 2026-10)."
+      "status": "not_started"
     },
     {
       "key": "ea:SLRD Electoral Area C",
       "kind": "electoral_area",
       "name": "SLRD Electoral Area C",
       "regionalDistrict": "Squamish-Lillooet Regional District",
-      "status": "in_progress",
-      "bylaw": {
-        "title": "Firearms Electoral Area A",
-        "number": "1293-2013",
-        "url": "https://www.slrd.bc.ca/media/file/rb1294-electoral-area-d-firearms-bylaw-consoldiation-bl1317-2014pdf"
-      },
-      "notes": "Bylaw document found by the pipeline 2026-10-19; extracted rules wait for a person (review 2026-10)."
+      "status": "not_started"
     },
     {
       "key": "ea:SLRD Electoral Area D",
@@ -2135,8 +2148,8 @@
       "regionalDistrict": "Squamish-Lillooet Regional District",
       "status": "in_progress",
       "bylaw": {
-        "title": "Firearms Electoral Area A",
-        "number": "1293-2013",
+        "title": "Squamish-Lillooet Regional District Electoral Area D Firearms Bylaw",
+        "number": "1294-2013",
         "url": "https://www.slrd.bc.ca/media/file/rb1294-electoral-area-d-firearms-bylaw-consoldiation-bl1317-2014pdf"
       },
       "notes": "Bylaw document found by the pipeline 2026-10-19; extracted rules wait for a person (review 2026-10)."
