@@ -1,0 +1,284 @@
+{
+  "item_id": "closed-area-3ae00625ab",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 29 (Paaren's Beach)",
+  "rule_id": "W5-029",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: side: run 1 null vs run 2 \"inside\"; steps: run 1 [\"lot 314|||\",\"lot 314|the southeast corner of lot 314||lot_line\",\"lots 314 549 550 1665 1644 and 1643|the southwest corner of lot 1643||lot_line\",\"lot 1643|a point northerly 594 metres 1 980 feet along the west boundary of lot 1643|594 metres (1 980 feet)|lot_line\",\"|the west boundary of lot 1643a||straight_line\",\"lot 1643a|the low water mark of stuart lake||lot_line\",\"stuart lake|point of commencement||shoreline\"] vs run 2 [\"lot 314|||\",\"lot 314|its southeast corner||lot_line\",\"lots 314 549 550 1665 1644 and 1643|its southwest corner||lot_line\",\"lot 1643||594 metres (1 980 feet)|lot_line\",\"|the west boundary of lot 1643a||straight_line\",\"lot 1643a|the low water mark of stuart lake||lot_line\",\"stuart lake|point of commencement||shoreline\"]",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nPaaren's Beach\n29 That portion of the Province of British Columbia in the vicinity of the Village of Fort St. James, Range 5, Coast District, which is contained within the following described boundaries: Commencing at the northwest corner of Lot 314, Range 5, Coast District; thence easterly and southerly along the boundary of said lot to its southeast corner; thence westerly along the south boundaries of Lots 314, 549, 550, 1665, 1644 and 1643 to its southwest corner; thence to a point northerly 594 metres (1 980 feet) along the west boundary of Lot 1643; thence in a straight line due West to the west boundary of Lot 1643A; thence northerly along the western boundary of said lot to the low water mark of Stuart Lake; thence in an easterly direction following said low water mark to point of commencement. [am. B.C. Reg. 189/84, s. 2.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-fdc8f5f73006",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:00:27Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Range 5, Coast District"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the northwest corner of Lot 314, Range 5, Coast District",
+              "direction": null,
+              "follow": null,
+              "feature": "Lot 314",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the northwest corner of Lot 314, Range 5, Coast District"
+            },
+            {
+              "start": null,
+              "direction": "easterly and southerly",
+              "follow": "lot_line",
+              "feature": "Lot 314",
+              "side_or_bank": null,
+              "until": "the southeast corner of Lot 314",
+              "distance": null,
+              "quote": "thence easterly and southerly along the boundary of said lot to its southeast corner"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "lot_line",
+              "feature": "Lots 314, 549, 550, 1665, 1644 and 1643",
+              "side_or_bank": "south boundaries",
+              "until": "the southwest corner of Lot 1643",
+              "distance": null,
+              "quote": "thence westerly along the south boundaries of Lots 314, 549, 550, 1665, 1644 and 1643 to its southwest corner"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "lot_line",
+              "feature": "Lot 1643",
+              "side_or_bank": "west boundary",
+              "until": "a point northerly 594 metres (1 980 feet) along the west boundary of Lot 1643",
+              "distance": "594 metres (1 980 feet)",
+              "quote": "thence to a point northerly 594 metres (1 980 feet) along the west boundary of Lot 1643"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the west boundary of Lot 1643A",
+              "distance": null,
+              "quote": "thence in a straight line due West to the west boundary of Lot 1643A"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "lot_line",
+              "feature": "Lot 1643A",
+              "side_or_bank": "western boundary",
+              "until": "the low water mark of Stuart Lake",
+              "distance": null,
+              "quote": "thence northerly along the western boundary of said lot to the low water mark of Stuart Lake"
+            },
+            {
+              "start": null,
+              "direction": "in an easterly direction",
+              "follow": "shoreline",
+              "feature": "Stuart Lake",
+              "side_or_bank": null,
+              "until": "point of commencement",
+              "distance": null,
+              "quote": "thence in an easterly direction following said low water mark to point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "Range 5, Coast District"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-fdc8f5f73006",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:01:45Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Range 5, Coast District"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": "inside",
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the northwest corner of Lot 314, Range 5, Coast District",
+              "direction": null,
+              "follow": null,
+              "feature": "Lot 314",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the northwest corner of Lot 314, Range 5, Coast District"
+            },
+            {
+              "start": null,
+              "direction": "easterly and southerly",
+              "follow": "lot_line",
+              "feature": "Lot 314",
+              "side_or_bank": null,
+              "until": "its southeast corner",
+              "distance": null,
+              "quote": "thence easterly and southerly along the boundary of said lot to its southeast corner"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "lot_line",
+              "feature": "Lots 314, 549, 550, 1665, 1644 and 1643",
+              "side_or_bank": "south boundaries",
+              "until": "its southwest corner",
+              "distance": null,
+              "quote": "thence westerly along the south boundaries of Lots 314, 549, 550, 1665, 1644 and 1643 to its southwest corner"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "lot_line",
+              "feature": "Lot 1643",
+              "side_or_bank": "west boundary",
+              "until": null,
+              "distance": "594 metres (1 980 feet)",
+              "quote": "thence to a point northerly 594 metres (1 980 feet) along the west boundary of Lot 1643"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the west boundary of Lot 1643A",
+              "distance": null,
+              "quote": "thence in a straight line due West to the west boundary of Lot 1643A"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "lot_line",
+              "feature": "Lot 1643A",
+              "side_or_bank": "western boundary",
+              "until": "the low water mark of Stuart Lake",
+              "distance": null,
+              "quote": "thence northerly along the western boundary of said lot to the low water mark of Stuart Lake"
+            },
+            {
+              "start": null,
+              "direction": "in an easterly direction",
+              "follow": "shoreline",
+              "feature": "Stuart Lake",
+              "side_or_bank": null,
+              "until": "point of commencement",
+              "distance": null,
+              "quote": "thence in an easterly direction following said low water mark to point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "Commencing at the northwest corner of Lot 314"
+          },
+          {
+            "field": "within",
+            "quote": "Range 5, Coast District"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "contained within the following described boundaries"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "Range 5, Coast District",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at the northwest corner of Lot 314, Range 5, Coast District",
+    "geometry.steps[1]": "thence easterly and southerly along the boundary of said lot to its southeast corner",
+    "geometry.steps[2]": "thence westerly along the south boundaries of Lots 314, 549, 550, 1665, 1644 and 1643 to its southwest corner",
+    "geometry.steps[3]": "thence to a point northerly 594 metres (1 980 feet) along the west boundary of Lot 1643",
+    "geometry.steps[4]": "thence in a straight line due West to the west boundary of Lot 1643A",
+    "geometry.steps[5]": "thence northerly along the western boundary of said lot to the low water mark of Stuart Lake",
+    "geometry.steps[6]": "thence in an easterly direction following said low water mark to point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "side: run 1 null vs run 2 \"inside\"",
+    "steps: run 1 [\"lot 314|||\",\"lot 314|the southeast corner of lot 314||lot_line\",\"lots 314 549 550 1665 1644 and 1643|the southwest corner of lot 1643||lot_line\",\"lot 1643|a point northerly 594 metres 1 980 feet along the west boundary of lot 1643|594 metres (1 980 feet)|lot_line\",\"|the west boundary of lot 1643a||straight_line\",\"lot 1643a|the low water mark of stuart lake||lot_line\",\"stuart lake|point of commencement||shoreline\"] vs run 2 [\"lot 314|||\",\"lot 314|its southeast corner||lot_line\",\"lots 314 549 550 1665 1644 and 1643|its southwest corner||lot_line\",\"lot 1643||594 metres (1 980 feet)|lot_line\",\"|the west boundary of lot 1643a||straight_line\",\"lot 1643a|the low water mark of stuart lake||lot_line\",\"stuart lake|point of commencement||shoreline\"]"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:10:37.002Z",
+  "updated": "2026-10-21T16:10:37.002Z"
+}

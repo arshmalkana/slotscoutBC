@@ -1,0 +1,199 @@
+{
+  "item_id": "closed-area-35cd6a29c4",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 135 (Cowichan River Park)",
+  "rule_id": "W5-135",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "named area \"M.U. 1-04\": none",
+    "the geometry builder does not draw \"waterbody_buffer\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nCowichan River Park\n135 That portion of M.U. 1-04 being within 100 m of the high water mark of the Cowichan River from a point starting on the river immediately north of the Holt Creek Trailhead, then upstream generally west and north along the Cowichan River to the intersection with the Municipality of Lake Cowichan. [en. B.C. Reg. 175/2010, App. 1, s. 5.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-98eddadc6136",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:01:19Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 1-04"
+        },
+        "geometry": {
+          "method": "waterbody_buffer",
+          "road": null,
+          "feature": {
+            "type": "river",
+            "name": "Cowichan River"
+          },
+          "buffer_m": 100,
+          "side": null,
+          "from": {
+            "type": "landmark",
+            "road": null,
+            "name": "Holt Creek Trailhead"
+          },
+          "to": {
+            "type": "boundary",
+            "road": null,
+            "name": "Municipality of Lake Cowichan"
+          },
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "M.U. 1-04"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within 100 m of the high water mark of the Cowichan River"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "the Cowichan River"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": "within 100 m"
+          },
+          {
+            "field": "geometry.from",
+            "quote": "a point starting on the river immediately north of the Holt Creek Trailhead"
+          },
+          {
+            "field": "geometry.to",
+            "quote": "the intersection with the Municipality of Lake Cowichan"
+          }
+        ],
+        "uncertain": [
+          "geometry.side"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-98eddadc6136",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:03:11Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 1-04"
+        },
+        "geometry": {
+          "method": "waterbody_buffer",
+          "road": null,
+          "feature": {
+            "type": "river",
+            "name": "Cowichan River"
+          },
+          "buffer_m": 100,
+          "side": null,
+          "from": {
+            "type": "landmark",
+            "road": null,
+            "name": "Holt Creek Trailhead"
+          },
+          "to": {
+            "type": "boundary",
+            "road": null,
+            "name": "Municipality of Lake Cowichan"
+          },
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "That portion of M.U. 1-04"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within 100 m of the high water mark of the Cowichan River"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "the high water mark of the Cowichan River"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": "within 100 m"
+          },
+          {
+            "field": "geometry.from",
+            "quote": "from a point starting on the river immediately north of the Holt Creek Trailhead"
+          },
+          {
+            "field": "geometry.to",
+            "quote": "to the intersection with the Municipality of Lake Cowichan"
+          }
+        ],
+        "uncertain": [
+          "geometry.side"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "within": "M.U. 1-04",
+    "geometry.feature": "the Cowichan River",
+    "geometry.buffer_m": "within 100 m",
+    "geometry.from": "a point starting on the river immediately north of the Holt Creek Trailhead",
+    "geometry.to": "the intersection with the Municipality of Lake Cowichan",
+    "effect": "No Shooting Areas"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [
+    {
+      "query": "M.U. 1-04",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "none",
+      "matches": 0,
+      "ids": [],
+      "sample": []
+    }
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:09:19.288Z",
+  "updated": "2026-10-21T16:09:19.288Z"
+}

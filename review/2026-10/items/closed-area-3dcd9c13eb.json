@@ -1,0 +1,148 @@
+{
+  "item_id": "closed-area-3dcd9c13eb",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 100 (Snootli Creek Park)",
+  "rule_id": "W5-100",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "named area \"M.U. 5-8\": none",
+    "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nSnootli Creek Park\n100 That portion of the Province of British Columbia in M.U. 5-8 contained within the following described boundaries: That portion of the Southwest Quarter of Section 3, Township 2, Range 3, Coast District, northwest of Snootli Creek flowing in a general northeasterly direction through Section 3, Township 2. [en. B.C. Reg. 46/89, s. 7.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-3b08aa1eba58",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:02:26Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 5-8"
+        },
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": {
+            "type": "lot",
+            "name": "Southwest Quarter of Section 3, Township 2, Range 3, Coast District"
+          },
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in M.U. 5-8"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "Southwest Quarter of Section 3, Township 2, Range 3, Coast District"
+          }
+        ],
+        "uncertain": [
+          "geometry.side"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-3b08aa1eba58",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T15:59:26Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 5-8"
+        },
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": {
+            "type": "lot",
+            "name": "Southwest Quarter of Section 3, Township 2, Range 3, Coast District"
+          },
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in M.U. 5-8"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "That portion of the Southwest Quarter of Section 3, Township 2, Range 3, Coast District, northwest of Snootli Creek"
+          }
+        ],
+        "uncertain": [
+          "geometry.side"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "within": "in M.U. 5-8",
+    "geometry.feature": "Southwest Quarter of Section 3, Township 2, Range 3, Coast District",
+    "effect": "No Shooting Areas"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [
+    {
+      "query": "M.U. 5-8",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "none",
+      "matches": 0,
+      "ids": [],
+      "sample": []
+    }
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:08:31.563Z",
+  "updated": "2026-10-21T16:08:31.563Z"
+}

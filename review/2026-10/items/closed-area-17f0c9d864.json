@@ -1,0 +1,322 @@
+{
+  "item_id": "closed-area-17f0c9d864",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 87 (Mascot Gold Mines Limited)",
+  "rule_id": "W5-087",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nMascot Gold Mines Limited\n87 Commencing at the point of intersection of the midline of the Apex Alpine to Nickel Plate Road and the midline of Sunset Creek; thence in a general southerly direction along the midline of Sunset Creek to the point of intersection with the midline of Cahill Creek; thence in a general southerly direction along the midline of Cahill Creek to the point of intersection with the midline of Hedley-Nickel Plate Road; thence in a general southerly direction along the midline of the said road a distance of 3 290 m; thence due West 1 525 m; thence due North 3 900 m to a point due West of the apex of Lookout Mountain; thence due East to the apex of Lookout Mountain; thence more or less east in a straight line to the point of commencement. [en. B.C. Reg. 162/87, s. 23.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-d9c45470876b",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T15:59:53Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the point of intersection of the midline of the Apex Alpine to Nickel Plate Road and the midline of Sunset Creek",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the point of intersection of the midline of the Apex Alpine to Nickel Plate Road and the midline of Sunset Creek"
+            },
+            {
+              "start": null,
+              "direction": "in a general southerly direction",
+              "follow": "creek",
+              "feature": "Sunset Creek",
+              "side_or_bank": "midline",
+              "until": "the point of intersection with the midline of Cahill Creek",
+              "distance": null,
+              "quote": "thence in a general southerly direction along the midline of Sunset Creek to the point of intersection with the midline of Cahill Creek"
+            },
+            {
+              "start": null,
+              "direction": "in a general southerly direction",
+              "follow": "creek",
+              "feature": "Cahill Creek",
+              "side_or_bank": "midline",
+              "until": "the point of intersection with the midline of Hedley-Nickel Plate Road",
+              "distance": null,
+              "quote": "thence in a general southerly direction along the midline of Cahill Creek to the point of intersection with the midline of Hedley-Nickel Plate Road"
+            },
+            {
+              "start": null,
+              "direction": "in a general southerly direction",
+              "follow": "road",
+              "feature": "Hedley-Nickel Plate Road",
+              "side_or_bank": "midline",
+              "until": null,
+              "distance": "3 290 m",
+              "quote": "thence in a general southerly direction along the midline of the said road a distance of 3 290 m"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": "1 525 m",
+              "quote": "thence due West 1 525 m"
+            },
+            {
+              "start": null,
+              "direction": "due North",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "a point due West of the apex of Lookout Mountain",
+              "distance": "3 900 m",
+              "quote": "thence due North 3 900 m to a point due West of the apex of Lookout Mountain"
+            },
+            {
+              "start": null,
+              "direction": "due East",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the apex of Lookout Mountain",
+              "distance": null,
+              "quote": "thence due East to the apex of Lookout Mountain"
+            },
+            {
+              "start": null,
+              "direction": "more or less east",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence more or less east in a straight line to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "Commencing at the point of intersection"
+          }
+        ],
+        "uncertain": [
+          "within"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-d9c45470876b",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:00:01Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the point of intersection of the midline of the Apex Alpine to Nickel Plate Road and the midline of Sunset Creek",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the point of intersection of the midline of the Apex Alpine to Nickel Plate Road and the midline of Sunset Creek"
+            },
+            {
+              "start": null,
+              "direction": "general southerly",
+              "follow": "creek",
+              "feature": "Sunset Creek",
+              "side_or_bank": "midline",
+              "until": "the point of intersection with the midline of Cahill Creek",
+              "distance": null,
+              "quote": "thence in a general southerly direction along the midline of Sunset Creek to the point of intersection with the midline of Cahill Creek"
+            },
+            {
+              "start": null,
+              "direction": "general southerly",
+              "follow": "creek",
+              "feature": "Cahill Creek",
+              "side_or_bank": "midline",
+              "until": "the point of intersection with the midline of Hedley-Nickel Plate Road",
+              "distance": null,
+              "quote": "thence in a general southerly direction along the midline of Cahill Creek to the point of intersection with the midline of Hedley-Nickel Plate Road"
+            },
+            {
+              "start": null,
+              "direction": "general southerly",
+              "follow": "road",
+              "feature": "Hedley-Nickel Plate Road",
+              "side_or_bank": "midline",
+              "until": null,
+              "distance": "3 290 m",
+              "quote": "thence in a general southerly direction along the midline of the said road a distance of 3 290 m"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": "1 525 m",
+              "quote": "thence due West 1 525 m"
+            },
+            {
+              "start": null,
+              "direction": "due North",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "a point due West of the apex of Lookout Mountain",
+              "distance": "3 900 m",
+              "quote": "thence due North 3 900 m to a point due West of the apex of Lookout Mountain"
+            },
+            {
+              "start": null,
+              "direction": "due East",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the apex of Lookout Mountain",
+              "distance": null,
+              "quote": "thence due East to the apex of Lookout Mountain"
+            },
+            {
+              "start": null,
+              "direction": "more or less east",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence more or less east in a straight line to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "Commencing at the point of intersection"
+          },
+          {
+            "field": "geometry.steps[0]",
+            "quote": "Commencing at the point of intersection of the midline of the Apex Alpine to Nickel Plate Road and the midline of Sunset Creek"
+          },
+          {
+            "field": "geometry.steps[1]",
+            "quote": "thence in a general southerly direction along the midline of Sunset Creek to the point of intersection with the midline of Cahill Creek"
+          },
+          {
+            "field": "geometry.steps[2]",
+            "quote": "thence in a general southerly direction along the midline of Cahill Creek to the point of intersection with the midline of Hedley-Nickel Plate Road"
+          },
+          {
+            "field": "geometry.steps[3]",
+            "quote": "thence in a general southerly direction along the midline of the said road a distance of 3 290 m"
+          },
+          {
+            "field": "geometry.steps[4]",
+            "quote": "thence due West 1 525 m"
+          },
+          {
+            "field": "geometry.steps[5]",
+            "quote": "thence due North 3 900 m to a point due West of the apex of Lookout Mountain"
+          },
+          {
+            "field": "geometry.steps[6]",
+            "quote": "thence due East to the apex of Lookout Mountain"
+          },
+          {
+            "field": "geometry.steps[7]",
+            "quote": "thence more or less east in a straight line to the point of commencement"
+          }
+        ],
+        "uncertain": [
+          "within"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at the point of intersection of the midline of the Apex Alpine to Nickel Plate Road and the midline of Sunset Creek",
+    "geometry.steps[1]": "thence in a general southerly direction along the midline of Sunset Creek to the point of intersection with the midline of Cahill Creek",
+    "geometry.steps[2]": "thence in a general southerly direction along the midline of Cahill Creek to the point of intersection with the midline of Hedley-Nickel Plate Road",
+    "geometry.steps[3]": "thence in a general southerly direction along the midline of the said road a distance of 3 290 m",
+    "geometry.steps[4]": "thence due West 1 525 m",
+    "geometry.steps[5]": "thence due North 3 900 m to a point due West of the apex of Lookout Mountain",
+    "geometry.steps[6]": "thence due East to the apex of Lookout Mountain",
+    "geometry.steps[7]": "thence more or less east in a straight line to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:10:21.684Z",
+  "updated": "2026-10-21T16:10:21.684Z"
+}

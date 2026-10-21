@@ -1,0 +1,327 @@
+{
+  "item_id": "closed-area-c4d7294710",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 136 (Crawford Bay)",
+  "rule_id": "W5-136",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: steps: run 1 [\"|||\",\"beaver creek|the point of intersection with the midline of peters rd||creek\",\"peters rd|the point of intersection with the southerly boundary of sublot 101 kootenay land district||road\",\"sublot 101 and lot 2335|the point of intersection with the natural boundary of crawford bay||lot_line\",\"crawford bay|the point least distant from the junction of hwy 3a and crawford creek rd||shoreline\",\"|the point of intersection with the easterly boundary of the right of way of crawford creek rd||straight_line\",\"crawford creek rd|the point of intersection with the westerly boundary of the right of way of wadds rd||road\",\"wadds rd|the point of intersection with the northerly boundary of the right of way of hwy 3a||road\",\"hwy 3a|the point of commencement||road\"] vs run 2 [\"|||\",\"beaver creek|the point of intersection with the midline of peters rd||creek\",\"peters rd|the point of intersection with the southerly boundary of sublot 101 kootenay land district||road\",\"sublot 101 and lot 2335|the point of intersection with the natural boundary of crawford bay||lot_line\",\"crawford bay|the point least distant from the junction of hwy 3a and crawford creek rd||shoreline\",\"|the point of intersection with the easterly boundary of the right of way of crawford creek rd||\",\"crawford creek rd|the point of intersection with the westerly boundary of the right of way of wadds rd||road\",\"wadds rd|the point of intersection with the northerly boundary of the right of way of hwy 3a||road\",\"hwy 3a|the point of commencement||road\"]",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nCrawford Bay\n136 That portion of M.U. 4-06 in the vicinity of Crawford Bay contained within the following described boundaries: Commencing at the point of intersection of the northerly boundary of the right of way of Highway 3A and the westerly natural boundary of Beaver Creek; thence southerly along the westerly natural boundary of Beaver Creek to the point of intersection with the midline of Peters Road; thence southerly along the midline of Peters Road to the point of intersection with the southerly boundary of Sublot 101, Kootenay Land District; thence easterly along the southerly boundary and along the southerly boundary of Lot 2335 to the point of intersection with the natural boundary of Crawford Bay; thence in a general easterly direction along the natural boundary of Crawford Bay on the northerly shore thereof to the point least distant from the junction of Highway 3A and Crawford Creek Road; thence easterly to the point of intersection with the easterly boundary of the right of way of Crawford Creek Road; thence northerly along the easterly boundary to the point of intersection with the westerly boundary of the right of way of Wadds Road; thence southerly along the westerly boundary to the point of intersection with the northerly boundary of the right of way of Highway 3A; thence westerly along the northerly boundary to the point of commencement. [en. B.C. Reg. 175/2010, App. 1, s. 5.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-a85a7462494a",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:01:34Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 4-06"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the point of intersection of the northerly boundary of the right of way of Highway 3A and the westerly natural boundary of Beaver Creek",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the point of intersection of the northerly boundary of the right of way of Highway 3A and the westerly natural boundary of Beaver Creek"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "creek",
+              "feature": "Beaver Creek",
+              "side_or_bank": "westerly natural boundary",
+              "until": "the point of intersection with the midline of Peters Road",
+              "distance": null,
+              "quote": "thence southerly along the westerly natural boundary of Beaver Creek to the point of intersection with the midline of Peters Road"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "road",
+              "feature": "Peters Road",
+              "side_or_bank": "midline",
+              "until": "the point of intersection with the southerly boundary of Sublot 101, Kootenay Land District",
+              "distance": null,
+              "quote": "thence southerly along the midline of Peters Road to the point of intersection with the southerly boundary of Sublot 101, Kootenay Land District"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "lot_line",
+              "feature": "Sublot 101 and Lot 2335",
+              "side_or_bank": "southerly boundary",
+              "until": "the point of intersection with the natural boundary of Crawford Bay",
+              "distance": null,
+              "quote": "thence easterly along the southerly boundary and along the southerly boundary of Lot 2335 to the point of intersection with the natural boundary of Crawford Bay"
+            },
+            {
+              "start": null,
+              "direction": "in a general easterly direction",
+              "follow": "shoreline",
+              "feature": "Crawford Bay",
+              "side_or_bank": "northerly shore",
+              "until": "the point least distant from the junction of Highway 3A and Crawford Creek Road",
+              "distance": null,
+              "quote": "thence in a general easterly direction along the natural boundary of Crawford Bay on the northerly shore thereof to the point least distant from the junction of Highway 3A and Crawford Creek Road"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of intersection with the easterly boundary of the right of way of Crawford Creek Road",
+              "distance": null,
+              "quote": "thence easterly to the point of intersection with the easterly boundary of the right of way of Crawford Creek Road"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "road",
+              "feature": "Crawford Creek Road",
+              "side_or_bank": "easterly boundary of the right of way",
+              "until": "the point of intersection with the westerly boundary of the right of way of Wadds Road",
+              "distance": null,
+              "quote": "thence northerly along the easterly boundary to the point of intersection with the westerly boundary of the right of way of Wadds Road"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "road",
+              "feature": "Wadds Road",
+              "side_or_bank": "westerly boundary of the right of way",
+              "until": "the point of intersection with the northerly boundary of the right of way of Highway 3A",
+              "distance": null,
+              "quote": "thence southerly along the westerly boundary to the point of intersection with the northerly boundary of the right of way of Highway 3A"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "road",
+              "feature": "Highway 3A",
+              "side_or_bank": "northerly boundary of the right of way",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence westerly along the northerly boundary to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "M.U. 4-06"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within the following described boundaries"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-a85a7462494a",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:03:37Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 4-06"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the point of intersection of the northerly boundary of the right of way of Highway 3A and the westerly natural boundary of Beaver Creek",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the point of intersection of the northerly boundary of the right of way of Highway 3A and the westerly natural boundary of Beaver Creek"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "creek",
+              "feature": "Beaver Creek",
+              "side_or_bank": "westerly natural boundary",
+              "until": "the point of intersection with the midline of Peters Road",
+              "distance": null,
+              "quote": "thence southerly along the westerly natural boundary of Beaver Creek to the point of intersection with the midline of Peters Road"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "road",
+              "feature": "Peters Road",
+              "side_or_bank": "midline",
+              "until": "the point of intersection with the southerly boundary of Sublot 101, Kootenay Land District",
+              "distance": null,
+              "quote": "thence southerly along the midline of Peters Road to the point of intersection with the southerly boundary of Sublot 101, Kootenay Land District"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "lot_line",
+              "feature": "Sublot 101 and Lot 2335",
+              "side_or_bank": "southerly boundary",
+              "until": "the point of intersection with the natural boundary of Crawford Bay",
+              "distance": null,
+              "quote": "thence easterly along the southerly boundary and along the southerly boundary of Lot 2335 to the point of intersection with the natural boundary of Crawford Bay"
+            },
+            {
+              "start": null,
+              "direction": "in a general easterly direction",
+              "follow": "shoreline",
+              "feature": "Crawford Bay",
+              "side_or_bank": "northerly shore",
+              "until": "the point least distant from the junction of Highway 3A and Crawford Creek Road",
+              "distance": null,
+              "quote": "thence in a general easterly direction along the natural boundary of Crawford Bay on the northerly shore thereof to the point least distant from the junction of Highway 3A and Crawford Creek Road"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of intersection with the easterly boundary of the right of way of Crawford Creek Road",
+              "distance": null,
+              "quote": "thence easterly to the point of intersection with the easterly boundary of the right of way of Crawford Creek Road"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "road",
+              "feature": "Crawford Creek Road",
+              "side_or_bank": "easterly boundary of the right of way",
+              "until": "the point of intersection with the westerly boundary of the right of way of Wadds Road",
+              "distance": null,
+              "quote": "thence northerly along the easterly boundary to the point of intersection with the westerly boundary of the right of way of Wadds Road"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "road",
+              "feature": "Wadds Road",
+              "side_or_bank": "westerly boundary of the right of way",
+              "until": "the point of intersection with the northerly boundary of the right of way of Highway 3A",
+              "distance": null,
+              "quote": "thence southerly along the westerly boundary to the point of intersection with the northerly boundary of the right of way of Highway 3A"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "road",
+              "feature": "Highway 3A",
+              "side_or_bank": "northerly boundary of the right of way",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence westerly along the northerly boundary to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "That portion of M.U. 4-06"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries: Commencing at"
+          }
+        ],
+        "uncertain": [
+          "geometry.steps[5].follow"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "within": "M.U. 4-06",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at the point of intersection of the northerly boundary of the right of way of Highway 3A and the westerly natural boundary of Beaver Creek",
+    "geometry.steps[1]": "thence southerly along the westerly natural boundary of Beaver Creek to the point of intersection with the midline of Peters Road",
+    "geometry.steps[2]": "thence southerly along the midline of Peters Road to the point of intersection with the southerly boundary of Sublot 101, Kootenay Land District",
+    "geometry.steps[3]": "thence easterly along the southerly boundary and along the southerly boundary of Lot 2335 to the point of intersection with the natural boundary of Crawford Bay",
+    "geometry.steps[4]": "thence in a general easterly direction along the natural boundary of Crawford Bay on the northerly shore thereof to the point least distant from the junction of Highway 3A and Crawford Creek Road",
+    "geometry.steps[5]": "thence easterly to the point of intersection with the easterly boundary of the right of way of Crawford Creek Road",
+    "geometry.steps[6]": "thence northerly along the easterly boundary to the point of intersection with the westerly boundary of the right of way of Wadds Road",
+    "geometry.steps[7]": "thence southerly along the westerly boundary to the point of intersection with the northerly boundary of the right of way of Highway 3A",
+    "geometry.steps[8]": "thence westerly along the northerly boundary to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "steps: run 1 [\"|||\",\"beaver creek|the point of intersection with the midline of peters rd||creek\",\"peters rd|the point of intersection with the southerly boundary of sublot 101 kootenay land district||road\",\"sublot 101 and lot 2335|the point of intersection with the natural boundary of crawford bay||lot_line\",\"crawford bay|the point least distant from the junction of hwy 3a and crawford creek rd||shoreline\",\"|the point of intersection with the easterly boundary of the right of way of crawford creek rd||straight_line\",\"crawford creek rd|the point of intersection with the westerly boundary of the right of way of wadds rd||road\",\"wadds rd|the point of intersection with the northerly boundary of the right of way of hwy 3a||road\",\"hwy 3a|the point of commencement||road\"] vs run 2 [\"|||\",\"beaver creek|the point of intersection with the midline of peters rd||creek\",\"peters rd|the point of intersection with the southerly boundary of sublot 101 kootenay land district||road\",\"sublot 101 and lot 2335|the point of intersection with the natural boundary of crawford bay||lot_line\",\"crawford bay|the point least distant from the junction of hwy 3a and crawford creek rd||shoreline\",\"|the point of intersection with the easterly boundary of the right of way of crawford creek rd||\",\"crawford creek rd|the point of intersection with the westerly boundary of the right of way of wadds rd||road\",\"wadds rd|the point of intersection with the northerly boundary of the right of way of hwy 3a||road\",\"hwy 3a|the point of commencement||road\"]"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:09:56.619Z",
+  "updated": "2026-10-21T16:09:56.619Z"
+}

@@ -1,0 +1,189 @@
+{
+  "item_id": "closed-area-47938bb961",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 106 (Babine River)",
+  "rule_id": "W5-106",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: from: run 1 \"nilkitkwa lake\" vs run 2 \"the natural boundary of nilkitkwa lake on the northerly shore\"; to: run 1 \"nilkitkwa river\" vs run 2 \"the midline of nilkitkwa river\"",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nBabine River\n106 That portion of the Province of British Columbia in M.U. 6-08 which is contained within the following described boundaries: Commencing at the point of intersection of the midline of Babine River and the natural boundary of Nilkitkwa Lake on the northerly shore thereof; thence in a general northerly direction along the midline of Babine River to the point of intersection with the midline of Nilkitkwa River and including all intervening territory for 1 km on either side of the midline of the said portion of Babine River. [en. B.C. Reg. 185/90, s. 10.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-41c78944a554",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T15:59:50Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 6-08"
+        },
+        "geometry": {
+          "method": "waterbody_buffer",
+          "road": null,
+          "feature": {
+            "type": "river",
+            "name": "Babine River"
+          },
+          "buffer_m": 1000,
+          "side": "both",
+          "from": {
+            "type": "shoreline",
+            "road": null,
+            "name": "Nilkitkwa Lake"
+          },
+          "to": {
+            "type": "other",
+            "road": null,
+            "name": "Nilkitkwa River"
+          },
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in M.U. 6-08"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "midline of the said portion of Babine River"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": "for 1 km on either side"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "on either side"
+          },
+          {
+            "field": "geometry.from",
+            "quote": "the natural boundary of Nilkitkwa Lake on the northerly shore thereof"
+          },
+          {
+            "field": "geometry.to",
+            "quote": "the point of intersection with the midline of Nilkitkwa River"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-41c78944a554",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:00:14Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 6-08"
+        },
+        "geometry": {
+          "method": "waterbody_buffer",
+          "road": null,
+          "feature": {
+            "type": "river",
+            "name": "Babine River"
+          },
+          "buffer_m": 1000,
+          "side": "both",
+          "from": {
+            "type": "shoreline",
+            "road": null,
+            "name": "the natural boundary of Nilkitkwa Lake on the northerly shore"
+          },
+          "to": {
+            "type": "landmark",
+            "road": null,
+            "name": "the midline of Nilkitkwa River"
+          },
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in M.U. 6-08"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "the midline of the said portion of Babine River"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": "1 km"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "on either side"
+          },
+          {
+            "field": "geometry.from",
+            "quote": "Commencing at the point of intersection of the midline of Babine River and the natural boundary of Nilkitkwa Lake on the northerly shore thereof"
+          },
+          {
+            "field": "geometry.to",
+            "quote": "to the point of intersection with the midline of Nilkitkwa River"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "in M.U. 6-08",
+    "geometry.feature": "midline of the said portion of Babine River",
+    "geometry.buffer_m": "for 1 km on either side",
+    "geometry.from": "the natural boundary of Nilkitkwa Lake on the northerly shore thereof",
+    "geometry.to": "the point of intersection with the midline of Nilkitkwa River",
+    "effect": "No Shooting Areas",
+    "geometry.side": "on either side"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "from: run 1 \"nilkitkwa lake\" vs run 2 \"the natural boundary of nilkitkwa lake on the northerly shore\"",
+    "to: run 1 \"nilkitkwa river\" vs run 2 \"the midline of nilkitkwa river\""
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:08:32.125Z",
+  "updated": "2026-10-21T16:08:32.125Z"
+}

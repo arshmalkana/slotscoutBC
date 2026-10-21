@@ -1,0 +1,497 @@
+{
+  "item_id": "closed-area-324249b6e5",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 7, section 35 (Creston Valley Wildlife Management Area)",
+  "rule_id": "W8-035",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: steps: run 1 [\"l 9269|||\",\"l 9269|the northeast corner thereof||lot_line\",\"l 8782||approximately 0.65 km (0.4 mi.)|lot_line\",\"||approximately 1 km|\",\"dyke 1 of leach lake|the midline of summit creek||straight_line\",\"|the easterly boundary of hwy 3 right of way|approximately 610 m (2 000 ft.)|\",\"hwy 3|the westerly boundary of l 9269||road\",\"l 9269|the point of commencement||lot_line\",\"hwy 3|||\",\"old kootenay river channel|a point due east of the southerly boundary of dyke 3||river\",\"|the southerly boundary of dyke 3||\",\"dyke 3|the easterly boundary of west creston rd right of way||other\",\"west creston rd|the southerly boundary of hwy 3 right of way||road\",\"hwy 3|the point of commencement||road\"] vs run 2 [\"l 9269|||\",\"l 9269|the northeast corner thereof||lot_line\",\"l 8782||approximately 0.65 km (0.4 mi.)|lot_line\",\"||approximately 1 km|straight_line\",\"dyke 1 of leach lake|the point of intersection with the midline of summit creek||straight_line\",\"|the point of intersection with the easterly boundary of hwy 3 right of way|approximately 610 m (2 000 ft.)|straight_line\",\"hwy 3|the point of intersection with the westerly boundary of l 9269||road\",\"l 9269|the point of commencement||lot_line\",\"old kootenay river channel|||\",\"old kootenay river channel|a point due east of the southerly boundary of dyke 3||river\",\"|the point of intersection with the southerly boundary of dyke 3||straight_line\",\"dyke 3|the point of intersection with the easterly boundary of west creston rd right of way||other\",\"west creston rd|the point of intersection with the southerly boundary of hwy 3 right of way||road\",\"hwy 3|the point of commencement||road\"]",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 7 No Hunting Areas (Section 8)\nCreston Valley Wildlife Management Area\n35 Those portions of the Province of British Columbia in M.U. 4-7 which are contained within the following described boundaries: (1)Commencing at the point of intersection of the westerly boundary of L 9269, Kootenay Land District and the midline of Summit Creek; thence northerly and easterly along the westerly and northerly boundaries of L 9269 to the northeast corner thereof; thence northerly approximately 0.65 km (0.4 mi.) along the easterly boundary of L 8782 and a prolongation thereof to a point at approximately 49° 09' 01\" north latitude; thence S 47° 30' E approximately 1 km; thence more or less south in a straight line to the adjacent bend in dyke #1 of Leach Lake and continuing southerly along a prolongation of that line to the point of intersection with the midline of Summit Creek; thence S 50° W approximately 610 m (2 000 ft.) to the point of intersection with the easterly boundary of Highway 3 right of way; thence in a general northerly direction along the easterly boundary of Highway 3 right of way to the point of intersection with the westerly boundary of L 9269; thence northerly along the westerly boundary of L 9269 to the point of commencement; (2)Commencing at the point of intersection of the southerly boundary of Highway 3 right of way and the easterly boundary of Old Kootenay River Channel; thence in a general southerly direction along the easterly boundary of Old Kootenay River Channel to a point due East of the southerly boundary of dyke #3; thence due West to the point of intersection with the southerly boundary of dyke #3; thence in a general westerly and northerly direction along the southerly boundary of dyke #3 and a prolongation thereof to the point of intersection with the easterly boundary of West Creston Road right of way; thence in a general northerly direction along the easterly boundary of West Creston Road right of way to the point of intersection with the southerly boundary of Highway 3 right of way; thence in a general southeasterly direction along the southerly boundary of Highway 3 right of way to the point of commencement. [en. B.C. Reg. 185/90, s. 11.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-13e77c6688c4",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:02:01Z",
+      "answer": {
+        "effect": "no_hunting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 4-7"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the point of intersection of the westerly boundary of L 9269, Kootenay Land District and the midline of Summit Creek",
+              "direction": null,
+              "follow": null,
+              "feature": "L 9269",
+              "side_or_bank": "westerly boundary",
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the point of intersection of the westerly boundary of L 9269, Kootenay Land District and the midline of Summit Creek"
+            },
+            {
+              "start": null,
+              "direction": "northerly and easterly",
+              "follow": "lot_line",
+              "feature": "L 9269",
+              "side_or_bank": "westerly and northerly boundaries",
+              "until": "the northeast corner thereof",
+              "distance": null,
+              "quote": "thence northerly and easterly along the westerly and northerly boundaries of L 9269 to the northeast corner thereof"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "lot_line",
+              "feature": "L 8782",
+              "side_or_bank": "easterly boundary",
+              "until": null,
+              "distance": "approximately 0.65 km (0.4 mi.)",
+              "quote": "thence northerly approximately 0.65 km (0.4 mi.) along the easterly boundary of L 8782 and a prolongation thereof to a point at approximately 49° 09' 01\" north latitude"
+            },
+            {
+              "start": null,
+              "direction": "S 47° 30' E",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": "approximately 1 km",
+              "quote": "thence S 47° 30' E approximately 1 km"
+            },
+            {
+              "start": null,
+              "direction": "more or less south",
+              "follow": "straight_line",
+              "feature": "dyke #1 of Leach Lake",
+              "side_or_bank": null,
+              "until": "the midline of Summit Creek",
+              "distance": null,
+              "quote": "thence more or less south in a straight line to the adjacent bend in dyke #1 of Leach Lake and continuing southerly along a prolongation of that line to the point of intersection with the midline of Summit Creek"
+            },
+            {
+              "start": null,
+              "direction": "S 50° W",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the easterly boundary of Highway 3 right of way",
+              "distance": "approximately 610 m (2 000 ft.)",
+              "quote": "thence S 50° W approximately 610 m (2 000 ft.) to the point of intersection with the easterly boundary of Highway 3 right of way"
+            },
+            {
+              "start": null,
+              "direction": "general northerly",
+              "follow": "road",
+              "feature": "Highway 3",
+              "side_or_bank": "easterly boundary",
+              "until": "the westerly boundary of L 9269",
+              "distance": null,
+              "quote": "thence in a general northerly direction along the easterly boundary of Highway 3 right of way to the point of intersection with the westerly boundary of L 9269"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "lot_line",
+              "feature": "L 9269",
+              "side_or_bank": "westerly boundary",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence northerly along the westerly boundary of L 9269 to the point of commencement"
+            },
+            {
+              "start": "the point of intersection of the southerly boundary of Highway 3 right of way and the easterly boundary of Old Kootenay River Channel",
+              "direction": null,
+              "follow": null,
+              "feature": "Highway 3",
+              "side_or_bank": "southerly boundary",
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the point of intersection of the southerly boundary of Highway 3 right of way and the easterly boundary of Old Kootenay River Channel"
+            },
+            {
+              "start": null,
+              "direction": "general southerly",
+              "follow": "river",
+              "feature": "Old Kootenay River Channel",
+              "side_or_bank": "easterly boundary",
+              "until": "a point due East of the southerly boundary of dyke #3",
+              "distance": null,
+              "quote": "thence in a general southerly direction along the easterly boundary of Old Kootenay River Channel to a point due East of the southerly boundary of dyke #3"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the southerly boundary of dyke #3",
+              "distance": null,
+              "quote": "thence due West to the point of intersection with the southerly boundary of dyke #3"
+            },
+            {
+              "start": null,
+              "direction": "general westerly and northerly",
+              "follow": "other",
+              "feature": "dyke #3",
+              "side_or_bank": "southerly boundary",
+              "until": "the easterly boundary of West Creston Road right of way",
+              "distance": null,
+              "quote": "thence in a general westerly and northerly direction along the southerly boundary of dyke #3 and a prolongation thereof to the point of intersection with the easterly boundary of West Creston Road right of way"
+            },
+            {
+              "start": null,
+              "direction": "general northerly",
+              "follow": "road",
+              "feature": "West Creston Road",
+              "side_or_bank": "easterly boundary",
+              "until": "the southerly boundary of Highway 3 right of way",
+              "distance": null,
+              "quote": "thence in a general northerly direction along the easterly boundary of West Creston Road right of way to the point of intersection with the southerly boundary of Highway 3 right of way"
+            },
+            {
+              "start": null,
+              "direction": "general southeasterly",
+              "follow": "road",
+              "feature": "Highway 3",
+              "side_or_bank": "southerly boundary",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence in a general southeasterly direction along the southerly boundary of Highway 3 right of way to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in M.U. 4-7"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries: (1)Commencing at the point"
+          }
+        ],
+        "uncertain": [
+          "geometry.feature",
+          "geometry.steps[2].until",
+          "geometry.steps[3].follow",
+          "geometry.steps[3].until",
+          "geometry.steps[5].follow",
+          "geometry.steps[10].follow"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-13e77c6688c4",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:01:42Z",
+      "answer": {
+        "effect": "no_hunting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 4-7"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the point of intersection of the westerly boundary of L 9269, Kootenay Land District and the midline of Summit Creek",
+              "direction": null,
+              "follow": null,
+              "feature": "L 9269",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the point of intersection of the westerly boundary of L 9269, Kootenay Land District and the midline of Summit Creek"
+            },
+            {
+              "start": null,
+              "direction": "northerly and easterly",
+              "follow": "lot_line",
+              "feature": "L 9269",
+              "side_or_bank": "westerly and northerly boundaries",
+              "until": "the northeast corner thereof",
+              "distance": null,
+              "quote": "thence northerly and easterly along the westerly and northerly boundaries of L 9269 to the northeast corner thereof"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "lot_line",
+              "feature": "L 8782",
+              "side_or_bank": "easterly boundary",
+              "until": null,
+              "distance": "approximately 0.65 km (0.4 mi.)",
+              "quote": "thence northerly approximately 0.65 km (0.4 mi.) along the easterly boundary of L 8782 and a prolongation thereof to a point at approximately 49° 09' 01\" north latitude"
+            },
+            {
+              "start": null,
+              "direction": "S 47° 30' E",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": "approximately 1 km",
+              "quote": "thence S 47° 30' E approximately 1 km"
+            },
+            {
+              "start": null,
+              "direction": "more or less south",
+              "follow": "straight_line",
+              "feature": "dyke #1 of Leach Lake",
+              "side_or_bank": null,
+              "until": "the point of intersection with the midline of Summit Creek",
+              "distance": null,
+              "quote": "thence more or less south in a straight line to the adjacent bend in dyke #1 of Leach Lake and continuing southerly along a prolongation of that line to the point of intersection with the midline of Summit Creek"
+            },
+            {
+              "start": null,
+              "direction": "S 50° W",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of intersection with the easterly boundary of Highway 3 right of way",
+              "distance": "approximately 610 m (2 000 ft.)",
+              "quote": "thence S 50° W approximately 610 m (2 000 ft.) to the point of intersection with the easterly boundary of Highway 3 right of way"
+            },
+            {
+              "start": null,
+              "direction": "general northerly",
+              "follow": "road",
+              "feature": "Highway 3",
+              "side_or_bank": "easterly boundary",
+              "until": "the point of intersection with the westerly boundary of L 9269",
+              "distance": null,
+              "quote": "thence in a general northerly direction along the easterly boundary of Highway 3 right of way to the point of intersection with the westerly boundary of L 9269"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "lot_line",
+              "feature": "L 9269",
+              "side_or_bank": "westerly boundary",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence northerly along the westerly boundary of L 9269 to the point of commencement"
+            },
+            {
+              "start": "the point of intersection of the southerly boundary of Highway 3 right of way and the easterly boundary of Old Kootenay River Channel",
+              "direction": null,
+              "follow": null,
+              "feature": "Old Kootenay River Channel",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the point of intersection of the southerly boundary of Highway 3 right of way and the easterly boundary of Old Kootenay River Channel"
+            },
+            {
+              "start": null,
+              "direction": "general southerly",
+              "follow": "river",
+              "feature": "Old Kootenay River Channel",
+              "side_or_bank": "easterly boundary",
+              "until": "a point due East of the southerly boundary of dyke #3",
+              "distance": null,
+              "quote": "thence in a general southerly direction along the easterly boundary of Old Kootenay River Channel to a point due East of the southerly boundary of dyke #3"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of intersection with the southerly boundary of dyke #3",
+              "distance": null,
+              "quote": "thence due West to the point of intersection with the southerly boundary of dyke #3"
+            },
+            {
+              "start": null,
+              "direction": "general westerly and northerly",
+              "follow": "other",
+              "feature": "dyke #3",
+              "side_or_bank": "southerly boundary",
+              "until": "the point of intersection with the easterly boundary of West Creston Road right of way",
+              "distance": null,
+              "quote": "thence in a general westerly and northerly direction along the southerly boundary of dyke #3 and a prolongation thereof to the point of intersection with the easterly boundary of West Creston Road right of way"
+            },
+            {
+              "start": null,
+              "direction": "general northerly",
+              "follow": "road",
+              "feature": "West Creston Road",
+              "side_or_bank": "easterly boundary",
+              "until": "the point of intersection with the southerly boundary of Highway 3 right of way",
+              "distance": null,
+              "quote": "thence in a general northerly direction along the easterly boundary of West Creston Road right of way to the point of intersection with the southerly boundary of Highway 3 right of way"
+            },
+            {
+              "start": null,
+              "direction": "general southeasterly",
+              "follow": "road",
+              "feature": "Highway 3",
+              "side_or_bank": "southerly boundary",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence in a general southeasterly direction along the southerly boundary of Highway 3 right of way to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in M.U. 4-7"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries"
+          },
+          {
+            "field": "geometry.steps[0]",
+            "quote": "Commencing at the point of intersection of the westerly boundary of L 9269, Kootenay Land District and the midline of Summit Creek"
+          },
+          {
+            "field": "geometry.steps[1]",
+            "quote": "thence northerly and easterly along the westerly and northerly boundaries of L 9269 to the northeast corner thereof"
+          },
+          {
+            "field": "geometry.steps[2]",
+            "quote": "thence northerly approximately 0.65 km (0.4 mi.) along the easterly boundary of L 8782 and a prolongation thereof to a point at approximately 49° 09' 01\" north latitude"
+          },
+          {
+            "field": "geometry.steps[3]",
+            "quote": "thence S 47° 30' E approximately 1 km"
+          },
+          {
+            "field": "geometry.steps[4]",
+            "quote": "thence more or less south in a straight line to the adjacent bend in dyke #1 of Leach Lake and continuing southerly along a prolongation of that line to the point of intersection with the midline of Summit Creek"
+          },
+          {
+            "field": "geometry.steps[5]",
+            "quote": "thence S 50° W approximately 610 m (2 000 ft.) to the point of intersection with the easterly boundary of Highway 3 right of way"
+          },
+          {
+            "field": "geometry.steps[6]",
+            "quote": "thence in a general northerly direction along the easterly boundary of Highway 3 right of way to the point of intersection with the westerly boundary of L 9269"
+          },
+          {
+            "field": "geometry.steps[7]",
+            "quote": "thence northerly along the westerly boundary of L 9269 to the point of commencement"
+          },
+          {
+            "field": "geometry.steps[8]",
+            "quote": "Commencing at the point of intersection of the southerly boundary of Highway 3 right of way and the easterly boundary of Old Kootenay River Channel"
+          },
+          {
+            "field": "geometry.steps[9]",
+            "quote": "thence in a general southerly direction along the easterly boundary of Old Kootenay River Channel to a point due East of the southerly boundary of dyke #3"
+          },
+          {
+            "field": "geometry.steps[10]",
+            "quote": "thence due West to the point of intersection with the southerly boundary of dyke #3"
+          },
+          {
+            "field": "geometry.steps[11]",
+            "quote": "thence in a general westerly and northerly direction along the southerly boundary of dyke #3 and a prolongation thereof to the point of intersection with the easterly boundary of West Creston Road right of way"
+          },
+          {
+            "field": "geometry.steps[12]",
+            "quote": "thence in a general northerly direction along the easterly boundary of West Creston Road right of way to the point of intersection with the southerly boundary of Highway 3 right of way"
+          },
+          {
+            "field": "geometry.steps[13]",
+            "quote": "thence in a general southeasterly direction along the southerly boundary of Highway 3 right of way to the point of commencement"
+          }
+        ],
+        "uncertain": [
+          "geometry.feature",
+          "geometry.steps[2].until",
+          "geometry.steps[3].until"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "within": "in M.U. 4-7",
+    "effect": "No Hunting Areas",
+    "geometry.steps[0]": "Commencing at the point of intersection of the westerly boundary of L 9269, Kootenay Land District and the midline of Summit Creek",
+    "geometry.steps[1]": "thence northerly and easterly along the westerly and northerly boundaries of L 9269 to the northeast corner thereof",
+    "geometry.steps[2]": "thence northerly approximately 0.65 km (0.4 mi.) along the easterly boundary of L 8782 and a prolongation thereof to a point at approximately 49° 09' 01\" north latitude",
+    "geometry.steps[3]": "thence S 47° 30' E approximately 1 km",
+    "geometry.steps[4]": "thence more or less south in a straight line to the adjacent bend in dyke #1 of Leach Lake and continuing southerly along a prolongation of that line to the point of intersection with the midline of Summit Creek",
+    "geometry.steps[5]": "thence S 50° W approximately 610 m (2 000 ft.) to the point of intersection with the easterly boundary of Highway 3 right of way",
+    "geometry.steps[6]": "thence in a general northerly direction along the easterly boundary of Highway 3 right of way to the point of intersection with the westerly boundary of L 9269",
+    "geometry.steps[7]": "thence northerly along the westerly boundary of L 9269 to the point of commencement",
+    "geometry.steps[8]": "Commencing at the point of intersection of the southerly boundary of Highway 3 right of way and the easterly boundary of Old Kootenay River Channel",
+    "geometry.steps[9]": "thence in a general southerly direction along the easterly boundary of Old Kootenay River Channel to a point due East of the southerly boundary of dyke #3",
+    "geometry.steps[10]": "thence due West to the point of intersection with the southerly boundary of dyke #3",
+    "geometry.steps[11]": "thence in a general westerly and northerly direction along the southerly boundary of dyke #3 and a prolongation thereof to the point of intersection with the easterly boundary of West Creston Road right of way",
+    "geometry.steps[12]": "thence in a general northerly direction along the easterly boundary of West Creston Road right of way to the point of intersection with the southerly boundary of Highway 3 right of way",
+    "geometry.steps[13]": "thence in a general southeasterly direction along the southerly boundary of Highway 3 right of way to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "steps: run 1 [\"l 9269|||\",\"l 9269|the northeast corner thereof||lot_line\",\"l 8782||approximately 0.65 km (0.4 mi.)|lot_line\",\"||approximately 1 km|\",\"dyke 1 of leach lake|the midline of summit creek||straight_line\",\"|the easterly boundary of hwy 3 right of way|approximately 610 m (2 000 ft.)|\",\"hwy 3|the westerly boundary of l 9269||road\",\"l 9269|the point of commencement||lot_line\",\"hwy 3|||\",\"old kootenay river channel|a point due east of the southerly boundary of dyke 3||river\",\"|the southerly boundary of dyke 3||\",\"dyke 3|the easterly boundary of west creston rd right of way||other\",\"west creston rd|the southerly boundary of hwy 3 right of way||road\",\"hwy 3|the point of commencement||road\"] vs run 2 [\"l 9269|||\",\"l 9269|the northeast corner thereof||lot_line\",\"l 8782||approximately 0.65 km (0.4 mi.)|lot_line\",\"||approximately 1 km|straight_line\",\"dyke 1 of leach lake|the point of intersection with the midline of summit creek||straight_line\",\"|the point of intersection with the easterly boundary of hwy 3 right of way|approximately 610 m (2 000 ft.)|straight_line\",\"hwy 3|the point of intersection with the westerly boundary of l 9269||road\",\"l 9269|the point of commencement||lot_line\",\"old kootenay river channel|||\",\"old kootenay river channel|a point due east of the southerly boundary of dyke 3||river\",\"|the point of intersection with the southerly boundary of dyke 3||straight_line\",\"dyke 3|the point of intersection with the easterly boundary of west creston rd right of way||other\",\"west creston rd|the point of intersection with the southerly boundary of hwy 3 right of way||road\",\"hwy 3|the point of commencement||road\"]"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:07:26.580Z",
+  "updated": "2026-10-21T16:07:26.580Z"
+}

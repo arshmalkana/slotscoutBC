@@ -1,0 +1,123 @@
+{
+  "item_id": "closed-area-85edbdb904",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 7, section 27 (Provincial Parks)",
+  "rule_id": "W8-027",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 7 No Hunting Areas (Section 8)\nProvincial Parks\n27 (1)Carp Lake Park — That portion of M.U. 7-24, in the vicinity of Prince George, being all the area 0.5 km of either side of the centre line of the Carp Lake Park access road. (2)Mount Robson Park — That portion of M.U. 7-1 contained within the following described boundaries: Commencing at the junction of Swiftcurrent Creek and the Fraser River; thence northerly along the height of land separating the drainages of Swiftcurrent Creek from the drainage of the Fraser and Robson rivers to Mount Philips on the B.C./Alberta Boundary; thence southeasterly along said boundary to Lynx Mountain; thence southwesterly along the height of land separating the drainages of the Robson River from the drainages of Resplendent Creek and the Fraser River to the junction of the Robson River and the Fraser River; thence downstream along the Fraser River to the point of commencement. (3)Moose Marsh — That portion of M.U. 7-1 being east of Thunder Creek, south of Highway 16, west of Sleeper Creek and Grant Brook and north of a line drawn 2 km perpendicular and parallel to the southerly natural boundaries of Moose Lake and the Fraser River. [am. B.C. Reg. 109/85, s. 4 (b).]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-5372487dcc64",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:02:27Z",
+      "answer": {
+        "effect": "no_hunting",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Hunting Areas"
+          }
+        ],
+        "uncertain": [
+          "within",
+          "geometry.method",
+          "geometry.road",
+          "geometry.feature",
+          "geometry.buffer_m",
+          "geometry.side",
+          "geometry.from",
+          "geometry.to",
+          "geometry.steps"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-5372487dcc64",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:02:40Z",
+      "answer": {
+        "effect": "no_hunting",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Hunting Areas"
+          }
+        ],
+        "uncertain": [
+          "within",
+          "geometry.method",
+          "geometry.road",
+          "geometry.feature",
+          "geometry.buffer_m",
+          "geometry.side",
+          "geometry.from",
+          "geometry.to",
+          "geometry.steps"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "effect": "No Hunting Areas"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:08:32.907Z",
+  "updated": "2026-10-21T16:08:32.907Z"
+}

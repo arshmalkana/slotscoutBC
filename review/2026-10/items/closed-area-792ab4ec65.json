@@ -1,0 +1,577 @@
+{
+  "item_id": "closed-area-792ab4ec65",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 111 (Fairmont)",
+  "rule_id": "W5-111",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "named area \"M.U. 4-25\": none",
+    "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nFairmont\n111 That portion of the Province of British Columbia in M.U. 4-25 that is contained within the following described boundaries: Commencing in the vicinity of Fairmont at the point of intersection of the midline of Dutch Creek and the easterly boundary of Highway 93/95 right of way; thence in a general southerly direction along the easterly boundary of Highway 93/95 right of way to the point of intersection with the south boundary of S.L. 10, D.L. 344, Kootenay Land District; thence in a general easterly direction along the southerly boundaries of S.L. 10 and S.L. 9 to the southeast corner of S.L.9; thence southerly in a straight line to the northeast corner of S.L.19; thence westerly along the northerly boundary of S.L.19 to the easterly boundary of Highway 93/95 right of way; thence southerly along the easterly boundary of Highway 93/95 right of way to the southerly boundary of S.L.19; thence easterly along the southerly boundary of S.L.19 and a prolongation thereof to the natural boundary of Columbia Lake on the westerly shore thereof; thence in a general northerly direction along the natural boundary of Columbia Lake on the westerly shore thereof to the point of intersection with an easterly prolongation of the north boundary of S.L.19; thence easterly in a straight line to the point of intersection with the natural boundary of Columbia Lake on the easterly shore thereof at its intersection with the natural boundary of Warspite Creek on the right bank thereof; thence in a general northerly direction along the natural boundary of Columbia Lake on the easterly shore thereof and the natural boundary of Columbia River on the right bank thereof to the south boundary of Block P.3043; thence easterly and northerly along the southerly and easterly boundaries of Block P.3043 to the south boundary of S.L.36; thence easterly and northerly along the southerly and easterly boundaries of S.L.36 to the south boundary of S.L.11; thence easterly and northerly along the southerly and easterly boundaries of S.L.11 and along a northerly prolongation to the south boundary of the Fairmont Ski Hill area; thence easterly, northerly and westerly along the southerly, easterly and northerly boundaries of the Fairmont Ski Hill area to the northerly boundary of S.L.126 at a point adjacent to its intersection with the midline of Cold Spring Creek; thence westerly along the northerly boundary of S.L.126 to the southeast corner of S.L.119; thence northerly and westerly along the easterly and northerly boundaries of S.L.119 to the northeast corner of S.L.118; thence westerly along the northerly boundary of S.L.118 and a prolongation thereof to the natural boundary of Columbia River on the right bank thereof; thence southerly along the natural boundary of Columbia River on the right bank thereof to the northerly boundary of D.L.5352; thence westerly along the northerly boundary of D.L.5352 and a prolongation thereof to the westerly boundary of Westside Road right of way; thence southerly along the westerly boundary of Westside Road right of way and a prolongation thereof to the southerly boundary of Highway 93/95 right of way; thence westerly along the southerly boundary of Highway 93/95 right of way to the point of commencement. [en. B.C. Reg. 204/91, s. 12; am. B.C. Regs. 277/91, Sch. 2, s. 4; 224/92, s. 11.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-f0914f8382cd",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:00:52Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 4-25"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "in the vicinity of Fairmont at the point of intersection of the midline of Dutch Creek and the easterly boundary of Highway 93/95 right of way",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing in the vicinity of Fairmont at the point of intersection of the midline of Dutch Creek and the easterly boundary of Highway 93/95 right of way"
+            },
+            {
+              "start": null,
+              "direction": "in a general southerly direction",
+              "follow": "road",
+              "feature": "Highway 93/95 right of way",
+              "side_or_bank": "easterly boundary",
+              "until": "the point of intersection with the south boundary of S.L. 10, D.L. 344, Kootenay Land District",
+              "distance": null,
+              "quote": "thence in a general southerly direction along the easterly boundary of Highway 93/95 right of way to the point of intersection with the south boundary of S.L. 10, D.L. 344, Kootenay Land District"
+            },
+            {
+              "start": null,
+              "direction": "in a general easterly direction",
+              "follow": "lot_line",
+              "feature": "S.L. 10 and S.L. 9",
+              "side_or_bank": "southerly boundaries",
+              "until": "the southeast corner of S.L.9",
+              "distance": null,
+              "quote": "thence in a general easterly direction along the southerly boundaries of S.L. 10 and S.L. 9 to the southeast corner of S.L.9"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the northeast corner of S.L.19",
+              "distance": null,
+              "quote": "thence southerly in a straight line to the northeast corner of S.L.19"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "lot_line",
+              "feature": "S.L.19",
+              "side_or_bank": "northerly boundary",
+              "until": "the easterly boundary of Highway 93/95 right of way",
+              "distance": null,
+              "quote": "thence westerly along the northerly boundary of S.L.19 to the easterly boundary of Highway 93/95 right of way"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "road",
+              "feature": "Highway 93/95 right of way",
+              "side_or_bank": "easterly boundary",
+              "until": "the southerly boundary of S.L.19",
+              "distance": null,
+              "quote": "thence southerly along the easterly boundary of Highway 93/95 right of way to the southerly boundary of S.L.19"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "lot_line",
+              "feature": "S.L.19",
+              "side_or_bank": "southerly boundary",
+              "until": "the natural boundary of Columbia Lake on the westerly shore thereof",
+              "distance": null,
+              "quote": "thence easterly along the southerly boundary of S.L.19 and a prolongation thereof to the natural boundary of Columbia Lake on the westerly shore thereof"
+            },
+            {
+              "start": null,
+              "direction": "in a general northerly direction",
+              "follow": "shoreline",
+              "feature": "Columbia Lake",
+              "side_or_bank": "westerly shore",
+              "until": "the point of intersection with an easterly prolongation of the north boundary of S.L.19",
+              "distance": null,
+              "quote": "thence in a general northerly direction along the natural boundary of Columbia Lake on the westerly shore thereof to the point of intersection with an easterly prolongation of the north boundary of S.L.19"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of intersection with the natural boundary of Columbia Lake on the easterly shore thereof at its intersection with the natural boundary of Warspite Creek on the right bank thereof",
+              "distance": null,
+              "quote": "thence easterly in a straight line to the point of intersection with the natural boundary of Columbia Lake on the easterly shore thereof at its intersection with the natural boundary of Warspite Creek on the right bank thereof"
+            },
+            {
+              "start": null,
+              "direction": "in a general northerly direction",
+              "follow": "shoreline",
+              "feature": "Columbia Lake and Columbia River",
+              "side_or_bank": "easterly shore and right bank",
+              "until": "the south boundary of Block P.3043",
+              "distance": null,
+              "quote": "thence in a general northerly direction along the natural boundary of Columbia Lake on the easterly shore thereof and the natural boundary of Columbia River on the right bank thereof to the south boundary of Block P.3043"
+            },
+            {
+              "start": null,
+              "direction": "easterly and northerly",
+              "follow": "lot_line",
+              "feature": "Block P.3043",
+              "side_or_bank": "southerly and easterly boundaries",
+              "until": "the south boundary of S.L.36",
+              "distance": null,
+              "quote": "thence easterly and northerly along the southerly and easterly boundaries of Block P.3043 to the south boundary of S.L.36"
+            },
+            {
+              "start": null,
+              "direction": "easterly and northerly",
+              "follow": "lot_line",
+              "feature": "S.L.36",
+              "side_or_bank": "southerly and easterly boundaries",
+              "until": "the south boundary of S.L.11",
+              "distance": null,
+              "quote": "thence easterly and northerly along the southerly and easterly boundaries of S.L.36 to the south boundary of S.L.11"
+            },
+            {
+              "start": null,
+              "direction": "easterly and northerly",
+              "follow": "lot_line",
+              "feature": "S.L.11",
+              "side_or_bank": "southerly and easterly boundaries",
+              "until": "the south boundary of the Fairmont Ski Hill area",
+              "distance": null,
+              "quote": "thence easterly and northerly along the southerly and easterly boundaries of S.L.11 and along a northerly prolongation to the south boundary of the Fairmont Ski Hill area"
+            },
+            {
+              "start": null,
+              "direction": "easterly, northerly and westerly",
+              "follow": "other",
+              "feature": "Fairmont Ski Hill area",
+              "side_or_bank": "southerly, easterly and northerly boundaries",
+              "until": "the northerly boundary of S.L.126 at a point adjacent to its intersection with the midline of Cold Spring Creek",
+              "distance": null,
+              "quote": "thence easterly, northerly and westerly along the southerly, easterly and northerly boundaries of the Fairmont Ski Hill area to the northerly boundary of S.L.126 at a point adjacent to its intersection with the midline of Cold Spring Creek"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "lot_line",
+              "feature": "S.L.126",
+              "side_or_bank": "northerly boundary",
+              "until": "the southeast corner of S.L.119",
+              "distance": null,
+              "quote": "thence westerly along the northerly boundary of S.L.126 to the southeast corner of S.L.119"
+            },
+            {
+              "start": null,
+              "direction": "northerly and westerly",
+              "follow": "lot_line",
+              "feature": "S.L.119",
+              "side_or_bank": "easterly and northerly boundaries",
+              "until": "the northeast corner of S.L.118",
+              "distance": null,
+              "quote": "thence northerly and westerly along the easterly and northerly boundaries of S.L.119 to the northeast corner of S.L.118"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "lot_line",
+              "feature": "S.L.118",
+              "side_or_bank": "northerly boundary",
+              "until": "the natural boundary of Columbia River on the right bank thereof",
+              "distance": null,
+              "quote": "thence westerly along the northerly boundary of S.L.118 and a prolongation thereof to the natural boundary of Columbia River on the right bank thereof"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "river",
+              "feature": "Columbia River",
+              "side_or_bank": "right bank",
+              "until": "the northerly boundary of D.L.5352",
+              "distance": null,
+              "quote": "thence southerly along the natural boundary of Columbia River on the right bank thereof to the northerly boundary of D.L.5352"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "lot_line",
+              "feature": "D.L.5352",
+              "side_or_bank": "northerly boundary",
+              "until": "the westerly boundary of Westside Road right of way",
+              "distance": null,
+              "quote": "thence westerly along the northerly boundary of D.L.5352 and a prolongation thereof to the westerly boundary of Westside Road right of way"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "road",
+              "feature": "Westside Road right of way",
+              "side_or_bank": "westerly boundary",
+              "until": "the southerly boundary of Highway 93/95 right of way",
+              "distance": null,
+              "quote": "thence southerly along the westerly boundary of Westside Road right of way and a prolongation thereof to the southerly boundary of Highway 93/95 right of way"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "road",
+              "feature": "Highway 93/95 right of way",
+              "side_or_bank": "southerly boundary",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence westerly along the southerly boundary of Highway 93/95 right of way to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in M.U. 4-25"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-f0914f8382cd",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:01:31Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 4-25"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the point of intersection of the midline of Dutch Creek and the easterly boundary of Highway 93/95 right of way",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing in the vicinity of Fairmont at the point of intersection of the midline of Dutch Creek and the easterly boundary of Highway 93/95 right of way"
+            },
+            {
+              "start": null,
+              "direction": "in a general southerly direction",
+              "follow": "road",
+              "feature": "Highway 93/95 right of way",
+              "side_or_bank": "easterly boundary",
+              "until": "the point of intersection with the south boundary of S.L. 10, D.L. 344, Kootenay Land District",
+              "distance": null,
+              "quote": "thence in a general southerly direction along the easterly boundary of Highway 93/95 right of way to the point of intersection with the south boundary of S.L. 10, D.L. 344, Kootenay Land District"
+            },
+            {
+              "start": null,
+              "direction": "in a general easterly direction",
+              "follow": "lot_line",
+              "feature": "S.L. 10 and S.L. 9",
+              "side_or_bank": "southerly boundaries",
+              "until": "the southeast corner of S.L.9",
+              "distance": null,
+              "quote": "thence in a general easterly direction along the southerly boundaries of S.L. 10 and S.L. 9 to the southeast corner of S.L.9"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the northeast corner of S.L.19",
+              "distance": null,
+              "quote": "thence southerly in a straight line to the northeast corner of S.L.19"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "lot_line",
+              "feature": "S.L.19",
+              "side_or_bank": "northerly boundary",
+              "until": "the easterly boundary of Highway 93/95 right of way",
+              "distance": null,
+              "quote": "thence westerly along the northerly boundary of S.L.19 to the easterly boundary of Highway 93/95 right of way"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "road",
+              "feature": "Highway 93/95 right of way",
+              "side_or_bank": "easterly boundary",
+              "until": "the southerly boundary of S.L.19",
+              "distance": null,
+              "quote": "thence southerly along the easterly boundary of Highway 93/95 right of way to the southerly boundary of S.L.19"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "lot_line",
+              "feature": "S.L.19",
+              "side_or_bank": "southerly boundary",
+              "until": "the natural boundary of Columbia Lake on the westerly shore thereof",
+              "distance": null,
+              "quote": "thence easterly along the southerly boundary of S.L.19 and a prolongation thereof to the natural boundary of Columbia Lake on the westerly shore thereof"
+            },
+            {
+              "start": null,
+              "direction": "in a general northerly direction",
+              "follow": "shoreline",
+              "feature": "Columbia Lake",
+              "side_or_bank": "westerly shore",
+              "until": "the point of intersection with an easterly prolongation of the north boundary of S.L.19",
+              "distance": null,
+              "quote": "thence in a general northerly direction along the natural boundary of Columbia Lake on the westerly shore thereof to the point of intersection with an easterly prolongation of the north boundary of S.L.19"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of intersection with the natural boundary of Columbia Lake on the easterly shore thereof at its intersection with the natural boundary of Warspite Creek on the right bank thereof",
+              "distance": null,
+              "quote": "thence easterly in a straight line to the point of intersection with the natural boundary of Columbia Lake on the easterly shore thereof at its intersection with the natural boundary of Warspite Creek on the right bank thereof"
+            },
+            {
+              "start": null,
+              "direction": "in a general northerly direction",
+              "follow": "shoreline",
+              "feature": "Columbia Lake and Columbia River",
+              "side_or_bank": "easterly shore of Columbia Lake; right bank of Columbia River",
+              "until": "the south boundary of Block P.3043",
+              "distance": null,
+              "quote": "thence in a general northerly direction along the natural boundary of Columbia Lake on the easterly shore thereof and the natural boundary of Columbia River on the right bank thereof to the south boundary of Block P.3043"
+            },
+            {
+              "start": null,
+              "direction": "easterly and northerly",
+              "follow": "lot_line",
+              "feature": "Block P.3043",
+              "side_or_bank": "southerly and easterly boundaries",
+              "until": "the south boundary of S.L.36",
+              "distance": null,
+              "quote": "thence easterly and northerly along the southerly and easterly boundaries of Block P.3043 to the south boundary of S.L.36"
+            },
+            {
+              "start": null,
+              "direction": "easterly and northerly",
+              "follow": "lot_line",
+              "feature": "S.L.36",
+              "side_or_bank": "southerly and easterly boundaries",
+              "until": "the south boundary of S.L.11",
+              "distance": null,
+              "quote": "thence easterly and northerly along the southerly and easterly boundaries of S.L.36 to the south boundary of S.L.11"
+            },
+            {
+              "start": null,
+              "direction": "easterly and northerly",
+              "follow": "lot_line",
+              "feature": "S.L.11",
+              "side_or_bank": "southerly and easterly boundaries",
+              "until": "the south boundary of the Fairmont Ski Hill area",
+              "distance": null,
+              "quote": "thence easterly and northerly along the southerly and easterly boundaries of S.L.11 and along a northerly prolongation to the south boundary of the Fairmont Ski Hill area"
+            },
+            {
+              "start": null,
+              "direction": "easterly, northerly and westerly",
+              "follow": "other",
+              "feature": "Fairmont Ski Hill area",
+              "side_or_bank": "southerly, easterly and northerly boundaries",
+              "until": "the northerly boundary of S.L.126 at a point adjacent to its intersection with the midline of Cold Spring Creek",
+              "distance": null,
+              "quote": "thence easterly, northerly and westerly along the southerly, easterly and northerly boundaries of the Fairmont Ski Hill area to the northerly boundary of S.L.126 at a point adjacent to its intersection with the midline of Cold Spring Creek"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "lot_line",
+              "feature": "S.L.126",
+              "side_or_bank": "northerly boundary",
+              "until": "the southeast corner of S.L.119",
+              "distance": null,
+              "quote": "thence westerly along the northerly boundary of S.L.126 to the southeast corner of S.L.119"
+            },
+            {
+              "start": null,
+              "direction": "northerly and westerly",
+              "follow": "lot_line",
+              "feature": "S.L.119",
+              "side_or_bank": "easterly and northerly boundaries",
+              "until": "the northeast corner of S.L.118",
+              "distance": null,
+              "quote": "thence northerly and westerly along the easterly and northerly boundaries of S.L.119 to the northeast corner of S.L.118"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "lot_line",
+              "feature": "S.L.118",
+              "side_or_bank": "northerly boundary",
+              "until": "the natural boundary of Columbia River on the right bank thereof",
+              "distance": null,
+              "quote": "thence westerly along the northerly boundary of S.L.118 and a prolongation thereof to the natural boundary of Columbia River on the right bank thereof"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "river",
+              "feature": "Columbia River",
+              "side_or_bank": "right bank",
+              "until": "the northerly boundary of D.L.5352",
+              "distance": null,
+              "quote": "thence southerly along the natural boundary of Columbia River on the right bank thereof to the northerly boundary of D.L.5352"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "lot_line",
+              "feature": "D.L.5352",
+              "side_or_bank": "northerly boundary",
+              "until": "the westerly boundary of Westside Road right of way",
+              "distance": null,
+              "quote": "thence westerly along the northerly boundary of D.L.5352 and a prolongation thereof to the westerly boundary of Westside Road right of way"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "road",
+              "feature": "Westside Road right of way",
+              "side_or_bank": "westerly boundary",
+              "until": "the southerly boundary of Highway 93/95 right of way",
+              "distance": null,
+              "quote": "thence southerly along the westerly boundary of Westside Road right of way and a prolongation thereof to the southerly boundary of Highway 93/95 right of way"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "road",
+              "feature": "Highway 93/95 right of way",
+              "side_or_bank": "southerly boundary",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence westerly along the southerly boundary of Highway 93/95 right of way to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in M.U. 4-25"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "in M.U. 4-25",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing in the vicinity of Fairmont at the point of intersection of the midline of Dutch Creek and the easterly boundary of Highway 93/95 right of way",
+    "geometry.steps[1]": "thence in a general southerly direction along the easterly boundary of Highway 93/95 right of way to the point of intersection with the south boundary of S.L. 10, D.L. 344, Kootenay Land District",
+    "geometry.steps[2]": "thence in a general easterly direction along the southerly boundaries of S.L. 10 and S.L. 9 to the southeast corner of S.L.9",
+    "geometry.steps[3]": "thence southerly in a straight line to the northeast corner of S.L.19",
+    "geometry.steps[4]": "thence westerly along the northerly boundary of S.L.19 to the easterly boundary of Highway 93/95 right of way",
+    "geometry.steps[5]": "thence southerly along the easterly boundary of Highway 93/95 right of way to the southerly boundary of S.L.19",
+    "geometry.steps[6]": "thence easterly along the southerly boundary of S.L.19 and a prolongation thereof to the natural boundary of Columbia Lake on the westerly shore thereof",
+    "geometry.steps[7]": "thence in a general northerly direction along the natural boundary of Columbia Lake on the westerly shore thereof to the point of intersection with an easterly prolongation of the north boundary of S.L.19",
+    "geometry.steps[8]": "thence easterly in a straight line to the point of intersection with the natural boundary of Columbia Lake on the easterly shore thereof at its intersection with the natural boundary of Warspite Creek on the right bank thereof",
+    "geometry.steps[9]": "thence in a general northerly direction along the natural boundary of Columbia Lake on the easterly shore thereof and the natural boundary of Columbia River on the right bank thereof to the south boundary of Block P.3043",
+    "geometry.steps[10]": "thence easterly and northerly along the southerly and easterly boundaries of Block P.3043 to the south boundary of S.L.36",
+    "geometry.steps[11]": "thence easterly and northerly along the southerly and easterly boundaries of S.L.36 to the south boundary of S.L.11",
+    "geometry.steps[12]": "thence easterly and northerly along the southerly and easterly boundaries of S.L.11 and along a northerly prolongation to the south boundary of the Fairmont Ski Hill area",
+    "geometry.steps[13]": "thence easterly, northerly and westerly along the southerly, easterly and northerly boundaries of the Fairmont Ski Hill area to the northerly boundary of S.L.126 at a point adjacent to its intersection with the midline of Cold Spring Creek",
+    "geometry.steps[14]": "thence westerly along the northerly boundary of S.L.126 to the southeast corner of S.L.119",
+    "geometry.steps[15]": "thence northerly and westerly along the easterly and northerly boundaries of S.L.119 to the northeast corner of S.L.118",
+    "geometry.steps[16]": "thence westerly along the northerly boundary of S.L.118 and a prolongation thereof to the natural boundary of Columbia River on the right bank thereof",
+    "geometry.steps[17]": "thence southerly along the natural boundary of Columbia River on the right bank thereof to the northerly boundary of D.L.5352",
+    "geometry.steps[18]": "thence westerly along the northerly boundary of D.L.5352 and a prolongation thereof to the westerly boundary of Westside Road right of way",
+    "geometry.steps[19]": "thence southerly along the westerly boundary of Westside Road right of way and a prolongation thereof to the southerly boundary of Highway 93/95 right of way",
+    "geometry.steps[20]": "thence westerly along the southerly boundary of Highway 93/95 right of way to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [
+    {
+      "query": "M.U. 4-25",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "none",
+      "matches": 0,
+      "ids": [],
+      "sample": []
+    }
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:10:36.231Z",
+  "updated": "2026-10-21T16:10:36.231Z"
+}

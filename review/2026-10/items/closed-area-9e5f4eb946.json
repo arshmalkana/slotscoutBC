@@ -1,0 +1,191 @@
+{
+  "item_id": "closed-area-9e5f4eb946",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 116 (Fry Creek Recreation Area)",
+  "rule_id": "W5-116",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "named area \"M.U. 4-19\": none",
+    "the geometry builder does not draw \"waterbody_buffer\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nFry Creek Recreation Area\n116 That portion of the Province of British Columbia in M.U. 4-19 that is contained within the following described boundaries: Commencing at a point on the midline of Fry Creek approximately 6 kilometres upstream from the point of intersection of the midline of Fry Creek and the natural boundary of Kootenay Lake on the easterly shore thereof; thence in a general northeasterly direction upstream along the midline of Fry Creek to a point approximately 500 m upstream of the easterly edge of the slide area and including all intervening territory on either side of Fry Creek within the Fry Creek Canyon Recreation Area boundaries. [en. B.C. Reg. 204/91, s. 12.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-582ad093e4d6",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:01:26Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 4-19"
+        },
+        "geometry": {
+          "method": "waterbody_buffer",
+          "road": null,
+          "feature": {
+            "type": "creek",
+            "name": "Fry Creek"
+          },
+          "buffer_m": null,
+          "side": "both",
+          "from": {
+            "type": "other",
+            "road": null,
+            "name": "a point on the midline of Fry Creek approximately 6 kilometres upstream from the point of intersection of the midline of Fry Creek and the natural boundary of Kootenay Lake on the easterly shore thereof"
+          },
+          "to": {
+            "type": "landmark",
+            "road": null,
+            "name": "a point approximately 500 m upstream of the easterly edge of the slide area"
+          },
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in M.U. 4-19"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "upstream along the midline of Fry Creek"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "on either side of Fry Creek"
+          },
+          {
+            "field": "geometry.from",
+            "quote": "Commencing at a point on the midline of Fry Creek approximately 6 kilometres upstream from the point of intersection of the midline of Fry Creek and the natural boundary of Kootenay Lake on the easterly shore thereof"
+          },
+          {
+            "field": "geometry.to",
+            "quote": "to a point approximately 500 m upstream of the easterly edge of the slide area"
+          }
+        ],
+        "uncertain": [
+          "geometry.buffer_m"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-582ad093e4d6",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:02:04Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 4-19"
+        },
+        "geometry": {
+          "method": "waterbody_buffer",
+          "road": null,
+          "feature": {
+            "type": "creek",
+            "name": "Fry Creek"
+          },
+          "buffer_m": null,
+          "side": "both",
+          "from": {
+            "type": "other",
+            "road": null,
+            "name": "a point on the midline of Fry Creek approximately 6 kilometres upstream from the point of intersection of the midline of Fry Creek and the natural boundary of Kootenay Lake on the easterly shore thereof"
+          },
+          "to": {
+            "type": "other",
+            "road": null,
+            "name": "a point approximately 500 m upstream of the easterly edge of the slide area"
+          },
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in M.U. 4-19"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "along the midline of Fry Creek"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "on either side of Fry Creek within the Fry Creek Canyon Recreation Area boundaries"
+          },
+          {
+            "field": "geometry.from",
+            "quote": "Commencing at a point on the midline of Fry Creek approximately 6 kilometres upstream from the point of intersection of the midline of Fry Creek and the natural boundary of Kootenay Lake on the easterly shore thereof"
+          },
+          {
+            "field": "geometry.to",
+            "quote": "to a point approximately 500 m upstream of the easterly edge of the slide area"
+          }
+        ],
+        "uncertain": [
+          "geometry.buffer_m"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "within": "in M.U. 4-19",
+    "geometry.feature": "upstream along the midline of Fry Creek",
+    "geometry.from": "Commencing at a point on the midline of Fry Creek approximately 6 kilometres upstream from the point of intersection of the midline of Fry Creek and the natural boundary of Kootenay Lake on the easterly shore thereof",
+    "geometry.to": "to a point approximately 500 m upstream of the easterly edge of the slide area",
+    "effect": "No Shooting Areas",
+    "geometry.side": "on either side of Fry Creek"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [
+    {
+      "query": "M.U. 4-19",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "none",
+      "matches": 0,
+      "ids": [],
+      "sample": []
+    }
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:08:33.398Z",
+  "updated": "2026-10-21T16:08:33.398Z"
+}

@@ -1,0 +1,149 @@
+{
+  "item_id": "closed-area-4da316d25f",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 73 (Michael Lake)",
+  "rule_id": "W5-073",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: side: run 1 \"inside\" vs run 2 null",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nMichael Lake\n73 That portion of the Province of British Columbia in Oyster Land District contained within the following described boundaries: The mean high water mark of Michael Lake. [en. B.C. Reg. 109/85, s. 3 (i).]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-9fc7d119bd43",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:00:39Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Oyster Land District"
+        },
+        "geometry": {
+          "method": "admin_boundary",
+          "road": null,
+          "feature": {
+            "type": "lake",
+            "name": "Michael Lake"
+          },
+          "buffer_m": null,
+          "side": "inside",
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in Oyster Land District"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries: The mean high water mark of Michael Lake"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "The mean high water mark of Michael Lake"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "contained within the following described boundaries"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-9fc7d119bd43",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:00:39Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Oyster Land District"
+        },
+        "geometry": {
+          "method": "admin_boundary",
+          "road": null,
+          "feature": {
+            "type": "lake",
+            "name": "Michael Lake"
+          },
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in Oyster Land District"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries: The mean high water mark of Michael Lake"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "The mean high water mark of Michael Lake"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "in Oyster Land District",
+    "geometry.feature": "The mean high water mark of Michael Lake",
+    "effect": "No Shooting Areas",
+    "geometry.side": "contained within the following described boundaries"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "side: run 1 \"inside\" vs run 2 null"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:09:19.444Z",
+  "updated": "2026-10-21T16:09:19.444Z"
+}

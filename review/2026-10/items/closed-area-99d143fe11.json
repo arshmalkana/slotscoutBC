@@ -1,0 +1,162 @@
+{
+  "item_id": "closed-area-99d143fe11",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 84 (Upper Halfway)",
+  "rule_id": "W5-084",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "named area \"Peace River District\": failed (no official layer for area type other)",
+    "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nUpper Halfway\n84 That portion of Peace River District being the westerly half of Lot 1323. [en. B.C. Reg. 172/86, s. 2.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-640aecc71b61",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:02:42Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Peace River District"
+        },
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": {
+            "type": "lot",
+            "name": "Lot 1323"
+          },
+          "buffer_m": null,
+          "side": "west",
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "Peace River District"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "being the westerly half of Lot 1323"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "Lot 1323"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "westerly half"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-640aecc71b61",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T15:59:32Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Peace River District"
+        },
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": {
+            "type": "lot",
+            "name": "Lot 1323"
+          },
+          "buffer_m": null,
+          "side": "west",
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "Peace River District"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "being the westerly half of Lot 1323"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "Lot 1323"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "westerly half"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "Peace River District",
+    "geometry.feature": "Lot 1323",
+    "effect": "No Shooting Areas",
+    "geometry.side": "westerly half"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [
+    {
+      "query": "Peace River District",
+      "kind": "other",
+      "layer": "-",
+      "status": "failed",
+      "matches": 0,
+      "ids": [],
+      "note": "no official layer for area type other",
+      "sample": []
+    }
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:08:34.246Z",
+  "updated": "2026-10-21T16:08:34.246Z"
+}

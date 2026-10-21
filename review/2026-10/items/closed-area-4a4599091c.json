@@ -1,0 +1,272 @@
+{
+  "item_id": "closed-area-4a4599091c",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 114 (Westcan Terminals)",
+  "rule_id": "W5-114",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "rule parser and AI disagree: within: rule parser null vs AI runs \"m.u. 1 4\"; from: rule parser null vs AI runs \"westcan terminals rd\"; to: rule parser null vs AI runs \"westcan terminals rd\"",
+    "named area \"M.U. 1-4\": none",
+    "road \"Westcan Terminals Road\": none",
+    "road \"Westcan Terminals Road\": none",
+    "road \"Westcan Terminals Road\": none",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nWestcan Terminals\n114 That portion of the Province of British Columbia in M.U. 1-4 in the vicinity of Cowichan Bay being the area within 25 metres on either side of the midline of Westcan Terminals Road commencing at the easterly boundary of Indian Reserve #9 and proceeding easterly along the said road to its end and including the area 25 metres seaward from the paved edge of the Westcan Terminals Ltd. port site. [en. B.C. Reg. 204/91, s. 12.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-313c49b86faa",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:01:12Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 1-4"
+        },
+        "geometry": {
+          "method": "road_buffer",
+          "road": {
+            "name": "Westcan Terminals Road",
+            "source_hint": "DRA"
+          },
+          "feature": null,
+          "buffer_m": 25,
+          "side": "both",
+          "from": {
+            "type": "boundary",
+            "road": "Westcan Terminals Road",
+            "name": "Indian Reserve #9"
+          },
+          "to": {
+            "type": "other",
+            "road": "Westcan Terminals Road",
+            "name": null
+          },
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in M.U. 1-4"
+          },
+          {
+            "field": "geometry.road",
+            "quote": "midline of Westcan Terminals Road"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": "within 25 metres on either side"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "on either side"
+          },
+          {
+            "field": "geometry.from",
+            "quote": "commencing at the easterly boundary of Indian Reserve #9"
+          },
+          {
+            "field": "geometry.to",
+            "quote": "proceeding easterly along the said road to its end"
+          }
+        ],
+        "uncertain": [
+          "geometry.feature"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-313c49b86faa",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:01:51Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 1-4"
+        },
+        "geometry": {
+          "method": "road_buffer",
+          "road": {
+            "name": "Westcan Terminals Road",
+            "source_hint": "DRA"
+          },
+          "feature": null,
+          "buffer_m": 25,
+          "side": "both",
+          "from": {
+            "type": "boundary",
+            "road": "Westcan Terminals Road",
+            "name": "the easterly boundary of Indian Reserve #9"
+          },
+          "to": {
+            "type": "other",
+            "road": "Westcan Terminals Road",
+            "name": "its end"
+          },
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in M.U. 1-4"
+          },
+          {
+            "field": "geometry.road",
+            "quote": "the midline of Westcan Terminals Road"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": "25 metres"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "on either side"
+          },
+          {
+            "field": "geometry.from",
+            "quote": "commencing at the easterly boundary of Indian Reserve #9"
+          },
+          {
+            "field": "geometry.to",
+            "quote": "proceeding easterly along the said road to its end"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "rule": {
+      "task_id": "closed_area-313c49b86faa",
+      "mode": "rule",
+      "parser": "ruleparse.v1",
+      "produced_at": "2026-10-20T15:12:19.922Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "road_buffer",
+          "road": {
+            "name": "Westcan Terminals Road",
+            "source_hint": "DRA"
+          },
+          "feature": null,
+          "buffer_m": 25,
+          "side": "both",
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "geometry.buffer_m",
+            "quote": "25 metres on either side of the midline"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "on either side"
+          },
+          {
+            "field": "geometry.road",
+            "quote": "Westcan Terminals Road"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "in M.U. 1-4",
+    "geometry.road": "midline of Westcan Terminals Road",
+    "geometry.buffer_m": "within 25 metres on either side",
+    "geometry.from": "commencing at the easterly boundary of Indian Reserve #9",
+    "geometry.to": "proceeding easterly along the said road to its end",
+    "effect": "No Shooting Areas",
+    "geometry.side": "on either side"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "within: rule parser null vs AI runs \"m.u. 1 4\"",
+    "from: rule parser null vs AI runs \"westcan terminals rd\"",
+    "to: rule parser null vs AI runs \"westcan terminals rd\""
+  ],
+  "lookups": [
+    {
+      "query": "M.U. 1-4",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "none",
+      "matches": 0,
+      "ids": [],
+      "sample": []
+    },
+    {
+      "query": "Westcan Terminals Road",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "matches": 0,
+      "ids": [],
+      "sample": []
+    },
+    {
+      "query": "Westcan Terminals Road",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "matches": 0,
+      "ids": [],
+      "sample": []
+    },
+    {
+      "query": "Westcan Terminals Road",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "matches": 0,
+      "ids": [],
+      "sample": []
+    }
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:08:06.045Z",
+  "updated": "2026-10-21T16:08:06.045Z"
+}

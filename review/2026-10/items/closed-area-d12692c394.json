@@ -1,0 +1,342 @@
+{
+  "item_id": "closed-area-d12692c394",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 59 (Shoemaker Bay)",
+  "rule_id": "W5-059",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: steps: run 1 [\"|||\",\"|the intersection of r w 997 macmillan bloedel pipeline||straight_line\",\"r w 997|its intersection with the alberni municipal boundary||other\",\"alberni municipal boundary|its intersection with the port alberni municipal boundary||district_boundary\",\"port alberni municipal boundary|the most southwesterly boundary of lot 232||district_boundary\",\"alberni inlet|the southeast corner of block 678||\",\"|a point approximately 182 m due east of the southeast corner of district lot 124|approximately 182 m|shoreline\",\"district lot 124|the point of commencement||lot_line\"] vs run 2 [\"district lot 124 alberni district|||\",\"|the intersection of r w 997 macmillan bloedel pipeline||straight_line\",\"r w 997|its intersection with the alberni municipal boundary||other\",\"alberni municipal boundary|its intersection with the port alberni municipal boundary||district_boundary\",\"port alberni municipal boundary|the most southwesterly boundary of lot 232||district_boundary\",\"alberni inlet|the southeast corner of block 678||\",\"|a point approximately 182 m due east of the southeast corner of district lot 124|approximately 182 m|shoreline\",\"district lot 124|the point of commencement||lot_line\"]",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nShoemaker Bay\n59 That portion of M.U. 1-7 situated in the vicinity of Port Alberni, Alberni District, commonly known as Shoemaker Bay and contained within the following described boundaries: Commencing at the northeast corner of District Lot 124 Alberni District; thence due East to the intersection of R/W 997 (MacMillan Bloedel pipeline); thence southeast along the southern boundary of R/W 997 to its intersection with the Alberni Municipal boundary; thence easterly along the Alberni Municipal boundary to its intersection with the Port Alberni Municipal boundary; thence southerly along the Port Alberni Municipal boundary to the most southwesterly boundary of Lot 232; thence northwesterly across Alberni Inlet to the southeast corner of Block 678; thence northerly along the mean high water mark to a point approximately 182 m due East of the southeast corner of District Lot 124; thence due North along the east boundary of District Lot 124 to the point of commencement.",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-9f0b435a4d9d",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:00:28Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 1-7"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the northeast corner of District Lot 124 Alberni District",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the northeast corner of District Lot 124 Alberni District"
+            },
+            {
+              "start": null,
+              "direction": "due East",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the intersection of R/W 997 (MacMillan Bloedel pipeline)",
+              "distance": null,
+              "quote": "thence due East to the intersection of R/W 997 (MacMillan Bloedel pipeline)"
+            },
+            {
+              "start": null,
+              "direction": "southeast",
+              "follow": "other",
+              "feature": "R/W 997",
+              "side_or_bank": "southern boundary",
+              "until": "its intersection with the Alberni Municipal boundary",
+              "distance": null,
+              "quote": "thence southeast along the southern boundary of R/W 997 to its intersection with the Alberni Municipal boundary"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "district_boundary",
+              "feature": "Alberni Municipal boundary",
+              "side_or_bank": null,
+              "until": "its intersection with the Port Alberni Municipal boundary",
+              "distance": null,
+              "quote": "thence easterly along the Alberni Municipal boundary to its intersection with the Port Alberni Municipal boundary"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "district_boundary",
+              "feature": "Port Alberni Municipal boundary",
+              "side_or_bank": null,
+              "until": "the most southwesterly boundary of Lot 232",
+              "distance": null,
+              "quote": "thence southerly along the Port Alberni Municipal boundary to the most southwesterly boundary of Lot 232"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly",
+              "follow": null,
+              "feature": "Alberni Inlet",
+              "side_or_bank": null,
+              "until": "the southeast corner of Block 678",
+              "distance": null,
+              "quote": "thence northwesterly across Alberni Inlet to the southeast corner of Block 678"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "shoreline",
+              "feature": null,
+              "side_or_bank": "mean high water mark",
+              "until": "a point approximately 182 m due East of the southeast corner of District Lot 124",
+              "distance": "approximately 182 m",
+              "quote": "thence northerly along the mean high water mark to a point approximately 182 m due East of the southeast corner of District Lot 124"
+            },
+            {
+              "start": null,
+              "direction": "due North",
+              "follow": "lot_line",
+              "feature": "District Lot 124",
+              "side_or_bank": "east boundary",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence due North along the east boundary of District Lot 124 to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "That portion of M.U. 1-7"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries: Commencing at"
+          },
+          {
+            "field": "geometry.steps[0]",
+            "quote": "Commencing at the northeast corner of District Lot 124 Alberni District"
+          },
+          {
+            "field": "geometry.steps[1]",
+            "quote": "thence due East to the intersection of R/W 997 (MacMillan Bloedel pipeline)"
+          },
+          {
+            "field": "geometry.steps[2]",
+            "quote": "thence southeast along the southern boundary of R/W 997 to its intersection with the Alberni Municipal boundary"
+          },
+          {
+            "field": "geometry.steps[3]",
+            "quote": "thence easterly along the Alberni Municipal boundary to its intersection with the Port Alberni Municipal boundary"
+          },
+          {
+            "field": "geometry.steps[4]",
+            "quote": "thence southerly along the Port Alberni Municipal boundary to the most southwesterly boundary of Lot 232"
+          },
+          {
+            "field": "geometry.steps[5]",
+            "quote": "thence northwesterly across Alberni Inlet to the southeast corner of Block 678"
+          },
+          {
+            "field": "geometry.steps[6]",
+            "quote": "thence northerly along the mean high water mark to a point approximately 182 m due East of the southeast corner of District Lot 124"
+          },
+          {
+            "field": "geometry.steps[7]",
+            "quote": "thence due North along the east boundary of District Lot 124 to the point of commencement"
+          }
+        ],
+        "uncertain": [
+          "geometry.steps[5].follow",
+          "geometry.steps[6].feature"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-9f0b435a4d9d",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:00:30Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 1-7"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the northeast corner of District Lot 124 Alberni District",
+              "direction": null,
+              "follow": null,
+              "feature": "District Lot 124 Alberni District",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the northeast corner of District Lot 124 Alberni District"
+            },
+            {
+              "start": null,
+              "direction": "due East",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the intersection of R/W 997 (MacMillan Bloedel pipeline)",
+              "distance": null,
+              "quote": "thence due East to the intersection of R/W 997 (MacMillan Bloedel pipeline)"
+            },
+            {
+              "start": null,
+              "direction": "southeast",
+              "follow": "other",
+              "feature": "R/W 997",
+              "side_or_bank": "southern boundary",
+              "until": "its intersection with the Alberni Municipal boundary",
+              "distance": null,
+              "quote": "thence southeast along the southern boundary of R/W 997 to its intersection with the Alberni Municipal boundary"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "district_boundary",
+              "feature": "Alberni Municipal boundary",
+              "side_or_bank": null,
+              "until": "its intersection with the Port Alberni Municipal boundary",
+              "distance": null,
+              "quote": "thence easterly along the Alberni Municipal boundary to its intersection with the Port Alberni Municipal boundary"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "district_boundary",
+              "feature": "Port Alberni Municipal boundary",
+              "side_or_bank": null,
+              "until": "the most southwesterly boundary of Lot 232",
+              "distance": null,
+              "quote": "thence southerly along the Port Alberni Municipal boundary to the most southwesterly boundary of Lot 232"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly",
+              "follow": null,
+              "feature": "Alberni Inlet",
+              "side_or_bank": null,
+              "until": "the southeast corner of Block 678",
+              "distance": null,
+              "quote": "thence northwesterly across Alberni Inlet to the southeast corner of Block 678"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "shoreline",
+              "feature": null,
+              "side_or_bank": "mean high water mark",
+              "until": "a point approximately 182 m due East of the southeast corner of District Lot 124",
+              "distance": "approximately 182 m",
+              "quote": "thence northerly along the mean high water mark to a point approximately 182 m due East of the southeast corner of District Lot 124"
+            },
+            {
+              "start": null,
+              "direction": "due North",
+              "follow": "lot_line",
+              "feature": "District Lot 124",
+              "side_or_bank": "east boundary",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence due North along the east boundary of District Lot 124 to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "That portion of M.U. 1-7"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries: Commencing at the northeast corner of District Lot 124 Alberni District"
+          }
+        ],
+        "uncertain": [
+          "geometry.steps[5].follow",
+          "geometry.steps[6].feature"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "within": "That portion of M.U. 1-7",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at the northeast corner of District Lot 124 Alberni District",
+    "geometry.steps[1]": "thence due East to the intersection of R/W 997 (MacMillan Bloedel pipeline)",
+    "geometry.steps[2]": "thence southeast along the southern boundary of R/W 997 to its intersection with the Alberni Municipal boundary",
+    "geometry.steps[3]": "thence easterly along the Alberni Municipal boundary to its intersection with the Port Alberni Municipal boundary",
+    "geometry.steps[4]": "thence southerly along the Port Alberni Municipal boundary to the most southwesterly boundary of Lot 232",
+    "geometry.steps[5]": "thence northwesterly across Alberni Inlet to the southeast corner of Block 678",
+    "geometry.steps[6]": "thence northerly along the mean high water mark to a point approximately 182 m due East of the southeast corner of District Lot 124",
+    "geometry.steps[7]": "thence due North along the east boundary of District Lot 124 to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "steps: run 1 [\"|||\",\"|the intersection of r w 997 macmillan bloedel pipeline||straight_line\",\"r w 997|its intersection with the alberni municipal boundary||other\",\"alberni municipal boundary|its intersection with the port alberni municipal boundary||district_boundary\",\"port alberni municipal boundary|the most southwesterly boundary of lot 232||district_boundary\",\"alberni inlet|the southeast corner of block 678||\",\"|a point approximately 182 m due east of the southeast corner of district lot 124|approximately 182 m|shoreline\",\"district lot 124|the point of commencement||lot_line\"] vs run 2 [\"district lot 124 alberni district|||\",\"|the intersection of r w 997 macmillan bloedel pipeline||straight_line\",\"r w 997|its intersection with the alberni municipal boundary||other\",\"alberni municipal boundary|its intersection with the port alberni municipal boundary||district_boundary\",\"port alberni municipal boundary|the most southwesterly boundary of lot 232||district_boundary\",\"alberni inlet|the southeast corner of block 678||\",\"|a point approximately 182 m due east of the southeast corner of district lot 124|approximately 182 m|shoreline\",\"district lot 124|the point of commencement||lot_line\"]"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:09:19.372Z",
+  "updated": "2026-10-21T16:09:19.372Z"
+}

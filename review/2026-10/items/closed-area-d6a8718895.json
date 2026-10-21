@@ -1,0 +1,347 @@
+{
+  "item_id": "closed-area-d6a8718895",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 88 (City of Terrace)",
+  "rule_id": "W5-088",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nCity of Terrace\n88 That portion of the Province of British Columbia in the vicinity of the City of Terrace which is contained within the following described boundaries: Commencing at the point of intersection of the natural boundary of Kitsumkalum River on the easterly shore thereof and the natural boundary of Skeena River on the northerly shore thereof; thence in a general easterly direction along the natural boundary of Skeena River on the northerly shore thereof to the point of intersection with the easterly boundary of L 4355A, Range 5, Coast Land District; thence southerly along the easterly boundary of L 4355A to the point of intersection with Treatment Plant Road; thence southerly along Treatment Plant Road to the most southerly point thereof; thence due East to the point of intersection with the natural boundary of Skeena River on the northerly shore thereof; thence in a general westerly direction along the natural boundary of Skeena River on the northerly shore thereof to the point of intersection with the midline of Highway 37; thence in a general southerly direction along the midline of Highway 37 to the point of intersection with the natural boundary of Skeena River on the southerly shore thereof; thence in a general westerly direction along the natural boundary of Skeena River on the southerly shore thereof to the point due South of the point of commencement; thence due North to the point of commencement. [en. B.C. Reg. 162/87, s. 24.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-c9afd1801ed4",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:00:19Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the point of intersection of the natural boundary of Kitsumkalum River on the easterly shore thereof and the natural boundary of Skeena River on the northerly shore thereof",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the point of intersection of the natural boundary of Kitsumkalum River on the easterly shore thereof and the natural boundary of Skeena River on the northerly shore thereof"
+            },
+            {
+              "start": null,
+              "direction": "in a general easterly direction",
+              "follow": "river",
+              "feature": "Skeena River",
+              "side_or_bank": "northerly shore",
+              "until": "the point of intersection with the easterly boundary of L 4355A, Range 5, Coast Land District",
+              "distance": null,
+              "quote": "thence in a general easterly direction along the natural boundary of Skeena River on the northerly shore thereof to the point of intersection with the easterly boundary of L 4355A, Range 5, Coast Land District"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "lot_line",
+              "feature": "L 4355A",
+              "side_or_bank": "easterly boundary",
+              "until": "the point of intersection with Treatment Plant Road",
+              "distance": null,
+              "quote": "thence southerly along the easterly boundary of L 4355A to the point of intersection with Treatment Plant Road"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "road",
+              "feature": "Treatment Plant Road",
+              "side_or_bank": null,
+              "until": "the most southerly point thereof",
+              "distance": null,
+              "quote": "thence southerly along Treatment Plant Road to the most southerly point thereof"
+            },
+            {
+              "start": null,
+              "direction": "due East",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of intersection with the natural boundary of Skeena River on the northerly shore thereof",
+              "distance": null,
+              "quote": "thence due East to the point of intersection with the natural boundary of Skeena River on the northerly shore thereof"
+            },
+            {
+              "start": null,
+              "direction": "in a general westerly direction",
+              "follow": "river",
+              "feature": "Skeena River",
+              "side_or_bank": "northerly shore",
+              "until": "the point of intersection with the midline of Highway 37",
+              "distance": null,
+              "quote": "thence in a general westerly direction along the natural boundary of Skeena River on the northerly shore thereof to the point of intersection with the midline of Highway 37"
+            },
+            {
+              "start": null,
+              "direction": "in a general southerly direction",
+              "follow": "road",
+              "feature": "Highway 37",
+              "side_or_bank": "midline",
+              "until": "the point of intersection with the natural boundary of Skeena River on the southerly shore thereof",
+              "distance": null,
+              "quote": "thence in a general southerly direction along the midline of Highway 37 to the point of intersection with the natural boundary of Skeena River on the southerly shore thereof"
+            },
+            {
+              "start": null,
+              "direction": "in a general westerly direction",
+              "follow": "river",
+              "feature": "Skeena River",
+              "side_or_bank": "southerly shore",
+              "until": "the point due South of the point of commencement",
+              "distance": null,
+              "quote": "thence in a general westerly direction along the natural boundary of Skeena River on the southerly shore thereof to the point due South of the point of commencement"
+            },
+            {
+              "start": null,
+              "direction": "due North",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence due North to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "which is contained within the following described boundaries"
+          }
+        ],
+        "uncertain": [
+          "within"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-c9afd1801ed4",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:00:23Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the point of intersection of the natural boundary of Kitsumkalum River on the easterly shore thereof and the natural boundary of Skeena River on the northerly shore thereof",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the point of intersection of the natural boundary of Kitsumkalum River on the easterly shore thereof and the natural boundary of Skeena River on the northerly shore thereof"
+            },
+            {
+              "start": null,
+              "direction": "general easterly",
+              "follow": "river",
+              "feature": "Skeena River",
+              "side_or_bank": "northerly shore",
+              "until": "the point of intersection with the easterly boundary of L 4355A, Range 5, Coast Land District",
+              "distance": null,
+              "quote": "thence in a general easterly direction along the natural boundary of Skeena River on the northerly shore thereof to the point of intersection with the easterly boundary of L 4355A, Range 5, Coast Land District"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "lot_line",
+              "feature": "L 4355A",
+              "side_or_bank": "easterly boundary",
+              "until": "the point of intersection with Treatment Plant Road",
+              "distance": null,
+              "quote": "thence southerly along the easterly boundary of L 4355A to the point of intersection with Treatment Plant Road"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "road",
+              "feature": "Treatment Plant Road",
+              "side_or_bank": null,
+              "until": "the most southerly point thereof",
+              "distance": null,
+              "quote": "thence southerly along Treatment Plant Road to the most southerly point thereof"
+            },
+            {
+              "start": null,
+              "direction": "due East",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of intersection with the natural boundary of Skeena River on the northerly shore thereof",
+              "distance": null,
+              "quote": "thence due East to the point of intersection with the natural boundary of Skeena River on the northerly shore thereof"
+            },
+            {
+              "start": null,
+              "direction": "general westerly",
+              "follow": "river",
+              "feature": "Skeena River",
+              "side_or_bank": "northerly shore",
+              "until": "the point of intersection with the midline of Highway 37",
+              "distance": null,
+              "quote": "thence in a general westerly direction along the natural boundary of Skeena River on the northerly shore thereof to the point of intersection with the midline of Highway 37"
+            },
+            {
+              "start": null,
+              "direction": "general southerly",
+              "follow": "road",
+              "feature": "Highway 37",
+              "side_or_bank": "midline",
+              "until": "the point of intersection with the natural boundary of Skeena River on the southerly shore thereof",
+              "distance": null,
+              "quote": "thence in a general southerly direction along the midline of Highway 37 to the point of intersection with the natural boundary of Skeena River on the southerly shore thereof"
+            },
+            {
+              "start": null,
+              "direction": "general westerly",
+              "follow": "river",
+              "feature": "Skeena River",
+              "side_or_bank": "southerly shore",
+              "until": "the point due South of the point of commencement",
+              "distance": null,
+              "quote": "thence in a general westerly direction along the natural boundary of Skeena River on the southerly shore thereof to the point due South of the point of commencement"
+            },
+            {
+              "start": null,
+              "direction": "due North",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence due North to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries: Commencing at"
+          },
+          {
+            "field": "geometry.steps[0]",
+            "quote": "Commencing at the point of intersection of the natural boundary of Kitsumkalum River on the easterly shore thereof and the natural boundary of Skeena River on the northerly shore thereof"
+          },
+          {
+            "field": "geometry.steps[1]",
+            "quote": "thence in a general easterly direction along the natural boundary of Skeena River on the northerly shore thereof to the point of intersection with the easterly boundary of L 4355A, Range 5, Coast Land District"
+          },
+          {
+            "field": "geometry.steps[2]",
+            "quote": "thence southerly along the easterly boundary of L 4355A to the point of intersection with Treatment Plant Road"
+          },
+          {
+            "field": "geometry.steps[3]",
+            "quote": "thence southerly along Treatment Plant Road to the most southerly point thereof"
+          },
+          {
+            "field": "geometry.steps[4]",
+            "quote": "thence due East to the point of intersection with the natural boundary of Skeena River on the northerly shore thereof"
+          },
+          {
+            "field": "geometry.steps[5]",
+            "quote": "thence in a general westerly direction along the natural boundary of Skeena River on the northerly shore thereof to the point of intersection with the midline of Highway 37"
+          },
+          {
+            "field": "geometry.steps[6]",
+            "quote": "thence in a general southerly direction along the midline of Highway 37 to the point of intersection with the natural boundary of Skeena River on the southerly shore thereof"
+          },
+          {
+            "field": "geometry.steps[7]",
+            "quote": "thence in a general westerly direction along the natural boundary of Skeena River on the southerly shore thereof to the point due South of the point of commencement"
+          },
+          {
+            "field": "geometry.steps[8]",
+            "quote": "thence due North to the point of commencement"
+          }
+        ],
+        "uncertain": [
+          "within"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at the point of intersection of the natural boundary of Kitsumkalum River on the easterly shore thereof and the natural boundary of Skeena River on the northerly shore thereof",
+    "geometry.steps[1]": "thence in a general easterly direction along the natural boundary of Skeena River on the northerly shore thereof to the point of intersection with the easterly boundary of L 4355A, Range 5, Coast Land District",
+    "geometry.steps[2]": "thence southerly along the easterly boundary of L 4355A to the point of intersection with Treatment Plant Road",
+    "geometry.steps[3]": "thence southerly along Treatment Plant Road to the most southerly point thereof",
+    "geometry.steps[4]": "thence due East to the point of intersection with the natural boundary of Skeena River on the northerly shore thereof",
+    "geometry.steps[5]": "thence in a general westerly direction along the natural boundary of Skeena River on the northerly shore thereof to the point of intersection with the midline of Highway 37",
+    "geometry.steps[6]": "thence in a general southerly direction along the midline of Highway 37 to the point of intersection with the natural boundary of Skeena River on the southerly shore thereof",
+    "geometry.steps[7]": "thence in a general westerly direction along the natural boundary of Skeena River on the southerly shore thereof to the point due South of the point of commencement",
+    "geometry.steps[8]": "thence due North to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:10:14.380Z",
+  "updated": "2026-10-21T16:10:14.380Z"
+}

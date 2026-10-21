@@ -1,0 +1,277 @@
+{
+  "item_id": "closed-area-47bc2e1fc0",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 3, section 36 (Conkle Lake Park)",
+  "rule_id": "W3-036",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: feature: run 1 \"lot 18895\" vs run 2 null; side: run 1 \"inside\" vs run 2 null; steps: run 1 [\"lot 18895|||\",\"lot 18895|the northeast corner||lot_line\",\"||280 m|straight_line\",\"||540 m|straight_line\",\"|the west boundary of lot 18895 sdyd|3.1 km|straight_line\",\"lot 18895|the point of commencement||lot_line\"] vs run 2 [\"|||\",\"lot 18895|the northeast corner||lot_line\",\"||280 m|straight_line\",\"||540 m|straight_line\",\"|the west boundary of lot 18895 sdyd|3.1 km|straight_line\",\"lot 18895|the point of commencement||lot_line\"]",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nConkle Lake Park\n36 That portion of M.U. 8-12, in the vicinity of Rock Creek, contained within the following described boundaries: Commencing at the northwest corner of Lot 18895, Similkameen Division, Yale District, thence due East along the north boundary of said lot to the northeast corner; thence due West a distance of 280 m; thence south 27° E for a distance of 540 m; thence due West a distance of 3.1 km to the west boundary of Lot 18895, SDYD, thence northerly along said boundary to the point of commencement. [en. B.C. Reg. 162/87, s. 12.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-cc3875e7afd5",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:00:53Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 8-12"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": {
+            "type": "lot",
+            "name": "Lot 18895"
+          },
+          "buffer_m": null,
+          "side": "inside",
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the northwest corner of Lot 18895, Similkameen Division, Yale District",
+              "direction": null,
+              "follow": null,
+              "feature": "Lot 18895",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the northwest corner of Lot 18895, Similkameen Division, Yale District"
+            },
+            {
+              "start": null,
+              "direction": "due East",
+              "follow": "lot_line",
+              "feature": "Lot 18895",
+              "side_or_bank": "north boundary",
+              "until": "the northeast corner",
+              "distance": null,
+              "quote": "thence due East along the north boundary of said lot to the northeast corner"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": "280 m",
+              "quote": "thence due West a distance of 280 m"
+            },
+            {
+              "start": null,
+              "direction": "south 27° E",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": "540 m",
+              "quote": "thence south 27° E for a distance of 540 m"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the west boundary of Lot 18895, SDYD",
+              "distance": "3.1 km",
+              "quote": "thence due West a distance of 3.1 km to the west boundary of Lot 18895, SDYD"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "lot_line",
+              "feature": "Lot 18895",
+              "side_or_bank": "west boundary",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence northerly along said boundary to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting or Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "That portion of M.U. 8-12"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "Commencing at the northwest corner of Lot 18895"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "Lot 18895, Similkameen Division, Yale District"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "contained within the following described boundaries"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-cc3875e7afd5",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:00:52Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 8-12"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the northwest corner of Lot 18895, Similkameen Division, Yale District",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the northwest corner of Lot 18895, Similkameen Division, Yale District"
+            },
+            {
+              "start": null,
+              "direction": "due East",
+              "follow": "lot_line",
+              "feature": "Lot 18895",
+              "side_or_bank": "north boundary",
+              "until": "the northeast corner",
+              "distance": null,
+              "quote": "thence due East along the north boundary of said lot to the northeast corner"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": "280 m",
+              "quote": "thence due West a distance of 280 m"
+            },
+            {
+              "start": null,
+              "direction": "south 27° E",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": "540 m",
+              "quote": "thence south 27° E for a distance of 540 m"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the west boundary of Lot 18895, SDYD",
+              "distance": "3.1 km",
+              "quote": "thence due West a distance of 3.1 km to the west boundary of Lot 18895, SDYD"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "lot_line",
+              "feature": "Lot 18895",
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence northerly along said boundary to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "Schedule 3 No Shooting or Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "That portion of M.U. 8-12"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "That portion of M.U. 8-12",
+    "geometry.feature": "Lot 18895, Similkameen Division, Yale District",
+    "effect": "No Shooting or Hunting Areas",
+    "geometry.side": "contained within the following described boundaries",
+    "geometry.steps[0]": "Commencing at the northwest corner of Lot 18895, Similkameen Division, Yale District",
+    "geometry.steps[1]": "thence due East along the north boundary of said lot to the northeast corner",
+    "geometry.steps[2]": "thence due West a distance of 280 m",
+    "geometry.steps[3]": "thence south 27° E for a distance of 540 m",
+    "geometry.steps[4]": "thence due West a distance of 3.1 km to the west boundary of Lot 18895, SDYD",
+    "geometry.steps[5]": "thence northerly along said boundary to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "feature: run 1 \"lot 18895\" vs run 2 null",
+    "side: run 1 \"inside\" vs run 2 null",
+    "steps: run 1 [\"lot 18895|||\",\"lot 18895|the northeast corner||lot_line\",\"||280 m|straight_line\",\"||540 m|straight_line\",\"|the west boundary of lot 18895 sdyd|3.1 km|straight_line\",\"lot 18895|the point of commencement||lot_line\"] vs run 2 [\"|||\",\"lot 18895|the northeast corner||lot_line\",\"||280 m|straight_line\",\"||540 m|straight_line\",\"|the west boundary of lot 18895 sdyd|3.1 km|straight_line\",\"lot 18895|the point of commencement||lot_line\"]"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:10:20.081Z",
+  "updated": "2026-10-21T16:10:20.081Z"
+}

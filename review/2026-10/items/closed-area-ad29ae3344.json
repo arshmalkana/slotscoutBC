@@ -1,0 +1,462 @@
+{
+  "item_id": "closed-area-ad29ae3344",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 14 (Gibralter Mines)",
+  "rule_id": "W5-014",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: steps: run 1 [\"lot 9170|||\",\"lot 9170|the northeast corner of said lot 9170||straight_line\",\"lot 9170|the northwest corner of said lot 9170||straight_line\",\"lot 9497|the northeast corner of lot 9497||straight_line\",\"lot 9497|the northwest corner of said lot 9497||straight_line\",\"lot 6166|the southwest corner of lot 6166||straight_line\",\"lot 6166|the southeast corner of said lot 6166||straight_line\",\"lot 6166|the northeast corner of said lot 6166||straight_line\",\"||7.6 km (4.7 miles)|straight_line\",\"||8.7 km (5.4 miles)|straight_line\",\"||2.0 km (1.2 miles)|straight_line\",\"||3.5 km (2.2 miles)|straight_line\",\"|the point of commencement||straight_line\"] vs run 2 [\"lot 9170 cariboo district|||\",\"lot 9170|the northeast corner of said lot 9170||\",\"lot 9170|the northwest corner of said lot 9170||\",\"lot 9497|the northeast corner of lot 9497||\",\"lot 9497|the northwest corner of said lot 9497||\",\"lot 6166|the southwest corner of lot 6166||\",\"lot 6166|the southeast corner of said lot 6166||\",\"lot 6166|the northeast corner of said lot 6166||\",\"||7.6 km (4.7 miles)|\",\"||8.7 km (5.4 miles)|\",\"||2.0 km (1.2 miles)|\",\"||3.5 km (2.2 miles)|\",\"|the point of commencement||\"]",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nGibralter Mines\n14 Commencing at the southeast corner of Lot 9170, Cariboo District; thence north to the northeast corner of said Lot 9170; thence west to the northwest corner of said Lot 9170; thence northerly to the northeast corner of Lot 9497; thence west to the northwest corner of said Lot 9497; thence northwesterly to the southwest corner of Lot 6166; thence east to the southeast corner of said Lot 6166; thence north to the northeast corner of said Lot 6166; thence east 7.6 km (4.7 miles); thence south 8.7 km (5.4 miles); thence west 2.0 km (1.2 miles); thence south 3.5 km (2.2 miles); thence west to the point of commencement. [en. B.C. Reg. 221/2005, s. 3 (b).]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-73ecc2f0ea6c",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:01:34Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the southeast corner of Lot 9170, Cariboo District",
+              "direction": null,
+              "follow": null,
+              "feature": "Lot 9170",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the southeast corner of Lot 9170, Cariboo District"
+            },
+            {
+              "start": null,
+              "direction": "north",
+              "follow": "straight_line",
+              "feature": "Lot 9170",
+              "side_or_bank": null,
+              "until": "the northeast corner of said Lot 9170",
+              "distance": null,
+              "quote": "thence north to the northeast corner of said Lot 9170"
+            },
+            {
+              "start": null,
+              "direction": "west",
+              "follow": "straight_line",
+              "feature": "Lot 9170",
+              "side_or_bank": null,
+              "until": "the northwest corner of said Lot 9170",
+              "distance": null,
+              "quote": "thence west to the northwest corner of said Lot 9170"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "straight_line",
+              "feature": "Lot 9497",
+              "side_or_bank": null,
+              "until": "the northeast corner of Lot 9497",
+              "distance": null,
+              "quote": "thence northerly to the northeast corner of Lot 9497"
+            },
+            {
+              "start": null,
+              "direction": "west",
+              "follow": "straight_line",
+              "feature": "Lot 9497",
+              "side_or_bank": null,
+              "until": "the northwest corner of said Lot 9497",
+              "distance": null,
+              "quote": "thence west to the northwest corner of said Lot 9497"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly",
+              "follow": "straight_line",
+              "feature": "Lot 6166",
+              "side_or_bank": null,
+              "until": "the southwest corner of Lot 6166",
+              "distance": null,
+              "quote": "thence northwesterly to the southwest corner of Lot 6166"
+            },
+            {
+              "start": null,
+              "direction": "east",
+              "follow": "straight_line",
+              "feature": "Lot 6166",
+              "side_or_bank": null,
+              "until": "the southeast corner of said Lot 6166",
+              "distance": null,
+              "quote": "thence east to the southeast corner of said Lot 6166"
+            },
+            {
+              "start": null,
+              "direction": "north",
+              "follow": "straight_line",
+              "feature": "Lot 6166",
+              "side_or_bank": null,
+              "until": "the northeast corner of said Lot 6166",
+              "distance": null,
+              "quote": "thence north to the northeast corner of said Lot 6166"
+            },
+            {
+              "start": null,
+              "direction": "east",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": "7.6 km (4.7 miles)",
+              "quote": "thence east 7.6 km (4.7 miles)"
+            },
+            {
+              "start": null,
+              "direction": "south",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": "8.7 km (5.4 miles)",
+              "quote": "thence south 8.7 km (5.4 miles)"
+            },
+            {
+              "start": null,
+              "direction": "west",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": "2.0 km (1.2 miles)",
+              "quote": "thence west 2.0 km (1.2 miles)"
+            },
+            {
+              "start": null,
+              "direction": "south",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": "3.5 km (2.2 miles)",
+              "quote": "thence south 3.5 km (2.2 miles)"
+            },
+            {
+              "start": null,
+              "direction": "west",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence west to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "Commencing at the southeast corner of Lot 9170"
+          },
+          {
+            "field": "geometry.steps[0]",
+            "quote": "Commencing at the southeast corner of Lot 9170, Cariboo District"
+          },
+          {
+            "field": "geometry.steps[1]",
+            "quote": "thence north to the northeast corner of said Lot 9170"
+          },
+          {
+            "field": "geometry.steps[2]",
+            "quote": "thence west to the northwest corner of said Lot 9170"
+          },
+          {
+            "field": "geometry.steps[3]",
+            "quote": "thence northerly to the northeast corner of Lot 9497"
+          },
+          {
+            "field": "geometry.steps[4]",
+            "quote": "thence west to the northwest corner of said Lot 9497"
+          },
+          {
+            "field": "geometry.steps[5]",
+            "quote": "thence northwesterly to the southwest corner of Lot 6166"
+          },
+          {
+            "field": "geometry.steps[6]",
+            "quote": "thence east to the southeast corner of said Lot 6166"
+          },
+          {
+            "field": "geometry.steps[7]",
+            "quote": "thence north to the northeast corner of said Lot 6166"
+          },
+          {
+            "field": "geometry.steps[8]",
+            "quote": "thence east 7.6 km (4.7 miles)"
+          },
+          {
+            "field": "geometry.steps[9]",
+            "quote": "thence south 8.7 km (5.4 miles)"
+          },
+          {
+            "field": "geometry.steps[10]",
+            "quote": "thence west 2.0 km (1.2 miles)"
+          },
+          {
+            "field": "geometry.steps[11]",
+            "quote": "thence south 3.5 km (2.2 miles)"
+          },
+          {
+            "field": "geometry.steps[12]",
+            "quote": "thence west to the point of commencement"
+          }
+        ],
+        "uncertain": [
+          "within"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-73ecc2f0ea6c",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:01:28Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the southeast corner of Lot 9170, Cariboo District",
+              "direction": null,
+              "follow": null,
+              "feature": "Lot 9170, Cariboo District",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the southeast corner of Lot 9170, Cariboo District"
+            },
+            {
+              "start": null,
+              "direction": "north",
+              "follow": null,
+              "feature": "Lot 9170",
+              "side_or_bank": null,
+              "until": "the northeast corner of said Lot 9170",
+              "distance": null,
+              "quote": "thence north to the northeast corner of said Lot 9170"
+            },
+            {
+              "start": null,
+              "direction": "west",
+              "follow": null,
+              "feature": "Lot 9170",
+              "side_or_bank": null,
+              "until": "the northwest corner of said Lot 9170",
+              "distance": null,
+              "quote": "thence west to the northwest corner of said Lot 9170"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": null,
+              "feature": "Lot 9497",
+              "side_or_bank": null,
+              "until": "the northeast corner of Lot 9497",
+              "distance": null,
+              "quote": "thence northerly to the northeast corner of Lot 9497"
+            },
+            {
+              "start": null,
+              "direction": "west",
+              "follow": null,
+              "feature": "Lot 9497",
+              "side_or_bank": null,
+              "until": "the northwest corner of said Lot 9497",
+              "distance": null,
+              "quote": "thence west to the northwest corner of said Lot 9497"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly",
+              "follow": null,
+              "feature": "Lot 6166",
+              "side_or_bank": null,
+              "until": "the southwest corner of Lot 6166",
+              "distance": null,
+              "quote": "thence northwesterly to the southwest corner of Lot 6166"
+            },
+            {
+              "start": null,
+              "direction": "east",
+              "follow": null,
+              "feature": "Lot 6166",
+              "side_or_bank": null,
+              "until": "the southeast corner of said Lot 6166",
+              "distance": null,
+              "quote": "thence east to the southeast corner of said Lot 6166"
+            },
+            {
+              "start": null,
+              "direction": "north",
+              "follow": null,
+              "feature": "Lot 6166",
+              "side_or_bank": null,
+              "until": "the northeast corner of said Lot 6166",
+              "distance": null,
+              "quote": "thence north to the northeast corner of said Lot 6166"
+            },
+            {
+              "start": null,
+              "direction": "east",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": "7.6 km (4.7 miles)",
+              "quote": "thence east 7.6 km (4.7 miles)"
+            },
+            {
+              "start": null,
+              "direction": "south",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": "8.7 km (5.4 miles)",
+              "quote": "thence south 8.7 km (5.4 miles)"
+            },
+            {
+              "start": null,
+              "direction": "west",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": "2.0 km (1.2 miles)",
+              "quote": "thence west 2.0 km (1.2 miles)"
+            },
+            {
+              "start": null,
+              "direction": "south",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": "3.5 km (2.2 miles)",
+              "quote": "thence south 3.5 km (2.2 miles)"
+            },
+            {
+              "start": null,
+              "direction": "west",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence west to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "Commencing at the southeast corner of Lot 9170, Cariboo District; thence"
+          }
+        ],
+        "uncertain": [
+          "within",
+          "geometry.steps[1].follow",
+          "geometry.steps[2].follow",
+          "geometry.steps[3].follow",
+          "geometry.steps[4].follow",
+          "geometry.steps[5].follow",
+          "geometry.steps[6].follow",
+          "geometry.steps[7].follow",
+          "geometry.steps[8].follow",
+          "geometry.steps[9].follow",
+          "geometry.steps[10].follow",
+          "geometry.steps[11].follow",
+          "geometry.steps[12].follow"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at the southeast corner of Lot 9170, Cariboo District",
+    "geometry.steps[1]": "thence north to the northeast corner of said Lot 9170",
+    "geometry.steps[2]": "thence west to the northwest corner of said Lot 9170",
+    "geometry.steps[3]": "thence northerly to the northeast corner of Lot 9497",
+    "geometry.steps[4]": "thence west to the northwest corner of said Lot 9497",
+    "geometry.steps[5]": "thence northwesterly to the southwest corner of Lot 6166",
+    "geometry.steps[6]": "thence east to the southeast corner of said Lot 6166",
+    "geometry.steps[7]": "thence north to the northeast corner of said Lot 6166",
+    "geometry.steps[8]": "thence east 7.6 km (4.7 miles)",
+    "geometry.steps[9]": "thence south 8.7 km (5.4 miles)",
+    "geometry.steps[10]": "thence west 2.0 km (1.2 miles)",
+    "geometry.steps[11]": "thence south 3.5 km (2.2 miles)",
+    "geometry.steps[12]": "thence west to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "steps: run 1 [\"lot 9170|||\",\"lot 9170|the northeast corner of said lot 9170||straight_line\",\"lot 9170|the northwest corner of said lot 9170||straight_line\",\"lot 9497|the northeast corner of lot 9497||straight_line\",\"lot 9497|the northwest corner of said lot 9497||straight_line\",\"lot 6166|the southwest corner of lot 6166||straight_line\",\"lot 6166|the southeast corner of said lot 6166||straight_line\",\"lot 6166|the northeast corner of said lot 6166||straight_line\",\"||7.6 km (4.7 miles)|straight_line\",\"||8.7 km (5.4 miles)|straight_line\",\"||2.0 km (1.2 miles)|straight_line\",\"||3.5 km (2.2 miles)|straight_line\",\"|the point of commencement||straight_line\"] vs run 2 [\"lot 9170 cariboo district|||\",\"lot 9170|the northeast corner of said lot 9170||\",\"lot 9170|the northwest corner of said lot 9170||\",\"lot 9497|the northeast corner of lot 9497||\",\"lot 9497|the northwest corner of said lot 9497||\",\"lot 6166|the southwest corner of lot 6166||\",\"lot 6166|the southeast corner of said lot 6166||\",\"lot 6166|the northeast corner of said lot 6166||\",\"||7.6 km (4.7 miles)|\",\"||8.7 km (5.4 miles)|\",\"||2.0 km (1.2 miles)|\",\"||3.5 km (2.2 miles)|\",\"|the point of commencement||\"]"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:08:44.690Z",
+  "updated": "2026-10-21T16:08:44.690Z"
+}

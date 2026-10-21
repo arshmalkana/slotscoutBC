@@ -3765,3 +3765,565 @@
 2026-10-20T22:01:03.125Z [build] parts 4/4 (100%), all done: build summary written
 2026-10-20T22:01:03.125Z [build] done: {"month":"2026-10","builtAt":"2026-10-20T21:58:53.401Z","closedAreas":{"waiting for extraction":133,"needs person":119,"candidate":2},"roadNotices":{"notices":401,"placed":183,"removed":0,"aiRead":33,"lookupFailures":0,"dmNotices":{"read":46,"roads":74,"waiting":0,"unreadable":0,"disagree":6}},"bylaws":{"docs":6,"agreed":5},"changeClasses":0,"withdrawnItems":0}
 2026-10-20T22:01:03.763Z [validate] 3 rule features, 332 bylaw rows, 9 regions, 41 sources: 0 errors, 5 warnings
+2026-10-21T16:07:24.287Z [build] parts 0/4 (0%), 4 left: closed areas
+2026-10-21T16:07:24.887Z [build] W5-045: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:24.888Z [build] closed areas 1/254 (0%), 253 left: Closed Areas Regulation, Schedule 5, section 45 (Lakelse Lake): needs person
+2026-10-21T16:07:24.902Z [build] W9-004: no shape; 2 issue(s) for the reviewer
+2026-10-21T16:07:24.902Z [build] closed areas 2/254 (0%), 252 left: Closed Areas Regulation, Schedule 9, section 4 (Barnston Island): needs person
+2026-10-21T16:07:24.917Z [build] W5-095: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:24.918Z [build] closed areas 3/254 (1%), 251 left: Closed Areas Regulation, Schedule 5, section 95 (Equity Mines): needs person
+2026-10-21T16:07:24.948Z [build] W3-010: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:24.948Z [build] closed areas 4/254 (1%), 250 left: Closed Areas Regulation, Schedule 3, section 10 (Similkameen Mining Company Limited): needs person
+2026-10-21T16:07:25.803Z [build] W3-061: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:25.803Z [build] closed areas 5/254 (1%), 249 left: Closed Areas Regulation, Schedule 3, section 61 (Elkview Operations): needs person
+2026-10-21T16:07:25.825Z [build] W5-055: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:25.825Z [build] closed areas 6/254 (2%), 248 left: Closed Areas Regulation, Schedule 5, section 55 (Yale): needs person
+2026-10-21T16:07:25.999Z [build] W3-044: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:25.999Z [build] closed areas 7/254 (2%), 247 left: Closed Areas Regulation, Schedule 3, section 44 (Nitinat River): needs person
+2026-10-21T16:07:26.013Z [build] W1-001: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:26.014Z [build] closed areas 8/254 (3%), 246 left: Closed Areas Regulation, Schedule 1, section 1 (Bergenham and Moberly): needs person
+2026-10-21T16:07:26.028Z [build] W5-028: no shape; 2 issue(s) for the reviewer
+2026-10-21T16:07:26.028Z [build] closed areas 9/254 (3%), 245 left: Closed Areas Regulation, Schedule 5, section 28 (Highways): needs person
+2026-10-21T16:07:26.044Z [build] W3-040: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:26.044Z [build] closed areas 10/254 (3%), 244 left: Closed Areas Regulation, Schedule 3, section 40 (Lazo Marsh): needs person
+2026-10-21T16:07:26.055Z [build] W5-011: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:26.055Z [build] closed areas 11/254 (4%), 243 left: Closed Areas Regulation, Schedule 5, section 11 (Bowen Island): needs person
+2026-10-21T16:07:26.219Z [build] W5-124: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:26.219Z [build] closed areas 12/254 (4%), 242 left: Closed Areas Regulation, Schedule 5, section 124 (Gillies Bay and Shelter Point Roads): needs person
+2026-10-21T16:07:26.234Z [build] W5-110: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:26.234Z [build] closed areas 13/254 (5%), 241 left: Closed Areas Regulation, Schedule 5, section 110 (Windermere): needs person
+2026-10-21T16:07:26.476Z [build] W3-068: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:26.477Z [build] closed areas 14/254 (5%), 240 left: Closed Areas Regulation, Schedule 3, section 68 (Burnt River): needs person
+2026-10-21T16:07:26.495Z [build] W1-004: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:26.495Z [build] closed areas 15/254 (5%), 239 left: Closed Areas Regulation, Schedule 1, section 4 (George C. Reifel): needs person
+2026-10-21T16:07:26.509Z [build] W3-045: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:26.510Z [build] closed areas 16/254 (6%), 238 left: Closed Areas Regulation, Schedule 3, section 45 (Cowichan Lake): needs person
+2026-10-21T16:07:26.523Z [build] W5-020: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:26.523Z [build] closed areas 17/254 (6%), 237 left: Closed Areas Regulation, Schedule 5, section 20 (Charlie Lake): needs person
+2026-10-21T16:07:26.537Z [build] W5-062: no shape; 2 issue(s) for the reviewer
+2026-10-21T16:07:26.537Z [build] closed areas 18/254 (7%), 236 left: Closed Areas Regulation, Schedule 5, section 62 (Squamish): needs person
+2026-10-21T16:07:26.552Z [build] W3-057: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:26.552Z [build] closed areas 19/254 (7%), 235 left: Closed Areas Regulation, Schedule 3, section 57 (Edgewater): needs person
+2026-10-21T16:07:26.565Z [build] W9-028: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:26.565Z [build] closed areas 20/254 (7%), 234 left: Closed Areas Regulation, Schedule 9, section 28 (Quadra Island): needs person
+2026-10-21T16:07:26.581Z [build] W8-035: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:26.581Z [build] closed areas 21/254 (8%), 233 left: Closed Areas Regulation, Schedule 7, section 35 (Creston Valley Wildlife Management Area): needs person
+2026-10-21T16:07:26.594Z [build] W5-056: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:26.594Z [build] closed areas 22/254 (8%), 232 left: Closed Areas Regulation, Schedule 5, section 56 (Popkum): needs person
+2026-10-21T16:07:26.730Z [build] W1-010: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:26.731Z [build] closed areas 23/254 (9%), 231 left: Closed Areas Regulation, Schedule 1, section 10 (Serpentine River): needs person
+2026-10-21T16:07:26.752Z [build] W5-130: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:26.752Z [build] closed areas 24/254 (9%), 230 left: Closed Areas Regulation, Schedule 5, section 130 (Roberts Bank Superport and Tsawwassen Ferry Terminal Causeways): needs person
+2026-10-21T16:07:26.764Z [build] W3-016: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:26.765Z [build] closed areas 25/254 (9%), 229 left: Closed Areas Regulation, Schedule 3, section 16 (Argenta Marsh Wildlife Management Area): needs person
+2026-10-21T16:07:26.779Z [build] W10-003: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:26.779Z [build] closed areas 26/254 (10%), 228 left: Closed Areas Regulation, Schedule 10, section 3 (One Island Pasture): needs person
+2026-10-21T16:07:26.973Z [build] W9-010: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:26.974Z [build] closed areas 27/254 (10%), 227 left: Closed Areas Regulation, Schedule 9, section 10 (Chilliwack Valley): needs person
+2026-10-21T16:07:26.988Z [build] W9-001: no shape; 2 issue(s) for the reviewer
+2026-10-21T16:07:26.988Z [build] closed areas 28/254 (11%), 226 left: Closed Areas Regulation, Schedule 9, section 1: needs person
+2026-10-21T16:07:27.001Z [build] W5-048: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:27.001Z [build] closed areas 29/254 (11%), 225 left: Closed Areas Regulation, Schedule 5, section 48 (Naramata): needs person
+2026-10-21T16:07:29.976Z [build] W5-049: candidate v1 (new); 0 issue(s) for the reviewer
+2026-10-21T16:07:29.976Z [build] closed areas 30/254 (11%), 224 left: Closed Areas Regulation, Schedule 5, section 49 (Huntingdon and Sumas Mountain): candidate
+2026-10-21T16:07:29.995Z [build] W3-004: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:29.995Z [build] closed areas 31/254 (12%), 223 left: Closed Areas Regulation, Schedule 3, section 4 (Sicamous): needs person
+2026-10-21T16:07:30.007Z [build] W1-009: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:30.007Z [build] closed areas 32/254 (12%), 222 left: Closed Areas Regulation, Schedule 1, section 9 (Robert W. Starratt): needs person
+2026-10-21T16:07:30.020Z [build] W2-001: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:30.021Z [build] closed areas 33/254 (12%), 221 left: Closed Areas Regulation, Schedule 2, section 1 (Stum Lake): needs person
+2026-10-21T16:07:30.153Z [build] W8-037: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:30.153Z [build] closed areas 34/254 (13%), 220 left: Closed Areas Regulation, Schedule 7, section 37 (Silver Star Recreation Area): needs person
+2026-10-21T16:07:30.406Z [build] W3-058: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:30.407Z [build] closed areas 35/254 (13%), 219 left: Closed Areas Regulation, Schedule 3, section 58 (Mudge Island): needs person
+2026-10-21T16:07:30.423Z [build] W5-075: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:30.424Z [build] closed areas 36/254 (14%), 218 left: Closed Areas Regulation, Schedule 5, section 75 (Okanagan Falls): needs person
+2026-10-21T16:07:30.656Z [build] W6-013: no shape; 4 issue(s) for the reviewer
+2026-10-21T16:07:30.656Z [build] closed areas 37/254 (14%), 217 left: Closed Areas Regulation, Schedule 5.1, section 13 (Squamish River Valley): needs person
+2026-10-21T16:07:30.674Z [build] W5-058: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:30.674Z [build] closed areas 38/254 (14%), 216 left: Closed Areas Regulation, Schedule 5, section 58 (Masset): needs person
+2026-10-21T16:07:30.687Z [build] W5-047: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:30.687Z [build] closed areas 39/254 (15%), 215 left: Closed Areas Regulation, Schedule 5, section 47 (Sandspit): needs person
+2026-10-21T16:07:30.902Z [build] W8-054: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:30.902Z [build] closed areas 40/254 (15%), 214 left: Closed Areas Regulation, Schedule 7, section 54 (Fontas): needs person
+2026-10-21T16:07:31.158Z [build] W5-122: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:31.158Z [build] closed areas 41/254 (16%), 213 left: Closed Areas Regulation, Schedule 5, section 122 (Quinsam Coal Mine): needs person
+2026-10-21T16:07:31.171Z [build] W8-039: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:07:31.171Z [build] closed areas 42/254 (16%), 212 left: Closed Areas Regulation, Schedule 7, section 39 (Cody Caves): needs person
+2026-10-21T16:08:06.046Z [build] W5-114: no shape; 6 issue(s) for the reviewer
+2026-10-21T16:08:06.046Z [build] closed areas 43/254 (16%), 211 left: Closed Areas Regulation, Schedule 5, section 114 (Westcan Terminals): needs person
+2026-10-21T16:08:06.555Z [build] W3-066: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:06.555Z [build] closed areas 44/254 (17%), 210 left: Closed Areas Regulation, Schedule 3, section 66 (Marble Canyon Park): needs person
+2026-10-21T16:08:06.694Z [build] W8-007: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:06.694Z [build] closed areas 45/254 (17%), 209 left: Closed Areas Regulation, Schedule 7, section 7 (Murtle Lake Nature Conservancy): needs person
+2026-10-21T16:08:06.714Z [build] W1-003: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:06.714Z [build] closed areas 46/254 (18%), 208 left: Closed Areas Regulation, Schedule 1, section 3 (Delkatla): needs person
+2026-10-21T16:08:22.410Z [build] W3-069: candidate v1 (new); 2 issue(s) for the reviewer
+2026-10-21T16:08:22.411Z [build] closed areas 47/254 (18%), 207 left: Closed Areas Regulation, Schedule 3, section 69 (Nisg̱a'a Highway): candidate
+2026-10-21T16:08:22.430Z [build] W4-003: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:22.431Z [build] closed areas 48/254 (18%), 206 left: Closed Areas Regulation, Schedule 4, section 3 (Pitt Wildlife Management Area): needs person
+2026-10-21T16:08:31.431Z [build] W8-053: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:31.432Z [build] closed areas 49/254 (19%), 205 left: Closed Areas Regulation, Schedule 7, section 53 (Highway 3 — Loop Bridge and Alexander Bridge): needs person
+2026-10-21T16:08:31.563Z [build] W5-100: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:31.564Z [build] closed areas 50/254 (19%), 204 left: Closed Areas Regulation, Schedule 5, section 100 (Snootli Creek Park): needs person
+2026-10-21T16:08:31.812Z [build] W8-8-005: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:31.812Z [build] closed areas 51/254 (20%), 203 left: Closed Areas Regulation, Schedule 8, section 5 (K'waal and Kitkiata Watersheds): needs person
+2026-10-21T16:08:31.830Z [build] W8-006: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:31.830Z [build] closed areas 52/254 (20%), 202 left: Closed Areas Regulation, Schedule 7, section 6 (Lot 495 N.W.D.): needs person
+2026-10-21T16:08:31.854Z [build] W5-003: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:31.854Z [build] closed areas 53/254 (20%), 201 left: Closed Areas Regulation, Schedule 5, section 3 (Ganges): needs person
+2026-10-21T16:08:31.874Z [build] W9-002: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:31.874Z [build] closed areas 54/254 (21%), 200 left: Closed Areas Regulation, Schedule 9, section 2 (Pemberton): needs person
+2026-10-21T16:08:32.059Z [build] W6-006: no shape; 4 issue(s) for the reviewer
+2026-10-21T16:08:32.059Z [build] closed areas 55/254 (21%), 199 left: Closed Areas Regulation, Schedule 5.1, section 6 (Jones Lake and Lorenzetta Forest Service Roads): needs person
+2026-10-21T16:08:32.075Z [build] W3-024: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:32.075Z [build] closed areas 56/254 (22%), 198 left: Closed Areas Regulation, Schedule 3, section 24 (Kamloops): needs person
+2026-10-21T16:08:32.089Z [build] W5-113: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:32.089Z [build] closed areas 57/254 (22%), 197 left: Closed Areas Regulation, Schedule 5, section 113 (Fort St. John Sewage Lagoons): needs person
+2026-10-21T16:08:32.106Z [build] W3-005: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:32.106Z [build] closed areas 58/254 (22%), 196 left: Closed Areas Regulation, Schedule 3, section 5 (Salmon Arm): needs person
+2026-10-21T16:08:32.126Z [build] W5-106: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:32.126Z [build] closed areas 59/254 (23%), 195 left: Closed Areas Regulation, Schedule 5, section 106 (Babine River): needs person
+2026-10-21T16:08:32.142Z [build] W8-044: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:32.142Z [build] closed areas 60/254 (23%), 194 left: Closed Areas Regulation, Schedule 7, section 44 (Gwillim Lake Park): needs person
+2026-10-21T16:08:32.310Z [build] W5-093: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:32.310Z [build] closed areas 61/254 (24%), 193 left: Closed Areas Regulation, Schedule 5, section 93 (Cold Fish Lake Camp): needs person
+2026-10-21T16:08:32.325Z [build] W5-125: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:32.325Z [build] closed areas 62/254 (24%), 192 left: Closed Areas Regulation, Schedule 5, section 125 (Comox Harbour): needs person
+2026-10-21T16:08:32.346Z [build] W5-032: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:32.346Z [build] closed areas 63/254 (24%), 191 left: Closed Areas Regulation, Schedule 5, section 32 (Sooke and Metchosin): needs person
+2026-10-21T16:08:32.362Z [build] W4-006: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:32.362Z [build] closed areas 64/254 (25%), 190 left: Closed Areas Regulation, Schedule 4, section 6 (Kennedy Siding): needs person
+2026-10-21T16:08:32.379Z [build] W9-007: no shape; 2 issue(s) for the reviewer
+2026-10-21T16:08:32.379Z [build] closed areas 65/254 (25%), 189 left: Closed Areas Regulation, Schedule 9, section 7 (Cultus Lake): needs person
+2026-10-21T16:08:32.392Z [build] W3-025: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:32.392Z [build] closed areas 66/254 (25%), 188 left: Closed Areas Regulation, Schedule 3, section 25 (Stone Mountain): needs person
+2026-10-21T16:08:32.408Z [build] W5-037: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:32.408Z [build] closed areas 67/254 (26%), 187 left: Closed Areas Regulation, Schedule 5, section 37 (Red Rock Seed Orchard): needs person
+2026-10-21T16:08:32.425Z [build] W7-006: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:32.426Z [build] closed areas 68/254 (26%), 186 left: Closed Areas Regulation, Schedule 6, section 6 (Osoyoos Oxbows): needs person
+2026-10-21T16:08:32.439Z [build] W5-007: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:32.440Z [build] closed areas 69/254 (27%), 185 left: Closed Areas Regulation, Schedule 5, section 7 (Englishman River): needs person
+2026-10-21T16:08:32.454Z [build] W5-027: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:32.454Z [build] closed areas 70/254 (27%), 184 left: Closed Areas Regulation, Schedule 5, section 27 (Cherry Point): needs person
+2026-10-21T16:08:32.471Z [build] W9-003: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:32.471Z [build] closed areas 71/254 (27%), 183 left: Closed Areas Regulation, Schedule 9, section 3 (Naramata): needs person
+2026-10-21T16:08:32.611Z [build] W5-127: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:32.611Z [build] closed areas 72/254 (28%), 182 left: Closed Areas Regulation, Schedule 5, section 127 (Willow Heights Wildlife Reserve): needs person
+2026-10-21T16:08:32.627Z [build] W9-026: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:32.627Z [build] closed areas 73/254 (28%), 181 left: Closed Areas Regulation, Schedule 9, section 26 (Stamp Lagoon): needs person
+2026-10-21T16:08:32.646Z [build] W5-053: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:32.646Z [build] closed areas 74/254 (29%), 180 left: Closed Areas Regulation, Schedule 5, section 53 (Hope): needs person
+2026-10-21T16:08:32.660Z [build] W6-001: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:32.660Z [build] closed areas 75/254 (29%), 179 left: Closed Areas Regulation, Schedule 5.1, section 1 (Definition): needs person
+2026-10-21T16:08:32.674Z [build] W3-015: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:32.674Z [build] closed areas 76/254 (29%), 178 left: Closed Areas Regulation, Schedule 3, section 15 (Walter Clough Wildlife Management Area): needs person
+2026-10-21T16:08:32.694Z [build] W1-008: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:32.694Z [build] closed areas 77/254 (30%), 177 left: Closed Areas Regulation, Schedule 1, section 8 (Reidemann): needs person
+2026-10-21T16:08:32.708Z [build] W5-017: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:32.708Z [build] closed areas 78/254 (30%), 176 left: Closed Areas Regulation, Schedule 5, section 17 (Ocean Falls): needs person
+2026-10-21T16:08:32.724Z [build] W1-007: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:32.724Z [build] closed areas 79/254 (31%), 175 left: Closed Areas Regulation, Schedule 1, section 7 (McGillivray Creek): needs person
+2026-10-21T16:08:32.746Z [build] W5-064: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:32.746Z [build] closed areas 80/254 (31%), 174 left: Closed Areas Regulation, Schedule 5, section 64 (Sechelt): needs person
+2026-10-21T16:08:32.763Z [build] W5-035: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:32.763Z [build] closed areas 81/254 (31%), 173 left: Closed Areas Regulation, Schedule 5, section 35 (Mayo Lake): needs person
+2026-10-21T16:08:32.892Z [build] W6-011: no shape; 4 issue(s) for the reviewer
+2026-10-21T16:08:32.893Z [build] closed areas 82/254 (32%), 172 left: Closed Areas Regulation, Schedule 5.1, section 11 (Francis Lake, Sts'ailes (West) and Weaver Lake Forest Service Roads): needs person
+2026-10-21T16:08:32.907Z [build] W8-027: no shape; 2 issue(s) for the reviewer
+2026-10-21T16:08:32.907Z [build] closed areas 83/254 (32%), 171 left: Closed Areas Regulation, Schedule 7, section 27 (Provincial Parks): needs person
+2026-10-21T16:08:33.140Z [build] W5-057: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:33.140Z [build] closed areas 84/254 (33%), 170 left: Closed Areas Regulation, Schedule 5, section 57 (Greenhills Operations): needs person
+2026-10-21T16:08:33.158Z [build] W3-028: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:33.158Z [build] closed areas 85/254 (33%), 169 left: Closed Areas Regulation, Schedule 3, section 28 (North Kitsumkalum): needs person
+2026-10-21T16:08:33.173Z [build] W5-015: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:33.173Z [build] closed areas 86/254 (33%), 168 left: Closed Areas Regulation, Schedule 5, section 15 (Williams Lake): needs person
+2026-10-21T16:08:33.399Z [build] W5-116: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:33.399Z [build] closed areas 87/254 (34%), 167 left: Closed Areas Regulation, Schedule 5, section 116 (Fry Creek Recreation Area): needs person
+2026-10-21T16:08:33.424Z [build] W11-005: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:33.424Z [build] closed areas 88/254 (34%), 166 left: Closed Areas Regulation, Schedule 11, section 5 (Management Unit 1-1): needs person
+2026-10-21T16:08:33.445Z [build] W5-076: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:33.445Z [build] closed areas 89/254 (35%), 165 left: Closed Areas Regulation, Schedule 5, section 76 (Kaleden): needs person
+2026-10-21T16:08:33.650Z [build] W9-014: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:33.650Z [build] closed areas 90/254 (35%), 164 left: Closed Areas Regulation, Schedule 9, section 14 (Sechelt): needs person
+2026-10-21T16:08:33.672Z [build] W5-021: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:33.672Z [build] closed areas 91/254 (35%), 163 left: Closed Areas Regulation, Schedule 5, section 21 (Cowichan Bay): needs person
+2026-10-21T16:08:33.688Z [build] W3-049: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:33.688Z [build] closed areas 92/254 (36%), 162 left: Closed Areas Regulation, Schedule 3, section 49 (Kinuseo Falls): needs person
+2026-10-21T16:08:33.706Z [build] W5-016: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:33.706Z [build] closed areas 93/254 (36%), 161 left: Closed Areas Regulation, Schedule 5, section 16 (Provincial Gaol Camp No. 1): needs person
+2026-10-21T16:08:33.901Z [build] W5-077: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:33.902Z [build] closed areas 94/254 (37%), 160 left: Closed Areas Regulation, Schedule 5, section 77 (Coal Mountain Operations): needs person
+2026-10-21T16:08:33.918Z [build] W3-031: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:33.918Z [build] closed areas 95/254 (37%), 159 left: Closed Areas Regulation, Schedule 3, section 31 (Roderick Haig-Brown Recreation Area): needs person
+2026-10-21T16:08:34.155Z [build] W8-040: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:34.156Z [build] closed areas 96/254 (37%), 158 left: Closed Areas Regulation, Schedule 7, section 40 (Norbury Lake Park): needs person
+2026-10-21T16:08:34.183Z [build] W11-001: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:34.183Z [build] closed areas 97/254 (38%), 157 left: Closed Areas Regulation, Schedule 11, section 1 (Nicomen): needs person
+2026-10-21T16:08:34.203Z [build] W1-014: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:34.204Z [build] closed areas 98/254 (38%), 156 left: Closed Areas Regulation, Schedule 1, section 14 (Ward Lake): needs person
+2026-10-21T16:08:34.224Z [build] W8-034: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:34.224Z [build] closed areas 99/254 (38%), 155 left: Closed Areas Regulation, Schedule 7, section 34 (Golden Bear Access Road): needs person
+2026-10-21T16:08:34.246Z [build] W5-084: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:34.246Z [build] closed areas 100/254 (39%), 154 left: Closed Areas Regulation, Schedule 5, section 84 (Upper Halfway): needs person
+2026-10-21T16:08:34.260Z [build] W3-055: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:34.260Z [build] closed areas 101/254 (39%), 153 left: Closed Areas Regulation, Schedule 3, section 55 (Sun Peaks Resort): needs person
+2026-10-21T16:08:34.420Z [build] W8-005: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:34.420Z [build] closed areas 102/254 (40%), 152 left: Closed Areas Regulation, Schedule 7, section 5 (Bowen Island): needs person
+2026-10-21T16:08:38.010Z [build] W5-085: candidate v2 (new); 0 issue(s) for the reviewer
+2026-10-21T16:08:38.010Z [build] closed areas 103/254 (40%), 151 left: Closed Areas Regulation, Schedule 5, section 85 (Sylvester Road): candidate
+2026-10-21T16:08:38.027Z [build] W3-013: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:38.027Z [build] closed areas 104/254 (40%), 150 left: Closed Areas Regulation, Schedule 3, section 13 (Tabor Mountain): needs person
+2026-10-21T16:08:38.053Z [build] W8-8-003: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:38.053Z [build] closed areas 105/254 (41%), 149 left: Closed Areas Regulation, Schedule 8, section 3 (Sunset Prairie): needs person
+2026-10-21T16:08:38.068Z [build] W3-056: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:38.068Z [build] closed areas 106/254 (41%), 148 left: Closed Areas Regulation, Schedule 3, section 56 (Radium): needs person
+2026-10-21T16:08:38.083Z [build] W1-012: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:38.083Z [build] closed areas 107/254 (42%), 147 left: Closed Areas Regulation, Schedule 1, section 12 (Tunkwa Lake): needs person
+2026-10-21T16:08:38.106Z [build] W8-049: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:38.106Z [build] closed areas 108/254 (42%), 146 left: Closed Areas Regulation, Schedule 7, section 49 (Khutzeymateen Park): needs person
+2026-10-21T16:08:38.231Z [build] W8-052: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:38.231Z [build] closed areas 109/254 (42%), 145 left: Closed Areas Regulation, Schedule 7, section 52 (Whistler Olympic Park): needs person
+2026-10-21T16:08:38.247Z [build] W4-005: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:38.247Z [build] closed areas 110/254 (43%), 144 left: Closed Areas Regulation, Schedule 4, section 5 (Naikoon Park): needs person
+2026-10-21T16:08:38.264Z [build] W3-023: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:38.264Z [build] closed areas 111/254 (43%), 143 left: Closed Areas Regulation, Schedule 3, section 23 (Mt. Bergeron — Tumbler Ridge): needs person
+2026-10-21T16:08:38.281Z [build] W10-002: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:38.281Z [build] closed areas 112/254 (44%), 142 left: Closed Areas Regulation, Schedule 10, section 2 (Groundbirch): needs person
+2026-10-21T16:08:44.484Z [build] W6-012: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:44.485Z [build] closed areas 113/254 (44%), 141 left: Closed Areas Regulation, Schedule 5.1, section 12 (Chehalis Forest Service Road): needs person
+2026-10-21T16:08:44.517Z [build] W3-054: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:44.518Z [build] closed areas 114/254 (44%), 140 left: Closed Areas Regulation, Schedule 3, section 54 (Centennial Beach): needs person
+2026-10-21T16:08:44.543Z [build] W5-094: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:44.543Z [build] closed areas 115/254 (45%), 139 left: Closed Areas Regulation, Schedule 5, section 94 (Williams Lake River): needs person
+2026-10-21T16:08:44.673Z [build] W5-115: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:44.673Z [build] closed areas 116/254 (45%), 138 left: Closed Areas Regulation, Schedule 5, section 115 (Mount Judge Howay Park): needs person
+2026-10-21T16:08:44.691Z [build] W5-014: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:44.691Z [build] closed areas 117/254 (46%), 137 left: Closed Areas Regulation, Schedule 5, section 14 (Gibralter Mines): needs person
+2026-10-21T16:08:44.930Z [build] W6-003: no shape; 4 issue(s) for the reviewer
+2026-10-21T16:08:44.930Z [build] closed areas 118/254 (46%), 136 left: Closed Areas Regulation, Schedule 5.1, section 3 (Liumchen East Forest Service Road etc.): needs person
+2026-10-21T16:08:44.953Z [build] W5-063: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:44.954Z [build] closed areas 119/254 (46%), 135 left: Closed Areas Regulation, Schedule 5, section 63 (Nicomen): needs person
+2026-10-21T16:08:44.971Z [build] W8-046: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:44.971Z [build] closed areas 120/254 (47%), 134 left: Closed Areas Regulation, Schedule 7, section 46 (Lukwa Lake): needs person
+2026-10-21T16:08:45.173Z [build] W5-041: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:45.173Z [build] closed areas 121/254 (47%), 133 left: Closed Areas Regulation, Schedule 5, section 41 (Line Creek Operations): needs person
+2026-10-21T16:08:45.194Z [build] W11-004: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:45.194Z [build] closed areas 122/254 (48%), 132 left: Closed Areas Regulation, Schedule 11, section 4 (Grand Forks): needs person
+2026-10-21T16:08:45.211Z [build] W9-015: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:45.211Z [build] closed areas 123/254 (48%), 131 left: Closed Areas Regulation, Schedule 9, section 15 (Skaha Lake): needs person
+2026-10-21T16:08:45.275Z [build] W3-029: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:45.275Z [build] closed areas 124/254 (48%), 130 left: Closed Areas Regulation, Schedule 3, section 29 (Pacific Rim (Westcoast) National Park): needs person
+2026-10-21T16:08:45.436Z [build] W3-053: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:45.436Z [build] closed areas 125/254 (49%), 129 left: Closed Areas Regulation, Schedule 3, section 53 (De Courcey Island): needs person
+2026-10-21T16:08:45.455Z [build] W9-017: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:45.455Z [build] closed areas 126/254 (49%), 128 left: Closed Areas Regulation, Schedule 9, section 17 (Lakelse Lake): needs person
+2026-10-21T16:08:45.473Z [build] W8-021: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:45.473Z [build] closed areas 127/254 (50%), 127 left: Closed Areas Regulation, Schedule 7, section 21 (Atlin Park): needs person
+2026-10-21T16:08:45.917Z [build] W9-009: no shape; 2 issue(s) for the reviewer
+2026-10-21T16:08:45.917Z [build] closed areas 128/254 (50%), 126 left: Closed Areas Regulation, Schedule 9, section 9 (Nicomen): needs person
+2026-10-21T16:08:45.938Z [build] W5-061: no shape; 2 issue(s) for the reviewer
+2026-10-21T16:08:45.938Z [build] closed areas 129/254 (50%), 125 left: Closed Areas Regulation, Schedule 5, section 61 (Evans Lake): needs person
+2026-10-21T16:08:46.067Z [build] W8-055: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:46.067Z [build] closed areas 130/254 (51%), 124 left: Closed Areas Regulation, Schedule 7, section 55 (Lord River): needs person
+2026-10-21T16:08:46.087Z [build] W5-060: no shape; 2 issue(s) for the reviewer
+2026-10-21T16:08:46.088Z [build] closed areas 131/254 (51%), 123 left: Closed Areas Regulation, Schedule 5, section 60 (Whistler): needs person
+2026-10-21T16:08:46.106Z [build] W5-046: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:46.106Z [build] closed areas 132/254 (51%), 122 left: Closed Areas Regulation, Schedule 5, section 46 (Queen Charlotte City): needs person
+2026-10-21T16:08:54.774Z [build] W3-063: no shape; 1 issue(s) for the reviewer
+2026-10-21T16:08:54.774Z [build] closed areas 133/254 (52%), 121 left: Closed Areas Regulation, Schedule 3, section 63 (Sea to Sky Highway): needs person
+2026-10-21T16:08:54.908Z [build] W6-005: no shape; 4 issue(s) for the reviewer
+2026-10-21T16:08:54.908Z [build] closed areas 134/254 (52%), 120 left: Closed Areas Regulation, Schedule 5.1, section 5 (Bench, Foley and Nesakwatch Forest Service Roads): needs person
+2026-10-21T16:08:54.928Z [build] W9-019: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:54.928Z [build] closed areas 135/254 (53%), 119 left: Closed Areas Regulation, Schedule 9, section 19 (Naikoon Park): needs person
+2026-10-21T16:08:54.944Z [build] W5-098: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:08:54.944Z [build] closed areas 136/254 (53%), 118 left: Closed Areas Regulation, Schedule 5, section 98 (Texada Junction): needs person
+2026-10-21T16:09:00.473Z [build] W3-064: no shape; 2 issue(s) for the reviewer
+2026-10-21T16:09:00.473Z [build] closed areas 137/254 (53%), 117 left: Closed Areas Regulation, Schedule 3, section 64 (Callaghan Road): needs person
+2026-10-21T16:09:00.495Z [build] W5-044: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:00.495Z [build] closed areas 138/254 (54%), 116 left: Closed Areas Regulation, Schedule 5, section 44 (Link Island): needs person
+2026-10-21T16:09:00.516Z [build] W5-034: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:00.516Z [build] closed areas 139/254 (54%), 115 left: Closed Areas Regulation, Schedule 5, section 34 (Rose Lake): needs person
+2026-10-21T16:09:00.533Z [build] W5-103: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:00.533Z [build] closed areas 140/254 (55%), 114 left: Closed Areas Regulation, Schedule 5, section 103 (Sea Island): needs person
+2026-10-21T16:09:00.680Z [build] W3-067: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:00.680Z [build] closed areas 141/254 (55%), 113 left: Closed Areas Regulation, Schedule 3, section 67 (Shaman Island): needs person
+2026-10-21T16:09:18.052Z [build] W5-089: no shape; 4 issue(s) for the reviewer
+2026-10-21T16:09:18.052Z [build] closed areas 142/254 (55%), 112 left: Closed Areas Regulation, Schedule 5, section 89 (Grantham Road): needs person
+2026-10-21T16:09:18.077Z [build] W9-029: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:18.077Z [build] closed areas 143/254 (56%), 111 left: Closed Areas Regulation, Schedule 9, section 29 (Nanaimo to Ladysmith): needs person
+2026-10-21T16:09:18.646Z [build] W12-001: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:18.646Z [build] closed areas 144/254 (56%), 110 left: Closed Areas Regulation, Schedule 13, section 1 (Delta/Surrey Dykes): needs person
+2026-10-21T16:09:18.779Z [build] W6-010: no shape; 4 issue(s) for the reviewer
+2026-10-21T16:09:18.779Z [build] closed areas 145/254 (57%), 109 left: Closed Areas Regulation, Schedule 5.1, section 10 (Norrish Creek watershed): needs person
+2026-10-21T16:09:18.808Z [build] W5-129: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:18.808Z [build] closed areas 146/254 (57%), 108 left: Closed Areas Regulation, Schedule 5, section 129 (Dokie): needs person
+2026-10-21T16:09:19.035Z [build] W8-045: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:19.035Z [build] closed areas 147/254 (57%), 107 left: Closed Areas Regulation, Schedule 7, section 45 (Woodhus Slough): needs person
+2026-10-21T16:09:19.288Z [build] W5-135: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:19.288Z [build] closed areas 148/254 (58%), 106 left: Closed Areas Regulation, Schedule 5, section 135 (Cowichan River Park): needs person
+2026-10-21T16:09:19.313Z [build] W8-013: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:19.313Z [build] closed areas 149/254 (58%), 105 left: Closed Areas Regulation, Schedule 7, section 13 (Mount Assiniboine Park): needs person
+2026-10-21T16:09:19.334Z [build] W3-046: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:19.334Z [build] closed areas 150/254 (59%), 104 left: Closed Areas Regulation, Schedule 3, section 46 (Trophy Mountain): needs person
+2026-10-21T16:09:19.353Z [build] W3-050: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:19.353Z [build] closed areas 151/254 (59%), 103 left: Closed Areas Regulation, Schedule 3, section 50 (Ucluelet): needs person
+2026-10-21T16:09:19.372Z [build] W5-059: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:19.373Z [build] closed areas 152/254 (59%), 102 left: Closed Areas Regulation, Schedule 5, section 59 (Shoemaker Bay): needs person
+2026-10-21T16:09:19.395Z [build] W5-006: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:19.395Z [build] closed areas 153/254 (60%), 101 left: Closed Areas Regulation, Schedule 5, section 6 (Skookumchuck Pulp Mill): needs person
+2026-10-21T16:09:19.421Z [build] W5-096: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:19.421Z [build] closed areas 154/254 (60%), 100 left: Closed Areas Regulation, Schedule 5, section 96 (Miworth): needs person
+2026-10-21T16:09:19.444Z [build] W5-073: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:19.444Z [build] closed areas 155/254 (61%), 99 left: Closed Areas Regulation, Schedule 5, section 73 (Michael Lake): needs person
+2026-10-21T16:09:19.584Z [build] W5-140: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:19.584Z [build] closed areas 156/254 (61%), 98 left: Closed Areas Regulation, Schedule 5, section 140 (Lafarge to Pritchard): needs person
+2026-10-21T16:09:19.605Z [build] W5-105: no shape; 2 issue(s) for the reviewer
+2026-10-21T16:09:19.605Z [build] closed areas 157/254 (61%), 97 left: Closed Areas Regulation, Schedule 5, section 105 (Dawson Creek Environmental Demonstration Areas): needs person
+2026-10-21T16:09:25.200Z [build] W8-015: no shape; 2 issue(s) for the reviewer
+2026-10-21T16:09:25.201Z [build] closed areas 158/254 (62%), 96 left: Closed Areas Regulation, Schedule 7, section 15 (Tweedsmuir Park): needs person
+2026-10-21T16:09:25.337Z [build] W6-014: no shape; 4 issue(s) for the reviewer
+2026-10-21T16:09:25.337Z [build] closed areas 159/254 (62%), 95 left: Closed Areas Regulation, Schedule 5.1, section 14 (Chehalis Fleetwood): needs person
+2026-10-21T16:09:56.597Z [build] W3-038: no shape; 5 issue(s) for the reviewer
+2026-10-21T16:09:56.597Z [build] closed areas 160/254 (62%), 94 left: Closed Areas Regulation, Schedule 3, section 38 (Okanagan Connector Highway): needs person
+2026-10-21T16:09:56.619Z [build] W5-136: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:56.619Z [build] closed areas 161/254 (63%), 93 left: Closed Areas Regulation, Schedule 5, section 136 (Crawford Bay): needs person
+2026-10-21T16:09:56.768Z [build] W6-009: no shape; 4 issue(s) for the reviewer
+2026-10-21T16:09:56.768Z [build] closed areas 162/254 (63%), 92 left: Closed Areas Regulation, Schedule 5.1, section 9 (Hatzic): needs person
+2026-10-21T16:09:56.789Z [build] W1-015: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:56.789Z [build] closed areas 163/254 (64%), 91 left: Closed Areas Regulation, Schedule 1, section 15 (Elizabeth Lake): needs person
+2026-10-21T16:09:56.809Z [build] W7-003: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:56.809Z [build] closed areas 164/254 (64%), 90 left: Closed Areas Regulation, Schedule 6, section 3 (Cultus Lake): needs person
+2026-10-21T16:09:56.829Z [build] W9-030: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:56.829Z [build] closed areas 165/254 (64%), 89 left: Closed Areas Regulation, Schedule 9, section 30 (Ladysmith to Malahat): needs person
+2026-10-21T16:09:57.012Z [build] W9-011: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:57.012Z [build] closed areas 166/254 (65%), 88 left: Closed Areas Regulation, Schedule 9, section 11 (Sechelt): needs person
+2026-10-21T16:09:57.033Z [build] W5-133: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:57.033Z [build] closed areas 167/254 (65%), 87 left: Closed Areas Regulation, Schedule 5, section 133 (Buckley Bay): needs person
+2026-10-21T16:09:57.059Z [build] W3-030: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:57.059Z [build] closed areas 168/254 (66%), 86 left: Closed Areas Regulation, Schedule 3, section 30 (Garibaldi Park): needs person
+2026-10-21T16:09:57.255Z [build] W6-008: no shape; 4 issue(s) for the reviewer
+2026-10-21T16:09:57.255Z [build] closed areas 169/254 (66%), 85 left: Closed Areas Regulation, Schedule 5.1, section 8 (Lost Creek Forest Service Road etc.): needs person
+2026-10-21T16:09:57.276Z [build] W9-023: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:57.276Z [build] closed areas 170/254 (66%), 84 left: Closed Areas Regulation, Schedule 9, section 23 (Savary Island): needs person
+2026-10-21T16:09:57.506Z [build] W5-128: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:57.506Z [build] closed areas 171/254 (67%), 83 left: Closed Areas Regulation, Schedule 5, section 128 (Upper Carmi Road): needs person
+2026-10-21T16:09:57.526Z [build] W5-134: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:57.526Z [build] closed areas 172/254 (67%), 82 left: Closed Areas Regulation, Schedule 5, section 134 (Nanoose Bay): needs person
+2026-10-21T16:09:57.546Z [build] W3-022: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:57.546Z [build] closed areas 173/254 (68%), 81 left: Closed Areas Regulation, Schedule 3, section 22 (Pitt Wildlife Management Area): needs person
+2026-10-21T16:09:57.565Z [build] W5-081: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:57.565Z [build] closed areas 174/254 (68%), 80 left: Closed Areas Regulation, Schedule 5, section 81 (Fording Mountain): needs person
+2026-10-21T16:09:57.581Z [build] W7-004: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:57.581Z [build] closed areas 175/254 (68%), 79 left: Closed Areas Regulation, Schedule 6, section 4 (Garibaldi Park): needs person
+2026-10-21T16:09:57.598Z [build] W3-026: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:57.598Z [build] closed areas 176/254 (69%), 78 left: Closed Areas Regulation, Schedule 3, section 26 (Nekite River): needs person
+2026-10-21T16:09:57.616Z [build] W8-038: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:57.616Z [build] closed areas 177/254 (69%), 77 left: Closed Areas Regulation, Schedule 7, section 38 (Sunshine Meadows): needs person
+2026-10-21T16:09:57.635Z [build] W5-120: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:57.635Z [build] closed areas 178/254 (70%), 76 left: Closed Areas Regulation, Schedule 5, section 120 (Tow Hill): needs person
+2026-10-21T16:09:57.770Z [build] W5-091: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:57.770Z [build] closed areas 179/254 (70%), 75 left: Closed Areas Regulation, Schedule 5, section 91 (Waugh Lake — Skookumchuck): needs person
+2026-10-21T16:09:57.789Z [build] W3-006: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:57.789Z [build] closed areas 180/254 (70%), 74 left: Closed Areas Regulation, Schedule 3, section 6 (Swan Lake): needs person
+2026-10-21T16:09:57.808Z [build] W9-022: no shape; 2 issue(s) for the reviewer
+2026-10-21T16:09:57.808Z [build] closed areas 181/254 (71%), 73 left: Closed Areas Regulation, Schedule 9, section 22 (Highways): needs person
+2026-10-21T16:09:58.022Z [build] W5-067: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:58.022Z [build] closed areas 182/254 (71%), 72 left: Closed Areas Regulation, Schedule 5, section 67 (Blubber Bay): needs person
+2026-10-21T16:09:58.278Z [build] W3-060: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:58.278Z [build] closed areas 183/254 (72%), 71 left: Closed Areas Regulation, Schedule 3, section 60 (East Moberly Lake 169): needs person
+2026-10-21T16:09:58.523Z [build] W5-068: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:58.524Z [build] closed areas 184/254 (72%), 70 left: Closed Areas Regulation, Schedule 5, section 68 (Lund): needs person
+2026-10-21T16:09:58.544Z [build] W1-002: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:58.544Z [build] closed areas 185/254 (72%), 69 left: Closed Areas Regulation, Schedule 1, section 2 (Columbia Lake and River): needs person
+2026-10-21T16:09:58.565Z [build] W1-017: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:58.565Z [build] closed areas 186/254 (73%), 68 left: Closed Areas Regulation, Schedule 1, section 17 (Gwaii Haanas National Park Reserve): needs person
+2026-10-21T16:09:58.585Z [build] W5-066: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:58.585Z [build] closed areas 187/254 (73%), 67 left: Closed Areas Regulation, Schedule 5, section 66 (Saltery Bay): needs person
+2026-10-21T16:09:58.605Z [build] W5-018: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:58.605Z [build] closed areas 188/254 (74%), 66 left: Closed Areas Regulation, Schedule 5, section 18 (Kumdis Bay): needs person
+2026-10-21T16:09:58.770Z [build] W6-004: no shape; 4 issue(s) for the reviewer
+2026-10-21T16:09:58.770Z [build] closed areas 189/254 (74%), 65 left: Closed Areas Regulation, Schedule 5.1, section 4 (McGuire and Tamihi Creek Forest Service Roads): needs person
+2026-10-21T16:09:58.789Z [build] W1-006: no shape; 2 issue(s) for the reviewer
+2026-10-21T16:09:58.790Z [build] closed areas 190/254 (74%), 64 left: Closed Areas Regulation, Schedule 1, section 6 (McDougall): needs person
+2026-10-21T16:09:58.810Z [build] W8-033: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:58.810Z [build] closed areas 191/254 (75%), 63 left: Closed Areas Regulation, Schedule 7, section 33 (Tweedsmuir Park): needs person
+2026-10-21T16:09:59.022Z [build] W3-062: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:59.023Z [build] closed areas 192/254 (75%), 62 left: Closed Areas Regulation, Schedule 3, section 62 (Coal Mountain Operations): needs person
+2026-10-21T16:09:59.043Z [build] W5-031: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:09:59.043Z [build] closed areas 193/254 (75%), 61 left: Closed Areas Regulation, Schedule 5, section 31 (Blind Bay): needs person
+2026-10-21T16:10:05.363Z [build] W6-002: no shape; 6 issue(s) for the reviewer
+2026-10-21T16:10:05.363Z [build] closed areas 194/254 (76%), 60 left: Closed Areas Regulation, Schedule 5.1, section 2 (Silver Skagit Forest Service Road): needs person
+2026-10-21T16:10:14.220Z [build] W3-009: no shape; 2 issue(s) for the reviewer
+2026-10-21T16:10:14.221Z [build] closed areas 195/254 (76%), 59 left: Closed Areas Regulation, Schedule 3, section 9 (Highway 3): needs person
+2026-10-21T16:10:14.242Z [build] W5-005: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:14.243Z [build] closed areas 196/254 (77%), 58 left: Closed Areas Regulation, Schedule 5, section 5 (Buntzen Lake): needs person
+2026-10-21T16:10:14.261Z [build] W6-007: no shape; 4 issue(s) for the reviewer
+2026-10-21T16:10:14.261Z [build] closed areas 197/254 (77%), 57 left: Closed Areas Regulation, Schedule 5.1, section 7 (Florence Lake Forest Service Road): needs person
+2026-10-21T16:10:14.281Z [build] W5-123: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:14.281Z [build] closed areas 198/254 (77%), 56 left: Closed Areas Regulation, Schedule 5, section 123 (Selkirk): needs person
+2026-10-21T16:10:14.301Z [build] W5-099: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:14.301Z [build] closed areas 199/254 (78%), 55 left: Closed Areas Regulation, Schedule 5, section 99 (Village of 100 Mile House): needs person
+2026-10-21T16:10:14.319Z [build] W3-052: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:14.319Z [build] closed areas 200/254 (78%), 54 left: Closed Areas Regulation, Schedule 3, section 52 (JeweI Lake): needs person
+2026-10-21T16:10:14.338Z [build] W7-007: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:14.338Z [build] closed areas 201/254 (79%), 53 left: Closed Areas Regulation, Schedule 6, section 7 (Cowichan Bay): needs person
+2026-10-21T16:10:14.358Z [build] W5-008: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:14.358Z [build] closed areas 202/254 (79%), 52 left: Closed Areas Regulation, Schedule 5, section 8 (Todagin Mountain): needs person
+2026-10-21T16:10:14.380Z [build] W5-088: no shape; 2 issue(s) for the reviewer
+2026-10-21T16:10:14.380Z [build] closed areas 203/254 (79%), 51 left: Closed Areas Regulation, Schedule 5, section 88 (City of Terrace): needs person
+2026-10-21T16:10:14.399Z [build] W5-074: no shape; 2 issue(s) for the reviewer
+2026-10-21T16:10:14.399Z [build] closed areas 204/254 (80%), 50 left: Closed Areas Regulation, Schedule 5, section 74 (Burrard Inlet): needs person
+2026-10-21T16:10:14.541Z [build] W5-092: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:14.541Z [build] closed areas 205/254 (80%), 49 left: Closed Areas Regulation, Schedule 5, section 92 (Hemlock Valley): needs person
+2026-10-21T16:10:14.560Z [build] W5-009: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:14.560Z [build] closed areas 206/254 (81%), 48 left: Closed Areas Regulation, Schedule 5, section 9 (Logan Lake): needs person
+2026-10-21T16:10:20.059Z [build] W3-043: no shape; 2 issue(s) for the reviewer
+2026-10-21T16:10:20.059Z [build] closed areas 207/254 (81%), 47 left: Closed Areas Regulation, Schedule 3, section 43 (Road 248): needs person
+2026-10-21T16:10:20.082Z [build] W3-036: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:20.082Z [build] closed areas 208/254 (81%), 46 left: Closed Areas Regulation, Schedule 3, section 36 (Conkle Lake Park): needs person
+2026-10-21T16:10:20.754Z [build] W5-004: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:20.755Z [build] closed areas 209/254 (82%), 45 left: Closed Areas Regulation, Schedule 5, section 4 (McQueen, Griffin and Isobel Lakes): needs person
+2026-10-21T16:10:20.777Z [build] W1-013: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:20.777Z [build] closed areas 210/254 (82%), 44 left: Closed Areas Regulation, Schedule 1, section 13 (Wasa Slough): needs person
+2026-10-21T16:10:20.797Z [build] W9-027: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:20.797Z [build] closed areas 211/254 (83%), 43 left: Closed Areas Regulation, Schedule 9, section 27 (Campbell River to Nanaimo): needs person
+2026-10-21T16:10:20.818Z [build] W3-012: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:20.818Z [build] closed areas 212/254 (83%), 42 left: Closed Areas Regulation, Schedule 3, section 12 (Addington Marsh): needs person
+2026-10-21T16:10:20.840Z [build] W5-078: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:20.840Z [build] closed areas 213/254 (83%), 41 left: Closed Areas Regulation, Schedule 5, section 78 (Highland Valley): needs person
+2026-10-21T16:10:20.860Z [build] W3-002: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:20.860Z [build] closed areas 214/254 (84%), 40 left: Closed Areas Regulation, Schedule 3, section 2 (Tranquille Wildlife Management Area): needs person
+2026-10-21T16:10:20.880Z [build] W3-019: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:20.880Z [build] closed areas 215/254 (84%), 39 left: Closed Areas Regulation, Schedule 3, section 19 (The Province): needs person
+2026-10-21T16:10:20.903Z [build] W8-042: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:20.903Z [build] closed areas 216/254 (85%), 38 left: Closed Areas Regulation, Schedule 7, section 42 (Eskers Park): needs person
+2026-10-21T16:10:21.042Z [build] W8-056: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:21.043Z [build] closed areas 217/254 (85%), 37 left: Closed Areas Regulation, Schedule 7, section 56 (Chilko — Newton): needs person
+2026-10-21T16:10:21.290Z [build] W5-139: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:21.290Z [build] closed areas 218/254 (85%), 36 left: Closed Areas Regulation, Schedule 5, section 139 (Hudson Bay Mountain/Smithers Community Forest): needs person
+2026-10-21T16:10:21.312Z [build] W1-005: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:21.312Z [build] closed areas 219/254 (86%), 35 left: Closed Areas Regulation, Schedule 1, section 5 (Lucy Island): needs person
+2026-10-21T16:10:21.555Z [build] W5-065: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:21.555Z [build] closed areas 220/254 (86%), 34 left: Closed Areas Regulation, Schedule 5, section 65 (Gillies Bay): needs person
+2026-10-21T16:10:21.578Z [build] W5-126: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:21.578Z [build] closed areas 221/254 (87%), 33 left: Closed Areas Regulation, Schedule 5, section 126 (Houston Community Forest): needs person
+2026-10-21T16:10:21.600Z [build] W5-119: no shape; 2 issue(s) for the reviewer
+2026-10-21T16:10:21.600Z [build] closed areas 222/254 (87%), 32 left: Closed Areas Regulation, Schedule 5, section 119 (Lion's Bay): needs person
+2026-10-21T16:10:21.621Z [build] W5-023: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:21.621Z [build] closed areas 223/254 (87%), 31 left: Closed Areas Regulation, Schedule 5, section 23 (Nanaimo): needs person
+2026-10-21T16:10:21.642Z [build] W3-042: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:21.642Z [build] closed areas 224/254 (88%), 30 left: Closed Areas Regulation, Schedule 3, section 42 (Cathedral Park): needs person
+2026-10-21T16:10:21.662Z [build] W9-025: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:21.663Z [build] closed areas 225/254 (88%), 29 left: Closed Areas Regulation, Schedule 9, section 25 (Port Clements): needs person
+2026-10-21T16:10:21.684Z [build] W5-087: no shape; 2 issue(s) for the reviewer
+2026-10-21T16:10:21.684Z [build] closed areas 226/254 (88%), 28 left: Closed Areas Regulation, Schedule 5, section 87 (Mascot Gold Mines Limited): needs person
+2026-10-21T16:10:30.847Z [build] W5-137: no shape; 4 issue(s) for the reviewer
+2026-10-21T16:10:30.847Z [build] closed areas 227/254 (89%), 27 left: Closed Areas Regulation, Schedule 5, section 137 (White-Moscow Forest Service Road): needs person
+2026-10-21T16:10:30.875Z [build] W5-104: no shape; 4 issue(s) for the reviewer
+2026-10-21T16:10:30.875Z [build] closed areas 228/254 (89%), 26 left: Closed Areas Regulation, Schedule 5, section 104 (Tatlow Road): needs person
+2026-10-21T16:10:30.917Z [build] W8-8-001: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:30.918Z [build] closed areas 229/254 (90%), 25 left: Closed Areas Regulation, Schedule 8, section 1 (Cecil Lake): needs person
+2026-10-21T16:10:30.938Z [build] W5-118: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:30.938Z [build] closed areas 230/254 (90%), 24 left: Closed Areas Regulation, Schedule 5, section 118 (Central Road): needs person
+2026-10-21T16:10:30.962Z [build] W9-020: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:30.962Z [build] closed areas 231/254 (90%), 23 left: Closed Areas Regulation, Schedule 9, section 20 (Canal Flats): needs person
+2026-10-21T16:10:30.983Z [build] W5-121: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:30.984Z [build] closed areas 232/254 (91%), 22 left: Closed Areas Regulation, Schedule 5, section 121 (Brenda Mines): needs person
+2026-10-21T16:10:31.118Z [build] W3-017: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:31.119Z [build] closed areas 233/254 (91%), 21 left: Closed Areas Regulation, Schedule 3, section 17 (North Thormanby Island): needs person
+2026-10-21T16:10:31.371Z [build] W11-003: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:31.371Z [build] closed areas 234/254 (92%), 20 left: Closed Areas Regulation, Schedule 11, section 3 (Keats Island): needs person
+2026-10-21T16:10:31.394Z [build] W5-033: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:31.394Z [build] closed areas 235/254 (92%), 19 left: Closed Areas Regulation, Schedule 5, section 33 (Elbow Lake): needs person
+2026-10-21T16:10:35.594Z [build] W5-138: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:35.594Z [build] closed areas 236/254 (92%), 18 left: Closed Areas Regulation, Schedule 5, section 138 (Whiteswan Forest Service Road): needs person
+2026-10-21T16:10:35.732Z [build] W9-012: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:35.733Z [build] closed areas 237/254 (93%), 17 left: Closed Areas Regulation, Schedule 9, section 12 (Powell River): needs person
+2026-10-21T16:10:35.753Z [build] W5-038: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:35.754Z [build] closed areas 238/254 (93%), 16 left: Closed Areas Regulation, Schedule 5, section 38 (Wells): needs person
+2026-10-21T16:10:35.773Z [build] W5-002: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:35.773Z [build] closed areas 239/254 (94%), 15 left: Closed Areas Regulation, Schedule 5, section 2 (University of British Columbia Endowment Lands): needs person
+2026-10-21T16:10:35.988Z [build] W8-050: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:35.989Z [build] closed areas 240/254 (94%), 14 left: Closed Areas Regulation, Schedule 7, section 50 (Spatsizi Plateau Wilderness Park): needs person
+2026-10-21T16:10:36.016Z [build] W8-8-004: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:36.016Z [build] closed areas 241/254 (94%), 13 left: Closed Areas Regulation, Schedule 8, section 4 (Bear Mountain): needs person
+2026-10-21T16:10:36.231Z [build] W5-111: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:36.232Z [build] closed areas 242/254 (95%), 12 left: Closed Areas Regulation, Schedule 5, section 111 (Fairmont): needs person
+2026-10-21T16:10:36.485Z [build] W3-059: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:36.485Z [build] closed areas 243/254 (95%), 11 left: Closed Areas Regulation, Schedule 3, section 59 (Fording River/Greenhills Operations): needs person
+2026-10-21T16:10:36.508Z [build] W5-069: no shape; 2 issue(s) for the reviewer
+2026-10-21T16:10:36.508Z [build] closed areas 244/254 (96%), 10 left: Closed Areas Regulation, Schedule 5, section 69 (Vananda): needs person
+2026-10-21T16:10:36.530Z [build] W8-036: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:36.530Z [build] closed areas 245/254 (96%), 9 left: Closed Areas Regulation, Schedule 7, section 36 (Kakwa Recreation Area): needs person
+2026-10-21T16:10:36.551Z [build] W5-019: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:36.551Z [build] closed areas 246/254 (96%), 8 left: Closed Areas Regulation, Schedule 5, section 19 (Kathlyn Lake): needs person
+2026-10-21T16:10:36.572Z [build] W5-086: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:36.572Z [build] closed areas 247/254 (97%), 7 left: Closed Areas Regulation, Schedule 5, section 86 (York Lake): needs person
+2026-10-21T16:10:36.594Z [build] W3-048: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:36.594Z [build] closed areas 248/254 (97%), 6 left: Closed Areas Regulation, Schedule 3, section 48 (Radar Lake): needs person
+2026-10-21T16:10:36.758Z [build] W3-037: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:36.758Z [build] closed areas 249/254 (98%), 5 left: Closed Areas Regulation, Schedule 3, section 37 (Line Creek Operations): needs person
+2026-10-21T16:10:36.781Z [build] W8-048: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:36.781Z [build] closed areas 250/254 (98%), 4 left: Closed Areas Regulation, Schedule 7, section 48 (Beaver Lodge Trust Lands): needs person
+2026-10-21T16:10:36.980Z [build] W3-047: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:36.980Z [build] closed areas 251/254 (98%), 3 left: Closed Areas Regulation, Schedule 3, section 47 (Saturna Island East End): needs person
+2026-10-21T16:10:37.002Z [build] W5-029: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:37.002Z [build] closed areas 252/254 (99%), 2 left: Closed Areas Regulation, Schedule 5, section 29 (Paaren's Beach): needs person
+2026-10-21T16:10:37.024Z [build] W8-8.1-001: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:37.024Z [build] closed areas 253/254 (99%), 1 left: Closed Areas Regulation, Schedule 8.1, section 1 (Burns Bog): needs person
+2026-10-21T16:10:37.232Z [build] W3-065: no shape; 3 issue(s) for the reviewer
+2026-10-21T16:10:37.232Z [build] closed areas 254/254 (100%), all done: Closed Areas Regulation, Schedule 3, section 65 (Kalamalka Lake Park): needs person
+2026-10-21T16:10:37.232Z [build] parts 1/4 (25%), 3 left: road notices and District Manager PDFs
+2026-10-21T16:11:16.416Z [build] District Manager PDFs 1/46 (2%), 45 left: DCK-0c70d269-bucklin_fsr_-_2019_road_closure
+2026-10-21T16:11:16.449Z [build] District Manager PDFs 2/46 (4%), 44 left: DCK-1379e235-radium_fsr_fs301
+2026-10-21T16:11:16.472Z [build] District Manager PDFs 3/46 (6%), 43 left: DCK-15d8fff4-east_anderson_fsr_road_closure_april_24_2026
+2026-10-21T16:11:16.502Z [build] District Manager PDFs 4/46 (8%), 42 left: DCK-1f93b9e0-cypress_lake_fsr_fs301
+2026-10-21T16:11:16.523Z [build] District Manager PDFs 5/46 (10%), 41 left: DCK-42f99435-1045201_-_discontinue_and_close_with_exhibit_a
+2026-10-21T16:11:16.657Z [build] District Manager PDFs 6/46 (13%), 40 left: DCK-4d024dd5-american_fsr_road_closure_february_9_2026
+2026-10-21T16:11:16.680Z [build] District Manager PDFs 7/46 (15%), 39 left: DCK-668dd9ac-rup_obligations_and_expectations_-_august_18_2021_signed
+2026-10-21T16:11:16.681Z [build] District Manager PDFs 8/46 (17%), 38 left: DCK-691e2b1a-hunter_fsr_variance_to_closure
+2026-10-21T16:11:16.701Z [build] District Manager PDFs 9/46 (19%), 37 left: DCK-79c52629-fs301_december_13_2024
+2026-10-21T16:11:17.665Z [build] District Manager PDFs 10/46 (21%), 36 left: DCK-8347a650-71w27vb_fsr_closures_amended_july_22
+2026-10-21T16:11:17.688Z [build] District Manager PDFs 11/46 (23%), 35 left: DCK-8eb16f04-squeah_fsr_-_2020_road_closure
+2026-10-21T16:11:17.708Z [build] District Manager PDFs 12/46 (26%), 34 left: DCK-94372f1a-mowhokam_east_fsr_closure
+2026-10-21T16:11:17.727Z [build] District Manager PDFs 13/46 (28%), 33 left: DCK-9a9e782c-notice_of_clousre_harrison_east_fsr_-_rescinded
+2026-10-21T16:11:17.748Z [build] District Manager PDFs 14/46 (30%), 32 left: DCK-a36f6f84-fsr_road_closure_notice_december_storm_damage
+2026-10-21T16:11:18.705Z [build] District Manager PDFs 15/46 (32%), 31 left: DCK-cdff3673-bench_fsr_road_closure
+2026-10-21T16:11:18.728Z [build] District Manager PDFs 16/46 (34%), 30 left: DCK-cfd72836-ac8126-19-01_bcts
+2026-10-21T16:11:18.751Z [build] District Manager PDFs 17/46 (36%), 29 left: DCK-d8b34b6d-807402_03_04_05_06_fs_301_-_fsr_discontinue_and_close
+2026-10-21T16:11:19.914Z [build] District Manager PDFs 18/46 (39%), 28 left: DCK-e487c48e-ck-2519_-_2024_inspection_signed
+2026-10-21T16:11:19.937Z [build] District Manager PDFs 19/46 (41%), 27 left: DCR-13a23bfb-johnhart_cw_nocamporder
+2026-10-21T16:11:19.938Z [build] District Manager PDFs 20/46 (43%), 26 left: DCR-9ef086bc-dcr_sdfmap
+2026-10-21T16:11:19.938Z [build] District Manager PDFs 21/46 (45%), 25 left: DCS-01301b15-bridge_inspections_2015_hillshade_south_cascades_all_structures_april2015
+2026-10-21T16:11:19.940Z [build] District Manager PDFs 22/46 (47%), 24 left: DCS-8f7c4b60-cascades_bridges2011dli
+2026-10-21T16:11:19.941Z [build] District Manager PDFs 23/46 (50%), 23 left: DQC-25fa270a-hanagover_fsr_822906_closure
+2026-10-21T16:11:19.960Z [build] District Manager PDFs 24/46 (52%), 22 left: DQC-57ce8ede-delkatla_10891_closure
+2026-10-21T16:11:19.981Z [build] District Manager PDFs 25/46 (54%), 21 left: DQC-6a1cfbef-2024_06_07_bill_brown_closure
+2026-10-21T16:11:20.002Z [build] District Manager PDFs 26/46 (56%), 20 left: DQC-8d4c7fb4-bonanza_fsr_822907_closure
+2026-10-21T16:11:20.024Z [build] District Manager PDFs 27/46 (58%), 19 left: DSC-335a98d1-a94817_bk_forest_service_road
+2026-10-21T16:11:20.025Z [build] District Manager PDFs 28/46 (60%), 18 left: DSE-2cb2b189-incomappleux_br2deact
+2026-10-21T16:11:20.047Z [build] District Manager PDFs 29/46 (63%), 17 left: DSE-68d293da-faq_document_for_incomappleux_deactivation
+2026-10-21T16:11:20.068Z [build] District Manager PDFs 30/46 (65%), 16 left: DSE-b217a506-incomappleux_road_deactivation_appendix_a
+2026-10-21T16:11:20.090Z [build] District Manager PDFs 31/46 (67%), 15 left: DSE-c3a0aaa8-incomappleux_road_deactivation_prescription_overview_2024_contour_new
+2026-10-21T16:11:20.115Z [build] District Manager PDFs 32/46 (69%), 14 left: DSE-e4e6b5f8-trout_lake_rady_creek_deactivation_prescription_map
+2026-10-21T16:11:20.149Z [build] District Manager PDFs 33/46 (71%), 13 left: DSI-2654b71d-camper_creek_mainline_gate_map
+2026-10-21T16:11:20.172Z [build] District Manager PDFs 34/46 (73%), 12 left: DSI-5f111aca-kmu_gate_location_overview_map
+2026-10-21T16:11:20.192Z [build] District Manager PDFs 35/46 (76%), 11 left: DSI-66e61e93-gate_location_map_braden_mainline_and_tr11
+2026-10-21T16:11:20.213Z [build] District Manager PDFs 36/46 (78%), 10 left: DSI-7d1cff67-canal_main_closure
+2026-10-21T16:11:20.232Z [build] District Manager PDFs 37/46 (80%), 9 left: DSI-8a4bec36-news_release_-_access_changes_implemented_to_protect_local_watershed
+2026-10-21T16:11:20.253Z [build] District Manager PDFs 38/46 (82%), 8 left: DSI-98c8d0df-map_gate_fsr5833_br01
+2026-10-21T16:11:20.390Z [build] District Manager PDFs 39/46 (84%), 7 left: DSI-a9fec493-walbran700_gate_location_map_2026mar9
+2026-10-21T16:11:20.411Z [build] District Manager PDFs 40/46 (86%), 6 left: DSI-c2357ace-map-banon_fsr_gate_location
+2026-10-21T16:11:20.432Z [build] District Manager PDFs 41/46 (89%), 5 left: DSI-c4f696e7-map_tfl46_bugaboo_main_gate_location
+2026-10-21T16:11:20.452Z [build] District Manager PDFs 42/46 (91%), 4 left: DSI-dc65a045-lucky_fsr_road_closure
+2026-10-21T16:11:20.474Z [build] District Manager PDFs 43/46 (93%), 3 left: DVA-3faae646-dsn_road_restictions_2026_spring_road_bans_bulletin_3
+2026-10-21T16:11:20.494Z [build] District Manager PDFs 44/46 (95%), 2 left: DVA-70228e68-dsn_road_restrictions_bulletin_4
+2026-10-21T16:11:20.495Z [build] District Manager PDFs 45/46 (97%), 1 left: DVA-792bd4d5-project_flyer_driftwood_rebuild
+2026-10-21T16:11:20.515Z [build] District Manager PDFs 46/46 (100%), all done: DVA-d66840c9-upper_driftwood_deactivation_advertisement
+2026-10-21T16:11:20.690Z [build] road notices: 401 kept (0 gone from their page, held for a person), 183 km points placed, 33 AI-read; District Manager PDFs: 46 read, 74 road(s) closed or restricted in them, 0 waiting for extraction, 0 unreadable
+2026-10-21T16:11:20.691Z [build] parts 2/4 (50%), 2 left: bylaws
+2026-10-21T16:11:21.036Z [build] bylaws: 6 document(s), 5 with agreeing runs; all wait for a person
+2026-10-21T16:11:21.037Z [build] parts 3/4 (75%), 1 left: change classes
+2026-10-21T16:11:21.061Z [build] parts 4/4 (100%), all done: build summary written
+2026-10-21T16:11:21.062Z [build] done: {"month":"2026-10","builtAt":"2026-10-21T16:07:24.286Z","closedAreas":{"needs person":251,"candidate":3},"roadNotices":{"notices":401,"placed":183,"removed":0,"aiRead":33,"lookupFailures":0,"dmNotices":{"read":46,"roads":74,"waiting":0,"unreadable":0,"disagree":6}},"bylaws":{"docs":6,"agreed":5},"changeClasses":0,"withdrawnItems":0}

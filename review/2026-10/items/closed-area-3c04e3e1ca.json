@@ -1,0 +1,304 @@
+{
+  "item_id": "closed-area-3c04e3e1ca",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 3, section 57 (Edgewater)",
+  "rule_id": "W3-057",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: steps: run 1 [\"hwy 95 right of way and the edgewater south approach rd right of way|||\",\"edgewater south approach rd right of way|its intersection with the northerly boundary of district lot 348 plan 1954 parcel b||road\",\"district lot 348 plan 1954 parcel b|the easterly boundary of the canadian pacific railway right of way||lot_line\",\"canadian pacific railway right of way|its intersection with the southerly boundary of lot 353||other\",\"lot 353|the westerly boundary of the bench rd right of way||lot_line\",\"bench rd right of way|its intersection with the westerly boundary of the mccauley st right of way||road\",\"mccauley st right of way|its intersection with the westerly boundary of the hwy 95 right of way||road\",\"hwy 95|the point of commencement||road\"] vs run 2 [\"hwy 95 edgewater south approach rd|||\",\"edgewater south approach rd|its intersection with the northerly boundary of district lot 348 plan 1954 parcel b||road\",\"district lot 348 plan 1954 parcel b|the easterly boundary of the canadian pacific railway right of way||lot_line\",\"canadian pacific railway|its intersection with the southerly boundary of lot 353||other\",\"lot 353|the westerly boundary of the bench rd right of way||lot_line\",\"bench rd|its intersection with the westerly boundary of the mccauley st right of way||road\",\"mccauley st|its intersection with the westerly boundary of the hwy 95 right of way||road\",\"hwy 95|the point of commencement||road\"]",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nEdgewater\n57 That portion of the Province of British Columbia in M.U. 4-35 which is contained within the following described boundaries: Commencing at the point of intersection of the westerly boundary of Highway 95 right of way and the southerly boundary of the Edgewater South Approach Road right of way, Kootenay Land District; thence in a general westerly and northerly direction along the southern and western boundary of the Edgewater South Approach Road right of way to its intersection with the northerly boundary of District Lot 348, Plan 1954, Parcel B; thence westerly following said boundary to the easterly boundary of the Canadian Pacific Railway right of way; thence northwesterly following the easterly boundary of the Canadian Pacific Railway right of way to its intersection with the southerly boundary of Lot 353: thence easterly following the southern boundary of Lot 353 to the westerly boundary of the Bench Road right of way; thence northerly and easterly following said boundary to its intersection with the westerly boundary of the McCauley Street right of way; thence northeasterly following the westerly boundary of said right of way to its intersection with the westerly boundary of the Highway 95 right of way; thence southeasterly following the westerly boundary of Highway 95 to the point of commencement. [en. B.C. Reg. 151/2006, s. 3 (b).]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-136c089f2ac4",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:58:31Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 4-35"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the point of intersection of the westerly boundary of Highway 95 right of way and the southerly boundary of the Edgewater South Approach Road right of way, Kootenay Land District",
+              "direction": null,
+              "follow": null,
+              "feature": "Highway 95 right of way and the Edgewater South Approach Road right of way",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the point of intersection of the westerly boundary of Highway 95 right of way and the southerly boundary of the Edgewater South Approach Road right of way, Kootenay Land District"
+            },
+            {
+              "start": null,
+              "direction": "in a general westerly and northerly direction",
+              "follow": "road",
+              "feature": "Edgewater South Approach Road right of way",
+              "side_or_bank": "southern and western boundary",
+              "until": "its intersection with the northerly boundary of District Lot 348, Plan 1954, Parcel B",
+              "distance": null,
+              "quote": "thence in a general westerly and northerly direction along the southern and western boundary of the Edgewater South Approach Road right of way to its intersection with the northerly boundary of District Lot 348, Plan 1954, Parcel B"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "lot_line",
+              "feature": "District Lot 348, Plan 1954, Parcel B",
+              "side_or_bank": "northerly boundary",
+              "until": "the easterly boundary of the Canadian Pacific Railway right of way",
+              "distance": null,
+              "quote": "thence westerly following said boundary to the easterly boundary of the Canadian Pacific Railway right of way"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly",
+              "follow": "other",
+              "feature": "Canadian Pacific Railway right of way",
+              "side_or_bank": "easterly boundary",
+              "until": "its intersection with the southerly boundary of Lot 353",
+              "distance": null,
+              "quote": "thence northwesterly following the easterly boundary of the Canadian Pacific Railway right of way to its intersection with the southerly boundary of Lot 353"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "lot_line",
+              "feature": "Lot 353",
+              "side_or_bank": "southern boundary",
+              "until": "the westerly boundary of the Bench Road right of way",
+              "distance": null,
+              "quote": "thence easterly following the southern boundary of Lot 353 to the westerly boundary of the Bench Road right of way"
+            },
+            {
+              "start": null,
+              "direction": "northerly and easterly",
+              "follow": "road",
+              "feature": "Bench Road right of way",
+              "side_or_bank": "westerly boundary",
+              "until": "its intersection with the westerly boundary of the McCauley Street right of way",
+              "distance": null,
+              "quote": "thence northerly and easterly following said boundary to its intersection with the westerly boundary of the McCauley Street right of way"
+            },
+            {
+              "start": null,
+              "direction": "northeasterly",
+              "follow": "road",
+              "feature": "McCauley Street right of way",
+              "side_or_bank": "westerly boundary",
+              "until": "its intersection with the westerly boundary of the Highway 95 right of way",
+              "distance": null,
+              "quote": "thence northeasterly following the westerly boundary of said right of way to its intersection with the westerly boundary of the Highway 95 right of way"
+            },
+            {
+              "start": null,
+              "direction": "southeasterly",
+              "follow": "road",
+              "feature": "Highway 95",
+              "side_or_bank": "westerly boundary",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence southeasterly following the westerly boundary of Highway 95 to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting or Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in M.U. 4-35"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "Commencing at the point of intersection of the westerly boundary of Highway 95 right of way"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-136c089f2ac4",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:59:49Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 4-35"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the point of intersection of the westerly boundary of Highway 95 right of way and the southerly boundary of the Edgewater South Approach Road right of way",
+              "direction": null,
+              "follow": null,
+              "feature": "Highway 95, Edgewater South Approach Road",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the point of intersection of the westerly boundary of Highway 95 right of way and the southerly boundary of the Edgewater South Approach Road right of way, Kootenay Land District"
+            },
+            {
+              "start": null,
+              "direction": "in a general westerly and northerly direction",
+              "follow": "road",
+              "feature": "Edgewater South Approach Road",
+              "side_or_bank": "southern and western boundary",
+              "until": "its intersection with the northerly boundary of District Lot 348, Plan 1954, Parcel B",
+              "distance": null,
+              "quote": "thence in a general westerly and northerly direction along the southern and western boundary of the Edgewater South Approach Road right of way to its intersection with the northerly boundary of District Lot 348, Plan 1954, Parcel B"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "lot_line",
+              "feature": "District Lot 348, Plan 1954, Parcel B",
+              "side_or_bank": "northerly boundary",
+              "until": "the easterly boundary of the Canadian Pacific Railway right of way",
+              "distance": null,
+              "quote": "thence westerly following said boundary to the easterly boundary of the Canadian Pacific Railway right of way"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly",
+              "follow": "other",
+              "feature": "Canadian Pacific Railway",
+              "side_or_bank": "easterly boundary",
+              "until": "its intersection with the southerly boundary of Lot 353",
+              "distance": null,
+              "quote": "thence northwesterly following the easterly boundary of the Canadian Pacific Railway right of way to its intersection with the southerly boundary of Lot 353"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "lot_line",
+              "feature": "Lot 353",
+              "side_or_bank": "southern boundary",
+              "until": "the westerly boundary of the Bench Road right of way",
+              "distance": null,
+              "quote": "thence easterly following the southern boundary of Lot 353 to the westerly boundary of the Bench Road right of way"
+            },
+            {
+              "start": null,
+              "direction": "northerly and easterly",
+              "follow": "road",
+              "feature": "Bench Road",
+              "side_or_bank": "westerly boundary",
+              "until": "its intersection with the westerly boundary of the McCauley Street right of way",
+              "distance": null,
+              "quote": "thence northerly and easterly following said boundary to its intersection with the westerly boundary of the McCauley Street right of way"
+            },
+            {
+              "start": null,
+              "direction": "northeasterly",
+              "follow": "road",
+              "feature": "McCauley Street",
+              "side_or_bank": "westerly boundary",
+              "until": "its intersection with the westerly boundary of the Highway 95 right of way",
+              "distance": null,
+              "quote": "thence northeasterly following the westerly boundary of said right of way to its intersection with the westerly boundary of the Highway 95 right of way"
+            },
+            {
+              "start": null,
+              "direction": "southeasterly",
+              "follow": "road",
+              "feature": "Highway 95",
+              "side_or_bank": "westerly boundary",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence southeasterly following the westerly boundary of Highway 95 to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting or Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "That portion of the Province of British Columbia in M.U. 4-35"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "Commencing at the point of intersection of the westerly boundary of Highway 95 right of way"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "in M.U. 4-35",
+    "effect": "No Shooting or Hunting Areas",
+    "geometry.steps[0]": "Commencing at the point of intersection of the westerly boundary of Highway 95 right of way and the southerly boundary of the Edgewater South Approach Road right of way, Kootenay Land District",
+    "geometry.steps[1]": "thence in a general westerly and northerly direction along the southern and western boundary of the Edgewater South Approach Road right of way to its intersection with the northerly boundary of District Lot 348, Plan 1954, Parcel B",
+    "geometry.steps[2]": "thence westerly following said boundary to the easterly boundary of the Canadian Pacific Railway right of way",
+    "geometry.steps[3]": "thence northwesterly following the easterly boundary of the Canadian Pacific Railway right of way to its intersection with the southerly boundary of Lot 353",
+    "geometry.steps[4]": "thence easterly following the southern boundary of Lot 353 to the westerly boundary of the Bench Road right of way",
+    "geometry.steps[5]": "thence northerly and easterly following said boundary to its intersection with the westerly boundary of the McCauley Street right of way",
+    "geometry.steps[6]": "thence northeasterly following the westerly boundary of said right of way to its intersection with the westerly boundary of the Highway 95 right of way",
+    "geometry.steps[7]": "thence southeasterly following the westerly boundary of Highway 95 to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "steps: run 1 [\"hwy 95 right of way and the edgewater south approach rd right of way|||\",\"edgewater south approach rd right of way|its intersection with the northerly boundary of district lot 348 plan 1954 parcel b||road\",\"district lot 348 plan 1954 parcel b|the easterly boundary of the canadian pacific railway right of way||lot_line\",\"canadian pacific railway right of way|its intersection with the southerly boundary of lot 353||other\",\"lot 353|the westerly boundary of the bench rd right of way||lot_line\",\"bench rd right of way|its intersection with the westerly boundary of the mccauley st right of way||road\",\"mccauley st right of way|its intersection with the westerly boundary of the hwy 95 right of way||road\",\"hwy 95|the point of commencement||road\"] vs run 2 [\"hwy 95 edgewater south approach rd|||\",\"edgewater south approach rd|its intersection with the northerly boundary of district lot 348 plan 1954 parcel b||road\",\"district lot 348 plan 1954 parcel b|the easterly boundary of the canadian pacific railway right of way||lot_line\",\"canadian pacific railway|its intersection with the southerly boundary of lot 353||other\",\"lot 353|the westerly boundary of the bench rd right of way||lot_line\",\"bench rd|its intersection with the westerly boundary of the mccauley st right of way||road\",\"mccauley st|its intersection with the westerly boundary of the hwy 95 right of way||road\",\"hwy 95|the point of commencement||road\"]"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:07:26.552Z",
+  "updated": "2026-10-21T16:07:26.552Z"
+}

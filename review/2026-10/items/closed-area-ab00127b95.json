@@ -1,0 +1,176 @@
+{
+  "item_id": "closed-area-ab00127b95",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 3, section 47 (Saturna Island East End)",
+  "rule_id": "W3-047",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "named area \"M.U. 1-01\": none",
+    "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nSaturna Island East End\n47 That portion of Saturna Island in M.U. 1-01 which lies easterly of the west side of Fiddler Road and the northerly and southerly prolongations thereof and is contained within the mean low water mark of that portion of Saturna Island. [en. B.C. Reg. 224/92, s. 3.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-fcf3aa1a90a9",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:00:27Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 1-01"
+        },
+        "geometry": {
+          "method": "other",
+          "road": {
+            "name": "Fiddler Road",
+            "source_hint": "DRA"
+          },
+          "feature": {
+            "type": "island",
+            "name": "Saturna Island"
+          },
+          "buffer_m": null,
+          "side": "east",
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting or Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in M.U. 1-01"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "which lies easterly of the west side of Fiddler Road and the northerly and southerly prolongations thereof and is contained within the mean low water mark of that portion of Saturna Island"
+          },
+          {
+            "field": "geometry.road",
+            "quote": "the west side of Fiddler Road and the northerly and southerly prolongations thereof"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "That portion of Saturna Island"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "lies easterly of the west side of Fiddler Road"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-fcf3aa1a90a9",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:00:33Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 1-01"
+        },
+        "geometry": {
+          "method": "other",
+          "road": {
+            "name": "Fiddler Road",
+            "source_hint": "DRA"
+          },
+          "feature": {
+            "type": "island",
+            "name": "Saturna Island"
+          },
+          "buffer_m": null,
+          "side": "east",
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting or Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in M.U. 1-01"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "which lies easterly of the west side of Fiddler Road and the northerly and southerly prolongations thereof and is contained within the mean low water mark of that portion of Saturna Island"
+          },
+          {
+            "field": "geometry.road",
+            "quote": "the west side of Fiddler Road and the northerly and southerly prolongations thereof"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "That portion of Saturna Island"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "lies easterly of the west side of Fiddler Road"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "in M.U. 1-01",
+    "geometry.road": "the west side of Fiddler Road and the northerly and southerly prolongations thereof",
+    "geometry.feature": "That portion of Saturna Island",
+    "effect": "No Shooting or Hunting Areas",
+    "geometry.side": "lies easterly of the west side of Fiddler Road"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [
+    {
+      "query": "M.U. 1-01",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "none",
+      "matches": 0,
+      "ids": [],
+      "sample": []
+    }
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:10:36.980Z",
+  "updated": "2026-10-21T16:10:36.980Z"
+}

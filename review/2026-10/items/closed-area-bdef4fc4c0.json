@@ -1,0 +1,286 @@
+{
+  "item_id": "closed-area-bdef4fc4c0",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 6 (Skookumchuck Pulp Mill)",
+  "rule_id": "W5-006",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: steps: run 1 [\"skookumchuck kootenay river bridge|||\",\"hwy 95|the junction of a roadway named farstad way||road\",\"farstad way|skookumchuck river rd||road\",\"skookumchuck river rd|the skookumchuck river bridge||road\",\"skookumchuck river|its confluence with the kootenay river||river\",\"kootenay river|point of commencement||river\"] vs run 2 [\"hwy 95|||\",\"hwy 95|the junction of a roadway named farstad way||road\",\"farstad way|skookumchuck river rd||road\",\"skookumchuck river rd|the skookumchuck river bridge||road\",\"skookumchuck river|its confluence with the kootenay river||river\",\"kootenay river|point of commencement||river\"]",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nSkookumchuck Pulp Mill\n6 That portion of the Province of British Columbia in Kootenay District which is contained within the following described boundaries: Commencing at the Skookumchuck Kootenay River bridge on Highway 95; thence southerly along Highway 95 to the junction of a roadway named Farstad Way; thence westerly and northerly along Farstad Way to Skookumchuck River road; thence northerly along said road to the Skookumchuck River bridge; thence downstream along the Skookumchuck River to its confluence with the Kootenay River; thence downstream along the Kootenay River high water mark to point of commencement.",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-9f252596b5ec",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:00:39Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Kootenay District"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the Skookumchuck Kootenay River bridge on Highway 95",
+              "direction": null,
+              "follow": null,
+              "feature": "Skookumchuck Kootenay River bridge",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the Skookumchuck Kootenay River bridge on Highway 95"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "road",
+              "feature": "Highway 95",
+              "side_or_bank": null,
+              "until": "the junction of a roadway named Farstad Way",
+              "distance": null,
+              "quote": "thence southerly along Highway 95 to the junction of a roadway named Farstad Way"
+            },
+            {
+              "start": null,
+              "direction": "westerly and northerly",
+              "follow": "road",
+              "feature": "Farstad Way",
+              "side_or_bank": null,
+              "until": "Skookumchuck River road",
+              "distance": null,
+              "quote": "thence westerly and northerly along Farstad Way to Skookumchuck River road"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "road",
+              "feature": "Skookumchuck River road",
+              "side_or_bank": null,
+              "until": "the Skookumchuck River bridge",
+              "distance": null,
+              "quote": "thence northerly along said road to the Skookumchuck River bridge"
+            },
+            {
+              "start": null,
+              "direction": "downstream",
+              "follow": "river",
+              "feature": "Skookumchuck River",
+              "side_or_bank": null,
+              "until": "its confluence with the Kootenay River",
+              "distance": null,
+              "quote": "thence downstream along the Skookumchuck River to its confluence with the Kootenay River"
+            },
+            {
+              "start": null,
+              "direction": "downstream",
+              "follow": "river",
+              "feature": "Kootenay River",
+              "side_or_bank": "high water mark",
+              "until": "point of commencement",
+              "distance": null,
+              "quote": "thence downstream along the Kootenay River high water mark to point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in Kootenay District"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries: Commencing at"
+          },
+          {
+            "field": "geometry.steps[0]",
+            "quote": "Commencing at the Skookumchuck Kootenay River bridge on Highway 95"
+          },
+          {
+            "field": "geometry.steps[1]",
+            "quote": "thence southerly along Highway 95 to the junction of a roadway named Farstad Way"
+          },
+          {
+            "field": "geometry.steps[2]",
+            "quote": "thence westerly and northerly along Farstad Way to Skookumchuck River road"
+          },
+          {
+            "field": "geometry.steps[3]",
+            "quote": "thence northerly along said road to the Skookumchuck River bridge"
+          },
+          {
+            "field": "geometry.steps[4]",
+            "quote": "thence downstream along the Skookumchuck River to its confluence with the Kootenay River"
+          },
+          {
+            "field": "geometry.steps[5]",
+            "quote": "thence downstream along the Kootenay River high water mark to point of commencement"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-9f252596b5ec",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:00:07Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Kootenay District"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the Skookumchuck Kootenay River bridge on Highway 95",
+              "direction": null,
+              "follow": null,
+              "feature": "Highway 95",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the Skookumchuck Kootenay River bridge on Highway 95"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "road",
+              "feature": "Highway 95",
+              "side_or_bank": null,
+              "until": "the junction of a roadway named Farstad Way",
+              "distance": null,
+              "quote": "thence southerly along Highway 95 to the junction of a roadway named Farstad Way"
+            },
+            {
+              "start": null,
+              "direction": "westerly and northerly",
+              "follow": "road",
+              "feature": "Farstad Way",
+              "side_or_bank": null,
+              "until": "Skookumchuck River road",
+              "distance": null,
+              "quote": "thence westerly and northerly along Farstad Way to Skookumchuck River road"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "road",
+              "feature": "Skookumchuck River road",
+              "side_or_bank": null,
+              "until": "the Skookumchuck River bridge",
+              "distance": null,
+              "quote": "thence northerly along said road to the Skookumchuck River bridge"
+            },
+            {
+              "start": null,
+              "direction": "downstream",
+              "follow": "river",
+              "feature": "Skookumchuck River",
+              "side_or_bank": null,
+              "until": "its confluence with the Kootenay River",
+              "distance": null,
+              "quote": "thence downstream along the Skookumchuck River to its confluence with the Kootenay River"
+            },
+            {
+              "start": null,
+              "direction": "downstream",
+              "follow": "river",
+              "feature": "Kootenay River",
+              "side_or_bank": "high water mark",
+              "until": "point of commencement",
+              "distance": null,
+              "quote": "thence downstream along the Kootenay River high water mark to point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in Kootenay District"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "in Kootenay District",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at the Skookumchuck Kootenay River bridge on Highway 95",
+    "geometry.steps[1]": "thence southerly along Highway 95 to the junction of a roadway named Farstad Way",
+    "geometry.steps[2]": "thence westerly and northerly along Farstad Way to Skookumchuck River road",
+    "geometry.steps[3]": "thence northerly along said road to the Skookumchuck River bridge",
+    "geometry.steps[4]": "thence downstream along the Skookumchuck River to its confluence with the Kootenay River",
+    "geometry.steps[5]": "thence downstream along the Kootenay River high water mark to point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "steps: run 1 [\"skookumchuck kootenay river bridge|||\",\"hwy 95|the junction of a roadway named farstad way||road\",\"farstad way|skookumchuck river rd||road\",\"skookumchuck river rd|the skookumchuck river bridge||road\",\"skookumchuck river|its confluence with the kootenay river||river\",\"kootenay river|point of commencement||river\"] vs run 2 [\"hwy 95|||\",\"hwy 95|the junction of a roadway named farstad way||road\",\"farstad way|skookumchuck river rd||road\",\"skookumchuck river rd|the skookumchuck river bridge||road\",\"skookumchuck river|its confluence with the kootenay river||river\",\"kootenay river|point of commencement||river\"]"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:09:19.394Z",
+  "updated": "2026-10-21T16:09:19.394Z"
+}

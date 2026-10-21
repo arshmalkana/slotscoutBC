@@ -1,0 +1,268 @@
+{
+  "item_id": "closed-area-4df54a6931",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 3, section 52 (JeweI Lake)",
+  "rule_id": "W3-052",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: side: run 1 \"inside\" vs run 2 null; steps: run 1 [\"jewel lake rd|||\",\"jewel lake rd|the point of intersection with the westerly boundary of jewel lake provincial park|25 metres|road\",\"jewel lake provincial park|a point 100 metres east of the natural boundary of jewel lake on the easterly shore thereof||other\",\"jewel lake|the point of intersection with the boundary of jewel lake meadow|100 metres|shoreline\",\"jewel lake meadow|a point of intersection with the northern boundary of d.l. 1875s||other\",\"d.l. 1875s|the point of commencement||lot_line\"] vs run 2 [\"jewel lake rd||25 metres|\",\"jewel lake rd|the point of intersection with the westerly boundary of jewel lake provincial park|25 metres|road\",\"jewel lake provincial park|a point 100 metres east of the natural boundary of jewel lake on the easterly shore thereof|100 metres|other\",\"jewel lake|the point of intersection with the boundary of jewel lake meadow|100 metres|shoreline\",\"jewel lake meadow|a point of intersection with the northern boundary of d.l. 1875s||other\",\"d.l. 1875s|the point of commencement||lot_line\"]",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nJeweI Lake\n52 That portion of M.U. 8-14 in the Province of British Columbia that is contained within the following described boundaries: Commencing at a point 25 metres west of the point of intersection of the midline of Jewel Lake Road and the northwest corner of D.L. 1875s, Similkameen Division, Yale Land District; thence in a general northeasterly direction following 25 metres west of the midline of Jewel Lake Road to the point of intersection with the westerly boundary of Jewel Lake Provincial Park; thence in a general northerly, easterly, southerly then westerly direction along the westerly, northerly, easterly and southerly boundaries of Jewel Lake Provincial Park to a point 100 metres east of the natural boundary of Jewel Lake on the easterly shore thereof; thence in a general southwesterly direction following 100 metres east from the natural boundary of Jewel Lake on the easterly shore thereof to the point of intersection with the boundary of Jewel Lake meadow; thence more or less southwesterly following the eastern boundary of Jewel Lake meadow to a point of intersection with the northern boundary of D.L. 1875s; thence westerly along said boundary to the point of commencement. [en. B.C. Reg. 211/93, s. 6.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-c650801a1d87",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:01:40Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 8-14"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": "inside",
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "a point 25 metres west of the point of intersection of the midline of Jewel Lake Road and the northwest corner of D.L. 1875s, Similkameen Division, Yale Land District",
+              "direction": null,
+              "follow": null,
+              "feature": "Jewel Lake Road",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at a point 25 metres west of the point of intersection of the midline of Jewel Lake Road and the northwest corner of D.L. 1875s, Similkameen Division, Yale Land District"
+            },
+            {
+              "start": null,
+              "direction": "in a general northeasterly direction",
+              "follow": "road",
+              "feature": "Jewel Lake Road",
+              "side_or_bank": "west",
+              "until": "the point of intersection with the westerly boundary of Jewel Lake Provincial Park",
+              "distance": "25 metres",
+              "quote": "thence in a general northeasterly direction following 25 metres west of the midline of Jewel Lake Road to the point of intersection with the westerly boundary of Jewel Lake Provincial Park"
+            },
+            {
+              "start": null,
+              "direction": "in a general northerly, easterly, southerly then westerly direction",
+              "follow": "other",
+              "feature": "Jewel Lake Provincial Park",
+              "side_or_bank": "westerly, northerly, easterly and southerly boundaries",
+              "until": "a point 100 metres east of the natural boundary of Jewel Lake on the easterly shore thereof",
+              "distance": null,
+              "quote": "thence in a general northerly, easterly, southerly then westerly direction along the westerly, northerly, easterly and southerly boundaries of Jewel Lake Provincial Park to a point 100 metres east of the natural boundary of Jewel Lake on the easterly shore thereof"
+            },
+            {
+              "start": null,
+              "direction": "in a general southwesterly direction",
+              "follow": "shoreline",
+              "feature": "Jewel Lake",
+              "side_or_bank": "easterly shore",
+              "until": "the point of intersection with the boundary of Jewel Lake meadow",
+              "distance": "100 metres",
+              "quote": "thence in a general southwesterly direction following 100 metres east from the natural boundary of Jewel Lake on the easterly shore thereof to the point of intersection with the boundary of Jewel Lake meadow"
+            },
+            {
+              "start": null,
+              "direction": "more or less southwesterly",
+              "follow": "other",
+              "feature": "Jewel Lake meadow",
+              "side_or_bank": "eastern boundary",
+              "until": "a point of intersection with the northern boundary of D.L. 1875s",
+              "distance": null,
+              "quote": "thence more or less southwesterly following the eastern boundary of Jewel Lake meadow to a point of intersection with the northern boundary of D.L. 1875s"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "lot_line",
+              "feature": "D.L. 1875s",
+              "side_or_bank": "northern boundary",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence westerly along said boundary to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting or Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "That portion of M.U. 8-14"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "contained within the following described boundaries"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-c650801a1d87",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:01:50Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 8-14"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "a point 25 metres west of the point of intersection of the midline of Jewel Lake Road and the northwest corner of D.L. 1875s, Similkameen Division, Yale Land District",
+              "direction": null,
+              "follow": null,
+              "feature": "Jewel Lake Road",
+              "side_or_bank": "west",
+              "until": null,
+              "distance": "25 metres",
+              "quote": "Commencing at a point 25 metres west of the point of intersection of the midline of Jewel Lake Road and the northwest corner of D.L. 1875s, Similkameen Division, Yale Land District"
+            },
+            {
+              "start": null,
+              "direction": "general northeasterly",
+              "follow": "road",
+              "feature": "Jewel Lake Road",
+              "side_or_bank": "west",
+              "until": "the point of intersection with the westerly boundary of Jewel Lake Provincial Park",
+              "distance": "25 metres",
+              "quote": "thence in a general northeasterly direction following 25 metres west of the midline of Jewel Lake Road to the point of intersection with the westerly boundary of Jewel Lake Provincial Park"
+            },
+            {
+              "start": null,
+              "direction": "general northerly, easterly, southerly then westerly",
+              "follow": "other",
+              "feature": "Jewel Lake Provincial Park",
+              "side_or_bank": "westerly, northerly, easterly and southerly boundaries",
+              "until": "a point 100 metres east of the natural boundary of Jewel Lake on the easterly shore thereof",
+              "distance": "100 metres",
+              "quote": "thence in a general northerly, easterly, southerly then westerly direction along the westerly, northerly, easterly and southerly boundaries of Jewel Lake Provincial Park to a point 100 metres east of the natural boundary of Jewel Lake on the easterly shore thereof"
+            },
+            {
+              "start": null,
+              "direction": "general southwesterly",
+              "follow": "shoreline",
+              "feature": "Jewel Lake",
+              "side_or_bank": "easterly shore",
+              "until": "the point of intersection with the boundary of Jewel Lake meadow",
+              "distance": "100 metres",
+              "quote": "thence in a general southwesterly direction following 100 metres east from the natural boundary of Jewel Lake on the easterly shore thereof to the point of intersection with the boundary of Jewel Lake meadow"
+            },
+            {
+              "start": null,
+              "direction": "more or less southwesterly",
+              "follow": "other",
+              "feature": "Jewel Lake meadow",
+              "side_or_bank": "eastern boundary",
+              "until": "a point of intersection with the northern boundary of D.L. 1875s",
+              "distance": null,
+              "quote": "thence more or less southwesterly following the eastern boundary of Jewel Lake meadow to a point of intersection with the northern boundary of D.L. 1875s"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "lot_line",
+              "feature": "D.L. 1875s",
+              "side_or_bank": "northern boundary",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence westerly along said boundary to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting or Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "That portion of M.U. 8-14"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "That portion of M.U. 8-14",
+    "effect": "No Shooting or Hunting Areas",
+    "geometry.side": "contained within the following described boundaries",
+    "geometry.steps[0]": "Commencing at a point 25 metres west of the point of intersection of the midline of Jewel Lake Road and the northwest corner of D.L. 1875s, Similkameen Division, Yale Land District",
+    "geometry.steps[1]": "thence in a general northeasterly direction following 25 metres west of the midline of Jewel Lake Road to the point of intersection with the westerly boundary of Jewel Lake Provincial Park",
+    "geometry.steps[2]": "thence in a general northerly, easterly, southerly then westerly direction along the westerly, northerly, easterly and southerly boundaries of Jewel Lake Provincial Park to a point 100 metres east of the natural boundary of Jewel Lake on the easterly shore thereof",
+    "geometry.steps[3]": "thence in a general southwesterly direction following 100 metres east from the natural boundary of Jewel Lake on the easterly shore thereof to the point of intersection with the boundary of Jewel Lake meadow",
+    "geometry.steps[4]": "thence more or less southwesterly following the eastern boundary of Jewel Lake meadow to a point of intersection with the northern boundary of D.L. 1875s",
+    "geometry.steps[5]": "thence westerly along said boundary to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "side: run 1 \"inside\" vs run 2 null",
+    "steps: run 1 [\"jewel lake rd|||\",\"jewel lake rd|the point of intersection with the westerly boundary of jewel lake provincial park|25 metres|road\",\"jewel lake provincial park|a point 100 metres east of the natural boundary of jewel lake on the easterly shore thereof||other\",\"jewel lake|the point of intersection with the boundary of jewel lake meadow|100 metres|shoreline\",\"jewel lake meadow|a point of intersection with the northern boundary of d.l. 1875s||other\",\"d.l. 1875s|the point of commencement||lot_line\"] vs run 2 [\"jewel lake rd||25 metres|\",\"jewel lake rd|the point of intersection with the westerly boundary of jewel lake provincial park|25 metres|road\",\"jewel lake provincial park|a point 100 metres east of the natural boundary of jewel lake on the easterly shore thereof|100 metres|other\",\"jewel lake|the point of intersection with the boundary of jewel lake meadow|100 metres|shoreline\",\"jewel lake meadow|a point of intersection with the northern boundary of d.l. 1875s||other\",\"d.l. 1875s|the point of commencement||lot_line\"]"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:10:14.319Z",
+  "updated": "2026-10-21T16:10:14.319Z"
+}

@@ -1,0 +1,348 @@
+{
+  "item_id": "closed-area-da5715c828",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 9, section 17 (Lakelse Lake)",
+  "rule_id": "W9-017",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: side: run 1 \"inside\" vs run 2 null; steps: run 1 [\"|||\",\"schulbuckhand creek|hwy 37a||creek\",\"hwy 37a|the south boundary of lot 2665||road\",\"|the northeast corner of lot 6808||\",\"|clearwater creek||\",\"clearwater creek|the mean high water mark of lakelse lake||creek\",\"lakelse lake|the point of commencement||shoreline\"] vs run 2 [\"|||\",\"schulbuckhand creek|hwy 37a||creek\",\"hwy 37a|south boundary of lot 2665||road\",\"|northeast corner of lot 6808||straight_line\",\"|clearwater creek||straight_line\",\"clearwater creek|mean high water mark of lakelse lake||creek\",\"lakelse lake|point of commencement||shoreline\"]",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 9 Firearms Using Shot Only Areas (Section 10 (1) (a))\nLakelse Lake\n17 That portion of M.U. 6-11 in the Province of British Columbia which is contained within the following described boundaries: Commencing at the confluence of the mean high water mark of Lakelse Lake and Schulbuckhand Creek; thence in a southeasterly direction along said creek to Highway 37A; thence southerly along said highway to the south boundary of Lot 2665; thence due West to the northeast corner of Lot 6808; thence due South to Clearwater Creek; thence in a northerly direction along the east bank of Clearwater Creek to the mean high water mark of Lakelse Lake; thence in a generally westerly, northerly, easterly and southerly direction along the mean high water mark of Lakelse Lake to the point of commencement. [en. B.C. Reg. 194/99, s. 7 (b); am. B.C. Reg. 189/2002, s. 3 (a).]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-7fe0d774a8bc",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:02:40Z",
+      "answer": {
+        "effect": "shot_only",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 6-11"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": "inside",
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the confluence of the mean high water mark of Lakelse Lake and Schulbuckhand Creek",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the confluence of the mean high water mark of Lakelse Lake and Schulbuckhand Creek"
+            },
+            {
+              "start": null,
+              "direction": "southeasterly",
+              "follow": "creek",
+              "feature": "Schulbuckhand Creek",
+              "side_or_bank": null,
+              "until": "Highway 37A",
+              "distance": null,
+              "quote": "thence in a southeasterly direction along said creek to Highway 37A"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "road",
+              "feature": "Highway 37A",
+              "side_or_bank": null,
+              "until": "the south boundary of Lot 2665",
+              "distance": null,
+              "quote": "thence southerly along said highway to the south boundary of Lot 2665"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the northeast corner of Lot 6808",
+              "distance": null,
+              "quote": "thence due West to the northeast corner of Lot 6808"
+            },
+            {
+              "start": null,
+              "direction": "due South",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "Clearwater Creek",
+              "distance": null,
+              "quote": "thence due South to Clearwater Creek"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "creek",
+              "feature": "Clearwater Creek",
+              "side_or_bank": "east bank",
+              "until": "the mean high water mark of Lakelse Lake",
+              "distance": null,
+              "quote": "thence in a northerly direction along the east bank of Clearwater Creek to the mean high water mark of Lakelse Lake"
+            },
+            {
+              "start": null,
+              "direction": "generally westerly, northerly, easterly and southerly",
+              "follow": "shoreline",
+              "feature": "Lakelse Lake",
+              "side_or_bank": "mean high water mark",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence in a generally westerly, northerly, easterly and southerly direction along the mean high water mark of Lakelse Lake to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "Firearms Using Shot Only Areas"
+          },
+          {
+            "field": "within",
+            "quote": "That portion of M.U. 6-11"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries: Commencing at"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "contained within the following described boundaries"
+          },
+          {
+            "field": "geometry.steps[0]",
+            "quote": "Commencing at the confluence of the mean high water mark of Lakelse Lake and Schulbuckhand Creek"
+          },
+          {
+            "field": "geometry.steps[1]",
+            "quote": "thence in a southeasterly direction along said creek to Highway 37A"
+          },
+          {
+            "field": "geometry.steps[2]",
+            "quote": "thence southerly along said highway to the south boundary of Lot 2665"
+          },
+          {
+            "field": "geometry.steps[3]",
+            "quote": "thence due West to the northeast corner of Lot 6808"
+          },
+          {
+            "field": "geometry.steps[4]",
+            "quote": "thence due South to Clearwater Creek"
+          },
+          {
+            "field": "geometry.steps[5]",
+            "quote": "thence in a northerly direction along the east bank of Clearwater Creek to the mean high water mark of Lakelse Lake"
+          },
+          {
+            "field": "geometry.steps[6]",
+            "quote": "thence in a generally westerly, northerly, easterly and southerly direction along the mean high water mark of Lakelse Lake to the point of commencement"
+          }
+        ],
+        "uncertain": [
+          "geometry.steps[3].follow",
+          "geometry.steps[4].follow"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-7fe0d774a8bc",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:02:41Z",
+      "answer": {
+        "effect": "shot_only",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 6-11"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "confluence of the mean high water mark of Lakelse Lake and Schulbuckhand Creek",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the confluence of the mean high water mark of Lakelse Lake and Schulbuckhand Creek"
+            },
+            {
+              "start": null,
+              "direction": "southeasterly",
+              "follow": "creek",
+              "feature": "Schulbuckhand Creek",
+              "side_or_bank": null,
+              "until": "Highway 37A",
+              "distance": null,
+              "quote": "thence in a southeasterly direction along said creek to Highway 37A"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "road",
+              "feature": "Highway 37A",
+              "side_or_bank": null,
+              "until": "south boundary of Lot 2665",
+              "distance": null,
+              "quote": "thence southerly along said highway to the south boundary of Lot 2665"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "northeast corner of Lot 6808",
+              "distance": null,
+              "quote": "thence due West to the northeast corner of Lot 6808"
+            },
+            {
+              "start": null,
+              "direction": "due South",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "Clearwater Creek",
+              "distance": null,
+              "quote": "thence due South to Clearwater Creek"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "creek",
+              "feature": "Clearwater Creek",
+              "side_or_bank": "east bank",
+              "until": "mean high water mark of Lakelse Lake",
+              "distance": null,
+              "quote": "thence in a northerly direction along the east bank of Clearwater Creek to the mean high water mark of Lakelse Lake"
+            },
+            {
+              "start": null,
+              "direction": "generally westerly, northerly, easterly and southerly",
+              "follow": "shoreline",
+              "feature": "Lakelse Lake",
+              "side_or_bank": "mean high water mark",
+              "until": "point of commencement",
+              "distance": null,
+              "quote": "thence in a generally westerly, northerly, easterly and southerly direction along the mean high water mark of Lakelse Lake to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "Firearms Using Shot Only Areas"
+          },
+          {
+            "field": "within",
+            "quote": "That portion of M.U. 6-11"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries: Commencing at"
+          },
+          {
+            "field": "geometry.steps[0]",
+            "quote": "Commencing at the confluence of the mean high water mark of Lakelse Lake and Schulbuckhand Creek"
+          },
+          {
+            "field": "geometry.steps[1]",
+            "quote": "thence in a southeasterly direction along said creek to Highway 37A"
+          },
+          {
+            "field": "geometry.steps[2]",
+            "quote": "thence southerly along said highway to the south boundary of Lot 2665"
+          },
+          {
+            "field": "geometry.steps[3]",
+            "quote": "thence due West to the northeast corner of Lot 6808"
+          },
+          {
+            "field": "geometry.steps[4]",
+            "quote": "thence due South to Clearwater Creek"
+          },
+          {
+            "field": "geometry.steps[5]",
+            "quote": "thence in a northerly direction along the east bank of Clearwater Creek to the mean high water mark of Lakelse Lake"
+          },
+          {
+            "field": "geometry.steps[6]",
+            "quote": "thence in a generally westerly, northerly, easterly and southerly direction along the mean high water mark of Lakelse Lake to the point of commencement"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "That portion of M.U. 6-11",
+    "effect": "Firearms Using Shot Only Areas",
+    "geometry.side": "contained within the following described boundaries",
+    "geometry.steps[0]": "Commencing at the confluence of the mean high water mark of Lakelse Lake and Schulbuckhand Creek",
+    "geometry.steps[1]": "thence in a southeasterly direction along said creek to Highway 37A",
+    "geometry.steps[2]": "thence southerly along said highway to the south boundary of Lot 2665",
+    "geometry.steps[3]": "thence due West to the northeast corner of Lot 6808",
+    "geometry.steps[4]": "thence due South to Clearwater Creek",
+    "geometry.steps[5]": "thence in a northerly direction along the east bank of Clearwater Creek to the mean high water mark of Lakelse Lake",
+    "geometry.steps[6]": "thence in a generally westerly, northerly, easterly and southerly direction along the mean high water mark of Lakelse Lake to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "side: run 1 \"inside\" vs run 2 null",
+    "steps: run 1 [\"|||\",\"schulbuckhand creek|hwy 37a||creek\",\"hwy 37a|the south boundary of lot 2665||road\",\"|the northeast corner of lot 6808||\",\"|clearwater creek||\",\"clearwater creek|the mean high water mark of lakelse lake||creek\",\"lakelse lake|the point of commencement||shoreline\"] vs run 2 [\"|||\",\"schulbuckhand creek|hwy 37a||creek\",\"hwy 37a|south boundary of lot 2665||road\",\"|northeast corner of lot 6808||straight_line\",\"|clearwater creek||straight_line\",\"clearwater creek|mean high water mark of lakelse lake||creek\",\"lakelse lake|point of commencement||shoreline\"]"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:08:45.455Z",
+  "updated": "2026-10-21T16:08:45.455Z"
+}

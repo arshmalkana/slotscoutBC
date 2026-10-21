@@ -1,0 +1,401 @@
+{
+  "item_id": "closed-area-fec634a736",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 8 (Todagin Mountain)",
+  "rule_id": "W5-008",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "named area \"Cassiar District\": failed (no official layer for area type other)",
+    "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nTodagin Mountain\n8 That portion of the Province of British Columbia on the Klastine Plateau, Cassiar District, which is contained within the following described boundaries: Commencing at the junction of Stewart-Cassiar Highway and Coyote Creek; thence easterly along the north bank of Coyote Creek to Ealue Lake; thence along the north side of Ealue Lake to its most northerly point; thence in an easterly direction to Klappan River; thence in a southerly direction along the east bank of Klappan River to Tsanadto Creek; thence in a southwesterly direction to Kluea Lake; thence southwesterly along the south side of Kluea Lake and connecting creek to Todagin Lake; thence along the south side of Todagin Lake to Todagin Creek; thence west along the south bank of Todagin Creek to the intersection with Stewart-Cassiar Highway; thence north along Stewart-Cassiar Highway to point of commencement.",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-c7909362ffcf",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:01:11Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Cassiar District"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the junction of Stewart-Cassiar Highway and Coyote Creek",
+              "direction": null,
+              "follow": null,
+              "feature": "Coyote Creek",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the junction of Stewart-Cassiar Highway and Coyote Creek"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "creek",
+              "feature": "Coyote Creek",
+              "side_or_bank": "north bank",
+              "until": "Ealue Lake",
+              "distance": null,
+              "quote": "thence easterly along the north bank of Coyote Creek to Ealue Lake"
+            },
+            {
+              "start": null,
+              "direction": null,
+              "follow": "shoreline",
+              "feature": "Ealue Lake",
+              "side_or_bank": "north side",
+              "until": "its most northerly point",
+              "distance": null,
+              "quote": "thence along the north side of Ealue Lake to its most northerly point"
+            },
+            {
+              "start": null,
+              "direction": "in an easterly direction",
+              "follow": null,
+              "feature": "Klappan River",
+              "side_or_bank": null,
+              "until": "Klappan River",
+              "distance": null,
+              "quote": "thence in an easterly direction to Klappan River"
+            },
+            {
+              "start": null,
+              "direction": "in a southerly direction",
+              "follow": "river",
+              "feature": "Klappan River",
+              "side_or_bank": "east bank",
+              "until": "Tsanadto Creek",
+              "distance": null,
+              "quote": "thence in a southerly direction along the east bank of Klappan River to Tsanadto Creek"
+            },
+            {
+              "start": null,
+              "direction": "in a southwesterly direction",
+              "follow": null,
+              "feature": "Kluea Lake",
+              "side_or_bank": null,
+              "until": "Kluea Lake",
+              "distance": null,
+              "quote": "thence in a southwesterly direction to Kluea Lake"
+            },
+            {
+              "start": null,
+              "direction": "southwesterly",
+              "follow": "other",
+              "feature": "Kluea Lake",
+              "side_or_bank": "south side",
+              "until": "Todagin Lake",
+              "distance": null,
+              "quote": "thence southwesterly along the south side of Kluea Lake and connecting creek to Todagin Lake"
+            },
+            {
+              "start": null,
+              "direction": null,
+              "follow": "shoreline",
+              "feature": "Todagin Lake",
+              "side_or_bank": "south side",
+              "until": "Todagin Creek",
+              "distance": null,
+              "quote": "thence along the south side of Todagin Lake to Todagin Creek"
+            },
+            {
+              "start": null,
+              "direction": "west",
+              "follow": "creek",
+              "feature": "Todagin Creek",
+              "side_or_bank": "south bank",
+              "until": "the intersection with Stewart-Cassiar Highway",
+              "distance": null,
+              "quote": "thence west along the south bank of Todagin Creek to the intersection with Stewart-Cassiar Highway"
+            },
+            {
+              "start": null,
+              "direction": "north",
+              "follow": "road",
+              "feature": "Stewart-Cassiar Highway",
+              "side_or_bank": null,
+              "until": "point of commencement",
+              "distance": null,
+              "quote": "thence north along Stewart-Cassiar Highway to point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "Cassiar District"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries: Commencing at"
+          },
+          {
+            "field": "geometry.steps[0]",
+            "quote": "Commencing at the junction of Stewart-Cassiar Highway and Coyote Creek"
+          },
+          {
+            "field": "geometry.steps[1]",
+            "quote": "thence easterly along the north bank of Coyote Creek to Ealue Lake"
+          },
+          {
+            "field": "geometry.steps[2]",
+            "quote": "thence along the north side of Ealue Lake to its most northerly point"
+          },
+          {
+            "field": "geometry.steps[3]",
+            "quote": "thence in an easterly direction to Klappan River"
+          },
+          {
+            "field": "geometry.steps[4]",
+            "quote": "thence in a southerly direction along the east bank of Klappan River to Tsanadto Creek"
+          },
+          {
+            "field": "geometry.steps[5]",
+            "quote": "thence in a southwesterly direction to Kluea Lake"
+          },
+          {
+            "field": "geometry.steps[6]",
+            "quote": "thence southwesterly along the south side of Kluea Lake and connecting creek to Todagin Lake"
+          },
+          {
+            "field": "geometry.steps[7]",
+            "quote": "thence along the south side of Todagin Lake to Todagin Creek"
+          },
+          {
+            "field": "geometry.steps[8]",
+            "quote": "thence west along the south bank of Todagin Creek to the intersection with Stewart-Cassiar Highway"
+          },
+          {
+            "field": "geometry.steps[9]",
+            "quote": "thence north along Stewart-Cassiar Highway to point of commencement"
+          }
+        ],
+        "uncertain": [
+          "geometry.steps[3].follow",
+          "geometry.steps[5].follow"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-c7909362ffcf",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:00:50Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Cassiar District"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the junction of Stewart-Cassiar Highway and Coyote Creek",
+              "direction": null,
+              "follow": null,
+              "feature": "Coyote Creek",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the junction of Stewart-Cassiar Highway and Coyote Creek"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "creek",
+              "feature": "Coyote Creek",
+              "side_or_bank": "north bank",
+              "until": "Ealue Lake",
+              "distance": null,
+              "quote": "thence easterly along the north bank of Coyote Creek to Ealue Lake"
+            },
+            {
+              "start": null,
+              "direction": null,
+              "follow": "shoreline",
+              "feature": "Ealue Lake",
+              "side_or_bank": "north side",
+              "until": "its most northerly point",
+              "distance": null,
+              "quote": "thence along the north side of Ealue Lake to its most northerly point"
+            },
+            {
+              "start": null,
+              "direction": "in an easterly direction",
+              "follow": null,
+              "feature": "Klappan River",
+              "side_or_bank": null,
+              "until": "Klappan River",
+              "distance": null,
+              "quote": "thence in an easterly direction to Klappan River"
+            },
+            {
+              "start": null,
+              "direction": "in a southerly direction",
+              "follow": "river",
+              "feature": "Klappan River",
+              "side_or_bank": "east bank",
+              "until": "Tsanadto Creek",
+              "distance": null,
+              "quote": "thence in a southerly direction along the east bank of Klappan River to Tsanadto Creek"
+            },
+            {
+              "start": null,
+              "direction": "in a southwesterly direction",
+              "follow": null,
+              "feature": "Kluea Lake",
+              "side_or_bank": null,
+              "until": "Kluea Lake",
+              "distance": null,
+              "quote": "thence in a southwesterly direction to Kluea Lake"
+            },
+            {
+              "start": null,
+              "direction": "southwesterly",
+              "follow": "other",
+              "feature": "Kluea Lake",
+              "side_or_bank": "south side",
+              "until": "Todagin Lake",
+              "distance": null,
+              "quote": "thence southwesterly along the south side of Kluea Lake and connecting creek to Todagin Lake"
+            },
+            {
+              "start": null,
+              "direction": null,
+              "follow": "shoreline",
+              "feature": "Todagin Lake",
+              "side_or_bank": "south side",
+              "until": "Todagin Creek",
+              "distance": null,
+              "quote": "thence along the south side of Todagin Lake to Todagin Creek"
+            },
+            {
+              "start": null,
+              "direction": "west",
+              "follow": "creek",
+              "feature": "Todagin Creek",
+              "side_or_bank": "south bank",
+              "until": "the intersection with Stewart-Cassiar Highway",
+              "distance": null,
+              "quote": "thence west along the south bank of Todagin Creek to the intersection with Stewart-Cassiar Highway"
+            },
+            {
+              "start": null,
+              "direction": "north",
+              "follow": "road",
+              "feature": "Stewart-Cassiar Highway",
+              "side_or_bank": null,
+              "until": "point of commencement",
+              "distance": null,
+              "quote": "thence north along Stewart-Cassiar Highway to point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "on the Klastine Plateau, Cassiar District"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries"
+          }
+        ],
+        "uncertain": [
+          "geometry.steps[3].follow",
+          "geometry.steps[5].follow"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "within": "Cassiar District",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at the junction of Stewart-Cassiar Highway and Coyote Creek",
+    "geometry.steps[1]": "thence easterly along the north bank of Coyote Creek to Ealue Lake",
+    "geometry.steps[2]": "thence along the north side of Ealue Lake to its most northerly point",
+    "geometry.steps[3]": "thence in an easterly direction to Klappan River",
+    "geometry.steps[4]": "thence in a southerly direction along the east bank of Klappan River to Tsanadto Creek",
+    "geometry.steps[5]": "thence in a southwesterly direction to Kluea Lake",
+    "geometry.steps[6]": "thence southwesterly along the south side of Kluea Lake and connecting creek to Todagin Lake",
+    "geometry.steps[7]": "thence along the south side of Todagin Lake to Todagin Creek",
+    "geometry.steps[8]": "thence west along the south bank of Todagin Creek to the intersection with Stewart-Cassiar Highway",
+    "geometry.steps[9]": "thence north along Stewart-Cassiar Highway to point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [
+    {
+      "query": "Cassiar District",
+      "kind": "other",
+      "layer": "-",
+      "status": "failed",
+      "matches": 0,
+      "ids": [],
+      "note": "no official layer for area type other",
+      "sample": []
+    }
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:10:14.358Z",
+  "updated": "2026-10-21T16:10:14.358Z"
+}

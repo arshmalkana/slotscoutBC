@@ -1,0 +1,282 @@
+{
+  "item_id": "closed-area-c02c68bc9b",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 7, section 13 (Mount Assiniboine Park)",
+  "rule_id": "W8-013",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: side: run 1 \"inside\" vs run 2 null",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 7 No Hunting Areas (Section 8)\nMount Assiniboine Park\n13 That portion of M.U. 4-25 which is part of Mount Assiniboine Park contained within the following described boundaries: Commencing at the summit of Mount Assiniboine and proceeding northerly along the height of land to Sunburst Peak; thence proceeding northerly in a straight line to the west end of Cerulean Lake where the Wedgewood Lake and Ferro Pass trails intersect; thence northerly along the Ferro Pass trail to the height of land which divides the drainages of Elizabeth Creek and the Mitchell River; thence proceeding northeasterly along said height of land to a point due West of the summit of Cave Mountain; thence proceeding in a straight line to Cave Mountain; thence proceeding southerly along the British Columbia-Alberta border to the point of commencement.",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-9b59f9b918fa",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:01:47Z",
+      "answer": {
+        "effect": "no_hunting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 4-25"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": {
+            "type": "park",
+            "name": "Mount Assiniboine Park"
+          },
+          "buffer_m": null,
+          "side": "inside",
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the summit of Mount Assiniboine",
+              "direction": "northerly",
+              "follow": "other",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "Sunburst Peak",
+              "distance": null,
+              "quote": "Commencing at the summit of Mount Assiniboine and proceeding northerly along the height of land to Sunburst Peak"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the west end of Cerulean Lake where the Wedgewood Lake and Ferro Pass trails intersect",
+              "distance": null,
+              "quote": "thence proceeding northerly in a straight line to the west end of Cerulean Lake where the Wedgewood Lake and Ferro Pass trails intersect"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "other",
+              "feature": "Ferro Pass trail",
+              "side_or_bank": null,
+              "until": "the height of land which divides the drainages of Elizabeth Creek and the Mitchell River",
+              "distance": null,
+              "quote": "thence northerly along the Ferro Pass trail to the height of land which divides the drainages of Elizabeth Creek and the Mitchell River"
+            },
+            {
+              "start": null,
+              "direction": "northeasterly",
+              "follow": "other",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "a point due West of the summit of Cave Mountain",
+              "distance": null,
+              "quote": "thence proceeding northeasterly along said height of land to a point due West of the summit of Cave Mountain"
+            },
+            {
+              "start": null,
+              "direction": null,
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "Cave Mountain",
+              "distance": null,
+              "quote": "thence proceeding in a straight line to Cave Mountain"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "other",
+              "feature": "British Columbia-Alberta border",
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence proceeding southerly along the British Columbia-Alberta border to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "That portion of M.U. 4-25"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "part of Mount Assiniboine Park"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "contained within the following described boundaries"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-9b59f9b918fa",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:01:56Z",
+      "answer": {
+        "effect": "no_hunting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 4-25"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": {
+            "type": "park",
+            "name": "Mount Assiniboine Park"
+          },
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the summit of Mount Assiniboine",
+              "direction": "northerly",
+              "follow": "other",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "Sunburst Peak",
+              "distance": null,
+              "quote": "Commencing at the summit of Mount Assiniboine and proceeding northerly along the height of land to Sunburst Peak"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the west end of Cerulean Lake where the Wedgewood Lake and Ferro Pass trails intersect",
+              "distance": null,
+              "quote": "thence proceeding northerly in a straight line to the west end of Cerulean Lake where the Wedgewood Lake and Ferro Pass trails intersect"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "other",
+              "feature": "Ferro Pass trail",
+              "side_or_bank": null,
+              "until": "the height of land which divides the drainages of Elizabeth Creek and the Mitchell River",
+              "distance": null,
+              "quote": "thence northerly along the Ferro Pass trail to the height of land which divides the drainages of Elizabeth Creek and the Mitchell River"
+            },
+            {
+              "start": null,
+              "direction": "northeasterly",
+              "follow": "other",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "a point due West of the summit of Cave Mountain",
+              "distance": null,
+              "quote": "thence proceeding northeasterly along said height of land to a point due West of the summit of Cave Mountain"
+            },
+            {
+              "start": null,
+              "direction": null,
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "Cave Mountain",
+              "distance": null,
+              "quote": "thence proceeding in a straight line to Cave Mountain"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "other",
+              "feature": "British Columbia-Alberta border",
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence proceeding southerly along the British Columbia-Alberta border to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "That portion of M.U. 4-25"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "which is part of Mount Assiniboine Park"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "That portion of M.U. 4-25",
+    "geometry.feature": "part of Mount Assiniboine Park",
+    "effect": "No Hunting Areas",
+    "geometry.side": "contained within the following described boundaries",
+    "geometry.steps[0]": "Commencing at the summit of Mount Assiniboine and proceeding northerly along the height of land to Sunburst Peak",
+    "geometry.steps[1]": "thence proceeding northerly in a straight line to the west end of Cerulean Lake where the Wedgewood Lake and Ferro Pass trails intersect",
+    "geometry.steps[2]": "thence northerly along the Ferro Pass trail to the height of land which divides the drainages of Elizabeth Creek and the Mitchell River",
+    "geometry.steps[3]": "thence proceeding northeasterly along said height of land to a point due West of the summit of Cave Mountain",
+    "geometry.steps[4]": "thence proceeding in a straight line to Cave Mountain",
+    "geometry.steps[5]": "thence proceeding southerly along the British Columbia-Alberta border to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "side: run 1 \"inside\" vs run 2 null"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:09:19.312Z",
+  "updated": "2026-10-21T16:09:19.312Z"
+}

@@ -1,0 +1,196 @@
+{
+  "item_id": "closed-area-453b9f49da",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 35 (Mayo Lake)",
+  "rule_id": "W5-035",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: method: run 1 \"metes_and_bounds\" vs run 2 \"other\"; steps: run 1 [\"block 32 cowichan lake land district|||lot_line\",\"mayo lake rd|||road\",\"e. n. railway right of way|||other\",\"skutz falls rd|||road\"] vs run 2 []",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nMayo Lake\n35 That portion of the Province in the vicinity of the Corporation of the City of Duncan, Quamichan Land District, which is contained within the following described boundaries: All that area bounded on the south by the southern boundary of Block 32, Cowichan Lake Land District; on the west by the Mayo Lake Road; on the north by the E. & N. Railway right of way; and on the east by the Skutz Falls Road.",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-51e1c4b66b5f",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:00:42Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Quamichan Land District"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": null,
+              "direction": "on the south",
+              "follow": "lot_line",
+              "feature": "Block 32, Cowichan Lake Land District",
+              "side_or_bank": "southern boundary",
+              "until": null,
+              "distance": null,
+              "quote": "All that area bounded on the south by the southern boundary of Block 32, Cowichan Lake Land District"
+            },
+            {
+              "start": null,
+              "direction": "on the west",
+              "follow": "road",
+              "feature": "Mayo Lake Road",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "on the west by the Mayo Lake Road"
+            },
+            {
+              "start": null,
+              "direction": "on the north",
+              "follow": "other",
+              "feature": "E. & N. Railway right of way",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "on the north by the E. & N. Railway right of way"
+            },
+            {
+              "start": null,
+              "direction": "on the east",
+              "follow": "road",
+              "feature": "Skutz Falls Road",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "on the east by the Skutz Falls Road"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "Quamichan Land District"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "which is contained within the following described boundaries: All that area bounded on the south by"
+          },
+          {
+            "field": "geometry.steps[0]",
+            "quote": "All that area bounded on the south by the southern boundary of Block 32, Cowichan Lake Land District"
+          },
+          {
+            "field": "geometry.steps[1]",
+            "quote": "on the west by the Mayo Lake Road"
+          },
+          {
+            "field": "geometry.steps[2]",
+            "quote": "on the north by the E. & N. Railway right of way"
+          },
+          {
+            "field": "geometry.steps[3]",
+            "quote": "on the east by the Skutz Falls Road"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-51e1c4b66b5f",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:00:56Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Quamichan Land District"
+        },
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "Quamichan Land District"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "All that area bounded on the south by the southern boundary of Block 32, Cowichan Lake Land District; on the west by the Mayo Lake Road; on the north by the E. & N. Railway right of way; and on the east by the Skutz Falls Road"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "Quamichan Land District",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "All that area bounded on the south by the southern boundary of Block 32, Cowichan Lake Land District",
+    "geometry.steps[1]": "on the west by the Mayo Lake Road",
+    "geometry.steps[2]": "on the north by the E. & N. Railway right of way",
+    "geometry.steps[3]": "on the east by the Skutz Falls Road"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "method: run 1 \"metes_and_bounds\" vs run 2 \"other\"",
+    "steps: run 1 [\"block 32 cowichan lake land district|||lot_line\",\"mayo lake rd|||road\",\"e. n. railway right of way|||other\",\"skutz falls rd|||road\"] vs run 2 []"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:08:32.763Z",
+  "updated": "2026-10-21T16:08:32.763Z"
+}

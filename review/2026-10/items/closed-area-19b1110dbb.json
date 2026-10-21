@@ -1,0 +1,209 @@
+{
+  "item_id": "closed-area-19b1110dbb",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 3 (Ganges)",
+  "rule_id": "W5-003",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "named area \"Cowichan District\": failed (no official layer for area type other)",
+    "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nGanges\n3 That portion of the Province of British Columbia in Ganges Harbour, Cowichan District, except organized territory, which is contained within the following described boundaries: All of that area known as Ganges Harbour below the high water mark lying north of a straight line running from Scott Point due West to the nearest point on the west shoreline of said harbour.",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-3cdccdb7d537",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:00:20Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [
+          "except organized territory"
+        ],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Cowichan District"
+        },
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": {
+            "type": "other",
+            "name": "Ganges Harbour"
+          },
+          "buffer_m": null,
+          "side": "north",
+          "from": {
+            "type": "landmark",
+            "road": null,
+            "name": "Scott Point"
+          },
+          "to": {
+            "type": "shoreline",
+            "road": null,
+            "name": "the nearest point on the west shoreline of said harbour"
+          },
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "exemptions[0]",
+            "quote": "except organized territory"
+          },
+          {
+            "field": "within",
+            "quote": "Cowichan District"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "All of that area known as Ganges Harbour below the high water mark lying north of a straight line"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "that area known as Ganges Harbour below the high water mark"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "lying north of a straight line"
+          },
+          {
+            "field": "geometry.from",
+            "quote": "a straight line running from Scott Point"
+          },
+          {
+            "field": "geometry.to",
+            "quote": "due West to the nearest point on the west shoreline of said harbour"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-3cdccdb7d537",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:59:40Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [
+          "except organized territory"
+        ],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Cowichan District"
+        },
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": {
+            "type": "other",
+            "name": "Ganges Harbour"
+          },
+          "buffer_m": null,
+          "side": "north",
+          "from": {
+            "type": "landmark",
+            "road": null,
+            "name": "Scott Point"
+          },
+          "to": {
+            "type": "shoreline",
+            "road": null,
+            "name": "the nearest point on the west shoreline of said harbour"
+          },
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "exemptions[0]",
+            "quote": "except organized territory"
+          },
+          {
+            "field": "within",
+            "quote": "Ganges Harbour, Cowichan District"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "All of that area known as Ganges Harbour below the high water mark lying north of a straight line"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "All of that area known as Ganges Harbour below the high water mark"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "lying north of a straight line"
+          },
+          {
+            "field": "geometry.from",
+            "quote": "a straight line running from Scott Point"
+          },
+          {
+            "field": "geometry.to",
+            "quote": "due West to the nearest point on the west shoreline of said harbour"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "Cowichan District",
+    "geometry.feature": "that area known as Ganges Harbour below the high water mark",
+    "geometry.from": "a straight line running from Scott Point",
+    "geometry.to": "due West to the nearest point on the west shoreline of said harbour",
+    "effect": "No Shooting Areas",
+    "geometry.side": "lying north of a straight line",
+    "exemptions[0]": "except organized territory"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [
+    {
+      "query": "Cowichan District",
+      "kind": "other",
+      "layer": "-",
+      "status": "failed",
+      "matches": 0,
+      "ids": [],
+      "note": "no official layer for area type other",
+      "sample": []
+    }
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:08:31.854Z",
+  "updated": "2026-10-21T16:08:31.854Z"
+}

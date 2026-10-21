@@ -1,0 +1,155 @@
+{
+  "item_id": "closed-area-a0d337d6e1",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 3, section 55 (Sun Peaks Resort)",
+  "rule_id": "W3-055",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: feature: run 1 \"sun peaks resort\" vs run 2 \"any ski lift run facility or development of the sun peaks resort\"",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nSun Peaks Resort\n55 That portion of M.U. 3-27 in the vicinity of Kamloops, KDYD, which is contained within the following described boundaries: All land and waters within 400 metres of any ski lift, run, facility or development of the Sun Peaks Resort. [en. B.C. Reg. 322/95, s. 2 (b).]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-641094842b62",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:57:30Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 3-27"
+        },
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": {
+            "type": "other",
+            "name": "Sun Peaks Resort"
+          },
+          "buffer_m": 400,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting or Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "That portion of M.U. 3-27"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "All land and waters within 400 metres of any ski lift, run, facility or development of the Sun Peaks Resort"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "any ski lift, run, facility or development of the Sun Peaks Resort"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": "within 400 metres"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-641094842b62",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:59:18Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 3-27"
+        },
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": {
+            "type": "other",
+            "name": "any ski lift, run, facility or development of the Sun Peaks Resort"
+          },
+          "buffer_m": 400,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting or Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "That portion of M.U. 3-27"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "All land and waters within 400 metres of any ski lift, run, facility or development of the Sun Peaks Resort"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "any ski lift, run, facility or development of the Sun Peaks Resort"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": "within 400 metres"
+          }
+        ],
+        "uncertain": [
+          "geometry.side"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "within": "That portion of M.U. 3-27",
+    "geometry.feature": "any ski lift, run, facility or development of the Sun Peaks Resort",
+    "geometry.buffer_m": "within 400 metres",
+    "effect": "No Shooting or Hunting Areas"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "feature: run 1 \"sun peaks resort\" vs run 2 \"any ski lift run facility or development of the sun peaks resort\""
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:08:34.260Z",
+  "updated": "2026-10-21T16:08:34.260Z"
+}

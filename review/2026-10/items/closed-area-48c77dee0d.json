@@ -1,0 +1,315 @@
+{
+  "item_id": "closed-area-48c77dee0d",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 3, section 45 (Cowichan Lake)",
+  "rule_id": "W3-045",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: side: run 1 \"inside\" vs run 2 null; steps: run 1 [\"hwy 18|||\",\"|100 m due north of the centre line of said junction|100 m|straight_line\",\"the youbou section of hwy 18|youbou||road\",\"the main private industrial rd along the north shore of cowichan lake|the most western point of the lake|100 m|road\",\"the main private industrial rd along the west and south shore of cowichan lake|honeymoon bay||road\",\"hwy 18|the village of lake cowichan||road\",\"hwy 18|the point of commencement||road\"] vs run 2 [\"hwy 18|||\",\"|100 m due north of the centre line of said junction|100 m|straight_line\",\"youbou section of hwy 18|youbou||road\",\"main private industrial rd along the north shore of cowichan lake|the most western point of the lake|100 m|road\",\"main private industrial rd along the west and south shore of cowichan lake|honeymoon bay||road\",\"hwy 18|the village of lake cowichan||road\",\"hwy 18|the point of commencement||road\"]; exemptions: run 1 2 vs run 2 1",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nCowichan Lake\n45 That portion of the Province of British Columbia in the vicinity of Cowichan Lake, Cowichan Lake District, which is contained within the following described boundaries: Commencing on Highway 18 at the junction of the Youbou Road and Lake Cowichan road; thence 100 m due North of the centre line of said junction; thence following parallel to the Youbou section of Highway 18 to Youbou; thence continuing 100 m north and parallel of the main private industrial road along the north shore of Cowichan Lake to the most western point of the lake, thence following the main private industrial road along the west and south shore of Cowichan Lake to Honeymoon Bay; thence along Highway 18 from Honeymoon Bay to the village of Lake Cowichan; thence continuing along the said highway to the point of commencement, and including all of the intervening land and waters except Indian reserve lands and organized territory. [en. B.C. Reg. 80/2012, App. 1, s. 2.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-0eb03c49fc60",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:59:31Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [
+          "Indian reserve lands",
+          "organized territory"
+        ],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Cowichan Lake District"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": "inside",
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "on Highway 18 at the junction of the Youbou Road and Lake Cowichan road",
+              "direction": null,
+              "follow": null,
+              "feature": "Highway 18",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing on Highway 18 at the junction of the Youbou Road and Lake Cowichan road"
+            },
+            {
+              "start": null,
+              "direction": "due North",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "100 m due North of the centre line of said junction",
+              "distance": "100 m",
+              "quote": "thence 100 m due North of the centre line of said junction"
+            },
+            {
+              "start": null,
+              "direction": null,
+              "follow": "road",
+              "feature": "the Youbou section of Highway 18",
+              "side_or_bank": null,
+              "until": "Youbou",
+              "distance": null,
+              "quote": "thence following parallel to the Youbou section of Highway 18 to Youbou"
+            },
+            {
+              "start": null,
+              "direction": "north",
+              "follow": "road",
+              "feature": "the main private industrial road along the north shore of Cowichan Lake",
+              "side_or_bank": "north",
+              "until": "the most western point of the lake",
+              "distance": "100 m",
+              "quote": "thence continuing 100 m north and parallel of the main private industrial road along the north shore of Cowichan Lake to the most western point of the lake"
+            },
+            {
+              "start": null,
+              "direction": null,
+              "follow": "road",
+              "feature": "the main private industrial road along the west and south shore of Cowichan Lake",
+              "side_or_bank": null,
+              "until": "Honeymoon Bay",
+              "distance": null,
+              "quote": "thence following the main private industrial road along the west and south shore of Cowichan Lake to Honeymoon Bay"
+            },
+            {
+              "start": "Honeymoon Bay",
+              "direction": null,
+              "follow": "road",
+              "feature": "Highway 18",
+              "side_or_bank": null,
+              "until": "the village of Lake Cowichan",
+              "distance": null,
+              "quote": "thence along Highway 18 from Honeymoon Bay to the village of Lake Cowichan"
+            },
+            {
+              "start": null,
+              "direction": null,
+              "follow": "road",
+              "feature": "Highway 18",
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence continuing along the said highway to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting or Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "Cowichan Lake District"
+          },
+          {
+            "field": "exemptions[0]",
+            "quote": "except Indian reserve lands"
+          },
+          {
+            "field": "exemptions[1]",
+            "quote": "organized territory"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "including all of the intervening land and waters"
+          }
+        ],
+        "uncertain": [
+          "geometry.steps[2].side_or_bank",
+          "geometry.steps[2].distance"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-0eb03c49fc60",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:59:27Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [
+          "except Indian reserve lands and organized territory"
+        ],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Cowichan Lake District"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "Highway 18 at the junction of the Youbou Road and Lake Cowichan road",
+              "direction": null,
+              "follow": null,
+              "feature": "Highway 18",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing on Highway 18 at the junction of the Youbou Road and Lake Cowichan road"
+            },
+            {
+              "start": null,
+              "direction": "due North",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "100 m due North of the centre line of said junction",
+              "distance": "100 m",
+              "quote": "thence 100 m due North of the centre line of said junction"
+            },
+            {
+              "start": null,
+              "direction": null,
+              "follow": "road",
+              "feature": "Youbou section of Highway 18",
+              "side_or_bank": null,
+              "until": "Youbou",
+              "distance": null,
+              "quote": "thence following parallel to the Youbou section of Highway 18 to Youbou"
+            },
+            {
+              "start": null,
+              "direction": null,
+              "follow": "road",
+              "feature": "main private industrial road along the north shore of Cowichan Lake",
+              "side_or_bank": "north",
+              "until": "the most western point of the lake",
+              "distance": "100 m",
+              "quote": "thence continuing 100 m north and parallel of the main private industrial road along the north shore of Cowichan Lake to the most western point of the lake"
+            },
+            {
+              "start": null,
+              "direction": null,
+              "follow": "road",
+              "feature": "main private industrial road along the west and south shore of Cowichan Lake",
+              "side_or_bank": null,
+              "until": "Honeymoon Bay",
+              "distance": null,
+              "quote": "thence following the main private industrial road along the west and south shore of Cowichan Lake to Honeymoon Bay"
+            },
+            {
+              "start": "Honeymoon Bay",
+              "direction": null,
+              "follow": "road",
+              "feature": "Highway 18",
+              "side_or_bank": null,
+              "until": "the village of Lake Cowichan",
+              "distance": null,
+              "quote": "thence along Highway 18 from Honeymoon Bay to the village of Lake Cowichan"
+            },
+            {
+              "start": null,
+              "direction": null,
+              "follow": "road",
+              "feature": "Highway 18",
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence continuing along the said highway to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting or Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in the vicinity of Cowichan Lake, Cowichan Lake District"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries"
+          },
+          {
+            "field": "exemptions[0]",
+            "quote": "except Indian reserve lands and organized territory"
+          }
+        ],
+        "uncertain": [
+          "geometry.steps[2].distance",
+          "geometry.steps[2].side_or_bank"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "within": "Cowichan Lake District",
+    "effect": "No Shooting or Hunting Areas",
+    "geometry.side": "including all of the intervening land and waters",
+    "exemptions[0]": "except Indian reserve lands",
+    "exemptions[1]": "organized territory",
+    "geometry.steps[0]": "Commencing on Highway 18 at the junction of the Youbou Road and Lake Cowichan road",
+    "geometry.steps[1]": "thence 100 m due North of the centre line of said junction",
+    "geometry.steps[2]": "thence following parallel to the Youbou section of Highway 18 to Youbou",
+    "geometry.steps[3]": "thence continuing 100 m north and parallel of the main private industrial road along the north shore of Cowichan Lake to the most western point of the lake",
+    "geometry.steps[4]": "thence following the main private industrial road along the west and south shore of Cowichan Lake to Honeymoon Bay",
+    "geometry.steps[5]": "thence along Highway 18 from Honeymoon Bay to the village of Lake Cowichan",
+    "geometry.steps[6]": "thence continuing along the said highway to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "side: run 1 \"inside\" vs run 2 null",
+    "steps: run 1 [\"hwy 18|||\",\"|100 m due north of the centre line of said junction|100 m|straight_line\",\"the youbou section of hwy 18|youbou||road\",\"the main private industrial rd along the north shore of cowichan lake|the most western point of the lake|100 m|road\",\"the main private industrial rd along the west and south shore of cowichan lake|honeymoon bay||road\",\"hwy 18|the village of lake cowichan||road\",\"hwy 18|the point of commencement||road\"] vs run 2 [\"hwy 18|||\",\"|100 m due north of the centre line of said junction|100 m|straight_line\",\"youbou section of hwy 18|youbou||road\",\"main private industrial rd along the north shore of cowichan lake|the most western point of the lake|100 m|road\",\"main private industrial rd along the west and south shore of cowichan lake|honeymoon bay||road\",\"hwy 18|the village of lake cowichan||road\",\"hwy 18|the point of commencement||road\"]",
+    "exemptions: run 1 2 vs run 2 1"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:07:26.509Z",
+  "updated": "2026-10-21T16:07:26.509Z"
+}

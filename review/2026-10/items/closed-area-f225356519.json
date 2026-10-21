@@ -1,0 +1,279 @@
+{
+  "item_id": "closed-area-f225356519",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 104 (Tatlow Road)",
+  "rule_id": "W5-104",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: steps: run 1 [\"tatlow rd||.4 km|road\",\"tatlow rd|the point of intersection with the midline of chapman rd|.4 km|road\",\"tatlow rd|the most easterly point on the midline of tatlow rd|.4 km|road\",\"chapman rd||1 km|road\"] vs run 2 []",
+    "rule parser and AI disagree: within: rule parser null vs AI runs \"m.u. 6 09\"; buffer_m: rule parser 4000 vs AI runs 400; from: rule parser null vs AI runs \"tatlow rd\"; to: rule parser null vs AI runs \"tatlow rd\"; steps: rule parser [] vs AI runs [\"tatlow rd||.4 km|road\",\"tatlow rd|the point of intersection with the midline of chapman rd|.4 km|road\",\"tatlow rd|the most easterly point on the midline of tatlow rd|.4 km|road\",\"chapman rd||1 km|road\"]",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nTatlow Road\n104 That portion of M.U. 6-09 in the Province of British Columbia contained within the following described boundaries: Commencing .4 km on either side of the midline of Tatlow Road at Km 13 south of Smithers, thence in a general easterly direction at .4 km on either side of the midline of Tatlow Road to the point of intersection with the midline of Chapman Road; thence in a general easterly direction at .4 km on either side of the midline of Tatlow Road to the most easterly point on the midline of Tatlow Road and southerly at .4 km on either side of the midline of Chapman Road for 1 km. [en. B.C. Reg. 176/89, s. 6.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-da396085511d",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:03:14Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 6-09"
+        },
+        "geometry": {
+          "method": "road_buffer",
+          "road": {
+            "name": "Tatlow Road",
+            "source_hint": "DRA"
+          },
+          "feature": null,
+          "buffer_m": 400,
+          "side": "both",
+          "from": {
+            "type": "km_point",
+            "road": "Tatlow Road",
+            "name": "Km 13 south of Smithers"
+          },
+          "to": {
+            "type": "other",
+            "road": "Tatlow Road",
+            "name": "most easterly point on the midline of Tatlow Road"
+          },
+          "steps": [
+            {
+              "start": "Km 13 south of Smithers",
+              "direction": null,
+              "follow": "road",
+              "feature": "Tatlow Road",
+              "side_or_bank": "either side",
+              "until": null,
+              "distance": ".4 km",
+              "quote": "Commencing .4 km on either side of the midline of Tatlow Road at Km 13 south of Smithers"
+            },
+            {
+              "start": null,
+              "direction": "in a general easterly direction",
+              "follow": "road",
+              "feature": "Tatlow Road",
+              "side_or_bank": "either side",
+              "until": "the point of intersection with the midline of Chapman Road",
+              "distance": ".4 km",
+              "quote": "thence in a general easterly direction at .4 km on either side of the midline of Tatlow Road to the point of intersection with the midline of Chapman Road"
+            },
+            {
+              "start": null,
+              "direction": "in a general easterly direction",
+              "follow": "road",
+              "feature": "Tatlow Road",
+              "side_or_bank": "either side",
+              "until": "the most easterly point on the midline of Tatlow Road",
+              "distance": ".4 km",
+              "quote": "thence in a general easterly direction at .4 km on either side of the midline of Tatlow Road to the most easterly point on the midline of Tatlow Road"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "road",
+              "feature": "Chapman Road",
+              "side_or_bank": "either side",
+              "until": null,
+              "distance": "1 km",
+              "quote": "southerly at .4 km on either side of the midline of Chapman Road for 1 km"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "M.U. 6-09"
+          },
+          {
+            "field": "geometry.road",
+            "quote": "midline of Tatlow Road"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": ".4 km on either side"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "on either side"
+          },
+          {
+            "field": "geometry.from",
+            "quote": "Tatlow Road at Km 13 south of Smithers"
+          },
+          {
+            "field": "geometry.to",
+            "quote": "the most easterly point on the midline of Tatlow Road"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-da396085511d",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T15:59:48Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 6-09"
+        },
+        "geometry": {
+          "method": "road_buffer",
+          "road": {
+            "name": "Tatlow Road",
+            "source_hint": "DRA"
+          },
+          "feature": null,
+          "buffer_m": 400,
+          "side": "both",
+          "from": {
+            "type": "km_point",
+            "road": "Tatlow Road",
+            "name": "Km 13 south of Smithers"
+          },
+          "to": {
+            "type": "other",
+            "road": "Tatlow Road",
+            "name": "the most easterly point on the midline of Tatlow Road"
+          },
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "That portion of M.U. 6-09"
+          },
+          {
+            "field": "geometry.road",
+            "quote": "the midline of Tatlow Road"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": ".4 km"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "on either side"
+          },
+          {
+            "field": "geometry.from",
+            "quote": "Commencing .4 km on either side of the midline of Tatlow Road at Km 13 south of Smithers"
+          },
+          {
+            "field": "geometry.to",
+            "quote": "to the most easterly point on the midline of Tatlow Road"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "rule": {
+      "task_id": "closed_area-da396085511d",
+      "mode": "rule",
+      "parser": "ruleparse.v1",
+      "produced_at": "2026-10-20T15:12:19.922Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "road_buffer",
+          "road": {
+            "name": "Tatlow Road",
+            "source_hint": "DRA"
+          },
+          "feature": null,
+          "buffer_m": 4000,
+          "side": "both",
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "geometry.buffer_m",
+            "quote": "4 km on either side of the midline"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "on either side"
+          },
+          {
+            "field": "geometry.road",
+            "quote": "Tatlow Road"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "M.U. 6-09",
+    "geometry.road": "midline of Tatlow Road",
+    "geometry.buffer_m": ".4 km on either side",
+    "geometry.from": "Tatlow Road at Km 13 south of Smithers",
+    "geometry.to": "the most easterly point on the midline of Tatlow Road",
+    "effect": "No Shooting Areas",
+    "geometry.side": "on either side",
+    "geometry.steps[0]": "Commencing .4 km on either side of the midline of Tatlow Road at Km 13 south of Smithers",
+    "geometry.steps[1]": "thence in a general easterly direction at .4 km on either side of the midline of Tatlow Road to the point of intersection with the midline of Chapman Road",
+    "geometry.steps[2]": "thence in a general easterly direction at .4 km on either side of the midline of Tatlow Road to the most easterly point on the midline of Tatlow Road",
+    "geometry.steps[3]": "southerly at .4 km on either side of the midline of Chapman Road for 1 km"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "steps: run 1 [\"tatlow rd||.4 km|road\",\"tatlow rd|the point of intersection with the midline of chapman rd|.4 km|road\",\"tatlow rd|the most easterly point on the midline of tatlow rd|.4 km|road\",\"chapman rd||1 km|road\"] vs run 2 []",
+    "within: rule parser null vs AI runs \"m.u. 6 09\"",
+    "buffer_m: rule parser 4000 vs AI runs 400",
+    "from: rule parser null vs AI runs \"tatlow rd\"",
+    "to: rule parser null vs AI runs \"tatlow rd\"",
+    "steps: rule parser [] vs AI runs [\"tatlow rd||.4 km|road\",\"tatlow rd|the point of intersection with the midline of chapman rd|.4 km|road\",\"tatlow rd|the most easterly point on the midline of tatlow rd|.4 km|road\",\"chapman rd||1 km|road\"]"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:10:30.874Z",
+  "updated": "2026-10-21T16:10:30.874Z"
+}

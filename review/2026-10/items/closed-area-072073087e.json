@@ -1,0 +1,332 @@
+{
+  "item_id": "closed-area-072073087e",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 48 (Naramata)",
+  "rule_id": "W5-048",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: within: run 1 \"province of british columbia\" vs run 2 null; steps: run 1 [\"trust creek|its intersection with chute lake rd||creek\",\"chute lake rd|naramata rd||road\",\"naramata rd|its intersection with old main rd||road\",\"old main rd|arawana creek||road\",\"arawana creek|okanagan lake||creek\",\"||100 m|straight_line\",\"okanagan lake|a point 100 m west of the mouth of trust creek|100 m|shoreline\",\"|the point of commencement||straight_line\"] vs run 2 [\"trust creek|its intersection with chute lake rd||creek\",\"chute lake rd|naramata rd||road\",\"naramata rd|its intersection with old main rd||road\",\"old main rd|arawana creek||road\",\"arawana creek|okanagan lake||creek\",\"okanagan lake||100 m|straight_line\",\"okanagan lake|a point 100 m west of the mouth of trust creek|100 m|shoreline\",\"|the point of commencement||straight_line\"]",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nNaramata\n48 That portion of the Province of British Columbia in the vicinity of Naramata within the following described boundaries: Commencing at the mouth of Trust Creek and proceeding upstream along the northern natural boundary of Trust Creek to its intersection with Chute Lake Road; thence proceeding southerly along the eastern edge of the travelled portion of Chute Lake Road to Naramata Road; thence proceeding southerly along the eastern edge of the travelled portion of Naramata Road to its intersection with Old Main Road; thence proceeding westerly along the southern edge of the travelled portion of Old Main Road to Arawana Creek; thence proceeding downstream along the southern natural boundary of Arawana Creek to Okanagan Lake; thence proceeding southwesterly in a straight line at right angles to the shore of Okanagan Lake at Arawana Creek for a distance of 100 m; thence proceeding northerly parallel to and 100 m distant from the eastern natural boundary of Okanagan Lake to a point 100 m west of the mouth of Trust Creek; thence proceeding east in a straight line to the point of commencement.",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-1d9516a666ac",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:02:50Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Province of British Columbia"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the mouth of Trust Creek",
+              "direction": "upstream",
+              "follow": "creek",
+              "feature": "Trust Creek",
+              "side_or_bank": "northern natural boundary",
+              "until": "its intersection with Chute Lake Road",
+              "distance": null,
+              "quote": "Commencing at the mouth of Trust Creek and proceeding upstream along the northern natural boundary of Trust Creek to its intersection with Chute Lake Road"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "road",
+              "feature": "Chute Lake Road",
+              "side_or_bank": "eastern edge of the travelled portion",
+              "until": "Naramata Road",
+              "distance": null,
+              "quote": "thence proceeding southerly along the eastern edge of the travelled portion of Chute Lake Road to Naramata Road"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "road",
+              "feature": "Naramata Road",
+              "side_or_bank": "eastern edge of the travelled portion",
+              "until": "its intersection with Old Main Road",
+              "distance": null,
+              "quote": "thence proceeding southerly along the eastern edge of the travelled portion of Naramata Road to its intersection with Old Main Road"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "road",
+              "feature": "Old Main Road",
+              "side_or_bank": "southern edge of the travelled portion",
+              "until": "Arawana Creek",
+              "distance": null,
+              "quote": "thence proceeding westerly along the southern edge of the travelled portion of Old Main Road to Arawana Creek"
+            },
+            {
+              "start": null,
+              "direction": "downstream",
+              "follow": "creek",
+              "feature": "Arawana Creek",
+              "side_or_bank": "southern natural boundary",
+              "until": "Okanagan Lake",
+              "distance": null,
+              "quote": "thence proceeding downstream along the southern natural boundary of Arawana Creek to Okanagan Lake"
+            },
+            {
+              "start": null,
+              "direction": "southwesterly",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": "100 m",
+              "quote": "thence proceeding southwesterly in a straight line at right angles to the shore of Okanagan Lake at Arawana Creek for a distance of 100 m"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "shoreline",
+              "feature": "Okanagan Lake",
+              "side_or_bank": "eastern natural boundary",
+              "until": "a point 100 m west of the mouth of Trust Creek",
+              "distance": "100 m",
+              "quote": "thence proceeding northerly parallel to and 100 m distant from the eastern natural boundary of Okanagan Lake to a point 100 m west of the mouth of Trust Creek"
+            },
+            {
+              "start": null,
+              "direction": "east",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence proceeding east in a straight line to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "That portion of the Province of British Columbia"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within the following described boundaries: Commencing at"
+          },
+          {
+            "field": "geometry.steps[0]",
+            "quote": "Commencing at the mouth of Trust Creek and proceeding upstream along the northern natural boundary of Trust Creek to its intersection with Chute Lake Road"
+          },
+          {
+            "field": "geometry.steps[1]",
+            "quote": "thence proceeding southerly along the eastern edge of the travelled portion of Chute Lake Road to Naramata Road"
+          },
+          {
+            "field": "geometry.steps[2]",
+            "quote": "thence proceeding southerly along the eastern edge of the travelled portion of Naramata Road to its intersection with Old Main Road"
+          },
+          {
+            "field": "geometry.steps[3]",
+            "quote": "thence proceeding westerly along the southern edge of the travelled portion of Old Main Road to Arawana Creek"
+          },
+          {
+            "field": "geometry.steps[4]",
+            "quote": "thence proceeding downstream along the southern natural boundary of Arawana Creek to Okanagan Lake"
+          },
+          {
+            "field": "geometry.steps[5]",
+            "quote": "thence proceeding southwesterly in a straight line at right angles to the shore of Okanagan Lake at Arawana Creek for a distance of 100 m"
+          },
+          {
+            "field": "geometry.steps[6]",
+            "quote": "thence proceeding northerly parallel to and 100 m distant from the eastern natural boundary of Okanagan Lake to a point 100 m west of the mouth of Trust Creek"
+          },
+          {
+            "field": "geometry.steps[7]",
+            "quote": "thence proceeding east in a straight line to the point of commencement"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-1d9516a666ac",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T15:59:35Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the mouth of Trust Creek",
+              "direction": "upstream",
+              "follow": "creek",
+              "feature": "Trust Creek",
+              "side_or_bank": "northern natural boundary",
+              "until": "its intersection with Chute Lake Road",
+              "distance": null,
+              "quote": "Commencing at the mouth of Trust Creek and proceeding upstream along the northern natural boundary of Trust Creek to its intersection with Chute Lake Road"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "road",
+              "feature": "Chute Lake Road",
+              "side_or_bank": "eastern edge of the travelled portion",
+              "until": "Naramata Road",
+              "distance": null,
+              "quote": "thence proceeding southerly along the eastern edge of the travelled portion of Chute Lake Road to Naramata Road"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "road",
+              "feature": "Naramata Road",
+              "side_or_bank": "eastern edge of the travelled portion",
+              "until": "its intersection with Old Main Road",
+              "distance": null,
+              "quote": "thence proceeding southerly along the eastern edge of the travelled portion of Naramata Road to its intersection with Old Main Road"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "road",
+              "feature": "Old Main Road",
+              "side_or_bank": "southern edge of the travelled portion",
+              "until": "Arawana Creek",
+              "distance": null,
+              "quote": "thence proceeding westerly along the southern edge of the travelled portion of Old Main Road to Arawana Creek"
+            },
+            {
+              "start": null,
+              "direction": "downstream",
+              "follow": "creek",
+              "feature": "Arawana Creek",
+              "side_or_bank": "southern natural boundary",
+              "until": "Okanagan Lake",
+              "distance": null,
+              "quote": "thence proceeding downstream along the southern natural boundary of Arawana Creek to Okanagan Lake"
+            },
+            {
+              "start": null,
+              "direction": "southwesterly",
+              "follow": "straight_line",
+              "feature": "Okanagan Lake",
+              "side_or_bank": null,
+              "until": null,
+              "distance": "100 m",
+              "quote": "thence proceeding southwesterly in a straight line at right angles to the shore of Okanagan Lake at Arawana Creek for a distance of 100 m"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "shoreline",
+              "feature": "Okanagan Lake",
+              "side_or_bank": "eastern natural boundary",
+              "until": "a point 100 m west of the mouth of Trust Creek",
+              "distance": "100 m",
+              "quote": "thence proceeding northerly parallel to and 100 m distant from the eastern natural boundary of Okanagan Lake to a point 100 m west of the mouth of Trust Creek"
+            },
+            {
+              "start": null,
+              "direction": "east",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence proceeding east in a straight line to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within the following described boundaries: Commencing at the mouth of Trust Creek"
+          }
+        ],
+        "uncertain": [
+          "within"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "within": "That portion of the Province of British Columbia",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at the mouth of Trust Creek and proceeding upstream along the northern natural boundary of Trust Creek to its intersection with Chute Lake Road",
+    "geometry.steps[1]": "thence proceeding southerly along the eastern edge of the travelled portion of Chute Lake Road to Naramata Road",
+    "geometry.steps[2]": "thence proceeding southerly along the eastern edge of the travelled portion of Naramata Road to its intersection with Old Main Road",
+    "geometry.steps[3]": "thence proceeding westerly along the southern edge of the travelled portion of Old Main Road to Arawana Creek",
+    "geometry.steps[4]": "thence proceeding downstream along the southern natural boundary of Arawana Creek to Okanagan Lake",
+    "geometry.steps[5]": "thence proceeding southwesterly in a straight line at right angles to the shore of Okanagan Lake at Arawana Creek for a distance of 100 m",
+    "geometry.steps[6]": "thence proceeding northerly parallel to and 100 m distant from the eastern natural boundary of Okanagan Lake to a point 100 m west of the mouth of Trust Creek",
+    "geometry.steps[7]": "thence proceeding east in a straight line to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "within: run 1 \"province of british columbia\" vs run 2 null",
+    "steps: run 1 [\"trust creek|its intersection with chute lake rd||creek\",\"chute lake rd|naramata rd||road\",\"naramata rd|its intersection with old main rd||road\",\"old main rd|arawana creek||road\",\"arawana creek|okanagan lake||creek\",\"||100 m|straight_line\",\"okanagan lake|a point 100 m west of the mouth of trust creek|100 m|shoreline\",\"|the point of commencement||straight_line\"] vs run 2 [\"trust creek|its intersection with chute lake rd||creek\",\"chute lake rd|naramata rd||road\",\"naramata rd|its intersection with old main rd||road\",\"old main rd|arawana creek||road\",\"arawana creek|okanagan lake||creek\",\"okanagan lake||100 m|straight_line\",\"okanagan lake|a point 100 m west of the mouth of trust creek|100 m|shoreline\",\"|the point of commencement||straight_line\"]"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:07:27.001Z",
+  "updated": "2026-10-21T16:07:27.001Z"
+}

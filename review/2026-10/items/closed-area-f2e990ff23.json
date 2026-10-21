@@ -1,0 +1,242 @@
+{
+  "item_id": "closed-area-f2e990ff23",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 21 (Cowichan Bay)",
+  "rule_id": "W5-021",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: side: run 1 null vs run 2 \"inside\"; steps: run 1 [\"cowichan bay rd|||\",\"cowichan bay rd|a point opposite the northwest corner of lot 2 section 8 range 2 plan 12543||road\",\"|the low water level mark on the northern shore of the southernmost channel of the koksilah river||straight_line\",\"southernmost channel of the koksilah river|the southeasternmost point of lot 1 section 9 range 3 plan 1725||river\",\"lots 19a and 19b commonly known as widgeon island|the point of commencement||other\"] vs run 2 [\"|||\",\"cowichan bay rd|a point opposite the northwest corner of lot 2 section 8 range 2 plan 12543||road\",\"|the low water level mark on the northern shore of the southernmost channel of the koksilah river||straight_line\",\"southernmost channel of the koksilah river|the southeasternmost point of lot 1 section 9 range 3 plan 1725||river\",\"lots 19a and 19b commonly known as widgeon island|the point of commencement||other\"]",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nCowichan Bay\n21 That portion of the Province of British Columbia in M.U. 1-04 in the vicinity of Cowichan Bay, Cowichan District, which is contained within the following described boundaries: Commencing on the northern edge of the right of way of Cowichan Bay Road opposite the southeastern point of Lot 9, Section 8, Range 3, Plan 8313, Cowichan Bay; thence northwesterly along the northern edge of said right of way to a point opposite the northwest corner of Lot 2, Section 8, Range 2, Plan 12543; thence directly north to the low water level mark on the northern shore of the southernmost channel of the Koksilah River; thence easterly along the northern shore of said channel to the southeasternmost point of Lot 1, section 9, Range 3, Plan 1725; thence southeasterly in an arc that passes between Lots 19A and 19B (commonly known as Widgeon island), to the point of commencement. [en. B.C. Reg. 219/2000, s. 5 (b).]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-5b6028a05c49",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:59:51Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 1-04"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the northern edge of the right of way of Cowichan Bay Road opposite the southeastern point of Lot 9, Section 8, Range 3, Plan 8313, Cowichan Bay",
+              "direction": null,
+              "follow": null,
+              "feature": "Cowichan Bay Road",
+              "side_or_bank": "northern edge of the right of way",
+              "until": null,
+              "distance": null,
+              "quote": "Commencing on the northern edge of the right of way of Cowichan Bay Road opposite the southeastern point of Lot 9, Section 8, Range 3, Plan 8313, Cowichan Bay"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly",
+              "follow": "road",
+              "feature": "Cowichan Bay Road",
+              "side_or_bank": "northern edge of said right of way",
+              "until": "a point opposite the northwest corner of Lot 2, Section 8, Range 2, Plan 12543",
+              "distance": null,
+              "quote": "thence northwesterly along the northern edge of said right of way to a point opposite the northwest corner of Lot 2, Section 8, Range 2, Plan 12543"
+            },
+            {
+              "start": null,
+              "direction": "directly north",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the low water level mark on the northern shore of the southernmost channel of the Koksilah River",
+              "distance": null,
+              "quote": "thence directly north to the low water level mark on the northern shore of the southernmost channel of the Koksilah River"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "river",
+              "feature": "southernmost channel of the Koksilah River",
+              "side_or_bank": "northern shore",
+              "until": "the southeasternmost point of Lot 1, section 9, Range 3, Plan 1725",
+              "distance": null,
+              "quote": "thence easterly along the northern shore of said channel to the southeasternmost point of Lot 1, section 9, Range 3, Plan 1725"
+            },
+            {
+              "start": null,
+              "direction": "southeasterly",
+              "follow": "other",
+              "feature": "Lots 19A and 19B (commonly known as Widgeon island)",
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence southeasterly in an arc that passes between Lots 19A and 19B (commonly known as Widgeon island), to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "M.U. 1-04"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-5b6028a05c49",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:01:05Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 1-04"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": "inside",
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the northern edge of the right of way of Cowichan Bay Road opposite the southeastern point of Lot 9, Section 8, Range 3, Plan 8313, Cowichan Bay",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing on the northern edge of the right of way of Cowichan Bay Road opposite the southeastern point of Lot 9, Section 8, Range 3, Plan 8313, Cowichan Bay"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly",
+              "follow": "road",
+              "feature": "Cowichan Bay Road",
+              "side_or_bank": "northern edge",
+              "until": "a point opposite the northwest corner of Lot 2, Section 8, Range 2, Plan 12543",
+              "distance": null,
+              "quote": "thence northwesterly along the northern edge of said right of way to a point opposite the northwest corner of Lot 2, Section 8, Range 2, Plan 12543"
+            },
+            {
+              "start": null,
+              "direction": "directly north",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the low water level mark on the northern shore of the southernmost channel of the Koksilah River",
+              "distance": null,
+              "quote": "thence directly north to the low water level mark on the northern shore of the southernmost channel of the Koksilah River"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "river",
+              "feature": "southernmost channel of the Koksilah River",
+              "side_or_bank": "northern shore",
+              "until": "the southeasternmost point of Lot 1, section 9, Range 3, Plan 1725",
+              "distance": null,
+              "quote": "thence easterly along the northern shore of said channel to the southeasternmost point of Lot 1, section 9, Range 3, Plan 1725"
+            },
+            {
+              "start": null,
+              "direction": "southeasterly",
+              "follow": "other",
+              "feature": "Lots 19A and 19B (commonly known as Widgeon island)",
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence southeasterly in an arc that passes between Lots 19A and 19B (commonly known as Widgeon island), to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "Commencing on the northern edge of the right of way of Cowichan Bay Road"
+          },
+          {
+            "field": "within",
+            "quote": "M.U. 1-04"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "contained within the following described boundaries"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "M.U. 1-04",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing on the northern edge of the right of way of Cowichan Bay Road opposite the southeastern point of Lot 9, Section 8, Range 3, Plan 8313, Cowichan Bay",
+    "geometry.steps[1]": "thence northwesterly along the northern edge of said right of way to a point opposite the northwest corner of Lot 2, Section 8, Range 2, Plan 12543",
+    "geometry.steps[2]": "thence directly north to the low water level mark on the northern shore of the southernmost channel of the Koksilah River",
+    "geometry.steps[3]": "thence easterly along the northern shore of said channel to the southeasternmost point of Lot 1, section 9, Range 3, Plan 1725",
+    "geometry.steps[4]": "thence southeasterly in an arc that passes between Lots 19A and 19B (commonly known as Widgeon island), to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "side: run 1 null vs run 2 \"inside\"",
+    "steps: run 1 [\"cowichan bay rd|||\",\"cowichan bay rd|a point opposite the northwest corner of lot 2 section 8 range 2 plan 12543||road\",\"|the low water level mark on the northern shore of the southernmost channel of the koksilah river||straight_line\",\"southernmost channel of the koksilah river|the southeasternmost point of lot 1 section 9 range 3 plan 1725||river\",\"lots 19a and 19b commonly known as widgeon island|the point of commencement||other\"] vs run 2 [\"|||\",\"cowichan bay rd|a point opposite the northwest corner of lot 2 section 8 range 2 plan 12543||road\",\"|the low water level mark on the northern shore of the southernmost channel of the koksilah river||straight_line\",\"southernmost channel of the koksilah river|the southeasternmost point of lot 1 section 9 range 3 plan 1725||river\",\"lots 19a and 19b commonly known as widgeon island|the point of commencement||other\"]"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:08:33.671Z",
+  "updated": "2026-10-21T16:08:33.671Z"
+}

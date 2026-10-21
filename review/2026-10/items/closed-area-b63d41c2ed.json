@@ -1,0 +1,368 @@
+{
+  "item_id": "closed-area-b63d41c2ed",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 7, section 44 (Gwillim Lake Park)",
+  "rule_id": "W8-044",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: side: run 1 null vs run 2 \"inside\"; steps: run 1 [\"|||\",\"|the height of land lying to the west of the first unnamed creek draining into gwillim lake west of meikle creek|6.74 km, more or less|straight_line\",\"|the height of land lying south of gwillim river|3.62 km, more or less|straight_line\",\"|the height of land separating the drainages of gwillim river and trapper creek|3.52 km, more or less|straight_line\",\"|the height of land separating the drainages of trapper creek and elephant creek|5.37 km, more or less|straight_line\",\"||4.67 km|straight_line\",\"|the midline of gwillim river|3.1 km, more or less|straight_line\",\"gwillim river|its confluence with moose creek||river\",\"moose creek|a point due east of the triangulation reference point 2491 at the summit of mount meikle||creek\",\"|the point of commencement||straight_line\"] vs run 2 [\"mount meikle|||\",\"|the height of land lying to the west of the first unnamed creek draining into gwillim lake west of meikle creek|6.74 km, more or less|straight_line\",\"|the height of land lying south of gwillim river|3.62 km, more or less|straight_line\",\"|the height of land separating the drainages of gwillim river and trapper creek|3.52 km, more or less|straight_line\",\"|the height of land separating the drainages of trapper creek and elephant creek|5.37 km, more or less|\",\"||4.67 km|straight_line\",\"|the midline of gwillim river|3.1 km, more or less|\",\"gwillim river|its confluence with moose creek||river\",\"moose creek|a point due east of the triangulation reference point 2491 at the summit of mount meikle||creek\",\"|the point of commencement||straight_line\"]",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 7 No Hunting Areas (Section 8)\nGwillim Lake Park\n44 That portion of the Province of British Columbia in M.U. 7-21 being all Crown land and land covered by water contained within the following described boundaries: Commencing at the triangulation reference point 2491 located at the summit of Mount Meikle; thence N 69° W 6.74 km, more or less, to the height of land lying to the west of the first unnamed creek draining into Gwillim Lake west of Meikle Creek; thence N 16° E 3.62 km, more or less, to the height of land lying south of Gwillim River; thence N 34° E 3.52 km, more or less, to the height of land separating the drainages of Gwillim River and Trapper Creek; thence easterly 5.37 km, more or less, to the height of land separating the drainages of Trapper Creek and Elephant Creek; thence S 33° E 4.67 km; thence easterly 3.1 km, more or less, to the midline of Gwillim River; thence southwesterly along the midline of Gwillim River to its confluence with Moose Creek; thence southwesterly along the midline of Moose Creek to a point due East of the triangulation reference point 2491 at the summit of Mount Meikle; thence due West to the point of commencement, save and except Statutory Right of Way Plan 32141, the whole containing 9 199 hectares, more or less. [en. B.C. Reg. 224/92, s. 15 (c).]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-421bac59608a",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:00:33Z",
+      "answer": {
+        "effect": "no_hunting",
+        "exemptions": [
+          "Statutory Right of Way Plan 32141"
+        ],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 7-21"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the triangulation reference point 2491 located at the summit of Mount Meikle",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the triangulation reference point 2491 located at the summit of Mount Meikle"
+            },
+            {
+              "start": null,
+              "direction": "N 69° W",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the height of land lying to the west of the first unnamed creek draining into Gwillim Lake west of Meikle Creek",
+              "distance": "6.74 km, more or less",
+              "quote": "thence N 69° W 6.74 km, more or less, to the height of land lying to the west of the first unnamed creek draining into Gwillim Lake west of Meikle Creek"
+            },
+            {
+              "start": null,
+              "direction": "N 16° E",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the height of land lying south of Gwillim River",
+              "distance": "3.62 km, more or less",
+              "quote": "thence N 16° E 3.62 km, more or less, to the height of land lying south of Gwillim River"
+            },
+            {
+              "start": null,
+              "direction": "N 34° E",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the height of land separating the drainages of Gwillim River and Trapper Creek",
+              "distance": "3.52 km, more or less",
+              "quote": "thence N 34° E 3.52 km, more or less, to the height of land separating the drainages of Gwillim River and Trapper Creek"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the height of land separating the drainages of Trapper Creek and Elephant Creek",
+              "distance": "5.37 km, more or less",
+              "quote": "thence easterly 5.37 km, more or less, to the height of land separating the drainages of Trapper Creek and Elephant Creek"
+            },
+            {
+              "start": null,
+              "direction": "S 33° E",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": "4.67 km",
+              "quote": "thence S 33° E 4.67 km"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the midline of Gwillim River",
+              "distance": "3.1 km, more or less",
+              "quote": "thence easterly 3.1 km, more or less, to the midline of Gwillim River"
+            },
+            {
+              "start": null,
+              "direction": "southwesterly",
+              "follow": "river",
+              "feature": "Gwillim River",
+              "side_or_bank": "midline",
+              "until": "its confluence with Moose Creek",
+              "distance": null,
+              "quote": "thence southwesterly along the midline of Gwillim River to its confluence with Moose Creek"
+            },
+            {
+              "start": null,
+              "direction": "southwesterly",
+              "follow": "creek",
+              "feature": "Moose Creek",
+              "side_or_bank": "midline",
+              "until": "a point due East of the triangulation reference point 2491 at the summit of Mount Meikle",
+              "distance": null,
+              "quote": "thence southwesterly along the midline of Moose Creek to a point due East of the triangulation reference point 2491 at the summit of Mount Meikle"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence due West to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in M.U. 7-21"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries: Commencing at"
+          },
+          {
+            "field": "exemptions[0]",
+            "quote": "save and except Statutory Right of Way Plan 32141"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-421bac59608a",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:00:35Z",
+      "answer": {
+        "effect": "no_hunting",
+        "exemptions": [
+          "save and except Statutory Right of Way Plan 32141"
+        ],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 7-21"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": "inside",
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the triangulation reference point 2491 located at the summit of Mount Meikle",
+              "direction": null,
+              "follow": null,
+              "feature": "Mount Meikle",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the triangulation reference point 2491 located at the summit of Mount Meikle"
+            },
+            {
+              "start": null,
+              "direction": "N 69° W",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the height of land lying to the west of the first unnamed creek draining into Gwillim Lake west of Meikle Creek",
+              "distance": "6.74 km, more or less",
+              "quote": "thence N 69° W 6.74 km, more or less, to the height of land lying to the west of the first unnamed creek draining into Gwillim Lake west of Meikle Creek"
+            },
+            {
+              "start": null,
+              "direction": "N 16° E",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the height of land lying south of Gwillim River",
+              "distance": "3.62 km, more or less",
+              "quote": "thence N 16° E 3.62 km, more or less, to the height of land lying south of Gwillim River"
+            },
+            {
+              "start": null,
+              "direction": "N 34° E",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the height of land separating the drainages of Gwillim River and Trapper Creek",
+              "distance": "3.52 km, more or less",
+              "quote": "thence N 34° E 3.52 km, more or less, to the height of land separating the drainages of Gwillim River and Trapper Creek"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the height of land separating the drainages of Trapper Creek and Elephant Creek",
+              "distance": "5.37 km, more or less",
+              "quote": "thence easterly 5.37 km, more or less, to the height of land separating the drainages of Trapper Creek and Elephant Creek"
+            },
+            {
+              "start": null,
+              "direction": "S 33° E",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": "4.67 km",
+              "quote": "thence S 33° E 4.67 km"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the midline of Gwillim River",
+              "distance": "3.1 km, more or less",
+              "quote": "thence easterly 3.1 km, more or less, to the midline of Gwillim River"
+            },
+            {
+              "start": null,
+              "direction": "southwesterly",
+              "follow": "river",
+              "feature": "Gwillim River",
+              "side_or_bank": "midline",
+              "until": "its confluence with Moose Creek",
+              "distance": null,
+              "quote": "thence southwesterly along the midline of Gwillim River to its confluence with Moose Creek"
+            },
+            {
+              "start": null,
+              "direction": "southwesterly",
+              "follow": "creek",
+              "feature": "Moose Creek",
+              "side_or_bank": "midline",
+              "until": "a point due East of the triangulation reference point 2491 at the summit of Mount Meikle",
+              "distance": null,
+              "quote": "thence southwesterly along the midline of Moose Creek to a point due East of the triangulation reference point 2491 at the summit of Mount Meikle"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence due West to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Hunting Areas"
+          },
+          {
+            "field": "exemptions[0]",
+            "quote": "save and except Statutory Right of Way Plan 32141"
+          },
+          {
+            "field": "within",
+            "quote": "in M.U. 7-21"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries: Commencing at"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "contained within the following described boundaries"
+          }
+        ],
+        "uncertain": [
+          "geometry.steps[4].follow",
+          "geometry.steps[5].until",
+          "geometry.steps[6].follow"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "within": "in M.U. 7-21",
+    "effect": "No Hunting Areas",
+    "exemptions[0]": "save and except Statutory Right of Way Plan 32141",
+    "geometry.steps[0]": "Commencing at the triangulation reference point 2491 located at the summit of Mount Meikle",
+    "geometry.steps[1]": "thence N 69° W 6.74 km, more or less, to the height of land lying to the west of the first unnamed creek draining into Gwillim Lake west of Meikle Creek",
+    "geometry.steps[2]": "thence N 16° E 3.62 km, more or less, to the height of land lying south of Gwillim River",
+    "geometry.steps[3]": "thence N 34° E 3.52 km, more or less, to the height of land separating the drainages of Gwillim River and Trapper Creek",
+    "geometry.steps[4]": "thence easterly 5.37 km, more or less, to the height of land separating the drainages of Trapper Creek and Elephant Creek",
+    "geometry.steps[5]": "thence S 33° E 4.67 km",
+    "geometry.steps[6]": "thence easterly 3.1 km, more or less, to the midline of Gwillim River",
+    "geometry.steps[7]": "thence southwesterly along the midline of Gwillim River to its confluence with Moose Creek",
+    "geometry.steps[8]": "thence southwesterly along the midline of Moose Creek to a point due East of the triangulation reference point 2491 at the summit of Mount Meikle",
+    "geometry.steps[9]": "thence due West to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "side: run 1 null vs run 2 \"inside\"",
+    "steps: run 1 [\"|||\",\"|the height of land lying to the west of the first unnamed creek draining into gwillim lake west of meikle creek|6.74 km, more or less|straight_line\",\"|the height of land lying south of gwillim river|3.62 km, more or less|straight_line\",\"|the height of land separating the drainages of gwillim river and trapper creek|3.52 km, more or less|straight_line\",\"|the height of land separating the drainages of trapper creek and elephant creek|5.37 km, more or less|straight_line\",\"||4.67 km|straight_line\",\"|the midline of gwillim river|3.1 km, more or less|straight_line\",\"gwillim river|its confluence with moose creek||river\",\"moose creek|a point due east of the triangulation reference point 2491 at the summit of mount meikle||creek\",\"|the point of commencement||straight_line\"] vs run 2 [\"mount meikle|||\",\"|the height of land lying to the west of the first unnamed creek draining into gwillim lake west of meikle creek|6.74 km, more or less|straight_line\",\"|the height of land lying south of gwillim river|3.62 km, more or less|straight_line\",\"|the height of land separating the drainages of gwillim river and trapper creek|3.52 km, more or less|straight_line\",\"|the height of land separating the drainages of trapper creek and elephant creek|5.37 km, more or less|\",\"||4.67 km|straight_line\",\"|the midline of gwillim river|3.1 km, more or less|\",\"gwillim river|its confluence with moose creek||river\",\"moose creek|a point due east of the triangulation reference point 2491 at the summit of mount meikle||creek\",\"|the point of commencement||straight_line\"]"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:08:32.142Z",
+  "updated": "2026-10-21T16:08:32.142Z"
+}

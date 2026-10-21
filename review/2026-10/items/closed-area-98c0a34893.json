@@ -1,0 +1,141 @@
+{
+  "item_id": "closed-area-98c0a34893",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 140 (Lafarge to Pritchard)",
+  "rule_id": "W5-140",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "named area \"M.U.s 3-20, 3-26 and 3-27\": none",
+    "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nLafarge to Pritchard\n140 Those portions of M.U.s 3-20, 3-26 and 3-27 outlined in red on the attached map 'Closed Area 5-140/24'. [en. B.C. Reg. 161/2024, App. 1, s. 2.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-a0c98f6887a9",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:00:28Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U.s 3-20, 3-26 and 3-27"
+        },
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "Those portions of M.U.s 3-20, 3-26 and 3-27"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "outlined in red on the attached map 'Closed Area 5-140/24'"
+          }
+        ],
+        "uncertain": [
+          "geometry.feature"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-a0c98f6887a9",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:00:39Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U.s 3-20, 3-26 and 3-27"
+        },
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "Those portions of M.U.s 3-20, 3-26 and 3-27"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "outlined in red on the attached map 'Closed Area 5-140/24'"
+          }
+        ],
+        "uncertain": [
+          "geometry.feature"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "within": "Those portions of M.U.s 3-20, 3-26 and 3-27",
+    "effect": "No Shooting Areas"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [
+    {
+      "query": "M.U.s 3-20, 3-26 and 3-27",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "none",
+      "matches": 0,
+      "ids": [],
+      "sample": []
+    }
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:09:19.584Z",
+  "updated": "2026-10-21T16:09:19.584Z"
+}

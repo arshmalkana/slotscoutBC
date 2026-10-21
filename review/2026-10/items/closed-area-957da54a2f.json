@@ -1,0 +1,212 @@
+{
+  "item_id": "closed-area-957da54a2f",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 89 (Grantham Road)",
+  "rule_id": "W5-089",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "road \"Telkwa-Morice Road\": none",
+    "road \"Telkwa-Morice Road\": none",
+    "road \"Telkwa-Morice Road\": none",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nGrantham Road\n89 That portion of the Province of British Columbia being 0.4 km on each side of the midline of the Telkwa-Morice Road, commencing from the intersection of the midpoints of Walcott Station Road and the Telkwa-Morice Road and continuing in a northerly direction to a point 3 km distant. [en. B.C. Reg. 162/87, s. 25.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-929a35580138",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:00:32Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "road_buffer",
+          "road": {
+            "name": "Telkwa-Morice Road",
+            "source_hint": "DRA"
+          },
+          "feature": null,
+          "buffer_m": 400,
+          "side": "both",
+          "from": {
+            "type": "road_intersection",
+            "road": "Telkwa-Morice Road",
+            "name": "Walcott Station Road"
+          },
+          "to": {
+            "type": "km_point",
+            "road": "Telkwa-Morice Road",
+            "name": "a point 3 km distant"
+          },
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "0.4 km on each side of the midline of the Telkwa-Morice Road"
+          },
+          {
+            "field": "geometry.road",
+            "quote": "the midline of the Telkwa-Morice Road"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": "0.4 km"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "on each side"
+          },
+          {
+            "field": "geometry.from",
+            "quote": "commencing from the intersection of the midpoints of Walcott Station Road and the Telkwa-Morice Road"
+          },
+          {
+            "field": "geometry.to",
+            "quote": "continuing in a northerly direction to a point 3 km distant"
+          }
+        ],
+        "uncertain": [
+          "within"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-929a35580138",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:00:34Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": null,
+        "geometry": {
+          "method": "road_buffer",
+          "road": {
+            "name": "Telkwa-Morice Road",
+            "source_hint": "DRA"
+          },
+          "feature": null,
+          "buffer_m": 400,
+          "side": "both",
+          "from": {
+            "type": "road_intersection",
+            "road": "Telkwa-Morice Road",
+            "name": "Walcott Station Road"
+          },
+          "to": {
+            "type": "km_point",
+            "road": "Telkwa-Morice Road",
+            "name": "a point 3 km distant"
+          },
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "0.4 km on each side of the midline of the Telkwa-Morice Road"
+          },
+          {
+            "field": "geometry.road",
+            "quote": "the midline of the Telkwa-Morice Road"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": "0.4 km"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "on each side"
+          },
+          {
+            "field": "geometry.from",
+            "quote": "commencing from the intersection of the midpoints of Walcott Station Road and the Telkwa-Morice Road"
+          },
+          {
+            "field": "geometry.to",
+            "quote": "continuing in a northerly direction to a point 3 km distant"
+          }
+        ],
+        "uncertain": [
+          "within"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "geometry.road": "the midline of the Telkwa-Morice Road",
+    "geometry.buffer_m": "0.4 km",
+    "geometry.from": "commencing from the intersection of the midpoints of Walcott Station Road and the Telkwa-Morice Road",
+    "geometry.to": "continuing in a northerly direction to a point 3 km distant",
+    "effect": "No Shooting Areas",
+    "geometry.side": "on each side"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [
+    {
+      "query": "Telkwa-Morice Road",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "matches": 0,
+      "ids": [],
+      "sample": []
+    },
+    {
+      "query": "Telkwa-Morice Road",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "matches": 0,
+      "ids": [],
+      "sample": []
+    },
+    {
+      "query": "Telkwa-Morice Road",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "matches": 0,
+      "ids": [],
+      "sample": []
+    }
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:09:18.052Z",
+  "updated": "2026-10-21T16:09:18.052Z"
+}

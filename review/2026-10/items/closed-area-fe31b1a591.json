@@ -1,0 +1,199 @@
+{
+  "item_id": "closed-area-fe31b1a591",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 27 (Cherry Point)",
+  "rule_id": "W5-027",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: side: run 1 null vs run 2 \"inside\"",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nCherry Point\n27 That portion of the Province of British Columbia in the vicinity of Satellite Channel, Shawnigan District, which is contained within the following described boundaries: Commencing at Cherry Point, Satellite Channel; thence southerly and southeasterly following the high water mark to Hatch Point; thence in a northwesterly direction in a straight line from Hatch Point to Cherry Point, being point of commencement.",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-45f547b7e5ab",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:00:03Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Shawnigan District"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "Cherry Point, Satellite Channel",
+              "direction": null,
+              "follow": null,
+              "feature": "Cherry Point",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at Cherry Point, Satellite Channel"
+            },
+            {
+              "start": null,
+              "direction": "southerly and southeasterly",
+              "follow": "shoreline",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "Hatch Point",
+              "distance": null,
+              "quote": "thence southerly and southeasterly following the high water mark to Hatch Point"
+            },
+            {
+              "start": null,
+              "direction": "in a northwesterly direction",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "Cherry Point, being point of commencement",
+              "distance": null,
+              "quote": "thence in a northwesterly direction in a straight line from Hatch Point to Cherry Point, being point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "Shawnigan District"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-45f547b7e5ab",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:01:19Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Shawnigan District"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": "inside",
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "Cherry Point, Satellite Channel",
+              "direction": null,
+              "follow": null,
+              "feature": "Cherry Point",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at Cherry Point, Satellite Channel"
+            },
+            {
+              "start": null,
+              "direction": "southerly and southeasterly",
+              "follow": "shoreline",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "Hatch Point",
+              "distance": null,
+              "quote": "thence southerly and southeasterly following the high water mark to Hatch Point"
+            },
+            {
+              "start": "Hatch Point",
+              "direction": "in a northwesterly direction",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "Cherry Point, being point of commencement",
+              "distance": null,
+              "quote": "thence in a northwesterly direction in a straight line from Hatch Point to Cherry Point, being point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "Commencing at Cherry Point, Satellite Channel"
+          },
+          {
+            "field": "within",
+            "quote": "Shawnigan District"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "contained within the following described boundaries"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "Shawnigan District",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at Cherry Point, Satellite Channel",
+    "geometry.steps[1]": "thence southerly and southeasterly following the high water mark to Hatch Point",
+    "geometry.steps[2]": "thence in a northwesterly direction in a straight line from Hatch Point to Cherry Point, being point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "side: run 1 null vs run 2 \"inside\""
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:08:32.454Z",
+  "updated": "2026-10-21T16:08:32.454Z"
+}

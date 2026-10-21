@@ -1,0 +1,153 @@
+{
+  "item_id": "closed-area-7dab632a88",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 9 (Logan Lake)",
+  "rule_id": "W5-009",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: method: run 1 \"admin_boundary\" vs run 2 \"other\"",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nLogan Lake\n9 That portion of the Province of British Columbia in the vicinity of Logan Lake, KDYD, which is contained within the following described boundaries: Those waters of Logan Lake to the maximum high water mark.",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-cb146daf0d87",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:01:17Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "KDYD"
+        },
+        "geometry": {
+          "method": "admin_boundary",
+          "road": null,
+          "feature": {
+            "type": "lake",
+            "name": "Logan Lake"
+          },
+          "buffer_m": null,
+          "side": "inside",
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "KDYD"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "Those waters of Logan Lake to the maximum high water mark"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "Those waters of Logan Lake"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "Those waters of Logan Lake to the maximum high water mark"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-cb146daf0d87",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:01:02Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "KDYD"
+        },
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": {
+            "type": "lake",
+            "name": "Logan Lake"
+          },
+          "buffer_m": null,
+          "side": "inside",
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in the vicinity of Logan Lake, KDYD"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "Those waters of Logan Lake to the maximum high water mark"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "Those waters of Logan Lake"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "Those waters of Logan Lake to the maximum high water mark"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "KDYD",
+    "geometry.feature": "Those waters of Logan Lake",
+    "effect": "No Shooting Areas",
+    "geometry.side": "Those waters of Logan Lake to the maximum high water mark"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "method: run 1 \"admin_boundary\" vs run 2 \"other\""
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:10:14.560Z",
+  "updated": "2026-10-21T16:10:14.560Z"
+}

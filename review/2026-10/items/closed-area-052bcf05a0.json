@@ -1,0 +1,268 @@
+{
+  "item_id": "closed-area-052bcf05a0",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 7, section 21 (Atlin Park)",
+  "rule_id": "W8-021",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: side: run 1 \"inside\" vs run 2 null; steps: run 1 [\"o donnel river|||\",\"o donnel river|a point one kilometre perpendicularly distant outwards from the mean high water mark of atlin lake|one kilometre|river\",\"atlin lake|a point due east of atlin mountain|one kilometre|shoreline\",\"|the boundary of m.u. 6 25||straight_line\",\"m.u. 6 25|the boundary of atlin park||other\",\"|the point of commencement||\"] vs run 2 [\"|||\",\"o donnel river|a point one kilometre perpendicularly distant outwards from the mean high water mark of atlin lake|one kilometre|river\",\"atlin lake|a point due east of atlin mountain|one kilometre|shoreline\",\"|the boundary of m.u. 6 25||straight_line\",\"m.u. 6 25|the boundary of atlin park||other\",\"|the point of commencement||\"]",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 7 No Hunting Areas (Section 8)\nAtlin Park\n21 Those portions of M.U.s 6-25 and 6-27 contained within the following described boundaries: Commencing at the confluence of O'Donnel River and the mean high water mark of Atlin Lake; thence easterly along O'Donnel River to a point one kilometre perpendicularly distant outwards from the mean high water mark of Atlin Lake; thence generally southerly, westerly and northerly parallel to and one kilometre perpendicularly distant outwards from the mean high water mark of Atlin Lake to a point due East of Atlin Mountain; thence due East to the boundary of M.U. 6-25; thence southerly along the boundary of M.U. 6-25 to the boundary of Atlin Park; thence easterly to the point of commencement.",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-803fc49b87ef",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:02:18Z",
+      "answer": {
+        "effect": "no_hunting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U.s 6-25 and 6-27"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": "inside",
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the confluence of O'Donnel River and the mean high water mark of Atlin Lake",
+              "direction": null,
+              "follow": null,
+              "feature": "O'Donnel River",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the confluence of O'Donnel River and the mean high water mark of Atlin Lake"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "river",
+              "feature": "O'Donnel River",
+              "side_or_bank": null,
+              "until": "a point one kilometre perpendicularly distant outwards from the mean high water mark of Atlin Lake",
+              "distance": "one kilometre",
+              "quote": "thence easterly along O'Donnel River to a point one kilometre perpendicularly distant outwards from the mean high water mark of Atlin Lake"
+            },
+            {
+              "start": null,
+              "direction": "generally southerly, westerly and northerly",
+              "follow": "shoreline",
+              "feature": "Atlin Lake",
+              "side_or_bank": "outwards from the mean high water mark",
+              "until": "a point due East of Atlin Mountain",
+              "distance": "one kilometre",
+              "quote": "thence generally southerly, westerly and northerly parallel to and one kilometre perpendicularly distant outwards from the mean high water mark of Atlin Lake to a point due East of Atlin Mountain"
+            },
+            {
+              "start": null,
+              "direction": "due East",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the boundary of M.U. 6-25",
+              "distance": null,
+              "quote": "thence due East to the boundary of M.U. 6-25"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "other",
+              "feature": "M.U. 6-25",
+              "side_or_bank": null,
+              "until": "the boundary of Atlin Park",
+              "distance": null,
+              "quote": "thence southerly along the boundary of M.U. 6-25 to the boundary of Atlin Park"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence easterly to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "Those portions of M.U.s 6-25 and 6-27"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "contained within the following described boundaries"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-803fc49b87ef",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:02:33Z",
+      "answer": {
+        "effect": "no_hunting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U.s 6-25 and 6-27"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the confluence of O'Donnel River and the mean high water mark of Atlin Lake",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the confluence of O'Donnel River and the mean high water mark of Atlin Lake"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "river",
+              "feature": "O'Donnel River",
+              "side_or_bank": null,
+              "until": "a point one kilometre perpendicularly distant outwards from the mean high water mark of Atlin Lake",
+              "distance": "one kilometre",
+              "quote": "thence easterly along O'Donnel River to a point one kilometre perpendicularly distant outwards from the mean high water mark of Atlin Lake"
+            },
+            {
+              "start": null,
+              "direction": "generally southerly, westerly and northerly",
+              "follow": "shoreline",
+              "feature": "Atlin Lake",
+              "side_or_bank": "parallel to and one kilometre perpendicularly distant outwards from the mean high water mark",
+              "until": "a point due East of Atlin Mountain",
+              "distance": "one kilometre",
+              "quote": "thence generally southerly, westerly and northerly parallel to and one kilometre perpendicularly distant outwards from the mean high water mark of Atlin Lake to a point due East of Atlin Mountain"
+            },
+            {
+              "start": null,
+              "direction": "due East",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the boundary of M.U. 6-25",
+              "distance": null,
+              "quote": "thence due East to the boundary of M.U. 6-25"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "other",
+              "feature": "M.U. 6-25",
+              "side_or_bank": null,
+              "until": "the boundary of Atlin Park",
+              "distance": null,
+              "quote": "thence southerly along the boundary of M.U. 6-25 to the boundary of Atlin Park"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence easterly to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "Those portions of M.U.s 6-25 and 6-27"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "Those portions of M.U.s 6-25 and 6-27",
+    "effect": "No Hunting Areas",
+    "geometry.side": "contained within the following described boundaries",
+    "geometry.steps[0]": "Commencing at the confluence of O'Donnel River and the mean high water mark of Atlin Lake",
+    "geometry.steps[1]": "thence easterly along O'Donnel River to a point one kilometre perpendicularly distant outwards from the mean high water mark of Atlin Lake",
+    "geometry.steps[2]": "thence generally southerly, westerly and northerly parallel to and one kilometre perpendicularly distant outwards from the mean high water mark of Atlin Lake to a point due East of Atlin Mountain",
+    "geometry.steps[3]": "thence due East to the boundary of M.U. 6-25",
+    "geometry.steps[4]": "thence southerly along the boundary of M.U. 6-25 to the boundary of Atlin Park",
+    "geometry.steps[5]": "thence easterly to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "side: run 1 \"inside\" vs run 2 null",
+    "steps: run 1 [\"o donnel river|||\",\"o donnel river|a point one kilometre perpendicularly distant outwards from the mean high water mark of atlin lake|one kilometre|river\",\"atlin lake|a point due east of atlin mountain|one kilometre|shoreline\",\"|the boundary of m.u. 6 25||straight_line\",\"m.u. 6 25|the boundary of atlin park||other\",\"|the point of commencement||\"] vs run 2 [\"|||\",\"o donnel river|a point one kilometre perpendicularly distant outwards from the mean high water mark of atlin lake|one kilometre|river\",\"atlin lake|a point due east of atlin mountain|one kilometre|shoreline\",\"|the boundary of m.u. 6 25||straight_line\",\"m.u. 6 25|the boundary of atlin park||other\",\"|the point of commencement||\"]"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:08:45.473Z",
+  "updated": "2026-10-21T16:08:45.473Z"
+}

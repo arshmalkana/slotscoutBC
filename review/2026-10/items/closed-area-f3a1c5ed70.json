@@ -1,0 +1,163 @@
+{
+  "item_id": "closed-area-f3a1c5ed70",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 3, section 60 (East Moberly Lake 169)",
+  "rule_id": "W3-060",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "named area \"M.U.s 7-31 and 7-32\": none",
+    "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nEast Moberly Lake 169\n60 Those portions of M.U.s 7-31 and 7-32 within 400 metres of the East Moberly Lake 169 Indian Reserve. [en. B.C. Reg. 130/2016, App. 1, s. 1.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-b76454a96fa3",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:58:57Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U.s 7-31 and 7-32"
+        },
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": {
+            "type": "reserve",
+            "name": "East Moberly Lake 169 Indian Reserve"
+          },
+          "buffer_m": 400,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting or Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "Those portions of M.U.s 7-31 and 7-32"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within 400 metres of the East Moberly Lake 169 Indian Reserve"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "the East Moberly Lake 169 Indian Reserve"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": "within 400 metres"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-b76454a96fa3",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:00:08Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U.s 7-31 and 7-32"
+        },
+        "geometry": {
+          "method": "other",
+          "road": null,
+          "feature": {
+            "type": "reserve",
+            "name": "East Moberly Lake 169 Indian Reserve"
+          },
+          "buffer_m": 400,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": []
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting or Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "Those portions of M.U.s 7-31 and 7-32"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within 400 metres of the East Moberly Lake 169 Indian Reserve"
+          },
+          {
+            "field": "geometry.feature",
+            "quote": "the East Moberly Lake 169 Indian Reserve"
+          },
+          {
+            "field": "geometry.buffer_m",
+            "quote": "within 400 metres"
+          }
+        ],
+        "uncertain": [
+          "geometry.side"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "within": "Those portions of M.U.s 7-31 and 7-32",
+    "geometry.feature": "the East Moberly Lake 169 Indian Reserve",
+    "geometry.buffer_m": "within 400 metres",
+    "effect": "No Shooting or Hunting Areas"
+  },
+  "rejected_quotes": [],
+  "disagreements": [],
+  "lookups": [
+    {
+      "query": "M.U.s 7-31 and 7-32",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "none",
+      "matches": 0,
+      "ids": [],
+      "sample": []
+    }
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:09:58.278Z",
+  "updated": "2026-10-21T16:09:58.278Z"
+}

@@ -1,0 +1,267 @@
+{
+  "item_id": "closed-area-db628f2ed5",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 7, section 36 (Kakwa Recreation Area)",
+  "rule_id": "W8-036",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: steps: run 1 [\"british columbia alberta boundary|||\",\"british columbia alberta boundary|the southerly boundary of the watershed of sheep creek||other\",\"sheep creek and cecilia creek and kakwa river|mount hanigton||other\",\"kakwa river|mount minnes||other\",\"|the point of commencement||\"] vs run 2 [\"mile post 25|||\",\"british columbia alberta boundary|the point of intersection with the southerly boundary of the watershed of sheep creek||other\",\"the watershed of sheep creek and cecilia creek and kakwa river|mount hanigton||other\",\"the watershed of kakwa river|mount minnes||other\",\"|the point of commencement||\"]",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 7 No Hunting Areas (Section 8)\nKakwa Recreation Area\n36 That portion of the Province of British Columbia in M.U. 7-19 which is contained within the following described boundaries: Commencing at Mile Post 25 on the British Columbia/Alberta boundary north of Intersection Mountain; thence due South along the British Columbia/Alberta boundary to the point of intersection with the southerly boundary of the watershed of Sheep Creek; thence in a general westerly and northerly direction along the southerly and westerly boundaries of the watershed of Sheep Creek and Cecilia Creek and Kakwa River to Mount Hanigton; thence in a general northerly and easterly direction along the northerly boundary of the watershed of Kakwa River to Mount Minnes; thence easterly to the point of commencement. [en. B.C. Reg. 185/90, s. 11.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-f4174a580f47",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:02:33Z",
+      "answer": {
+        "effect": "no_hunting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 7-19"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "Mile Post 25 on the British Columbia/Alberta boundary north of Intersection Mountain",
+              "direction": null,
+              "follow": null,
+              "feature": "British Columbia/Alberta boundary",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at Mile Post 25 on the British Columbia/Alberta boundary north of Intersection Mountain"
+            },
+            {
+              "start": null,
+              "direction": "due South",
+              "follow": "other",
+              "feature": "British Columbia/Alberta boundary",
+              "side_or_bank": null,
+              "until": "the southerly boundary of the watershed of Sheep Creek",
+              "distance": null,
+              "quote": "thence due South along the British Columbia/Alberta boundary to the point of intersection with the southerly boundary of the watershed of Sheep Creek"
+            },
+            {
+              "start": null,
+              "direction": "general westerly and northerly",
+              "follow": "other",
+              "feature": "Sheep Creek and Cecilia Creek and Kakwa River",
+              "side_or_bank": "southerly and westerly boundaries of the watershed",
+              "until": "Mount Hanigton",
+              "distance": null,
+              "quote": "thence in a general westerly and northerly direction along the southerly and westerly boundaries of the watershed of Sheep Creek and Cecilia Creek and Kakwa River to Mount Hanigton"
+            },
+            {
+              "start": null,
+              "direction": "general northerly and easterly",
+              "follow": "other",
+              "feature": "Kakwa River",
+              "side_or_bank": "northerly boundary of the watershed",
+              "until": "Mount Minnes",
+              "distance": null,
+              "quote": "thence in a general northerly and easterly direction along the northerly boundary of the watershed of Kakwa River to Mount Minnes"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence easterly to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in M.U. 7-19"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries: Commencing at Mile Post 25"
+          }
+        ],
+        "uncertain": [
+          "geometry.feature",
+          "geometry.steps[4].follow"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-f4174a580f47",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:01:58Z",
+      "answer": {
+        "effect": "no_hunting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 7-19"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "Mile Post 25 on the British Columbia/Alberta boundary north of Intersection Mountain",
+              "direction": null,
+              "follow": null,
+              "feature": "Mile Post 25",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at Mile Post 25 on the British Columbia/Alberta boundary north of Intersection Mountain"
+            },
+            {
+              "start": null,
+              "direction": "due South",
+              "follow": "other",
+              "feature": "British Columbia/Alberta boundary",
+              "side_or_bank": null,
+              "until": "the point of intersection with the southerly boundary of the watershed of Sheep Creek",
+              "distance": null,
+              "quote": "thence due South along the British Columbia/Alberta boundary to the point of intersection with the southerly boundary of the watershed of Sheep Creek"
+            },
+            {
+              "start": null,
+              "direction": "general westerly and northerly",
+              "follow": "other",
+              "feature": "the watershed of Sheep Creek and Cecilia Creek and Kakwa River",
+              "side_or_bank": "southerly and westerly boundaries",
+              "until": "Mount Hanigton",
+              "distance": null,
+              "quote": "thence in a general westerly and northerly direction along the southerly and westerly boundaries of the watershed of Sheep Creek and Cecilia Creek and Kakwa River to Mount Hanigton"
+            },
+            {
+              "start": null,
+              "direction": "general northerly and easterly",
+              "follow": "other",
+              "feature": "the watershed of Kakwa River",
+              "side_or_bank": "northerly boundary",
+              "until": "Mount Minnes",
+              "distance": null,
+              "quote": "thence in a general northerly and easterly direction along the northerly boundary of the watershed of Kakwa River to Mount Minnes"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence easterly to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in M.U. 7-19"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries"
+          },
+          {
+            "field": "geometry.steps[0]",
+            "quote": "Commencing at Mile Post 25 on the British Columbia/Alberta boundary north of Intersection Mountain"
+          },
+          {
+            "field": "geometry.steps[1]",
+            "quote": "thence due South along the British Columbia/Alberta boundary to the point of intersection with the southerly boundary of the watershed of Sheep Creek"
+          },
+          {
+            "field": "geometry.steps[2]",
+            "quote": "thence in a general westerly and northerly direction along the southerly and westerly boundaries of the watershed of Sheep Creek and Cecilia Creek and Kakwa River to Mount Hanigton"
+          },
+          {
+            "field": "geometry.steps[3]",
+            "quote": "thence in a general northerly and easterly direction along the northerly boundary of the watershed of Kakwa River to Mount Minnes"
+          },
+          {
+            "field": "geometry.steps[4]",
+            "quote": "thence easterly to the point of commencement"
+          }
+        ],
+        "uncertain": [
+          "geometry.feature",
+          "geometry.steps[4].follow"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "within": "in M.U. 7-19",
+    "effect": "No Hunting Areas",
+    "geometry.steps[0]": "Commencing at Mile Post 25 on the British Columbia/Alberta boundary north of Intersection Mountain",
+    "geometry.steps[1]": "thence due South along the British Columbia/Alberta boundary to the point of intersection with the southerly boundary of the watershed of Sheep Creek",
+    "geometry.steps[2]": "thence in a general westerly and northerly direction along the southerly and westerly boundaries of the watershed of Sheep Creek and Cecilia Creek and Kakwa River to Mount Hanigton",
+    "geometry.steps[3]": "thence in a general northerly and easterly direction along the northerly boundary of the watershed of Kakwa River to Mount Minnes",
+    "geometry.steps[4]": "thence easterly to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "steps: run 1 [\"british columbia alberta boundary|||\",\"british columbia alberta boundary|the southerly boundary of the watershed of sheep creek||other\",\"sheep creek and cecilia creek and kakwa river|mount hanigton||other\",\"kakwa river|mount minnes||other\",\"|the point of commencement||\"] vs run 2 [\"mile post 25|||\",\"british columbia alberta boundary|the point of intersection with the southerly boundary of the watershed of sheep creek||other\",\"the watershed of sheep creek and cecilia creek and kakwa river|mount hanigton||other\",\"the watershed of kakwa river|mount minnes||other\",\"|the point of commencement||\"]"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:10:36.530Z",
+  "updated": "2026-10-21T16:10:36.530Z"
+}

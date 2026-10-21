@@ -1,0 +1,268 @@
+{
+  "item_id": "closed-area-eb7972df1d",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 31 (Blind Bay)",
+  "rule_id": "W5-031",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: side: run 1 null vs run 2 \"inside\"",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nBlind Bay\n31 That portion of the Province in the vicinity of the Village of Chase, KDYD, which is contained within the following described boundaries: Commencing at the mean high water mark at Reedman Point on Shuswap Lake; thence southwesterly to the intersection of the westerly boundary of Section 24, Township 22, Range 11, W6M, and Shuswap Lake; thence due South to the Sorrento-Eagle Bay Road; thence easterly, southerly and northerly along said road to the south boundary of Section 30, Township 22, Range 10, W6M; thence northwesterly along the Sorrento-Eagle Bay Road for 500 m; thence westerly to the point of commencement.",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-c199f54bf6b9",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:00:44Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "KDYD"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the mean high water mark at Reedman Point on Shuswap Lake",
+              "direction": null,
+              "follow": null,
+              "feature": "Reedman Point",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the mean high water mark at Reedman Point on Shuswap Lake"
+            },
+            {
+              "start": null,
+              "direction": "southwesterly",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the intersection of the westerly boundary of Section 24, Township 22, Range 11, W6M, and Shuswap Lake",
+              "distance": null,
+              "quote": "thence southwesterly to the intersection of the westerly boundary of Section 24, Township 22, Range 11, W6M, and Shuswap Lake"
+            },
+            {
+              "start": null,
+              "direction": "due South",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the Sorrento-Eagle Bay Road",
+              "distance": null,
+              "quote": "thence due South to the Sorrento-Eagle Bay Road"
+            },
+            {
+              "start": null,
+              "direction": "easterly, southerly and northerly",
+              "follow": "road",
+              "feature": "Sorrento-Eagle Bay Road",
+              "side_or_bank": null,
+              "until": "the south boundary of Section 30, Township 22, Range 10, W6M",
+              "distance": null,
+              "quote": "thence easterly, southerly and northerly along said road to the south boundary of Section 30, Township 22, Range 10, W6M"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly",
+              "follow": "road",
+              "feature": "Sorrento-Eagle Bay Road",
+              "side_or_bank": null,
+              "until": null,
+              "distance": "500 m",
+              "quote": "thence northwesterly along the Sorrento-Eagle Bay Road for 500 m"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence westerly to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "KDYD"
+          }
+        ],
+        "uncertain": [
+          "geometry.steps[1].follow",
+          "geometry.steps[5].follow"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-c199f54bf6b9",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:02:06Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "KDYD"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": "inside",
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the mean high water mark at Reedman Point on Shuswap Lake",
+              "direction": null,
+              "follow": null,
+              "feature": "Reedman Point",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the mean high water mark at Reedman Point on Shuswap Lake"
+            },
+            {
+              "start": null,
+              "direction": "southwesterly",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the intersection of the westerly boundary of Section 24, Township 22, Range 11, W6M, and Shuswap Lake",
+              "distance": null,
+              "quote": "thence southwesterly to the intersection of the westerly boundary of Section 24, Township 22, Range 11, W6M, and Shuswap Lake"
+            },
+            {
+              "start": null,
+              "direction": "due South",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the Sorrento-Eagle Bay Road",
+              "distance": null,
+              "quote": "thence due South to the Sorrento-Eagle Bay Road"
+            },
+            {
+              "start": null,
+              "direction": "easterly, southerly and northerly",
+              "follow": "road",
+              "feature": "Sorrento-Eagle Bay Road",
+              "side_or_bank": null,
+              "until": "the south boundary of Section 30, Township 22, Range 10, W6M",
+              "distance": null,
+              "quote": "thence easterly, southerly and northerly along said road to the south boundary of Section 30, Township 22, Range 10, W6M"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly",
+              "follow": "road",
+              "feature": "Sorrento-Eagle Bay Road",
+              "side_or_bank": null,
+              "until": null,
+              "distance": "500 m",
+              "quote": "thence northwesterly along the Sorrento-Eagle Bay Road for 500 m"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence westerly to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "Commencing at the mean high water mark at Reedman Point on Shuswap Lake"
+          },
+          {
+            "field": "within",
+            "quote": "KDYD"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "contained within the following described boundaries"
+          }
+        ],
+        "uncertain": [
+          "geometry.steps[1].follow",
+          "geometry.steps[5].follow"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "within": "KDYD",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at the mean high water mark at Reedman Point on Shuswap Lake",
+    "geometry.steps[1]": "thence southwesterly to the intersection of the westerly boundary of Section 24, Township 22, Range 11, W6M, and Shuswap Lake",
+    "geometry.steps[2]": "thence due South to the Sorrento-Eagle Bay Road",
+    "geometry.steps[3]": "thence easterly, southerly and northerly along said road to the south boundary of Section 30, Township 22, Range 10, W6M",
+    "geometry.steps[4]": "thence northwesterly along the Sorrento-Eagle Bay Road for 500 m",
+    "geometry.steps[5]": "thence westerly to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "side: run 1 null vs run 2 \"inside\""
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:09:59.043Z",
+  "updated": "2026-10-21T16:09:59.043Z"
+}

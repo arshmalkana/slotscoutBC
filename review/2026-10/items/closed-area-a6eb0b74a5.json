@@ -1,0 +1,331 @@
+{
+  "item_id": "closed-area-a6eb0b74a5",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 3, section 49 (Kinuseo Falls)",
+  "rule_id": "W3-049",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: side: run 1 \"inside\" vs run 2 null; steps: run 1 [\"lot 1476|||\",\"914.4 m elevation|a point approximately 8 450 m at s 66 w from the southeast corner of lot 1476||contour\",\"murray river|a point 402 m due west of the natural boundary of murray river on the left bank thereof||straight_line\",\"murray river|a point due east of the southeast corner of lot 817|402 m|river\",\"||approximately 2 500 m|straight_line\",\"murray river|the point of intersection with the natural boundary of murray river on the right bank thereof||straight_line\",\"|a point at 884 m elevation||straight_line\",\"884 m elevation|a point due west of the point of commencement||contour\",\"|the point of commencement||straight_line\"] vs run 2 [\"lot 1476|||\",\"914.4 m elevation|a point approximately 8 450 m at s 66 w from the southeast corner of lot 1476||contour\",\"murray river|a point 402 m due west of the natural boundary of murray river on the left bank thereof|402 m|straight_line\",\"murray river|a point due east of the southeast corner of lot 817|402 m|river\",\"||approximately 2 500 m|straight_line\",\"murray river|the point of intersection with the natural boundary of murray river on the right bank thereof||straight_line\",\"|a point at 884 m elevation||straight_line\",\"884 m elevation|a point due west of the point of commencement||contour\",\"|the point of commencement||straight_line\"]",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nKinuseo Falls\n49 That portion of M.U. 7-21 in the Province of British Columbia contained within the following described boundaries: Commencing at a point at 914.4 m elevation approximately 5 340 m at S 88° W from the southeast corner of Lot 1476, Peace River Land District; thence in a general southerly, then westerly, then southeasterly direction at 914.4 m elevation to a point approximately 8 450 m at S 66° W from the southeast corner of Lot 1476; thence westerly in a straight line to a point 402 m due West of the natural boundary of Murray River on the left bank thereof; thence in a general northerly direction at 402 m west of the natural boundary of Murray River on the left bank thereof to a point due East of the southeast corner of Lot 817; thence N 8° W approximately 2 500 m; thence approximately N 37° E to the point of intersection with the natural boundary of Murray River on the right bank thereof; thence due East to a point at 884 m elevation; thence in a general southeasterly direction at 884 m elevation to a point due West of the point of commencement; thence easterly in a straight line to the point of commencement. [en. B.C. Reg. 224/92, s. 3.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-5c12d953847a",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:01:05Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 7-21"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": "inside",
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "a point at 914.4 m elevation approximately 5 340 m at S 88° W from the southeast corner of Lot 1476, Peace River Land District",
+              "direction": null,
+              "follow": null,
+              "feature": "Lot 1476",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at a point at 914.4 m elevation approximately 5 340 m at S 88° W from the southeast corner of Lot 1476, Peace River Land District"
+            },
+            {
+              "start": null,
+              "direction": "in a general southerly, then westerly, then southeasterly direction",
+              "follow": "contour",
+              "feature": "914.4 m elevation",
+              "side_or_bank": null,
+              "until": "a point approximately 8 450 m at S 66° W from the southeast corner of Lot 1476",
+              "distance": null,
+              "quote": "thence in a general southerly, then westerly, then southeasterly direction at 914.4 m elevation to a point approximately 8 450 m at S 66° W from the southeast corner of Lot 1476"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "straight_line",
+              "feature": "Murray River",
+              "side_or_bank": "left bank",
+              "until": "a point 402 m due West of the natural boundary of Murray River on the left bank thereof",
+              "distance": null,
+              "quote": "thence westerly in a straight line to a point 402 m due West of the natural boundary of Murray River on the left bank thereof"
+            },
+            {
+              "start": null,
+              "direction": "in a general northerly direction",
+              "follow": "river",
+              "feature": "Murray River",
+              "side_or_bank": "left bank",
+              "until": "a point due East of the southeast corner of Lot 817",
+              "distance": "402 m",
+              "quote": "thence in a general northerly direction at 402 m west of the natural boundary of Murray River on the left bank thereof to a point due East of the southeast corner of Lot 817"
+            },
+            {
+              "start": null,
+              "direction": "N 8° W",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": "approximately 2 500 m",
+              "quote": "thence N 8° W approximately 2 500 m"
+            },
+            {
+              "start": null,
+              "direction": "approximately N 37° E",
+              "follow": "straight_line",
+              "feature": "Murray River",
+              "side_or_bank": "right bank",
+              "until": "the point of intersection with the natural boundary of Murray River on the right bank thereof",
+              "distance": null,
+              "quote": "thence approximately N 37° E to the point of intersection with the natural boundary of Murray River on the right bank thereof"
+            },
+            {
+              "start": null,
+              "direction": "due East",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "a point at 884 m elevation",
+              "distance": null,
+              "quote": "thence due East to a point at 884 m elevation"
+            },
+            {
+              "start": null,
+              "direction": "in a general southeasterly direction",
+              "follow": "contour",
+              "feature": "884 m elevation",
+              "side_or_bank": null,
+              "until": "a point due West of the point of commencement",
+              "distance": null,
+              "quote": "thence in a general southeasterly direction at 884 m elevation to a point due West of the point of commencement"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence easterly in a straight line to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting or Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "That portion of M.U. 7-21"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "contained within the following described boundaries"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-5c12d953847a",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:01:12Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 7-21"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "a point at 914.4 m elevation approximately 5 340 m at S 88° W from the southeast corner of Lot 1476, Peace River Land District",
+              "direction": null,
+              "follow": null,
+              "feature": "Lot 1476",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at a point at 914.4 m elevation approximately 5 340 m at S 88° W from the southeast corner of Lot 1476, Peace River Land District"
+            },
+            {
+              "start": null,
+              "direction": "general southerly, then westerly, then southeasterly",
+              "follow": "contour",
+              "feature": "914.4 m elevation",
+              "side_or_bank": null,
+              "until": "a point approximately 8 450 m at S 66° W from the southeast corner of Lot 1476",
+              "distance": null,
+              "quote": "thence in a general southerly, then westerly, then southeasterly direction at 914.4 m elevation to a point approximately 8 450 m at S 66° W from the southeast corner of Lot 1476"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "straight_line",
+              "feature": "Murray River",
+              "side_or_bank": "left bank",
+              "until": "a point 402 m due West of the natural boundary of Murray River on the left bank thereof",
+              "distance": "402 m",
+              "quote": "thence westerly in a straight line to a point 402 m due West of the natural boundary of Murray River on the left bank thereof"
+            },
+            {
+              "start": null,
+              "direction": "general northerly",
+              "follow": "river",
+              "feature": "Murray River",
+              "side_or_bank": "left bank",
+              "until": "a point due East of the southeast corner of Lot 817",
+              "distance": "402 m",
+              "quote": "thence in a general northerly direction at 402 m west of the natural boundary of Murray River on the left bank thereof to a point due East of the southeast corner of Lot 817"
+            },
+            {
+              "start": null,
+              "direction": "N 8° W",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": "approximately 2 500 m",
+              "quote": "thence N 8° W approximately 2 500 m"
+            },
+            {
+              "start": null,
+              "direction": "approximately N 37° E",
+              "follow": "straight_line",
+              "feature": "Murray River",
+              "side_or_bank": "right bank",
+              "until": "the point of intersection with the natural boundary of Murray River on the right bank thereof",
+              "distance": null,
+              "quote": "thence approximately N 37° E to the point of intersection with the natural boundary of Murray River on the right bank thereof"
+            },
+            {
+              "start": null,
+              "direction": "due East",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "a point at 884 m elevation",
+              "distance": null,
+              "quote": "thence due East to a point at 884 m elevation"
+            },
+            {
+              "start": null,
+              "direction": "general southeasterly",
+              "follow": "contour",
+              "feature": "884 m elevation",
+              "side_or_bank": null,
+              "until": "a point due West of the point of commencement",
+              "distance": null,
+              "quote": "thence in a general southeasterly direction at 884 m elevation to a point due West of the point of commencement"
+            },
+            {
+              "start": null,
+              "direction": "easterly",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence easterly in a straight line to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting or Hunting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "That portion of M.U. 7-21"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "That portion of M.U. 7-21",
+    "effect": "No Shooting or Hunting Areas",
+    "geometry.side": "contained within the following described boundaries",
+    "geometry.steps[0]": "Commencing at a point at 914.4 m elevation approximately 5 340 m at S 88° W from the southeast corner of Lot 1476, Peace River Land District",
+    "geometry.steps[1]": "thence in a general southerly, then westerly, then southeasterly direction at 914.4 m elevation to a point approximately 8 450 m at S 66° W from the southeast corner of Lot 1476",
+    "geometry.steps[2]": "thence westerly in a straight line to a point 402 m due West of the natural boundary of Murray River on the left bank thereof",
+    "geometry.steps[3]": "thence in a general northerly direction at 402 m west of the natural boundary of Murray River on the left bank thereof to a point due East of the southeast corner of Lot 817",
+    "geometry.steps[4]": "thence N 8° W approximately 2 500 m",
+    "geometry.steps[5]": "thence approximately N 37° E to the point of intersection with the natural boundary of Murray River on the right bank thereof",
+    "geometry.steps[6]": "thence due East to a point at 884 m elevation",
+    "geometry.steps[7]": "thence in a general southeasterly direction at 884 m elevation to a point due West of the point of commencement",
+    "geometry.steps[8]": "thence easterly in a straight line to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "side: run 1 \"inside\" vs run 2 null",
+    "steps: run 1 [\"lot 1476|||\",\"914.4 m elevation|a point approximately 8 450 m at s 66 w from the southeast corner of lot 1476||contour\",\"murray river|a point 402 m due west of the natural boundary of murray river on the left bank thereof||straight_line\",\"murray river|a point due east of the southeast corner of lot 817|402 m|river\",\"||approximately 2 500 m|straight_line\",\"murray river|the point of intersection with the natural boundary of murray river on the right bank thereof||straight_line\",\"|a point at 884 m elevation||straight_line\",\"884 m elevation|a point due west of the point of commencement||contour\",\"|the point of commencement||straight_line\"] vs run 2 [\"lot 1476|||\",\"914.4 m elevation|a point approximately 8 450 m at s 66 w from the southeast corner of lot 1476||contour\",\"murray river|a point 402 m due west of the natural boundary of murray river on the left bank thereof|402 m|straight_line\",\"murray river|a point due east of the southeast corner of lot 817|402 m|river\",\"||approximately 2 500 m|straight_line\",\"murray river|the point of intersection with the natural boundary of murray river on the right bank thereof||straight_line\",\"|a point at 884 m elevation||straight_line\",\"884 m elevation|a point due west of the point of commencement||contour\",\"|the point of commencement||straight_line\"]"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:08:33.688Z",
+  "updated": "2026-10-21T16:08:33.688Z"
+}

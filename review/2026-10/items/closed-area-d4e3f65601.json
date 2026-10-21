@@ -1,0 +1,279 @@
+{
+  "item_id": "closed-area-d4e3f65601",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 4, section 6 (Kennedy Siding)",
+  "rule_id": "W4-006",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: steps: run 1 [\"bcr mackenzie branch line|||\",\"missinchinka river|an unnamed stream running westerly into the missinchinka river|approximately 9 km|river\",\"|the crossing of the bcr line||creek\",\"bcr|the junction of the bcr branch line to mackenzie||other\",\"|the point of commencement||other\"] vs run 2 [\"missinchinka river|||\",\"missinchinka river|an unnamed stream running westerly into the missinchinka river|approximately 9 km|river\",\"|the crossing of the bcr line||creek\",\"bcr|the junction of the bcr branch line to mackenzie||other\",\"|the point of commencement||other\"]",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 4 Seasonal No Shooting or Hunting Areas (Section 5)\nKennedy Siding\n6 That portion of M.U. 7-23 in the Province of British Columbia contained within the following described boundaries: Commencing at the railroad bridge on the BCR MacKenzie branch line at its crossing of the Missinchinka River; thence following the Missinchinka River upstream approximately 9 km to an unnamed stream running westerly into the Missinchinka River; thence following the unnamed creek upstream to the crossing of the BCR line; thence southerly following the BCR to the junction of the BCR branch line to MacKenzie; thence following the spur line to the point of commencement during the period from September 1 to March 31 inclusive. [en. B.C. Reg. 225/98, s. 3 (b); am. B.C. Regs. 194/99, s. 4; 219/2000, s. 4; 130/2016, App. 1, s. 2.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-43d1a35120d2",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T22:00:13Z",
+      "answer": {
+        "effect": "no_shooting_seasonal",
+        "exemptions": [],
+        "period": {
+          "start": "September 1",
+          "end": "March 31"
+        },
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 7-23"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the railroad bridge on the BCR MacKenzie branch line at its crossing of the Missinchinka River",
+              "direction": null,
+              "follow": null,
+              "feature": "BCR MacKenzie branch line",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the railroad bridge on the BCR MacKenzie branch line at its crossing of the Missinchinka River"
+            },
+            {
+              "start": null,
+              "direction": "upstream",
+              "follow": "river",
+              "feature": "Missinchinka River",
+              "side_or_bank": null,
+              "until": "an unnamed stream running westerly into the Missinchinka River",
+              "distance": "approximately 9 km",
+              "quote": "thence following the Missinchinka River upstream approximately 9 km to an unnamed stream running westerly into the Missinchinka River"
+            },
+            {
+              "start": null,
+              "direction": "upstream",
+              "follow": "creek",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the crossing of the BCR line",
+              "distance": null,
+              "quote": "thence following the unnamed creek upstream to the crossing of the BCR line"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "other",
+              "feature": "BCR",
+              "side_or_bank": null,
+              "until": "the junction of the BCR branch line to MacKenzie",
+              "distance": null,
+              "quote": "thence southerly following the BCR to the junction of the BCR branch line to MacKenzie"
+            },
+            {
+              "start": null,
+              "direction": null,
+              "follow": "other",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence following the spur line to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "Seasonal No Shooting or Hunting Areas"
+          },
+          {
+            "field": "period",
+            "quote": "during the period from September 1 to March 31 inclusive"
+          },
+          {
+            "field": "within",
+            "quote": "That portion of M.U. 7-23"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries: Commencing at"
+          },
+          {
+            "field": "geometry.steps[0]",
+            "quote": "Commencing at the railroad bridge on the BCR MacKenzie branch line at its crossing of the Missinchinka River"
+          },
+          {
+            "field": "geometry.steps[1]",
+            "quote": "thence following the Missinchinka River upstream approximately 9 km to an unnamed stream running westerly into the Missinchinka River"
+          },
+          {
+            "field": "geometry.steps[2]",
+            "quote": "thence following the unnamed creek upstream to the crossing of the BCR line"
+          },
+          {
+            "field": "geometry.steps[3]",
+            "quote": "thence southerly following the BCR to the junction of the BCR branch line to MacKenzie"
+          },
+          {
+            "field": "geometry.steps[4]",
+            "quote": "thence following the spur line to the point of commencement"
+          }
+        ],
+        "uncertain": [
+          "geometry.steps[2].feature",
+          "geometry.steps[4].feature"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-43d1a35120d2",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-20T21:59:18Z",
+      "answer": {
+        "effect": "no_shooting_seasonal",
+        "exemptions": [],
+        "period": {
+          "start": "September 1",
+          "end": "March 31"
+        },
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 7-23"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the railroad bridge on the BCR MacKenzie branch line at its crossing of the Missinchinka River",
+              "direction": null,
+              "follow": null,
+              "feature": "Missinchinka River",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the railroad bridge on the BCR MacKenzie branch line at its crossing of the Missinchinka River"
+            },
+            {
+              "start": null,
+              "direction": "upstream",
+              "follow": "river",
+              "feature": "Missinchinka River",
+              "side_or_bank": null,
+              "until": "an unnamed stream running westerly into the Missinchinka River",
+              "distance": "approximately 9 km",
+              "quote": "thence following the Missinchinka River upstream approximately 9 km to an unnamed stream running westerly into the Missinchinka River"
+            },
+            {
+              "start": null,
+              "direction": "upstream",
+              "follow": "creek",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the crossing of the BCR line",
+              "distance": null,
+              "quote": "thence following the unnamed creek upstream to the crossing of the BCR line"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "other",
+              "feature": "BCR",
+              "side_or_bank": null,
+              "until": "the junction of the BCR branch line to MacKenzie",
+              "distance": null,
+              "quote": "thence southerly following the BCR to the junction of the BCR branch line to MacKenzie"
+            },
+            {
+              "start": null,
+              "direction": null,
+              "follow": "other",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence following the spur line to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "Seasonal No Shooting or Hunting Areas"
+          },
+          {
+            "field": "period",
+            "quote": "during the period from September 1 to March 31 inclusive"
+          },
+          {
+            "field": "within",
+            "quote": "That portion of M.U. 7-23"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "That portion of M.U. 7-23",
+    "period": "during the period from September 1 to March 31 inclusive",
+    "effect": "Seasonal No Shooting or Hunting Areas",
+    "geometry.steps[0]": "Commencing at the railroad bridge on the BCR MacKenzie branch line at its crossing of the Missinchinka River",
+    "geometry.steps[1]": "thence following the Missinchinka River upstream approximately 9 km to an unnamed stream running westerly into the Missinchinka River",
+    "geometry.steps[2]": "thence following the unnamed creek upstream to the crossing of the BCR line",
+    "geometry.steps[3]": "thence southerly following the BCR to the junction of the BCR branch line to MacKenzie",
+    "geometry.steps[4]": "thence following the spur line to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "steps: run 1 [\"bcr mackenzie branch line|||\",\"missinchinka river|an unnamed stream running westerly into the missinchinka river|approximately 9 km|river\",\"|the crossing of the bcr line||creek\",\"bcr|the junction of the bcr branch line to mackenzie||other\",\"|the point of commencement||other\"] vs run 2 [\"missinchinka river|||\",\"missinchinka river|an unnamed stream running westerly into the missinchinka river|approximately 9 km|river\",\"|the crossing of the bcr line||creek\",\"bcr|the junction of the bcr branch line to mackenzie||other\",\"|the point of commencement||other\"]"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:08:32.361Z",
+  "updated": "2026-10-21T16:08:32.361Z"
+}

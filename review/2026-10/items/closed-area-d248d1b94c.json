@@ -1,0 +1,417 @@
+{
+  "item_id": "closed-area-d248d1b94c",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 75 (Okanagan Falls)",
+  "rule_id": "W5-075",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: steps: run 1 [\"|its intersection with the mean high water mark of skaha lake||other\",\"hwy 97 right of way|the point of intersection with the westerly boundary of the right of way of green lake rd||\",\"|a point due west of a velocity drop structure on okanagan river northwest of the northeastern corner of lot 109 yale district||road\",\"|the easterly edge of the east river dyke||straight_line\",\"east river dyke|the southeasterly bank of shuttleworth creek||other\",\"shuttleworth creek|the second set of railway tracks||creek\",\"|the easterly edge of the maple st right of way||other\",\"maple st|the end of maple st||road\",\"|a point due east of the point of commencement||straight_line\",\"|the mean high water mark of skaha lake||straight_line\",\"skaha lake|the point of commencement||shoreline\"] vs run 2 [\"railway trestle|its intersection with the mean high water mark of skaha lake||other\",\"hwy 97|the point of intersection with the westerly boundary of the right of way of green lake rd||\",\"|a point due west of a velocity drop structure on okanagan river northwest of the northeastern corner of lot 109 yale district||road\",\"east river dyke|the easterly edge of the east river dyke||straight_line\",\"east river dyke|the southeasterly bank of shuttleworth creek||other\",\"shuttleworth creek|the second set of railway tracks||creek\",\"railway tracks|the easterly edge of the maple st right of way||other\",\"maple st|the end of maple st||road\",\"|a point due east of the point of commencement||straight_line\",\"skaha lake|the mean high water mark of skaha lake||straight_line\",\"skaha lake|the point of commencement||shoreline\"]",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nOkanagan Falls\n75 That portion of the Province of British Columbia in the Similkameen Division of Yale Land District within the following described boundaries: Commencing at the southeastern corner of the railway trestle which crosses the south end of Skaha Lake and proceeding northwesterly along the easterly edge of the trestle to its intersection with the mean high water mark of Skaha Lake; thence due West to a point on the westerly edge of the Highway 97 right of way to the point of intersection with the westerly boundary of the right of way of Green Lake Road; thence southerly along the westerly edge of the right of way to a point due West of a velocity drop structure on Okanagan River northwest of the northeastern corner of Lot 109 Yale District; thence due East to the easterly edge of the East River Dyke; thence northwesterly along the easterly edge of the dyke to the southeasterly bank of Shuttleworth Creek; thence northeasterly along the bank to the second set of railway tracks; thence southeasterly then northeasterly along the railway tracks to the easterly edge of the Maple Street right of way; thence northwesterly along the easterly edge of the right of way to the end of Maple Street; thence due North in a straight line to a point due East of the point of commencement; thence due West in a straight line to the mean high water mark of Skaha Lake; thence westerly along the mean high water mark to the point of commencement. [en. B.C. Reg. 109/85, s. 3 (i); am. B.C. Reg. 172/86, s. 2.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-29bbb915c6d5",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:01:17Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Similkameen Division of Yale Land District"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the southeastern corner of the railway trestle which crosses the south end of Skaha Lake",
+              "direction": "northwesterly",
+              "follow": "other",
+              "feature": null,
+              "side_or_bank": "easterly edge",
+              "until": "its intersection with the mean high water mark of Skaha Lake",
+              "distance": null,
+              "quote": "Commencing at the southeastern corner of the railway trestle which crosses the south end of Skaha Lake and proceeding northwesterly along the easterly edge of the trestle to its intersection with the mean high water mark of Skaha Lake"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": null,
+              "feature": "Highway 97 right of way",
+              "side_or_bank": "westerly edge",
+              "until": "the point of intersection with the westerly boundary of the right of way of Green Lake Road",
+              "distance": null,
+              "quote": "thence due West to a point on the westerly edge of the Highway 97 right of way to the point of intersection with the westerly boundary of the right of way of Green Lake Road"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "road",
+              "feature": null,
+              "side_or_bank": "westerly edge",
+              "until": "a point due West of a velocity drop structure on Okanagan River northwest of the northeastern corner of Lot 109 Yale District",
+              "distance": null,
+              "quote": "thence southerly along the westerly edge of the right of way to a point due West of a velocity drop structure on Okanagan River northwest of the northeastern corner of Lot 109 Yale District"
+            },
+            {
+              "start": null,
+              "direction": "due East",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the easterly edge of the East River Dyke",
+              "distance": null,
+              "quote": "thence due East to the easterly edge of the East River Dyke"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly",
+              "follow": "other",
+              "feature": "East River Dyke",
+              "side_or_bank": "easterly edge",
+              "until": "the southeasterly bank of Shuttleworth Creek",
+              "distance": null,
+              "quote": "thence northwesterly along the easterly edge of the dyke to the southeasterly bank of Shuttleworth Creek"
+            },
+            {
+              "start": null,
+              "direction": "northeasterly",
+              "follow": "creek",
+              "feature": "Shuttleworth Creek",
+              "side_or_bank": "southeasterly bank",
+              "until": "the second set of railway tracks",
+              "distance": null,
+              "quote": "thence northeasterly along the bank to the second set of railway tracks"
+            },
+            {
+              "start": null,
+              "direction": "southeasterly then northeasterly",
+              "follow": "other",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the easterly edge of the Maple Street right of way",
+              "distance": null,
+              "quote": "thence southeasterly then northeasterly along the railway tracks to the easterly edge of the Maple Street right of way"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly",
+              "follow": "road",
+              "feature": "Maple Street",
+              "side_or_bank": "easterly edge",
+              "until": "the end of Maple Street",
+              "distance": null,
+              "quote": "thence northwesterly along the easterly edge of the right of way to the end of Maple Street"
+            },
+            {
+              "start": null,
+              "direction": "due North",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "a point due East of the point of commencement",
+              "distance": null,
+              "quote": "thence due North in a straight line to a point due East of the point of commencement"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the mean high water mark of Skaha Lake",
+              "distance": null,
+              "quote": "thence due West in a straight line to the mean high water mark of Skaha Lake"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "shoreline",
+              "feature": "Skaha Lake",
+              "side_or_bank": "mean high water mark",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence westerly along the mean high water mark to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in the Similkameen Division of Yale Land District"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within the following described boundaries: Commencing at"
+          },
+          {
+            "field": "geometry.steps[0]",
+            "quote": "Commencing at the southeastern corner of the railway trestle which crosses the south end of Skaha Lake and proceeding northwesterly along the easterly edge of the trestle to its intersection with the mean high water mark of Skaha Lake"
+          },
+          {
+            "field": "geometry.steps[1]",
+            "quote": "thence due West to a point on the westerly edge of the Highway 97 right of way to the point of intersection with the westerly boundary of the right of way of Green Lake Road"
+          },
+          {
+            "field": "geometry.steps[2]",
+            "quote": "thence southerly along the westerly edge of the right of way to a point due West of a velocity drop structure on Okanagan River northwest of the northeastern corner of Lot 109 Yale District"
+          },
+          {
+            "field": "geometry.steps[3]",
+            "quote": "thence due East to the easterly edge of the East River Dyke"
+          },
+          {
+            "field": "geometry.steps[4]",
+            "quote": "thence northwesterly along the easterly edge of the dyke to the southeasterly bank of Shuttleworth Creek"
+          },
+          {
+            "field": "geometry.steps[5]",
+            "quote": "thence northeasterly along the bank to the second set of railway tracks"
+          },
+          {
+            "field": "geometry.steps[6]",
+            "quote": "thence southeasterly then northeasterly along the railway tracks to the easterly edge of the Maple Street right of way"
+          },
+          {
+            "field": "geometry.steps[7]",
+            "quote": "thence northwesterly along the easterly edge of the right of way to the end of Maple Street"
+          },
+          {
+            "field": "geometry.steps[8]",
+            "quote": "thence due North in a straight line to a point due East of the point of commencement"
+          },
+          {
+            "field": "geometry.steps[9]",
+            "quote": "thence due West in a straight line to the mean high water mark of Skaha Lake"
+          },
+          {
+            "field": "geometry.steps[10]",
+            "quote": "thence westerly along the mean high water mark to the point of commencement"
+          }
+        ],
+        "uncertain": [
+          "geometry.steps[1].follow",
+          "geometry.steps[2].feature"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-29bbb915c6d5",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:01:08Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "other",
+          "name": "Similkameen Division of Yale Land District"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the southeastern corner of the railway trestle which crosses the south end of Skaha Lake",
+              "direction": "northwesterly",
+              "follow": "other",
+              "feature": "railway trestle",
+              "side_or_bank": "easterly edge",
+              "until": "its intersection with the mean high water mark of Skaha Lake",
+              "distance": null,
+              "quote": "Commencing at the southeastern corner of the railway trestle which crosses the south end of Skaha Lake and proceeding northwesterly along the easterly edge of the trestle to its intersection with the mean high water mark of Skaha Lake"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": null,
+              "feature": "Highway 97",
+              "side_or_bank": "westerly edge",
+              "until": "the point of intersection with the westerly boundary of the right of way of Green Lake Road",
+              "distance": null,
+              "quote": "thence due West to a point on the westerly edge of the Highway 97 right of way to the point of intersection with the westerly boundary of the right of way of Green Lake Road"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "road",
+              "feature": null,
+              "side_or_bank": "westerly edge of the right of way",
+              "until": "a point due West of a velocity drop structure on Okanagan River northwest of the northeastern corner of Lot 109 Yale District",
+              "distance": null,
+              "quote": "thence southerly along the westerly edge of the right of way to a point due West of a velocity drop structure on Okanagan River northwest of the northeastern corner of Lot 109 Yale District"
+            },
+            {
+              "start": null,
+              "direction": "due East",
+              "follow": "straight_line",
+              "feature": "East River Dyke",
+              "side_or_bank": "easterly edge",
+              "until": "the easterly edge of the East River Dyke",
+              "distance": null,
+              "quote": "thence due East to the easterly edge of the East River Dyke"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly",
+              "follow": "other",
+              "feature": "East River Dyke",
+              "side_or_bank": "easterly edge",
+              "until": "the southeasterly bank of Shuttleworth Creek",
+              "distance": null,
+              "quote": "thence northwesterly along the easterly edge of the dyke to the southeasterly bank of Shuttleworth Creek"
+            },
+            {
+              "start": null,
+              "direction": "northeasterly",
+              "follow": "creek",
+              "feature": "Shuttleworth Creek",
+              "side_or_bank": "southeasterly bank",
+              "until": "the second set of railway tracks",
+              "distance": null,
+              "quote": "thence northeasterly along the bank to the second set of railway tracks"
+            },
+            {
+              "start": null,
+              "direction": "southeasterly then northeasterly",
+              "follow": "other",
+              "feature": "railway tracks",
+              "side_or_bank": null,
+              "until": "the easterly edge of the Maple Street right of way",
+              "distance": null,
+              "quote": "thence southeasterly then northeasterly along the railway tracks to the easterly edge of the Maple Street right of way"
+            },
+            {
+              "start": null,
+              "direction": "northwesterly",
+              "follow": "road",
+              "feature": "Maple Street",
+              "side_or_bank": "easterly edge of the right of way",
+              "until": "the end of Maple Street",
+              "distance": null,
+              "quote": "thence northwesterly along the easterly edge of the right of way to the end of Maple Street"
+            },
+            {
+              "start": null,
+              "direction": "due North",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "a point due East of the point of commencement",
+              "distance": null,
+              "quote": "thence due North in a straight line to a point due East of the point of commencement"
+            },
+            {
+              "start": null,
+              "direction": "due West",
+              "follow": "straight_line",
+              "feature": "Skaha Lake",
+              "side_or_bank": null,
+              "until": "the mean high water mark of Skaha Lake",
+              "distance": null,
+              "quote": "thence due West in a straight line to the mean high water mark of Skaha Lake"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "shoreline",
+              "feature": "Skaha Lake",
+              "side_or_bank": "mean high water mark",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence westerly along the mean high water mark to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "in the Similkameen Division of Yale Land District"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within the following described boundaries: Commencing at the southeastern corner of the railway trestle"
+          }
+        ],
+        "uncertain": [
+          "geometry.steps[1].follow",
+          "geometry.steps[2].feature"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "within": "in the Similkameen Division of Yale Land District",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at the southeastern corner of the railway trestle which crosses the south end of Skaha Lake and proceeding northwesterly along the easterly edge of the trestle to its intersection with the mean high water mark of Skaha Lake",
+    "geometry.steps[1]": "thence due West to a point on the westerly edge of the Highway 97 right of way to the point of intersection with the westerly boundary of the right of way of Green Lake Road",
+    "geometry.steps[2]": "thence southerly along the westerly edge of the right of way to a point due West of a velocity drop structure on Okanagan River northwest of the northeastern corner of Lot 109 Yale District",
+    "geometry.steps[3]": "thence due East to the easterly edge of the East River Dyke",
+    "geometry.steps[4]": "thence northwesterly along the easterly edge of the dyke to the southeasterly bank of Shuttleworth Creek",
+    "geometry.steps[5]": "thence northeasterly along the bank to the second set of railway tracks",
+    "geometry.steps[6]": "thence southeasterly then northeasterly along the railway tracks to the easterly edge of the Maple Street right of way",
+    "geometry.steps[7]": "thence northwesterly along the easterly edge of the right of way to the end of Maple Street",
+    "geometry.steps[8]": "thence due North in a straight line to a point due East of the point of commencement",
+    "geometry.steps[9]": "thence due West in a straight line to the mean high water mark of Skaha Lake",
+    "geometry.steps[10]": "thence westerly along the mean high water mark to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "steps: run 1 [\"|its intersection with the mean high water mark of skaha lake||other\",\"hwy 97 right of way|the point of intersection with the westerly boundary of the right of way of green lake rd||\",\"|a point due west of a velocity drop structure on okanagan river northwest of the northeastern corner of lot 109 yale district||road\",\"|the easterly edge of the east river dyke||straight_line\",\"east river dyke|the southeasterly bank of shuttleworth creek||other\",\"shuttleworth creek|the second set of railway tracks||creek\",\"|the easterly edge of the maple st right of way||other\",\"maple st|the end of maple st||road\",\"|a point due east of the point of commencement||straight_line\",\"|the mean high water mark of skaha lake||straight_line\",\"skaha lake|the point of commencement||shoreline\"] vs run 2 [\"railway trestle|its intersection with the mean high water mark of skaha lake||other\",\"hwy 97|the point of intersection with the westerly boundary of the right of way of green lake rd||\",\"|a point due west of a velocity drop structure on okanagan river northwest of the northeastern corner of lot 109 yale district||road\",\"east river dyke|the easterly edge of the east river dyke||straight_line\",\"east river dyke|the southeasterly bank of shuttleworth creek||other\",\"shuttleworth creek|the second set of railway tracks||creek\",\"railway tracks|the easterly edge of the maple st right of way||other\",\"maple st|the end of maple st||road\",\"|a point due east of the point of commencement||straight_line\",\"skaha lake|the mean high water mark of skaha lake||straight_line\",\"skaha lake|the point of commencement||shoreline\"]"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:07:30.423Z",
+  "updated": "2026-10-21T16:07:30.423Z"
+}

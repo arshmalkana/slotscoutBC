@@ -1,0 +1,358 @@
+{
+  "item_id": "closed-area-8d460cb774",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 6, section 7 (Cowichan Bay)",
+  "rule_id": "W7-007",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: side: run 1 \"inside\" vs run 2 null",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 6 Seasonal No Shooting Areas (Section 7)\nCowichan Bay\n7 That portion of British Columbia in the vicinity of Cowichan Bay contained within the following described boundaries: Commencing at the mean high water mark of Cowichan Bay at the most southerly extremity of Skinner Point; thence in a straight line to the point of intersection with the mean high water mark of Cowichan Bay at the most northerly extremity of the southerly shore thereof, east of Cowichan Bay Village; thence in a general westerly direction along the mean high water mark a distance of approximately 600 metres to a point due North of Cowichan Bay Road; thence due South to the northerly boundary of the right of way of Cowichan Bay Road; thence in a general westerly and northerly direction along the northerly boundary and along the easterly boundary of the right of way to the point of intersection with the easterly boundary of the right of way of Tzuhalem Road; thence in a general northerly direction along the easterly boundary to the point of intersection with the southerly boundary of the right of way of Khenipsen Road; thence in a general easterly direction along the southerly boundary to the most easterly extremity thereof; thence due South to the mean high water mark of Cowichan Bay; thence in a general easterly direction along the mean high water mark of Cowichan Bay to the point of commencement, including all intervening territory but excluding all Indian Reserve Lands, during the period March 11 to the Saturday following Labour Day, except those areas as described in sections 21 and 114 of Schedule 5 (No Shooting Areas). [en. B.C. Reg. 224/92, s. 14; am. B.C. Regs. 205/94, s. 23; 219/2000, s. 6.]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-c6ab7f060297",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:01:20Z",
+      "answer": {
+        "effect": "no_shooting_seasonal",
+        "exemptions": [
+          "excluding all Indian Reserve Lands",
+          "except those areas as described in sections 21 and 114 of Schedule 5 (No Shooting Areas)"
+        ],
+        "period": {
+          "start": "March 11",
+          "end": "the Saturday following Labour Day"
+        },
+        "within": null,
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": "inside",
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the mean high water mark of Cowichan Bay at the most southerly extremity of Skinner Point",
+              "direction": null,
+              "follow": null,
+              "feature": "Skinner Point",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the mean high water mark of Cowichan Bay at the most southerly extremity of Skinner Point"
+            },
+            {
+              "start": null,
+              "direction": null,
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of intersection with the mean high water mark of Cowichan Bay at the most northerly extremity of the southerly shore thereof, east of Cowichan Bay Village",
+              "distance": null,
+              "quote": "thence in a straight line to the point of intersection with the mean high water mark of Cowichan Bay at the most northerly extremity of the southerly shore thereof, east of Cowichan Bay Village"
+            },
+            {
+              "start": null,
+              "direction": "in a general westerly direction",
+              "follow": "shoreline",
+              "feature": "Cowichan Bay",
+              "side_or_bank": "mean high water mark",
+              "until": "a point due North of Cowichan Bay Road",
+              "distance": "approximately 600 metres",
+              "quote": "thence in a general westerly direction along the mean high water mark a distance of approximately 600 metres to a point due North of Cowichan Bay Road"
+            },
+            {
+              "start": null,
+              "direction": "due South",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the northerly boundary of the right of way of Cowichan Bay Road",
+              "distance": null,
+              "quote": "thence due South to the northerly boundary of the right of way of Cowichan Bay Road"
+            },
+            {
+              "start": null,
+              "direction": "in a general westerly and northerly direction",
+              "follow": "road",
+              "feature": "Cowichan Bay Road",
+              "side_or_bank": "the northerly boundary and along the easterly boundary of the right of way",
+              "until": "the point of intersection with the easterly boundary of the right of way of Tzuhalem Road",
+              "distance": null,
+              "quote": "thence in a general westerly and northerly direction along the northerly boundary and along the easterly boundary of the right of way to the point of intersection with the easterly boundary of the right of way of Tzuhalem Road"
+            },
+            {
+              "start": null,
+              "direction": "in a general northerly direction",
+              "follow": "road",
+              "feature": "Tzuhalem Road",
+              "side_or_bank": "the easterly boundary",
+              "until": "the point of intersection with the southerly boundary of the right of way of Khenipsen Road",
+              "distance": null,
+              "quote": "thence in a general northerly direction along the easterly boundary to the point of intersection with the southerly boundary of the right of way of Khenipsen Road"
+            },
+            {
+              "start": null,
+              "direction": "in a general easterly direction",
+              "follow": "road",
+              "feature": "Khenipsen Road",
+              "side_or_bank": "the southerly boundary",
+              "until": "the most easterly extremity thereof",
+              "distance": null,
+              "quote": "thence in a general easterly direction along the southerly boundary to the most easterly extremity thereof"
+            },
+            {
+              "start": null,
+              "direction": "due South",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the mean high water mark of Cowichan Bay",
+              "distance": null,
+              "quote": "thence due South to the mean high water mark of Cowichan Bay"
+            },
+            {
+              "start": null,
+              "direction": "in a general easterly direction",
+              "follow": "shoreline",
+              "feature": "Cowichan Bay",
+              "side_or_bank": "the mean high water mark",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence in a general easterly direction along the mean high water mark of Cowichan Bay to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "Seasonal No Shooting Areas"
+          },
+          {
+            "field": "exemptions[0]",
+            "quote": "excluding all Indian Reserve Lands"
+          },
+          {
+            "field": "exemptions[1]",
+            "quote": "except those areas as described in sections 21 and 114 of Schedule 5 (No Shooting Areas)"
+          },
+          {
+            "field": "period",
+            "quote": "during the period March 11 to the Saturday following Labour Day"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries"
+          },
+          {
+            "field": "geometry.side",
+            "quote": "including all intervening territory"
+          }
+        ],
+        "uncertain": [
+          "within"
+        ]
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-c6ab7f060297",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:01:41Z",
+      "answer": {
+        "effect": "no_shooting_seasonal",
+        "exemptions": [
+          "excluding all Indian Reserve Lands",
+          "except those areas as described in sections 21 and 114 of Schedule 5 (No Shooting Areas)"
+        ],
+        "period": {
+          "start": "March 11",
+          "end": "the Saturday following Labour Day"
+        },
+        "within": null,
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the mean high water mark of Cowichan Bay at the most southerly extremity of Skinner Point",
+              "direction": null,
+              "follow": null,
+              "feature": "Skinner Point",
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the mean high water mark of Cowichan Bay at the most southerly extremity of Skinner Point"
+            },
+            {
+              "start": null,
+              "direction": null,
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the point of intersection with the mean high water mark of Cowichan Bay at the most northerly extremity of the southerly shore thereof, east of Cowichan Bay Village",
+              "distance": null,
+              "quote": "thence in a straight line to the point of intersection with the mean high water mark of Cowichan Bay at the most northerly extremity of the southerly shore thereof, east of Cowichan Bay Village"
+            },
+            {
+              "start": null,
+              "direction": "in a general westerly direction",
+              "follow": "shoreline",
+              "feature": "Cowichan Bay",
+              "side_or_bank": "mean high water mark",
+              "until": "a point due North of Cowichan Bay Road",
+              "distance": "approximately 600 metres",
+              "quote": "thence in a general westerly direction along the mean high water mark a distance of approximately 600 metres to a point due North of Cowichan Bay Road"
+            },
+            {
+              "start": null,
+              "direction": "due South",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the northerly boundary of the right of way of Cowichan Bay Road",
+              "distance": null,
+              "quote": "thence due South to the northerly boundary of the right of way of Cowichan Bay Road"
+            },
+            {
+              "start": null,
+              "direction": "in a general westerly and northerly direction",
+              "follow": "road",
+              "feature": "Cowichan Bay Road",
+              "side_or_bank": "the northerly boundary and along the easterly boundary of the right of way",
+              "until": "the point of intersection with the easterly boundary of the right of way of Tzuhalem Road",
+              "distance": null,
+              "quote": "thence in a general westerly and northerly direction along the northerly boundary and along the easterly boundary of the right of way to the point of intersection with the easterly boundary of the right of way of Tzuhalem Road"
+            },
+            {
+              "start": null,
+              "direction": "in a general northerly direction",
+              "follow": "road",
+              "feature": "Tzuhalem Road",
+              "side_or_bank": "easterly boundary",
+              "until": "the point of intersection with the southerly boundary of the right of way of Khenipsen Road",
+              "distance": null,
+              "quote": "thence in a general northerly direction along the easterly boundary to the point of intersection with the southerly boundary of the right of way of Khenipsen Road"
+            },
+            {
+              "start": null,
+              "direction": "in a general easterly direction",
+              "follow": "road",
+              "feature": "Khenipsen Road",
+              "side_or_bank": "southerly boundary",
+              "until": "the most easterly extremity thereof",
+              "distance": null,
+              "quote": "thence in a general easterly direction along the southerly boundary to the most easterly extremity thereof"
+            },
+            {
+              "start": null,
+              "direction": "due South",
+              "follow": "straight_line",
+              "feature": null,
+              "side_or_bank": null,
+              "until": "the mean high water mark of Cowichan Bay",
+              "distance": null,
+              "quote": "thence due South to the mean high water mark of Cowichan Bay"
+            },
+            {
+              "start": null,
+              "direction": "in a general easterly direction",
+              "follow": "shoreline",
+              "feature": "Cowichan Bay",
+              "side_or_bank": "mean high water mark",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence in a general easterly direction along the mean high water mark of Cowichan Bay to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "Seasonal No Shooting Areas"
+          },
+          {
+            "field": "exemptions[0]",
+            "quote": "excluding all Indian Reserve Lands"
+          },
+          {
+            "field": "exemptions[1]",
+            "quote": "except those areas as described in sections 21 and 114 of Schedule 5 (No Shooting Areas)"
+          },
+          {
+            "field": "period",
+            "quote": "during the period March 11 to the Saturday following Labour Day"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries"
+          }
+        ],
+        "uncertain": [
+          "within"
+        ]
+      }
+    }
+  },
+  "quotes": {
+    "period": "during the period March 11 to the Saturday following Labour Day",
+    "effect": "Seasonal No Shooting Areas",
+    "geometry.side": "including all intervening territory",
+    "exemptions[0]": "excluding all Indian Reserve Lands",
+    "exemptions[1]": "except those areas as described in sections 21 and 114 of Schedule 5 (No Shooting Areas)",
+    "geometry.steps[0]": "Commencing at the mean high water mark of Cowichan Bay at the most southerly extremity of Skinner Point",
+    "geometry.steps[1]": "thence in a straight line to the point of intersection with the mean high water mark of Cowichan Bay at the most northerly extremity of the southerly shore thereof, east of Cowichan Bay Village",
+    "geometry.steps[2]": "thence in a general westerly direction along the mean high water mark a distance of approximately 600 metres to a point due North of Cowichan Bay Road",
+    "geometry.steps[3]": "thence due South to the northerly boundary of the right of way of Cowichan Bay Road",
+    "geometry.steps[4]": "thence in a general westerly and northerly direction along the northerly boundary and along the easterly boundary of the right of way to the point of intersection with the easterly boundary of the right of way of Tzuhalem Road",
+    "geometry.steps[5]": "thence in a general northerly direction along the easterly boundary to the point of intersection with the southerly boundary of the right of way of Khenipsen Road",
+    "geometry.steps[6]": "thence in a general easterly direction along the southerly boundary to the most easterly extremity thereof",
+    "geometry.steps[7]": "thence due South to the mean high water mark of Cowichan Bay",
+    "geometry.steps[8]": "thence in a general easterly direction along the mean high water mark of Cowichan Bay to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "side: run 1 \"inside\" vs run 2 null"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:10:14.338Z",
+  "updated": "2026-10-21T16:10:14.338Z"
+}

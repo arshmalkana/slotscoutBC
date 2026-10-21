@@ -1,0 +1,346 @@
+{
+  "item_id": "closed-area-7ac539905d",
+  "month": "2026-10",
+  "kind": "closed_area",
+  "title": "Closed Areas Regulation, Schedule 5, section 126 (Houston Community Forest)",
+  "rule_id": "W5-126",
+  "change_type": "new",
+  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "why": [
+    "AI runs disagree: steps: run 1 [\"|||\",\"lot 2092|the southeast corner of lot 2102a||lot_line\",\"lot 2102a and lot 2093|the point of intersection with the eastern boundary of the watershed of that unnamed creek flowing northwesterly through lot 2093||lot_line\",\"that unnamed creek flowing northwesterly through lot 2093|the point of intersection with the eastern boundary of the watershed of peacock creek||other\",\"peacock creek|the point of intersection with the southern boundary of the watershed of silverthorne lake||other\",\"silverthorne lake|the point of intersection with the southwestern boundary of the watershed of that unnamed creek flowing southeasterly into buck creek within lot 5206||other\",\"that unnamed creek flowing southeasterly into buck creek within lot 5206|a point within lot 5205 200 metres east of the eastern natural boundary of buck creek|200 metres|other\",\"buck creek|the point of intersection with the eastern boundary of lot 2499a|200 metres|creek\",\"lot 2499a|the southeast corner thereof||lot_line\",\"lots 2499a 2097 2091 and 2092|the point of commencement||lot_line\"] vs run 2 [\"|||\",\"lot 2092|the southeast corner of lot 2102a||lot_line\",\"lot 2102a and lot 2093|the point of intersection with the eastern boundary of the watershed of that unnamed creek flowing northwesterly through lot 2093||lot_line\",\"the watershed of that unnamed creek flowing northwesterly through lot 2093|the point of intersection with the eastern boundary of the watershed of peacock creek||other\",\"the watershed of peacock creek|the point of intersection with the southern boundary of the watershed of silverthorne lake||other\",\"the watershed of silverthorne lake|the point of intersection with the southwestern boundary of the watershed of that unnamed creek flowing southeasterly into buck creek within lot 5206||other\",\"the watershed of that unnamed creek flowing southeasterly into buck creek within lot 5206|a point within lot 5205 200 metres east of the eastern natural boundary of buck creek|200 metres|other\",\"buck creek|the point of intersection with the eastern boundary of lot 2499a|200 metres|other\",\"lot 2499a|the southeast corner thereof||lot_line\",\"lots 2499a 2097 2091 and 2092|the point of commencement||lot_line\"]",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "source": {
+    "text": "Schedule 5 No Shooting Areas (Section 6)\nHouston Community Forest\n126 That portion of the Province of British Columbia within M.U. 6-09 in the vicinity of Houston which is contained within the following described boundaries: Commencing at the southwest corner of Lot 2092; thence northerly along the western boundary of said Lot to the southeast corner of Lot 2102A; thence westerly along the southern boundaries of Lot 2102A and Lot 2093 to the point of intersection with the eastern boundary of the watershed of that unnamed creek flowing northwesterly through Lot 2093; thence in a general southerly direction along said watershed boundary to the point of intersection with the eastern boundary of the watershed of Peacock Creek; thence in a general southerly direction along said watershed boundary of Peacock Creek to the point of intersection with the southern boundary of the watershed of Silverthorne Lake; thence in a general easterly direction along said watershed boundary to the point of intersection with the southwestern boundary of the watershed of that unnamed creek flowing southeasterly into Buck Creek within Lot 5206; thence in a general southeasterly direction along said watershed boundary, and along the projection thereof, to a point, within Lot 5205, 200 metres east of the eastern natural boundary of Buck Creek; thence in a general northerly direction along a line 200 metres distant from and parallel to the eastern natural boundary of Buck Creek to the point of intersection with the eastern boundary of Lot 2499A; thence southerly along said boundary of Lot 2499A to the southeast corner thereof; thence westerly along the southern boundaries of Lots 2499A, 2097, 2091 and 2092 to the point of commencement. [en. B.C. Reg. 322/95, s. 3 (d).]",
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+    "version": "BC Laws consolidation current to October 13, 2026",
+    "confirmed": true,
+    "file": "raw/2026-10/bclaws/76_84_00_multi.txt"
+  },
+  "runs": {
+    "run1": {
+      "task_id": "closed_area-d31eb1640730",
+      "run": 1,
+      "mode": "agent",
+      "model": "Claude Code agent mode",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:00:27Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 6-09"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the southwest corner of Lot 2092",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the southwest corner of Lot 2092"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "lot_line",
+              "feature": "Lot 2092",
+              "side_or_bank": "western boundary",
+              "until": "the southeast corner of Lot 2102A",
+              "distance": null,
+              "quote": "thence northerly along the western boundary of said Lot to the southeast corner of Lot 2102A"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "lot_line",
+              "feature": "Lot 2102A and Lot 2093",
+              "side_or_bank": "southern boundaries",
+              "until": "the point of intersection with the eastern boundary of the watershed of that unnamed creek flowing northwesterly through Lot 2093",
+              "distance": null,
+              "quote": "thence westerly along the southern boundaries of Lot 2102A and Lot 2093 to the point of intersection with the eastern boundary of the watershed of that unnamed creek flowing northwesterly through Lot 2093"
+            },
+            {
+              "start": null,
+              "direction": "in a general southerly direction",
+              "follow": "other",
+              "feature": "that unnamed creek flowing northwesterly through Lot 2093",
+              "side_or_bank": "eastern boundary",
+              "until": "the point of intersection with the eastern boundary of the watershed of Peacock Creek",
+              "distance": null,
+              "quote": "thence in a general southerly direction along said watershed boundary to the point of intersection with the eastern boundary of the watershed of Peacock Creek"
+            },
+            {
+              "start": null,
+              "direction": "in a general southerly direction",
+              "follow": "other",
+              "feature": "Peacock Creek",
+              "side_or_bank": "eastern boundary",
+              "until": "the point of intersection with the southern boundary of the watershed of Silverthorne Lake",
+              "distance": null,
+              "quote": "thence in a general southerly direction along said watershed boundary of Peacock Creek to the point of intersection with the southern boundary of the watershed of Silverthorne Lake"
+            },
+            {
+              "start": null,
+              "direction": "in a general easterly direction",
+              "follow": "other",
+              "feature": "Silverthorne Lake",
+              "side_or_bank": "southern boundary",
+              "until": "the point of intersection with the southwestern boundary of the watershed of that unnamed creek flowing southeasterly into Buck Creek within Lot 5206",
+              "distance": null,
+              "quote": "thence in a general easterly direction along said watershed boundary to the point of intersection with the southwestern boundary of the watershed of that unnamed creek flowing southeasterly into Buck Creek within Lot 5206"
+            },
+            {
+              "start": null,
+              "direction": "in a general southeasterly direction",
+              "follow": "other",
+              "feature": "that unnamed creek flowing southeasterly into Buck Creek within Lot 5206",
+              "side_or_bank": "southwestern boundary",
+              "until": "a point, within Lot 5205, 200 metres east of the eastern natural boundary of Buck Creek",
+              "distance": "200 metres",
+              "quote": "thence in a general southeasterly direction along said watershed boundary, and along the projection thereof, to a point, within Lot 5205, 200 metres east of the eastern natural boundary of Buck Creek"
+            },
+            {
+              "start": null,
+              "direction": "in a general northerly direction",
+              "follow": "creek",
+              "feature": "Buck Creek",
+              "side_or_bank": "eastern natural boundary",
+              "until": "the point of intersection with the eastern boundary of Lot 2499A",
+              "distance": "200 metres",
+              "quote": "thence in a general northerly direction along a line 200 metres distant from and parallel to the eastern natural boundary of Buck Creek to the point of intersection with the eastern boundary of Lot 2499A"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "lot_line",
+              "feature": "Lot 2499A",
+              "side_or_bank": "eastern boundary",
+              "until": "the southeast corner thereof",
+              "distance": null,
+              "quote": "thence southerly along said boundary of Lot 2499A to the southeast corner thereof"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "lot_line",
+              "feature": "Lots 2499A, 2097, 2091 and 2092",
+              "side_or_bank": "southern boundaries",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence westerly along the southern boundaries of Lots 2499A, 2097, 2091 and 2092 to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "within M.U. 6-09"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "within the following described boundaries"
+          }
+        ],
+        "uncertain": []
+      }
+    },
+    "run2": {
+      "task_id": "closed_area-d31eb1640730",
+      "run": 2,
+      "mode": "agent",
+      "model": "Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "schema_id": "closed_area.v1",
+      "produced_at": "2026-10-21T16:01:18Z",
+      "answer": {
+        "effect": "no_shooting",
+        "exemptions": [],
+        "period": null,
+        "within": {
+          "type": "wildlife_management_unit",
+          "name": "M.U. 6-09"
+        },
+        "geometry": {
+          "method": "metes_and_bounds",
+          "road": null,
+          "feature": null,
+          "buffer_m": null,
+          "side": null,
+          "from": null,
+          "to": null,
+          "steps": [
+            {
+              "start": "the southwest corner of Lot 2092",
+              "direction": null,
+              "follow": null,
+              "feature": null,
+              "side_or_bank": null,
+              "until": null,
+              "distance": null,
+              "quote": "Commencing at the southwest corner of Lot 2092"
+            },
+            {
+              "start": null,
+              "direction": "northerly",
+              "follow": "lot_line",
+              "feature": "Lot 2092",
+              "side_or_bank": "western boundary",
+              "until": "the southeast corner of Lot 2102A",
+              "distance": null,
+              "quote": "thence northerly along the western boundary of said Lot to the southeast corner of Lot 2102A"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "lot_line",
+              "feature": "Lot 2102A and Lot 2093",
+              "side_or_bank": "southern boundaries",
+              "until": "the point of intersection with the eastern boundary of the watershed of that unnamed creek flowing northwesterly through Lot 2093",
+              "distance": null,
+              "quote": "thence westerly along the southern boundaries of Lot 2102A and Lot 2093 to the point of intersection with the eastern boundary of the watershed of that unnamed creek flowing northwesterly through Lot 2093"
+            },
+            {
+              "start": null,
+              "direction": "in a general southerly direction",
+              "follow": "other",
+              "feature": "the watershed of that unnamed creek flowing northwesterly through Lot 2093",
+              "side_or_bank": "eastern boundary",
+              "until": "the point of intersection with the eastern boundary of the watershed of Peacock Creek",
+              "distance": null,
+              "quote": "thence in a general southerly direction along said watershed boundary to the point of intersection with the eastern boundary of the watershed of Peacock Creek"
+            },
+            {
+              "start": null,
+              "direction": "in a general southerly direction",
+              "follow": "other",
+              "feature": "the watershed of Peacock Creek",
+              "side_or_bank": "eastern boundary",
+              "until": "the point of intersection with the southern boundary of the watershed of Silverthorne Lake",
+              "distance": null,
+              "quote": "thence in a general southerly direction along said watershed boundary of Peacock Creek to the point of intersection with the southern boundary of the watershed of Silverthorne Lake"
+            },
+            {
+              "start": null,
+              "direction": "in a general easterly direction",
+              "follow": "other",
+              "feature": "the watershed of Silverthorne Lake",
+              "side_or_bank": "southern boundary",
+              "until": "the point of intersection with the southwestern boundary of the watershed of that unnamed creek flowing southeasterly into Buck Creek within Lot 5206",
+              "distance": null,
+              "quote": "thence in a general easterly direction along said watershed boundary to the point of intersection with the southwestern boundary of the watershed of that unnamed creek flowing southeasterly into Buck Creek within Lot 5206"
+            },
+            {
+              "start": null,
+              "direction": "in a general southeasterly direction",
+              "follow": "other",
+              "feature": "the watershed of that unnamed creek flowing southeasterly into Buck Creek within Lot 5206",
+              "side_or_bank": "southwestern boundary",
+              "until": "a point, within Lot 5205, 200 metres east of the eastern natural boundary of Buck Creek",
+              "distance": "200 metres",
+              "quote": "thence in a general southeasterly direction along said watershed boundary, and along the projection thereof, to a point, within Lot 5205, 200 metres east of the eastern natural boundary of Buck Creek"
+            },
+            {
+              "start": null,
+              "direction": "in a general northerly direction",
+              "follow": "other",
+              "feature": "Buck Creek",
+              "side_or_bank": "eastern natural boundary",
+              "until": "the point of intersection with the eastern boundary of Lot 2499A",
+              "distance": "200 metres",
+              "quote": "thence in a general northerly direction along a line 200 metres distant from and parallel to the eastern natural boundary of Buck Creek to the point of intersection with the eastern boundary of Lot 2499A"
+            },
+            {
+              "start": null,
+              "direction": "southerly",
+              "follow": "lot_line",
+              "feature": "Lot 2499A",
+              "side_or_bank": "eastern boundary",
+              "until": "the southeast corner thereof",
+              "distance": null,
+              "quote": "thence southerly along said boundary of Lot 2499A to the southeast corner thereof"
+            },
+            {
+              "start": null,
+              "direction": "westerly",
+              "follow": "lot_line",
+              "feature": "Lots 2499A, 2097, 2091 and 2092",
+              "side_or_bank": "southern boundaries",
+              "until": "the point of commencement",
+              "distance": null,
+              "quote": "thence westerly along the southern boundaries of Lots 2499A, 2097, 2091 and 2092 to the point of commencement"
+            }
+          ]
+        },
+        "quotes": [
+          {
+            "field": "effect",
+            "quote": "No Shooting Areas"
+          },
+          {
+            "field": "within",
+            "quote": "within M.U. 6-09"
+          },
+          {
+            "field": "geometry.method",
+            "quote": "contained within the following described boundaries: Commencing at"
+          }
+        ],
+        "uncertain": []
+      }
+    }
+  },
+  "quotes": {
+    "within": "within M.U. 6-09",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at the southwest corner of Lot 2092",
+    "geometry.steps[1]": "thence northerly along the western boundary of said Lot to the southeast corner of Lot 2102A",
+    "geometry.steps[2]": "thence westerly along the southern boundaries of Lot 2102A and Lot 2093 to the point of intersection with the eastern boundary of the watershed of that unnamed creek flowing northwesterly through Lot 2093",
+    "geometry.steps[3]": "thence in a general southerly direction along said watershed boundary to the point of intersection with the eastern boundary of the watershed of Peacock Creek",
+    "geometry.steps[4]": "thence in a general southerly direction along said watershed boundary of Peacock Creek to the point of intersection with the southern boundary of the watershed of Silverthorne Lake",
+    "geometry.steps[5]": "thence in a general easterly direction along said watershed boundary to the point of intersection with the southwestern boundary of the watershed of that unnamed creek flowing southeasterly into Buck Creek within Lot 5206",
+    "geometry.steps[6]": "thence in a general southeasterly direction along said watershed boundary, and along the projection thereof, to a point, within Lot 5205, 200 metres east of the eastern natural boundary of Buck Creek",
+    "geometry.steps[7]": "thence in a general northerly direction along a line 200 metres distant from and parallel to the eastern natural boundary of Buck Creek to the point of intersection with the eastern boundary of Lot 2499A",
+    "geometry.steps[8]": "thence southerly along said boundary of Lot 2499A to the southeast corner thereof",
+    "geometry.steps[9]": "thence westerly along the southern boundaries of Lots 2499A, 2097, 2091 and 2092 to the point of commencement"
+  },
+  "rejected_quotes": [],
+  "disagreements": [
+    "steps: run 1 [\"|||\",\"lot 2092|the southeast corner of lot 2102a||lot_line\",\"lot 2102a and lot 2093|the point of intersection with the eastern boundary of the watershed of that unnamed creek flowing northwesterly through lot 2093||lot_line\",\"that unnamed creek flowing northwesterly through lot 2093|the point of intersection with the eastern boundary of the watershed of peacock creek||other\",\"peacock creek|the point of intersection with the southern boundary of the watershed of silverthorne lake||other\",\"silverthorne lake|the point of intersection with the southwestern boundary of the watershed of that unnamed creek flowing southeasterly into buck creek within lot 5206||other\",\"that unnamed creek flowing southeasterly into buck creek within lot 5206|a point within lot 5205 200 metres east of the eastern natural boundary of buck creek|200 metres|other\",\"buck creek|the point of intersection with the eastern boundary of lot 2499a|200 metres|creek\",\"lot 2499a|the southeast corner thereof||lot_line\",\"lots 2499a 2097 2091 and 2092|the point of commencement||lot_line\"] vs run 2 [\"|||\",\"lot 2092|the southeast corner of lot 2102a||lot_line\",\"lot 2102a and lot 2093|the point of intersection with the eastern boundary of the watershed of that unnamed creek flowing northwesterly through lot 2093||lot_line\",\"the watershed of that unnamed creek flowing northwesterly through lot 2093|the point of intersection with the eastern boundary of the watershed of peacock creek||other\",\"the watershed of peacock creek|the point of intersection with the southern boundary of the watershed of silverthorne lake||other\",\"the watershed of silverthorne lake|the point of intersection with the southwestern boundary of the watershed of that unnamed creek flowing southeasterly into buck creek within lot 5206||other\",\"the watershed of that unnamed creek flowing southeasterly into buck creek within lot 5206|a point within lot 5205 200 metres east of the eastern natural boundary of buck creek|200 metres|other\",\"buck creek|the point of intersection with the eastern boundary of lot 2499a|200 metres|other\",\"lot 2499a|the southeast corner thereof||lot_line\",\"lots 2499a 2097 2091 and 2092|the point of commencement||lot_line\"]"
+  ],
+  "lookups": [],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+    }
+  ],
+  "construction": [],
+  "status": "open",
+  "created": "2026-10-21T16:10:21.578Z",
+  "updated": "2026-10-21T16:10:21.578Z"
+}
