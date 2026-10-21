@@ -1,0 +1,50 @@
+{
+  "task_id": "closed_area-60caff708fc7",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:02:56Z",
+  "answer": {
+    "effect": "no_hunting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 4-22"
+    },
+    "geometry": {
+      "method": "admin_boundary",
+      "road": null,
+      "feature": {
+        "type": "lot",
+        "name": "Sublots 1 and 8 of District Lot 318"
+      },
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "in M.U. 4-22"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "being all Crown land in Kootenay Land District described as: Sublots 1 and 8 of District Lot 318"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "Sublots 1 and 8 of District Lot 318"
+      }
+    ],
+    "uncertain": []
+  }
+}

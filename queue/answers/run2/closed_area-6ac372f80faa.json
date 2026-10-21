@@ -1,0 +1,240 @@
+{
+  "task_id": "closed_area-6ac372f80faa",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:00:53Z",
+  "answer": {
+    "effect": "no_hunting",
+    "exemptions": [],
+    "period": {
+      "start": "June 1",
+      "end": "October 31"
+    },
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 7-32"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "northwest corner of Lot 34, Tp 80, R 18, W6 Peace River Land District",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the northwest corner of Lot 34, Tp 80, R 18, W6 Peace River Land District"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "northwest corner of Sunset Prairie Community Pasture",
+          "distance": "approximately 10 km",
+          "quote": "thence westerly in a straight line approximately 10 km to the northwest corner of Sunset Prairie Community Pasture"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "other",
+          "feature": "the said pasture",
+          "side_or_bank": "westerly",
+          "until": "point of intersection with a pipeline right of way",
+          "distance": "approximately 700 m",
+          "quote": "thence southerly approximately 700 m along the westerly boundary of the said pasture to the point of intersection with a pipeline right of way"
+        },
+        {
+          "start": null,
+          "direction": "general southwesterly",
+          "follow": "other",
+          "feature": "a fence that parallels the pipeline right of way",
+          "side_or_bank": null,
+          "until": "a point due North of the northwest corner of Lot 31, Tp 79, R 19, W6",
+          "distance": "approximately 5.8 km",
+          "quote": "thence approximately 5.8 km in a general southwesterly direction along a fence that parallels the pipeline right of way to a point due North of the northwest corner of Lot 31, Tp 79, R 19, W6"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "northwest corner of Lot 31",
+          "distance": "approximately 6 km",
+          "quote": "thence southerly in a straight line approximately 6 km to the northwest corner of Lot 31"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "southwest corner of Lot 30",
+          "distance": null,
+          "quote": "thence southerly in a straight line to the southwest corner of Lot 30"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "southeast corner of Lot 29",
+          "distance": null,
+          "quote": "thence easterly in a straight line to the southeast corner of Lot 29"
+        },
+        {
+          "start": null,
+          "direction": "northeasterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "northeast corner of Lot 33",
+          "distance": null,
+          "quote": "thence northeasterly in a straight line to the northeast corner of Lot 33"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "northeast corner of Lot 31, Tp 79, R 18, W6",
+          "distance": null,
+          "quote": "thence easterly in a straight line to the northeast corner of Lot 31, Tp 79, R 18, W6"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "northwest corner of Lot 5, Tp 80, R 18, W6",
+          "distance": null,
+          "quote": "thence northerly in a straight line to the northwest corner of Lot 5, Tp 80, R 18, W6"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "northwest corner of Lot 4",
+          "distance": null,
+          "quote": "thence easterly in a straight line to the northwest corner of Lot 4"
+        },
+        {
+          "start": null,
+          "direction": "easterly, northerly, then easterly",
+          "follow": "lot_line",
+          "feature": "Lot 4",
+          "side_or_bank": "northerly, then westerly, then northerly",
+          "until": "southwest corner of Lot 10",
+          "distance": null,
+          "quote": "thence easterly, northerly, then easterly along the northerly, then westerly, then northerly boundaries of Lot 4 to the southwest corner of Lot 10"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "point of commencement",
+          "distance": null,
+          "quote": "thence northerly in a straight line to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "Seasonal No Hunting Areas"
+      },
+      {
+        "field": "period",
+        "quote": "During the period June 1 to October 31"
+      },
+      {
+        "field": "within",
+        "quote": "that portion of M.U. 7-32"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundaries: Commencing at"
+      },
+      {
+        "field": "geometry.steps[0]",
+        "quote": "Commencing at the northwest corner of Lot 34, Tp 80, R 18, W6 Peace River Land District"
+      },
+      {
+        "field": "geometry.steps[1]",
+        "quote": "thence westerly in a straight line approximately 10 km to the northwest corner of Sunset Prairie Community Pasture"
+      },
+      {
+        "field": "geometry.steps[2]",
+        "quote": "thence southerly approximately 700 m along the westerly boundary of the said pasture to the point of intersection with a pipeline right of way"
+      },
+      {
+        "field": "geometry.steps[3]",
+        "quote": "thence approximately 5.8 km in a general southwesterly direction along a fence that parallels the pipeline right of way to a point due North of the northwest corner of Lot 31, Tp 79, R 19, W6"
+      },
+      {
+        "field": "geometry.steps[4]",
+        "quote": "thence southerly in a straight line approximately 6 km to the northwest corner of Lot 31"
+      },
+      {
+        "field": "geometry.steps[5]",
+        "quote": "thence southerly in a straight line to the southwest corner of Lot 30"
+      },
+      {
+        "field": "geometry.steps[6]",
+        "quote": "thence easterly in a straight line to the southeast corner of Lot 29"
+      },
+      {
+        "field": "geometry.steps[7]",
+        "quote": "thence northeasterly in a straight line to the northeast corner of Lot 33"
+      },
+      {
+        "field": "geometry.steps[8]",
+        "quote": "thence easterly in a straight line to the northeast corner of Lot 31, Tp 79, R 18, W6"
+      },
+      {
+        "field": "geometry.steps[9]",
+        "quote": "thence northerly in a straight line to the northwest corner of Lot 5, Tp 80, R 18, W6"
+      },
+      {
+        "field": "geometry.steps[10]",
+        "quote": "thence easterly in a straight line to the northwest corner of Lot 4"
+      },
+      {
+        "field": "geometry.steps[11]",
+        "quote": "thence easterly, northerly, then easterly along the northerly, then westerly, then northerly boundaries of Lot 4 to the southwest corner of Lot 10"
+      },
+      {
+        "field": "geometry.steps[12]",
+        "quote": "thence northerly in a straight line to the point of commencement"
+      }
+    ],
+    "uncertain": [
+      "geometry.steps[4].until",
+      "geometry.steps[5].until",
+      "geometry.steps[6].until",
+      "geometry.steps[7].until",
+      "geometry.steps[10].until",
+      "geometry.steps[11].until"
+    ]
+  }
+}

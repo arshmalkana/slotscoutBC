@@ -1,0 +1,368 @@
+{
+  "task_id": "closed_area-c0e4691a394f",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:00:51Z",
+  "answer": {
+    "effect": "no_hunting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U.s 5-10, 5-11, 6-01 and 6-02"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "a point on the easterly boundary of Tweedsmuir Provincial Park, said point lying 1 km due North of the natural boundary of Tetachuck Lake on the northerly shore thereof",
+          "direction": null,
+          "follow": null,
+          "feature": "Tweedsmuir Provincial Park",
+          "side_or_bank": null,
+          "until": null,
+          "distance": "1 km",
+          "quote": "Commencing at a point on the easterly boundary of Tweedsmuir Provincial Park, said point lying 1 km due North of the natural boundary of Tetachuck Lake on the northerly shore thereof"
+        },
+        {
+          "start": null,
+          "direction": "general southwesterly, westerly and northwesterly",
+          "follow": "shoreline",
+          "feature": "Tetachuck Lake, Redfern Rapids and Eutsuk Lake",
+          "side_or_bank": "inland",
+          "until": "the point of intersection with the natural boundary of Whitesail Lake on the southerly shore thereof",
+          "distance": "1 km",
+          "quote": "thence in a general southwesterly, westerly and northwesterly direction along a line 1 km inland of the natural boundaries of Tetachuck Lake, Redfern Rapids and Eutsuk Lake to the point of intersection with the natural boundary of Whitesail Lake on the southerly shore thereof"
+        },
+        {
+          "start": null,
+          "direction": "general westerly",
+          "follow": "shoreline",
+          "feature": "Whitesail Lake and Little Whitesail Lake",
+          "side_or_bank": null,
+          "until": "the point of intersection with the midline of McCuish Creek",
+          "distance": null,
+          "quote": "thence in a general westerly direction along the natural boundaries of Whitesail Lake and Little Whitesail Lake to the point of intersection with the midline of McCuish Creek"
+        },
+        {
+          "start": null,
+          "direction": "general southwesterly",
+          "follow": "creek",
+          "feature": "McCuish Creek",
+          "side_or_bank": "midline",
+          "until": "the point of intersection with the easterly boundary of the watershed of Sias Creek",
+          "distance": null,
+          "quote": "thence in a general southwesterly direction along the midline of McCuish Creek and a prolongation thereof to the point of intersection with the easterly boundary of the watershed of Sias Creek"
+        },
+        {
+          "start": null,
+          "direction": "general southeasterly",
+          "follow": "other",
+          "feature": "the watersheds of Gamsby River, Kimsquit River and Sakumtha River",
+          "side_or_bank": "easterly boundaries",
+          "until": "the point of intersection with a prolongation of the midline of Chezko River",
+          "distance": null,
+          "quote": "thence in a general southeasterly direction along the easterly boundaries of the watersheds of Gamsby River, Kimsquit River and Sakumtha River to the point of intersection with a prolongation of the midline of Chezko River"
+        },
+        {
+          "start": null,
+          "direction": "general northeasterly",
+          "follow": "river",
+          "feature": "Chezko River",
+          "side_or_bank": "midline",
+          "until": "a point 1 km due South of the natural boundary of Eutsuk Lake on the southerly shore thereof",
+          "distance": "1 km",
+          "quote": "thence in a general northeasterly direction along the midline of Chezko River to a point 1 km due South of the natural boundary of Eutsuk Lake on the southerly shore thereof"
+        },
+        {
+          "start": null,
+          "direction": "general easterly",
+          "follow": "shoreline",
+          "feature": "Eutsuk Lake, Redfern Rapids and Tetachuck Lake",
+          "side_or_bank": "south",
+          "until": "the point of intersection with the easterly boundary of Tweedsmuir Park",
+          "distance": "1 km",
+          "quote": "thence in a general easterly direction along a line 1 km south of the natural boundaries of Eutsuk Lake, Redfern Rapids and Tetachuck Lake on the southerly shores thereof to the point of intersection with the easterly boundary of Tweedsmuir Park"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence northerly in a straight line to the point of commencement"
+        },
+        {
+          "start": "on the westerly boundary of Tweedsmuir Park at the point of intersection of the midlines of Dean River and Takia River",
+          "direction": null,
+          "follow": null,
+          "feature": "Tweedsmuir Park",
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing on the westerly boundary of Tweedsmuir Park at the point of intersection of the midlines of Dean River and Takia River"
+        },
+        {
+          "start": null,
+          "direction": "general easterly",
+          "follow": "river",
+          "feature": "Takia River",
+          "side_or_bank": "midline",
+          "until": "the point of intersection with the midline of Kohasganko Creek",
+          "distance": null,
+          "quote": "thence in a general easterly direction along the midline of Takia River to the point of intersection with the midline of Kohasganko Creek"
+        },
+        {
+          "start": null,
+          "direction": "general easterly",
+          "follow": "creek",
+          "feature": "Kohasganko Creek",
+          "side_or_bank": "midline",
+          "until": "a point in Lot 698, Coast Land District Range 3 where Kohasganko Creek turns and flows in a general westerly direction",
+          "distance": null,
+          "quote": "thence in a general easterly direction along the midline of Kohasganko Creek to a point in Lot 698, Coast Land District Range 3 where Kohasganko Creek turns and flows in a general westerly direction"
+        },
+        {
+          "start": null,
+          "direction": "northeasterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of intersection with the easterly boundary of Tweedsmuir Park",
+          "distance": null,
+          "quote": "thence northeasterly in a straight line to the point of intersection with the easterly boundary of Tweedsmuir Park"
+        },
+        {
+          "start": null,
+          "direction": "general southerly",
+          "follow": "other",
+          "feature": "Tweedsmuir Park",
+          "side_or_bank": "easterly boundary",
+          "until": "the point of intersection with the midline of Highway 20",
+          "distance": null,
+          "quote": "thence in a general southerly direction along the easterly boundary of Tweedsmuir Park to the point of intersection with the midline of Highway 20"
+        },
+        {
+          "start": null,
+          "direction": "general westerly and southwesterly",
+          "follow": "road",
+          "feature": "Highway 20",
+          "side_or_bank": "midline",
+          "until": "a point next to benchmark 3907 Coast Land District Range 3",
+          "distance": null,
+          "quote": "thence in a general westerly and southwesterly direction along the midline of Highway 20 to a point next to benchmark 3907 Coast Land District Range 3"
+        },
+        {
+          "start": null,
+          "direction": "general westerly",
+          "follow": "other",
+          "feature": "the watershed of Young Creek",
+          "side_or_bank": "southerly boundary",
+          "until": "the apex of King mountain",
+          "distance": null,
+          "quote": "thence in a general westerly direction along the southerly boundary of the watershed of Young Creek to the apex of King mountain"
+        },
+        {
+          "start": null,
+          "direction": "general westerly and southerly",
+          "follow": "other",
+          "feature": "the main tributary of Burnt Bridge Creek",
+          "side_or_bank": "southerly and easterly boundaries",
+          "until": "the point of intersection with the westerly boundary of Tweedsmuir Park",
+          "distance": null,
+          "quote": "thence in a general westerly and southerly direction along the southerly and easterly boundaries of the main tributary of Burnt Bridge Creek to the point of intersection with the westerly boundary of Tweedsmuir Park"
+        },
+        {
+          "start": null,
+          "direction": "general northerly",
+          "follow": "other",
+          "feature": "Tweedsmuir Park",
+          "side_or_bank": "westerly boundary",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence in a general northerly direction along the westerly boundary of Tweedsmuir Park to the point of commencement"
+        },
+        {
+          "start": "the point of intersection of the midline of Hotnarko River and the easterly boundary of Tweedsmuir Park",
+          "direction": null,
+          "follow": null,
+          "feature": "Hotnarko River",
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the point of intersection of the midline of Hotnarko River and the easterly boundary of Tweedsmuir Park"
+        },
+        {
+          "start": null,
+          "direction": "general southerly, westerly and northerly",
+          "follow": "other",
+          "feature": "Tweedsmuir Park",
+          "side_or_bank": "easterly, southerly and westerly boundaries",
+          "until": "the point of intersection with the midline of an unnamed stream flowing easterly into Talchako River east of Melikan mountain",
+          "distance": null,
+          "quote": "thence in a general southerly, westerly and northerly direction along the easterly, southerly and westerly boundaries of Tweedsmuir Park to the point of intersection with the midline of an unnamed stream flowing easterly into Talchako River east of Melikan mountain"
+        },
+        {
+          "start": null,
+          "direction": "southeasterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the apex of Caribou Mountain",
+          "distance": null,
+          "quote": "thence southeasterly in a straight line to the apex of Caribou Mountain"
+        },
+        {
+          "start": null,
+          "direction": "northeasterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the apex of Mount Marvin",
+          "distance": null,
+          "quote": "thence northeasterly in a straight line to the apex of Mount Marvin"
+        },
+        {
+          "start": null,
+          "direction": "northeasterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of intersection of the midlines of Atnarko River and Hotnarko River",
+          "distance": null,
+          "quote": "thence northeasterly in a straight line to the point of intersection of the midlines of Atnarko River and Hotnarko River"
+        },
+        {
+          "start": null,
+          "direction": "general northeasterly",
+          "follow": "river",
+          "feature": "Hotnarko River",
+          "side_or_bank": "midline",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence in a general northeasterly direction along the midline of Hotnarko River to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "Those portions of M.U.s 5-10, 5-11, 6-01 and 6-02"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundaries"
+      },
+      {
+        "field": "geometry.steps[0]",
+        "quote": "Commencing at a point on the easterly boundary of Tweedsmuir Provincial Park, said point lying 1 km due North of the natural boundary of Tetachuck Lake on the northerly shore thereof"
+      },
+      {
+        "field": "geometry.steps[1]",
+        "quote": "thence in a general southwesterly, westerly and northwesterly direction along a line 1 km inland of the natural boundaries of Tetachuck Lake, Redfern Rapids and Eutsuk Lake to the point of intersection with the natural boundary of Whitesail Lake on the southerly shore thereof"
+      },
+      {
+        "field": "geometry.steps[2]",
+        "quote": "thence in a general westerly direction along the natural boundaries of Whitesail Lake and Little Whitesail Lake to the point of intersection with the midline of McCuish Creek"
+      },
+      {
+        "field": "geometry.steps[3]",
+        "quote": "thence in a general southwesterly direction along the midline of McCuish Creek and a prolongation thereof to the point of intersection with the easterly boundary of the watershed of Sias Creek"
+      },
+      {
+        "field": "geometry.steps[4]",
+        "quote": "thence in a general southeasterly direction along the easterly boundaries of the watersheds of Gamsby River, Kimsquit River and Sakumtha River to the point of intersection with a prolongation of the midline of Chezko River"
+      },
+      {
+        "field": "geometry.steps[5]",
+        "quote": "thence in a general northeasterly direction along the midline of Chezko River to a point 1 km due South of the natural boundary of Eutsuk Lake on the southerly shore thereof"
+      },
+      {
+        "field": "geometry.steps[6]",
+        "quote": "thence in a general easterly direction along a line 1 km south of the natural boundaries of Eutsuk Lake, Redfern Rapids and Tetachuck Lake on the southerly shores thereof to the point of intersection with the easterly boundary of Tweedsmuir Park"
+      },
+      {
+        "field": "geometry.steps[7]",
+        "quote": "thence northerly in a straight line to the point of commencement"
+      },
+      {
+        "field": "geometry.steps[8]",
+        "quote": "Commencing on the westerly boundary of Tweedsmuir Park at the point of intersection of the midlines of Dean River and Takia River"
+      },
+      {
+        "field": "geometry.steps[9]",
+        "quote": "thence in a general easterly direction along the midline of Takia River to the point of intersection with the midline of Kohasganko Creek"
+      },
+      {
+        "field": "geometry.steps[10]",
+        "quote": "thence in a general easterly direction along the midline of Kohasganko Creek to a point in Lot 698, Coast Land District Range 3 where Kohasganko Creek turns and flows in a general westerly direction"
+      },
+      {
+        "field": "geometry.steps[11]",
+        "quote": "thence northeasterly in a straight line to the point of intersection with the easterly boundary of Tweedsmuir Park"
+      },
+      {
+        "field": "geometry.steps[12]",
+        "quote": "thence in a general southerly direction along the easterly boundary of Tweedsmuir Park to the point of intersection with the midline of Highway 20"
+      },
+      {
+        "field": "geometry.steps[13]",
+        "quote": "thence in a general westerly and southwesterly direction along the midline of Highway 20 to a point next to benchmark 3907 Coast Land District Range 3"
+      },
+      {
+        "field": "geometry.steps[14]",
+        "quote": "thence in a general westerly direction along the southerly boundary of the watershed of Young Creek to the apex of King mountain"
+      },
+      {
+        "field": "geometry.steps[15]",
+        "quote": "thence in a general westerly and southerly direction along the southerly and easterly boundaries of the main tributary of Burnt Bridge Creek to the point of intersection with the westerly boundary of Tweedsmuir Park"
+      },
+      {
+        "field": "geometry.steps[16]",
+        "quote": "thence in a general northerly direction along the westerly boundary of Tweedsmuir Park to the point of commencement"
+      },
+      {
+        "field": "geometry.steps[17]",
+        "quote": "Commencing at the point of intersection of the midline of Hotnarko River and the easterly boundary of Tweedsmuir Park"
+      },
+      {
+        "field": "geometry.steps[18]",
+        "quote": "thence in a general southerly, westerly and northerly direction along the easterly, southerly and westerly boundaries of Tweedsmuir Park to the point of intersection with the midline of an unnamed stream flowing easterly into Talchako River east of Melikan mountain"
+      },
+      {
+        "field": "geometry.steps[19]",
+        "quote": "thence southeasterly in a straight line to the apex of Caribou Mountain"
+      },
+      {
+        "field": "geometry.steps[20]",
+        "quote": "thence northeasterly in a straight line to the apex of Mount Marvin"
+      },
+      {
+        "field": "geometry.steps[21]",
+        "quote": "thence northeasterly in a straight line to the point of intersection of the midlines of Atnarko River and Hotnarko River"
+      },
+      {
+        "field": "geometry.steps[22]",
+        "quote": "thence in a general northeasterly direction along the midline of Hotnarko River to the point of commencement"
+      }
+    ],
+    "uncertain": [
+      "geometry.feature"
+    ]
+  }
+}

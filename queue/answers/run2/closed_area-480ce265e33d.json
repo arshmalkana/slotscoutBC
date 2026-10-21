@@ -1,0 +1,226 @@
+{
+  "task_id": "closed_area-480ce265e33d",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:02:09Z",
+  "answer": {
+    "effect": "shot_only",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Province of British Columbia"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "intersection of the northern boundary of Lot 286, Similkameen District, and the eastern natural boundary of Okanagan Lake",
+          "direction": "southerly",
+          "follow": "shoreline",
+          "feature": "Okanagan Lake",
+          "side_or_bank": "eastern natural boundary",
+          "until": "northern natural boundary of Trust Creek",
+          "distance": null,
+          "quote": "Commencing at the intersection of the northern boundary of Lot 286, Similkameen District, and the eastern natural boundary of Okanagan Lake and proceeding southerly along the eastern natural boundary to the northern natural boundary of Trust Creek"
+        },
+        {
+          "start": null,
+          "direction": "northeasterly",
+          "follow": "creek",
+          "feature": "Trust Creek",
+          "side_or_bank": "northern natural boundary",
+          "until": "its intersection with Chute Lake Road",
+          "distance": null,
+          "quote": "thence proceeding northeasterly along the northern natural boundary of Trust Creek to its intersection with Chute Lake Road"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "road",
+          "feature": "Chute Lake Road",
+          "side_or_bank": "eastern edge of the travelled portion",
+          "until": "southern boundary of Lot 1975, Similkameen District",
+          "distance": null,
+          "quote": "thence proceeding southerly along the eastern edge of the travelled portion of Chute Lake Road to the southern boundary of Lot 1975, Similkameen District"
+        },
+        {
+          "start": null,
+          "direction": "east",
+          "follow": "lot_line",
+          "feature": "lot boundary",
+          "side_or_bank": null,
+          "until": "its intersection with the eastern boundary of the Canadian Pacific Railway right of way",
+          "distance": null,
+          "quote": "thence proceeding east along the lot boundary to its intersection with the eastern boundary of the Canadian Pacific Railway right of way"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "other",
+          "feature": "Canadian Pacific Railway right of way",
+          "side_or_bank": "eastern boundary",
+          "until": "northern boundary of the City of Penticton",
+          "distance": null,
+          "quote": "thence proceeding southerly along the eastern boundary of the Canadian Pacific Railway right of way to the northern boundary of the City of Penticton"
+        },
+        {
+          "start": null,
+          "direction": "west",
+          "follow": "district_boundary",
+          "feature": "city boundary",
+          "side_or_bank": null,
+          "until": "eastern natural boundary of Okanagan Lake",
+          "distance": null,
+          "quote": "thence proceeding west along the city boundary to the eastern natural boundary of Okanagan Lake"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "shoreline",
+          "feature": "Okanagan Lake",
+          "side_or_bank": "eastern natural boundary",
+          "until": "southerly natural boundary of Arawana Creek",
+          "distance": null,
+          "quote": "thence proceeding northerly along the eastern natural boundary of Okanagan Lake to the southerly natural boundary of Arawana Creek"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "creek",
+          "feature": "Arawana Creek",
+          "side_or_bank": "southerly natural boundary",
+          "until": "Old Main Road",
+          "distance": null,
+          "quote": "thence proceeding easterly along the southerly natural boundary of Arawana Creek to Old Main Road"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "road",
+          "feature": "Old Main Road",
+          "side_or_bank": "southern edge of the right of way",
+          "until": "Naramata Road",
+          "distance": null,
+          "quote": "thence proceeding easterly along the southern edge of the right of way of Old Main Road to Naramata Road"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "road",
+          "feature": "Naramata Road",
+          "side_or_bank": "eastern edge of the travelled portion",
+          "until": "Chute Lake Road",
+          "distance": null,
+          "quote": "thence proceeding northerly along the eastern edge of the travelled portion of Naramata Road to Chute Lake Road"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "road",
+          "feature": "Chute Lake Road",
+          "side_or_bank": "eastern edge of the travelled portion",
+          "until": "eastern boundary of Lot 286, Similkameen District",
+          "distance": null,
+          "quote": "thence proceeding northerly along the eastern edge of the travelled portion of Chute Lake Road to the eastern boundary of Lot 286, Similkameen District"
+        },
+        {
+          "start": null,
+          "direction": "north",
+          "follow": "lot_line",
+          "feature": "lot boundary",
+          "side_or_bank": null,
+          "until": "northern lot boundary of Lot 286, Similkameen District",
+          "distance": null,
+          "quote": "thence proceeding north along the lot boundary to the northern lot boundary of Lot 286, Similkameen District"
+        },
+        {
+          "start": null,
+          "direction": "west",
+          "follow": "lot_line",
+          "feature": "lot boundary",
+          "side_or_bank": null,
+          "until": "point of commencement",
+          "distance": null,
+          "quote": "thence proceeding west along the lot boundary to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "Firearms Using Shot Only Areas"
+      },
+      {
+        "field": "within",
+        "quote": "That portion of the Province of British Columbia"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within the following described boundaries: Commencing at"
+      },
+      {
+        "field": "geometry.steps[0]",
+        "quote": "Commencing at the intersection of the northern boundary of Lot 286, Similkameen District, and the eastern natural boundary of Okanagan Lake and proceeding southerly along the eastern natural boundary to the northern natural boundary of Trust Creek"
+      },
+      {
+        "field": "geometry.steps[1]",
+        "quote": "thence proceeding northeasterly along the northern natural boundary of Trust Creek to its intersection with Chute Lake Road"
+      },
+      {
+        "field": "geometry.steps[2]",
+        "quote": "thence proceeding southerly along the eastern edge of the travelled portion of Chute Lake Road to the southern boundary of Lot 1975, Similkameen District"
+      },
+      {
+        "field": "geometry.steps[3]",
+        "quote": "thence proceeding east along the lot boundary to its intersection with the eastern boundary of the Canadian Pacific Railway right of way"
+      },
+      {
+        "field": "geometry.steps[4]",
+        "quote": "thence proceeding southerly along the eastern boundary of the Canadian Pacific Railway right of way to the northern boundary of the City of Penticton"
+      },
+      {
+        "field": "geometry.steps[5]",
+        "quote": "thence proceeding west along the city boundary to the eastern natural boundary of Okanagan Lake"
+      },
+      {
+        "field": "geometry.steps[6]",
+        "quote": "thence proceeding northerly along the eastern natural boundary of Okanagan Lake to the southerly natural boundary of Arawana Creek"
+      },
+      {
+        "field": "geometry.steps[7]",
+        "quote": "thence proceeding easterly along the southerly natural boundary of Arawana Creek to Old Main Road"
+      },
+      {
+        "field": "geometry.steps[8]",
+        "quote": "thence proceeding easterly along the southern edge of the right of way of Old Main Road to Naramata Road"
+      },
+      {
+        "field": "geometry.steps[9]",
+        "quote": "thence proceeding northerly along the eastern edge of the travelled portion of Naramata Road to Chute Lake Road"
+      },
+      {
+        "field": "geometry.steps[10]",
+        "quote": "thence proceeding northerly along the eastern edge of the travelled portion of Chute Lake Road to the eastern boundary of Lot 286, Similkameen District"
+      },
+      {
+        "field": "geometry.steps[11]",
+        "quote": "thence proceeding north along the lot boundary to the northern lot boundary of Lot 286, Similkameen District"
+      },
+      {
+        "field": "geometry.steps[12]",
+        "quote": "thence proceeding west along the lot boundary to the point of commencement"
+      }
+    ],
+    "uncertain": []
+  }
+}

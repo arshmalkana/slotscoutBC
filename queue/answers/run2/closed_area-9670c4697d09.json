@@ -1,0 +1,184 @@
+{
+  "task_id": "closed_area-9670c4697d09",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:02:37Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U.s 7-22 and 7-31"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the southeast corner of District Lot 2456, Peace River Land District",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the southeast corner of District Lot 2456, Peace River Land District"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "lot_line",
+          "feature": "District Lot 2072",
+          "side_or_bank": "western boundary",
+          "until": "the point of intersection with the natural boundary of Pine River on the left bank thereof",
+          "distance": null,
+          "quote": "thence southerly along the western boundary of District Lot 2072 to the point of intersection with the natural boundary of Pine River on the left bank thereof"
+        },
+        {
+          "start": null,
+          "direction": "in a general southerly direction",
+          "follow": "river",
+          "feature": "Pine River",
+          "side_or_bank": "left bank",
+          "until": "the point of intersection with the northern boundary of District Lot 2474",
+          "distance": null,
+          "quote": "thence in a general southerly direction along said natural boundary to the point of intersection with the northern boundary of District Lot 2474"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "lot_line",
+          "feature": "District Lot 2474",
+          "side_or_bank": "northern boundary",
+          "until": "the point of intersection with the western boundary of the right of way of B.C. Railway",
+          "distance": null,
+          "quote": "thence westerly along said northern boundary, and along the prolongation thereof, to the point of intersection with the western boundary of the right of way of B.C. Railway"
+        },
+        {
+          "start": null,
+          "direction": "in a general northeasterly direction",
+          "follow": "other",
+          "feature": "B.C. Railway",
+          "side_or_bank": "western boundary of the right of way",
+          "until": "the northeast corner of District Lot 2750",
+          "distance": null,
+          "quote": "thence in a general northeasterly direction along said right of way boundary to the northeast corner of District Lot 2750"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "lot_line",
+          "feature": "District Lot 2750",
+          "side_or_bank": "northern boundary",
+          "until": "the southwest corner of the Provincial Reserve",
+          "distance": null,
+          "quote": "thence westerly along the northern boundary of said Lot, and along the prolongation thereof, to the southwest corner of the Provincial Reserve"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "reserve_boundary",
+          "feature": "the Provincial Reserve",
+          "side_or_bank": "western boundary",
+          "until": "the point of intersection with the southern boundary of District Lot 2267",
+          "distance": null,
+          "quote": "thence northerly along the western boundary of said Reserve to the point of intersection with the southern boundary of District Lot 2267"
+        },
+        {
+          "start": null,
+          "direction": "westerly and northerly",
+          "follow": "lot_line",
+          "feature": "District Lot 2267",
+          "side_or_bank": "southern boundary and western boundary",
+          "until": "the southeast corner of District Lot 592",
+          "distance": null,
+          "quote": "thence westerly along said southern boundary and northerly along the western boundary of said Lot to the southeast corner of District Lot 592"
+        },
+        {
+          "start": null,
+          "direction": "westerly, northerly and easterly",
+          "follow": "lot_line",
+          "feature": "District Lot 592",
+          "side_or_bank": "southern, western and northern boundaries",
+          "until": "the northeast corner thereof",
+          "distance": null,
+          "quote": "thence westerly, northerly and easterly along the southern, western and northern boundaries of District Lot 592 to the northeast corner thereof"
+        },
+        {
+          "start": null,
+          "direction": "northerly and easterly",
+          "follow": "lot_line",
+          "feature": "District Lot 2200",
+          "side_or_bank": "western boundary and northern boundary",
+          "until": "the southwest corner of District Lot 2550",
+          "distance": null,
+          "quote": "thence northerly along the western boundary of District Lot 2200 and easterly along the northern boundary of said Lot to the southwest corner of District Lot 2550"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "lot_line",
+          "feature": "District Lots 2550, 2455 and 2730A",
+          "side_or_bank": "western boundaries",
+          "until": "the northern boundary of District Lot 2730A",
+          "distance": null,
+          "quote": "thence northerly along the western boundaries of District Lots 2550, 2455 and 2730A to the northern boundary of District Lot 2730A"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "lot_line",
+          "feature": "District Lot 2730A",
+          "side_or_bank": "northern boundary",
+          "until": "the point of intersection with the western boundary of the right of way of Highway 97",
+          "distance": null,
+          "quote": "thence easterly along said northern boundary to the point of intersection with the western boundary of the right of way of Highway 97"
+        },
+        {
+          "start": null,
+          "direction": "in a general northerly direction",
+          "follow": "road",
+          "feature": "Highway 97",
+          "side_or_bank": "western boundary of the right of way",
+          "until": "the point of intersection with the prolongation of the southern boundary of District Lot 2456",
+          "distance": null,
+          "quote": "thence in a general northerly direction along said right of way boundary to the point of intersection with the prolongation of the southern boundary of District Lot 2456"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "lot_line",
+          "feature": "District Lot 2456",
+          "side_or_bank": "southern boundary",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence easterly along said prolongation and along said southern boundary to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "That portion of M.U.s 7-22 and 7-31"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundaries: Commencing at"
+      }
+    ],
+    "uncertain": []
+  }
+}

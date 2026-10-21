@@ -1,0 +1,68 @@
+{
+  "task_id": "closed_area-582ad093e4d6",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:01:26Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 4-19"
+    },
+    "geometry": {
+      "method": "waterbody_buffer",
+      "road": null,
+      "feature": {
+        "type": "creek",
+        "name": "Fry Creek"
+      },
+      "buffer_m": null,
+      "side": "both",
+      "from": {
+        "type": "other",
+        "road": null,
+        "name": "a point on the midline of Fry Creek approximately 6 kilometres upstream from the point of intersection of the midline of Fry Creek and the natural boundary of Kootenay Lake on the easterly shore thereof"
+      },
+      "to": {
+        "type": "landmark",
+        "road": null,
+        "name": "a point approximately 500 m upstream of the easterly edge of the slide area"
+      },
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "in M.U. 4-19"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "upstream along the midline of Fry Creek"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "on either side of Fry Creek"
+      },
+      {
+        "field": "geometry.from",
+        "quote": "Commencing at a point on the midline of Fry Creek approximately 6 kilometres upstream from the point of intersection of the midline of Fry Creek and the natural boundary of Kootenay Lake on the easterly shore thereof"
+      },
+      {
+        "field": "geometry.to",
+        "quote": "to a point approximately 500 m upstream of the easterly edge of the slide area"
+      }
+    ],
+    "uncertain": [
+      "geometry.buffer_m"
+    ]
+  }
+}

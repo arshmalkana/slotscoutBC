@@ -1,0 +1,80 @@
+{
+  "task_id": "closed_area-b573c3ea39cd",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:01:39Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Queen Charlotte Land District"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the southwest corner of Lot 228",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the southwest corner of Lot 228, that Lot being Tow Hill Provincial Park"
+        },
+        {
+          "start": null,
+          "direction": "easterly and northerly",
+          "follow": "other",
+          "feature": "Tow Hill Provincial Park",
+          "side_or_bank": "southerly and easterly boundaries",
+          "until": "the point of intersection with the mean low water mark of McIntyre Bay at the mouth of Hiellen River",
+          "distance": null,
+          "quote": "thence easterly and northerly along the southerly and easterly boundaries of Tow Hill Provincial Park to the point of intersection with the mean low water mark of McIntyre Bay at the mouth of Hiellen River"
+        },
+        {
+          "start": null,
+          "direction": "in a general northerly and westerly direction",
+          "follow": "shoreline",
+          "feature": "McIntyre Bay",
+          "side_or_bank": "mean low water mark",
+          "until": "the point of intersection with the prolongation of the westerly boundary of Tow Hill Provincial Park",
+          "distance": null,
+          "quote": "thence in a general northerly and westerly direction along the mean low water mark of McIntyre Bay to the point of intersection with the prolongation of the westerly boundary of Tow Hill Provincial Park"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence southerly to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "in Queen Charlotte Land District"
+      }
+    ],
+    "uncertain": []
+  }
+}

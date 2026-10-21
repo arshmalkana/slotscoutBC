@@ -1,0 +1,106 @@
+{
+  "task_id": "closed_area-b0a08c674fb6",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:02:09Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 8-09"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the southeast corner of SL 51",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the southeast corner of SL 51"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "lot_line",
+          "feature": "SL 17",
+          "side_or_bank": "western boundary",
+          "until": "the northwest corner of said Lot",
+          "distance": null,
+          "quote": "thence northerly along the western boundary of SL 17 to the northwest corner of said Lot"
+        },
+        {
+          "start": null,
+          "direction": "easterly, northerly and easterly",
+          "follow": "lot_line",
+          "feature": "SL 17",
+          "side_or_bank": "northern boundary, western boundary and northern boundary",
+          "until": "the northeast corner thereof",
+          "distance": null,
+          "quote": "thence easterly along the northern boundary, northerly along the western boundary and easterly along the northern boundary of said Lot, to the northeast corner thereof"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "lot_line",
+          "feature": "SL 17",
+          "side_or_bank": "eastern boundary",
+          "until": "the southeast corner thereof",
+          "distance": null,
+          "quote": "thence southerly along the eastern boundary of said Lot to the southeast corner thereof"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "lot_line",
+          "feature": "SL 17",
+          "side_or_bank": "southern boundary",
+          "until": "the south-southwest corner thereof",
+          "distance": null,
+          "quote": "thence westerly along the southern boundary of said Lot to the south-southwest corner thereof"
+        },
+        {
+          "start": null,
+          "direction": null,
+          "follow": "straight_line",
+          "feature": "SL 17",
+          "side_or_bank": "prolongation of said southern boundary",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence along the prolongation of said southern boundary to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "within M.U. 8-09"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundaries: Commencing at"
+      }
+    ],
+    "uncertain": [
+      "geometry.steps[5].direction"
+    ]
+  }
+}

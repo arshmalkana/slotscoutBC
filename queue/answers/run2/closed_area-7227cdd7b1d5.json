@@ -1,0 +1,158 @@
+{
+  "task_id": "closed_area-7227cdd7b1d5",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:01:02Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 5-2"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the point of intersection of the natural boundary of Fraser River on the left bank thereof and the midline of Williams Lake River",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the point of intersection of the natural boundary of Fraser River on the left bank thereof and the midline of Williams Lake River"
+        },
+        {
+          "start": null,
+          "direction": "general southerly",
+          "follow": "river",
+          "feature": "Fraser River",
+          "side_or_bank": "left bank",
+          "until": "the point of intersection with the southerly boundary of L4731, Cariboo Land District",
+          "distance": null,
+          "quote": "thence in a general southerly direction along the natural boundary of Fraser River on the left bank thereof to the point of intersection with the southerly boundary of L4731, Cariboo Land District"
+        },
+        {
+          "start": null,
+          "direction": "easterly and northerly",
+          "follow": "lot_line",
+          "feature": "L4731",
+          "side_or_bank": "southerly and easterly boundaries",
+          "until": "the point of intersection with the midline of the unnamed road leading easterly to the City of Williams Lake",
+          "distance": null,
+          "quote": "thence easterly and northerly along the southerly and easterly boundaries of L4731 to the point of intersection with the midline of the unnamed road leading easterly to the City of Williams Lake"
+        },
+        {
+          "start": null,
+          "direction": "general easterly",
+          "follow": "road",
+          "feature": null,
+          "side_or_bank": "midline",
+          "until": "the point of intersection with the westerly boundary of the City of Williams Lake",
+          "distance": null,
+          "quote": "thence in a general easterly direction along the midline of the said unnamed road to the point of intersection with the westerly boundary of the City of Williams Lake"
+        },
+        {
+          "start": null,
+          "direction": "easterly and northerly",
+          "follow": "district_boundary",
+          "feature": "City of Williams Lake",
+          "side_or_bank": "westerly boundary",
+          "until": "the point of intersection with the midline of the B.C. Railroad right of way",
+          "distance": null,
+          "quote": "thence easterly and northerly along the westerly boundary of the City of Williams Lake to the point of intersection with the midline of the B.C. Railroad right of way"
+        },
+        {
+          "start": null,
+          "direction": "general westerly",
+          "follow": "other",
+          "feature": "B.C. Railway right of way",
+          "side_or_bank": "midline",
+          "until": "the point of intersection with the northerly boundary of L4731",
+          "distance": null,
+          "quote": "thence in a general westerly direction along the midline of the B.C. Railway right of way to the point of intersection with the northerly boundary of L4731"
+        },
+        {
+          "start": null,
+          "direction": "due West",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of intersection with the natural boundary of Fraser River on the left bank thereof",
+          "distance": null,
+          "quote": "thence due West to the point of intersection with the natural boundary of Fraser River on the left bank thereof"
+        },
+        {
+          "start": null,
+          "direction": "general southerly",
+          "follow": "river",
+          "feature": "Fraser River",
+          "side_or_bank": "left bank",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence in a general southerly direction along the natural boundary of Fraser River on the left bank thereof to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "M.U. 5-2"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundaries: Commencing at"
+      },
+      {
+        "field": "geometry.steps[0]",
+        "quote": "Commencing at the point of intersection of the natural boundary of Fraser River on the left bank thereof and the midline of Williams Lake River"
+      },
+      {
+        "field": "geometry.steps[1]",
+        "quote": "thence in a general southerly direction along the natural boundary of Fraser River on the left bank thereof to the point of intersection with the southerly boundary of L4731, Cariboo Land District"
+      },
+      {
+        "field": "geometry.steps[2]",
+        "quote": "thence easterly and northerly along the southerly and easterly boundaries of L4731 to the point of intersection with the midline of the unnamed road leading easterly to the City of Williams Lake"
+      },
+      {
+        "field": "geometry.steps[3]",
+        "quote": "thence in a general easterly direction along the midline of the said unnamed road to the point of intersection with the westerly boundary of the City of Williams Lake"
+      },
+      {
+        "field": "geometry.steps[4]",
+        "quote": "thence easterly and northerly along the westerly boundary of the City of Williams Lake to the point of intersection with the midline of the B.C. Railroad right of way"
+      },
+      {
+        "field": "geometry.steps[5]",
+        "quote": "thence in a general westerly direction along the midline of the B.C. Railway right of way to the point of intersection with the northerly boundary of L4731"
+      },
+      {
+        "field": "geometry.steps[6]",
+        "quote": "thence due West to the point of intersection with the natural boundary of Fraser River on the left bank thereof"
+      },
+      {
+        "field": "geometry.steps[7]",
+        "quote": "thence in a general southerly direction along the natural boundary of Fraser River on the left bank thereof to the point of commencement"
+      }
+    ],
+    "uncertain": [
+      "geometry.steps[3].feature"
+    ]
+  }
+}

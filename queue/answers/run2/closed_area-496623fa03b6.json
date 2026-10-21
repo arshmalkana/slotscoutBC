@@ -1,0 +1,159 @@
+{
+  "task_id": "closed_area-496623fa03b6",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:04:24Z",
+  "answer": {
+    "effect": "shot_only",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 1-07"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "confluence of Turtle Creek and Stamp River",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the confluence of Turtle Creek and Stamp River"
+        },
+        {
+          "start": null,
+          "direction": "due North",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point 100 metres north of the Stamp River",
+          "distance": "100 metres",
+          "quote": "thence due North to a point 100 metres north of the Stamp River"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "river",
+          "feature": "Stamp River",
+          "side_or_bank": "northerly shoreline",
+          "until": "a point 100 metres due North of where the Stamp River enters Stamp Lagoon on the east side of the lagoon",
+          "distance": "100 metres",
+          "quote": "thence westerly at a distance of 100 metres from the northerly shoreline of the Stamp River to a point 100 metres due North of where the Stamp River enters Stamp Lagoon on the east side of the lagoon"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "shoreline",
+          "feature": "Stamp Lagoon",
+          "side_or_bank": "northerly shoreline",
+          "until": "a point 100 metres north of where the Stamp River enters Stamp Lagoon on the west side of the lagoon",
+          "distance": "100 metres",
+          "quote": "thence westerly at a distance of 100 metres from the northerly shoreline of Stamp Lagoon to a point 100 metres north of where the Stamp River enters Stamp Lagoon on the west side of the lagoon"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point 100 metres due South of the Stamp River",
+          "distance": "100 metres",
+          "quote": "thence southerly to a point 100 metres due South of the Stamp River"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "shoreline",
+          "feature": "Stamp Lagoon",
+          "side_or_bank": "southerly shoreline",
+          "until": "a point 100 metres due South of where the Stamp River enters Stamp Lagoon on the east side of the lagoon",
+          "distance": "100 metres",
+          "quote": "thence easterly at a distance of 100 metres from the southerly shoreline of Stamp Lagoon to a point 100 metres due South of where the Stamp River enters Stamp Lagoon on the east side of the lagoon"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "river",
+          "feature": "Stamp River",
+          "side_or_bank": "southerly shoreline",
+          "until": "a point due South of the confluence of Turtle Creek and Stamp River",
+          "distance": "100 metres",
+          "quote": "thence easterly at a distance of 100 metres from the southerly shoreline of the Stamp River to a point due South of the confluence of Turtle Creek and Stamp River"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "point of commencement",
+          "distance": null,
+          "quote": "thence northerly to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "Firearms Using Shot Only Areas"
+      },
+      {
+        "field": "within",
+        "quote": "in M.U. 1-07"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within the following described boundaries: Commencing at"
+      },
+      {
+        "field": "geometry.steps[0]",
+        "quote": "Commencing at the confluence of Turtle Creek and Stamp River"
+      },
+      {
+        "field": "geometry.steps[1]",
+        "quote": "thence due North to a point 100 metres north of the Stamp River"
+      },
+      {
+        "field": "geometry.steps[2]",
+        "quote": "thence westerly at a distance of 100 metres from the northerly shoreline of the Stamp River to a point 100 metres due North of where the Stamp River enters Stamp Lagoon on the east side of the lagoon"
+      },
+      {
+        "field": "geometry.steps[3]",
+        "quote": "thence westerly at a distance of 100 metres from the northerly shoreline of Stamp Lagoon to a point 100 metres north of where the Stamp River enters Stamp Lagoon on the west side of the lagoon"
+      },
+      {
+        "field": "geometry.steps[4]",
+        "quote": "thence southerly to a point 100 metres due South of the Stamp River"
+      },
+      {
+        "field": "geometry.steps[5]",
+        "quote": "thence easterly at a distance of 100 metres from the southerly shoreline of Stamp Lagoon to a point 100 metres due South of where the Stamp River enters Stamp Lagoon on the east side of the lagoon"
+      },
+      {
+        "field": "geometry.steps[6]",
+        "quote": "thence easterly at a distance of 100 metres from the southerly shoreline of the Stamp River to a point due South of the confluence of Turtle Creek and Stamp River"
+      },
+      {
+        "field": "geometry.steps[7]",
+        "quote": "thence northerly to the point of commencement"
+      }
+    ],
+    "uncertain": [
+      "geometry.steps[4].follow",
+      "geometry.steps[7].follow"
+    ]
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "task_id": "closed_area-d31eb1640730",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:01:18Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 6-09"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the southwest corner of Lot 2092",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the southwest corner of Lot 2092"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "lot_line",
+          "feature": "Lot 2092",
+          "side_or_bank": "western boundary",
+          "until": "the southeast corner of Lot 2102A",
+          "distance": null,
+          "quote": "thence northerly along the western boundary of said Lot to the southeast corner of Lot 2102A"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "lot_line",
+          "feature": "Lot 2102A and Lot 2093",
+          "side_or_bank": "southern boundaries",
+          "until": "the point of intersection with the eastern boundary of the watershed of that unnamed creek flowing northwesterly through Lot 2093",
+          "distance": null,
+          "quote": "thence westerly along the southern boundaries of Lot 2102A and Lot 2093 to the point of intersection with the eastern boundary of the watershed of that unnamed creek flowing northwesterly through Lot 2093"
+        },
+        {
+          "start": null,
+          "direction": "in a general southerly direction",
+          "follow": "other",
+          "feature": "the watershed of that unnamed creek flowing northwesterly through Lot 2093",
+          "side_or_bank": "eastern boundary",
+          "until": "the point of intersection with the eastern boundary of the watershed of Peacock Creek",
+          "distance": null,
+          "quote": "thence in a general southerly direction along said watershed boundary to the point of intersection with the eastern boundary of the watershed of Peacock Creek"
+        },
+        {
+          "start": null,
+          "direction": "in a general southerly direction",
+          "follow": "other",
+          "feature": "the watershed of Peacock Creek",
+          "side_or_bank": "eastern boundary",
+          "until": "the point of intersection with the southern boundary of the watershed of Silverthorne Lake",
+          "distance": null,
+          "quote": "thence in a general southerly direction along said watershed boundary of Peacock Creek to the point of intersection with the southern boundary of the watershed of Silverthorne Lake"
+        },
+        {
+          "start": null,
+          "direction": "in a general easterly direction",
+          "follow": "other",
+          "feature": "the watershed of Silverthorne Lake",
+          "side_or_bank": "southern boundary",
+          "until": "the point of intersection with the southwestern boundary of the watershed of that unnamed creek flowing southeasterly into Buck Creek within Lot 5206",
+          "distance": null,
+          "quote": "thence in a general easterly direction along said watershed boundary to the point of intersection with the southwestern boundary of the watershed of that unnamed creek flowing southeasterly into Buck Creek within Lot 5206"
+        },
+        {
+          "start": null,
+          "direction": "in a general southeasterly direction",
+          "follow": "other",
+          "feature": "the watershed of that unnamed creek flowing southeasterly into Buck Creek within Lot 5206",
+          "side_or_bank": "southwestern boundary",
+          "until": "a point, within Lot 5205, 200 metres east of the eastern natural boundary of Buck Creek",
+          "distance": "200 metres",
+          "quote": "thence in a general southeasterly direction along said watershed boundary, and along the projection thereof, to a point, within Lot 5205, 200 metres east of the eastern natural boundary of Buck Creek"
+        },
+        {
+          "start": null,
+          "direction": "in a general northerly direction",
+          "follow": "other",
+          "feature": "Buck Creek",
+          "side_or_bank": "eastern natural boundary",
+          "until": "the point of intersection with the eastern boundary of Lot 2499A",
+          "distance": "200 metres",
+          "quote": "thence in a general northerly direction along a line 200 metres distant from and parallel to the eastern natural boundary of Buck Creek to the point of intersection with the eastern boundary of Lot 2499A"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "lot_line",
+          "feature": "Lot 2499A",
+          "side_or_bank": "eastern boundary",
+          "until": "the southeast corner thereof",
+          "distance": null,
+          "quote": "thence southerly along said boundary of Lot 2499A to the southeast corner thereof"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "lot_line",
+          "feature": "Lots 2499A, 2097, 2091 and 2092",
+          "side_or_bank": "southern boundaries",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence westerly along the southern boundaries of Lots 2499A, 2097, 2091 and 2092 to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "within M.U. 6-09"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundaries: Commencing at"
+      }
+    ],
+    "uncertain": []
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "task_id": "closed_area-24f920e861f1",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:02:39Z",
+  "answer": {
+    "effect": "no_hunting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U.s 8-22, 8-25 and 8-26"
+    },
+    "geometry": {
+      "method": "other",
+      "road": null,
+      "feature": {
+        "type": "other",
+        "name": "Silver Star Recreation Area"
+      },
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "Those portions of M.U.s 8-22, 8-25 and 8-26"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "outlined in red on the attached Map No. 7-3/18"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "being the Silver Star Recreation Area"
+      }
+    ],
+    "uncertain": []
+  }
+}

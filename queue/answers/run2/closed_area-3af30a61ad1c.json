@@ -1,0 +1,61 @@
+{
+  "task_id": "closed_area-3af30a61ad1c",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:03:02Z",
+  "answer": {
+    "effect": "no_hunting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 4-23"
+    },
+    "geometry": {
+      "method": "road_buffer",
+      "road": {
+        "name": "Highway 3",
+        "source_hint": "highway"
+      },
+      "feature": null,
+      "buffer_m": 400,
+      "side": "both",
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "That portion of M.U. 4-23"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within 400 m of the midline of the road highlighted in yellow on the attached map 'Closed Area 7-53/22'"
+      },
+      {
+        "field": "geometry.road",
+        "quote": "Highway 3"
+      },
+      {
+        "field": "geometry.buffer_m",
+        "quote": "within 400 m"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "within 400 m of the midline of the road"
+      }
+    ],
+    "uncertain": [
+      "geometry.from",
+      "geometry.to"
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "task_id": "closed_area-356886b5f503",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:01:56Z",
+  "answer": {
+    "effect": "no_hunting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 3-45"
+    },
+    "geometry": {
+      "method": "admin_boundary",
+      "road": null,
+      "feature": {
+        "type": "other",
+        "name": "Murtle Lake Nature Conservancy Area"
+      },
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "That portion of M.U. 3-45"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "known as the Murtle Lake Nature Conservancy Area"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "Murtle Lake Nature Conservancy Area"
+      }
+    ],
+    "uncertain": []
+  }
+}

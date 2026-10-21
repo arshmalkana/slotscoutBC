@@ -1,0 +1,128 @@
+{
+  "task_id": "closed_area-793dd0d43b00",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:01:11Z",
+  "answer": {
+    "effect": "no_hunting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 1-6"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": "inside",
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the northwest corner of Lot 325",
+          "direction": null,
+          "follow": null,
+          "feature": "Lot 325",
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the northwest corner of Lot 325"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point just west of Lukwa Lake",
+          "distance": "300 m",
+          "quote": "thence easterly 300 m to a point just west of Lukwa Lake"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point",
+          "distance": "500 m",
+          "quote": "thence northerly 500 m to a point"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point on the east side of the Argonaut Mainline",
+          "distance": "600 m",
+          "quote": "thence westerly 600 m to a point on the east side of the Argonaut Mainline"
+        },
+        {
+          "start": null,
+          "direction": "southerly and westerly",
+          "follow": "road",
+          "feature": "Argonaut Mainline",
+          "side_or_bank": null,
+          "until": "a point",
+          "distance": null,
+          "quote": "thence southerly and westerly along the Argonaut Mainline to a point"
+        },
+        {
+          "start": null,
+          "direction": "southerly and easterly",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the southwest corner of Lot 325",
+          "distance": "920 m",
+          "quote": "thence southerly and easterly 920 m at 300° to the southwest corner of Lot 325"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": "1 030 m",
+          "quote": "thence northerly 1 030 m to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "That portion of M.U. 1-6"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundaries: Commencing at"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "contained within the following described boundaries"
+      }
+    ],
+    "uncertain": [
+      "geometry.steps[1].follow",
+      "geometry.steps[2].follow",
+      "geometry.steps[2].until",
+      "geometry.steps[3].follow",
+      "geometry.steps[4].side_or_bank",
+      "geometry.steps[4].until",
+      "geometry.steps[5].direction",
+      "geometry.steps[5].follow",
+      "geometry.steps[6].follow"
+    ]
+  }
+}

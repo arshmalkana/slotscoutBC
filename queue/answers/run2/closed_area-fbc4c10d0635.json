@@ -1,0 +1,407 @@
+{
+  "task_id": "closed_area-fbc4c10d0635",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:02:26Z",
+  "answer": {
+    "effect": "no_hunting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 1-06"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": {
+        "type": "other",
+        "name": "Beaver Lodge Trust Lands"
+      },
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the northwest corner of the intersection of Merecroft Road and Trask Road",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the northwest corner of the intersection of Merecroft Road and Trask Road"
+        },
+        {
+          "start": null,
+          "direction": "south",
+          "follow": "road",
+          "feature": "Trask Road",
+          "side_or_bank": "west boundary",
+          "until": "the north boundary of the SW 1/4 of Section 31, Township 1",
+          "distance": null,
+          "quote": "thence south along the west boundary of Trask Road to the north boundary of the SW 1/4 of Section 31, Township 1"
+        },
+        {
+          "start": null,
+          "direction": "east",
+          "follow": "lot_line",
+          "feature": "SW 1/4 of Section 31, Township 1",
+          "side_or_bank": "north boundary",
+          "until": null,
+          "distance": "approximately 405 m",
+          "quote": "thence east along said boundary approximately 405 m"
+        },
+        {
+          "start": null,
+          "direction": "at 209° (Azimuth Bearing)",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": "approximately 15 m",
+          "quote": "thence approximately 15 m at 209° (Azimuth Bearing)"
+        },
+        {
+          "start": null,
+          "direction": "at 355°",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": "approximately 9 m",
+          "quote": "thence approximately 9 m at 355°"
+        },
+        {
+          "start": null,
+          "direction": "at 300°",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": "approximately 60 m",
+          "quote": "thence approximately 60 m at 300°"
+        },
+        {
+          "start": null,
+          "direction": "at 210°",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": "approximately 10 m",
+          "quote": "thence approximately 10 m at 210°"
+        },
+        {
+          "start": null,
+          "direction": "at 300°",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": "approximately 125 m",
+          "quote": "thence approximately 125 m at 300°"
+        },
+        {
+          "start": null,
+          "direction": "at 195°",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": "approximately 34 m",
+          "quote": "thence approximately 34 m at 195°"
+        },
+        {
+          "start": null,
+          "direction": "at 246°",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": "approximately 125 m",
+          "quote": "thence approximately 125 m at 246°"
+        },
+        {
+          "start": null,
+          "direction": "at 295°",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": "approximately 105 m",
+          "quote": "thence approximately 105 m at 295°"
+        },
+        {
+          "start": null,
+          "direction": "at 8°",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": "approximately 130 m",
+          "quote": "thence approximately 130 m at 8°"
+        },
+        {
+          "start": null,
+          "direction": "at 70°",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": "approximately 70 m",
+          "quote": "thence approximately 70 m at 70°"
+        },
+        {
+          "start": null,
+          "direction": "at 345°",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": "approximately 13 m",
+          "quote": "thence approximately 13 m at 345°"
+        },
+        {
+          "start": null,
+          "direction": "at 300°",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the west boundary of Dogwood Street",
+          "distance": "approximately 220 m",
+          "quote": "thence approximately 220 m at 300° to the west boundary of Dogwood Street"
+        },
+        {
+          "start": null,
+          "direction": "south",
+          "follow": "road",
+          "feature": "Dogwood Street",
+          "side_or_bank": "west boundary",
+          "until": "the northwest corner of North Simms Creek bridge",
+          "distance": null,
+          "quote": "thence south along said boundary to the northwest corner of North Simms Creek bridge"
+        },
+        {
+          "start": null,
+          "direction": "at 357°",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": "approximately 165 m",
+          "quote": "thence approximately 165 m at 357°"
+        },
+        {
+          "start": null,
+          "direction": "at 267°",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the southerly boundary of the watershed of North Simms Creek",
+          "distance": "approximately 95 m",
+          "quote": "thence approximately 95 m at 267° to the southerly boundary of the watershed of North Simms Creek"
+        },
+        {
+          "start": null,
+          "direction": "in a general southeasterly direction",
+          "follow": "other",
+          "feature": "the watershed of North Simms Creek",
+          "side_or_bank": "southerly boundary",
+          "until": "the northern boundary of Rockland Road",
+          "distance": null,
+          "quote": "thence in a general southeasterly direction along said boundary to the northern boundary of Rockland Road"
+        },
+        {
+          "start": null,
+          "direction": "west",
+          "follow": "road",
+          "feature": "Rockland Road",
+          "side_or_bank": "northern boundary",
+          "until": "the northeast corner of South Simms Creek bridge",
+          "distance": null,
+          "quote": "thence west along said boundary to the northeast corner of South Simms Creek bridge"
+        },
+        {
+          "start": null,
+          "direction": "south",
+          "follow": "other",
+          "feature": "South Simms Creek bridge",
+          "side_or_bank": "east boundary",
+          "until": "the southern boundary of the watershed of South Simms Creek",
+          "distance": null,
+          "quote": "thence south along the east boundary of said bridge to the southern boundary of the watershed of South Simms Creek"
+        },
+        {
+          "start": null,
+          "direction": "southeast",
+          "follow": "other",
+          "feature": "the watershed of South Simms Creek",
+          "side_or_bank": "southern boundary",
+          "until": "a point on the northern boundary of the SW 1/4 of Section 29, Township 1",
+          "distance": null,
+          "quote": "thence southeast along said boundary to a point on the northern boundary of the SW 1/4 of Section 29, Township 1"
+        },
+        {
+          "start": null,
+          "direction": "west",
+          "follow": "lot_line",
+          "feature": "SW 1/4 of Section 29, Township 1",
+          "side_or_bank": "northern boundary",
+          "until": "the west side of Dogwood Street",
+          "distance": null,
+          "quote": "thence west along said boundary to the west side of Dogwood Street"
+        },
+        {
+          "start": null,
+          "direction": "south",
+          "follow": "road",
+          "feature": "Dogwood Street",
+          "side_or_bank": null,
+          "until": "the north boundary of the SW 1/4 of Section 20, Township 1",
+          "distance": null,
+          "quote": "thence south along said street to the north boundary of the SW 1/4 of Section 20, Township 1"
+        },
+        {
+          "start": null,
+          "direction": "west",
+          "follow": "lot_line",
+          "feature": "SW 1/4 of Section 20, Township 1",
+          "side_or_bank": "north boundary",
+          "until": null,
+          "distance": "approximately 245 m",
+          "quote": "thence approximately 245 m west along said boundary"
+        },
+        {
+          "start": null,
+          "direction": "at 119°",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": "approximately 85 m",
+          "quote": "thence approximately 85 m at 119°"
+        },
+        {
+          "start": null,
+          "direction": "west",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": "approximately 195 m",
+          "quote": "thence approximately 195 m west"
+        },
+        {
+          "start": null,
+          "direction": "south",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the boundary of Section 20, Township 1",
+          "distance": "approximately 65 m",
+          "quote": "thence approximately 65 m south to the boundary of Section 20, Township 1"
+        },
+        {
+          "start": null,
+          "direction": "west",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": "approximately 410 m",
+          "quote": "thence west approximately 410 m"
+        },
+        {
+          "start": null,
+          "direction": "north",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": "approximately 810 m",
+          "quote": "thence north approximately 810 m"
+        },
+        {
+          "start": null,
+          "direction": "at 265°",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the east boundary of the new Island Highway",
+          "distance": "approximately 140 m",
+          "quote": "thence approximately 140 m at 265° to the east boundary of the new Island Highway"
+        },
+        {
+          "start": null,
+          "direction": "north",
+          "follow": "road",
+          "feature": "new Island Highway",
+          "side_or_bank": "east boundary",
+          "until": "the south boundary of Block 24",
+          "distance": null,
+          "quote": "thence north along said boundary to the south boundary of Block 24"
+        },
+        {
+          "start": null,
+          "direction": "south, north and west",
+          "follow": "lot_line",
+          "feature": "Block 24",
+          "side_or_bank": null,
+          "until": "the west boundary of the SE 1/4 of Section 36, Township 2",
+          "distance": null,
+          "quote": "thence south, north and west along the boundary of Block 24 to the west boundary of the SE 1/4 of Section 36, Township 2"
+        },
+        {
+          "start": null,
+          "direction": "north",
+          "follow": "lot_line",
+          "feature": "SE 1/4 of Section 36, Township 2",
+          "side_or_bank": "west boundary",
+          "until": "the northwest corner of the NE 1/4 of Section 36, Township 2",
+          "distance": null,
+          "quote": "thence north along said boundary of Section 36 to the northwest corner of the NE 1/4 of Section 36, Township 2"
+        },
+        {
+          "start": null,
+          "direction": "east",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence east to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "That portion of M.U. 1-06"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "known as the Beaver Lodge Trust Lands"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "described as follows: Commencing at"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "and including the following properties"
+      }
+    ],
+    "uncertain": [
+      "geometry.steps[23].side_or_bank"
+    ]
+  }
+}

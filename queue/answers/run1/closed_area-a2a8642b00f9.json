@@ -1,0 +1,77 @@
+{
+  "task_id": "closed_area-a2a8642b00f9",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:01:55Z",
+  "answer": {
+    "effect": "no_hunting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 5-11"
+    },
+    "geometry": {
+      "method": "road_buffer",
+      "road": {
+        "name": "Highway 20",
+        "source_hint": "highway"
+      },
+      "feature": {
+        "type": "park",
+        "name": "Tweedsmuir Park"
+      },
+      "buffer_m": 400,
+      "side": "both",
+      "from": {
+        "type": "landmark",
+        "road": null,
+        "name": "Young Creek"
+      },
+      "to": {
+        "type": "boundary",
+        "road": null,
+        "name": "the westerly boundary of Tweedsmuir Park"
+      },
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "That portion of M.U. 5-11"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "within the boundaries of Tweedsmuir Park"
+      },
+      {
+        "field": "geometry.road",
+        "quote": "the centre line of Highway 20"
+      },
+      {
+        "field": "geometry.buffer_m",
+        "quote": "0.4 km"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "either side"
+      },
+      {
+        "field": "geometry.from",
+        "quote": "between Young Creek"
+      },
+      {
+        "field": "geometry.to",
+        "quote": "the westerly boundary of Tweedsmuir Park"
+      }
+    ],
+    "uncertain": []
+  }
+}

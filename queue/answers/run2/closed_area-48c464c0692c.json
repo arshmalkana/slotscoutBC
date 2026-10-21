@@ -1,0 +1,120 @@
+{
+  "task_id": "closed_area-48c464c0692c",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:01:50Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [
+      "excepting any private lands"
+    ],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 8-06"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the westernmost point of the northern boundary of Lot 1855",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the westernmost point of the northern boundary of Lot 1855"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "lot_line",
+          "feature": "Lot 1855 and Lot 1912",
+          "side_or_bank": "western boundary",
+          "until": "the point of intersection with the eastern boundary of the right of way of Highway 5A",
+          "distance": null,
+          "quote": "thence southerly along the western boundary of Lot 1855 and along the western boundary of Lot 1912 to the point of intersection with the eastern boundary of the right of way of Highway 5A"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "road",
+          "feature": "Highway 5A",
+          "side_or_bank": "eastern boundary of the right of way",
+          "until": "the point of intersection with the southern boundary of Lot 4751",
+          "distance": null,
+          "quote": "thence southerly along said right of way boundary to the point of intersection with the southern boundary of Lot 4751"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "lot_line",
+          "feature": "Lot 4751",
+          "side_or_bank": "southern boundary",
+          "until": "the southeast corner of Lot 4751",
+          "distance": null,
+          "quote": "thence easterly along said southern boundary to the southeast corner of Lot 4751"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "lot_line",
+          "feature": "Lot 4751 and Lot 1912",
+          "side_or_bank": "eastern boundary",
+          "until": "the point of intersection with the southern boundary of Lot 1855",
+          "distance": null,
+          "quote": "thence northerly along the eastern boundary of said Lot and along the eastern boundary of Lot 1912 to the point of intersection with the southern boundary of Lot 1855"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "lot_line",
+          "feature": "Lot 1855",
+          "side_or_bank": "southern boundary",
+          "until": "the southeast corner of Lot 1855",
+          "distance": null,
+          "quote": "thence easterly along said southern boundary to the southeast corner of Lot 1855"
+        },
+        {
+          "start": null,
+          "direction": "northerly and westerly",
+          "follow": "lot_line",
+          "feature": "Lot 1855",
+          "side_or_bank": "eastern boundary and northern boundary",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence northerly along the eastern boundary and westerly along the northern boundary of said Lot to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "within M.U. 8-06"
+      },
+      {
+        "field": "exemptions[0]",
+        "quote": "excepting any private lands"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundaries: Commencing at"
+      }
+    ],
+    "uncertain": []
+  }
+}

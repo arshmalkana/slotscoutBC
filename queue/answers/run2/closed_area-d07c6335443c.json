@@ -1,0 +1,538 @@
+{
+  "task_id": "closed_area-d07c6335443c",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:03:32Z",
+  "answer": {
+    "effect": "no_hunting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Cariboo Land District"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "a point the said point being the SE corner of the NW 1/4 of L 2734",
+          "direction": null,
+          "follow": null,
+          "feature": "L 2734",
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at a point the said point being the SE corner of the NW 1/4 of L 2734"
+        },
+        {
+          "start": null,
+          "direction": "north",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the SE corner of the SW 1/4 of L 8784",
+          "distance": "804 m, more or less",
+          "quote": "thence north 804 m, more or less, to the SE corner of the SW 1/4 of L 8784"
+        },
+        {
+          "start": null,
+          "direction": "East",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the SE corner of the W 1/2 of the SE 1/4 of L 8784",
+          "distance": "402 m, more or less",
+          "quote": "thence East 402 m, more or less, to the SE corner of the W 1/2 of the SE 1/4 of L 8784"
+        },
+        {
+          "start": null,
+          "direction": "north",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the NE corner of the W 1/2 of the SE 1/4 of L 8784",
+          "distance": "804 m, more or less",
+          "quote": "thence north 804 m, more or less, to the NE corner of the W 1/2 of the SE 1/4 of L 8784"
+        },
+        {
+          "start": null,
+          "direction": "east",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the SE corner of the W 1/2 of L 8441",
+          "distance": "1206 m, more or less",
+          "quote": "thence east 1206 m, more or less, to the SE corner of the W 1/2 of L 8441"
+        },
+        {
+          "start": null,
+          "direction": "north",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the SE corner of the NW 1/4 of L 8796",
+          "distance": "1 609 m, more or less",
+          "quote": "thence north 1 609 m, more or less, to the SE corner of the NW 1/4 of L 8796"
+        },
+        {
+          "start": null,
+          "direction": "west",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the SW corner of the NW 1/4 of L 8796",
+          "distance": "804 m, more or less",
+          "quote": "thence west 804 m, more or less, to the SW corner of the NW 1/4 of L 8796"
+        },
+        {
+          "start": null,
+          "direction": "north",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the NE corner of the SE 1/4 of the SE 1/4 of L 8388",
+          "distance": "1 206 m, more or less",
+          "quote": "thence north 1 206 m, more or less, to the NE corner of the SE 1/4 of the SE 1/4 of L 8388"
+        },
+        {
+          "start": null,
+          "direction": "general northwesterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the SE corner of the NW 1/4 of L 8388",
+          "distance": "898 m, more or less",
+          "quote": "thence in a general northwesterly direction 898 m, more or less, to the SE corner of the NW 1/4 of L 8388"
+        },
+        {
+          "start": null,
+          "direction": "north",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the SE corner of the NE 1/4 of the NW 1/4 of L 8388",
+          "distance": "402 m, more or less",
+          "quote": "thence north 402 m, more or less, to the SE corner of the NE 1/4 of the NW 1/4 of L 8388"
+        },
+        {
+          "start": null,
+          "direction": "west",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the SE corner of the NE 1/4 of the NE 1/4 of L 8798",
+          "distance": "804 m, more or less",
+          "quote": "thence west 804 m, more or less, to the SE corner of the NE 1/4 of the NE 1/4 of L 8798"
+        },
+        {
+          "start": null,
+          "direction": "general northwesterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the NE corner of the NW 1/4 of L 8798",
+          "distance": "898 m, more or less",
+          "quote": "thence in a general northwesterly direction 898 m, more or less, to the NE corner of the NW 1/4 of L 8798"
+        },
+        {
+          "start": null,
+          "direction": "west",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the SE corner of the SE 1/4 of L 2245",
+          "distance": "804 m, more or less",
+          "quote": "thence west 804 m, more or less, to the SE corner of the SE 1/4 of L 2245"
+        },
+        {
+          "start": null,
+          "direction": "north",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the SE corner of the NE 1/4 of the SE 1/4 of L 2245",
+          "distance": "402 m, more or less",
+          "quote": "thence north 402 m, more or less, to the SE corner of the NE 1/4 of the SE 1/4 of L 2245"
+        },
+        {
+          "start": null,
+          "direction": "general northwesterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the SE corner of the NE 1/4 of the NW 1/4 of L 2245",
+          "distance": "1 137 m, more or less",
+          "quote": "thence in a general northwesterly direction 1 137 m, more or less, to the SE corner of the NE 1/4 of the NW 1/4 of L 2245"
+        },
+        {
+          "start": null,
+          "direction": "west",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the SE corner of the NW 1/4 of the NW 1/4 of L 2245",
+          "distance": "402 m, more or less",
+          "quote": "thence west 402 m, more or less, to the SE corner of the NW 1/4 of the NW 1/4 of L 2245"
+        },
+        {
+          "start": null,
+          "direction": "south",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the SE corner of the NW 1/4 of the NW 1/4 of L 8797",
+          "distance": "1 609 m, more or less",
+          "quote": "thence south 1 609 m, more or less, to the SE corner of the NW 1/4 of the NW 1/4 of L 8797"
+        },
+        {
+          "start": null,
+          "direction": "east",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the SE corner of the NE 1/4 of the NW 1/4 of L 8797",
+          "distance": "402 m, more or less",
+          "quote": "thence east 402 m, more or less, to the SE corner of the NE 1/4 of the NW 1/4 of L 8797"
+        },
+        {
+          "start": null,
+          "direction": "south",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the SE corner of the SE 1/4 of the NW 1/4 of L 8797",
+          "distance": "402 m, more or less",
+          "quote": "thence south 402 m, more or less, to the SE corner of the SE 1/4 of the NW 1/4 of L 8797"
+        },
+        {
+          "start": null,
+          "direction": "general southeasterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the SE corner of the NW 1/4 of the SE 1/4 of L 8797",
+          "distance": "568 m, more or less",
+          "quote": "thence in a general southeasterly direction 568 m, more or less, to the SE corner of the NW 1/4 of the SE 1/4 of L 8797"
+        },
+        {
+          "start": null,
+          "direction": "east",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the SE corner of the NE 1/4 of the SE 1/4 of L 8797",
+          "distance": "402 m, more or less",
+          "quote": "thence east 402 m, more or less, to the SE corner of the NE 1/4 of the SE 1/4 of L 8797"
+        },
+        {
+          "start": null,
+          "direction": "general southeasterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the SE corner of the NE 1/4 of the NW 1/4 of L 8794",
+          "distance": "1 136 m, more or less",
+          "quote": "thence in a general southeasterly direction 1 136 m, more or less, to the SE corner of the NE 1/4 of the NW 1/4 of L 8794"
+        },
+        {
+          "start": null,
+          "direction": "east",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the SE corner of the NW 1/4 of the NE 1/4 of L 8794",
+          "distance": "402 m, more or less",
+          "quote": "thence east 402 m, more or less, to the SE corner of the NW 1/4 of the NE 1/4 of L 8794"
+        },
+        {
+          "start": null,
+          "direction": "general southeasterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the SE corner of the NE 1/4 of the SE 1/4 of L 8794",
+          "distance": "899 m, more or less",
+          "quote": "thence in a general southeasterly direction 899 m, more or less to the SE corner of the NE 1/4 of the SE 1/4 of L 8794"
+        },
+        {
+          "start": null,
+          "direction": "south",
+          "follow": "lot_line",
+          "feature": "Lots 8794, 8785 and 8783",
+          "side_or_bank": "easterly boundaries",
+          "until": "the SE corner of the NE 1/4 of L 8783",
+          "distance": "2 815 m, more or less",
+          "quote": "thence south 2 815 m, more or less, along the easterly boundaries of Lots 8794, 8785 and 8783 to the SE corner of the NE 1/4 of L 8783"
+        },
+        {
+          "start": null,
+          "direction": "west",
+          "follow": "lot_line",
+          "feature": "SE 1/4 of L 8783",
+          "side_or_bank": "north boundary",
+          "until": "the point of intersection with the natural boundary of Circle Lake",
+          "distance": null,
+          "quote": "thence west along the north boundary of the SE 1/4 of L 8783 to the point of intersection with the natural boundary of Circle Lake"
+        },
+        {
+          "start": null,
+          "direction": "general westerly",
+          "follow": "shoreline",
+          "feature": "Circle Lake",
+          "side_or_bank": "natural boundary",
+          "until": "the southerly boundary of the NW 1/4 of L 8783",
+          "distance": null,
+          "quote": "thence in a general westerly direction along the natural boundary of Circle Lake to the southerly boundary of the NW 1/4 of L 8783"
+        },
+        {
+          "start": null,
+          "direction": "west",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "Vivian Lake Road",
+          "distance": "215 m, more or less",
+          "quote": "thence west 215 m, more or less, to Vivian Lake Road"
+        },
+        {
+          "start": null,
+          "direction": "general southwesterly",
+          "follow": "road",
+          "feature": "Vivian Lake Road",
+          "side_or_bank": "southern boundary",
+          "until": "the western boundary of the SW 1/4 of L 8783",
+          "distance": null,
+          "quote": "thence in a general southwesterly direction along the southern boundary of said road right of way to the western boundary of the SW 1/4 of L 8783"
+        },
+        {
+          "start": null,
+          "direction": "south",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the SW corner of the SW 1/4 of L 8783",
+          "distance": null,
+          "quote": "thence south to the SW corner of the SW 1/4 of L 8783"
+        },
+        {
+          "start": null,
+          "direction": "east",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the SE corner of the SE 1/4 of L 8783",
+          "distance": "1 609 m, more or less",
+          "quote": "thence east 1 609 m, more or less, to the SE corner of the SE 1/4 of L 8783"
+        },
+        {
+          "start": null,
+          "direction": "south",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the SW corner of Block A of L 2733",
+          "distance": "370 m, more or less",
+          "quote": "thence south 370 m, more or less, to the SW corner of Block A of L 2733"
+        },
+        {
+          "start": null,
+          "direction": "east",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the road right of way",
+          "distance": "680 m, more or less",
+          "quote": "thence east 680 m, more or less, to the road right of way"
+        },
+        {
+          "start": null,
+          "direction": "general northeasterly",
+          "follow": "road",
+          "feature": null,
+          "side_or_bank": "northern then western boundary",
+          "until": "the southern boundary of the SE 1/4 of L 2724",
+          "distance": null,
+          "quote": "thence in a general northeasterly direction along the northern then western boundary of the road right of way to the southern boundary of the SE 1/4 of L 2724"
+        },
+        {
+          "start": null,
+          "direction": "west",
+          "follow": "lot_line",
+          "feature": "L 2724 and the southern boundary of the NE 1/4 of L 2734",
+          "side_or_bank": "southern boundary",
+          "until": "the point of commencement",
+          "distance": "1 948 m, more or less",
+          "quote": "thence west 1 948 m, more or less, along the southern boundary of L 2724 and the southern boundary of the NE 1/4 of L 2734 to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "in Cariboo Land District"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundaries"
+      },
+      {
+        "field": "geometry.steps[0]",
+        "quote": "Commencing at a point the said point being the SE corner of the NW 1/4 of L 2734"
+      },
+      {
+        "field": "geometry.steps[1]",
+        "quote": "thence north 804 m, more or less, to the SE corner of the SW 1/4 of L 8784"
+      },
+      {
+        "field": "geometry.steps[2]",
+        "quote": "thence East 402 m, more or less, to the SE corner of the W 1/2 of the SE 1/4 of L 8784"
+      },
+      {
+        "field": "geometry.steps[3]",
+        "quote": "thence north 804 m, more or less, to the NE corner of the W 1/2 of the SE 1/4 of L 8784"
+      },
+      {
+        "field": "geometry.steps[4]",
+        "quote": "thence east 1206 m, more or less, to the SE corner of the W 1/2 of L 8441"
+      },
+      {
+        "field": "geometry.steps[5]",
+        "quote": "thence north 1 609 m, more or less, to the SE corner of the NW 1/4 of L 8796"
+      },
+      {
+        "field": "geometry.steps[6]",
+        "quote": "thence west 804 m, more or less, to the SW corner of the NW 1/4 of L 8796"
+      },
+      {
+        "field": "geometry.steps[7]",
+        "quote": "thence north 1 206 m, more or less, to the NE corner of the SE 1/4 of the SE 1/4 of L 8388"
+      },
+      {
+        "field": "geometry.steps[8]",
+        "quote": "thence in a general northwesterly direction 898 m, more or less, to the SE corner of the NW 1/4 of L 8388"
+      },
+      {
+        "field": "geometry.steps[9]",
+        "quote": "thence north 402 m, more or less, to the SE corner of the NE 1/4 of the NW 1/4 of L 8388"
+      },
+      {
+        "field": "geometry.steps[10]",
+        "quote": "thence west 804 m, more or less, to the SE corner of the NE 1/4 of the NE 1/4 of L 8798"
+      },
+      {
+        "field": "geometry.steps[11]",
+        "quote": "thence in a general northwesterly direction 898 m, more or less, to the NE corner of the NW 1/4 of L 8798"
+      },
+      {
+        "field": "geometry.steps[12]",
+        "quote": "thence west 804 m, more or less, to the SE corner of the SE 1/4 of L 2245"
+      },
+      {
+        "field": "geometry.steps[13]",
+        "quote": "thence north 402 m, more or less, to the SE corner of the NE 1/4 of the SE 1/4 of L 2245"
+      },
+      {
+        "field": "geometry.steps[14]",
+        "quote": "thence in a general northwesterly direction 1 137 m, more or less, to the SE corner of the NE 1/4 of the NW 1/4 of L 2245"
+      },
+      {
+        "field": "geometry.steps[15]",
+        "quote": "thence west 402 m, more or less, to the SE corner of the NW 1/4 of the NW 1/4 of L 2245"
+      },
+      {
+        "field": "geometry.steps[16]",
+        "quote": "thence south 1 609 m, more or less, to the SE corner of the NW 1/4 of the NW 1/4 of L 8797"
+      },
+      {
+        "field": "geometry.steps[17]",
+        "quote": "thence east 402 m, more or less, to the SE corner of the NE 1/4 of the NW 1/4 of L 8797"
+      },
+      {
+        "field": "geometry.steps[18]",
+        "quote": "thence south 402 m, more or less, to the SE corner of the SE 1/4 of the NW 1/4 of L 8797"
+      },
+      {
+        "field": "geometry.steps[19]",
+        "quote": "thence in a general southeasterly direction 568 m, more or less, to the SE corner of the NW 1/4 of the SE 1/4 of L 8797"
+      },
+      {
+        "field": "geometry.steps[20]",
+        "quote": "thence east 402 m, more or less, to the SE corner of the NE 1/4 of the SE 1/4 of L 8797"
+      },
+      {
+        "field": "geometry.steps[21]",
+        "quote": "thence in a general southeasterly direction 1 136 m, more or less, to the SE corner of the NE 1/4 of the NW 1/4 of L 8794"
+      },
+      {
+        "field": "geometry.steps[22]",
+        "quote": "thence east 402 m, more or less, to the SE corner of the NW 1/4 of the NE 1/4 of L 8794"
+      },
+      {
+        "field": "geometry.steps[23]",
+        "quote": "thence in a general southeasterly direction 899 m, more or less to the SE corner of the NE 1/4 of the SE 1/4 of L 8794"
+      },
+      {
+        "field": "geometry.steps[24]",
+        "quote": "thence south 2 815 m, more or less, along the easterly boundaries of Lots 8794, 8785 and 8783 to the SE corner of the NE 1/4 of L 8783"
+      },
+      {
+        "field": "geometry.steps[25]",
+        "quote": "thence west along the north boundary of the SE 1/4 of L 8783 to the point of intersection with the natural boundary of Circle Lake"
+      },
+      {
+        "field": "geometry.steps[26]",
+        "quote": "thence in a general westerly direction along the natural boundary of Circle Lake to the southerly boundary of the NW 1/4 of L 8783"
+      },
+      {
+        "field": "geometry.steps[27]",
+        "quote": "thence west 215 m, more or less, to Vivian Lake Road"
+      },
+      {
+        "field": "geometry.steps[28]",
+        "quote": "thence in a general southwesterly direction along the southern boundary of said road right of way to the western boundary of the SW 1/4 of L 8783"
+      },
+      {
+        "field": "geometry.steps[29]",
+        "quote": "thence south to the SW corner of the SW 1/4 of L 8783"
+      },
+      {
+        "field": "geometry.steps[30]",
+        "quote": "thence east 1 609 m, more or less, to the SE corner of the SE 1/4 of L 8783"
+      },
+      {
+        "field": "geometry.steps[31]",
+        "quote": "thence south 370 m, more or less, to the SW corner of Block A of L 2733"
+      },
+      {
+        "field": "geometry.steps[32]",
+        "quote": "thence east 680 m, more or less, to the road right of way"
+      },
+      {
+        "field": "geometry.steps[33]",
+        "quote": "thence in a general northeasterly direction along the northern then western boundary of the road right of way to the southern boundary of the SE 1/4 of L 2724"
+      },
+      {
+        "field": "geometry.steps[34]",
+        "quote": "thence west 1 948 m, more or less, along the southern boundary of L 2724 and the southern boundary of the NE 1/4 of L 2734 to the point of commencement"
+      }
+    ],
+    "uncertain": [
+      "geometry.feature",
+      "geometry.steps[29].follow",
+      "geometry.steps[33].feature"
+    ]
+  }
+}

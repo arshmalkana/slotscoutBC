@@ -1,0 +1,144 @@
+{
+  "task_id": "closed_area-d884f78f044d",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:04:04Z",
+  "answer": {
+    "effect": "shot_only",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 6-13"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "a point 1 km due North of the most northerly part of Lot 420",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": "1 km",
+          "quote": "Commencing at a point 1 km due North of the most northerly part of Lot 420"
+        },
+        {
+          "start": null,
+          "direction": "due South",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "most northerly point of Lot 420 at the high water mark",
+          "distance": null,
+          "quote": "thence due South to the most northerly point of Lot 420 at the high water mark"
+        },
+        {
+          "start": null,
+          "direction": "due West",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": "100 metres",
+          "quote": "thence due West 100 metres"
+        },
+        {
+          "start": null,
+          "direction": "southeasterly",
+          "follow": "shoreline",
+          "feature": "Kumdis Bay",
+          "side_or_bank": "high water mark",
+          "until": "intersection with Highway 16 in Lot 414",
+          "distance": "100 metres west",
+          "quote": "thence proceeding southeasterly, remaining 100 metres west of the high water mark of Kumdis Bay, to the intersection with Highway 16 in Lot 414"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "road",
+          "feature": "Highway 16",
+          "side_or_bank": null,
+          "until": "a point at the mean high water mark, on the east shore of Kumdis Creek",
+          "distance": "approximately 100 metres",
+          "quote": "thence easterly along Highway 16 for approximately 100 metres, to the east end of the bridge that crosses Kumdis Creek, to a point at the mean high water mark, on the east shore of Kumdis Creek"
+        },
+        {
+          "start": null,
+          "direction": "northeasterly, northerly and northwesterly",
+          "follow": "shoreline",
+          "feature": "Kumdis Creek and Kumdis Bay",
+          "side_or_bank": "mean high water mark",
+          "until": "a point due East of the most northerly point of Lot 420",
+          "distance": null,
+          "quote": "thence following the mean high water mark of Kumdis Creek and Kumdis Bay in northeasterly, northerly and northwesterly directions along the mean high water mark of Kumdis Bay to a point due East of the most northerly point of Lot 420"
+        },
+        {
+          "start": null,
+          "direction": "due West",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "point of commencement",
+          "distance": null,
+          "quote": "thence due West to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "Firearms Using Shot Only Areas"
+      },
+      {
+        "field": "within",
+        "quote": "That portion of M.U. 6-13"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundaries: Commencing at"
+      },
+      {
+        "field": "geometry.steps[0]",
+        "quote": "Commencing at a point 1 km due North of the most northerly part of Lot 420"
+      },
+      {
+        "field": "geometry.steps[1]",
+        "quote": "thence due South to the most northerly point of Lot 420 at the high water mark"
+      },
+      {
+        "field": "geometry.steps[2]",
+        "quote": "thence due West 100 metres"
+      },
+      {
+        "field": "geometry.steps[3]",
+        "quote": "thence proceeding southeasterly, remaining 100 metres west of the high water mark of Kumdis Bay, to the intersection with Highway 16 in Lot 414"
+      },
+      {
+        "field": "geometry.steps[4]",
+        "quote": "thence easterly along Highway 16 for approximately 100 metres, to the east end of the bridge that crosses Kumdis Creek, to a point at the mean high water mark, on the east shore of Kumdis Creek"
+      },
+      {
+        "field": "geometry.steps[5]",
+        "quote": "thence following the mean high water mark of Kumdis Creek and Kumdis Bay in northeasterly, northerly and northwesterly directions along the mean high water mark of Kumdis Bay to a point due East of the most northerly point of Lot 420"
+      },
+      {
+        "field": "geometry.steps[6]",
+        "quote": "thence due West to the point of commencement"
+      }
+    ],
+    "uncertain": [
+      "geometry.steps[2].until"
+    ]
+  }
+}

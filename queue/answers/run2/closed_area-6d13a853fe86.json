@@ -1,0 +1,54 @@
+{
+  "task_id": "closed_area-6d13a853fe86",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:02:37Z",
+  "answer": {
+    "effect": "no_hunting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 6-14"
+    },
+    "geometry": {
+      "method": "other",
+      "road": null,
+      "feature": {
+        "type": "park",
+        "name": "Khutzeymateen Park"
+      },
+      "buffer_m": null,
+      "side": "inside",
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "That portion of M.U. 6-14"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within the boundaries of Khutzeymateen Park below the 1 000 metre elevation"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "Khutzeymateen Park"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "within the boundaries of Khutzeymateen Park"
+      }
+    ],
+    "uncertain": []
+  }
+}

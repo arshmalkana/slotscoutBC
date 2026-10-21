@@ -1,0 +1,184 @@
+{
+  "task_id": "closed_area-deda442dcc3f",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:03:34Z",
+  "answer": {
+    "effect": "shot_only",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 4-25"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "point of intersection of the northern boundary of SL72 with the natural boundary of Columbia Lake on the eastern bank thereof",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the point of intersection of the northern boundary of SL72 with the natural boundary of Columbia Lake on the eastern bank thereof"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "other",
+          "feature": "SL72",
+          "side_or_bank": "northern",
+          "until": "point of intersection with the 3 500 foot elevation contour",
+          "distance": null,
+          "quote": "thence easterly along the northern boundary of SL72 to the point of intersection with the 3 500 foot elevation contour"
+        },
+        {
+          "start": null,
+          "direction": "general southerly",
+          "follow": "contour",
+          "feature": "3 500 foot elevation contour",
+          "side_or_bank": null,
+          "until": "southwestern corner of Mount Sabine",
+          "distance": null,
+          "quote": "thence in a general southerly direction along said contour to the southwestern corner of Mount Sabine"
+        },
+        {
+          "start": null,
+          "direction": "due southwest",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "point of intersection with the 2 900 foot elevation contour",
+          "distance": null,
+          "quote": "thence due southwest to the point of intersection with the 2 900 foot elevation contour"
+        },
+        {
+          "start": null,
+          "direction": "general southerly",
+          "follow": "contour",
+          "feature": "2 900 foot elevation contour",
+          "side_or_bank": null,
+          "until": "point of intersection with the eastern boundary of the right of way of Kootenay River Forest Access Road",
+          "distance": null,
+          "quote": "thence in a general southerly direction along said contour to the point of intersection with the eastern boundary of the right of way of Kootenay River Forest Access Road"
+        },
+        {
+          "start": null,
+          "direction": "southerly and easterly",
+          "follow": "road",
+          "feature": "Kootenay River Forest Access Road",
+          "side_or_bank": "eastern and northern boundaries of the right of way",
+          "until": "point of intersection with the northern boundary of the right of way of Crestbrook Off-Highway Haul Road",
+          "distance": null,
+          "quote": "thence southerly and easterly along the eastern and northern boundaries of the right of way of said Access Road to the point of intersection with the northern boundary of the right of way of Crestbrook Off-Highway Haul Road"
+        },
+        {
+          "start": null,
+          "direction": "due South",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "point of intersection with the natural boundary of Kootenay River on the northern bank thereof",
+          "distance": null,
+          "quote": "thence due South to the point of intersection with the natural boundary of Kootenay River on the northern bank thereof"
+        },
+        {
+          "start": null,
+          "direction": "general westerly",
+          "follow": "river",
+          "feature": "Kootenay River",
+          "side_or_bank": "northern bank",
+          "until": "point of intersection with the eastern boundary of the right of way of Highway 93/95",
+          "distance": null,
+          "quote": "thence in a general westerly direction along the said natural boundary to the point of intersection with the eastern boundary of the right of way of Highway 93/95"
+        },
+        {
+          "start": null,
+          "direction": "northerly and westerly",
+          "follow": "road",
+          "feature": "Highway 93/95",
+          "side_or_bank": "eastern and northern boundaries",
+          "until": "point of intersection with the natural boundary of Columbia Lake on the southern bank thereof",
+          "distance": null,
+          "quote": "thence northerly and westerly along the eastern and northern boundaries of said right of way to the point of intersection with the natural boundary of Columbia Lake on the southern bank thereof"
+        },
+        {
+          "start": null,
+          "direction": "general easterly and northerly",
+          "follow": "shoreline",
+          "feature": "Columbia Lake",
+          "side_or_bank": "natural boundary",
+          "until": "point of commencement",
+          "distance": null,
+          "quote": "thence in a general easterly and northerly direction along the natural boundary of Columbia Lake to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "Firearms Using Shot Only Areas"
+      },
+      {
+        "field": "within",
+        "quote": "That portion of M.U. 4-25"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundaries: Commencing at"
+      },
+      {
+        "field": "geometry.steps[0]",
+        "quote": "Commencing at the point of intersection of the northern boundary of SL72 with the natural boundary of Columbia Lake on the eastern bank thereof"
+      },
+      {
+        "field": "geometry.steps[1]",
+        "quote": "thence easterly along the northern boundary of SL72 to the point of intersection with the 3 500 foot elevation contour"
+      },
+      {
+        "field": "geometry.steps[2]",
+        "quote": "thence in a general southerly direction along said contour to the southwestern corner of Mount Sabine"
+      },
+      {
+        "field": "geometry.steps[3]",
+        "quote": "thence due southwest to the point of intersection with the 2 900 foot elevation contour"
+      },
+      {
+        "field": "geometry.steps[4]",
+        "quote": "thence in a general southerly direction along said contour to the point of intersection with the eastern boundary of the right of way of Kootenay River Forest Access Road"
+      },
+      {
+        "field": "geometry.steps[5]",
+        "quote": "thence southerly and easterly along the eastern and northern boundaries of the right of way of said Access Road to the point of intersection with the northern boundary of the right of way of Crestbrook Off-Highway Haul Road"
+      },
+      {
+        "field": "geometry.steps[6]",
+        "quote": "thence due South to the point of intersection with the natural boundary of Kootenay River on the northern bank thereof"
+      },
+      {
+        "field": "geometry.steps[7]",
+        "quote": "thence in a general westerly direction along the said natural boundary to the point of intersection with the eastern boundary of the right of way of Highway 93/95"
+      },
+      {
+        "field": "geometry.steps[8]",
+        "quote": "thence northerly and westerly along the eastern and northern boundaries of said right of way to the point of intersection with the natural boundary of Columbia Lake on the southern bank thereof"
+      },
+      {
+        "field": "geometry.steps[9]",
+        "quote": "thence in a general easterly and northerly direction along the natural boundary of Columbia Lake to the point of commencement"
+      }
+    ],
+    "uncertain": []
+  }
+}

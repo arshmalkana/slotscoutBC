@@ -1,0 +1,55 @@
+{
+  "task_id": "closed_area-d08f342f86e2",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:03:06Z",
+  "answer": {
+    "effect": "no_hunting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 5-4"
+    },
+    "geometry": {
+      "method": "road_buffer",
+      "road": null,
+      "feature": null,
+      "buffer_m": 400,
+      "side": "both",
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "That portion of M.U. 5-4"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within 400 m of the midline of the roads highlighted in yellow on the attached map 'Closed Area 7-56/24'"
+      },
+      {
+        "field": "geometry.buffer_m",
+        "quote": "within 400 m"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "within 400 m of the midline of the roads"
+      }
+    ],
+    "uncertain": [
+      "geometry.road",
+      "geometry.from",
+      "geometry.to"
+    ]
+  }
+}

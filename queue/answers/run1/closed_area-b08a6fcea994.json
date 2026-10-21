@@ -1,0 +1,54 @@
+{
+  "task_id": "closed_area-b08a6fcea994",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:03:44Z",
+  "answer": {
+    "effect": "shot_only",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Province of British Columbia"
+    },
+    "geometry": {
+      "method": "admin_boundary",
+      "road": null,
+      "feature": {
+        "type": "island",
+        "name": "Savary Island"
+      },
+      "buffer_m": null,
+      "side": "inside",
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "Firearms Using Shot Only Areas"
+      },
+      {
+        "field": "within",
+        "quote": "That portion of the Province of British Columbia"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundary: The mean low water mark of Savary Island"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "The mean low water mark of Savary Island"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "contained within the following described boundary"
+      }
+    ],
+    "uncertain": []
+  }
+}

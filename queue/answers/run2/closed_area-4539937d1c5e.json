@@ -1,0 +1,50 @@
+{
+  "task_id": "closed_area-4539937d1c5e",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:01:05Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Cariboo Land District"
+    },
+    "geometry": {
+      "method": "admin_boundary",
+      "road": null,
+      "feature": {
+        "type": "lot",
+        "name": "Lots 1607, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 and 2026, Cariboo Land District"
+      },
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "Cariboo Land District"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "All lands and waters within Lots 1607, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 and 2026, Cariboo Land District"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "Lots 1607, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 and 2026, Cariboo Land District"
+      }
+    ],
+    "uncertain": []
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "task_id": "closed_area-3c3e3104f105",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:01:36Z",
+  "answer": {
+    "effect": "no_hunting",
+    "exemptions": [],
+    "period": {
+      "start": "January 1",
+      "end": "October 31"
+    },
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 6-11"
+    },
+    "geometry": {
+      "method": "other",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "Seasonal No Hunting Areas"
+      },
+      {
+        "field": "period",
+        "quote": "During the period January 1 to October 31"
+      },
+      {
+        "field": "within",
+        "quote": "that portion of M.U. 6-11"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "outlined in red on the attached Map No. 8-5/20"
+      }
+    ],
+    "uncertain": [
+      "geometry.feature"
+    ]
+  }
+}

@@ -1,0 +1,355 @@
+{
+  "task_id": "closed_area-ce315984d6c4",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:02:33Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 3-18"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the apex of Gnawed Mountain",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the apex of Gnawed Mountain"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of intersection with the reclaim water line due East of Gnawed Lake",
+          "distance": null,
+          "quote": "thence northerly in a straight line to the point of intersection with the reclaim water line due East of Gnawed Lake"
+        },
+        {
+          "start": null,
+          "direction": "in a general easterly direction",
+          "follow": "other",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of intersection with the westerly boundary of Highmont Ultimate Tailings Pond",
+          "distance": null,
+          "quote": "thence in a general easterly direction along the reclaim water line to the point of intersection with the westerly boundary of Highmont Ultimate Tailings Pond"
+        },
+        {
+          "start": null,
+          "direction": "in a general southeasterly, easterly and northerly direction",
+          "follow": "other",
+          "feature": "Highmont Ultimate Tailings Pond",
+          "side_or_bank": "westerly, southerly and easterly boundaries",
+          "until": "the point of intersection with the fresh water supply line south of Squetankilhats Indian Reserve 15",
+          "distance": null,
+          "quote": "thence in a general southeasterly, easterly and northerly direction along the westerly, southerly and easterly boundaries of the said Tailings Pond and a prolongation thereof to the point of intersection with the fresh water supply line south of Squetankilhats Indian Reserve 15"
+        },
+        {
+          "start": null,
+          "direction": "in a general northerly direction",
+          "follow": "other",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of intersection with the midline of the Highland Valley Highway",
+          "distance": null,
+          "quote": "thence in a general northerly direction along the said water line and a prolongation thereof to the point of intersection with the midline of the Highland Valley Highway"
+        },
+        {
+          "start": null,
+          "direction": "in a general westerly direction",
+          "follow": "road",
+          "feature": "Highland Valley Highway",
+          "side_or_bank": "midline",
+          "until": "the point west of Enquotco Indian Reserve 14 at which the existing gas pipeline crosses the said Highway",
+          "distance": null,
+          "quote": "thence in a general westerly direction along the midline of the said highway to the point west of Enquotco Indian Reserve 14 at which the existing gas pipeline crosses the said Highway"
+        },
+        {
+          "start": null,
+          "direction": "northeasterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of intersection with the natural boundary of Spud Lake at the most easterly point thereof",
+          "distance": null,
+          "quote": "thence northeasterly in a straight line to the point of intersection with the natural boundary of Spud Lake at the most easterly point thereof"
+        },
+        {
+          "start": null,
+          "direction": "in a general northerly direction",
+          "follow": "shoreline",
+          "feature": "Spud Lake",
+          "side_or_bank": "natural boundary",
+          "until": "the most northerly point thereof",
+          "distance": null,
+          "quote": "thence in a general northerly direction along the natural boundary of Spud Lake to the most northerly point thereof"
+        },
+        {
+          "start": null,
+          "direction": "northwesterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of intersection with the natural boundary of Copper Lake at the most easterly point thereof",
+          "distance": null,
+          "quote": "thence northwesterly in a straight line to the point of intersection with the natural boundary of Copper Lake at the most easterly point thereof"
+        },
+        {
+          "start": null,
+          "direction": "in a general northerly direction",
+          "follow": "shoreline",
+          "feature": "Copper Lake",
+          "side_or_bank": "natural boundary",
+          "until": "the most northerly point thereof",
+          "distance": null,
+          "quote": "thence in a general northerly direction along the natural boundary of Copper Lake to the most northerly point thereof"
+        },
+        {
+          "start": null,
+          "direction": "northwesterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of intersection with the natural boundary of Bose Lake at the most southerly point thereof",
+          "distance": null,
+          "quote": "thence northwesterly in a straight line to the point of intersection with the natural boundary of Bose Lake at the most southerly point thereof"
+        },
+        {
+          "start": null,
+          "direction": "in a general northwesterly direction",
+          "follow": "shoreline",
+          "feature": "Bose Lake",
+          "side_or_bank": "natural boundary",
+          "until": "the most westerly point thereof",
+          "distance": null,
+          "quote": "thence in a general northwesterly direction along the natural boundary of Bose Lake to the most westerly point thereof"
+        },
+        {
+          "start": null,
+          "direction": "northwesterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of intersection with the midline of the existing secondary road west of Bose Lake",
+          "distance": null,
+          "quote": "thence northwesterly in a straight line to the point of intersection with the midline of the existing secondary road west of Bose Lake"
+        },
+        {
+          "start": null,
+          "direction": "in a general westerly direction",
+          "follow": "road",
+          "feature": null,
+          "side_or_bank": "midline",
+          "until": "the point of intersection with the midline of the existing mining road leading to Forge Mountain",
+          "distance": null,
+          "quote": "thence in a general westerly direction along the midline of said existing secondary road to the point of intersection with the midline of the existing mining road leading to Forge Mountain"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of intersection with the midline of Highland Valley Highway north of Chilthnaux Indian Reserve 12 at which the existing powerline crosses the said Highway",
+          "distance": null,
+          "quote": "thence westerly in a straight line to the point of intersection with the midline of Highland Valley Highway north of Chilthnaux Indian Reserve 12 at which the existing powerline crosses the said Highway"
+        },
+        {
+          "start": null,
+          "direction": "in a general westerly direction",
+          "follow": "road",
+          "feature": "Highland Valley Highway",
+          "side_or_bank": "midline",
+          "until": "the point of intersection with midline of the new Highland Valley Highway",
+          "distance": null,
+          "quote": "thence in a general westerly direction along the midline of the said Highway to the point of intersection with midline of the new Highland Valley Highway"
+        },
+        {
+          "start": null,
+          "direction": "in a general westerly direction",
+          "follow": "road",
+          "feature": "new Highland Valley Highway",
+          "side_or_bank": null,
+          "until": "the point of intersection with the old Highland Valley Highway",
+          "distance": null,
+          "quote": "thence in a general westerly direction along the said new Highway to the point of intersection with the old Highland Valley Highway"
+        },
+        {
+          "start": null,
+          "direction": "in a southerly direction",
+          "follow": "road",
+          "feature": "old Highland Valley Highway",
+          "side_or_bank": null,
+          "until": "the point of intersection with the midline of the existing secondary road leading southeasterly to Pukaist Creek",
+          "distance": null,
+          "quote": "thence in a southerly direction along the old Highland Valley Highway to the point of intersection with the midline of the existing secondary road leading southeasterly to Pukaist Creek"
+        },
+        {
+          "start": null,
+          "direction": "southeasterly",
+          "follow": "road",
+          "feature": null,
+          "side_or_bank": "midline",
+          "until": "the point of intersection with the midline of the existing water pipeline",
+          "distance": null,
+          "quote": "thence southeasterly along the midline of the said existing secondary road to the point of intersection with the midline of the existing water pipeline"
+        },
+        {
+          "start": null,
+          "direction": "in a general easterly and southerly direction",
+          "follow": "other",
+          "feature": null,
+          "side_or_bank": "midline",
+          "until": "the point of intersection with the prolongation of the midline of the existing mining road leading southwesterly to Alwin Mines",
+          "distance": null,
+          "quote": "thence in a general easterly and southerly direction along the midline of the said existing water pipeline to the point of intersection with the prolongation of the midline of the existing mining road leading southwesterly to Alwin Mines"
+        },
+        {
+          "start": null,
+          "direction": "in a general southwesterly direction",
+          "follow": "road",
+          "feature": null,
+          "side_or_bank": "midline",
+          "until": "a point one kilometre distant from the active workings of Alwin Mines",
+          "distance": "one kilometre",
+          "quote": "thence in a general southwesterly direction along the said prolongation, the midline of the said existing mining road and the southerly prolongation thereof to a point one kilometre distant from the active workings of Alwin Mines"
+        },
+        {
+          "start": null,
+          "direction": "in a general southerly and easterly direction",
+          "follow": "other",
+          "feature": "Alwin, Valley Copper, Lornex and Highmont Mines",
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": "at least one kilometre",
+          "quote": "thence in a general southerly and easterly direction along a line at least one kilometre distant from the active workings of Alwin, Valley Copper, Lornex and Highmont Mines to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "in M.U. 3-18"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundaries: Commencing at"
+      },
+      {
+        "field": "geometry.steps[0]",
+        "quote": "Commencing at the apex of Gnawed Mountain"
+      },
+      {
+        "field": "geometry.steps[1]",
+        "quote": "thence northerly in a straight line to the point of intersection with the reclaim water line due East of Gnawed Lake"
+      },
+      {
+        "field": "geometry.steps[2]",
+        "quote": "thence in a general easterly direction along the reclaim water line to the point of intersection with the westerly boundary of Highmont Ultimate Tailings Pond"
+      },
+      {
+        "field": "geometry.steps[3]",
+        "quote": "thence in a general southeasterly, easterly and northerly direction along the westerly, southerly and easterly boundaries of the said Tailings Pond and a prolongation thereof to the point of intersection with the fresh water supply line south of Squetankilhats Indian Reserve 15"
+      },
+      {
+        "field": "geometry.steps[4]",
+        "quote": "thence in a general northerly direction along the said water line and a prolongation thereof to the point of intersection with the midline of the Highland Valley Highway"
+      },
+      {
+        "field": "geometry.steps[5]",
+        "quote": "thence in a general westerly direction along the midline of the said highway to the point west of Enquotco Indian Reserve 14 at which the existing gas pipeline crosses the said Highway"
+      },
+      {
+        "field": "geometry.steps[6]",
+        "quote": "thence northeasterly in a straight line to the point of intersection with the natural boundary of Spud Lake at the most easterly point thereof"
+      },
+      {
+        "field": "geometry.steps[7]",
+        "quote": "thence in a general northerly direction along the natural boundary of Spud Lake to the most northerly point thereof"
+      },
+      {
+        "field": "geometry.steps[8]",
+        "quote": "thence northwesterly in a straight line to the point of intersection with the natural boundary of Copper Lake at the most easterly point thereof"
+      },
+      {
+        "field": "geometry.steps[9]",
+        "quote": "thence in a general northerly direction along the natural boundary of Copper Lake to the most northerly point thereof"
+      },
+      {
+        "field": "geometry.steps[10]",
+        "quote": "thence northwesterly in a straight line to the point of intersection with the natural boundary of Bose Lake at the most southerly point thereof"
+      },
+      {
+        "field": "geometry.steps[11]",
+        "quote": "thence in a general northwesterly direction along the natural boundary of Bose Lake to the most westerly point thereof"
+      },
+      {
+        "field": "geometry.steps[12]",
+        "quote": "thence northwesterly in a straight line to the point of intersection with the midline of the existing secondary road west of Bose Lake"
+      },
+      {
+        "field": "geometry.steps[13]",
+        "quote": "thence in a general westerly direction along the midline of said existing secondary road to the point of intersection with the midline of the existing mining road leading to Forge Mountain"
+      },
+      {
+        "field": "geometry.steps[14]",
+        "quote": "thence westerly in a straight line to the point of intersection with the midline of Highland Valley Highway north of Chilthnaux Indian Reserve 12 at which the existing powerline crosses the said Highway"
+      },
+      {
+        "field": "geometry.steps[15]",
+        "quote": "thence in a general westerly direction along the midline of the said Highway to the point of intersection with midline of the new Highland Valley Highway"
+      },
+      {
+        "field": "geometry.steps[16]",
+        "quote": "thence in a general westerly direction along the said new Highway to the point of intersection with the old Highland Valley Highway"
+      },
+      {
+        "field": "geometry.steps[17]",
+        "quote": "thence in a southerly direction along the old Highland Valley Highway to the point of intersection with the midline of the existing secondary road leading southeasterly to Pukaist Creek"
+      },
+      {
+        "field": "geometry.steps[18]",
+        "quote": "thence southeasterly along the midline of the said existing secondary road to the point of intersection with the midline of the existing water pipeline"
+      },
+      {
+        "field": "geometry.steps[19]",
+        "quote": "thence in a general easterly and southerly direction along the midline of the said existing water pipeline to the point of intersection with the prolongation of the midline of the existing mining road leading southwesterly to Alwin Mines"
+      },
+      {
+        "field": "geometry.steps[20]",
+        "quote": "thence in a general southwesterly direction along the said prolongation, the midline of the said existing mining road and the southerly prolongation thereof to a point one kilometre distant from the active workings of Alwin Mines"
+      },
+      {
+        "field": "geometry.steps[21]",
+        "quote": "thence in a general southerly and easterly direction along a line at least one kilometre distant from the active workings of Alwin, Valley Copper, Lornex and Highmont Mines to the point of commencement"
+      }
+    ],
+    "uncertain": [
+      "geometry.steps[20].until",
+      "geometry.steps[21]"
+    ]
+  }
+}

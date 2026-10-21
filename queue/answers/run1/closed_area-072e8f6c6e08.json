@@ -1,0 +1,114 @@
+{
+  "task_id": "closed_area-072e8f6c6e08",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:01:27Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 6-09"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "a point on the Houston to Equity Silver Mine Road approximately 150 metres east of the 36 kilometre mark",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": "approximately 150 metres",
+          "quote": "Commencing at a point on the Houston to Equity Silver Mine Road approximately 150 metres east of the 36 kilometre mark"
+        },
+        {
+          "start": null,
+          "direction": "approximately S 20 W",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the apex of an unnamed peak south of Lu Lake",
+          "distance": "approximately 1.7 kilometres",
+          "quote": "thence approximately 1.7 kilometres at approximately S 20 W to the apex of an unnamed peak south of Lu Lake"
+        },
+        {
+          "start": null,
+          "direction": "approximately S 26 E",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the midline of the Goosley Lake Road",
+          "distance": "approximately 1.85 kilometres",
+          "quote": "thence approximately 1.85 kilometres at approximately S 26 E to the midline of the Goosley Lake Road"
+        },
+        {
+          "start": null,
+          "direction": "approximately N 86 E",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the apex of an unnamed peak",
+          "distance": "approximately 3.2 kilometres",
+          "quote": "thence approximately 3.2 kilometres at approximately N 86 E to the apex of an unnamed peak"
+        },
+        {
+          "start": null,
+          "direction": "approximately N 1 E",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the apex of an unnamed peak",
+          "distance": "approximately 2.55 kilometres",
+          "quote": "thence approximately 2.55 kilometres at approximately N 1 E to the apex of an unnamed peak"
+        },
+        {
+          "start": null,
+          "direction": "approximately N 50 W",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the apex of an unnamed peak",
+          "distance": "approximately 3.9 kilometres",
+          "quote": "thence approximately 3.9 kilometres at approximately N 50 W to the apex of an unnamed peak"
+        },
+        {
+          "start": null,
+          "direction": "approximately S 19 W",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": "approximately 2.2 kilometres",
+          "quote": "thence approximately 2.2 kilometres at approximately S 19 W to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "That part of M.U. 6-09"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "which is contained within the following described boundaries"
+      }
+    ],
+    "uncertain": []
+  }
+}

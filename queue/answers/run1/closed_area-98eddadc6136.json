@@ -1,0 +1,72 @@
+{
+  "task_id": "closed_area-98eddadc6136",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:01:19Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 1-04"
+    },
+    "geometry": {
+      "method": "waterbody_buffer",
+      "road": null,
+      "feature": {
+        "type": "river",
+        "name": "Cowichan River"
+      },
+      "buffer_m": 100,
+      "side": null,
+      "from": {
+        "type": "landmark",
+        "road": null,
+        "name": "Holt Creek Trailhead"
+      },
+      "to": {
+        "type": "boundary",
+        "road": null,
+        "name": "Municipality of Lake Cowichan"
+      },
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "M.U. 1-04"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within 100 m of the high water mark of the Cowichan River"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "the Cowichan River"
+      },
+      {
+        "field": "geometry.buffer_m",
+        "quote": "within 100 m"
+      },
+      {
+        "field": "geometry.from",
+        "quote": "a point starting on the river immediately north of the Holt Creek Trailhead"
+      },
+      {
+        "field": "geometry.to",
+        "quote": "the intersection with the Municipality of Lake Cowichan"
+      }
+    ],
+    "uncertain": [
+      "geometry.side"
+    ]
+  }
+}

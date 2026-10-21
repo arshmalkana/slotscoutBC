@@ -1,0 +1,111 @@
+{
+  "task_id": "closed_area-30e75254a992",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:03:25Z",
+  "answer": {
+    "effect": "no_hunting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 4-18"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "a point on the eastern boundary of Lot 6489, said point being 201.2 m south of the northeast corner of said Lot 6489",
+          "direction": null,
+          "follow": null,
+          "feature": "Lot 6489",
+          "side_or_bank": "eastern boundary",
+          "until": null,
+          "distance": "201.2 m",
+          "quote": "Commencing at a point on the eastern boundary of Lot 6489, said point being 201.2 m south of the northeast corner of said Lot 6489"
+        },
+        {
+          "start": null,
+          "direction": "due West",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": "201.2 m",
+          "quote": "thence due West 201.2 m"
+        },
+        {
+          "start": null,
+          "direction": "due North",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": "804.7 m",
+          "quote": "thence due North 804.7 m"
+        },
+        {
+          "start": null,
+          "direction": "due East",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the westerly limit of the right of way for the Kootenay Forest Products logging road",
+          "distance": "724.2 m more or less",
+          "quote": "thence due East 724.2 m more or less to the westerly limit of the right of way for the Kootenay Forest Products logging road"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "road",
+          "feature": null,
+          "side_or_bank": "westerly limit",
+          "until": "a point due East of the point of commencement",
+          "distance": null,
+          "quote": "thence southerly along the said westerly limit to a point due East of the point of commencement"
+        },
+        {
+          "start": null,
+          "direction": "due West",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": "603.5 m more or less",
+          "quote": "thence due West 603.5 m more or less to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "in M.U. 4-18"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundaries: Commencing at a point"
+      }
+    ],
+    "uncertain": [
+      "geometry.feature",
+      "geometry.steps[1].follow",
+      "geometry.steps[2].follow",
+      "geometry.steps[3].follow",
+      "geometry.steps[4].feature",
+      "geometry.steps[5].follow"
+    ]
+  }
+}

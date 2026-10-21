@@ -1,0 +1,97 @@
+{
+  "task_id": "closed_area-b1deaa6310a3",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:02:58Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "Management Unit 1-05"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the mean high water mark at the southeast corner of the Qualicum National Wildlife Area",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the mean high water mark at the southeast corner of the Qualicum National Wildlife Area"
+        },
+        {
+          "start": null,
+          "direction": "generally easterly",
+          "follow": "other",
+          "feature": null,
+          "side_or_bank": "mean high water mark",
+          "until": "a point that is 400 m directly southwest of the intersection of the mean high water mark and the Department of Defence property line",
+          "distance": "400 m",
+          "quote": "thence generally easterly maintaining a distance of 400 m from the mean high water mark to a point that is 400 m directly southwest of the intersection of the mean high water mark and the Department of Defence property line"
+        },
+        {
+          "start": null,
+          "direction": "directly northeast",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the mean high water mark",
+          "distance": null,
+          "quote": "thence directly northeast to the mean high water mark"
+        },
+        {
+          "start": null,
+          "direction": "generally west",
+          "follow": "shoreline",
+          "feature": null,
+          "side_or_bank": "mean high water mark",
+          "until": "the northeast corner of the Qualicum National Wildlife Area",
+          "distance": null,
+          "quote": "thence generally west following the mean high water mark to the northeast corner of the Qualicum National Wildlife Area"
+        },
+        {
+          "start": null,
+          "direction": "south",
+          "follow": "other",
+          "feature": "Qualicum National Wildlife Area",
+          "side_or_bank": "easterly boundary",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence south along the easterly boundary of the Qualicum National Wildlife Area to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "That portion of Management Unit 1-05"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundaries: Commencing at"
+      }
+    ],
+    "uncertain": [
+      "geometry.steps[1].feature",
+      "geometry.steps[3].feature"
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "task_id": "closed_area-2bd9ae98e085",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:02:12Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Haida Gwaii"
+    },
+    "geometry": {
+      "method": "admin_boundary",
+      "road": null,
+      "feature": {
+        "type": "lot",
+        "name": "Sandspit District Lots 159, 159A, 160, 161, 162, 163, 164, 165, 166, 307, 2143, 2144, 2145 and 1317"
+      },
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "on Haida Gwaii"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "described as: Sandspit District Lots 159, 159A, 160, 161, 162, 163, 164, 165, 166, 307, 2143, 2144, 2145 and 1317"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "Sandspit District Lots 159, 159A, 160, 161, 162, 163, 164, 165, 166, 307, 2143, 2144, 2145 and 1317"
+      }
+    ],
+    "uncertain": []
+  }
+}

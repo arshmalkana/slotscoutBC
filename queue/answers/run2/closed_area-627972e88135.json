@@ -1,0 +1,76 @@
+{
+  "task_id": "closed_area-627972e88135",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:01:02Z",
+  "answer": {
+    "effect": "no_hunting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 6-22 and M.U. 6-26"
+    },
+    "geometry": {
+      "method": "road_buffer",
+      "road": {
+        "name": "access road to the Golden Bear Mine",
+        "source_hint": "unknown"
+      },
+      "feature": null,
+      "buffer_m": 2000,
+      "side": "both",
+      "from": {
+        "type": "road_intersection",
+        "road": "the unnamed road between Dease Lake and Telegraph Creek",
+        "name": null
+      },
+      "to": {
+        "type": "landmark",
+        "road": null,
+        "name": "Golden Bear Mine Site"
+      },
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Hunting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "That portion of M.U. 6-22 and M.U. 6-26"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "Within 2 km on either side of the midline of the access road"
+      },
+      {
+        "field": "geometry.road",
+        "quote": "the midline of the access road to the Golden Bear Mine"
+      },
+      {
+        "field": "geometry.buffer_m",
+        "quote": "Within 2 km"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "on either side of the midline"
+      },
+      {
+        "field": "geometry.from",
+        "quote": "from its intersection with the unnamed road between Dease Lake and Telegraph Creek"
+      },
+      {
+        "field": "geometry.to",
+        "quote": "to the Golden Bear Mine Site"
+      }
+    ],
+    "uncertain": [
+      "geometry.road.source_hint"
+    ]
+  }
+}

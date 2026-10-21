@@ -1,0 +1,43 @@
+{
+  "task_id": "closed_area-51e1c4b66b5f",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:00:56Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Quamichan Land District"
+    },
+    "geometry": {
+      "method": "other",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "Quamichan Land District"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "All that area bounded on the south by the southern boundary of Block 32, Cowichan Lake Land District; on the west by the Mayo Lake Road; on the north by the E. & N. Railway right of way; and on the east by the Skutz Falls Road"
+      }
+    ],
+    "uncertain": []
+  }
+}

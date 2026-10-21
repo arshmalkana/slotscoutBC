@@ -1,0 +1,137 @@
+{
+  "task_id": "closed_area-e4d7759229ff",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:01:27Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Cariboo Land District"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the northeast corner of Lot 131, Cariboo Land District",
+          "direction": null,
+          "follow": null,
+          "feature": "Lot 131, Cariboo Land District",
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the northeast corner of Lot 131, Cariboo Land District"
+        },
+        {
+          "start": null,
+          "direction": "due South",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the southeast corner of Lot 11062, Cariboo Land District",
+          "distance": null,
+          "quote": "thence due South to the southeast corner of Lot 11062, Cariboo Land District"
+        },
+        {
+          "start": null,
+          "direction": "southwesterly",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the most southern portion of Lot 7795, Cariboo Land District",
+          "distance": null,
+          "quote": "thence southwesterly to the most southern portion of Lot 7795, Cariboo Land District"
+        },
+        {
+          "start": null,
+          "direction": "generally westerly",
+          "follow": "lot_line",
+          "feature": "Lot 7795, Cariboo Land District",
+          "side_or_bank": "southern boundary, and the extension thereof",
+          "until": "the mean high water mark of the easterly shore of Jack of Clubs Lake",
+          "distance": null,
+          "quote": "thence in a generally westerly direction along the southern boundary, and the extension thereof, of Lot 7795, Cariboo Land District, to the mean high water mark of the easterly shore of Jack of Clubs Lake"
+        },
+        {
+          "start": null,
+          "direction": "southwesterly",
+          "follow": "shoreline",
+          "feature": "Jack of Clubs Lake",
+          "side_or_bank": null,
+          "until": "the most southerly portion thereof",
+          "distance": null,
+          "quote": "thence southwesterly along the shore of said lake to the most southerly portion thereof"
+        },
+        {
+          "start": null,
+          "direction": "northwesterly",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the intersection of Jack of Clubs Creek Road and Highway 26",
+          "distance": null,
+          "quote": "thence in a northwesterly direction to the intersection of Jack of Clubs Creek Road and Highway 26"
+        },
+        {
+          "start": null,
+          "direction": "northeasterly",
+          "follow": "road",
+          "feature": "Highway 26",
+          "side_or_bank": null,
+          "until": "a point due South of the western boundary of Lot 289, Cariboo Land District",
+          "distance": null,
+          "quote": "thence in a northeasterly direction along said highway to a point due South of the western boundary of Lot 289, Cariboo Land District"
+        },
+        {
+          "start": null,
+          "direction": "due North",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point due West of the northwest corner of Lot 131, Cariboo Land District",
+          "distance": null,
+          "quote": "thence due North to a point due West of the northwest corner of Lot 131, Cariboo Land District"
+        },
+        {
+          "start": null,
+          "direction": "due East",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence due East to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "in the vicinity of Wells, Cariboo Land District"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "which is contained within the following described boundaries: Commencing at"
+      }
+    ],
+    "uncertain": [
+      "geometry.steps[2].follow",
+      "geometry.steps[5].follow"
+    ]
+  }
+}

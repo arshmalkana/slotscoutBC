@@ -1,0 +1,114 @@
+{
+  "task_id": "closed_area-01877715a204",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:01:36Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Range 5, Coast District"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the mouth of Schulbuckhand Creek",
+          "direction": null,
+          "follow": null,
+          "feature": "Schulbuckhand Creek",
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the mouth of Schulbuckhand Creek"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "shoreline",
+          "feature": "Lakelse Lake",
+          "side_or_bank": "east shore",
+          "until": "the mouth of Williams Creek",
+          "distance": null,
+          "quote": "thence northerly along the east shore of Lakelse Lake to the mouth of Williams Creek"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "creek",
+          "feature": "Williams Creek",
+          "side_or_bank": "north bank",
+          "until": "Highway 37",
+          "distance": null,
+          "quote": "thence easterly along the north bank of Williams Creek to Highway 37"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "road",
+          "feature": "Highway 37",
+          "side_or_bank": null,
+          "until": "Schulbuckhand Creek",
+          "distance": null,
+          "quote": "thence southerly along Highway 37 to Schulbuckhand Creek"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "creek",
+          "feature": "Schulbuckhand Creek",
+          "side_or_bank": "north bank",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence westerly along the north bank of Schulbuckhand Creek to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "Range 5, Coast District"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within the following described boundaries"
+      },
+      {
+        "field": "geometry.steps[0]",
+        "quote": "Commencing at the mouth of Schulbuckhand Creek"
+      },
+      {
+        "field": "geometry.steps[1]",
+        "quote": "thence northerly along the east shore of Lakelse Lake to the mouth of Williams Creek"
+      },
+      {
+        "field": "geometry.steps[2]",
+        "quote": "thence easterly along the north bank of Williams Creek to Highway 37"
+      },
+      {
+        "field": "geometry.steps[3]",
+        "quote": "thence southerly along Highway 37 to Schulbuckhand Creek"
+      },
+      {
+        "field": "geometry.steps[4]",
+        "quote": "thence westerly along the north bank of Schulbuckhand Creek to the point of commencement"
+      }
+    ],
+    "uncertain": []
+  }
+}

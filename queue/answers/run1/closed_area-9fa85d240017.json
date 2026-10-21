@@ -1,0 +1,104 @@
+{
+  "task_id": "closed_area-9fa85d240017",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:01:44Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 7-15"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the point of intersection of the westerly boundary of the city of Prince George and the natural boundary of Nechako River on the right bank thereof",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the point of intersection of the westerly boundary of the city of Prince George and the natural boundary of Nechako River on the right bank thereof"
+        },
+        {
+          "start": null,
+          "direction": "in a general southerly direction",
+          "follow": "river",
+          "feature": "Nechako River",
+          "side_or_bank": "right bank",
+          "until": "the southerly boundary of Lot 7639 Cariboo Land District",
+          "distance": null,
+          "quote": "thence in a general southerly direction along the natural boundary of Nechako River on the right bank thereof to the southerly boundary of Lot 7639 Cariboo Land District"
+        },
+        {
+          "start": null,
+          "direction": "due East",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the Canadian National Railway right of way on the easterly boundary thereof",
+          "distance": "approximately 100 m",
+          "quote": "thence due East approximately 100 m to the Canadian National Railway right of way on the easterly boundary thereof"
+        },
+        {
+          "start": null,
+          "direction": "in a general northerly direction",
+          "follow": "other",
+          "feature": "Canadian National Railway right of way",
+          "side_or_bank": "easterly boundary",
+          "until": "the point of intersection with the midline of an unnamed stream flowing westerly into Nechako River near the southerly boundary of Lot 1532",
+          "distance": "approximately 2.2 km",
+          "quote": "thence approximately 2.2 km in a general northerly direction along the easterly boundary of the said railway right of way to the point of intersection with the midline of an unnamed stream flowing westerly into Nechako River near the southerly boundary of Lot 1532"
+        },
+        {
+          "start": null,
+          "direction": "in a general easterly direction",
+          "follow": "creek",
+          "feature": "unnamed stream flowing westerly into Nechako River",
+          "side_or_bank": "midline",
+          "until": "the point of intersection with the westerly boundary of the city of Prince George",
+          "distance": null,
+          "quote": "thence in a general easterly direction along the midline of the said unnamed stream to the point of intersection with the westerly boundary of the city of Prince George"
+        },
+        {
+          "start": null,
+          "direction": "in a general northerly direction",
+          "follow": "district_boundary",
+          "feature": "city of Prince George",
+          "side_or_bank": "westerly boundary",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence in a general northerly direction along the westerly boundary of the city of Prince George to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "That portion of M.U. 7-15"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "which is contained within the following described boundaries"
+      }
+    ],
+    "uncertain": []
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "task_id": "closed_area-7c90e5e9b9ff",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:02:40Z",
+  "answer": {
+    "effect": "shot_only",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Similkameen Division of Yale Land District"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": "inside",
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the point of intersection of the southerly boundary of the City of Penticton and the maximum high water mark of Skaha Lake on the easterly shore thereof",
+          "direction": "southerly, westerly and northerly",
+          "follow": "shoreline",
+          "feature": "Skaha Lake",
+          "side_or_bank": "maximum high water mark",
+          "until": "the point of intersection with the westerly boundary of the City of Penticton",
+          "distance": null,
+          "quote": "Commencing at the point of intersection of the southerly boundary of the City of Penticton and the maximum high water mark of Skaha Lake on the easterly shore thereof and proceeding southerly, westerly and northerly along the maximum high water mark to the point of intersection with the westerly boundary of the City of Penticton"
+        },
+        {
+          "start": null,
+          "direction": "southerly and easterly",
+          "follow": "district_boundary",
+          "feature": "City of Penticton",
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence southerly and easterly along the boundary to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "Firearms Using Shot Only Areas"
+      },
+      {
+        "field": "within",
+        "quote": "in the Similkameen Division of Yale Land District"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundaries: Commencing at"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "contained within the following described boundaries"
+      },
+      {
+        "field": "geometry.steps[0]",
+        "quote": "Commencing at the point of intersection of the southerly boundary of the City of Penticton and the maximum high water mark of Skaha Lake on the easterly shore thereof and proceeding southerly, westerly and northerly along the maximum high water mark to the point of intersection with the westerly boundary of the City of Penticton"
+      },
+      {
+        "field": "geometry.steps[1]",
+        "quote": "thence southerly and easterly along the boundary to the point of commencement"
+      }
+    ],
+    "uncertain": []
+  }
+}
