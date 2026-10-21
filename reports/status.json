@@ -1,6 +1,6 @@
 {
   "month": "2026-10",
-  "updatedAt": "2026-10-20T15:26:13.384Z",
+  "updatedAt": "2026-10-21T16:14:27.161Z",
   "extractor": "agent",
   "autopublish": {
     "configured": false,
@@ -202,9 +202,9 @@
   },
   "extraction": {
     "tasks": 339,
-    "waiting": 214,
-    "run1Done": 125,
-    "run2Done": 125,
+    "waiting": 0,
+    "run1Done": 339,
+    "run2Done": 339,
     "withImages": 37
   },
   "progress": [
@@ -321,22 +321,22 @@
     {
       "step": "extract",
       "part": "run 1 answers",
-      "done": 125,
+      "done": 339,
       "total": 339,
-      "left": 214,
-      "percent": 36,
+      "left": 0,
+      "percent": 100,
       "last": "",
-      "at": "2026-10-20T15:26:13.386Z"
+      "at": "2026-10-21T16:14:27.162Z"
     },
     {
       "step": "extract",
       "part": "run 2 answers",
-      "done": 125,
+      "done": 339,
       "total": 339,
-      "left": 214,
-      "percent": 36,
+      "left": 0,
+      "percent": 100,
       "last": "",
-      "at": "2026-10-20T15:26:13.386Z"
+      "at": "2026-10-21T16:14:27.162Z"
     },
     {
       "step": "build",
@@ -345,8 +345,8 @@
       "total": 254,
       "left": 0,
       "percent": 100,
-      "last": "Closed Areas Regulation, Schedule 3, section 65 (Kalamalka Lake Park): waiting for extraction",
-      "at": "2026-10-20T15:16:17.787Z"
+      "last": "Closed Areas Regulation, Schedule 3, section 65 (Kalamalka Lake Park): needs person",
+      "at": "2026-10-21T16:10:37.232Z"
     },
     {
       "step": "build",
@@ -356,7 +356,7 @@
       "left": 0,
       "percent": 100,
       "last": "DVA-d66840c9-upper_driftwood_deactivation_advertisement",
-      "at": "2026-10-20T15:23:20.521Z"
+      "at": "2026-10-21T16:11:20.515Z"
     },
     {
       "step": "build",
@@ -366,19 +366,19 @@
       "left": 0,
       "percent": 100,
       "last": "build summary written",
-      "at": "2026-10-20T15:23:23.074Z"
+      "at": "2026-10-21T16:11:21.061Z"
     }
   ],
   "rules": {
     "approved": 0,
     "provisional": 0,
-    "candidates": 1,
+    "candidates": 4,
     "retired": 0
   },
   "review": {
-    "thisMonth": 91,
-    "open": 91,
-    "openAllMonths": 91,
+    "thisMonth": 345,
+    "open": 345,
+    "openAllMonths": 345,
     "looserOpen": 1
   },
   "tests": {

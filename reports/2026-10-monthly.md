@@ -1,6 +1,6 @@
 # Monthly report 2026-10
 
-Written 2026-10-20T15:26:13.384Z. Extraction mode: **agent**. AI auto-publishing: **off** (gold set: 0 item(s), not passing yet).
+Written 2026-10-21T16:14:27.161Z. Extraction mode: **agent**. AI auto-publishing: **off** (gold set: 0 item(s), not passing yet).
 
 ## Sources
 
@@ -67,16 +67,16 @@ First pull (baseline): 699 units. Details: `reports/2026-10-changes.md`.
 | split | District Manager PDFs | 46 | 46 | 0 | 100% |
 | split | district road pages | 22 | 22 | 0 | 100% |
 | queue | AI tasks written | 339 | 339 | 0 | 100% |
-| extract | run 1 answers | 125 | 339 | 214 | 36% |
-| extract | run 2 answers | 125 | 339 | 214 | 36% |
+| extract | run 1 answers | 339 | 339 | 0 | 100% |
+| extract | run 2 answers | 339 | 339 | 0 | 100% |
 | build | closed areas | 254 | 254 | 0 | 100% |
 | build | District Manager PDFs | 46 | 46 | 0 | 100% |
 | build | parts | 4 | 4 | 0 | 100% |
 
 ## Extraction and rules
 
-339 extraction task(s) this month (37 with map or scan page images); run 1 125 of 339 done, run 2 125 of 339 done; 214 still waiting for both runs (see `queue/AGENT_TASKS.md`).
-Rule features: 0 approved, 0 provisional, 1 candidate(s) waiting for a person, 0 retired.
+339 extraction task(s) this month (37 with map or scan page images); run 1 339 of 339 done, run 2 339 of 339 done; 0 still waiting for both runs (see `queue/AGENT_TASKS.md`).
+Rule features: 0 approved, 0 provisional, 4 candidate(s) waiting for a person, 0 retired.
 
 ## Tests
 
@@ -85,7 +85,7 @@ Details: `reports/2026-10-test.md`.
 
 ## Open review items
 
-91 open (6 bylaw, 39 dm notice, 13 road notice block, 33 road notice reading). Packet: `review/2026-10/index.html`.
+345 open (6 bylaw, 254 closed area, 39 dm notice, 13 road notice block, 33 road notice reading). Packet: `review/2026-10/index.html`.
 
 1 looser change(s) wait for a person; the live map keeps the older, stricter version until then.
 
