@@ -1,0 +1,119 @@
+{
+  "task_id": "closed_area-d9c45470876b",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T15:59:53Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": null,
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the point of intersection of the midline of the Apex Alpine to Nickel Plate Road and the midline of Sunset Creek",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the point of intersection of the midline of the Apex Alpine to Nickel Plate Road and the midline of Sunset Creek"
+        },
+        {
+          "start": null,
+          "direction": "in a general southerly direction",
+          "follow": "creek",
+          "feature": "Sunset Creek",
+          "side_or_bank": "midline",
+          "until": "the point of intersection with the midline of Cahill Creek",
+          "distance": null,
+          "quote": "thence in a general southerly direction along the midline of Sunset Creek to the point of intersection with the midline of Cahill Creek"
+        },
+        {
+          "start": null,
+          "direction": "in a general southerly direction",
+          "follow": "creek",
+          "feature": "Cahill Creek",
+          "side_or_bank": "midline",
+          "until": "the point of intersection with the midline of Hedley-Nickel Plate Road",
+          "distance": null,
+          "quote": "thence in a general southerly direction along the midline of Cahill Creek to the point of intersection with the midline of Hedley-Nickel Plate Road"
+        },
+        {
+          "start": null,
+          "direction": "in a general southerly direction",
+          "follow": "road",
+          "feature": "Hedley-Nickel Plate Road",
+          "side_or_bank": "midline",
+          "until": null,
+          "distance": "3 290 m",
+          "quote": "thence in a general southerly direction along the midline of the said road a distance of 3 290 m"
+        },
+        {
+          "start": null,
+          "direction": "due West",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": "1 525 m",
+          "quote": "thence due West 1 525 m"
+        },
+        {
+          "start": null,
+          "direction": "due North",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "a point due West of the apex of Lookout Mountain",
+          "distance": "3 900 m",
+          "quote": "thence due North 3 900 m to a point due West of the apex of Lookout Mountain"
+        },
+        {
+          "start": null,
+          "direction": "due East",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the apex of Lookout Mountain",
+          "distance": null,
+          "quote": "thence due East to the apex of Lookout Mountain"
+        },
+        {
+          "start": null,
+          "direction": "more or less east",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence more or less east in a straight line to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "Commencing at the point of intersection"
+      }
+    ],
+    "uncertain": [
+      "within"
+    ]
+  }
+}

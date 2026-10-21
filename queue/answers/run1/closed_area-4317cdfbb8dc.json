@@ -1,0 +1,96 @@
+{
+  "task_id": "closed_area-4317cdfbb8dc",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:00:26Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 1-6"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the most westerly point on Goose Spit",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the most westerly point on Goose Spit"
+        },
+        {
+          "start": null,
+          "direction": "southeasterly",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the most northerly point on Gartley Point",
+          "distance": null,
+          "quote": "thence southeasterly in a straight line to the most northerly point on Gartley Point"
+        },
+        {
+          "start": null,
+          "direction": "in a general northwesterly direction",
+          "follow": "shoreline",
+          "feature": "Comox Harbour",
+          "side_or_bank": "mean high water mark",
+          "until": "the mouth of the Courtenay River",
+          "distance": null,
+          "quote": "thence in a general northwesterly direction following the mean high water mark of Comox Harbour to the mouth of the Courtenay River"
+        },
+        {
+          "start": null,
+          "direction": "northeasterly",
+          "follow": "straight_line",
+          "feature": "Courtenay River",
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "thence northeasterly in a straight line across the mouth of the Courtenay River"
+        },
+        {
+          "start": null,
+          "direction": "in a southeasterly, southwesterly and westerly direction",
+          "follow": "shoreline",
+          "feature": "Comox Harbour",
+          "side_or_bank": "mean high water mark",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence in a southeasterly, southwesterly and westerly direction following the mean high water mark of Comox Harbour to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "in M.U. 1-6"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within the following described boundaries"
+      }
+    ],
+    "uncertain": [
+      "geometry.steps[3].until"
+    ]
+  }
+}

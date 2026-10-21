@@ -1,0 +1,74 @@
+{
+  "task_id": "closed_area-e3ebdc2bc251",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:00:11Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 4-24"
+    },
+    "geometry": {
+      "method": "road_buffer",
+      "road": {
+        "name": "Whiteswan Forest Service Road",
+        "source_hint": "FTEN"
+      },
+      "feature": null,
+      "buffer_m": 50,
+      "side": "both",
+      "from": {
+        "type": "landmark",
+        "road": null,
+        "name": "Inlet Creek Campground"
+      },
+      "to": {
+        "type": "road_intersection",
+        "road": "White-Moscow Forest Service Road",
+        "name": null
+      },
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "That portion of M.U. 4-24"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within 50 m of either side of the Whiteswan Forest Service Road"
+      },
+      {
+        "field": "geometry.road",
+        "quote": "Whiteswan Forest Service Road"
+      },
+      {
+        "field": "geometry.buffer_m",
+        "quote": "50 m"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "either side"
+      },
+      {
+        "field": "geometry.from",
+        "quote": "from Inlet Creek Campground"
+      },
+      {
+        "field": "geometry.to",
+        "quote": "to the junction with the White-Moscow Forest Service Road"
+      }
+    ],
+    "uncertain": []
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "task_id": "closed_area-8f2c2f85631c",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:00:24Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Cariboo Land District"
+    },
+    "geometry": {
+      "method": "admin_boundary",
+      "road": null,
+      "feature": {
+        "type": "lake",
+        "name": "Rose Lake"
+      },
+      "buffer_m": null,
+      "side": "inside",
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "Cariboo Land District"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "Those waters of Rose Lake to the maximum high water mark"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "Those waters of Rose Lake"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "Those waters of Rose Lake to the maximum high water mark"
+      }
+    ],
+    "uncertain": []
+  }
+}

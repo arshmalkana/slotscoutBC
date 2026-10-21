@@ -1,0 +1,69 @@
+{
+  "task_id": "closed_area-929a35580138",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:00:32Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": null,
+    "geometry": {
+      "method": "road_buffer",
+      "road": {
+        "name": "Telkwa-Morice Road",
+        "source_hint": "DRA"
+      },
+      "feature": null,
+      "buffer_m": 400,
+      "side": "both",
+      "from": {
+        "type": "road_intersection",
+        "road": "Telkwa-Morice Road",
+        "name": "Walcott Station Road"
+      },
+      "to": {
+        "type": "km_point",
+        "road": "Telkwa-Morice Road",
+        "name": "a point 3 km distant"
+      },
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "0.4 km on each side of the midline of the Telkwa-Morice Road"
+      },
+      {
+        "field": "geometry.road",
+        "quote": "the midline of the Telkwa-Morice Road"
+      },
+      {
+        "field": "geometry.buffer_m",
+        "quote": "0.4 km"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "on each side"
+      },
+      {
+        "field": "geometry.from",
+        "quote": "commencing from the intersection of the midpoints of Walcott Station Road and the Telkwa-Morice Road"
+      },
+      {
+        "field": "geometry.to",
+        "quote": "continuing in a northerly direction to a point 3 km distant"
+      }
+    ],
+    "uncertain": [
+      "within"
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "task_id": "closed_area-42c72f39fa7c",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:00:41Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 6-20"
+    },
+    "geometry": {
+      "method": "other",
+      "road": null,
+      "feature": {
+        "type": "other",
+        "name": "Cold Fish Lake Camp"
+      },
+      "buffer_m": 1000,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "M.U. 6-20"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "being all areas within 1 km of Cold Fish Lake Camp"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "Cold Fish Lake Camp"
+      },
+      {
+        "field": "geometry.buffer_m",
+        "quote": "within 1 km"
+      }
+    ],
+    "uncertain": []
+  }
+}

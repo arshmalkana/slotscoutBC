@@ -1,0 +1,54 @@
+{
+  "task_id": "closed_area-640aecc71b61",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T15:59:32Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Peace River District"
+    },
+    "geometry": {
+      "method": "other",
+      "road": null,
+      "feature": {
+        "type": "lot",
+        "name": "Lot 1323"
+      },
+      "buffer_m": null,
+      "side": "west",
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "Peace River District"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "being the westerly half of Lot 1323"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "Lot 1323"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "westerly half"
+      }
+    ],
+    "uncertain": []
+  }
+}

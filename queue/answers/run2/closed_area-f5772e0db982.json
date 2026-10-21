@@ -1,0 +1,184 @@
+{
+  "task_id": "closed_area-f5772e0db982",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T15:59:44Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Cedar Land District"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the point of intersection of the midline of Holden Corso Road and the midline of McMillan Road",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the point of intersection of the midline of Holden Corso Road and the midline of McMillan Road"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "road",
+          "feature": "McMillan Road",
+          "side_or_bank": "midline",
+          "until": "the point of intersection with the midline of Walsh Road",
+          "distance": null,
+          "quote": "thence in a southerly direction along the midline of McMillan Road to the point of intersection with the midline of Walsh Road"
+        },
+        {
+          "start": null,
+          "direction": "general easterly",
+          "follow": "road",
+          "feature": "Walsh Road",
+          "side_or_bank": "midline",
+          "until": "the point of intersection with the midline of Nairne Road",
+          "distance": null,
+          "quote": "thence in a general easterly direction along the midline of Walsh Road to the point of intersection with the midline of Nairne Road"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "road",
+          "feature": "Nairne Road",
+          "side_or_bank": "midline",
+          "until": "the point of intersection with the midline of Ryeland Road",
+          "distance": null,
+          "quote": "thence in a southerly direction along the midline of Nairne Road to the point of intersection with the midline of Ryeland Road"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "road",
+          "feature": "Ryeland Road",
+          "side_or_bank": "midline",
+          "until": "the point of intersection with the midline of Cedar Road",
+          "distance": null,
+          "quote": "thence in a westerly direction along the midline of Ryeland Road to the point of intersection with the midline of Cedar Road"
+        },
+        {
+          "start": null,
+          "direction": "general westerly",
+          "follow": "road",
+          "feature": "Cedar Road",
+          "side_or_bank": "midline",
+          "until": "the point of intersection with the midline of McMillan Road",
+          "distance": null,
+          "quote": "thence in a general westerly direction along the midline of Cedar Road to the point of intersection with the midline of McMillan Road"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "road",
+          "feature": "McMillan Road",
+          "side_or_bank": "midline",
+          "until": "the point of intersection with the midline of Sanford Way",
+          "distance": null,
+          "quote": "thence in a northerly direction along the midline of McMillan Road to the point of intersection with the midline of Sanford Way"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "road",
+          "feature": "Sanford Way",
+          "side_or_bank": "midline",
+          "until": "the point of intersection with the midline of Torberg Road",
+          "distance": null,
+          "quote": "thence in a westerly direction along the midline of Sanford Way to the point of intersection with the midline of Torberg Road"
+        },
+        {
+          "start": null,
+          "direction": "general northerly",
+          "follow": "road",
+          "feature": "Torberg Road",
+          "side_or_bank": "midline",
+          "until": "the point of intersection with the midline of Holden Corso Road",
+          "distance": null,
+          "quote": "thence in a general northerly direction along the midline of Torberg Road to the point of intersection with the midline of Holden Corso Road"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "road",
+          "feature": "Holden Corso Road",
+          "side_or_bank": "midline",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence in an easterly direction along the midline of Holden Corso Road to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "Cedar Land District"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundaries: Commencing at"
+      },
+      {
+        "field": "geometry.steps[0]",
+        "quote": "Commencing at the point of intersection of the midline of Holden Corso Road and the midline of McMillan Road"
+      },
+      {
+        "field": "geometry.steps[1]",
+        "quote": "thence in a southerly direction along the midline of McMillan Road to the point of intersection with the midline of Walsh Road"
+      },
+      {
+        "field": "geometry.steps[2]",
+        "quote": "thence in a general easterly direction along the midline of Walsh Road to the point of intersection with the midline of Nairne Road"
+      },
+      {
+        "field": "geometry.steps[3]",
+        "quote": "thence in a southerly direction along the midline of Nairne Road to the point of intersection with the midline of Ryeland Road"
+      },
+      {
+        "field": "geometry.steps[4]",
+        "quote": "thence in a westerly direction along the midline of Ryeland Road to the point of intersection with the midline of Cedar Road"
+      },
+      {
+        "field": "geometry.steps[5]",
+        "quote": "thence in a general westerly direction along the midline of Cedar Road to the point of intersection with the midline of McMillan Road"
+      },
+      {
+        "field": "geometry.steps[6]",
+        "quote": "thence in a northerly direction along the midline of McMillan Road to the point of intersection with the midline of Sanford Way"
+      },
+      {
+        "field": "geometry.steps[7]",
+        "quote": "thence in a westerly direction along the midline of Sanford Way to the point of intersection with the midline of Torberg Road"
+      },
+      {
+        "field": "geometry.steps[8]",
+        "quote": "thence in a general northerly direction along the midline of Torberg Road to the point of intersection with the midline of Holden Corso Road"
+      },
+      {
+        "field": "geometry.steps[9]",
+        "quote": "thence in an easterly direction along the midline of Holden Corso Road to the point of commencement"
+      }
+    ],
+    "uncertain": []
+  }
+}

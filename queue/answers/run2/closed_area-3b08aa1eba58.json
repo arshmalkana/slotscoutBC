@@ -1,0 +1,48 @@
+{
+  "task_id": "closed_area-3b08aa1eba58",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T15:59:26Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 5-8"
+    },
+    "geometry": {
+      "method": "other",
+      "road": null,
+      "feature": {
+        "type": "lot",
+        "name": "Southwest Quarter of Section 3, Township 2, Range 3, Coast District"
+      },
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "in M.U. 5-8"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "That portion of the Southwest Quarter of Section 3, Township 2, Range 3, Coast District, northwest of Snootli Creek"
+      }
+    ],
+    "uncertain": [
+      "geometry.side"
+    ]
+  }
+}

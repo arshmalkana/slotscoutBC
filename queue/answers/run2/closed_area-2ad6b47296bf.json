@@ -1,0 +1,50 @@
+{
+  "task_id": "closed_area-2ad6b47296bf",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:00:09Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 6-13"
+    },
+    "geometry": {
+      "method": "admin_boundary",
+      "road": null,
+      "feature": {
+        "type": "lot",
+        "name": "District Lots 7, 7A, 8, 9, 10, 11, 233, 234, 347, 348, 361, 749, 883, 986, 987, 1759 and 1760 of the Queen Charlotte Land District"
+      },
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "That portion of M.U. 6-13"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "All of the area contained within District Lots"
+      },
+      {
+        "field": "geometry.feature",
+        "quote": "District Lots 7, 7A, 8, 9, 10, 11, 233, 234, 347, 348, 361, 749, 883, 986, 987, 1759 and 1760 of the Queen Charlotte Land District"
+      }
+    ],
+    "uncertain": []
+  }
+}

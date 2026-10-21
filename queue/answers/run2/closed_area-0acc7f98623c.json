@@ -1,0 +1,100 @@
+{
+  "task_id": "closed_area-0acc7f98623c",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T15:59:53Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": null,
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the mouth of Gordon Creek",
+          "direction": null,
+          "follow": null,
+          "feature": "Gordon Creek",
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the mouth of Gordon Creek"
+        },
+        {
+          "start": null,
+          "direction": "up Gordon Creek in a westerly direction",
+          "follow": "creek",
+          "feature": "Gordon Creek",
+          "side_or_bank": null,
+          "until": "the intersection of Gordon Creek and the easterly boundary of the B.C. Hydro powerline right of way",
+          "distance": null,
+          "quote": "thence up Gordon Creek in a westerly direction to the intersection of Gordon Creek and the easterly boundary of the B.C. Hydro powerline right of way"
+        },
+        {
+          "start": null,
+          "direction": "northeasterly",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the intersection of the easterly boundary of the right of way and Mary Ann Creek",
+          "distance": null,
+          "quote": "thence northeasterly to the intersection of the easterly boundary of the right of way and Mary Ann Creek"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "creek",
+          "feature": "Mary Ann Creek",
+          "side_or_bank": "westerly natural boundary",
+          "until": "its confluence with the Fraser River",
+          "distance": null,
+          "quote": "thence southerly down the westerly natural boundary of the Creek to its confluence with the Fraser River"
+        },
+        {
+          "start": null,
+          "direction": "northerly and westerly",
+          "follow": "reserve_boundary",
+          "feature": "Yale Town Number 1 Indian Reserve",
+          "side_or_bank": null,
+          "until": "its southwesterly corner",
+          "distance": null,
+          "quote": "thence northerly and westerly along the boundary of the Yale Town Number 1 Indian Reserve to its southwesterly corner"
+        },
+        {
+          "start": null,
+          "direction": "westerly and southerly",
+          "follow": "river",
+          "feature": "Fraser River",
+          "side_or_bank": "natural boundary",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence westerly and southerly along the natural boundary of the Fraser River to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundaries: Commencing at the mouth of Gordon Creek"
+      }
+    ],
+    "uncertain": [
+      "within",
+      "geometry.steps[2].follow"
+    ]
+  }
+}

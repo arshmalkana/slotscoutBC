@@ -1,0 +1,164 @@
+{
+  "task_id": "closed_area-c55939ae3cf2",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:00:04Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 4-7 and M.U. 4-8"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the confluence of Summit Creek and Bayonne Creek",
+          "direction": "upstream",
+          "follow": "creek",
+          "feature": "Summit Creek",
+          "side_or_bank": "southerly natural boundary",
+          "until": "its intersection with the boundary of Stagleap Park",
+          "distance": null,
+          "quote": "Commencing at the confluence of Summit Creek and Bayonne Creek and proceeding upstream along the southerly natural boundary of Summit Creek to its intersection with the boundary of Stagleap Park"
+        },
+        {
+          "start": null,
+          "direction": "westerly, northerly and southwesterly",
+          "follow": "other",
+          "feature": "Stagleap Park",
+          "side_or_bank": null,
+          "until": "the height of land which forms the easterly watershed boundary of Lost Creek",
+          "distance": null,
+          "quote": "thence proceeding westerly, northerly and southwesterly along the boundary of Stagleap Park to the height of land which forms the easterly watershed boundary of Lost Creek"
+        },
+        {
+          "start": null,
+          "direction": "northerly, westerly and northerly",
+          "follow": "other",
+          "feature": "Lost Creek",
+          "side_or_bank": "easterly and northerly boundary",
+          "until": "the height of land which forms the easterly watershed boundary of Billings Creek",
+          "distance": null,
+          "quote": "thence northerly, westerly and northerly along the height of land which forms the easterly and northerly boundary of the watershed of Lost Creek to the height of land which forms the easterly watershed boundary of Billings Creek"
+        },
+        {
+          "start": null,
+          "direction": "northwesterly",
+          "follow": "other",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the mouth of Billings Creek",
+          "distance": null,
+          "quote": "thence northwesterly along the height of land to the mouth of Billings Creek"
+        },
+        {
+          "start": null,
+          "direction": "upstream",
+          "follow": "creek",
+          "feature": "Sheep Creek",
+          "side_or_bank": "northerly and westerly natural boundary",
+          "until": "the southerly boundary of Darkwoods Forest Lot 2381, Sublot 1",
+          "distance": null,
+          "quote": "thence upstream along the northerly and westerly natural boundary of Sheep Creek to the southerly boundary of Darkwoods Forest Lot 2381, Sublot 1"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": "lot_line",
+          "feature": "Darkwoods Forest Lot 2381, Sublot 1",
+          "side_or_bank": "southerly boundary",
+          "until": "the unnamed tributary of Next Creek which has, at its head, an unnamed lake which is approximately 750 m long and 350 m wide",
+          "distance": "approximately 5.4 km",
+          "quote": "thence proceeding easterly along the boundary for approximately 5.4 km to the unnamed tributary of Next Creek which has, at its head, an unnamed lake which is approximately 750 m long and 350 m wide"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "creek",
+          "feature": "unnamed tributary of Next Creek",
+          "side_or_bank": null,
+          "until": "Blazed Creek Road",
+          "distance": null,
+          "quote": "thence proceeding northerly along the unnamed creek to Blazed Creek Road"
+        },
+        {
+          "start": null,
+          "direction": "northeasterly, easterly and southeasterly",
+          "follow": "road",
+          "feature": "Blazed Creek Road",
+          "side_or_bank": null,
+          "until": "the southern boundary of Darkwoods Forest Lot 2381, Sublot 1",
+          "distance": null,
+          "quote": "thence proceeding northeasterly, easterly and southeasterly along Blazed Creek Road to the southern boundary of Darkwoods Forest Lot 2381, Sublot 1"
+        },
+        {
+          "start": null,
+          "direction": "southwesterly",
+          "follow": "other",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the summit of John Bull mountain",
+          "distance": null,
+          "quote": "thence proceeding southwesterly up the ridge and along the height of land to the summit of John Bull mountain"
+        },
+        {
+          "start": null,
+          "direction": "southeasterly",
+          "follow": "other",
+          "feature": "Bayonne Creek",
+          "side_or_bank": "northeasterly watershed boundary",
+          "until": "the height of land which forms the southwesterly watershed boundary of Placer Creek",
+          "distance": null,
+          "quote": "thence proceeding southeasterly along the height of land which forms part of the northeasterly watershed boundary of Bayonne Creek to the height of land which forms the southwesterly watershed boundary of Placer Creek"
+        },
+        {
+          "start": null,
+          "direction": "southeasterly",
+          "follow": "other",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the mouth of Placer Creek",
+          "distance": null,
+          "quote": "thence proceeding southeasterly along the height of land to the mouth of Placer Creek"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "creek",
+          "feature": "Summit Creek",
+          "side_or_bank": "southerly natural boundary",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence proceeding westerly along the southerly natural boundary of Summit Creek to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "M.U. 4-7 and M.U. 4-8"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within the following described boundaries"
+      }
+    ],
+    "uncertain": []
+  }
+}

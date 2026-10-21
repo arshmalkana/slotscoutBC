@@ -1,0 +1,129 @@
+{
+  "task_id": "closed_area-c9afd1801ed4",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:00:19Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": null,
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the point of intersection of the natural boundary of Kitsumkalum River on the easterly shore thereof and the natural boundary of Skeena River on the northerly shore thereof",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at the point of intersection of the natural boundary of Kitsumkalum River on the easterly shore thereof and the natural boundary of Skeena River on the northerly shore thereof"
+        },
+        {
+          "start": null,
+          "direction": "in a general easterly direction",
+          "follow": "river",
+          "feature": "Skeena River",
+          "side_or_bank": "northerly shore",
+          "until": "the point of intersection with the easterly boundary of L 4355A, Range 5, Coast Land District",
+          "distance": null,
+          "quote": "thence in a general easterly direction along the natural boundary of Skeena River on the northerly shore thereof to the point of intersection with the easterly boundary of L 4355A, Range 5, Coast Land District"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "lot_line",
+          "feature": "L 4355A",
+          "side_or_bank": "easterly boundary",
+          "until": "the point of intersection with Treatment Plant Road",
+          "distance": null,
+          "quote": "thence southerly along the easterly boundary of L 4355A to the point of intersection with Treatment Plant Road"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "road",
+          "feature": "Treatment Plant Road",
+          "side_or_bank": null,
+          "until": "the most southerly point thereof",
+          "distance": null,
+          "quote": "thence southerly along Treatment Plant Road to the most southerly point thereof"
+        },
+        {
+          "start": null,
+          "direction": "due East",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of intersection with the natural boundary of Skeena River on the northerly shore thereof",
+          "distance": null,
+          "quote": "thence due East to the point of intersection with the natural boundary of Skeena River on the northerly shore thereof"
+        },
+        {
+          "start": null,
+          "direction": "in a general westerly direction",
+          "follow": "river",
+          "feature": "Skeena River",
+          "side_or_bank": "northerly shore",
+          "until": "the point of intersection with the midline of Highway 37",
+          "distance": null,
+          "quote": "thence in a general westerly direction along the natural boundary of Skeena River on the northerly shore thereof to the point of intersection with the midline of Highway 37"
+        },
+        {
+          "start": null,
+          "direction": "in a general southerly direction",
+          "follow": "road",
+          "feature": "Highway 37",
+          "side_or_bank": "midline",
+          "until": "the point of intersection with the natural boundary of Skeena River on the southerly shore thereof",
+          "distance": null,
+          "quote": "thence in a general southerly direction along the midline of Highway 37 to the point of intersection with the natural boundary of Skeena River on the southerly shore thereof"
+        },
+        {
+          "start": null,
+          "direction": "in a general westerly direction",
+          "follow": "river",
+          "feature": "Skeena River",
+          "side_or_bank": "southerly shore",
+          "until": "the point due South of the point of commencement",
+          "distance": null,
+          "quote": "thence in a general westerly direction along the natural boundary of Skeena River on the southerly shore thereof to the point due South of the point of commencement"
+        },
+        {
+          "start": null,
+          "direction": "due North",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence due North to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "which is contained within the following described boundaries"
+      }
+    ],
+    "uncertain": [
+      "within"
+    ]
+  }
+}

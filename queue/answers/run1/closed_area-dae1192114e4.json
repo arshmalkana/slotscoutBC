@@ -1,0 +1,114 @@
+{
+  "task_id": "closed_area-dae1192114e4",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:00:30Z",
+  "answer": {
+    "effect": "no_hunting",
+    "exemptions": [],
+    "period": {
+      "start": "June 1",
+      "end": "October 15"
+    },
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 7-33"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": "inside",
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the southeasterly corner of Section 22, Township 85, Range 16, W6",
+          "direction": "northerly",
+          "follow": "lot_line",
+          "feature": "Sections 22, 27 and 34",
+          "side_or_bank": "easterly",
+          "until": "the northeasterly corner of Section 34",
+          "distance": null,
+          "quote": "Commencing at the southeasterly corner of Section 22, Township 85, Range 16, W6 and proceeding northerly along the easterly boundaries of Sections 22, 27 and 34 to the northeasterly corner of Section 34"
+        },
+        {
+          "start": null,
+          "direction": "easterly",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the northwesterly corner of Section 35, Township 85, Range 15, W6",
+          "distance": null,
+          "quote": "thence easterly to the point of intersection with the northwesterly corner of Section 35, Township 85, Range 15, W6"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "lot_line",
+          "feature": "Sections 35, 26 and 23",
+          "side_or_bank": "westerly",
+          "until": "the southwesterly corner of Section 23",
+          "distance": null,
+          "quote": "thence southerly along the westerly boundaries of Sections 35, 26 and 23 to the southwesterly corner of Section 23"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence westerly to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "Seasonal No Hunting Areas"
+      },
+      {
+        "field": "period",
+        "quote": "During the period June 1 to October 15"
+      },
+      {
+        "field": "within",
+        "quote": "that portion of M.U. 7-33"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "contained within the following described boundaries: Commencing at"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "contained within the following described boundaries"
+      },
+      {
+        "field": "geometry.steps[0]",
+        "quote": "Commencing at the southeasterly corner of Section 22, Township 85, Range 16, W6 and proceeding northerly along the easterly boundaries of Sections 22, 27 and 34 to the northeasterly corner of Section 34"
+      },
+      {
+        "field": "geometry.steps[1]",
+        "quote": "thence easterly to the point of intersection with the northwesterly corner of Section 35, Township 85, Range 15, W6"
+      },
+      {
+        "field": "geometry.steps[2]",
+        "quote": "thence southerly along the westerly boundaries of Sections 35, 26 and 23 to the southwesterly corner of Section 23"
+      },
+      {
+        "field": "geometry.steps[3]",
+        "quote": "thence westerly to the point of commencement"
+      }
+    ],
+    "uncertain": [
+      "geometry.steps[1].follow",
+      "geometry.steps[3].follow"
+    ]
+  }
+}

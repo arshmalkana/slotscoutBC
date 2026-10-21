@@ -1,0 +1,120 @@
+{
+  "task_id": "closed_area-0daeb334a4fe",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:00:15Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 4-25"
+    },
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "a point on the natural boundary of Windermere Lake on the easterly shore thereof at the point of intersection with the natural boundary of Windermere Creek on the right bank thereof",
+          "direction": null,
+          "follow": null,
+          "feature": null,
+          "side_or_bank": null,
+          "until": null,
+          "distance": null,
+          "quote": "Commencing at a point on the natural boundary of Windermere Lake on the easterly shore thereof at the point of intersection with the natural boundary of Windermere Creek on the right bank thereof"
+        },
+        {
+          "start": null,
+          "direction": "in a general southerly direction",
+          "follow": "shoreline",
+          "feature": "Windermere Lake",
+          "side_or_bank": "easterly shore",
+          "until": "the south boundary of D.L.8, Kootenay Land District",
+          "distance": null,
+          "quote": "thence in a general southerly direction along the natural boundary of Windermere Lake on the easterly shore thereof to the south boundary of D.L.8, Kootenay Land District"
+        },
+        {
+          "start": null,
+          "direction": "easterly and northerly",
+          "follow": "lot_line",
+          "feature": "D.L.8",
+          "side_or_bank": "southerly and easterly boundaries",
+          "until": "the southerly boundary of Block A, D.L.108",
+          "distance": null,
+          "quote": "thence easterly and northerly along the southerly and easterly boundaries of D.L.8 to the southerly boundary of Block A, D.L.108"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "lot_line",
+          "feature": "Block A, D.L.108",
+          "side_or_bank": "southerly boundary",
+          "until": "the easterly boundary of Highway 93/95 right of way",
+          "distance": null,
+          "quote": "thence westerly along the southerly boundary of Block A, D.L.108 to the easterly boundary of Highway 93/95 right of way"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "road",
+          "feature": "Highway 93/95 right of way, Swansea Road right of way and again Highway 93/95 right of way",
+          "side_or_bank": "easterly boundaries",
+          "until": "the point of intersection with a westerly prolongation of the northerly boundary of D.L.9001",
+          "distance": null,
+          "quote": "thence northerly along the easterly boundaries of Highway 93/95 right of way, Swansea Road right of way and again Highway 93/95 right of way to the point of intersection with a westerly prolongation of the northerly boundary of D.L.9001"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "other",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the natural boundary of Windermere River on the right bank thereof",
+          "distance": null,
+          "quote": "thence westerly along the said prolongation, the southerly boundary of the adjacent unnamed road right of way and a prolongation thereof to the natural boundary of Windermere River on the right bank thereof"
+        },
+        {
+          "start": null,
+          "direction": "in a general southerly direction",
+          "follow": "river",
+          "feature": "Windermere River",
+          "side_or_bank": "right bank",
+          "until": "the intersection with the natural boundary of Windermere Lake on the easterly shore thereof",
+          "distance": null,
+          "quote": "thence in a general southerly direction along the natural boundary of Windermere River on the right bank thereof to the intersection with the natural boundary of Windermere Lake on the easterly shore thereof"
+        },
+        {
+          "start": null,
+          "direction": "in a southerly direction",
+          "follow": "shoreline",
+          "feature": "Windermere Lake",
+          "side_or_bank": "easterly shore",
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence in a southerly direction along the natural boundary of Windermere Lake on the easterly shore thereof to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "in M.U. 4-25"
+      }
+    ],
+    "uncertain": []
+  }
+}

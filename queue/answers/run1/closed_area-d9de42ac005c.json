@@ -1,0 +1,70 @@
+{
+  "task_id": "closed_area-d9de42ac005c",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T16:00:00Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 4-24"
+    },
+    "geometry": {
+      "method": "road_buffer",
+      "road": {
+        "name": "White-Moscow Forest Service Road",
+        "source_hint": "FTEN"
+      },
+      "feature": null,
+      "buffer_m": 50,
+      "side": "both",
+      "from": {
+        "type": "road_intersection",
+        "road": "Whiteswan Forest Service Road",
+        "name": null
+      },
+      "to": {
+        "type": "road_intersection",
+        "road": "Moscow-Home Basin Campground road",
+        "name": null
+      },
+      "steps": []
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "within",
+        "quote": "That portion of M.U. 4-24"
+      },
+      {
+        "field": "geometry.road",
+        "quote": "the White-Moscow Forest Service Road"
+      },
+      {
+        "field": "geometry.buffer_m",
+        "quote": "within 50 m"
+      },
+      {
+        "field": "geometry.side",
+        "quote": "either side"
+      },
+      {
+        "field": "geometry.from",
+        "quote": "from the junction with Whiteswan Forest Service Road"
+      },
+      {
+        "field": "geometry.to",
+        "quote": "to the junction with the Moscow-Home Basin Campground road"
+      }
+    ],
+    "uncertain": []
+  }
+}

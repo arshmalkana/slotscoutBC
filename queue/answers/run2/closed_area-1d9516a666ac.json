@@ -1,0 +1,119 @@
+{
+  "task_id": "closed_area-1d9516a666ac",
+  "run": 2,
+  "mode": "agent",
+  "model": "Claude Code agent mode, fresh subagent",
+  "prompt_version": "closed_area.v1",
+  "schema_id": "closed_area.v1",
+  "produced_at": "2026-10-21T15:59:35Z",
+  "answer": {
+    "effect": "no_shooting",
+    "exemptions": [],
+    "period": null,
+    "within": null,
+    "geometry": {
+      "method": "metes_and_bounds",
+      "road": null,
+      "feature": null,
+      "buffer_m": null,
+      "side": null,
+      "from": null,
+      "to": null,
+      "steps": [
+        {
+          "start": "the mouth of Trust Creek",
+          "direction": "upstream",
+          "follow": "creek",
+          "feature": "Trust Creek",
+          "side_or_bank": "northern natural boundary",
+          "until": "its intersection with Chute Lake Road",
+          "distance": null,
+          "quote": "Commencing at the mouth of Trust Creek and proceeding upstream along the northern natural boundary of Trust Creek to its intersection with Chute Lake Road"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "road",
+          "feature": "Chute Lake Road",
+          "side_or_bank": "eastern edge of the travelled portion",
+          "until": "Naramata Road",
+          "distance": null,
+          "quote": "thence proceeding southerly along the eastern edge of the travelled portion of Chute Lake Road to Naramata Road"
+        },
+        {
+          "start": null,
+          "direction": "southerly",
+          "follow": "road",
+          "feature": "Naramata Road",
+          "side_or_bank": "eastern edge of the travelled portion",
+          "until": "its intersection with Old Main Road",
+          "distance": null,
+          "quote": "thence proceeding southerly along the eastern edge of the travelled portion of Naramata Road to its intersection with Old Main Road"
+        },
+        {
+          "start": null,
+          "direction": "westerly",
+          "follow": "road",
+          "feature": "Old Main Road",
+          "side_or_bank": "southern edge of the travelled portion",
+          "until": "Arawana Creek",
+          "distance": null,
+          "quote": "thence proceeding westerly along the southern edge of the travelled portion of Old Main Road to Arawana Creek"
+        },
+        {
+          "start": null,
+          "direction": "downstream",
+          "follow": "creek",
+          "feature": "Arawana Creek",
+          "side_or_bank": "southern natural boundary",
+          "until": "Okanagan Lake",
+          "distance": null,
+          "quote": "thence proceeding downstream along the southern natural boundary of Arawana Creek to Okanagan Lake"
+        },
+        {
+          "start": null,
+          "direction": "southwesterly",
+          "follow": "straight_line",
+          "feature": "Okanagan Lake",
+          "side_or_bank": null,
+          "until": null,
+          "distance": "100 m",
+          "quote": "thence proceeding southwesterly in a straight line at right angles to the shore of Okanagan Lake at Arawana Creek for a distance of 100 m"
+        },
+        {
+          "start": null,
+          "direction": "northerly",
+          "follow": "shoreline",
+          "feature": "Okanagan Lake",
+          "side_or_bank": "eastern natural boundary",
+          "until": "a point 100 m west of the mouth of Trust Creek",
+          "distance": "100 m",
+          "quote": "thence proceeding northerly parallel to and 100 m distant from the eastern natural boundary of Okanagan Lake to a point 100 m west of the mouth of Trust Creek"
+        },
+        {
+          "start": null,
+          "direction": "east",
+          "follow": "straight_line",
+          "feature": null,
+          "side_or_bank": null,
+          "until": "the point of commencement",
+          "distance": null,
+          "quote": "thence proceeding east in a straight line to the point of commencement"
+        }
+      ]
+    },
+    "quotes": [
+      {
+        "field": "effect",
+        "quote": "No Shooting Areas"
+      },
+      {
+        "field": "geometry.method",
+        "quote": "within the following described boundaries: Commencing at the mouth of Trust Creek"
+      }
+    ],
+    "uncertain": [
+      "within"
+    ]
+  }
+}
