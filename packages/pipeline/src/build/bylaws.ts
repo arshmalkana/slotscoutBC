@@ -85,8 +85,11 @@ export function buildBylaws(month: string, tasks: Task[]): { docs: number; agree
       if (!e || e.status === "reviewed" || e.status === "not_applicable") continue;
       e.status = "in_progress";
       e.bylaw = { ...(e.bylaw ?? {}), title: e.bylaw?.title ?? title, number: e.bylaw?.number ?? number ?? undefined, url: parts[0]!.source.url ?? e.bylaw?.url } as BylawEntry["bylaw"];
-      const note = `Bylaw document found by the pipeline ${today()}; extracted rules wait for a person (review ${month}).`;
-      e.notes = e.notes?.includes("found by the pipeline") ? e.notes.replace(/Bylaw document found by the pipeline[^.]*\.[^.]*\)\./, note) : [e.notes, note].filter(Boolean).join(" ");
+      // Keeps the date the document was first found; points to this month's review.
+      const found = /Bylaw document found by the pipeline (\S+); extracted rules wait for a person \(review [^)]*\)\./;
+      const was = e.notes?.match(found);
+      const note = `Bylaw document found by the pipeline ${was?.[1] ?? today()}; extracted rules wait for a person (review ${month}).`;
+      e.notes = was ? e.notes!.replace(found, note) : [e.notes, note].filter(Boolean).join(" ");
       touchedRegister = true;
     }
   }
