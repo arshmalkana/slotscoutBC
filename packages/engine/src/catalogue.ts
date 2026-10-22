@@ -245,7 +245,7 @@ export const RULES: RuleDefinition[] = [
     verify: false,
     effectText: "A for access only",
     sources: ["mvpr"],
-    citationUrl: `${BCLAWS}/196_99`,
+    citationUrl: `${BCLAWS}/18_2024`,
     spatial: "yes",
   },
   {
