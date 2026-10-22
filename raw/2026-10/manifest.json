@@ -2,17 +2,17 @@
   "month": "2026-10",
   "userAgent": "SlotScoutBot/0.1 (+https://slotscout.ca/about; data@slotscout.ca)",
   "startedAt": "2026-10-19T16:53:43.915Z",
-  "updatedAt": "2026-10-20T15:26:12.410Z",
+  "updatedAt": "2026-10-22T05:29:49.504Z",
   "sources": {
     "bcparks_advisories": {
       "status": "skipped",
       "detail": "planned source, not pulled yet",
-      "at": "2026-10-20T15:26:12.394Z"
+      "at": "2026-10-22T05:29:49.494Z"
     },
     "licensee_notices": {
       "status": "skipped",
       "detail": "planned source, not pulled yet",
-      "at": "2026-10-20T15:26:12.394Z"
+      "at": "2026-10-22T05:29:49.494Z"
     },
     "wmu": {
       "status": "ok",
@@ -121,8 +121,8 @@
     },
     "closed_areas": {
       "status": "partial",
-      "detail": "1 of 5 regulations from copies a person saved in inbox/bclaws; waiting for 190_84, 180_90, 16_2004, 38_2005; repealed, not pulled: 196_99; 1 unconfirmed excerpt(s) in inbox/excerpts",
-      "at": "2026-10-20T15:26:12.400Z"
+      "detail": "1 of 6 regulations from copies a person saved in inbox/bclaws; waiting for 190_84_00_multi, 180_90_00_multi, 16_2004, 38_2005, 18_2024; 1 unconfirmed excerpt(s) in inbox/excerpts",
+      "at": "2026-10-22T05:29:49.497Z"
     },
     "road_notices": {
       "status": "ok",
@@ -1519,20 +1519,8 @@
     {
       "source": "closed_areas",
       "what": "legal text",
-      "error": "no dated copy of 180_90, 16_2004, 38_2005: waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)",
-      "at": "2026-10-20T15:26:12.400Z"
-    },
-    {
-      "source": "closed_areas",
-      "what": "190_84",
-      "error": "Hunting Regulation, B.C. Reg. 190/84: https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84 returned HTTP 404 to a person on 2026-10-20. The current BC Laws document id is needed.",
-      "at": "2026-10-20T15:26:12.400Z"
-    },
-    {
-      "source": "closed_areas",
-      "what": "196_99",
-      "error": "Motor Vehicle Prohibition Regulation, B.C. Reg. 196/99: repealed effective March 1, 2024 by B.C. Reg. 18/2024 (BC Laws page saved by a person 2026-10-20). Which regulation now holds the motor vehicle closures is not confirmed yet.",
-      "at": "2026-10-20T15:26:12.400Z"
+      "error": "no dated copy of 190_84_00_multi, 180_90_00_multi, 16_2004, 38_2005, 18_2024: waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)",
+      "at": "2026-10-22T05:29:49.497Z"
     }
   ]
 }

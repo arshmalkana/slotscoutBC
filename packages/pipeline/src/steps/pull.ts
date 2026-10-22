@@ -183,7 +183,9 @@ async function pullBcLaws(m: Manifest, opts: PullOpts): Promise<void> {
   const waiting = missing.filter((d) => !not_found[d]);
   if (waiting.length) fail(m, "closed_areas", "legal text", `no dated copy of ${waiting.join(", ")}: ${api_confirmed ? "API request failed" : "waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)"}`);
   else clearFailure(m, "closed_areas", "legal text");
-  // What a person found on BC Laws stays visible until they resolve it.
+  // What a person found on BC Laws stays visible until they resolve it (remove it from config.toml).
+  for (const f of m.failures.filter((x) => x.source === "closed_areas" && x.what !== "legal text" && !(x.what in not_found) && !(x.what in repealed)))
+    clearFailure(m, "closed_areas", f.what);
   for (const [doc, note] of Object.entries(not_found)) if (missing.includes(doc)) fail(m, "closed_areas", doc, note);
   for (const [doc, note] of Object.entries(repealed)) fail(m, "closed_areas", doc, note);
   saveManifest(m);
