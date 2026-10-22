@@ -49,12 +49,12 @@ Open `review/2026-10/index.html`. Approve or reject each with `make approve ITEM
 
 ## 4. Failed or missing sources
 
-- **BC Laws, other regulations:** the Hunting Regulation link (`190_84`) returned HTTP 404 to a person on 2026-10-20, so its document id needs correcting in `config.toml`; `180_90`, `16_2004` and `38_2005` are still waiting for a saved copy (or the King's Printer's written API confirmation, then `bclaws.api_confirmed = true`).
-- **Motor Vehicle Prohibition Regulation (196/99):** repealed effective March 1, 2024 by B.C. Reg. 18/2024. It is no longer pulled. Which regulation now holds the motor vehicle closures is not confirmed; the map's motor-vehicle check reads the official MVPR boundary layer.
+- **BC Laws, other regulations (1 of 6 in hand):** five regulations wait for a person's saved copy; `inbox/README.md` lists each with its link and file name. The Hunting Regulation's 404 was the wrong id: it and the Park Regulation are multi-part, so their complete pages are `190_84_00_multi` and `180_90_00_multi` (corrected in `config.toml` on 2026-10-22).
+- **Motor Vehicle Prohibition Regulation:** B.C. Reg. 196/99 was replaced on March 1, 2024 by B.C. Reg. 18/2024 (amended by 265/2024), found 2026-10-22. 18/2024 is now in `bclaws.documents`, and the P7 rule cites it; the map's motor-vehicle check still reads the official MVPR boundary layer.
 - **Bowen Island Municipality:** its robots.txt could not be read, so the browser did not visit; a person saves the bylaw into `inbox/bylaws/muni:Bowen Island Municipality/`.
-- **Region 2 bylaw sites with no firearm bylaw link found** in up to 10 pages of each site's bylaw section: add the document URL under `documents` in `data/bylaw-sites.json`, or save a copy in `inbox/bylaws/<register key>/`.
+- **Region 2 bylaw sites with no firearm bylaw link found (28 of 34)** in up to 10 pages of each site's bylaw section: [Fraser Valley Regional District](https://www.fvrd.ca), [City of Abbotsford](https://www.abbotsford.ca), [City of Mission](https://www.mission.ca), [District of Kent](https://www.kentbc.ca), [Village of Harrison Hot Springs](https://www.harrisonhotsprings.ca), [District of Hope](https://hope.ca), [Metro Vancouver Regional District](https://metrovancouver.org), [City of Maple Ridge](https://www.mapleridge.ca), [City of Pitt Meadows](https://www.pittmeadows.ca), [The Corporation of the Township of Langley](https://www.tol.ca), [City of Surrey](https://www.surrey.ca), [City of Delta](https://www.delta.ca), [City of Coquitlam](https://www.coquitlam.ca), [City of Port Coquitlam](https://www.portcoquitlam.ca), [City of Port Moody](https://www.portmoody.ca), [City of Burnaby](https://www.burnaby.ca), [City of New Westminster](https://www.newwestcity.ca), [City of Vancouver](https://vancouver.ca), [City of North Vancouver](https://www.cnv.org), [The Corporation of the District of North Vancouver](https://www.dnv.org), [District Municipality of West Vancouver](https://westvancouver.ca), [Village of Anmore](https://anmore.com), [Village of Lions Bay](https://www.lionsbay.ca), [City of White Rock](https://www.whiterockcity.ca), [District of Squamish](https://squamish.ca), [Resort Municipality of Whistler](https://www.whistler.ca), [Village of Pemberton](https://www.pemberton.ca), [District of Lillooet](https://lillooet.ca). Add each document URL under `documents` in `data/bylaw-sites.json`, or save a copy in `inbox/bylaws/<register key>/`.
 - **CivicInfo BC bylaw directory:** refuses automated clients and reserves AI use in its robots.txt; not used.
-- **Synopsis maps:** none in `inbox/synopsis/`, so the 90% overlap check could not run.
+- **Synopsis overlap check:** not wired yet. The geometry check accepts a synopsis shape, but nothing reads `inbox/synopsis/` into one, so saving synopsis PDFs there changes nothing until that is built.
 - **Jurisdiction counts:** the Province counts 161 municipalities, 158 electoral areas and 13 local trust areas; the official boundary layers the bylaw register is built from hold 160 and 159. `make validate` warns until a person identifies the one jurisdiction that differs. No spot can turn green from it: every jurisdiction stays grey until its bylaw is reviewed.
 
 ## 5. Problems found and fixed
@@ -64,7 +64,7 @@ Open `review/2026-10/index.html`. Approve or reject each with `make approve ITEM
 - **Regulation splitter:** the full consolidation has a contents list, titles on their own lines and repealed sections; titles are now kept with their own section and repealed sections are left out.
 - **Forced re-pulls:** a forced pull now replaces that month's earlier copy of a source instead of merging stale entries back.
 - **Proxy port after restarts:** the container's proxy port changes when the session restarts; the Docker override now follows it. A build that ran with the stale port had every official-layer lookup fail, and the notice build labelled those "not found"; a failed lookup is now reported as a failure and counted.
-- **Progress for BC Laws:** the count is regulations in hand (1 of 5), not regulations looked for.
+- **Progress for BC Laws:** the count is regulations in hand (now 1 of 6), not regulations looked for; a note a person has resolved in `config.toml` stops being logged as a failure.
 - **Interruptions:** usage limits stopped the readers several times. Answers are one file each, written as soon as they are finished and auto-committed every five minutes, so every stop was resumed, not redone.
 
 ## 6. Known limits (not fixed here)
@@ -72,6 +72,18 @@ Open `review/2026-10/index.html`. Approve or reject each with `make approve ITEM
 - **Gold set:** none yet. Region 2 must be digitised by hand first (Addendum A 7.1); until every threshold passes, AI output only pre-fills a person's work (`ai.autopublish = false`).
 - **Geometry builder:** draws road buffers and whole-area boundaries. Metes-and-bounds walks, creek buffers, contours and "outlined on the attached map" areas go to a person with the extracted steps pre-filled.
 - **Map-only readings:** a road or km point seen on a map image but not in the text or OCR text is shown to the person but never counted.
+- **W5-049 (Sch. 5 s. 49, "Huntingdon and Sumas Mountain"):** the text says "Electoral Area H of the Fraser Valley Regional District" (as amended in 1996). The lookup did not find Area H, so the candidate shape is the whole regional district (13,868 km², marked conservative). The gemini branch argued that the 1996 Area H (Sumas Mountain and Huntingdon) was later absorbed into Abbotsford and Area G and that today's Area H is the Cultus Lake area; that is unverified. A person decides which boundary s. 49 means before approving; until then the item stays open and the area grey.
+
+## 6a. The gemini branch (audited 2026-10-22, then deleted; tip was `c7280f8`)
+
+A separate run of the October pipeline on Windows (5 commits on top of `0260b7b`). Adopted: the official place-name aliases (`data/aliases.json`), Windows path separators in two file filters, and starting the regression script through a shell on Windows. Not adopted, because each one marks something reviewed that no record shows a person checked, and each would turn grey spots green:
+
+- 92 approvals and a legal sign-off, all "by Arsh" on 2026-10-20 with no notes: every item of the earlier, smaller packet.
+- `data/wildlife-coverage.json`: all nine regions set to "reviewed", while only 2 closed areas had been approved. The closed-area check would have shown green inside undrawn closed areas across BC.
+- `data/bylaws.json`: 157 electoral areas set to "not_applicable" with one unsourced note ("no blanket firearm discharge bylaw"), and five bylaws set to "reviewed".
+- W5-049 retired (a closure still in force removed on an unverified boundary argument), and its shape hand-edited instead of built from an official layer.
+- Copies of four BC Laws regulations in a link-annotated format that looks fetched by a tool rather than saved by a person (BC Laws' robots.txt allows only search engines); two were only parts of multi-part regulations. They pointed to the right ids, which were adopted.
+- Its own extraction answers and review items for re-numbered tasks; this branch already has two independent runs for every task.
 
 ## 7. Model use
 
@@ -84,7 +96,8 @@ Open `review/2026-10/index.html`. Approve or reject each with `make approve ITEM
 - [ ] Read the 13 `road_notice_block` items first (they keep P6 grey in 9 districts)
 - [ ] Check the District Manager readings (`dm_notice`): each road counts on the map only after you approve it
 - [ ] Work through the closed-area items, starting with Region 2; check each against the consolidation saved on 2026-10-20
-- [ ] Correct the Hunting Regulation document id and save the remaining BC Laws copies; confirm what replaced B.C. Reg. 196/99
+- [ ] Save the five remaining BC Laws copies listed in `inbox/README.md` (ids corrected; 18/2024 replaced 196/99)
+- [ ] Decide which boundary W5-049 (s. 49) means before approving it
 - [ ] Identify the jurisdiction that differs between the Province's count and the boundary layers
 - [ ] Add Region 2 bylaw document URLs or copies for the jurisdictions still not found
 - [ ] Hand-digitise Region 2 closed areas for the gold set; put people's answers in `gold/answers/`
