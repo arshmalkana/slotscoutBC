@@ -1,6 +1,6 @@
 # Monthly report 2026-10
 
-Written 2026-10-21T16:21:14.232Z. Extraction mode: **agent**. AI auto-publishing: **off** (gold set: 0 item(s), not passing yet).
+Written 2026-10-22T05:30:35.698Z. Extraction mode: **agent**. AI auto-publishing: **off** (gold set: 0 item(s), not passing yet).
 
 ## Sources
 
@@ -10,7 +10,7 @@ Written 2026-10-21T16:21:14.232Z. Extraction mode: **agent**. AI auto-publishing
 | bcparks_advisories | **skipped** | planned source, not pulled yet |
 | buildings | ok | 433681 features, count matches the server |
 | bylaws | **partial** | 5 of 34 starter-set jurisdictions with a bylaw document found; the rest need a person |
-| closed_areas | **partial** | 1 of 5 regulations from copies a person saved in inbox/bclaws; waiting for 190_84, 180_90, 16_2004, 38_2005; repealed, not pulled: 196_99; 1 unconfirmed excerpt(s) in inbox/excerpts |
+| closed_areas | **partial** | 1 of 6 regulations from copies a person saved in inbox/bclaws; waiting for 190_84_00_multi, 180_90_00_multi, 16_2004, 38_2005, 18_2024; 1 unconfirmed excerpt(s) in inbox/excerpts |
 | community_watersheds | ok | 466 features, count matches the server |
 | crown_tenures | ok | 66843 features, count matches the server |
 | cutblocks | ok | 596129 features, count matches the server |
@@ -56,7 +56,7 @@ First pull (baseline): 699 units. Details: `reports/2026-10-changes.md`.
 
 | Step | Part | Done | Total | Left | |
 | --- | --- | ---: | ---: | ---: | --- |
-| pull | BC Laws regulations in hand | 1 | 5 | 4 | 20% |
+| pull | BC Laws regulations in hand | 1 | 6 | 5 | 16% |
 | pull | bylaw sites | 34 | 34 | 0 | 100% |
 | pull | District Manager PDFs | 46 | 46 | 0 | 100% |
 | pull | District Manager PDFs re-read | 46 | 46 | 0 | 100% |
@@ -92,9 +92,7 @@ Details: `reports/2026-10-test.md`.
 ## Failed or missing sources
 
 - **bylaws** muni:Bowen Island Municipality: robots.txt for www.bimbc.ca could not be read, so automated access is not assumed
-- **closed_areas** legal text: no dated copy of 180_90, 16_2004, 38_2005: waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)
-- **closed_areas** 190_84: Hunting Regulation, B.C. Reg. 190/84: https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84 returned HTTP 404 to a person on 2026-10-20. The current BC Laws document id is needed.
-- **closed_areas** 196_99: Motor Vehicle Prohibition Regulation, B.C. Reg. 196/99: repealed effective March 1, 2024 by B.C. Reg. 18/2024 (BC Laws page saved by a person 2026-10-20). Which regulation now holds the motor vehicle closures is not confirmed yet.
+- **closed_areas** legal text: no dated copy of 190_84_00_multi, 180_90_00_multi, 16_2004, 38_2005, 18_2024: waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)
 
 ## Sign-off checklist (people only)
 

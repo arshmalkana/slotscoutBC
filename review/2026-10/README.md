@@ -78,7 +78,7 @@ Open the HTML packet for maps and both runs: `review/2026-10/index.html`. 345 op
 | `closed-area-e48ad9321f` | closed_area | new | Closed Areas Regulation, Schedule 3, section 61 (Elkview Operations) | named area "M.U. 4-23": none | open |
 | `closed-area-ba6bbfb616` | closed_area | new | Closed Areas Regulation, Schedule 3, section 62 (Coal Mountain Operations) | named area "M.U. 4-23": none | open |
 | `closed-area-15d4217357` | closed_area | new | Closed Areas Regulation, Schedule 3, section 63 (Sea to Sky Highway) | validation failed: shape built (no shape could be built) | open |
-| `closed-area-8e46e4bb79` | closed_area | new | Closed Areas Regulation, Schedule 3, section 64 (Callaghan Road) | road "Callaghan Road": none | open |
+| `closed-area-8e46e4bb79` | closed_area | new | Closed Areas Regulation, Schedule 3, section 64 (Callaghan Road) | validation failed: shape built (no shape could be built) | open |
 | `closed-area-8f3b178e69` | closed_area | new | Closed Areas Regulation, Schedule 3, section 65 (Kalamalka Lake Park) | named area "M.U. 8-22": none | open |
 | `closed-area-ccedbbdc24` | closed_area | new | Closed Areas Regulation, Schedule 3, section 66 (Marble Canyon Park) | named area "M.U. 3-17": none | open |
 | `closed-area-463f7e0fce` | closed_area | new | Closed Areas Regulation, Schedule 3, section 67 (Shaman Island) | named area "M.U. 6-25": none | open |

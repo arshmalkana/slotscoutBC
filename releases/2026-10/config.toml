@@ -57,14 +57,16 @@ store_bodies_up_to_features = 120000
 # Set true only after the King's Printer confirms in writing that scheduled API use is allowed (Addendum A 6.2).
 api_confirmed = false
 api_document_url = "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/{doc}/xml"
-documents = ["76_84_00_multi", "190_84", "180_90", "16_2004", "38_2005"]
+# Multi-part regulations are read from their complete page (`<id>_00_multi`), as the Closed Areas Regulation is.
+# 18_2024 is the Motor Vehicle Prohibition Regulation that replaced B.C. Reg. 196/99 on March 1, 2024.
+documents = ["76_84_00_multi", "190_84_00_multi", "180_90_00_multi", "16_2004", "38_2005", "18_2024"]
 
 # What a person found on BC Laws (inbox/notes/). Not pulled; reported so a person can follow up.
+# Resolved 2026-10-22: 196_99 (repealed 2024-03-01) was replaced by B.C. Reg. 18/2024, now in `documents`;
+# 190_84 returned 404 because the Hunting Regulation's complete page is 190_84_00_multi, now in `documents`.
 [bclaws.repealed]
-"196_99" = "Motor Vehicle Prohibition Regulation, B.C. Reg. 196/99: repealed effective March 1, 2024 by B.C. Reg. 18/2024 (BC Laws page saved by a person 2026-10-20). Which regulation now holds the motor vehicle closures is not confirmed yet."
 
 [bclaws.not_found]
-"190_84" = "Hunting Regulation, B.C. Reg. 190/84: https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84 returned HTTP 404 to a person on 2026-10-20. The current BC Laws document id is needed."
 
 [storage]
 commit_pdf_max_mb = 2
