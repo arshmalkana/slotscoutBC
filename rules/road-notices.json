@@ -237,20 +237,18 @@
         {
           "km": 13,
           "extent": "beyond",
-          "status": "closed",
-          "quote": "The road is temporarily closed at approximately 13km due to a rain event which has caused a major washout.",
-          "lat": 52.229406,
-          "lon": -123.306127
+          "status": "washout",
+          "quote": "The road is temporarily closed at approximately 13km due to a rain event which has caused a major washout."
         }
       ],
-      "needsAi": true,
+      "needsAi": false,
       "orgUnit": "DCC",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-67c8e5619bb2",
         "agreed": false,
@@ -574,16 +572,31 @@
       "text": "American FSR 7972.02 Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the American FSR 7972.02 is CLOSED due to a road washout at 6.0 km.",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/east_anderson_fsr_road_closure_april_24_2026.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the American FSR 7972.02 is CLOSED due to a road washout at 6.0 km."
+        },
+        {
+          "km": 6,
+          "extent": "at",
+          "status": "washout",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the American FSR 7972.02 is CLOSED due to a road washout at 6.0 km.",
+          "lat": 49.753015,
+          "lon": -121.340337
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 7972.02 is 22.8 km long as mapped"
@@ -621,16 +634,31 @@
       "text": "American FSR 8123.01 Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the American FSR 8123.01 is CLOSED due to a rockfall at 3.5 km.",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/american_fsr_road_closure_february_9_2026.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the American FSR 8123.01 is CLOSED due to a rockfall at 3.5 km."
+        },
+        {
+          "km": 3.5,
+          "extent": "at",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the American FSR 8123.01 is CLOSED due to a rockfall at 3.5 km.",
+          "lat": 49.427074,
+          "lon": -121.470092
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 8123.01 is 12.9 km long as mapped"
@@ -668,16 +696,25 @@
       "text": "American FSR (8123.01) at 5.0 km",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/fsr_road_closure_notice_december_storm_damage.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 5,
+          "extent": "at",
+          "status": "closed",
+          "quote": "American FSR (8123.01) at 5.0 km",
+          "lat": 49.427413,
+          "lon": -121.489778
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 8123.01 is 12.9 km long as mapped"
@@ -755,16 +792,23 @@
       "text": "ANDERSON (8074.01) Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/71w27vb_fsr_closures_amended_july_22.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "file 8074.01"
@@ -794,16 +838,23 @@
       "text": "ANDERSON 10000 (8074.09) Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/71w27vb_fsr_closures_amended_july_22.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "file 8074.09"
@@ -833,16 +884,23 @@
       "text": "ANDERSON 13000 (8074.07) Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/71w27vb_fsr_closures_amended_july_22.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "file 8074.07"
@@ -872,16 +930,23 @@
       "text": "ANDERSON 13000A (8074.10) Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/71w27vb_fsr_closures_amended_july_22.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "file 8074.10"
@@ -911,16 +976,26 @@
       "text": "Anderson 7300 (8074.02) Anderson 7300 (8074.02): 0+000m – 0+209m",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/807402_03_04_05_06_fs_301_-_fsr_discontinue_and_close.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 0,
+          "kmEnd": 0.209,
+          "extent": "range",
+          "status": "closed",
+          "quote": "Anderson 7300 (8074.02): 0+000m – 0+209m",
+          "lat": 49.702494,
+          "lon": -121.370553
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 8074.02 is 0.0 km long as mapped"
@@ -984,16 +1059,26 @@
       "text": "Anderson 7400 (8074.04) Anderson 7400 (8074.04): 0+000m – 0+378m",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/807402_03_04_05_06_fs_301_-_fsr_discontinue_and_close.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 0,
+          "kmEnd": 0.378,
+          "extent": "range",
+          "status": "closed",
+          "quote": "Anderson 7400 (8074.04): 0+000m – 0+378m",
+          "lat": 49.701752,
+          "lon": -121.367506
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 8074.04 is 0.4 km long as mapped"
@@ -1057,16 +1142,26 @@
       "text": "Anderson 7500 (8074.03) Anderson 7500 (8074.03): 0+000m – 0+322m",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/807402_03_04_05_06_fs_301_-_fsr_discontinue_and_close.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 0,
+          "kmEnd": 0.322,
+          "extent": "range",
+          "status": "closed",
+          "quote": "Anderson 7500 (8074.03): 0+000m – 0+322m",
+          "lat": 49.701319,
+          "lon": -121.366892
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 8074.03 is 0.3 km long as mapped"
@@ -1130,16 +1225,26 @@
       "text": "Anderson 7600 (8074.05 Anderson 7600 (8074.05): 0+000m – 0+794m",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/807402_03_04_05_06_fs_301_-_fsr_discontinue_and_close.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 0,
+          "kmEnd": 0.794,
+          "extent": "range",
+          "status": "closed",
+          "quote": "Anderson 7600 (8074.05): 0+000m – 0+794m",
+          "lat": 49.700484,
+          "lon": -121.365117
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 8074.05 is 0.8 km long as mapped"
@@ -1203,16 +1308,26 @@
       "text": "Anderson 8900 (8074.06) Anderson 8900 (8074.06): 0+000m – 0+222m",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/807402_03_04_05_06_fs_301_-_fsr_discontinue_and_close.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 0,
+          "kmEnd": 0.222,
+          "extent": "range",
+          "status": "closed",
+          "quote": "Anderson 8900 (8074.06): 0+000m – 0+222m",
+          "lat": 49.711134,
+          "lon": -121.368298
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 8074.06 is 0.2 km long as mapped"
@@ -1276,16 +1391,23 @@
       "text": "ANDERSON 9000 (8074.08) Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/71w27vb_fsr_closures_amended_july_22.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "file 8074.08"
@@ -1315,16 +1437,26 @@
       "text": "Bench FSR (5127.10) between 3.9 km and 13 km",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/fsr_road_closure_notice_december_storm_damage.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 3.9,
+          "kmEnd": 13,
+          "extent": "range",
+          "status": "closed",
+          "quote": "Bench FSR (5127.10) between 3.9 km and 13 km",
+          "lat": 49.105883,
+          "lon": -121.648161
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 5127.10 is 20.2 km long as mapped"
@@ -1357,16 +1489,23 @@
       "text": "Bench FSR 5127.01 Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the Bench FSR 5127.01 is CLOSED at 16 KM due unstable conditions and debris blocking the road.",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/bench_fsr_road_closure.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 16,
+          "extent": "at",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the Bench FSR 5127.01 is CLOSED at 16 KM due unstable conditions and debris blocking the road."
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 5127.01 is 12.9 km long as mapped; km 16 is past the mapped end"
@@ -1470,16 +1609,23 @@
       "text": "Bucklin Forest Service Road Notice is given under Section 22.2(3) of the Forest and Range Practices Act the Bucklin Forest Service Road is hereby closed effective immediately beyond 0.8 km in the vicinity of Second Canyon Creek until further notice.",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/bucklin_fsr_-_2019_road_closure.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 0.8,
+          "extent": "beyond",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act the Bucklin Forest Service Road is hereby closed effective immediately beyond 0.8 km in the vicinity of Second Canyon Creek until further notice."
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "no file and section number in the PDF"
@@ -1546,16 +1692,26 @@
       "text": "CANTELON 8400 - (8124.03) CANTELON 8400 - (8124.03): 0+000 to 1+861",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/fs301_december_13_2024.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 0,
+          "kmEnd": 1.861,
+          "extent": "range",
+          "status": "closed",
+          "quote": "CANTELON 8400 - (8124.03): 0+000 to 1+861",
+          "lat": 49.216977,
+          "lon": -121.478451
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 8124.03 is 1.9 km long as mapped"
@@ -1619,16 +1775,25 @@
       "text": "Chilliwack Lake FSR (5127.01) at 0.0 km",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/fsr_road_closure_notice_december_storm_damage.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 0,
+          "extent": "at",
+          "status": "closed",
+          "quote": "Chilliwack Lake FSR (5127.01) at 0.0 km",
+          "lat": 49.095699,
+          "lon": -121.454634
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 5127.01 is 12.9 km long as mapped"
@@ -1660,16 +1825,25 @@
       "text": "Chipmunk Creek FSR (5127.12) at 0.0 km",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/fsr_road_closure_notice_december_storm_damage.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 0,
+          "extent": "at",
+          "status": "closed",
+          "quote": "Chipmunk Creek FSR (5127.12) at 0.0 km",
+          "lat": 49.106008,
+          "lon": -121.647712
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 5127.12 is 12.5 km long as mapped"
@@ -1701,16 +1875,23 @@
       "text": "8337.01 CYPRESS LAKE CYPRESS LAKE ( Length: 6.3745 Km, R/W: 75 m ) DISCONTINUANCE AND CLOSURE APPROVED",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/cypress_lake_fsr_fs301.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "DISCONTINUANCE AND CLOSURE APPROVED"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "file 8337.01"
@@ -1807,16 +1988,23 @@
       "text": "EAST ANDERSON (7972.02) Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/71w27vb_fsr_closures_amended_july_22.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "file 7972.02"
@@ -1914,16 +2102,26 @@
       "text": "EIGHT MILE 5700 - (8144.02) EIGHT MILE 5700 - (8144.02): 0+000 to 0+700",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/fs301_december_13_2024.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 0,
+          "kmEnd": 0.7,
+          "extent": "range",
+          "status": "closed",
+          "quote": "EIGHT MILE 5700 - (8144.02): 0+000 to 0+700",
+          "lat": 49.345846,
+          "lon": -121.235383
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 8144.02 is 1.2 km long as mapped"
@@ -1987,16 +2185,26 @@
       "text": "ELEVEN MILE – (9352.01) ELEVEN MILE – (9352.01): 0+000 to 3+580",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/fs301_december_13_2024.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 0,
+          "kmEnd": 3.58,
+          "extent": "range",
+          "status": "closed",
+          "quote": "ELEVEN MILE – (9352.01): 0+000 to 3+580",
+          "lat": 49.309211,
+          "lon": -121.268727
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 9352.01 is 3.6 km long as mapped"
@@ -2150,16 +2358,26 @@
       "text": "Fifteen Mile Station From: 0 Station To: 0.517",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/1045201_-_discontinue_and_close_with_exhibit_a.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 0,
+          "kmEnd": 0.517,
+          "extent": "range",
+          "status": "closed",
+          "quote": "Station From: 0 Station To: 0.517",
+          "lat": 49.478026,
+          "lon": -121.253594
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 10452.01 is 1.7 km long as mapped"
@@ -2258,16 +2476,25 @@
       "text": "Foley Creek FSR (5127.04) at 0.0 km",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/fsr_road_closure_notice_december_storm_damage.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 0,
+          "extent": "at",
+          "status": "closed",
+          "quote": "Foley Creek FSR (5127.04) at 0.0 km",
+          "lat": 49.067566,
+          "lon": -121.959416
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 5127.04 is 14.8 km long as mapped"
@@ -2387,16 +2614,23 @@
       "text": "Road Name GARNET 9400 Limit loading to 30 tonnes until maintenance items completed.",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/ck-2519_-_2024_inspection_signed.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 3.5,
+          "extent": "at",
+          "status": "restricted",
+          "quote": "Limit loading to 30 tonnes until maintenance items completed."
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "no file and section number in the PDF"
@@ -2657,16 +2891,29 @@
       "text": "Hunter Creek Forest Service Road FSR (6086.01) Structure CK-2157 remains CLOSED and requires further assessment before any vehicle crossings can be authorized. The variance is to provide access and use of the FSR beyond structure CK-2157 and is limited to Hunter Creek Hydro Power L.P. Logging Ltd. (holder of Road Use Permit # 6086-16-02).",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/hunter_fsr_variance_to_closure.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Structure CK-2157 remains CLOSED and requires further assessment before any vehicle crossings can be authorized."
+        },
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "The variance is to provide access and use of the FSR beyond structure CK-2157 and is limited to Hunter Creek Hydro Power L.P. Logging Ltd. (holder of Road Use Permit # 6086-16-02)."
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "file 6086.01"
@@ -2702,16 +2949,25 @@
       "text": "Hunter Creek FSR (6086.01) at 2 km",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/fsr_road_closure_notice_december_storm_damage.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 2,
+          "extent": "at",
+          "status": "closed",
+          "quote": "Hunter Creek FSR (6086.01) at 2 km",
+          "lat": 49.343975,
+          "lon": -121.56926
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 6086.01 is 9.4 km long as mapped"
@@ -2787,18 +3043,18 @@
           "km": null,
           "extent": "unknown",
           "status": "closed",
-          "quote": "Upcoming bridge replacement works for CK-2157 at 2.2 km from July 15, 2026 to September 30, 2026. Road is CLOSED to public vehicle access. For more information read the Hunter Creek FSR Variance to Closure notice (PDF, 310KB)"
+          "quote": "Road is CLOSED to public vehicle access."
         }
       ],
-      "needsAi": true,
+      "needsAi": false,
       "postedOn": "2026-07-14",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-d744d0570ff0",
         "agreed": false,
@@ -2824,16 +3080,25 @@
       "text": "Jones Lake FSR (8149.01) at 12 km",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/fsr_road_closure_notice_december_storm_damage.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 12,
+          "extent": "at",
+          "status": "closed",
+          "quote": "Jones Lake FSR (8149.01) at 12 km",
+          "lat": 49.221194,
+          "lon": -121.604792
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 8149.01 is 12.2 km long as mapped"
@@ -2930,16 +3195,23 @@
       "text": "MOWHOKAM CREEK (9019.02) Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/71w27vb_fsr_closures_amended_july_22.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "file 9019.02"
@@ -2969,16 +3241,25 @@
       "text": "Mowhokam East FSR (8019.03) Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the Mowhokam East FSR (8019.03) is hereby closed at Bridge CK-2210 located at approximately 6.3km on the Mowhokam East FSR until further notice.",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/mowhokam_east_fsr_closure.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 6.3,
+          "extent": "beyond",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the Mowhokam East FSR (8019.03) is hereby closed at Bridge CK-2210 located at approximately 6.3km on the Mowhokam East FSR until further notice.",
+          "lat": 50.097581,
+          "lon": -121.354052
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 8019.03 is 10.3 km long as mapped"
@@ -3169,16 +3450,23 @@
       "text": "NAHATLATCH RIVER (6996.01) Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/71w27vb_fsr_closures_amended_july_22.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "file 6996.01"
@@ -3208,16 +3496,23 @@
       "text": "NORTH AINSLIE CREEK (8019.01) Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/71w27vb_fsr_closures_amended_july_22.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "file 8019.01"
@@ -3247,16 +3542,23 @@
       "text": "NORTH BEND (7549.01) Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/71w27vb_fsr_closures_amended_july_22.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "file 7549.01"
@@ -3286,16 +3588,25 @@
       "text": "Peers FSR 8126.01 Pursuant to section 6 of the Forest Service Road Use Regulation regarding traffic control devices to restrict access, authorization for the installation, maintenance and operation of a gate to be located at 1.7 km on the Peers FSR as shown and described on the attached map is hereby granted to:",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/ac8126-19-01_bcts.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 1.7,
+          "extent": "at",
+          "status": "gated",
+          "quote": "Pursuant to section 6 of the Forest Service Road Use Regulation regarding traffic control devices to restrict access, authorization for the installation, maintenance and operation of a gate to be located at 1.7 km on the Peers FSR as shown and described on the attached map is hereby granted to:",
+          "lat": 49.380601,
+          "lon": -121.303627
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 8126.01 is 7.6 km long as mapped"
@@ -3364,16 +3675,23 @@
       "text": "5127.19 CHILLIWACK RIVER RADIUM DISCONTINUANCE AND CLOSURE APPROVED",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/radium_fsr_fs301.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "DISCONTINUANCE AND CLOSURE APPROVED"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "file 5127.19"
@@ -3403,16 +3721,23 @@
       "text": "SCUZZY CREEK (8127.01) Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/71w27vb_fsr_closures_amended_july_22.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "file 8127.01"
@@ -3540,16 +3865,23 @@
       "text": "SOUTH AINSLIE CREEK (9703.01) Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/71w27vb_fsr_closures_amended_july_22.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "file 9703.01"
@@ -3579,16 +3911,26 @@
       "text": "SOUTH AINSLIE TWO – (9703.02) SOUTH AINSLIE TWO – (9703.02): 0+000 to 2+418",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/fs301_december_13_2024.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 0,
+          "kmEnd": 2.418,
+          "extent": "range",
+          "status": "closed",
+          "quote": "SOUTH AINSLIE TWO – (9703.02): 0+000 to 2+418",
+          "lat": 49.932837,
+          "lon": -121.424801
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 9703.02 is 2.4 km long as mapped"
@@ -3621,16 +3963,23 @@
       "text": "SOUTH AINSLIE TWO (9703.02) Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/71w27vb_fsr_closures_amended_july_22.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "file 9703.02"
@@ -3691,16 +4040,25 @@
       "text": "Sowaqua FSR (7004.01) at 0.0 km",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/fsr_road_closure_notice_december_storm_damage.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 0,
+          "extent": "at",
+          "status": "closed",
+          "quote": "Sowaqua FSR (7004.01) at 0.0 km",
+          "lat": 49.448068,
+          "lon": -121.268058
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 7004.01 is 38.7 km long as mapped"
@@ -3731,16 +4089,23 @@
       "text": "Squeah Forest Service Road Notice is given under Section 22.2(3) of the Forest and Range Practices Act the Squeah Forest Service Road is hereby closed effective immediately until further notice.",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/squeah_fsr_-_2020_road_closure.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act the Squeah Forest Service Road is hereby closed effective immediately until further notice."
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "no file and section number in the PDF"
@@ -3807,16 +4172,23 @@
       "text": "STOYOMA (7972.03) Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/71w27vb_fsr_closures_amended_july_22.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "file 7972.03"
@@ -3846,16 +4218,23 @@
       "text": "STOYOMA 3400 (7972 04) Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/71w27vb_fsr_closures_amended_july_22.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "file 7972.04"
@@ -3885,16 +4264,23 @@
       "text": "STOYOMA 6200 (7972.05) Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/71w27vb_fsr_closures_amended_july_22.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "file 7972.05"
@@ -3924,16 +4310,23 @@
       "text": "STOYOMA 6200A (7972.06) Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/71w27vb_fsr_closures_amended_july_22.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "file 7972.06"
@@ -4033,16 +4426,23 @@
       "text": "UTZLIUS (7972.01) Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack/71w27vb_fsr_closures_amended_july_22.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act, the July 21st, 2026, closure has been amended, the following Forest Service Roads are CLOSED until further notice due to V11090, V10755 and V10742 wildfire activity:"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DCK",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "file 7972.01"
@@ -4681,21 +5081,21 @@
       "id": "DCS|planned bridge maintenance|2026-09-03",
       "points": [
         {
-          "km": null,
-          "extent": "unknown",
-          "status": "restricted",
+          "km": 21,
+          "extent": "at",
+          "status": "bridge_out",
           "quote": "Moosecamp 21km - Estimated Outages September 1 to September 30"
         }
       ],
-      "needsAi": true,
+      "needsAi": false,
       "postedOn": "2026-09-03",
       "orgUnit": "DCS",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-b52b74a709de",
         "agreed": true,
@@ -4982,21 +5382,21 @@
       "id": "DCS|7670.01|2026-09-03",
       "points": [
         {
-          "km": null,
-          "extent": "unknown",
-          "status": "restricted",
+          "km": 0,
+          "extent": "beyond",
+          "status": "closed",
           "quote": "Access to 0 km obstructed near Highway 99"
         }
       ],
-      "needsAi": true,
+      "needsAi": false,
       "postedOn": "2026-09-03",
       "orgUnit": "DCS",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-7236bbb51a24",
         "agreed": true,
@@ -5022,16 +5422,23 @@
       "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/cascades-road-safety-information",
       "pdfs": [],
       "id": "DCS|7649.01|2026-09-03",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 60,
+          "extent": "beyond",
+          "status": "caution",
+          "quote": "Travel not recommended beyond 60 km."
+        }
+      ],
+      "needsAi": false,
       "postedOn": "2026-09-03",
       "orgUnit": "DCS",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-2dfa8620da6e",
         "agreed": true,
@@ -5088,21 +5495,28 @@
       "id": "DKA|7458.01|2023-09-19",
       "points": [
         {
+          "km": 0,
+          "kmEnd": 18,
+          "extent": "range",
+          "status": "caution",
+          "quote": "Road heavily impacted by wildfire from 0km to 18km."
+        },
+        {
           "km": null,
           "extent": "unknown",
           "status": "closed",
-          "quote": "Road heavily impacted by wildfire from 0km to 18km. Do NOT stop between 0 and 18km. NO ACCESS during rain events."
+          "quote": "NO ACCESS during rain events."
         }
       ],
-      "needsAi": true,
+      "needsAi": false,
       "postedOn": "2023-09-19",
       "orgUnit": "DKA",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-f5b65a1fa713",
         "agreed": false,
@@ -5267,21 +5681,22 @@
       "id": "DKA|8631.01|2026-09-28",
       "points": [
         {
-          "km": null,
-          "extent": "unknown",
+          "km": 0,
+          "kmEnd": 2.3,
+          "extent": "range",
           "status": "closed",
           "quote": "Planned road upgrade between 0km to 2.3km scheduled for September 28 and October 31, 2026. No Access during that time."
         }
       ],
-      "needsAi": true,
+      "needsAi": false,
       "postedOn": "2026-09-28",
       "orgUnit": "DKA",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-8150c3e15b48",
         "agreed": true,
@@ -5311,30 +5726,20 @@
       "points": [
         {
           "km": 20,
-          "extent": "beyond",
+          "extent": "at",
           "status": "closed",
-          "quote": "There is no access crossing the 20km section anymore but there is access from the West and South to the FSR section past the 20km section.",
-          "lat": 51.590599,
-          "lon": -119.451612
-        },
-        {
-          "km": 20,
-          "extent": "beyond",
-          "status": "closed",
-          "quote": "There is no access crossing the 20km section anymore but there is access from the West and South to the FSR section past the 20km section.",
-          "lat": 51.590599,
-          "lon": -119.451612
+          "quote": "There is no access crossing the 20km section anymore but there is access from the West and South to the FSR section past the 20km section."
         }
       ],
-      "needsAi": true,
+      "needsAi": false,
       "postedOn": "2025-11-13",
       "orgUnit": "DKA",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-92443fbd9a1f",
         "agreed": false,
@@ -5612,21 +6017,21 @@
       "id": "DKA|0564.03|2026-09-19",
       "points": [
         {
-          "km": null,
-          "extent": "unknown",
+          "km": 0.3,
+          "extent": "at",
           "status": "closed",
           "quote": "Planned railway crossing work by CN Rail at 0.3km September 19, 2026. Work will commence at1800hrs. No access during the work."
         }
       ],
-      "needsAi": true,
+      "needsAi": false,
       "postedOn": "2026-09-19",
       "orgUnit": "DKA",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-d35c4cfa553b",
         "agreed": false,
@@ -5866,21 +6271,22 @@
       "id": "DKA|5451.01|2026-09-01",
       "points": [
         {
-          "km": null,
-          "extent": "unknown",
+          "km": 4,
+          "kmEnd": 5,
+          "extent": "range",
           "status": "closed",
-          "quote": "Road repair is planned for Scottie Creek FSR from September 1 to September 25, 2026 at 4km to 5km. There will be no access through the worksite between 7am and 6pm. No detour available."
+          "quote": "There will be no access through the worksite between 7am and 6pm."
         }
       ],
-      "needsAi": true,
+      "needsAi": false,
       "postedOn": "2026-09-01",
       "orgUnit": "DKA",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-c9412ce03a2c",
         "agreed": true,
@@ -6072,21 +6478,21 @@
       "id": "DMH|6315.15|2025-05-27",
       "points": [
         {
-          "km": null,
-          "extent": "unknown",
-          "status": "restricted",
-          "quote": "Bridge closure at 0.05km on the Bonaparte-Komori Cut off. There is no estimated time for repairs or opening."
+          "km": 0.05,
+          "extent": "beyond",
+          "status": "bridge_out",
+          "quote": "Bridge closure at 0.05km on the Bonaparte-Komori Cut off."
         }
       ],
-      "needsAi": true,
+      "needsAi": false,
       "postedOn": "2025-05-27",
       "orgUnit": "DMH",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-4a79977a9c88",
         "agreed": false,
@@ -6143,21 +6549,21 @@
       "id": "DMH|6411.01|2025-05-27",
       "points": [
         {
-          "km": null,
-          "extent": "unknown",
+          "km": 7,
+          "extent": "beyond",
           "status": "restricted",
           "quote": "ATV/Snowmobile Access only at approximately 7km."
         }
       ],
-      "needsAi": true,
+      "needsAi": false,
       "postedOn": "2025-05-27",
       "orgUnit": "DMH",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-8c70e4ba161f",
         "agreed": true,
@@ -6225,16 +6631,23 @@
       "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/nadina-natural-resource-district-road-safety-information",
       "pdfs": [],
       "id": "DND|maxan thompson connector 7735 26|2026-09-08",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 17,
+          "extent": "at",
+          "status": "closed",
+          "quote": "Please be advised that BCTS Babine will be closing the Maxan Thompson Connector FSR at 17 km for mandatory bridge repairs."
+        }
+      ],
+      "needsAi": false,
       "postedOn": "2026-09-08",
       "orgUnit": "DND",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-83206bc5517e",
         "agreed": false,
@@ -6259,16 +6672,23 @@
       "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/nadina-natural-resource-district-road-safety-information",
       "pdfs": [],
       "id": "DND|morice river 4656 01|2026-09-04",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 33,
+          "extent": "at",
+          "status": "caution",
+          "quote": "There is a failing culvert at 33 km on the Morice River FSR which has caused a hole in the running surface of the road."
+        }
+      ],
+      "needsAi": false,
       "postedOn": "2026-09-04",
       "orgUnit": "DND",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-59378955a6ad",
         "agreed": false,
@@ -6930,21 +7350,21 @@
       "id": "DOS|7271.01|2025-09-15",
       "points": [
         {
-          "km": null,
-          "extent": "unknown",
-          "status": "closed",
-          "quote": "Road is washed-out at 45 km, this includes bridge K1066. Crews are currently assessing the road washout. There is no vehicle access beyond this point. Message is intended for wide distribution. There is no timeline on a reopening for this road."
+          "km": 45,
+          "extent": "beyond",
+          "status": "washout",
+          "quote": "Road is washed-out at 45 km, this includes bridge K1066."
         }
       ],
-      "needsAi": true,
+      "needsAi": false,
       "postedOn": "2025-09-15",
       "orgUnit": "DOS",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-adf87b7adf9d",
         "agreed": false,
@@ -7321,16 +7741,23 @@
       "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/prince-george-natural-resource-district-road-safety-information",
       "pdfs": [],
       "id": "DPG|7141.01|2026-10-08",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 11.5,
+          "extent": "at",
+          "status": "caution",
+          "quote": "Be advised of bridge maintenance work at Bowron Bridge located at +/- 11.5 km on the Bowron FSR."
+        }
+      ],
+      "needsAi": false,
       "postedOn": "2026-10-08",
       "orgUnit": "DPG",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-3b209d4870dc",
         "agreed": false,
@@ -7569,19 +7996,17 @@
           "km": 1,
           "extent": "beyond",
           "status": "bridge_out",
-          "quote": "​Bridge G1-234 crossing Hominka River headwater (approximately 1km on Chuc 20600 FSR) load rating downrated to 0 tonnes.",
-          "lat": 54.758619,
-          "lon": -121.742618
+          "quote": "Bridge G1-234 crossing Hominka River headwater (approximately 1km on Chuc 20600 FSR) load rating downrated to 0 tonnes. Impassable."
         }
       ],
-      "needsAi": true,
+      "needsAi": false,
       "orgUnit": "DPG",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-27cbe81c8759",
         "agreed": false,
@@ -7645,21 +8070,21 @@
       "id": "DPG|chuchinka colbourne|2026-07-16",
       "points": [
         {
-          "km": null,
-          "extent": "unknown",
-          "status": "closed",
+          "km": 861.2,
+          "extent": "beyond",
+          "status": "restricted",
           "quote": "Repairs on bridge G1-158 at 861.2km from July 22 to July 24, 2026. Limited to no access will be available while repair are being made."
         }
       ],
-      "needsAi": true,
+      "needsAi": false,
       "postedOn": "2026-07-16",
       "orgUnit": "DPG",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-2e98b98eea59",
         "agreed": false,
@@ -7686,22 +8111,21 @@
       "id": "DPG|5506.04|undated",
       "points": [
         {
-          "km": 4,
-          "extent": "beyond",
-          "status": "deactivated",
-          "quote": "Deactivation planned for 4km in front of former Reynolds Creek crossing.",
-          "lat": 54.557325,
-          "lon": -122.579238
+          "km": 874,
+          "kmEnd": 878,
+          "extent": "range",
+          "status": "bridge_out",
+          "quote": "874km to 878km (Reynolds Creek). Bridge is removed."
         }
       ],
-      "needsAi": true,
+      "needsAi": false,
       "orgUnit": "DPG",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-436cb9ce3a27",
         "agreed": true,
@@ -8023,15 +8447,15 @@
       "pdfs": [],
       "id": "DPG|8493.01|2026-08-17",
       "points": [],
-      "needsAi": true,
+      "needsAi": false,
       "postedOn": "2026-08-17",
       "orgUnit": "DPG",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-dcd926671461",
         "agreed": true,
@@ -8172,30 +8596,32 @@
       "id": "DPG|8493.02|undated",
       "points": [
         {
+          "km": 5.6,
+          "extent": "at",
+          "status": "caution",
+          "quote": "Bridge at 5.6km downrated to 30 tonnes."
+        },
+        {
           "km": 9.9,
-          "extent": "beyond",
-          "status": "closed",
-          "quote": "Bridge at 9.9km (G3-029) downrated to 64 tonnes Bridge at 15.8km downrated to 5 tonnes (Listed under: Structures closed and downrated.)",
-          "lat": 53.189071,
-          "lon": -120.319376
+          "extent": "at",
+          "status": "caution",
+          "quote": "Bridge at 9.9km (G3-029) downrated to 64 tonnes"
         },
         {
           "km": 15.8,
-          "extent": "beyond",
-          "status": "closed",
-          "quote": "Bridge at 9.9km (G3-029) downrated to 64 tonnes Bridge at 15.8km downrated to 5 tonnes (Listed under: Structures closed and downrated.)",
-          "lat": 53.157381,
-          "lon": -120.384852
+          "extent": "at",
+          "status": "caution",
+          "quote": "Bridge at 15.8km downrated to 5 tonnes"
         }
       ],
-      "needsAi": true,
+      "needsAi": false,
       "orgUnit": "DPG",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-1c9098e8d135",
         "agreed": false,
@@ -10069,16 +10495,37 @@
       "text": "Bill Brown Forest Service Road (8229.01) Notice is given under Section 22.2(3) of the Forest and Range Practices Act that the Bill Brown Forest Service Road (8229.01) is hereby closed at 0.5 km effective immediately until further notice. Bridge Closure No Vehicle Access",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/haida-gwaii/2024_06_07_bill_brown_closure.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 0.5,
+          "extent": "at",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act that the Bill Brown Forest Service Road (8229.01) is hereby closed at 0.5 km effective immediately until further notice.",
+          "lat": 53.414909,
+          "lon": -132.526741
+        },
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Bridge Closure"
+        },
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "No Vehicle Access"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DQC",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 8229.01 is 6.6 km long as mapped"
@@ -10157,16 +10604,39 @@
       "text": "Bonanza FSR 8229.07 Notice is given under Section 22.2(3) of the Forest and Range Practices Act that the Bonanza FSR (8229.07) is hereby closed at 14.0 km effective immediately until further notice. This action is in response to the washout of a creek crossing located at 14km posing a safety risk to road users. Closure Location",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/haida-gwaii/bonanza_fsr_822907_closure.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 14,
+          "extent": "beyond",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act that the Bonanza FSR (8229.07) is hereby closed at 14.0 km effective immediately until further notice.",
+          "lat": 53.436609,
+          "lon": -132.489419
+        },
+        {
+          "km": 14,
+          "extent": "at",
+          "status": "washout",
+          "quote": "This action is in response to the washout of a creek crossing located at 14km posing a safety risk to road users.",
+          "lat": 53.436609,
+          "lon": -132.489419
+        },
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Closure Location"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DQC",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 8229.07 is 22.7 km long as mapped"
@@ -10266,16 +10736,25 @@
       "text": "Delkatla Creek FSR (10891.01) Notice is given under Section 22.2(3) of the Forest and Range Practices Act that the Delkatla Creek FSR (10891.01) is hereby closed at 2.8 km effective immediately until further notice.",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/haida-gwaii/delkatla_10891_closure.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 2.8,
+          "extent": "beyond",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act that the Delkatla Creek FSR (10891.01) is hereby closed at 2.8 km effective immediately until further notice.",
+          "lat": 54.000088,
+          "lon": -132.096697
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DQC",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 10891.01 is 3.8 km long as mapped"
@@ -10375,16 +10854,47 @@
       "text": "Hangover FSR 8229.06 Notice is given under Section 22.2(3) of the Forest and Range Practices Act that the Hangover FSR (8229.06) is hereby closed at 0.0 km effective immediately until further notice. This action is in response to the current condition of the Bonanza River Bridge at 0km timber rails and a landslide at 3.4km, posing a safety risk to road users. Closure Location",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/haida-gwaii/hanagover_fsr_822906_closure.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 0,
+          "extent": "beyond",
+          "status": "closed",
+          "quote": "Notice is given under Section 22.2(3) of the Forest and Range Practices Act that the Hangover FSR (8229.06) is hereby closed at 0.0 km effective immediately until further notice.",
+          "lat": 53.412681,
+          "lon": -132.520464
+        },
+        {
+          "km": 0,
+          "extent": "at",
+          "status": "caution",
+          "quote": "This action is in response to the current condition of the Bonanza River Bridge at 0km timber rails and a landslide at 3.4km, posing a safety risk to road users.",
+          "lat": 53.412681,
+          "lon": -132.520464
+        },
+        {
+          "km": 3.4,
+          "extent": "at",
+          "status": "caution",
+          "quote": "This action is in response to the current condition of the Bonanza River Bridge at 0km timber rails and a landslide at 3.4km, posing a safety risk to road users.",
+          "lat": 53.438339,
+          "lon": -132.531213
+        },
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Closure Location"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DQC",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 8229.06 is 8.2 km long as mapped"
@@ -10694,20 +11204,20 @@
       "id": "DRM|jumbo creek|undated",
       "points": [
         {
-          "km": null,
-          "extent": "unknown",
-          "status": "restricted",
-          "quote": "7825.01 (October 13, 2026) Maintenance will be occurring on bridge N2- 060 located at 1.3km of Jumbo Creek FSR on October 13, 2026. Bridge work will begin at 7am and will take all day. The bridge will not re-open until October 14, 2026."
+          "km": 1.3,
+          "extent": "beyond",
+          "status": "bridge_out",
+          "quote": "Maintenance will be occurring on bridge N2- 060 located at 1.3km of Jumbo Creek FSR on October 13, 2026. Bridge work will begin at 7am and will take all day. The bridge will not re-open until October 14, 2026."
         }
       ],
-      "needsAi": true,
+      "needsAi": false,
       "orgUnit": "DRM",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-34ab84673962",
         "agreed": false,
@@ -10799,19 +11309,19 @@
         {
           "km": 57,
           "extent": "beyond",
-          "status": "washout",
+          "status": "bridge_out",
           "quote": "Bridge has been removed (N1-107) at 57km, at the Flathead River, due to bridge washout."
         }
       ],
-      "needsAi": true,
+      "needsAi": false,
       "postedOn": "2024-08-01",
       "orgUnit": "DRM",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-aebe76499bd2",
         "agreed": false,
@@ -10939,20 +11449,28 @@
       "id": "DSC|7575.01|undated",
       "points": [
         {
-          "km": null,
-          "extent": "unknown",
-          "status": "restricted",
-          "quote": "Road construction for approximately 4.2 km of new forest service road will be ongoing along the Sechelt Roberts Branch 01 Forest Service Road between 8.4 km and 9.2 km, and Sechelt Roberts Branch 02 Forest Service Road between 6.3 km and 8.6 km. No road closures are expected; however, road users sho"
+          "km": 8.4,
+          "kmEnd": 9.2,
+          "extent": "range",
+          "status": "caution",
+          "quote": "Road construction for approximately 4.2 km of new forest service road will be ongoing along the Sechelt Roberts Branch 01 Forest Service Road between 8.4 km and 9.2 km, and Sechelt Roberts Branch 02 Forest Service Road between 6.3 km and 8.6 km."
+        },
+        {
+          "km": 6.3,
+          "kmEnd": 8.6,
+          "extent": "range",
+          "status": "caution",
+          "quote": "Road construction for approximately 4.2 km of new forest service road will be ongoing along the Sechelt Roberts Branch 01 Forest Service Road between 8.4 km and 9.2 km, and Sechelt Roberts Branch 02 Forest Service Road between 6.3 km and 8.6 km."
         }
       ],
-      "needsAi": true,
+      "needsAi": false,
       "orgUnit": "DSC",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-f63a651bc0d9",
         "agreed": true,
@@ -11244,20 +11762,18 @@
           "km": 0,
           "extent": "beyond",
           "status": "closed",
-          "quote": "Road is closed to all traffic at the 0.0 km bridge N7-266 for public safety due to deteriorated bridge deck conditions.",
-          "lat": 50.482868,
-          "lon": -117.229647
+          "quote": "Road is closed to all traffic at the 0.0 km bridge N7-266 for public safety due to deteriorated bridge deck conditions."
         }
       ],
-      "needsAi": true,
+      "needsAi": false,
       "postedOn": "2025-06-13",
       "orgUnit": "DSE",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-9243ad7b4d4c",
         "agreed": true,
@@ -11487,16 +12003,29 @@
       "text": "Incomappleux Forest Service Road (FSR) The Incomappleux FSR was closed under FRPA Section 22.2(3), with the intent to deactivate it as there is no funding to do repairs or maintenance, and there is no future industrial access need. The road has been closed and gated since 2017, and the roads in the valley are overgrown and not safe for travel.",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/selkirk/faq_document_for_incomappleux_deactivation.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "The Incomappleux FSR was closed under FRPA Section 22.2(3), with the intent to deactivate it as there is no funding to do repairs or maintenance, and there is no future industrial access need."
+        },
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "gated",
+          "quote": "The road has been closed and gated since 2017, and the roads in the valley are overgrown and not safe for travel."
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DSE",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "no file and section number in the PDF"
@@ -11562,16 +12091,23 @@
       "text": "Incomappleux Rd Bridge Deactivation Prescription",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/selkirk/incomappleux_road_deactivation_appendix_a.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Incomappleux Rd Bridge Deactivation Prescription"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DSE",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "no file and section number in the PDF"
@@ -11600,16 +12136,23 @@
       "text": "Incomappleux River FSR",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/selkirk/incomappleux_br2deact.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Incomappleux River FSR"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DSE",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "no file and section number in the PDF"
@@ -11638,16 +12181,23 @@
       "text": "Incomappleux River FSR",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/selkirk/incomappleux_road_deactivation_prescription_overview_2024_contour_new.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Incomappleux River FSR"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DSE",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "no file and section number in the PDF"
@@ -11838,16 +12388,29 @@
       "text": "Rady Forest Service Road (FSR) The MOF has indicated that the road is intended to be deactivated to a permanent standard, and that post-deactivation vehicular access is not required. These works will result in loss of vehicle access along the alignment, including All Terrain Vehicle (ATV) access.",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/selkirk/trout_lake_rady_creek_deactivation_prescription_map.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "deactivated",
+          "quote": "The MOF has indicated that the road is intended to be deactivated to a permanent standard, and that post-deactivation vehicular access is not required."
+        },
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "deactivated",
+          "quote": "These works will result in loss of vehicle access along the alignment, including All Terrain Vehicle (ATV) access."
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DSE",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "no file and section number in the PDF"
@@ -11886,20 +12449,20 @@
       "points": [
         {
           "km": 61.3,
-          "extent": "beyond",
+          "extent": "at",
           "status": "closed",
           "quote": "Redding Creek FSR (east of Gray Creek pass) at 61.3km is closed until approximately September 4th, 2026, at 5pm for repairs."
         }
       ],
-      "needsAi": true,
+      "needsAi": false,
       "postedOn": "2026-09-02",
       "orgUnit": "DSE",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-7dee7073507f",
         "agreed": true,
@@ -11964,16 +12527,24 @@
       "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/selkirk-natural-resource-district-road-safety-information",
       "pdfs": [],
       "id": "DSE|0189.01|2026-09-15",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 8,
+          "kmEnd": 15.5,
+          "extent": "range",
+          "status": "caution",
+          "quote": "Road maintenance is planned for Sanca Creek FSR between 8km and 15.5km from September 15th, 2026 to October 9th, 2026."
+        }
+      ],
+      "needsAi": false,
       "postedOn": "2026-09-15",
       "orgUnit": "DSE",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-9079a7718b9f",
         "agreed": true,
@@ -12138,36 +12709,24 @@
           "km": 3.7,
           "extent": "beyond",
           "status": "closed",
-          "quote": "Woodbury Fletcher FSR is closed with a barricade at 3.7km because of a sink hole at 3.7km and a slump at 5km.",
-          "lat": 49.808437,
-          "lon": -116.913404
-        },
-        {
-          "km": 3.7,
-          "extent": "beyond",
-          "status": "closed",
-          "quote": "Woodbury Fletcher FSR is closed with a barricade at 3.7km because of a sink hole at 3.7km and a slump at 5km.",
-          "lat": 49.808437,
-          "lon": -116.913404
+          "quote": "No vehicular access beyond 3.7km."
         },
         {
           "km": 5,
-          "extent": "beyond",
-          "status": "closed",
-          "quote": "Woodbury Fletcher FSR is closed with a barricade at 3.7km because of a sink hole at 3.7km and a slump at 5km.",
-          "lat": 49.819245,
-          "lon": -116.915649
+          "extent": "at",
+          "status": "caution",
+          "quote": "Woodbury Fletcher FSR is closed with a barricade at 3.7km because of a sink hole at 3.7km and a slump at 5km."
         }
       ],
-      "needsAi": true,
+      "needsAi": false,
       "postedOn": "2026-05-29",
       "orgUnit": "DSE",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-305afdc68d2e",
         "agreed": false,
@@ -12200,16 +12759,23 @@
       "text": "Banon Creek Forest Service Road Beginning on May 19, 2026, the access gate to the Banon Creek Forest Service Road at the end of South Watts Road will be closed Monday to Friday.",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/news_release_-_access_changes_implemented_to_protect_local_watershed.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "gated",
+          "quote": "Beginning on May 19, 2026, the access gate to the Banon Creek Forest Service Road at the end of South Watts Road will be closed Monday to Friday."
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DSI",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "no file and section number in the PDF"
@@ -12265,16 +12831,23 @@
       "text": "Banon FSR Branch 01",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/map-banon_fsr_gate_location.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "Banon FSR Branch 01"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DSI",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "no file and section number in the PDF"
@@ -12303,16 +12876,23 @@
       "text": "Braden 2000 Existing Gate on Braden 2000",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/gate_location_map_braden_mainline_and_tr11.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "gated",
+          "quote": "Existing Gate on Braden 2000"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DSI",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "no file and section number in the PDF"
@@ -12341,16 +12921,23 @@
       "text": "Braden Mainline Braden Mainline - Station 0+100",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/gate_location_map_braden_mainline_and_tr11.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 0.1,
+          "extent": "at",
+          "status": "gated",
+          "quote": "Braden Mainline - Station 0+100"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DSI",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "no file and section number in the PDF"
@@ -12380,16 +12967,23 @@
       "text": "Bugaboo M/L Bugaboo M/L sta. 0+100 Gate or Access Restriction",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/map_tfl46_bugaboo_main_gate_location.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 0.1,
+          "extent": "at",
+          "status": "gated",
+          "quote": "Bugaboo M/L sta. 0+100 Gate or Access Restriction"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DSI",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "file R05413"
@@ -12418,16 +13012,23 @@
       "text": "Camper Creek Mainline Gate Location - 1.0 km",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/camper_creek_mainline_gate_map.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 1,
+          "extent": "at",
+          "status": "gated",
+          "quote": "Gate Location - 1.0 km"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DSI",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "no file and section number in the PDF"
@@ -12456,16 +13057,24 @@
       "text": "Canal Main 27 km - 29 km",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/canal_main_closure.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 27,
+          "kmEnd": 29,
+          "extent": "range",
+          "status": "closed",
+          "quote": "Canal Main 27 km - 29 km"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DSI",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "no file and section number in the PDF"
@@ -12495,16 +13104,23 @@
       "text": "KMU 0+050 KMU",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/kmu_gate_location_overview_map.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 0.05,
+          "extent": "at",
+          "status": "gated",
+          "quote": "0+050 KMU"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DSI",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "no file and section number in the PDF"
@@ -12568,16 +13184,23 @@
       "text": "Lucky Creek FSR POC-Lucky Creek FSR Road Closure",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/lucky_fsr_road_closure.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "closed",
+          "quote": "POC-Lucky Creek FSR Road Closure"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DSI",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "no file and section number in the PDF"
@@ -12605,16 +13228,25 @@
       "text": "McKay Lake FSR 5833 Br.01 Gate Location Station 0+800 FSR 5833 - Br.01",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/map_gate_fsr5833_br01.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 0.8,
+          "extent": "at",
+          "status": "gated",
+          "quote": "Gate Location Station 0+800 FSR 5833 - Br.01",
+          "lat": 49.05976,
+          "lon": -123.971812
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DSI",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 5833.01 is 6.8 km long as mapped"
@@ -12822,16 +13454,23 @@
       "text": "TR11 TR11 - Station 0+200",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/gate_location_map_braden_mainline_and_tr11.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 0.2,
+          "extent": "at",
+          "status": "gated",
+          "quote": "TR11 - Station 0+200"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DSI",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "no file and section number in the PDF"
@@ -12860,16 +13499,23 @@
       "text": "WA700 Gate on WA700 - Station 0+010",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/walbran700_gate_location_map_2026mar9.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 0.01,
+          "extent": "at",
+          "status": "gated",
+          "quote": "Gate on WA700 - Station 0+010"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DSI",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "no file and section number in the PDF"
@@ -12898,16 +13544,23 @@
       "text": "WA900 Gate on WA900 - Station 0+372",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/walbran700_gate_location_map_2026mar9.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 0.372,
+          "extent": "at",
+          "status": "gated",
+          "quote": "Gate on WA900 - Station 0+372"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DSI",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "no file and section number in the PDF"
@@ -12936,16 +13589,23 @@
       "text": "Walbran Main Gate on Walbran Main - Station 11+600",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/south-island/walbran700_gate_location_map_2026mar9.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 11.6,
+          "extent": "at",
+          "status": "gated",
+          "quote": "Gate on Walbran Main - Station 11+600"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DSI",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "no file and section number in the PDF"
@@ -13051,15 +13711,22 @@
       "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/sea-to-sky-natural-resource-district-road-safety-information",
       "pdfs": [],
       "id": "DSQ|lillooet south|undated",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 2,
+          "extent": "beyond",
+          "status": "closed",
+          "quote": "See Wildlife Act Closures for details on seasonal closures at 2km."
+        }
+      ],
+      "needsAi": false,
       "orgUnit": "DSQ",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-b5f179a1efdc",
         "agreed": false,
@@ -13104,20 +13771,20 @@
       "id": "DSQ|squamish river|undated",
       "points": [
         {
-          "km": null,
-          "extent": "unknown",
+          "km": 21.7,
+          "extent": "beyond",
           "status": "closed",
-          "quote": "Updated September 17, 2026: Seasonal road closure in place at 21.7km (Mud Creek) for Fall and Winter 2026. No access permitted until Spring/Summer 2027."
+          "quote": "Seasonal road closure in place at 21.7km (Mud Creek) for Fall and Winter 2026."
         }
       ],
-      "needsAi": true,
+      "needsAi": false,
       "orgUnit": "DSQ",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-a16e2f9adcea",
         "agreed": true,
@@ -13146,17 +13813,17 @@
           "km": 3,
           "extent": "beyond",
           "status": "closed",
-          "quote": "August 30, 2024 - December 31, 2026: Road closed to all users at gate at 3km due to construction activities."
+          "quote": "Road closed to all users at gate at 3km due to construction activities."
         }
       ],
-      "needsAi": true,
+      "needsAi": false,
       "orgUnit": "DSQ",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-694c9c949f21",
         "agreed": false,
@@ -13328,20 +13995,20 @@
       "id": "DSS|10998.01|undated",
       "points": [
         {
-          "km": null,
-          "extent": "unknown",
-          "status": "restricted",
-          "quote": "Bridge removed at 6km, only quad, snowmobile access beyond. No signage installed."
+          "km": 6,
+          "extent": "beyond",
+          "status": "bridge_out",
+          "quote": "Bridge removed at 6km, only quad, snowmobile access beyond."
         }
       ],
-      "needsAi": true,
+      "needsAi": false,
       "orgUnit": "DSS",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-e6f5d7094fe2",
         "agreed": true,
@@ -13758,16 +14425,23 @@
       "text": "All Forest Service Roads within the Stuart Nechako Forest District Effective April 13, 2026, at 12:00:01am – restricted",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/stuart-nechako/dsn_road_restictions_2026_spring_road_bans_bulletin_3.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "restricted",
+          "quote": "Effective April 13, 2026, at 12:00:01am – restricted"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DVA",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "no file and section number in the PDF"
@@ -13829,7 +14503,15 @@
       "text": "Driftwood FSR The Ministry of Forests (FOR) will be contracting out work to rebuild a section of the Driftwood FSR north of Fort St James from 15.1km to 16.7km.",
       "kind": "caution",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/stuart-nechako/project_flyer_driftwood_rebuild.pdf",
-      "points": [],
+      "points": [
+        {
+          "km": 15.1,
+          "kmEnd": 16.7,
+          "extent": "range",
+          "status": "caution",
+          "quote": "The Ministry of Forests (FOR) will be contracting out work to rebuild a section of the Driftwood FSR north of Fort St James from 15.1km to 16.7km."
+        }
+      ],
       "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
@@ -13837,8 +14519,8 @@
       "orgUnit": "DVA",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "no file and section number in the PDF"
@@ -13867,16 +14549,34 @@
       "text": "Driftwood FSR Driftwood and Fall FSR Deactivation of bypassed road sections, between 82 and 95km Driftwood FSR The Teegee Creek crossing is a 15.2m clear-span bridge, which is located at 92.8 km on the Driftwood FSR.",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/stuart-nechako/upper_driftwood_deactivation_advertisement.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 82,
+          "kmEnd": 95,
+          "extent": "range",
+          "status": "deactivated",
+          "quote": "Driftwood and Fall FSR Deactivation of bypassed road sections, between 82 and 95km Driftwood FSR",
+          "lat": 55.585438,
+          "lon": -125.969105
+        },
+        {
+          "km": 92.8,
+          "extent": "at",
+          "status": "deactivated",
+          "quote": "The Teegee Creek crossing is a 15.2m clear-span bridge, which is located at 92.8 km on the Driftwood FSR.",
+          "lat": 55.625997,
+          "lon": -126.078037
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DVA",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 7822.01 is 131.5 km long as mapped"
@@ -13921,22 +14621,28 @@
       "id": "DVA|7822.01|undated",
       "points": [
         {
-          "km": 86,
-          "extent": "beyond",
+          "km": 15.1,
+          "kmEnd": 16.7,
+          "extent": "range",
+          "status": "caution",
+          "quote": "The Driftwood forest service road will be realignment from 15.1km to 16.7km commencing in Summer 2026."
+        },
+        {
+          "km": 82,
+          "kmEnd": 86,
+          "extent": "range",
           "status": "deactivated",
-          "quote": "For more information, please read the project information flyer (PDF, 405KB) Upper Driftwood Deactivation Project – 82 to 86 km (Summer 2026) To improve road user safety, the Stuart Nechako District is planning to deactivate a section of the Driftwood FSR that has been bypassed by new road construction.",
-          "lat": 55.616045,
-          "lon": -125.999476
+          "quote": "Upper Driftwood Deactivation Project – 82 to 86 km (Summer 2026)"
         }
       ],
-      "needsAi": true,
+      "needsAi": false,
       "orgUnit": "DVA",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
       "listing": "listed",
-      "extraction": "rule",
-      "approvedBy": null,
-      "approvedOn": null,
+      "extraction": "ai",
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "ai": {
         "task_id": "road_notice-5ee6f2f9d918",
         "agreed": false,
@@ -13972,16 +14678,39 @@
       "text": "Fall FSR There is a 2800mm culvert on this site, which is located at 0.1 km on the Fall FSR. at 4.3 km on the Fall FSR. Deleted_section_of_Fall_FSR",
       "kind": "closed",
       "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/local-road-safety-information/stuart-nechako/upper_driftwood_deactivation_advertisement.pdf",
-      "points": [],
-      "needsAi": true,
+      "points": [
+        {
+          "km": 0.1,
+          "extent": "at",
+          "status": "deactivated",
+          "quote": "There is a 2800mm culvert on this site, which is located at 0.1 km on the Fall FSR.",
+          "lat": 55.621328,
+          "lon": -126.055986
+        },
+        {
+          "km": 4.3,
+          "extent": "at",
+          "status": "deactivated",
+          "quote": "at 4.3 km on the Fall FSR.",
+          "lat": 55.645659,
+          "lon": -126.018615
+        },
+        {
+          "km": null,
+          "extent": "unknown",
+          "status": "deactivated",
+          "quote": "Deleted_section_of_Fall_FSR"
+        }
+      ],
+      "needsAi": false,
       "extraction": "ai",
       "origin": "dm_notice",
       "listing": "listed",
       "orgUnit": "DVA",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-21",
-      "approvedBy": null,
-      "approvedOn": null,
+      "approvedBy": "Arsh",
+      "approvedOn": "2026-10-23",
       "placement": {
         "sectionLengthKm": null,
         "note": "section 7785.01 is 47.5 km long as mapped"
@@ -14083,66 +14812,66 @@
       "key": "b8e9ec94",
       "section": "closure",
       "text": "Map of current closures in the Cariboo Natural Resource Region",
-      "status": "open",
+      "status": "read",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
-      "readBy": null,
-      "readOn": null
+      "readBy": "Arsh",
+      "readOn": "2026-10-23"
     },
     {
       "orgUnit": "DCK",
       "key": "3fae12f6",
       "section": "work",
       "text": "Due to the 2021 atmospheric river storm events many forest service roads in the Chilliwack Forest District were damaged. Some may have unmarked hazards, unscheduled delays, have no access or will be closed at short notice. For specific enquiries please refer to the list of road closures and restrictions and visit the Chilliwack District FSR Access Map. As always it is advised to drive with caution and watch for hazards if heading into the backcountry.",
-      "status": "open",
+      "status": "read",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
-      "readBy": null,
-      "readOn": null
+      "readBy": "Arsh",
+      "readOn": "2026-10-23"
     },
     {
       "orgUnit": "DCR",
       "key": "3be4267f",
       "section": "closure",
       "text": "TSG Planned Deactivation (2026-2031)",
-      "status": "open",
+      "status": "read",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
-      "readBy": null,
-      "readOn": null
+      "readBy": "Arsh",
+      "readOn": "2026-10-23"
     },
     {
       "orgUnit": "DCS",
       "key": "88ddf4d7",
       "section": "deactivation",
       "text": "Discontinued and Closed FSRs (Updated Regularly)",
-      "status": "open",
+      "status": "read",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
-      "readBy": null,
-      "readOn": null
+      "readBy": "Arsh",
+      "readOn": "2026-10-23"
     },
     {
       "orgUnit": "DKA",
       "key": "a4608259",
       "section": "deactivation",
       "text": "Discontinued and Closed FSRs with BCTS (Updated Regularly)",
-      "status": "open",
+      "status": "read",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
-      "readBy": null,
-      "readOn": null
+      "readBy": "Arsh",
+      "readOn": "2026-10-23"
     },
     {
       "orgUnit": "DMH",
       "key": "1b3d900b",
       "section": "warning",
       "text": "Elephant Hill and Allie Lake Wildfire Areas The closure to off road motorized vehicles has ended, however, there are still restrictions in place regarding hunting in this area. It is the responsibility of hunters to be aware of local restrictions. Visit the BC hunting page for more information.",
-      "status": "open",
+      "status": "read",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
-      "readBy": null,
-      "readOn": null
+      "readBy": "Arsh",
+      "readOn": "2026-10-23"
     },
     {
       "orgUnit": "DMH",
@@ -14160,66 +14889,66 @@
       "key": "7ddd89d6",
       "section": "deactivation",
       "text": "The following Forest Service Roads (FSRs) have been declared redundant to industrial needs and are being proposed for permanent deactivation. Vehicular access will not be possible. Please review the attached maps and send any questions or comments to the Haida Gwaii Natural Resource District Office.",
-      "status": "open",
+      "status": "read",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
-      "readBy": null,
-      "readOn": null
+      "readBy": "Arsh",
+      "readOn": "2026-10-23"
     },
     {
       "orgUnit": "DSQ",
       "key": "eddbf485",
       "section": "closure",
       "text": "See Region 2 Motor Vehicle Closed Areas and Region 3 Motor Vehicle Closed Areas for a complete list of Wildlife Act closures.",
-      "status": "open",
+      "status": "read",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
-      "readBy": null,
-      "readOn": null
+      "readBy": "Arsh",
+      "readOn": "2026-10-23"
     },
     {
       "orgUnit": "DSQ",
       "key": "5c0de687",
       "section": "closure",
       "text": "See Crown Land Closures.",
-      "status": "open",
+      "status": "read",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
-      "readBy": null,
-      "readOn": null
+      "readBy": "Arsh",
+      "readOn": "2026-10-23"
     },
     {
       "orgUnit": "DSQ",
       "key": "18e981e0",
       "section": "closure",
       "text": "December 1 - May 31: Winter closures in effect: see Winter Non-Motorized Recreation Zones in the Sea to Sky (PDF, 6.4MB).",
-      "status": "open",
+      "status": "read",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
-      "readBy": null,
-      "readOn": null
+      "readBy": "Arsh",
+      "readOn": "2026-10-23"
     },
     {
       "orgUnit": "DSQ",
       "key": "b67b3a67",
       "section": "deactivation",
       "text": "Under Section 121 (9) of the Forest Act, please find notice of the deactivation or transfer of selected Forest Service Roads within the Sea to Sky Natural Resource District.",
-      "status": "open",
+      "status": "read",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
-      "readBy": null,
-      "readOn": null
+      "readBy": "Arsh",
+      "readOn": "2026-10-23"
     },
     {
       "orgUnit": "DSS",
       "key": "ac7a2526",
       "section": "warning",
       "text": "The following FSR's/Roads have gate control access with locks:",
-      "status": "open",
+      "status": "read",
       "firstSeen": "2026-10-19",
       "lastSeen": "2026-10-21",
-      "readBy": null,
-      "readOn": null
+      "readBy": "Arsh",
+      "readOn": "2026-10-23"
     }
   ]
 }
