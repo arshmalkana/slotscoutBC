@@ -1,6 +1,6 @@
 {
   "month": "2026-10",
-  "updatedAt": "2026-10-22T05:30:35.698Z",
+  "updatedAt": "2026-10-23T14:09:46.631Z",
   "extractor": "agent",
   "autopublish": {
     "configured": false,
@@ -316,7 +316,7 @@
       "left": 0,
       "percent": 100,
       "last": "",
-      "at": "2026-10-22T05:30:35.700Z"
+      "at": "2026-10-23T14:09:46.633Z"
     },
     {
       "step": "extract",
@@ -326,7 +326,7 @@
       "left": 0,
       "percent": 100,
       "last": "",
-      "at": "2026-10-22T05:30:35.700Z"
+      "at": "2026-10-23T14:09:46.633Z"
     },
     {
       "step": "build",
@@ -360,16 +360,16 @@
     }
   ],
   "rules": {
-    "approved": 0,
+    "approved": 3,
     "provisional": 0,
-    "candidates": 4,
+    "candidates": 1,
     "retired": 0
   },
   "review": {
     "thisMonth": 345,
-    "open": 345,
-    "openAllMonths": 345,
-    "looserOpen": 1
+    "open": 252,
+    "openAllMonths": 252,
+    "looserOpen": 0
   },
   "tests": {
     "regressionRan": true,
@@ -377,10 +377,8 @@
     "falseGreen": false
   },
   "release": {
-    "id": "2026-10-rc",
-    "publishable": false,
-    "missing": [
-      "legal reviewer sign-off (make signoff BY=<name>)"
-    ]
+    "id": "2026-10-r1",
+    "publishable": true,
+    "missing": []
   }
 }
