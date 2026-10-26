@@ -8,7 +8,7 @@
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
     "named area \"M.U. 4-22\": none",
-    "the geometry builder does not draw \"admin_boundary\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "named lot \"Sublots 1 and 8 of District Lot 318\": failed (no official layer for area type lot); the larger area is not drawn in its place",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -136,6 +136,16 @@
       "matches": 0,
       "ids": [],
       "sample": []
+    },
+    {
+      "query": "Sublots 1 and 8 of District Lot 318",
+      "kind": "lot",
+      "layer": "-",
+      "status": "failed",
+      "matches": 0,
+      "ids": [],
+      "note": "no official layer for area type lot",
+      "sample": []
     }
   ],
   "validation": [
@@ -148,5 +158,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:08:34.155Z",
-  "updated": "2026-10-21T16:08:34.155Z"
+  "updated": "2026-10-26T22:57:52.357Z"
 }

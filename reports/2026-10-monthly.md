@@ -1,6 +1,6 @@
 # Monthly report 2026-10
 
-Written 2026-10-23T14:09:46.631Z. Extraction mode: **agent**. AI auto-publishing: **off** (gold set: 0 item(s), not passing yet).
+Written 2026-10-26T23:02:03.939Z. Extraction mode: **agent**. AI auto-publishing: **off** (gold set: 0 item(s), not passing yet).
 
 ## Sources
 
@@ -76,7 +76,7 @@ First pull (baseline): 699 units. Details: `reports/2026-10-changes.md`.
 ## Extraction and rules
 
 339 extraction task(s) this month (37 with map or scan page images); run 1 339 of 339 done, run 2 339 of 339 done; 0 still waiting for both runs (see `queue/AGENT_TASKS.md`).
-Rule features: 3 approved, 0 provisional, 1 candidate(s) waiting for a person, 0 retired.
+Rule features: 2 approved, 0 provisional, 3 candidate(s) waiting for a person, 1 retired.
 
 ## Tests
 
@@ -85,7 +85,7 @@ Details: `reports/2026-10-test.md`.
 
 ## Open review items
 
-252 open (1 bylaw, 251 closed area). Packet: `review/2026-10/index.html`.
+253 open (1 bylaw, 252 closed area). Packet: `review/2026-10/index.html`.
 
 ## Failed or missing sources
 

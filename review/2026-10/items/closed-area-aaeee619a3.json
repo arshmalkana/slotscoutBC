@@ -8,7 +8,7 @@
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
     "named area \"Lillooet Land District\": failed (no official layer for area type other)",
-    "the geometry builder does not draw \"admin_boundary\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "named lake \"Alkali Lake\": 2 official features have this name and no surrounding area was found to choose between them",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -137,6 +137,74 @@
       "ids": [],
       "note": "no official layer for area type other",
       "sample": []
+    },
+    {
+      "query": "Alkali Lake",
+      "kind": "lake",
+      "layer": "WHSE_BASEMAPPING.FWA_LAKES_POLY",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "Alkali Lake"
+      ],
+      "sample": [
+        {
+          "WATERBODY_POLY_ID": 700138988,
+          "WATERSHED_GROUP_ID": 133,
+          "WATERBODY_TYPE": "L",
+          "WATERBODY_KEY": 329370945,
+          "AREA_HA": 77.3520765116329,
+          "GNIS_ID_1": 32496,
+          "GNIS_NAME_1": "Alkali Lake",
+          "GNIS_ID_2": null,
+          "GNIS_NAME_2": null,
+          "GNIS_ID_3": null,
+          "GNIS_NAME_3": null,
+          "BLUE_LINE_KEY": 356363634,
+          "WATERSHED_KEY": 356363634,
+          "FWA_WATERSHED_CODE": "100-339340-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000",
+          "LOCAL_WATERSHED_CODE": null,
+          "WATERSHED_GROUP_CODE": "MFRA",
+          "LEFT_RIGHT_TRIBUTARY": "LEFT",
+          "WATERBODY_KEY_50K": 1579,
+          "WATERSHED_GROUP_CODE_50K": "MFRA",
+          "WATERBODY_KEY_GROUP_CODE_50K": "01579MFRA",
+          "WATERSHED_CODE_50K": "100341600000000000000000000000000000000000000",
+          "FEATURE_CODE": "GB15300000",
+          "OBJECTID": 223725904,
+          "SE_ANNO_CAD_DATA": null,
+          "FEATURE_AREA_SQM": 773520.7651,
+          "FEATURE_LENGTH_M": 4099.483
+        },
+        {
+          "WATERBODY_POLY_ID": 191048323,
+          "WATERSHED_GROUP_ID": 192,
+          "WATERBODY_TYPE": "L",
+          "WATERBODY_KEY": 329536292,
+          "AREA_HA": 87.9232844570217,
+          "GNIS_ID_1": 9580,
+          "GNIS_NAME_1": "Alkali Lake",
+          "GNIS_ID_2": null,
+          "GNIS_NAME_2": null,
+          "GNIS_ID_3": null,
+          "GNIS_NAME_3": null,
+          "BLUE_LINE_KEY": 360756387,
+          "WATERSHED_KEY": 360756387,
+          "FWA_WATERSHED_CODE": "600-331668-026451-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000",
+          "LOCAL_WATERSHED_CODE": null,
+          "WATERSHED_GROUP_CODE": "STIR",
+          "LEFT_RIGHT_TRIBUTARY": "LEFT",
+          "WATERBODY_KEY_50K": 81,
+          "WATERSHED_GROUP_CODE_50K": "STIR",
+          "WATERBODY_KEY_GROUP_CODE_50K": "00081STIR",
+          "WATERSHED_CODE_50K": "600351300017000000000000000000000000000000000",
+          "FEATURE_CODE": "GB15300000",
+          "OBJECTID": 223817230,
+          "SE_ANNO_CAD_DATA": null,
+          "FEATURE_AREA_SQM": 879232.8446,
+          "FEATURE_LENGTH_M": 7643.763
+        }
+      ]
     }
   ],
   "validation": [
@@ -149,5 +217,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:47:08.080Z",
-  "updated": "2026-10-20T21:47:08.080Z"
+  "updated": "2026-10-26T22:57:50.855Z"
 }

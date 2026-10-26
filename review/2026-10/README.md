@@ -1,6 +1,6 @@
 # Review packet 2026-10
 
-Open the HTML packet for maps and both runs: `review/2026-10/index.html`. 252 open item(s). Approve with `make approve ITEM=<id> BY=<initials>` (people only).
+Open the HTML packet for maps and both runs: `review/2026-10/index.html`. 253 open item(s). Approve with `make approve ITEM=<id> BY=<initials>` (people only).
 
 | Item | Kind | Change | Title | Why | Status |
 | --- | --- | --- | --- | --- | --- |
@@ -143,6 +143,7 @@ Open the HTML packet for maps and both runs: `review/2026-10/index.html`. 252 op
 | `closed-area-9764d6a5ab` | closed_area | new | Closed Areas Regulation, Schedule 5, section 46 (Queen Charlotte City) | AI runs disagree: side: run 1 "inside" vs run 2 null | open |
 | `closed-area-cd2c42fd9e` | closed_area | new | Closed Areas Regulation, Schedule 5, section 47 (Sandspit) | AI runs disagree: side: run 1 "inside" vs run 2 null | open |
 | `closed-area-072073087e` | closed_area | new | Closed Areas Regulation, Schedule 5, section 48 (Naramata) | AI runs disagree: within: run 1 "province of british columbia" vs run 2 null; steps: run 1 ["trust creek/its intersectio | open |
+| `closed-area-a79cd7c164` | closed_area | new | Closed Areas Regulation, Schedule 5, section 49 (Huntingdon and Sumas Mountain) | named electoral area "Electoral Area H": none; the larger area is not drawn in its place | open |
 | `closed-area-ab5c61ff5b` | closed_area | new | Closed Areas Regulation, Schedule 5, section 5 (Buntzen Lake) | named area "New Westminster District": failed (no official layer for area type other) | open |
 | `closed-area-55fd1abbc3` | closed_area | new | Closed Areas Regulation, Schedule 5, section 53 (Hope) | AI runs disagree: steps: run 1 ["///","town of hope/the southwest corner of the aywawwis 15 indian reserve//district_bou | open |
 | `closed-area-69aa1ec476` | closed_area | new | Closed Areas Regulation, Schedule 5, section 55 (Yale) | AI runs disagree: within: run 1 "province of british columbia" vs run 2 null; steps: run 1 ["///","gordon creek/the inte | open |
@@ -262,7 +263,6 @@ Open the HTML packet for maps and both runs: `review/2026-10/index.html`. 252 op
 | `bylaw-ef7c79bc45` | bylaw | new_source | Squamish-Lillooet Regional District: Squamish-Lillooet Regional District Elector | a person checks every extracted bylaw rule before first use | approved |
 | `bylaw-12fc977003` | bylaw | new_source | Village of Belcarra: Village of Belcarra Firearms Control Bylaw No. 498, 2016 (B | a person checks every extracted bylaw rule before first use | approved |
 | `closed-area-8d248c7f99` | closed_area | new | Closed Areas Regulation, Schedule 3, section 69 (Nisg̱a'a Highway) | named area "Province of British Columbia": failed (no official layer for area type other) | approved |
-| `closed-area-a79cd7c164` | closed_area | new | Closed Areas Regulation, Schedule 5, section 49 (Huntingdon and Sumas Mountain) | every permanent boundary is reviewed by a person (Addendum A 3) | approved |
 | `closed-area-71626994d0` | closed_area | new | Closed Areas Regulation, Schedule 5, section 85 (Sylvester Road) | every permanent boundary is reviewed by a person (Addendum A 3) | approved |
 | `dm-notice-4b07319796` | dm_notice | stricter | District Manager notice DCK-0c70d269-bucklin_fsr_-_2019_road_closure: 1 road clo | read from: text layer (3 pages); OCR by tesseract 5.3.4 on page 3; 1 map or scan page image for reading, and 1 page imag | approved |
 | `dm-notice-a28d911bf5` | dm_notice | stricter | District Manager notice DCK-1379e235-radium_fsr_fs301: 1 road closed or restrict | read from: text layer (2 pages); OCR by tesseract 5.3.4 on page 2; 2 map or scan page images for reading, and 2 page ima | approved |

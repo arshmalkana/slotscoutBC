@@ -8,7 +8,7 @@
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
     "named area \"Cariboo Land District\": failed (no official layer for area type other)",
-    "the geometry builder does not draw \"admin_boundary\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "named lake \"Stum Lake\": none; the larger area is not drawn in its place",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -148,6 +148,15 @@
       "ids": [],
       "note": "no official layer for area type other",
       "sample": []
+    },
+    {
+      "query": "Stum Lake",
+      "kind": "lake",
+      "layer": "WHSE_BASEMAPPING.FWA_LAKES_POLY",
+      "status": "none",
+      "matches": 0,
+      "ids": [],
+      "sample": []
     }
   ],
   "validation": [
@@ -160,5 +169,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:58:57.487Z",
-  "updated": "2026-10-20T21:58:57.487Z"
+  "updated": "2026-10-26T22:56:47.961Z"
 }

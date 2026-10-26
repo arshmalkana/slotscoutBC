@@ -8,7 +8,7 @@
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
     "named area \"M.U. 1-1\": none",
-    "the geometry builder does not draw \"admin_boundary\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "named island \"De Courcey Island\": failed (no official layer for area type island); the larger area is not drawn in its place",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -136,6 +136,16 @@
       "matches": 0,
       "ids": [],
       "sample": []
+    },
+    {
+      "query": "De Courcey Island",
+      "kind": "island",
+      "layer": "-",
+      "status": "failed",
+      "matches": 0,
+      "ids": [],
+      "note": "no official layer for area type island",
+      "sample": []
     }
   ],
   "validation": [
@@ -148,5 +158,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:59:15.220Z",
-  "updated": "2026-10-20T21:59:15.220Z"
+  "updated": "2026-10-26T22:58:07.290Z"
 }

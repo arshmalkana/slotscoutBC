@@ -8,7 +8,7 @@
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
     "named area \"M.U. 2-8\": none",
-    "the geometry builder does not draw \"admin_boundary\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "named park \"Mount Judge Howay Park\": none; the larger area is not drawn in its place",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -141,6 +141,15 @@
       "matches": 0,
       "ids": [],
       "sample": []
+    },
+    {
+      "query": "Mount Judge Howay Park",
+      "kind": "park",
+      "layer": "WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW",
+      "status": "none",
+      "matches": 0,
+      "ids": [],
+      "sample": []
     }
   ],
   "validation": [
@@ -153,5 +162,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:59:14.721Z",
-  "updated": "2026-10-20T21:59:14.721Z"
+  "updated": "2026-10-26T22:58:06.564Z"
 }
