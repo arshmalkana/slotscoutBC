@@ -26,6 +26,16 @@ export function rulePath(ruleId: string): string {
   return join(P.rules, `${ruleId}.geojson`);
 }
 
+/** The parts of a named feature lying mostly (at least half their area) inside the area the text places it in. */
+export function partsInside(features: Feature[], area: Feature<Polygon | MultiPolygon> | null): Feature<Polygon | MultiPolygon>[] {
+  const polys = features.filter((f) => f.geometry && /Polygon/.test(f.geometry.type)) as Feature<Polygon | MultiPolygon>[];
+  if (!area) return polys;
+  return polys.filter((f) => {
+    const inter = turf.intersect(turf.featureCollection([f, area]));
+    return !!inter && turf.area(inter) >= 0.5 * turf.area(f);
+  });
+}
+
 /** Stricter, looser, unclear or cosmetic, comparing a candidate with the approved version (5.1). */
 export function classifyAgainst(prev: Feature<Polygon | MultiPolygon, DigitisedRuleProps> | undefined, next: Feature<Polygon | MultiPolygon, DigitisedRuleProps>): "new" | "stricter" | "looser" | "unclear" | "cosmetic" {
   if (!prev) return "new";
@@ -107,8 +117,26 @@ export async function buildClosedArea(t: Task, month: string): Promise<{ state: 
       if (road.features.length && (!g.from || from?.features.length) && (!g.to || to?.features.length)) {
         built = buildRoadBuffer({ road: road.features, from: from?.features ?? null, to: to?.features ?? null, bufferM: g.buffer_m, quotes: c1.quotes, roadLayer: road.layer });
       }
-    } else if (g.method === "admin_boundary" && area) {
-      built = buildAdminBoundary(area, c1.quotes.within, lookups[0]!.layer);
+    } else if (g.method === "admin_boundary") {
+      // Draw the area the section names. The larger area it sits in only narrows the lookup: drawing
+      // that instead closes far more ground than the section does (W5-049 drew all of the FVRD).
+      const own = g.feature && g.feature.name.trim().toLowerCase() !== String(a.within?.name ?? "").trim().toLowerCase() ? g.feature : null;
+      if (own) {
+        const l = await lookupArea(own.type, own.name);
+        lookups.push(l);
+        const parts = partsInside(l.features, area);
+        if (!parts.length) {
+          const found = l.status === "ok" || l.status === "ambiguous" ? `none inside ${a.within?.name ?? "the area named"}` : l.status;
+          why.push(`named ${own.type.replace("_", " ")} "${own.name}": ${found}${l.note ? ` (${l.note})` : ""}; the larger area is not drawn in its place`);
+        } else if (!area && parts.length > 1) {
+          why.push(`named ${own.type.replace("_", " ")} "${own.name}": ${parts.length} official features have this name and no surrounding area was found to choose between them`);
+        } else {
+          const shape = areaShape({ ...l, features: parts as unknown as Lookup["features"] });
+          if (shape) built = buildAdminBoundary(shape, c1.quotes["geometry.feature"], l.layer);
+          if (own.type === "electoral_area")
+            why.push(`electoral area letters are reassigned over time: check that today's ${own.name} is the area this section means (its heading: ${String(t.meta.sectionTitle ?? "none")})`);
+        }
+      } else if (area) built = buildAdminBoundary(area, c1.quotes.within, lookups[0]!.layer);
     } else {
       built.problems.push(`the geometry builder does not draw "${g.method}" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled`);
     }

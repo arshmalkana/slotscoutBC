@@ -8,7 +8,7 @@ import { parseRobots, robotsAllows } from "../src/lib/robots.js";
 import { parseClosedArea } from "../src/lib/ruleparse.js";
 import { ruleIdFor, splitBylaw, splitRegulation } from "../src/lib/units.js";
 import { normaliseUnit, quoteFound } from "../src/lib/util.js";
-import { classifyAgainst } from "../src/build/closedAreas.js";
+import { classifyAgainst, partsInside } from "../src/build/closedAreas.js";
 
 // Closed Areas Regulation, Schedule 5, section 85, as quoted in Addendum A 4.1.
 const S85 = "Schedule 5\n85 That portion of Fraser Valley Regional District being 50 m either side of the centreline of Sylvester Road between the midline of Farms Road and the midline of Dale Road.";
@@ -132,6 +132,19 @@ describe("geometry and validation (Addendum A 4.4, 4.5)", () => {
   it("sends a limit that cannot be found to a person instead of guessing", () => {
     const far = [turf.lineString([[-121.5, 49.5], [-121.49, 49.5]], {})] as never[];
     expect(buildRoadBuffer({ road, from: farms, to: far, bufferM: 50, quotes: {}, roadLayer: "DRA" }).geometry).toBeNull();
+  });
+
+  it("keeps only the named area's parts inside the district the text names, never the district itself", () => {
+    // Two "Electoral Area H" polygons in different regional districts; the text names the one in the first.
+    const district = turf.bboxPolygon([-122.2, 49.0, -121.8, 49.4]) as Feature<Polygon>;
+    const ownH = turf.bboxPolygon([-122.1, 49.1, -122.0, 49.2]);
+    const otherH = turf.bboxPolygon([-120.1, 50.1, -120.0, 50.2]);
+    const parts = partsInside([ownH, otherH], district);
+    expect(parts).toHaveLength(1);
+    expect(turf.area(parts[0]!)).toBeCloseTo(turf.area(ownH), -3);
+    expect(turf.area(parts[0]!)).toBeLessThan(turf.area(district) / 10);
+    // An area named but not found inside the district gives nothing to draw.
+    expect(partsInside([otherH], district)).toEqual([]);
   });
 });
 
