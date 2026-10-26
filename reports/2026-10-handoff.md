@@ -20,7 +20,7 @@ Prepared by Claude Code (Addendum A 10.3 step 13), last updated 2026-10-21. Noth
 
 ## Status on 2026-10-25
 
-- **Live:** https://slotscout-five.vercel.app (Vercel project `slotscout`, built from `Dockerfile.vercel`, release `2026-10-r1`). The Vercel project is not linked to GitHub yet, so a push does not redeploy by itself: connect GitHub at https://vercel.com/arshpreetmalkana-9834s-projects/slotscout/settings/git, or ask Claude Code to redeploy.
+- **Live:** https://slotscout-five.vercel.app (Vercel project `slotscout`, built from `Dockerfile.vercel`, release `2026-10-r1`). The project is linked to GitHub: every push to `claude/wizardly-brown-q2omh0` redeploys production.
 - **Approvals and sign-off:** Arsh reviewed every item and on 2026-10-23 instructed that all be approved and signed off in his name; Claude Code entered them, and each decision's note says so. 93 items approved; still open: 251 closed-area sections with no shape (a shape must be drawn first) and the Squamish-Lillooet Electoral Area A bylaw (1293-2013), whose extraction does not settle whether target shooting is prohibited, zoned or allowed (set `target_shooting` in its rule list, then approve).
 - **Release `2026-10-r1`:** publishable; validate 0 errors; regression 0 false greens and 1 false red. The false red is Harrison East: the approved W5-049 shape is the whole Fraser Valley Regional District, so every spot in it shows "No shooting area (s. 49)". Retiring W5-049 or redrawing it to the right Area H boundary removes that.
 
