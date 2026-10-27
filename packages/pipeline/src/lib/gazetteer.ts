@@ -34,9 +34,30 @@ const AREA_LAYERS: Record<string, { layer: string; field: string; geom: string }
   park: { layer: "WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW", field: "PROTECTED_LANDS_NAME", geom: "SHAPE" },
   reserve: { layer: "WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES", field: "ENGLISH_NAME", geom: "GEOMETRY" },
   lake: { layer: "WHSE_BASEMAPPING.FWA_LAKES_POLY", field: "GNIS_NAME_1", geom: "GEOMETRY" },
+  island: { layer: "WHSE_BASEMAPPING.FWA_ISLANDS_POLY", field: "GNIS_NAME_1", geom: "GEOMETRY" },
+  land_district: { layer: "WHSE_TANTALIS.TA_LAND_DISTRICTS_SVW", field: "LAND_DISTRICT_NAME", geom: "SHAPE" },
 };
 
 const esc = (s: string) => s.replace(/'/g, "''");
+
+/** Management unit ids as the text writes them ("M.U. 2-04", "M.U.s 1-3 and 1-4", "4-19"), as the layer stores them ("2-4"). */
+export function muIds(name: string): string[] {
+  const s = name.replace(/\s+/g, " ").trim();
+  if (!/^((wildlife )?management units? |m\.? ?u\.?s?\.? ?)?\d{1,2} ?- ?\d{1,3}\b/i.test(s)) return [];
+  return [...new Set([...s.matchAll(/\b(\d{1,2}) ?- ?0*(\d{1,3})\b/g)].map((m) => `${m[1]}-${m[2]}`))];
+}
+
+/** "Cariboo Land District" as Tantalis writes it: "CARIBOO DISTRICT". */
+export function landDistrictName(name: string): string {
+  return name.toUpperCase().replace(/\bLAND DISTRICT\b/, "DISTRICT").replace(/[.,]/g, " ").replace(/\s+/g, " ").trim();
+}
+
+/** The layer a named area is in: management units and land districts are recognised by how they are written. */
+function areaKind(type: string, name: string): string {
+  if ((type === "wildlife_management_unit" || type === "other" || type === "region") && muIds(name).length) return "wildlife_management_unit";
+  if ((type === "other" || type === "region") && /\bdistrict\b/i.test(name) && !/regional district/i.test(name)) return "land_district";
+  return type;
+}
 
 export async function wfsQuery(layer: string, cql: string, count = 5000): Promise<AnyFeature[]> {
   const u = new URL(WFS);
@@ -73,16 +94,25 @@ export function roadNameForms(name: string): string[] {
 }
 
 export async function lookupArea(type: string, name: string): Promise<Lookup> {
-  const spec = AREA_LAYERS[type];
+  const kind = areaKind(type, name);
+  const spec = AREA_LAYERS[kind];
   if (!spec) return { query: name, kind: type, layer: "-", status: "failed", matches: 0, ids: [], note: `no official layer for area type ${type}`, features: [] };
   try {
-    let fs = await wfsQuery(spec.layer, `${spec.field}='${esc(name)}'`);
-    if (!fs.length) {
-      const alt = aliases()[name] ?? [];
-      for (const a of alt) fs = fs.length ? fs : await wfsQuery(spec.layer, `${spec.field}='${esc(a)}'`);
-    }
+    const mus = kind === "wildlife_management_unit" ? muIds(name) : [];
+    let fs: AnyFeature[] = [];
+    if (mus.length) fs = await wfsQuery(spec.layer, `${spec.field} IN (${mus.map((m) => `'${m}'`).join(",")})`);
+    else
+      // Names match whatever their case; spelling variants come only from the people-maintained aliases.
+      for (const n of [kind === "land_district" ? landDistrictName(name) : name, ...(aliases()[name] ?? [])]) {
+        if (fs.length) break;
+        fs = await wfsQuery(spec.layer, `${spec.field} ILIKE '${esc(n)}'`);
+      }
     const ids = [...new Set(fs.map((f) => String(f.properties[spec.field])))];
-    return { query: name, kind: type, layer: spec.layer, status: fs.length === 0 ? "none" : ids.length > 1 ? "ambiguous" : "ok", matches: ids.length, ids, features: fs };
+    // Several management units named together make one area; each must be found.
+    const missing = mus.filter((m) => !ids.includes(m));
+    if (missing.length) return { query: name, kind: type, layer: spec.layer, status: "none", matches: ids.length, ids, note: `management unit ${missing.join(", ")} not found`, features: [] };
+    const status = fs.length === 0 ? "none" : ids.length > 1 && !mus.length ? "ambiguous" : "ok";
+    return { query: name, kind: type, layer: spec.layer, status, matches: ids.length, ids, features: fs };
   } catch (e) {
     return { query: name, kind: type, layer: spec.layer, status: "failed", matches: 0, ids: [], note: (e as Error).message, features: [] };
   }

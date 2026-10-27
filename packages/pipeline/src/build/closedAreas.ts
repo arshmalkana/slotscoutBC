@@ -2,10 +2,11 @@ import { join } from "node:path";
 import * as turf from "@turf/turf";
 import type { Feature, MultiPolygon, Polygon } from "geojson";
 import type { DigitisedRuleProps } from "@slotscout/engine";
-import { checkQuotes, disagreements, schemaErrors } from "../lib/answers.js";
+import { blockingDisagreements, checkQuotes, disagreements, schemaErrors } from "../lib/answers.js";
 import { config, today } from "../lib/config.js";
 import { EFFECT_BY_RULE } from "../lib/effects.js";
 import { areaShape, lookupArea, lookupRoad, type Lookup } from "../lib/gazetteer.js";
+import { isForestRoad, parseRoadList } from "../lib/roadlist.js";
 import { buildAdminBoundary, buildRoadBuffer, validateShape, type Built } from "../lib/geometry.js";
 import { P } from "../lib/paths.js";
 import { itemId, upsertItem } from "../lib/review.js";
@@ -81,12 +82,15 @@ export async function buildClosedArea(t: Task, month: string): Promise<{ state: 
   const c2 = check("closed_area", t.schema, r2, t.source_text);
   const cr = rule ? check("closed_area", t.schema, rule, t.source_text) : null;
   const why: string[] = [];
-  const dis = c1.answer && c2.answer ? disagreements("closed_area", c1.answer, c2.answer) : ["one or both runs gave no valid answer"];
+  const allDis = c1.answer && c2.answer ? disagreements("closed_area", c1.answer, c2.answer) : ["one or both runs gave no valid answer"];
+  const dis = c1.answer && c2.answer ? blockingDisagreements(allDis, c1.answer) : allDis;
+  const minor = allDis.filter((d) => !dis.includes(d));
   const ruleDis = cr?.answer && c1.answer ? disagreements("closed_area", { ...cr.answer, effect: c1.answer.effect }, c1.answer).map((d) => d.replace("run 1", "rule parser").replace("run 2", "AI runs")) : [];
   if (c1.errors.length) why.push(`run 1 rejected: ${c1.errors.join("; ")}`);
   if (c2.errors.length) why.push(`run 2 rejected: ${c2.errors.join("; ")}`);
   if (c1.rejected.length || c2.rejected.length) why.push(`quotes not found verbatim, fields dropped: ${[...new Set([...c1.rejected, ...c2.rejected])].join(", ")}`);
   if (dis.length) why.push(`AI runs disagree: ${dis.join("; ")}`);
+  if (minor.length) why.push(`AI runs also differ on fields this shape is not drawn from (not blocking): ${minor.join("; ")}`);
   if (ruleDis.length) why.push(`rule parser and AI disagree: ${ruleDis.join("; ")}`);
   const agreed = !dis.length && !!c1.answer;
   const a = (c1.answer ?? cr?.answer ?? null) as Record<string, any> | null;
@@ -116,6 +120,47 @@ export async function buildClosedArea(t: Task, month: string): Promise<{ state: 
       for (const l of [road, from, to]) if (l && l.status !== "ok" && !(l === road && l.status === "ambiguous")) why.push(`road "${l.query}": ${l.status}${l.note ? ` (${l.note})` : ""}`);
       if (road.features.length && (!g.from || from?.features.length) && (!g.to || to?.features.length)) {
         built = buildRoadBuffer({ road: road.features, from: from?.features ?? null, to: to?.features ?? null, bufferM: g.buffer_m, quotes: c1.quotes, roadLayer: road.layer });
+      }
+    } else if (g.method === "road_buffer" && !g.road && g.buffer_m) {
+      // Several roads listed in the text: code reads the list, then places each road like any other.
+      const list = parseRoadList(t.source_text);
+      if (!list) built.problems.push("no single road named and no list of roads the code can read");
+      else {
+        const parts: Feature<Polygon | MultiPolygon>[] = [];
+        const notes: string[] = [];
+        for (const r of list) {
+          const hint = (n: string) => (isForestRoad(n) ? "FTEN" : "DRA");
+          const road = await lookupRoad(r.name, hint(r.name), area);
+          const from = r.from ? await lookupRoad(r.from, hint(r.from), area) : null;
+          const to = r.to ? await lookupRoad(r.to, hint(r.to), area) : null;
+          lookups.push(...[road, from, to].filter((x): x is Lookup => !!x));
+          const missing = [road, from, to].filter((l) => l && !l.features.length).map((l) => `"${l!.query}" ${l!.status}`);
+          if (missing.length) {
+            built.problems.push(`listed road ${missing.join(", ")} in the official road layers`);
+            continue;
+          }
+          if (r.partial && !area) {
+            built.problems.push(`"${r.name}" is limited (${r.partial}) in a way the code cannot place, and no management unit narrows it`);
+            continue;
+          }
+          const b = buildRoadBuffer({ road: road.features, from: from?.features ?? null, to: to?.features ?? null, bufferM: g.buffer_m, quotes: { "geometry.road": r.text, "geometry.buffer_m": c1.quotes["geometry.buffer_m"] }, roadLayer: road.layer });
+          if (!b.geometry) {
+            built.problems.push(`"${r.name}": ${b.problems.join("; ")}`);
+            continue;
+          }
+          parts.push(turf.feature(b.geometry));
+          built.construction.push(...b.construction);
+          if (r.partial) notes.push(`"${r.name}" is drawn along its whole length in ${a.within?.name}; the text limits it (${r.partial})`);
+          if (r.spurs) notes.push(`spur roads of "${r.name}" are not drawn`);
+        }
+        // Drawn only when every listed road is placed, and only inside the area the section names.
+        if (!built.problems.length && parts.length) {
+          let shape = parts.length > 1 ? turf.union(turf.featureCollection(parts)) : parts[0]!;
+          if (shape && area) shape = turf.intersect(turf.featureCollection([shape, area]));
+          built.geometry = (shape?.geometry as Polygon | MultiPolygon | undefined) ?? null;
+          if (area) built.construction.push({ what: `clipped to ${a.within?.name}`, quote: c1.quotes.within ?? null, source: lookups[0]!.layer });
+          why.push(...notes);
+        }
       }
     } else if (g.method === "admin_boundary") {
       // Draw the area the section names. The larger area it sits in only narrows the lookup: drawing
@@ -211,7 +256,7 @@ export async function buildClosedArea(t: Task, month: string): Promise<{ state: 
     runs: { run1: r1, run2: r2, rule: rule ?? undefined },
     quotes: c1.quotes,
     rejected_quotes: [...new Set([...c1.rejected, ...c2.rejected])],
-    disagreements: [...dis, ...ruleDis],
+    disagreements: [...allDis, ...ruleDis],
     lookups: lookups.map(({ features, ...l }) => ({ ...l, sample: features.slice(0, 3).map((f) => f.properties) })),
     validation,
     construction: built.construction,

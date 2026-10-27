@@ -177,15 +177,24 @@ const norm = (v: unknown) =>
         .trim()
     : v;
 
+/** An area named several ways: "M.U. 4-19", "4-19", "M.U.s 1-03 and 1-04", "Management Unit 1-4". */
+const normArea = (v: unknown) => {
+  const s = norm(v);
+  return typeof s === "string" ? s.replace(/^(the )?(m\.?u\.?s?|(wildlife )?management units?) /, "").replace(/\b0+(\d)/g, "$1") : s;
+};
+
 /** The facts that must match between runs: landmarks, distances, effects (Addendum A 4.5). */
 export function comparable(kind: string, a: Record<string, unknown> | null): Record<string, unknown> {
   if (!a) return {};
   if (kind === "closed_area") {
     const g = (a.geometry ?? {}) as Record<string, unknown>;
-    const lm = (x: unknown) => (x ? norm((x as { road?: string; name?: string }).road ?? (x as { name?: string }).name ?? null) : null);
+    const lm = (x: unknown) => {
+      const s = x ? norm((x as { road?: string; name?: string }).road ?? (x as { name?: string }).name ?? null) : null;
+      return typeof s === "string" ? s.replace(/^the /, "") : s;
+    };
     return {
       effect: a.effect ?? null,
-      within: norm((a.within as { name?: string } | null)?.name ?? null),
+      within: normArea((a.within as { name?: string } | null)?.name ?? null),
       method: g.method ?? null,
       road: norm((g.road as { name?: string } | null)?.name ?? null),
       feature: norm((g.feature as { name?: string } | null)?.name ?? null),
@@ -227,4 +236,23 @@ export function disagreements(kind: string, a: Record<string, unknown> | null, b
   const y = comparable(kind, b);
   const keys = new Set([...Object.keys(x), ...Object.keys(y)]);
   return [...keys].filter((k) => JSON.stringify(x[k]) !== JSON.stringify(y[k])).map((k) => `${k}: run 1 ${JSON.stringify(x[k])} vs run 2 ${JSON.stringify(y[k])}`);
+}
+
+/**
+ * Closed-area fields the builder draws each kind of description from. A difference in any of these, or in
+ * the effect, method, season or exemptions, keeps the area grey; a difference elsewhere (walk steps of a
+ * road buffer, the side of a whole area) cannot change the shape, so it is recorded but does not block.
+ */
+const SHAPE_FIELDS: Record<string, string[]> = {
+  road_buffer: ["road", "buffer_m", "from", "to", "within"],
+  admin_boundary: ["within", "feature"],
+  waterbody_buffer: ["feature", "buffer_m", "side", "within"],
+  metes_and_bounds: ["steps", "within"],
+};
+
+export function blockingDisagreements(all: string[], a: Record<string, unknown> | null): string[] {
+  const shape = SHAPE_FIELDS[String(comparable("closed_area", a).method ?? "")];
+  if (!shape) return all;
+  const keep = new Set(["effect", "method", "period", "exemptions", ...shape]);
+  return all.filter((d) => keep.has(d.split(":")[0]!));
 }

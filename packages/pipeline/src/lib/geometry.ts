@@ -114,6 +114,12 @@ export function pathBetween(segs: AnyFeature[], a: Position, b: Position): Posit
   return path;
 }
 
+/** Forest road sections that are pieces of one road: all under the same forest file. */
+function oneForestFile(fs: AnyFeature[]): boolean {
+  const files = new Set(fs.map((f) => f.properties.FOREST_FILE_ID));
+  return files.size === 1 && !files.has(undefined) && !files.has(null);
+}
+
 export function buildRoadBuffer(opts: {
   road: AnyFeature[];
   from: AnyFeature[] | null;
@@ -137,6 +143,7 @@ export function buildRoadBuffer(opts: {
     else if (fits[0]!.a.length !== 1 || fits[0]!.b.length !== 1) problems.push(`the limits meet the road ${fits[0]!.a.length} and ${fits[0]!.b.length} times; each must meet it once`);
     else ({ c: chosen, a: [start], b: [end] } = { c: fits[0]!.c, a: fits[0]!.a as [Position], b: fits[0]!.b as [Position] });
   } else if (comps.length === 1) chosen = comps[0]!;
+  else if (comps.length && oneForestFile(opts.road)) chosen = comps.flat();
   else problems.push(`${comps.length} separate roads with this name in the area and no limits to choose one`);
   if (!chosen) return { geometry: null, construction, problems };
 
@@ -148,8 +155,14 @@ export function buildRoadBuffer(opts: {
     construction.push({ what: "start at the junction with the first limit", quote: opts.quotes["geometry.from"] ?? null, source: opts.roadLayer, point: start });
     construction.push({ what: "end at the junction with the second limit", quote: opts.quotes["geometry.to"] ?? null, source: opts.roadLayer, point: end });
   } else {
+    // The whole road: every segment buffered as it lies. Joining the segments into one line would add
+    // straight jumps between them, and buffering those closes ground the road never crosses.
     const all = chosen.flatMap(lines);
-    path = turf.lineString(all.flat()).geometry;
+    path = turf.lineString(all.reduce((a, b) => (b.length > a.length ? b : a), [])).geometry;
+    construction.unshift({ what: "road centreline", quote: opts.quotes["geometry.road"] ?? null, source: opts.roadLayer, ids: chosen.map((f) => String(f.properties.DIGITAL_ROAD_ATLAS_LINE_ID ?? `${f.properties.FOREST_FILE_ID}.${f.properties.ROAD_SECTION_ID}`)) });
+    const whole = turf.buffer(turf.multiLineString(all), opts.bufferM + pad, { units: "meters", steps: 16 });
+    construction.push({ what: `buffer ${opts.bufferM} m either side, plus a ${pad} m conservative pad`, quote: opts.quotes["geometry.buffer_m"] ?? null, source: "geometry builder" });
+    return { geometry: (whole?.geometry as Polygon | MultiPolygon) ?? null, construction, problems, path };
   }
   construction.unshift({ what: "road centreline", quote: opts.quotes["geometry.road"] ?? null, source: opts.roadLayer, ids: chosen.map((f) => String(f.properties.DIGITAL_ROAD_ATLAS_LINE_ID ?? `${f.properties.FOREST_FILE_ID}.${f.properties.ROAD_SECTION_ID}`)) });
   const buffered = turf.buffer(turf.feature(path), opts.bufferM + pad, { units: "meters", steps: 16 });

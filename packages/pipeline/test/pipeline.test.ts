@@ -9,6 +9,8 @@ import { parseClosedArea } from "../src/lib/ruleparse.js";
 import { ruleIdFor, splitBylaw, splitRegulation } from "../src/lib/units.js";
 import { normaliseUnit, quoteFound } from "../src/lib/util.js";
 import { classifyAgainst, partsInside } from "../src/build/closedAreas.js";
+import { landDistrictName, muIds } from "../src/lib/gazetteer.js";
+import { parseRoadList } from "../src/lib/roadlist.js";
 
 // Closed Areas Regulation, Schedule 5, section 85, as quoted in Addendum A 4.1.
 const S85 = "Schedule 5\n85 That portion of Fraser Valley Regional District being 50 m either side of the centreline of Sylvester Road between the midline of Farms Road and the midline of Dale Road.";
@@ -134,6 +136,17 @@ describe("geometry and validation (Addendum A 4.4, 4.5)", () => {
     expect(buildRoadBuffer({ road, from: farms, to: far, bufferM: 50, quotes: {}, roadLayer: "DRA" }).geometry).toBeNull();
   });
 
+  it("buffers a whole road segment by segment, never across the gap between two pieces", () => {
+    // Two pieces of one forest road 10 km apart: the buffer must not bridge them.
+    const a = turf.lineString([[-122.0, 49.0], [-122.0, 49.01]], { FOREST_FILE_ID: "9175", ROAD_SECTION_ID: "01" });
+    const b = turf.lineString([[-121.86, 49.0], [-121.86, 49.01]], { FOREST_FILE_ID: "9175", ROAD_SECTION_ID: "02" });
+    const built = buildRoadBuffer({ road: [a, b] as never[], from: null, to: null, bufferM: 400, quotes: {}, roadLayer: "FTEN" });
+    expect(built.geometry).not.toBeNull();
+    const km2 = turf.area(turf.feature(built.geometry!)) / 1e6;
+    expect(km2).toBeLessThan(5); // two ~1.1 km stretches, not a 10 km wide band
+    expect(turf.booleanPointInPolygon([-121.93, 49.005], turf.feature(built.geometry!))).toBe(false);
+  });
+
   it("keeps only the named area's parts inside the district the text names, never the district itself", () => {
     // Two "Electoral Area H" polygons in different regional districts; the text names the one in the first.
     const district = turf.bboxPolygon([-122.2, 49.0, -121.8, 49.4]) as Feature<Polygon>;
@@ -145,6 +158,31 @@ describe("geometry and validation (Addendum A 4.4, 4.5)", () => {
     expect(turf.area(parts[0]!)).toBeLessThan(turf.area(district) / 10);
     // An area named but not found inside the district gives nothing to draw.
     expect(partsInside([otherH], district)).toEqual([]);
+  });
+});
+
+describe("reading names and road lists from the official text", () => {
+  it("reads management units however the regulation writes them", () => {
+    expect(muIds("M.U. 1-1")).toEqual(["1-1"]);
+    expect(muIds("M.U.s 2-06, 2-07, 2-08 and 2-09")).toEqual(["2-6", "2-7", "2-8", "2-9"]);
+    expect(muIds("4-17")).toEqual(["4-17"]);
+    expect(muIds("Range 5, Coast District")).toEqual([]);
+    expect(landDistrictName("Cariboo Land District")).toBe("CARIBOO DISTRICT");
+  });
+
+  it("reads a lettered list of roads, with junction limits, vague limits and spur roads", () => {
+    const list = parseRoadList(
+      "4 Those portions of M.U. 2-3 being all Crown land within 400 m of the midline of the following roads, including any spur roads: (a)Jones Lake Forest Service Road; (b)Gillies Bay Road between its junction with Blubber Bay Road and Shelter Point Road; (c)McGuire Forest Service Road from the junction with the Tamihi Creek Forest Service Road to the crossing of an unnamed creek. [am. B.C. Reg. 115/2018, App. 1, s. 3.]",
+    )!;
+    expect(list.map((r) => r.name)).toEqual(["Jones Lake Forest Service Road", "Gillies Bay Road", "McGuire Forest Service Road"]);
+    expect(list[1]).toMatchObject({ from: "Blubber Bay Road", to: "Shelter Point Road", partial: null });
+    expect(list[2]!.partial).toMatch(/^from the junction/);
+    expect(list.every((r) => r.spurs)).toBe(true);
+  });
+
+  it("gives up on a list it cannot read rather than drawing part of it", () => {
+    expect(parseRoadList("within 400 m of the midline of any road highlighted in red on the attached map")).toBeNull();
+    expect(parseRoadList("the following roads: (a)the area outlined on the attached map; (b)Jones Lake Forest Service Road.")).toBeNull();
   });
 });
 
