@@ -5,11 +5,9 @@
   "title": "Closed Areas Regulation, Schedule 5, section 73 (Michael Lake)",
   "rule_id": "W5-073",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
-    "AI runs disagree: side: run 1 \"inside\" vs run 2 null",
-    "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 \"inside\" vs run 2 null"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nMichael Lake\n73 That portion of the Province of British Columbia in Oyster Land District contained within the following described boundaries: The mean high water mark of Michael Lake. [en. B.C. Reg. 109/85, s. 3 (i).]",
@@ -134,16 +132,1057 @@
   "disagreements": [
     "side: run 1 \"inside\" vs run 2 null"
   ],
-  "lookups": [],
-  "validation": [
+  "lookups": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "query": "Oyster Land District",
+      "kind": "other",
+      "layer": "WHSE_TANTALIS.TA_LAND_DISTRICTS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "OYSTER DISTRICT"
+      ],
+      "sample": [
+        {
+          "ADMIN_AREA_SID": 144,
+          "LAND_DISTRICT_NAME": "OYSTER DISTRICT",
+          "FEATURE_CODE": "FA91800000",
+          "FEATURE_AREA_SQM": 89916252.7063,
+          "FEATURE_LENGTH_M": 82344.012,
+          "OBJECTID": 9432252,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    },
+    {
+      "query": "Michael Lake",
+      "kind": "lake",
+      "layer": "WHSE_BASEMAPPING.FWA_LAKES_POLY",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "Michael Lake"
+      ],
+      "sample": [
+        {
+          "WATERBODY_POLY_ID": 700008536,
+          "WATERSHED_GROUP_ID": 197,
+          "WATERBODY_TYPE": "L",
+          "WATERBODY_KEY": 329547789,
+          "AREA_HA": 16.3085490357099,
+          "GNIS_ID_1": 38283,
+          "GNIS_NAME_1": "Michael Lake",
+          "GNIS_ID_2": null,
+          "GNIS_NAME_2": null,
+          "GNIS_ID_3": null,
+          "GNIS_NAME_3": null,
+          "BLUE_LINE_KEY": 356342342,
+          "WATERSHED_KEY": 356342342,
+          "FWA_WATERSHED_CODE": "100-533667-586918-278761-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000",
+          "LOCAL_WATERSHED_CODE": null,
+          "WATERSHED_GROUP_CODE": "TABR",
+          "LEFT_RIGHT_TRIBUTARY": "RIGHT",
+          "WATERBODY_KEY_50K": 673,
+          "WATERSHED_GROUP_CODE_50K": "TABR",
+          "WATERBODY_KEY_GROUP_CODE_50K": "00673TABR",
+          "WATERSHED_CODE_50K": "100535900590000000000000000000000000000000000",
+          "FEATURE_CODE": "GB15300000",
+          "OBJECTID": 223683502,
+          "SE_ANNO_CAD_DATA": null,
+          "FEATURE_AREA_SQM": 163085.4904,
+          "FEATURE_LENGTH_M": 2146.1013
+        },
+        {
+          "WATERBODY_POLY_ID": 710008893,
+          "WATERSHED_GROUP_ID": 36,
+          "WATERBODY_TYPE": "L",
+          "WATERBODY_KEY": 329101314,
+          "AREA_HA": 38.4060083222972,
+          "GNIS_ID_1": 28124,
+          "GNIS_NAME_1": "Michael Lake",
+          "GNIS_ID_2": null,
+          "GNIS_NAME_2": null,
+          "GNIS_ID_3": null,
+          "GNIS_NAME_3": null,
+          "BLUE_LINE_KEY": 354149882,
+          "WATERSHED_KEY": 354149882,
+          "FWA_WATERSHED_CODE": "920-388982-116625-050720-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000-000000",
+          "LOCAL_WATERSHED_CODE": null,
+          "WATERSHED_GROUP_CODE": "COWN",
+          "LEFT_RIGHT_TRIBUTARY": "RIGHT",
+          "WATERBODY_KEY_50K": 309,
+          "WATERSHED_GROUP_CODE_50K": "COWN",
+          "WATERBODY_KEY_GROUP_CODE_50K": "00309COWN",
+          "WATERSHED_CODE_50K": "920347366000000000000000000000000000000000000",
+          "FEATURE_CODE": "GB15300000",
+          "OBJECTID": 223827416,
+          "SE_ANNO_CAD_DATA": null,
+          "FEATURE_AREA_SQM": 384060.0832,
+          "FEATURE_LENGTH_M": 3185.3026
+        }
+      ]
     }
   ],
-  "construction": [],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "0.383 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
+    }
+  ],
+  "construction": [
+    {
+      "what": "official boundary of the named area",
+      "quote": "The mean high water mark of Michael Lake",
+      "source": "WHSE_BASEMAPPING.FWA_LAKES_POLY"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              -123.8089492,
+              49.04419515
+            ],
+            [
+              -123.80897701,
+              49.04423075
+            ],
+            [
+              -123.80906177,
+              49.04428487
+            ],
+            [
+              -123.80915822,
+              49.04433757
+            ],
+            [
+              -123.80922603,
+              49.04435608
+            ],
+            [
+              -123.80930941,
+              49.04435466
+            ],
+            [
+              -123.80948713,
+              49.04439027
+            ],
+            [
+              -123.80957052,
+              49.04444296
+            ],
+            [
+              -123.80966568,
+              49.0444515
+            ],
+            [
+              -123.80996759,
+              49.04446717
+            ],
+            [
+              -123.81026733,
+              49.04448284
+            ],
+            [
+              -123.81055541,
+              49.04449993
+            ],
+            [
+              -123.81062403,
+              49.04451702
+            ],
+            [
+              -123.81081777,
+              49.04455119
+            ],
+            [
+              -123.81106368,
+              49.04461244
+            ],
+            [
+              -123.81131174,
+              49.04464662
+            ],
+            [
+              -123.81159937,
+              49.04467226
+            ],
+            [
+              -123.81177837,
+              49.04472495
+            ],
+            [
+              -123.81187352,
+              49.0447335
+            ],
+            [
+              -123.81214892,
+              49.04478477
+            ],
+            [
+              -123.81238355,
+              49.04490868
+            ],
+            [
+              -123.81246347,
+              49.0448631
+            ],
+            [
+              -123.81247646,
+              49.04480898
+            ],
+            [
+              -123.81254379,
+              49.04475486
+            ],
+            [
+              -123.81261287,
+              49.0447634
+            ],
+            [
+              -123.81280446,
+              49.04482465
+            ],
+            [
+              -123.81280762,
+              49.04494286
+            ],
+            [
+              -123.81287626,
+              49.04498701
+            ],
+            [
+              -123.81297141,
+              49.04499555
+            ],
+            [
+              -123.81298663,
+              49.04499555
+            ],
+            [
+              -123.81316248,
+              49.0449571
+            ],
+            [
+              -123.81336667,
+              49.04487592
+            ],
+            [
+              -123.81351686,
+              49.04474774
+            ],
+            [
+              -123.81356987,
+              49.04467653
+            ],
+            [
+              -123.81367532,
+              49.0445042
+            ],
+            [
+              -123.81382473,
+              49.04443157
+            ],
+            [
+              -123.81391808,
+              49.04429627
+            ],
+            [
+              -123.81400014,
+              49.04422363
+            ],
+            [
+              -123.81428327,
+              49.04400572
+            ],
+            [
+              -123.81444698,
+              49.04392313
+            ],
+            [
+              -123.81452507,
+              49.04373371
+            ],
+            [
+              -123.81460715,
+              49.04368813
+            ],
+            [
+              -123.81464663,
+              49.04354428
+            ],
+            [
+              -123.81473954,
+              49.04344459
+            ],
+            [
+              -123.81465519,
+              49.0433278
+            ],
+            [
+              -123.81469512,
+              49.04317541
+            ],
+            [
+              -123.81477453,
+              49.0430572
+            ],
+            [
+              -123.81479832,
+              49.04286778
+            ],
+            [
+              -123.81468486,
+              49.04264418
+            ],
+            [
+              -123.81469785,
+              49.042563
+            ],
+            [
+              -123.81465477,
+              49.04241916
+            ],
+            [
+              -123.81461167,
+              49.04224825
+            ],
+            [
+              -123.81463645,
+              49.04217704
+            ],
+            [
+              -123.81473061,
+              49.04206738
+            ],
+            [
+              -123.81474452,
+              49.04199617
+            ],
+            [
+              -123.81465795,
+              49.04177114
+            ],
+            [
+              -123.81462887,
+              49.04171844
+            ],
+            [
+              -123.814531,
+              49.04152903
+            ],
+            [
+              -123.81451491,
+              49.04139515
+            ],
+            [
+              -123.81452617,
+              49.04125131
+            ],
+            [
+              -123.81457773,
+              49.04104337
+            ],
+            [
+              -123.81467106,
+              49.04085395
+            ],
+            [
+              -123.81468184,
+              49.04069159
+            ],
+            [
+              -123.81465185,
+              49.04062893
+            ],
+            [
+              -123.81465229,
+              49.04059332
+            ],
+            [
+              -123.81466576,
+              49.04055771
+            ],
+            [
+              -123.81462272,
+              49.04044093
+            ],
+            [
+              -123.81455142,
+              49.04035121
+            ],
+            [
+              -123.8143854,
+              49.04013615
+            ],
+            [
+              -123.81427421,
+              49.04002079
+            ],
+            [
+              -123.81414815,
+              49.03993961
+            ],
+            [
+              -123.81388578,
+              49.03980716
+            ],
+            [
+              -123.81377632,
+              49.0397274
+            ],
+            [
+              -123.81373282,
+              49.03964622
+            ],
+            [
+              -123.81366419,
+              49.03957501
+            ],
+            [
+              -123.81355381,
+              49.03951234
+            ],
+            [
+              -123.8133475,
+              49.03944256
+            ],
+            [
+              -123.81316804,
+              49.03931723
+            ],
+            [
+              -123.81302859,
+              49.03917481
+            ],
+            [
+              -123.81281868,
+              49.0389683
+            ],
+            [
+              -123.81272097,
+              49.0388444
+            ],
+            [
+              -123.81254022,
+              49.03862079
+            ],
+            [
+              -123.81251197,
+              49.03856667
+            ],
+            [
+              -123.81243938,
+              49.03835161
+            ],
+            [
+              -123.81231422,
+              49.03817216
+            ],
+            [
+              -123.81221734,
+              49.0380739
+            ],
+            [
+              -123.81215908,
+              49.03790299
+            ],
+            [
+              -123.81207477,
+              49.03778621
+            ],
+            [
+              -123.81189452,
+              49.0376623
+            ],
+            [
+              -123.81163391,
+              49.03756545
+            ],
+            [
+              -123.81130331,
+              49.03745009
+            ],
+            [
+              -123.811084,
+              49.03743443
+            ],
+            [
+              -123.8109041,
+              49.03731764
+            ],
+            [
+              -123.81083547,
+              49.03721937
+            ],
+            [
+              -123.81068129,
+              49.03709546
+            ],
+            [
+              -123.81061176,
+              49.03701428
+            ],
+            [
+              -123.81054268,
+              49.03695162
+            ],
+            [
+              -123.81040279,
+              49.03679068
+            ],
+            [
+              -123.81037545,
+              49.03674653
+            ],
+            [
+              -123.8102486,
+              49.03655853
+            ],
+            [
+              -123.81001404,
+              49.03635345
+            ],
+            [
+              -123.80991626,
+              49.03629933
+            ],
+            [
+              -123.80980729,
+              49.03626515
+            ],
+            [
+              -123.80969649,
+              49.03626515
+            ],
+            [
+              -123.80957404,
+              49.03629363
+            ],
+            [
+              -123.80946544,
+              49.03634776
+            ],
+            [
+              -123.80929168,
+              49.03656423
+            ],
+            [
+              -123.80908762,
+              49.03668387
+            ],
+            [
+              -123.80888564,
+              49.03690035
+            ],
+            [
+              -123.80880573,
+              49.03694592
+            ],
+            [
+              -123.80873713,
+              49.03701001
+            ],
+            [
+              -123.80867109,
+              49.03713534
+            ],
+            [
+              -123.8084405,
+              49.03729058
+            ],
+            [
+              -123.80829327,
+              49.03747146
+            ],
+            [
+              -123.80818558,
+              49.03753554
+            ],
+            [
+              -123.8081035,
+              49.03760818
+            ],
+            [
+              -123.80801057,
+              49.03773493
+            ],
+            [
+              -123.80787639,
+              49.03794287
+            ],
+            [
+              -123.80779603,
+              49.03802405
+            ],
+            [
+              -123.80756626,
+              49.03823199
+            ],
+            [
+              -123.80744681,
+              49.03839435
+            ],
+            [
+              -123.80733741,
+              49.03847694
+            ],
+            [
+              -123.8071233,
+              49.03870339
+            ],
+            [
+              -123.80697343,
+              49.03878458
+            ],
+            [
+              -123.80692004,
+              49.03884866
+            ],
+            [
+              -123.80674675,
+              49.0390566
+            ],
+            [
+              -123.80647616,
+              49.03925599
+            ],
+            [
+              -123.80632675,
+              49.0394098
+            ],
+            [
+              -123.80624559,
+              49.03946535
+            ],
+            [
+              -123.80612439,
+              49.03951093
+            ],
+            [
+              -123.80596194,
+              49.03963767
+            ],
+            [
+              -123.80581296,
+              49.03970177
+            ],
+            [
+              -123.80569132,
+              49.03978294
+            ],
+            [
+              -123.80536516,
+              49.0399923
+            ],
+            [
+              -123.80531085,
+              49.04004642
+            ],
+            [
+              -123.80509547,
+              49.04022873
+            ],
+            [
+              -123.8050677,
+              49.04027429
+            ],
+            [
+              -123.80505596,
+              49.04037257
+            ],
+            [
+              -123.80508644,
+              49.04058905
+            ],
+            [
+              -123.80513248,
+              49.04081264
+            ],
+            [
+              -123.80513469,
+              49.04092089
+            ],
+            [
+              -123.80523205,
+              49.04103767
+            ],
+            [
+              -123.80549442,
+              49.04122425
+            ],
+            [
+              -123.80564734,
+              49.04130401
+            ],
+            [
+              -123.80575552,
+              49.04133961
+            ],
+            [
+              -123.80594925,
+              49.04137378
+            ],
+            [
+              -123.80615603,
+              49.04146209
+            ],
+            [
+              -123.80635934,
+              49.04145212
+            ],
+            [
+              -123.80656608,
+              49.04145924
+            ],
+            [
+              -123.80677159,
+              49.04150339
+            ],
+            [
+              -123.8069358,
+              49.04149342
+            ],
+            [
+              -123.80726376,
+              49.04150909
+            ],
+            [
+              -123.80752437,
+              49.04152475
+            ],
+            [
+              -123.80764729,
+              49.04148772
+            ],
+            [
+              -123.80789185,
+              49.04139658
+            ],
+            [
+              -123.80801475,
+              49.04133249
+            ],
+            [
+              -123.80824454,
+              49.04120573
+            ],
+            [
+              -123.80836744,
+              49.0411687
+            ],
+            [
+              -123.80861156,
+              49.04111316
+            ],
+            [
+              -123.80872272,
+              49.04114734
+            ],
+            [
+              -123.80875144,
+              49.04119291
+            ],
+            [
+              -123.80887836,
+              49.04140797
+            ],
+            [
+              -123.80889268,
+              49.04150624
+            ],
+            [
+              -123.80886667,
+              49.04164154
+            ],
+            [
+              -123.80884412,
+              49.04184805
+            ],
+            [
+              -123.80881984,
+              49.04201895
+            ],
+            [
+              -123.80875351,
+              49.0422454
+            ],
+            [
+              -123.80868842,
+              49.04246188
+            ],
+            [
+              -123.80860936,
+              49.04264133
+            ],
+            [
+              -123.80858554,
+              49.04277663
+            ],
+            [
+              -123.80850521,
+              49.04291194
+            ],
+            [
+              -123.80847967,
+              49.04306575
+            ],
+            [
+              -123.80846888,
+              49.04322811
+            ],
+            [
+              -123.80848274,
+              49.0432808
+            ],
+            [
+              -123.80854105,
+              49.04350583
+            ],
+            [
+              -123.8085711,
+              49.04367673
+            ],
+            [
+              -123.80868498,
+              49.04386473
+            ],
+            [
+              -123.80878186,
+              49.04390888
+            ],
+            [
+              -123.80883747,
+              49.04395303
+            ],
+            [
+              -123.80885052,
+              49.04400715
+            ],
+            [
+              -123.80882448,
+              49.04406127
+            ],
+            [
+              -123.8089492,
+              49.04419515
+            ]
+          ],
+          [
+            [
+              -123.81231645,
+              49.039998
+            ],
+            [
+              -123.81238555,
+              49.04006067
+            ],
+            [
+              -123.81245813,
+              49.04027572
+            ],
+            [
+              -123.81251421,
+              49.04039251
+            ],
+            [
+              -123.81259982,
+              49.04055344
+            ],
+            [
+              -123.81269628,
+              49.04068732
+            ],
+            [
+              -123.8126734,
+              49.04088671
+            ],
+            [
+              -123.81267424,
+              49.04096647
+            ],
+            [
+              -123.81253876,
+              49.04102201
+            ],
+            [
+              -123.81237502,
+              49.04105049
+            ],
+            [
+              -123.81208698,
+              49.04106047
+            ],
+            [
+              -123.81199229,
+              49.04104337
+            ],
+            [
+              -123.81190799,
+              49.04098071
+            ],
+            [
+              -123.81160607,
+              49.04091092
+            ],
+            [
+              -123.81149533,
+              49.04078702
+            ],
+            [
+              -123.81125807,
+              49.04059047
+            ],
+            [
+              -123.81127059,
+              49.04046371
+            ],
+            [
+              -123.81130968,
+              49.0404096
+            ],
+            [
+              -123.81145907,
+              49.04025578
+            ],
+            [
+              -123.81160678,
+              49.0401746
+            ],
+            [
+              -123.8116749,
+              49.04014612
+            ],
+            [
+              -123.81183865,
+              49.04011764
+            ],
+            [
+              -123.81218226,
+              49.04012476
+            ],
+            [
+              -123.81224914,
+              49.04010624
+            ],
+            [
+              -123.81224692,
+              49.039998
+            ],
+            [
+              -123.81231645,
+              49.039998
+            ]
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-073",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 73",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nMichael Lake\n73 That portion of the Province of British Columbia in Oyster Land District contained within the following described boundaries: The mean high water mark of Michael Lake. [en. B.C. Reg. 109/85, s. 3 (i).]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "admin_boundary",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-27",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "official boundary of the named area",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "in Oyster Land District",
+        "geometry.feature": "The mean high water mark of Michael Lake",
+        "effect": "No Shooting Areas",
+        "geometry.side": "contained within the following described boundaries"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "9fc7d119bd4328ebb8201bc6c9de7c0b4e5b8d7b48a7490aadb61fa740dc1f15",
+      "task_id": "closed_area-9fc7d119bd43",
+      "construction": [
+        {
+          "what": "official boundary of the named area",
+          "quote": "The mean high water mark of Michael Lake",
+          "source": "WHSE_BASEMAPPING.FWA_LAKES_POLY"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "0.383 km² (limit none for this type)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:09:19.444Z",
-  "updated": "2026-10-21T16:09:19.444Z"
+  "updated": "2026-10-27T23:11:48.027Z"
 }

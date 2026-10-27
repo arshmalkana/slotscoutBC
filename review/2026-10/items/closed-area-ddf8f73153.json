@@ -7,7 +7,8 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "AI runs disagree: side: run 1 \"inside\" vs run 2 null; steps: run 1 [\"|||\",\"lot 1350|a point|50 metres|lot_line\",\"tlell river|the point of intersection with the natural boundary of hecate strait|50 metres|river\",\"tlell river|the point of commencement||river\",\"|||\",\"lot 59|a point|50 metres|lot_line\",\"tlell river|the point of intersection with the southerly boundary of lot 1350|50 metres|river\",\"lot 1350|the point of intersection with the natural boundary of the tlell river on the right bank thereof||lot_line\",\"tlell river|the point of commencement||river\"] vs run 2 [\"|||\",\"lot 1350|a point|50 metres|lot_line\",\"tlell river|point of intersection with the natural boundary of hecate strait|50 metres easterly|river\",\"tlell river|point of commencement||river\",\"|||\",\"lot 59|a point|50 metres|lot_line\",\"tlell river|point of intersection with the southerly boundary of lot 1350|50 metres easterly|river\",\"lot 1350|point of intersection with the natural boundary of the tlell river on the right bank thereof||lot_line\",\"tlell river|point of commencement||river\"]",
+    "AI runs disagree: steps: run 1 [\"|||\",\"lot 1350|a point|50 metres|lot_line\",\"tlell river|the point of intersection with the natural boundary of hecate strait|50 metres|river\",\"tlell river|the point of commencement||river\",\"|||\",\"lot 59|a point|50 metres|lot_line\",\"tlell river|the point of intersection with the southerly boundary of lot 1350|50 metres|river\",\"lot 1350|the point of intersection with the natural boundary of the tlell river on the right bank thereof||lot_line\",\"tlell river|the point of commencement||river\"] vs run 2 [\"|||\",\"lot 1350|a point|50 metres|lot_line\",\"tlell river|point of intersection with the natural boundary of hecate strait|50 metres easterly|river\",\"tlell river|point of commencement||river\",\"|||\",\"lot 59|a point|50 metres|lot_line\",\"tlell river|point of intersection with the southerly boundary of lot 1350|50 metres easterly|river\",\"lot 1350|point of intersection with the natural boundary of the tlell river on the right bank thereof||lot_line\",\"tlell river|point of commencement||river\"]",
+    "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 \"inside\" vs run 2 null",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -399,5 +400,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:08:54.928Z",
-  "updated": "2026-10-21T16:08:54.928Z"
+  "updated": "2026-10-27T23:11:08.539Z"
 }

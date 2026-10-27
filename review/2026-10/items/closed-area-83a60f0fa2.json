@@ -7,8 +7,7 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "named area \"M.U. 1-1\": none",
-    "named island \"De Courcey Island\": failed (no official layer for area type island); the larger area is not drawn in its place",
+    "named island \"De Courcey Island\": none; the larger area is not drawn in its place",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -132,19 +131,34 @@
       "query": "M.U. 1-1",
       "kind": "wildlife_management_unit",
       "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
-      "status": "none",
-      "matches": 0,
-      "ids": [],
-      "sample": []
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "1-1"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "1-1",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 1,
+          "REGION_RESPONSIBLE_ID": "1",
+          "REGION_RESPONSIBLE_NAME": "Vancouver Island",
+          "GAME_MANAGEMENT_ZONE_ID": "1a",
+          "GAME_MANAGEMENT_ZONE_NAME": "Southern Vancouver Island",
+          "FEATURE_AREA_SQM": 2918835016.2245,
+          "FEATURE_LENGTH_M": 315188.8094,
+          "OBJECTID": 332,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
     },
     {
       "query": "De Courcey Island",
       "kind": "island",
-      "layer": "-",
-      "status": "failed",
+      "layer": "WHSE_BASEMAPPING.FWA_ISLANDS_POLY",
+      "status": "none",
       "matches": 0,
       "ids": [],
-      "note": "no official layer for area type island",
       "sample": []
     }
   ],
@@ -158,5 +172,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:59:15.220Z",
-  "updated": "2026-10-26T22:58:07.290Z"
+  "updated": "2026-10-27T23:11:01.023Z"
 }

@@ -7,7 +7,8 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "AI runs disagree: within: run 1 null vs run 2 \"new westminster district\"; side: run 1 null vs run 2 \"inside\"",
+    "AI runs disagree: within: run 1 null vs run 2 \"new westminster district\"",
+    "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 null vs run 2 \"inside\"",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -154,5 +155,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:59:53.343Z",
-  "updated": "2026-10-20T21:59:53.343Z"
+  "updated": "2026-10-27T23:12:00.140Z"
 }

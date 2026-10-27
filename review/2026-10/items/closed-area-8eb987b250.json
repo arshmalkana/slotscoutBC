@@ -7,7 +7,7 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "named area \"Kamloops Division of Yale District\": failed (no official layer for area type other)",
+    "named area \"Kamloops Division of Yale District\": none",
     "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -142,11 +142,10 @@
     {
       "query": "Kamloops Division of Yale District",
       "kind": "other",
-      "layer": "-",
-      "status": "failed",
+      "layer": "WHSE_TANTALIS.TA_LAND_DISTRICTS_SVW",
+      "status": "none",
       "matches": 0,
       "ids": [],
-      "note": "no official layer for area type other",
       "sample": []
     }
   ],
@@ -160,5 +159,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:58:57.444Z",
-  "updated": "2026-10-20T21:58:57.444Z"
+  "updated": "2026-10-27T23:10:08.954Z"
 }

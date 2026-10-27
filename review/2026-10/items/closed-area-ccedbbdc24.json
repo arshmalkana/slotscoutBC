@@ -7,7 +7,6 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "named area \"M.U. 3-17\": none",
     "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -121,10 +120,26 @@
       "query": "M.U. 3-17",
       "kind": "wildlife_management_unit",
       "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
-      "status": "none",
-      "matches": 0,
-      "ids": [],
-      "sample": []
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "3-17"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "3-17",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 3,
+          "REGION_RESPONSIBLE_ID": "3",
+          "REGION_RESPONSIBLE_NAME": "Thompson",
+          "GAME_MANAGEMENT_ZONE_ID": "3c",
+          "GAME_MANAGEMENT_ZONE_NAME": "Bonaparte",
+          "FEATURE_AREA_SQM": 2716309440.1262,
+          "FEATURE_LENGTH_M": 264937.6832,
+          "OBJECTID": 372,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
     }
   ],
   "validation": [
@@ -137,5 +152,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:08:06.555Z",
-  "updated": "2026-10-21T16:08:06.555Z"
+  "updated": "2026-10-27T23:10:19.998Z"
 }

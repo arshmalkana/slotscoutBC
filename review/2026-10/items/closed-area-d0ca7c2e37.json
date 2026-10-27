@@ -7,8 +7,7 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "named area \"M.U.s 5-4 and 5-5\": none",
-    "the geometry builder does not draw \"road_buffer\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "no single road named and no list of roads the code can read",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -143,10 +142,40 @@
       "query": "M.U.s 5-4 and 5-5",
       "kind": "wildlife_management_unit",
       "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
-      "status": "none",
-      "matches": 0,
-      "ids": [],
-      "sample": []
+      "status": "ok",
+      "matches": 2,
+      "ids": [
+        "5-4",
+        "5-5"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "5-4",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 5,
+          "REGION_RESPONSIBLE_ID": "5",
+          "REGION_RESPONSIBLE_NAME": "Cariboo",
+          "GAME_MANAGEMENT_ZONE_ID": "5d",
+          "GAME_MANAGEMENT_ZONE_NAME": "South Chilcotin",
+          "FEATURE_AREA_SQM": 8303926197.2383,
+          "FEATURE_LENGTH_M": 507067.7805,
+          "OBJECTID": 435,
+          "SE_ANNO_CAD_DATA": null
+        },
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "5-5",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 5,
+          "REGION_RESPONSIBLE_ID": "5",
+          "REGION_RESPONSIBLE_NAME": "Cariboo",
+          "GAME_MANAGEMENT_ZONE_ID": "5d",
+          "GAME_MANAGEMENT_ZONE_NAME": "South Chilcotin",
+          "FEATURE_AREA_SQM": 6727243373.507,
+          "FEATURE_LENGTH_M": 564209.3909,
+          "OBJECTID": 434,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
     }
   ],
   "validation": [
@@ -159,5 +188,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:08:46.067Z",
-  "updated": "2026-10-21T16:08:46.067Z"
+  "updated": "2026-10-27T23:18:38.128Z"
 }

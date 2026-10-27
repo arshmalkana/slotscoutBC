@@ -7,7 +7,7 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "AI runs disagree: within: run 1 \"m.u.s 4 25 and 4 26\" vs run 2 \"4 25 and 4 26\"; side: run 1 null vs run 2 \"inside\"",
+    "AI runs disagree: side: run 1 null vs run 2 \"inside\"",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -165,7 +165,6 @@
   },
   "rejected_quotes": [],
   "disagreements": [
-    "within: run 1 \"m.u.s 4 25 and 4 26\" vs run 2 \"4 25 and 4 26\"",
     "side: run 1 null vs run 2 \"inside\""
   ],
   "lookups": [],
@@ -179,5 +178,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:47:33.017Z",
-  "updated": "2026-10-20T21:47:33.017Z"
+  "updated": "2026-10-27T23:12:04.541Z"
 }

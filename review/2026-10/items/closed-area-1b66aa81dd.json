@@ -7,8 +7,8 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "AI runs disagree: side: run 1 \"inside\" vs run 2 null",
-    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 \"inside\" vs run 2 null",
+    "named lot \"District Lots 7, 7A, 8, 9, 10, 11, 233, 234, 347, 348, 361, 749, 883, 986, 987, 1759 and 1760 of the Queen Charlotte Land District\": failed (no official layer for area type lot); the larger area is not drawn in its place",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -134,7 +134,43 @@
   "disagreements": [
     "side: run 1 \"inside\" vs run 2 null"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U. 6-13",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "6-13"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "6-13",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 6,
+          "REGION_RESPONSIBLE_ID": "6",
+          "REGION_RESPONSIBLE_NAME": "Skeena",
+          "GAME_MANAGEMENT_ZONE_ID": "6a",
+          "GAME_MANAGEMENT_ZONE_NAME": "Queen Charlotte",
+          "FEATURE_AREA_SQM": 19475788191.2325,
+          "FEATURE_LENGTH_M": 557746.1291,
+          "OBJECTID": 458,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    },
+    {
+      "query": "District Lots 7, 7A, 8, 9, 10, 11, 233, 234, 347, 348, 361, 749, 883, 986, 987, 1759 and 1760 of the Queen Charlotte Land District",
+      "kind": "lot",
+      "layer": "-",
+      "status": "failed",
+      "matches": 0,
+      "ids": [],
+      "note": "no official layer for area type lot",
+      "sample": []
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -145,5 +181,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:07:30.674Z",
-  "updated": "2026-10-21T16:07:30.674Z"
+  "updated": "2026-10-27T23:10:16.311Z"
 }

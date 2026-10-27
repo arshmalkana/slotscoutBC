@@ -7,7 +7,8 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "AI runs disagree: side: run 1 null vs run 2 \"inside\"; steps: run 1 [\"|||\",\"|a point just west of lukwa lake|300 m|straight_line\",\"|a point|500 m|straight_line\",\"|a point on the east side of the argonaut mainline|600 m|straight_line\",\"argonaut mainline|a point||road\",\"|the southwest corner of lot 325|920 m|straight_line\",\"|the point of commencement|1 030 m|straight_line\"] vs run 2 [\"lot 325|||\",\"|a point just west of lukwa lake|300 m|\",\"|a point|500 m|\",\"|a point on the east side of the argonaut mainline|600 m|\",\"argonaut mainline|a point||road\",\"|the southwest corner of lot 325|920 m|\",\"|the point of commencement|1 030 m|\"]",
+    "AI runs disagree: steps: run 1 [\"|||\",\"|a point just west of lukwa lake|300 m|straight_line\",\"|a point|500 m|straight_line\",\"|a point on the east side of the argonaut mainline|600 m|straight_line\",\"argonaut mainline|a point||road\",\"|the southwest corner of lot 325|920 m|straight_line\",\"|the point of commencement|1 030 m|straight_line\"] vs run 2 [\"lot 325|||\",\"|a point just west of lukwa lake|300 m|\",\"|a point|500 m|\",\"|a point on the east side of the argonaut mainline|600 m|\",\"argonaut mainline|a point||road\",\"|the southwest corner of lot 325|920 m|\",\"|the point of commencement|1 030 m|\"]",
+    "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 null vs run 2 \"inside\"",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -294,5 +295,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:08:44.971Z",
-  "updated": "2026-10-21T16:08:44.971Z"
+  "updated": "2026-10-27T23:11:00.197Z"
 }

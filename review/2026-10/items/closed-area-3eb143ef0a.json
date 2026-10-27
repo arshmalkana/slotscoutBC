@@ -7,7 +7,8 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "AI runs disagree: side: run 1 \"inside\" vs run 2 null; steps: run 1 [\"skaha lake|the point of intersection with the westerly boundary of the city of penticton||shoreline\",\"city of penticton|the point of commencement||district_boundary\"] vs run 2 [\"skaha lake|point of intersection with the westerly boundary of the city of penticton||shoreline\",\"city of penticton|point of commencement||district_boundary\"]",
+    "AI runs disagree: steps: run 1 [\"skaha lake|the point of intersection with the westerly boundary of the city of penticton||shoreline\",\"city of penticton|the point of commencement||district_boundary\"] vs run 2 [\"skaha lake|point of intersection with the westerly boundary of the city of penticton||shoreline\",\"city of penticton|point of commencement||district_boundary\"]",
+    "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 \"inside\" vs run 2 null",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -196,5 +197,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:08:45.211Z",
-  "updated": "2026-10-21T16:08:45.211Z"
+  "updated": "2026-10-27T23:11:00.533Z"
 }

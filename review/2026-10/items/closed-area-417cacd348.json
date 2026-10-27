@@ -8,7 +8,6 @@
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
     "effect read from the text (no_shooting) differs from the schedule's effect (no_shooting_hunting_exempt)",
-    "named area \"M.U. 2-2\": none",
     "road \"Silver Skagit Forest Service Road\": none",
     "road \"Silver Skagit Forest Service Road\": none",
     "road \"Silver Skagit Forest Service Road\": none",
@@ -183,10 +182,26 @@
       "query": "M.U. 2-2",
       "kind": "wildlife_management_unit",
       "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
-      "status": "none",
-      "matches": 0,
-      "ids": [],
-      "sample": []
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "2-2"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "2-2",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 2,
+          "REGION_RESPONSIBLE_ID": "2",
+          "REGION_RESPONSIBLE_NAME": "Lower Mainland",
+          "GAME_MANAGEMENT_ZONE_ID": "2b",
+          "GAME_MANAGEMENT_ZONE_NAME": "Fraser Valley",
+          "FEATURE_AREA_SQM": 979159042.1741,
+          "FEATURE_LENGTH_M": 169739.0268,
+          "OBJECTID": 351,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
     },
     {
       "query": "Silver Skagit Forest Service Road",
@@ -226,5 +241,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T22:00:02.243Z",
-  "updated": "2026-10-20T22:00:02.243Z"
+  "updated": "2026-10-27T23:12:06.348Z"
 }

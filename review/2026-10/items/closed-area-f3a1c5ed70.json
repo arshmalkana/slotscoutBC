@@ -7,7 +7,6 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "named area \"M.U.s 7-31 and 7-32\": none",
     "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -143,10 +142,40 @@
       "query": "M.U.s 7-31 and 7-32",
       "kind": "wildlife_management_unit",
       "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
-      "status": "none",
-      "matches": 0,
-      "ids": [],
-      "sample": []
+      "status": "ok",
+      "matches": 2,
+      "ids": [
+        "7-31",
+        "7-32"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "7-31",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 7,
+          "REGION_RESPONSIBLE_ID": "7B",
+          "REGION_RESPONSIBLE_NAME": "Omineca",
+          "GAME_MANAGEMENT_ZONE_ID": "7Pa",
+          "GAME_MANAGEMENT_ZONE_NAME": "South Peace",
+          "FEATURE_AREA_SQM": 5537724304.189,
+          "FEATURE_LENGTH_M": 488227.0549,
+          "OBJECTID": 498,
+          "SE_ANNO_CAD_DATA": null
+        },
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "7-32",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 7,
+          "REGION_RESPONSIBLE_ID": "7B",
+          "REGION_RESPONSIBLE_NAME": "Omineca",
+          "GAME_MANAGEMENT_ZONE_ID": "7Pb",
+          "GAME_MANAGEMENT_ZONE_NAME": "North Peace",
+          "FEATURE_AREA_SQM": 3663629582.4358,
+          "FEATURE_LENGTH_M": 335538.4441,
+          "OBJECTID": 492,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
     }
   ],
   "validation": [
@@ -159,5 +188,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:09:58.278Z",
-  "updated": "2026-10-21T16:09:58.278Z"
+  "updated": "2026-10-27T23:12:04.380Z"
 }

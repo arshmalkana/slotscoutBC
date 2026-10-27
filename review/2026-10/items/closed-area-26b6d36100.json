@@ -7,8 +7,8 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "AI runs disagree: side: run 1 null vs run 2 \"inside\"",
-    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 null vs run 2 \"inside\"",
+    "named lot \"District Lots 7, 7A and 11\": failed (no official layer for area type lot); the larger area is not drawn in its place",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -146,7 +146,39 @@
   "disagreements": [
     "side: run 1 null vs run 2 \"inside\""
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "Queen Charlotte Land District",
+      "kind": "other",
+      "layer": "WHSE_TANTALIS.TA_LAND_DISTRICTS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "QUEEN CHARLOTTE DISTRICT"
+      ],
+      "sample": [
+        {
+          "ADMIN_AREA_SID": 147,
+          "LAND_DISTRICT_NAME": "QUEEN CHARLOTTE DISTRICT",
+          "FEATURE_CODE": "FA91800000",
+          "FEATURE_AREA_SQM": 18476452665.1472,
+          "FEATURE_LENGTH_M": 863016.7732,
+          "OBJECTID": 9432016,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    },
+    {
+      "query": "District Lots 7, 7A and 11",
+      "kind": "lot",
+      "layer": "-",
+      "status": "failed",
+      "matches": 0,
+      "ids": [],
+      "note": "no official layer for area type lot",
+      "sample": []
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -157,5 +189,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:58:57.646Z",
-  "updated": "2026-10-20T21:58:57.646Z"
+  "updated": "2026-10-27T23:10:20.400Z"
 }

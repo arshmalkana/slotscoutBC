@@ -8,8 +8,7 @@
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
     "effect read from the text (no_shooting) differs from the schedule's effect (no_shooting_hunting_exempt)",
-    "named area \"M.U. 2-3\": none",
-    "the geometry builder does not draw \"road_buffer\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "listed road \"Tamihi Creek Forest Service Road\" none in the official road layers",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -140,6 +139,70 @@
       "query": "M.U. 2-3",
       "kind": "wildlife_management_unit",
       "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "2-3"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "2-3",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 2,
+          "REGION_RESPONSIBLE_ID": "2",
+          "REGION_RESPONSIBLE_NAME": "Lower Mainland",
+          "GAME_MANAGEMENT_ZONE_ID": "2b",
+          "GAME_MANAGEMENT_ZONE_NAME": "Fraser Valley",
+          "FEATURE_AREA_SQM": 1087799422.1353,
+          "FEATURE_LENGTH_M": 218118.0933,
+          "OBJECTID": 352,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    },
+    {
+      "query": "McGuire Forest Service Road",
+      "kind": "fsr",
+      "layer": "WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "5127.32"
+      ],
+      "sample": [
+        {
+          "FOREST_FILE_ID": "5127",
+          "ROAD_SECTION_ID": "32",
+          "FEATURE_CLASS_SKEY": 558,
+          "ROAD_SECTION_NAME": "MCGUIRE",
+          "ROAD_SECTION_LENGTH": 3.0744,
+          "RETIREMENT_DATE": null,
+          "SECTION_WIDTH": 75,
+          "FEATURE_LENGTH": 3074.4,
+          "AMENDMENT_ID": 4,
+          "FILE_STATUS_CODE": "HI",
+          "FILE_TYPE_CODE": "B40",
+          "FILE_TYPE_DESCRIPTION": "Forest Service Road",
+          "GEOGRAPHIC_DISTRICT_CODE": "DCK",
+          "GEOGRAPHIC_DISTRICT_NAME": "Chilliwack Natural Resource District",
+          "AWARD_DATE": null,
+          "EXPIRY_DATE": null,
+          "CLIENT_NUMBER": "00030011",
+          "CLIENT_LOCATION_CODE": "00",
+          "CLIENT_NAME": "DISTRICT MANAGER CHILLIWACK (DCK)",
+          "LOCATION": "CHILLIWACK RIVER",
+          "LIFE_CYCLE_STATUS_CODE": "ACTIVE",
+          "MAP_LABEL": "5127 32",
+          "FEATURE_LENGTH_M": 3074.3958,
+          "OBJECTID": 1406185,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    },
+    {
+      "query": "Tamihi Creek Forest Service Road",
+      "kind": "fsr",
+      "layer": "WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW",
       "status": "none",
       "matches": 0,
       "ids": [],
@@ -153,8 +216,22 @@
       "detail": "no shape could be built"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "road centreline",
+      "quote": "McGuire Forest Service Road from the junction with the Tamihi Creek Forest Service Road to the crossing of an unnamed creek approximately 3 km easterly along the McGuire Forest Service Road;",
+      "source": "WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW",
+      "ids": [
+        "5127.32"
+      ]
+    },
+    {
+      "what": "buffer 400 m either side, plus a 10 m conservative pad",
+      "quote": "400 m",
+      "source": "geometry builder"
+    }
+  ],
   "status": "open",
   "created": "2026-10-20T21:59:54.816Z",
-  "updated": "2026-10-20T21:59:54.816Z"
+  "updated": "2026-10-27T23:22:00.612Z"
 }

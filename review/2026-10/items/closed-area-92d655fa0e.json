@@ -7,7 +7,7 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "AI runs disagree: within: run 1 \"m.u. 6 12\" vs run 2 \"6 12\"; steps: run 1 [\"|||\",\"|the ordinary high water mark at the most northeasterly point of tangil peninsula at porter head||straight_line\",\"|the most easterly peak on the tangil peninsula||straight_line\",\"the watershed boundary that separates those creeks that flow into dana inlet from those that flow into logan inlet|the peak at the intersection of the northerly boundary of the watershed of crescent inlet with the said watershed boundary that separates those creeks that flow into dana inlet from those that flow into logan inlet||other\",\"|the northeast corner of lot 663||straight_line\",\"lot 663|the intersection with the southerly boundary of the watershed of crescent inlet||lot_line\",\"the watershed of said crescent inlet and of tasu sound|a point on the o.h.w.m. at tasu head||other\",\"|||straight_line\"] vs run 2 []",
+    "AI runs disagree: steps: run 1 [\"|||\",\"|the ordinary high water mark at the most northeasterly point of tangil peninsula at porter head||straight_line\",\"|the most easterly peak on the tangil peninsula||straight_line\",\"the watershed boundary that separates those creeks that flow into dana inlet from those that flow into logan inlet|the peak at the intersection of the northerly boundary of the watershed of crescent inlet with the said watershed boundary that separates those creeks that flow into dana inlet from those that flow into logan inlet||other\",\"|the northeast corner of lot 663||straight_line\",\"lot 663|the intersection with the southerly boundary of the watershed of crescent inlet||lot_line\",\"the watershed of said crescent inlet and of tasu sound|a point on the o.h.w.m. at tasu head||other\",\"|||straight_line\"] vs run 2 []",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -262,7 +262,6 @@
   },
   "rejected_quotes": [],
   "disagreements": [
-    "within: run 1 \"m.u. 6 12\" vs run 2 \"6 12\"",
     "steps: run 1 [\"|||\",\"|the ordinary high water mark at the most northeasterly point of tangil peninsula at porter head||straight_line\",\"|the most easterly peak on the tangil peninsula||straight_line\",\"the watershed boundary that separates those creeks that flow into dana inlet from those that flow into logan inlet|the peak at the intersection of the northerly boundary of the watershed of crescent inlet with the said watershed boundary that separates those creeks that flow into dana inlet from those that flow into logan inlet||other\",\"|the northeast corner of lot 663||straight_line\",\"lot 663|the intersection with the southerly boundary of the watershed of crescent inlet||lot_line\",\"the watershed of said crescent inlet and of tasu sound|a point on the o.h.w.m. at tasu head||other\",\"|||straight_line\"] vs run 2 []"
   ],
   "lookups": [],
@@ -281,5 +280,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:47:33.023Z",
-  "updated": "2026-10-20T21:47:33.023Z"
+  "updated": "2026-10-27T23:12:04.559Z"
 }

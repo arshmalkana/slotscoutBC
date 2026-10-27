@@ -7,7 +7,7 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "AI runs disagree: within: run 1 \"7 9\" vs run 2 \"m.u. 7 9\"; steps: run 1 [\"|||\",\"willow river|a point between its confluence with bowes creek and its confluence with spey creek where the willow river comes closest to the spey creek logging access rd||river\",\"|spey creek logging access rd||\",\"spey creek logging access rd|its junction with hwy 16||road\",\"hwy 16|the point of commencement||road\"] vs run 2 [\"|||\",\"willow river|a point between its confluence with bowes creek and its confluence with spey creek where the willow river comes closest to the spey creek logging access rd||river\",\"|spey creek logging access rd||straight_line\",\"spey creek logging access rd|its junction with hwy 16||road\",\"hwy 16|the point of commencement||road\"]",
+    "AI runs disagree: steps: run 1 [\"|||\",\"willow river|a point between its confluence with bowes creek and its confluence with spey creek where the willow river comes closest to the spey creek logging access rd||river\",\"|spey creek logging access rd||\",\"spey creek logging access rd|its junction with hwy 16||road\",\"hwy 16|the point of commencement||road\"] vs run 2 [\"|||\",\"willow river|a point between its confluence with bowes creek and its confluence with spey creek where the willow river comes closest to the spey creek logging access rd||river\",\"|spey creek logging access rd||straight_line\",\"spey creek logging access rd|its junction with hwy 16||road\",\"hwy 16|the point of commencement||road\"]",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -237,7 +237,6 @@
   },
   "rejected_quotes": [],
   "disagreements": [
-    "within: run 1 \"7 9\" vs run 2 \"m.u. 7 9\"",
     "steps: run 1 [\"|||\",\"willow river|a point between its confluence with bowes creek and its confluence with spey creek where the willow river comes closest to the spey creek logging access rd||river\",\"|spey creek logging access rd||\",\"spey creek logging access rd|its junction with hwy 16||road\",\"hwy 16|the point of commencement||road\"] vs run 2 [\"|||\",\"willow river|a point between its confluence with bowes creek and its confluence with spey creek where the willow river comes closest to the spey creek logging access rd||river\",\"|spey creek logging access rd||straight_line\",\"spey creek logging access rd|its junction with hwy 16||road\",\"hwy 16|the point of commencement||road\"]"
   ],
   "lookups": [],
@@ -256,5 +255,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:59:04.307Z",
-  "updated": "2026-10-20T21:59:04.307Z"
+  "updated": "2026-10-27T23:10:56.924Z"
 }

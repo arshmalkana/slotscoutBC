@@ -7,8 +7,7 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "AI runs disagree: within: run 1 \"m.u. 7 20\" vs run 2 \"7 20\"",
-    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -303,10 +302,34 @@
     "geometry.steps[6]": "thence easterly along the north boundaries of District Lots 34, 35 and 36, Tp 24 to the point of commencement"
   },
   "rejected_quotes": [],
-  "disagreements": [
-    "within: run 1 \"m.u. 7 20\" vs run 2 \"7 20\""
+  "disagreements": [],
+  "lookups": [
+    {
+      "query": "M.U. 7-20",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "7-20"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "7-20",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 7,
+          "REGION_RESPONSIBLE_ID": "7B",
+          "REGION_RESPONSIBLE_NAME": "Omineca",
+          "GAME_MANAGEMENT_ZONE_ID": "7Pa",
+          "GAME_MANAGEMENT_ZONE_NAME": "South Peace",
+          "FEATURE_AREA_SQM": 4372965514.9977,
+          "FEATURE_LENGTH_M": 330991.8388,
+          "OBJECTID": 499,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
   ],
-  "lookups": [],
   "validation": [
     {
       "check": "shape built",
@@ -322,5 +345,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:58:54.548Z",
-  "updated": "2026-10-20T21:58:54.548Z"
+  "updated": "2026-10-27T23:10:07.969Z"
 }

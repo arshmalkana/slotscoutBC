@@ -7,7 +7,6 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "named area \"New Westminster District\": failed (no official layer for area type other)",
     "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -406,12 +405,23 @@
     {
       "query": "New Westminster District",
       "kind": "other",
-      "layer": "-",
-      "status": "failed",
-      "matches": 0,
-      "ids": [],
-      "note": "no official layer for area type other",
-      "sample": []
+      "layer": "WHSE_TANTALIS.TA_LAND_DISTRICTS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "NEW WESTMINSTER DISTRICT"
+      ],
+      "sample": [
+        {
+          "ADMIN_AREA_SID": 139,
+          "LAND_DISTRICT_NAME": "NEW WESTMINSTER DISTRICT",
+          "FEATURE_CODE": "FA91800000",
+          "FEATURE_AREA_SQM": 22869486658.3,
+          "FEATURE_LENGTH_M": 744997.5248,
+          "OBJECTID": 9432067,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
     }
   ],
   "validation": [
@@ -429,5 +439,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:47:35.520Z",
-  "updated": "2026-10-20T21:47:35.520Z"
+  "updated": "2026-10-27T23:12:15.608Z"
 }

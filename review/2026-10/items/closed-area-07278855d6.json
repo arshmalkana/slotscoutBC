@@ -7,7 +7,6 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "named area \"Cariboo Land District\": failed (no official layer for area type other)",
     "named lake \"Stum Lake\": none; the larger area is not drawn in its place",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -142,12 +141,23 @@
     {
       "query": "Cariboo Land District",
       "kind": "other",
-      "layer": "-",
-      "status": "failed",
-      "matches": 0,
-      "ids": [],
-      "note": "no official layer for area type other",
-      "sample": []
+      "layer": "WHSE_TANTALIS.TA_LAND_DISTRICTS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "CARIBOO DISTRICT"
+      ],
+      "sample": [
+        {
+          "ADMIN_AREA_SID": 107,
+          "LAND_DISTRICT_NAME": "CARIBOO DISTRICT",
+          "FEATURE_CODE": "FA91800000",
+          "FEATURE_AREA_SQM": 97862761970.0532,
+          "FEATURE_LENGTH_M": 2561141.106,
+          "OBJECTID": 9431930,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
     },
     {
       "query": "Stum Lake",
@@ -169,5 +179,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:58:57.487Z",
-  "updated": "2026-10-26T22:56:47.961Z"
+  "updated": "2026-10-27T23:10:12.387Z"
 }

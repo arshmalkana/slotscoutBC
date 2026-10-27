@@ -1,7 +1,7 @@
 import { join } from "node:path";
 import * as turf from "@turf/turf";
 import type { Feature, MultiPolygon, Polygon } from "geojson";
-import type { DigitisedRuleProps } from "@slotscout/engine";
+import { normaliseEndpoint, type DigitisedRuleProps } from "@slotscout/engine";
 import { blockingDisagreements, checkQuotes, disagreements, schemaErrors } from "../lib/answers.js";
 import { config, today } from "../lib/config.js";
 import { EFFECT_BY_RULE } from "../lib/effects.js";
@@ -205,7 +205,7 @@ export async function buildClosedArea(t: Task, month: string): Promise<{ state: 
       source_text: t.source_text,
       source_version: t.source.version,
       effect: (scheduleEffect ?? a.effect) as DigitisedRuleProps["effect"],
-      period: a.period ?? null,
+      period: a.period ? { start: normaliseEndpoint(a.period.start), end: normaliseEndpoint(a.period.end) } : null,
       exemptions: a.exemptions ?? [],
       geometry_method: a.geometry.method === "waterbody_buffer" ? "road_buffer" : a.geometry.method,
       buffer_m: a.geometry.buffer_m ?? null,

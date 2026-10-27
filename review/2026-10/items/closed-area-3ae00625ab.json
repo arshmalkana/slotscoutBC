@@ -7,7 +7,8 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "AI runs disagree: side: run 1 null vs run 2 \"inside\"; steps: run 1 [\"lot 314|||\",\"lot 314|the southeast corner of lot 314||lot_line\",\"lots 314 549 550 1665 1644 and 1643|the southwest corner of lot 1643||lot_line\",\"lot 1643|a point northerly 594 metres 1 980 feet along the west boundary of lot 1643|594 metres (1 980 feet)|lot_line\",\"|the west boundary of lot 1643a||straight_line\",\"lot 1643a|the low water mark of stuart lake||lot_line\",\"stuart lake|point of commencement||shoreline\"] vs run 2 [\"lot 314|||\",\"lot 314|its southeast corner||lot_line\",\"lots 314 549 550 1665 1644 and 1643|its southwest corner||lot_line\",\"lot 1643||594 metres (1 980 feet)|lot_line\",\"|the west boundary of lot 1643a||straight_line\",\"lot 1643a|the low water mark of stuart lake||lot_line\",\"stuart lake|point of commencement||shoreline\"]",
+    "AI runs disagree: steps: run 1 [\"lot 314|||\",\"lot 314|the southeast corner of lot 314||lot_line\",\"lots 314 549 550 1665 1644 and 1643|the southwest corner of lot 1643||lot_line\",\"lot 1643|a point northerly 594 metres 1 980 feet along the west boundary of lot 1643|594 metres (1 980 feet)|lot_line\",\"|the west boundary of lot 1643a||straight_line\",\"lot 1643a|the low water mark of stuart lake||lot_line\",\"stuart lake|point of commencement||shoreline\"] vs run 2 [\"lot 314|||\",\"lot 314|its southeast corner||lot_line\",\"lots 314 549 550 1665 1644 and 1643|its southwest corner||lot_line\",\"lot 1643||594 metres (1 980 feet)|lot_line\",\"|the west boundary of lot 1643a||straight_line\",\"lot 1643a|the low water mark of stuart lake||lot_line\",\"stuart lake|point of commencement||shoreline\"]",
+    "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 null vs run 2 \"inside\"",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -280,5 +281,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:10:37.002Z",
-  "updated": "2026-10-21T16:10:37.002Z"
+  "updated": "2026-10-27T23:12:36.834Z"
 }

@@ -7,7 +7,8 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "AI runs disagree: side: run 1 \"inside\" vs run 2 null; steps: run 1 [\"hwy 18|||\",\"|100 m due north of the centre line of said junction|100 m|straight_line\",\"the youbou section of hwy 18|youbou||road\",\"the main private industrial rd along the north shore of cowichan lake|the most western point of the lake|100 m|road\",\"the main private industrial rd along the west and south shore of cowichan lake|honeymoon bay||road\",\"hwy 18|the village of lake cowichan||road\",\"hwy 18|the point of commencement||road\"] vs run 2 [\"hwy 18|||\",\"|100 m due north of the centre line of said junction|100 m|straight_line\",\"youbou section of hwy 18|youbou||road\",\"main private industrial rd along the north shore of cowichan lake|the most western point of the lake|100 m|road\",\"main private industrial rd along the west and south shore of cowichan lake|honeymoon bay||road\",\"hwy 18|the village of lake cowichan||road\",\"hwy 18|the point of commencement||road\"]; exemptions: run 1 2 vs run 2 1",
+    "AI runs disagree: steps: run 1 [\"hwy 18|||\",\"|100 m due north of the centre line of said junction|100 m|straight_line\",\"the youbou section of hwy 18|youbou||road\",\"the main private industrial rd along the north shore of cowichan lake|the most western point of the lake|100 m|road\",\"the main private industrial rd along the west and south shore of cowichan lake|honeymoon bay||road\",\"hwy 18|the village of lake cowichan||road\",\"hwy 18|the point of commencement||road\"] vs run 2 [\"hwy 18|||\",\"|100 m due north of the centre line of said junction|100 m|straight_line\",\"youbou section of hwy 18|youbou||road\",\"main private industrial rd along the north shore of cowichan lake|the most western point of the lake|100 m|road\",\"main private industrial rd along the west and south shore of cowichan lake|honeymoon bay||road\",\"hwy 18|the village of lake cowichan||road\",\"hwy 18|the point of commencement||road\"]; exemptions: run 1 2 vs run 2 1",
+    "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 \"inside\" vs run 2 null",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -311,5 +312,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:07:26.509Z",
-  "updated": "2026-10-21T16:07:26.509Z"
+  "updated": "2026-10-27T23:10:07.201Z"
 }

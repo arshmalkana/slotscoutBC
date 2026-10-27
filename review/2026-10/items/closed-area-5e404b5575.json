@@ -7,7 +7,6 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "named area \"M.U.s 8-22, 8-25 and 8-26\": none",
     "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -132,10 +131,54 @@
       "query": "M.U.s 8-22, 8-25 and 8-26",
       "kind": "wildlife_management_unit",
       "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
-      "status": "none",
-      "matches": 0,
-      "ids": [],
-      "sample": []
+      "status": "ok",
+      "matches": 3,
+      "ids": [
+        "8-22",
+        "8-25",
+        "8-26"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "8-22",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 8,
+          "REGION_RESPONSIBLE_ID": "8",
+          "REGION_RESPONSIBLE_NAME": "Okanagan",
+          "GAME_MANAGEMENT_ZONE_ID": "8b",
+          "GAME_MANAGEMENT_ZONE_NAME": "Okanagan",
+          "FEATURE_AREA_SQM": 760859652.538,
+          "FEATURE_LENGTH_M": 147300.4452,
+          "OBJECTID": 534,
+          "SE_ANNO_CAD_DATA": null
+        },
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "8-25",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 8,
+          "REGION_RESPONSIBLE_ID": "8",
+          "REGION_RESPONSIBLE_NAME": "Okanagan",
+          "GAME_MANAGEMENT_ZONE_ID": "8c",
+          "GAME_MANAGEMENT_ZONE_NAME": "Monashee",
+          "FEATURE_AREA_SQM": 849895015.8036,
+          "FEATURE_LENGTH_M": 181903.5361,
+          "OBJECTID": 527,
+          "SE_ANNO_CAD_DATA": null
+        },
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "8-26",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 8,
+          "REGION_RESPONSIBLE_ID": "8",
+          "REGION_RESPONSIBLE_NAME": "Okanagan",
+          "GAME_MANAGEMENT_ZONE_ID": "8b",
+          "GAME_MANAGEMENT_ZONE_NAME": "Okanagan",
+          "FEATURE_AREA_SQM": 819891577.7164,
+          "FEATURE_LENGTH_M": 177145.9247,
+          "OBJECTID": 532,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
     }
   ],
   "validation": [
@@ -148,5 +191,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:07:30.153Z",
-  "updated": "2026-10-21T16:07:30.153Z"
+  "updated": "2026-10-27T23:10:13.006Z"
 }

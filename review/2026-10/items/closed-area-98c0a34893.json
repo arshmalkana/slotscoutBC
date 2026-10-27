@@ -7,7 +7,6 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "named area \"M.U.s 3-20, 3-26 and 3-27\": none",
     "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -121,10 +120,54 @@
       "query": "M.U.s 3-20, 3-26 and 3-27",
       "kind": "wildlife_management_unit",
       "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
-      "status": "none",
-      "matches": 0,
-      "ids": [],
-      "sample": []
+      "status": "ok",
+      "matches": 3,
+      "ids": [
+        "3-20",
+        "3-26",
+        "3-27"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "3-20",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 3,
+          "REGION_RESPONSIBLE_ID": "3",
+          "REGION_RESPONSIBLE_NAME": "Thompson",
+          "GAME_MANAGEMENT_ZONE_ID": "3b",
+          "GAME_MANAGEMENT_ZONE_NAME": "Nicola",
+          "FEATURE_AREA_SQM": 1702074880.2229,
+          "FEATURE_LENGTH_M": 205753.2816,
+          "OBJECTID": 376,
+          "SE_ANNO_CAD_DATA": null
+        },
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "3-26",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 3,
+          "REGION_RESPONSIBLE_ID": "3",
+          "REGION_RESPONSIBLE_NAME": "Thompson",
+          "GAME_MANAGEMENT_ZONE_ID": "3b",
+          "GAME_MANAGEMENT_ZONE_NAME": "Nicola",
+          "FEATURE_AREA_SQM": 2202532147.9838,
+          "FEATURE_LENGTH_M": 271929.6686,
+          "OBJECTID": 373,
+          "SE_ANNO_CAD_DATA": null
+        },
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "3-27",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 3,
+          "REGION_RESPONSIBLE_ID": "3",
+          "REGION_RESPONSIBLE_NAME": "Thompson",
+          "GAME_MANAGEMENT_ZONE_ID": "3c",
+          "GAME_MANAGEMENT_ZONE_NAME": "Bonaparte",
+          "FEATURE_AREA_SQM": 1680149800.2324,
+          "FEATURE_LENGTH_M": 232608.957,
+          "OBJECTID": 371,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
     }
   ],
   "validation": [
@@ -137,5 +180,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:09:19.584Z",
-  "updated": "2026-10-21T16:09:19.584Z"
+  "updated": "2026-10-27T23:11:48.494Z"
 }

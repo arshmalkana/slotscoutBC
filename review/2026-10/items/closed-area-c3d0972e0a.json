@@ -7,7 +7,7 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "AI runs disagree: within: run 1 \"m.u. 7 21\" vs run 2 \"7 21\"; steps: run 1 [\"|||\",\"|the headwaters of the north fork of the unnamed creek locally known as rainey creek|5.6 km (3.5 miles)|\",\"unnamed creek locally known as rainey creek|the confluence with coldstream creek||creek\",\"coldstream creek|the confluence with an unnamed creek being the north fork of coldstream creek||creek\",\"unnamed creek being the north fork of coldstream creek|a point due west of the southeast corner of the northeast quarter of section 2 tp 78 r 19 w6m||creek\",\"|the point of commencement||\"] vs run 2 [\"groundbirch community pasture|||\",\"|the headwaters of the north fork of the unnamed creek locally known as rainey creek|5.6 km (3.5 miles)|\",\"the unnamed creek locally known as rainey creek|the confluence with coldstream creek||creek\",\"coldstream creek|the confluence with an unnamed creek being the north fork of coldstream creek||creek\",\"an unnamed creek being the north fork of coldstream creek|a point due west of the southeast corner of the northeast quarter of section 2 tp 78 r 19 w6m||creek\",\"|the point of commencement||\"]",
+    "AI runs disagree: steps: run 1 [\"|||\",\"|the headwaters of the north fork of the unnamed creek locally known as rainey creek|5.6 km (3.5 miles)|\",\"unnamed creek locally known as rainey creek|the confluence with coldstream creek||creek\",\"coldstream creek|the confluence with an unnamed creek being the north fork of coldstream creek||creek\",\"unnamed creek being the north fork of coldstream creek|a point due west of the southeast corner of the northeast quarter of section 2 tp 78 r 19 w6m||creek\",\"|the point of commencement||\"] vs run 2 [\"groundbirch community pasture|||\",\"|the headwaters of the north fork of the unnamed creek locally known as rainey creek|5.6 km (3.5 miles)|\",\"the unnamed creek locally known as rainey creek|the confluence with coldstream creek||creek\",\"coldstream creek|the confluence with an unnamed creek being the north fork of coldstream creek||creek\",\"an unnamed creek being the north fork of coldstream creek|a point due west of the southeast corner of the northeast quarter of section 2 tp 78 r 19 w6m||creek\",\"|the point of commencement||\"]",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -282,7 +282,6 @@
   },
   "rejected_quotes": [],
   "disagreements": [
-    "within: run 1 \"m.u. 7 21\" vs run 2 \"7 21\"",
     "steps: run 1 [\"|||\",\"|the headwaters of the north fork of the unnamed creek locally known as rainey creek|5.6 km (3.5 miles)|\",\"unnamed creek locally known as rainey creek|the confluence with coldstream creek||creek\",\"coldstream creek|the confluence with an unnamed creek being the north fork of coldstream creek||creek\",\"unnamed creek being the north fork of coldstream creek|a point due west of the southeast corner of the northeast quarter of section 2 tp 78 r 19 w6m||creek\",\"|the point of commencement||\"] vs run 2 [\"groundbirch community pasture|||\",\"|the headwaters of the north fork of the unnamed creek locally known as rainey creek|5.6 km (3.5 miles)|\",\"the unnamed creek locally known as rainey creek|the confluence with coldstream creek||creek\",\"coldstream creek|the confluence with an unnamed creek being the north fork of coldstream creek||creek\",\"an unnamed creek being the north fork of coldstream creek|a point due west of the southeast corner of the northeast quarter of section 2 tp 78 r 19 w6m||creek\",\"|the point of commencement||\"]"
   ],
   "lookups": [],
@@ -301,5 +300,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:59:04.478Z",
-  "updated": "2026-10-20T21:59:04.478Z"
+  "updated": "2026-10-27T23:10:57.419Z"
 }

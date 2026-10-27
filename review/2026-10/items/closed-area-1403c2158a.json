@@ -7,7 +7,6 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "named area \"Cedar Land District\": failed (no official layer for area type other)",
     "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -368,12 +367,23 @@
     {
       "query": "Cedar Land District",
       "kind": "other",
-      "layer": "-",
-      "status": "failed",
-      "matches": 0,
-      "ids": [],
-      "note": "no official layer for area type other",
-      "sample": []
+      "layer": "WHSE_TANTALIS.TA_LAND_DISTRICTS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "CEDAR DISTRICT"
+      ],
+      "sample": [
+        {
+          "ADMIN_AREA_SID": 109,
+          "LAND_DISTRICT_NAME": "CEDAR DISTRICT",
+          "FEATURE_CODE": "FA91800000",
+          "FEATURE_AREA_SQM": 44409884.3809,
+          "FEATURE_LENGTH_M": 37279.4954,
+          "OBJECTID": 9432253,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
     }
   ],
   "validation": [
@@ -391,5 +401,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:10:36.572Z",
-  "updated": "2026-10-21T16:10:36.572Z"
+  "updated": "2026-10-27T23:12:36.080Z"
 }

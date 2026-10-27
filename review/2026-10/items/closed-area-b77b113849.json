@@ -7,8 +7,8 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "AI runs disagree: side: run 1 null vs run 2 \"inside\"",
-    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 null vs run 2 \"inside\"",
+    "named lot \"Lot 495, New Westminster District\": failed (no official layer for area type lot); the larger area is not drawn in its place",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -133,7 +133,43 @@
   "disagreements": [
     "side: run 1 null vs run 2 \"inside\""
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U. 2-4",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "2-4"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "2-4",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 2,
+          "REGION_RESPONSIBLE_ID": "2",
+          "REGION_RESPONSIBLE_NAME": "Lower Mainland",
+          "GAME_MANAGEMENT_ZONE_ID": "2b",
+          "GAME_MANAGEMENT_ZONE_NAME": "Fraser Valley",
+          "FEATURE_AREA_SQM": 2378738189.1205,
+          "FEATURE_LENGTH_M": 319970.317,
+          "OBJECTID": 354,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    },
+    {
+      "query": "Lot 495, New Westminster District",
+      "kind": "lot",
+      "layer": "-",
+      "status": "failed",
+      "matches": 0,
+      "ids": [],
+      "note": "no official layer for area type lot",
+      "sample": []
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -144,5 +180,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:58:57.682Z",
-  "updated": "2026-10-20T21:58:57.682Z"
+  "updated": "2026-10-27T23:10:37.478Z"
 }

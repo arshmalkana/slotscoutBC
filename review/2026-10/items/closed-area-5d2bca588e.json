@@ -7,7 +7,6 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "named area \"M.U. 6-11\": none",
     "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -136,10 +135,26 @@
       "query": "M.U. 6-11",
       "kind": "wildlife_management_unit",
       "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
-      "status": "none",
-      "matches": 0,
-      "ids": [],
-      "sample": []
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "6-11"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "6-11",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 6,
+          "REGION_RESPONSIBLE_ID": "6",
+          "REGION_RESPONSIBLE_NAME": "Skeena",
+          "GAME_MANAGEMENT_ZONE_ID": "6b",
+          "GAME_MANAGEMENT_ZONE_NAME": "North Coast",
+          "FEATURE_AREA_SQM": 15887749661.4319,
+          "FEATURE_LENGTH_M": 696338.0429,
+          "OBJECTID": 456,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
     }
   ],
   "validation": [
@@ -152,5 +167,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:08:31.812Z",
-  "updated": "2026-10-21T16:08:31.812Z"
+  "updated": "2026-10-27T23:10:37.239Z"
 }

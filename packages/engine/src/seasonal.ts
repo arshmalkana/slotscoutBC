@@ -80,6 +80,28 @@ export function resolveEndpoint(spec: string, year: number): Date {
   throw new Error(`Unknown period endpoint "${spec}"`);
 }
 
+const ORDINALS: Record<string, string> = { first: "1st", "1st": "1st", second: "2nd", "2nd": "2nd", third: "3rd", "3rd": "3rd", fourth: "4th", "4th": "4th", last: "last" };
+
+/**
+ * A period endpoint as the regulation writes it ("January 1", "the Saturday after Labour Day",
+ * "the second Monday in October") in the form resolveEndpoint reads; anything else is returned as is.
+ */
+export function normaliseEndpoint(text: string): string {
+  const s = text.trim().toLowerCase().replace(/^the /, "").replace(/[.,]$/, "");
+  if (/^\d{2}-\d{2}$/.test(s)) return s;
+  const date = s.match(/^([a-z]+)\.? (\d{1,2})(?:st|nd|rd|th)?$/);
+  if (date) {
+    const m = date[1]!.length >= 3 ? MONTHS.findIndex((x) => x.startsWith(date[1]!)) : -1;
+    if (m >= 0) return `${String(m + 1).padStart(2, "0")}-${date[2]!.padStart(2, "0")}`;
+  }
+  if (s === "labour day") return "labour_day";
+  if (s === "saturday after labour day" || s === "saturday following labour day") return "saturday_after_labour_day";
+  if (s === "thanksgiving" || s === "thanksgiving day" || s === "thanksgiving monday") return "thanksgiving";
+  const nth = s.match(/^(first|second|third|fourth|last|1st|2nd|3rd|4th) ([a-z]+) (?:of|in) ([a-z]+)$/);
+  if (nth && WEEKDAYS.includes(nth[2]!) && MONTHS.includes(nth[3]!)) return `${ORDINALS[nth[1]!]}_${nth[2]}_of_${nth[3]}`;
+  return text;
+}
+
 export function describeEndpoint(spec: string): string {
   const s = spec.trim().toLowerCase();
   const fixed = s.match(/^(\d{2})-(\d{2})$/);

@@ -2,6 +2,6 @@
 
 Publishable: the regression set passed and the legal reviewer signed off. data/release.json points here.
 
-Includes 2 approved rule feature(s). 253 open review item(s) and 3 candidate(s) are not included, so their areas show grey ("Cannot confirm").
+Includes 2 approved rule feature(s). 253 open review item(s) and 20 candidate(s) are not included, so their areas show grey ("Cannot confirm").
 
 Files and their SHA-256 are listed in release.json, with the source layer hashes this release was built from.

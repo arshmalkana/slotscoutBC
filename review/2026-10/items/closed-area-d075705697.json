@@ -7,7 +7,6 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "named area \"M.U.s 1-3 and 1-4\": none",
     "the geometry builder does not draw \"waterbody_buffer\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -184,10 +183,40 @@
       "query": "M.U.s 1-3 and 1-4",
       "kind": "wildlife_management_unit",
       "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
-      "status": "none",
-      "matches": 0,
-      "ids": [],
-      "sample": []
+      "status": "ok",
+      "matches": 2,
+      "ids": [
+        "1-3",
+        "1-4"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "1-3",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 1,
+          "REGION_RESPONSIBLE_ID": "1",
+          "REGION_RESPONSIBLE_NAME": "Vancouver Island",
+          "GAME_MANAGEMENT_ZONE_ID": "1a",
+          "GAME_MANAGEMENT_ZONE_NAME": "Southern Vancouver Island",
+          "FEATURE_AREA_SQM": 4113855481.4476,
+          "FEATURE_LENGTH_M": 411652.8412,
+          "OBJECTID": 334,
+          "SE_ANNO_CAD_DATA": null
+        },
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "1-4",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 1,
+          "REGION_RESPONSIBLE_ID": "1",
+          "REGION_RESPONSIBLE_NAME": "Vancouver Island",
+          "GAME_MANAGEMENT_ZONE_ID": "1a",
+          "GAME_MANAGEMENT_ZONE_NAME": "Southern Vancouver Island",
+          "FEATURE_AREA_SQM": 1688288185.525,
+          "FEATURE_LENGTH_M": 371232.087,
+          "OBJECTID": 333,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
     }
   ],
   "validation": [
@@ -200,5 +229,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:07:25.999Z",
-  "updated": "2026-10-21T16:07:25.999Z"
+  "updated": "2026-10-27T23:10:06.656Z"
 }

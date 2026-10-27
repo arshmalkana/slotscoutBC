@@ -7,8 +7,7 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "AI runs disagree: within: run 1 \"4 19\" vs run 2 \"m.u. 4 19\"",
-    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "named lot \"Lot A, District Lot 1884, Kootenay District, Plan 13962\": failed (no official layer for area type lot); the larger area is not drawn in its place",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -122,10 +121,44 @@
     "effect": "No Shooting or Hunting Areas"
   },
   "rejected_quotes": [],
-  "disagreements": [
-    "within: run 1 \"4 19\" vs run 2 \"m.u. 4 19\""
+  "disagreements": [],
+  "lookups": [
+    {
+      "query": "4-19",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "4-19"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "4-19",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 4,
+          "REGION_RESPONSIBLE_ID": "4",
+          "REGION_RESPONSIBLE_NAME": "Kootenay",
+          "GAME_MANAGEMENT_ZONE_ID": "4Wa",
+          "GAME_MANAGEMENT_ZONE_NAME": "Nelson",
+          "FEATURE_AREA_SQM": 1495968826.1994,
+          "FEATURE_LENGTH_M": 221678.818,
+          "OBJECTID": 410,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    },
+    {
+      "query": "Lot A, District Lot 1884, Kootenay District, Plan 13962",
+      "kind": "lot",
+      "layer": "-",
+      "status": "failed",
+      "matches": 0,
+      "ids": [],
+      "note": "no official layer for area type lot",
+      "sample": []
+    }
   ],
-  "lookups": [],
   "validation": [
     {
       "check": "shape built",
@@ -136,5 +169,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:58:54.540Z",
-  "updated": "2026-10-20T21:58:54.540Z"
+  "updated": "2026-10-27T23:10:07.710Z"
 }

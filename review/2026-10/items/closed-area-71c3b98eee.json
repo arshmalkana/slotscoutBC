@@ -7,7 +7,8 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "AI runs disagree: side: run 1 null vs run 2 \"inside\"; steps: run 1 [\"lot 1153|||\",\"lot 1153|the south shore of ikt lake||lot_line\",\"ikt lake|unnamed river entering ikt lake at its most northerly point||shoreline\",\"unnamed river|the northwest corner of lot 209||river\",\"lot 209|||straight_line\",\"|the height of land between the martin river drainage and link lake|3.2 km (2 miles)|straight_line\",\"height of land through mount caro marion|the west shore of link lake approximately 400 m 0.25 mile from the northeast corner of lot 1170|approximately 400 m (0.25 mile)|other\",\"unnamed bay|the southeast corner of lot 1151||\",\"|the southwest corner of lot 1176||straight_line\",\"cousins inlet|point of commencement||straight_line\"] vs run 2 [\"lot 1153|||\",\"lot 1153|the south shore of ikt lake||lot_line\",\"ikt lake|unnamed river entering ikt lake at its most northerly point||shoreline\",\"unnamed river|the northwest corner of lot 209||river\",\"lot 209|||\",\"|the height of land between the martin river drainage and link lake|3.2 km (2 miles)|straight_line\",\"mount caro marion|the west shore of link lake approximately 400 m 0.25 mile from the northeast corner of lot 1170|approximately 400 m (0.25 mile)|other\",\"unnamed bay|the southeast corner of lot 1151||\",\"|the southwest corner of lot 1176||straight_line\",\"cousins inlet|point of commencement||straight_line\"]",
+    "AI runs disagree: steps: run 1 [\"lot 1153|||\",\"lot 1153|the south shore of ikt lake||lot_line\",\"ikt lake|unnamed river entering ikt lake at its most northerly point||shoreline\",\"unnamed river|the northwest corner of lot 209||river\",\"lot 209|||straight_line\",\"|the height of land between the martin river drainage and link lake|3.2 km (2 miles)|straight_line\",\"height of land through mount caro marion|the west shore of link lake approximately 400 m 0.25 mile from the northeast corner of lot 1170|approximately 400 m (0.25 mile)|other\",\"unnamed bay|the southeast corner of lot 1151||\",\"|the southwest corner of lot 1176||straight_line\",\"cousins inlet|point of commencement||straight_line\"] vs run 2 [\"lot 1153|||\",\"lot 1153|the south shore of ikt lake||lot_line\",\"ikt lake|unnamed river entering ikt lake at its most northerly point||shoreline\",\"unnamed river|the northwest corner of lot 209||river\",\"lot 209|||\",\"|the height of land between the martin river drainage and link lake|3.2 km (2 miles)|straight_line\",\"mount caro marion|the west shore of link lake approximately 400 m 0.25 mile from the northeast corner of lot 1170|approximately 400 m (0.25 mile)|other\",\"unnamed bay|the southeast corner of lot 1151||\",\"|the southwest corner of lot 1176||straight_line\",\"cousins inlet|point of commencement||straight_line\"]",
+    "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 null vs run 2 \"inside\"",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -169,7 +170,7 @@
       "model": "Claude Code agent mode, fresh subagent",
       "prompt_version": "closed_area.v1",
       "schema_id": "closed_area.v1",
-      "produced_at": "__NOW__",
+      "produced_at": "2026-10-20T21:58:59Z",
       "answer": {
         "effect": "no_shooting",
         "exemptions": [],
@@ -350,5 +351,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:58:57.996Z",
-  "updated": "2026-10-20T21:58:57.996Z"
+  "updated": "2026-10-27T23:10:47.528Z"
 }

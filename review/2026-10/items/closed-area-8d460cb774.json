@@ -7,8 +7,8 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "AI runs disagree: side: run 1 \"inside\" vs run 2 null",
-    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 \"inside\" vs run 2 null",
+    "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -354,5 +354,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:10:14.338Z",
-  "updated": "2026-10-21T16:10:14.338Z"
+  "updated": "2026-10-27T23:12:15.710Z"
 }

@@ -7,7 +7,8 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "AI runs disagree: side: run 1 null vs run 2 \"inside\"; steps: run 1 [\"cowichan bay rd|||\",\"cowichan bay rd|a point opposite the northwest corner of lot 2 section 8 range 2 plan 12543||road\",\"|the low water level mark on the northern shore of the southernmost channel of the koksilah river||straight_line\",\"southernmost channel of the koksilah river|the southeasternmost point of lot 1 section 9 range 3 plan 1725||river\",\"lots 19a and 19b commonly known as widgeon island|the point of commencement||other\"] vs run 2 [\"|||\",\"cowichan bay rd|a point opposite the northwest corner of lot 2 section 8 range 2 plan 12543||road\",\"|the low water level mark on the northern shore of the southernmost channel of the koksilah river||straight_line\",\"southernmost channel of the koksilah river|the southeasternmost point of lot 1 section 9 range 3 plan 1725||river\",\"lots 19a and 19b commonly known as widgeon island|the point of commencement||other\"]",
+    "AI runs disagree: steps: run 1 [\"cowichan bay rd|||\",\"cowichan bay rd|a point opposite the northwest corner of lot 2 section 8 range 2 plan 12543||road\",\"|the low water level mark on the northern shore of the southernmost channel of the koksilah river||straight_line\",\"southernmost channel of the koksilah river|the southeasternmost point of lot 1 section 9 range 3 plan 1725||river\",\"lots 19a and 19b commonly known as widgeon island|the point of commencement||other\"] vs run 2 [\"|||\",\"cowichan bay rd|a point opposite the northwest corner of lot 2 section 8 range 2 plan 12543||road\",\"|the low water level mark on the northern shore of the southernmost channel of the koksilah river||straight_line\",\"southernmost channel of the koksilah river|the southeasternmost point of lot 1 section 9 range 3 plan 1725||river\",\"lots 19a and 19b commonly known as widgeon island|the point of commencement||other\"]",
+    "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 null vs run 2 \"inside\"",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -238,5 +239,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:08:33.671Z",
-  "updated": "2026-10-21T16:08:33.671Z"
+  "updated": "2026-10-27T23:10:49.433Z"
 }

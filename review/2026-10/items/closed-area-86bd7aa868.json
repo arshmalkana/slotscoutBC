@@ -7,7 +7,6 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "named area \"M.U. 1-10\": none",
     "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -234,10 +233,26 @@
       "query": "M.U. 1-10",
       "kind": "wildlife_management_unit",
       "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
-      "status": "none",
-      "matches": 0,
-      "ids": [],
-      "sample": []
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "1-10"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "1-10",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 1,
+          "REGION_RESPONSIBLE_ID": "1",
+          "REGION_RESPONSIBLE_NAME": "Vancouver Island",
+          "GAME_MANAGEMENT_ZONE_ID": "1b",
+          "GAME_MANAGEMENT_ZONE_NAME": "Northern Vancouver Island",
+          "FEATURE_AREA_SQM": 3696197846.7371,
+          "FEATURE_LENGTH_M": 390454.1215,
+          "OBJECTID": 325,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
     }
   ],
   "validation": [
@@ -255,5 +270,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:07:31.158Z",
-  "updated": "2026-10-21T16:07:31.158Z"
+  "updated": "2026-10-27T23:10:17.254Z"
 }

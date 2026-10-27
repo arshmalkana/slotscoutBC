@@ -7,7 +7,8 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "AI runs disagree: side: run 1 \"inside\" vs run 2 null; steps: run 1 [\"||1 km|\",\"|the most northerly point of lot 420 at the high water mark||\",\"||100 metres|\",\"kumdis bay|the intersection with hwy 16 in lot 414|100 metres|shoreline\",\"hwy 16|a point at the mean high water mark on the east shore of kumdis creek|approximately 100 metres|road\",\"kumdis creek and kumdis bay|a point due east of the most northerly point of lot 420||shoreline\",\"|the point of commencement||\"] vs run 2 [\"||1 km|\",\"|most northerly point of lot 420 at the high water mark||straight_line\",\"||100 metres|straight_line\",\"kumdis bay|intersection with hwy 16 in lot 414|100 metres west|shoreline\",\"hwy 16|a point at the mean high water mark on the east shore of kumdis creek|approximately 100 metres|road\",\"kumdis creek and kumdis bay|a point due east of the most northerly point of lot 420||shoreline\",\"|point of commencement||straight_line\"]",
+    "AI runs disagree: steps: run 1 [\"||1 km|\",\"|the most northerly point of lot 420 at the high water mark||\",\"||100 metres|\",\"kumdis bay|the intersection with hwy 16 in lot 414|100 metres|shoreline\",\"hwy 16|a point at the mean high water mark on the east shore of kumdis creek|approximately 100 metres|road\",\"kumdis creek and kumdis bay|a point due east of the most northerly point of lot 420||shoreline\",\"|the point of commencement||\"] vs run 2 [\"||1 km|\",\"|most northerly point of lot 420 at the high water mark||straight_line\",\"||100 metres|straight_line\",\"kumdis bay|intersection with hwy 16 in lot 414|100 metres west|shoreline\",\"hwy 16|a point at the mean high water mark on the east shore of kumdis creek|approximately 100 metres|road\",\"kumdis creek and kumdis bay|a point due east of the most northerly point of lot 420||shoreline\",\"|point of commencement||straight_line\"]",
+    "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 \"inside\" vs run 2 null",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -347,5 +348,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:10:21.662Z",
-  "updated": "2026-10-21T16:10:21.662Z"
+  "updated": "2026-10-27T23:12:27.425Z"
 }

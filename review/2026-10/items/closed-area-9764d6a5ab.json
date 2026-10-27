@@ -7,8 +7,9 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "AI runs disagree: side: run 1 \"inside\" vs run 2 null",
-    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 \"inside\" vs run 2 null",
+    "named area \"Haida Gwaii\": failed (no official layer for area type other)",
+    "named lot \"Queen Charlotte City District Lots 15, 15A, 16, 16A, 18 and 3\": failed (no official layer for area type lot); the larger area is not drawn in its place",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -134,7 +135,28 @@
   "disagreements": [
     "side: run 1 \"inside\" vs run 2 null"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "Haida Gwaii",
+      "kind": "other",
+      "layer": "-",
+      "status": "failed",
+      "matches": 0,
+      "ids": [],
+      "note": "no official layer for area type other",
+      "sample": []
+    },
+    {
+      "query": "Queen Charlotte City District Lots 15, 15A, 16, 16A, 18 and 3",
+      "kind": "lot",
+      "layer": "-",
+      "status": "failed",
+      "matches": 0,
+      "ids": [],
+      "note": "no official layer for area type lot",
+      "sample": []
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -145,5 +167,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:08:46.106Z",
-  "updated": "2026-10-21T16:08:46.106Z"
+  "updated": "2026-10-27T23:11:01.887Z"
 }

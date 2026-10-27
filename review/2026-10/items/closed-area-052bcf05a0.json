@@ -7,7 +7,8 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "AI runs disagree: side: run 1 \"inside\" vs run 2 null; steps: run 1 [\"o donnel river|||\",\"o donnel river|a point one kilometre perpendicularly distant outwards from the mean high water mark of atlin lake|one kilometre|river\",\"atlin lake|a point due east of atlin mountain|one kilometre|shoreline\",\"|the boundary of m.u. 6 25||straight_line\",\"m.u. 6 25|the boundary of atlin park||other\",\"|the point of commencement||\"] vs run 2 [\"|||\",\"o donnel river|a point one kilometre perpendicularly distant outwards from the mean high water mark of atlin lake|one kilometre|river\",\"atlin lake|a point due east of atlin mountain|one kilometre|shoreline\",\"|the boundary of m.u. 6 25||straight_line\",\"m.u. 6 25|the boundary of atlin park||other\",\"|the point of commencement||\"]",
+    "AI runs disagree: steps: run 1 [\"o donnel river|||\",\"o donnel river|a point one kilometre perpendicularly distant outwards from the mean high water mark of atlin lake|one kilometre|river\",\"atlin lake|a point due east of atlin mountain|one kilometre|shoreline\",\"|the boundary of m.u. 6 25||straight_line\",\"m.u. 6 25|the boundary of atlin park||other\",\"|the point of commencement||\"] vs run 2 [\"|||\",\"o donnel river|a point one kilometre perpendicularly distant outwards from the mean high water mark of atlin lake|one kilometre|river\",\"atlin lake|a point due east of atlin mountain|one kilometre|shoreline\",\"|the boundary of m.u. 6 25||straight_line\",\"m.u. 6 25|the boundary of atlin park||other\",\"|the point of commencement||\"]",
+    "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 \"inside\" vs run 2 null",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -264,5 +265,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:08:45.473Z",
-  "updated": "2026-10-21T16:08:45.473Z"
+  "updated": "2026-10-27T23:11:01.073Z"
 }

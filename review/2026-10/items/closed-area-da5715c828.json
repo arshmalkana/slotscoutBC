@@ -7,7 +7,8 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "AI runs disagree: side: run 1 \"inside\" vs run 2 null; steps: run 1 [\"|||\",\"schulbuckhand creek|hwy 37a||creek\",\"hwy 37a|the south boundary of lot 2665||road\",\"|the northeast corner of lot 6808||\",\"|clearwater creek||\",\"clearwater creek|the mean high water mark of lakelse lake||creek\",\"lakelse lake|the point of commencement||shoreline\"] vs run 2 [\"|||\",\"schulbuckhand creek|hwy 37a||creek\",\"hwy 37a|south boundary of lot 2665||road\",\"|northeast corner of lot 6808||straight_line\",\"|clearwater creek||straight_line\",\"clearwater creek|mean high water mark of lakelse lake||creek\",\"lakelse lake|point of commencement||shoreline\"]",
+    "AI runs disagree: steps: run 1 [\"|||\",\"schulbuckhand creek|hwy 37a||creek\",\"hwy 37a|the south boundary of lot 2665||road\",\"|the northeast corner of lot 6808||\",\"|clearwater creek||\",\"clearwater creek|the mean high water mark of lakelse lake||creek\",\"lakelse lake|the point of commencement||shoreline\"] vs run 2 [\"|||\",\"schulbuckhand creek|hwy 37a||creek\",\"hwy 37a|south boundary of lot 2665||road\",\"|northeast corner of lot 6808||straight_line\",\"|clearwater creek||straight_line\",\"clearwater creek|mean high water mark of lakelse lake||creek\",\"lakelse lake|point of commencement||shoreline\"]",
+    "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 \"inside\" vs run 2 null",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -344,5 +345,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:08:45.455Z",
-  "updated": "2026-10-21T16:08:45.455Z"
+  "updated": "2026-10-27T23:11:01.043Z"
 }

@@ -7,8 +7,8 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "AI runs disagree: side: run 1 null vs run 2 \"inside\"",
-    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 null vs run 2 \"inside\"",
+    "named lot \"District Lot 17, Parcel 1 of DD 5963-I and Parcel A of District Lot 3912, Plan 4061 K.D.\": failed (no official layer for area type lot); the larger area is not drawn in its place",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -122,7 +122,18 @@
   "disagreements": [
     "side: run 1 null vs run 2 \"inside\""
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "District Lot 17, Parcel 1 of DD 5963-I and Parcel A of District Lot 3912, Plan 4061 K.D.",
+      "kind": "lot",
+      "layer": "-",
+      "status": "failed",
+      "matches": 0,
+      "ids": [],
+      "note": "no official layer for area type lot",
+      "sample": []
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -133,5 +144,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:47:25.519Z",
-  "updated": "2026-10-20T21:47:25.519Z"
+  "updated": "2026-10-27T23:12:00.124Z"
 }

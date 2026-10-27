@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { compass8, destination, distanceM, markBlockedBearings, periodStatus, relate, resolveEndpoint, safeSectors } from "../src/index.js";
+import { compass8, destination, distanceM, markBlockedBearings, normaliseEndpoint, periodStatus, relate, resolveEndpoint, safeSectors } from "../src/index.js";
 import { PIN, square } from "./fixtures.js";
 
 describe("geometry", () => {
@@ -42,6 +42,16 @@ describe("geometry", () => {
 });
 
 describe("seasonal periods", () => {
+  it("reads endpoints as the regulation writes them", () => {
+    expect(normaliseEndpoint("January 1")).toBe("01-01");
+    expect(normaliseEndpoint("August 31")).toBe("08-31");
+    expect(normaliseEndpoint("Sept. 10th")).toBe("09-10");
+    expect(normaliseEndpoint("the Saturday after Labour Day")).toBe("saturday_after_labour_day");
+    expect(normaliseEndpoint("the second Monday in October")).toBe("2nd_monday_of_october");
+    expect(normaliseEndpoint("12-15")).toBe("12-15");
+    expect(normaliseEndpoint("when the snow melts")).toBe("when the snow melts");
+  });
+
   it("resolves named endpoints", () => {
     expect(resolveEndpoint("labour_day", 2026).toISOString().slice(0, 10)).toBe("2026-09-07");
     expect(resolveEndpoint("saturday_after_labour_day", 2026).toISOString().slice(0, 10)).toBe("2026-09-12");

@@ -7,7 +7,8 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "AI runs disagree: side: run 1 \"inside\" vs run 2 null; steps: run 1 [\"jewel lake rd|||\",\"jewel lake rd|the point of intersection with the westerly boundary of jewel lake provincial park|25 metres|road\",\"jewel lake provincial park|a point 100 metres east of the natural boundary of jewel lake on the easterly shore thereof||other\",\"jewel lake|the point of intersection with the boundary of jewel lake meadow|100 metres|shoreline\",\"jewel lake meadow|a point of intersection with the northern boundary of d.l. 1875s||other\",\"d.l. 1875s|the point of commencement||lot_line\"] vs run 2 [\"jewel lake rd||25 metres|\",\"jewel lake rd|the point of intersection with the westerly boundary of jewel lake provincial park|25 metres|road\",\"jewel lake provincial park|a point 100 metres east of the natural boundary of jewel lake on the easterly shore thereof|100 metres|other\",\"jewel lake|the point of intersection with the boundary of jewel lake meadow|100 metres|shoreline\",\"jewel lake meadow|a point of intersection with the northern boundary of d.l. 1875s||other\",\"d.l. 1875s|the point of commencement||lot_line\"]",
+    "AI runs disagree: steps: run 1 [\"jewel lake rd|||\",\"jewel lake rd|the point of intersection with the westerly boundary of jewel lake provincial park|25 metres|road\",\"jewel lake provincial park|a point 100 metres east of the natural boundary of jewel lake on the easterly shore thereof||other\",\"jewel lake|the point of intersection with the boundary of jewel lake meadow|100 metres|shoreline\",\"jewel lake meadow|a point of intersection with the northern boundary of d.l. 1875s||other\",\"d.l. 1875s|the point of commencement||lot_line\"] vs run 2 [\"jewel lake rd||25 metres|\",\"jewel lake rd|the point of intersection with the westerly boundary of jewel lake provincial park|25 metres|road\",\"jewel lake provincial park|a point 100 metres east of the natural boundary of jewel lake on the easterly shore thereof|100 metres|other\",\"jewel lake|the point of intersection with the boundary of jewel lake meadow|100 metres|shoreline\",\"jewel lake meadow|a point of intersection with the northern boundary of d.l. 1875s||other\",\"d.l. 1875s|the point of commencement||lot_line\"]",
+    "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 \"inside\" vs run 2 null",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -264,5 +265,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:10:14.319Z",
-  "updated": "2026-10-21T16:10:14.319Z"
+  "updated": "2026-10-27T23:12:15.692Z"
 }

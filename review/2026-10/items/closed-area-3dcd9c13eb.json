@@ -7,7 +7,6 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "named area \"M.U. 5-8\": none",
     "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -128,10 +127,26 @@
       "query": "M.U. 5-8",
       "kind": "wildlife_management_unit",
       "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
-      "status": "none",
-      "matches": 0,
-      "ids": [],
-      "sample": []
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "5-8"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "5-8",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 5,
+          "REGION_RESPONSIBLE_ID": "5",
+          "REGION_RESPONSIBLE_NAME": "Cariboo",
+          "GAME_MANAGEMENT_ZONE_ID": "5e",
+          "GAME_MANAGEMENT_ZONE_NAME": "Central Coast",
+          "FEATURE_AREA_SQM": 12445312252.7621,
+          "FEATURE_LENGTH_M": 744610.2485,
+          "OBJECTID": 430,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
     }
   ],
   "validation": [
@@ -144,5 +159,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:08:31.563Z",
-  "updated": "2026-10-21T16:08:31.563Z"
+  "updated": "2026-10-27T23:10:37.094Z"
 }

@@ -7,8 +7,8 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "AI runs disagree: from: run 1 \"nilkitkwa lake\" vs run 2 \"the natural boundary of nilkitkwa lake on the northerly shore\"; to: run 1 \"nilkitkwa river\" vs run 2 \"the midline of nilkitkwa river\"",
-    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "AI runs also differ on fields this shape is not drawn from (not blocking): from: run 1 \"nilkitkwa lake\" vs run 2 \"natural boundary of nilkitkwa lake on the northerly shore\"; to: run 1 \"nilkitkwa river\" vs run 2 \"midline of nilkitkwa river\"",
+    "the geometry builder does not draw \"waterbody_buffer\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -171,10 +171,36 @@
   },
   "rejected_quotes": [],
   "disagreements": [
-    "from: run 1 \"nilkitkwa lake\" vs run 2 \"the natural boundary of nilkitkwa lake on the northerly shore\"",
-    "to: run 1 \"nilkitkwa river\" vs run 2 \"the midline of nilkitkwa river\""
+    "from: run 1 \"nilkitkwa lake\" vs run 2 \"natural boundary of nilkitkwa lake on the northerly shore\"",
+    "to: run 1 \"nilkitkwa river\" vs run 2 \"midline of nilkitkwa river\""
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U. 6-08",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "6-8"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "6-8",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 6,
+          "REGION_RESPONSIBLE_ID": "6",
+          "REGION_RESPONSIBLE_NAME": "Skeena",
+          "GAME_MANAGEMENT_ZONE_ID": "6c",
+          "GAME_MANAGEMENT_ZONE_NAME": "Upper Nechako",
+          "FEATURE_AREA_SQM": 9770541429.0394,
+          "FEATURE_LENGTH_M": 818439.2131,
+          "OBJECTID": 462,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -185,5 +211,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:08:32.125Z",
-  "updated": "2026-10-21T16:08:32.125Z"
+  "updated": "2026-10-27T23:10:38.649Z"
 }

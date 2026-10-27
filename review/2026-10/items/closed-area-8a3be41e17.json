@@ -7,7 +7,6 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "named area \"M.U. 3-45\": none",
     "named other \"Murtle Lake Nature Conservancy Area\": failed (no official layer for area type other); the larger area is not drawn in its place",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -132,10 +131,26 @@
       "query": "M.U. 3-45",
       "kind": "wildlife_management_unit",
       "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
-      "status": "none",
-      "matches": 0,
-      "ids": [],
-      "sample": []
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "3-45"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "3-45",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 3,
+          "REGION_RESPONSIBLE_ID": "3",
+          "REGION_RESPONSIBLE_NAME": "Thompson",
+          "GAME_MANAGEMENT_ZONE_ID": "3d",
+          "GAME_MANAGEMENT_ZONE_NAME": "North Thompson",
+          "FEATURE_AREA_SQM": 2279567390.5142,
+          "FEATURE_LENGTH_M": 289759.0635,
+          "OBJECTID": 358,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
     },
     {
       "query": "Murtle Lake Nature Conservancy Area",
@@ -158,5 +173,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:08:06.694Z",
-  "updated": "2026-10-26T22:57:27.899Z"
+  "updated": "2026-10-27T23:10:20.202Z"
 }

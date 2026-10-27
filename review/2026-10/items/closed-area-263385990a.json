@@ -7,7 +7,6 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "named area \"M.U. 8-06\": none",
     "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
     "validation failed: shape built (no shape could be built)"
   ],
@@ -279,10 +278,26 @@
       "query": "M.U. 8-06",
       "kind": "wildlife_management_unit",
       "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
-      "status": "none",
-      "matches": 0,
-      "ids": [],
-      "sample": []
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "8-6"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "8-6",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 8,
+          "REGION_RESPONSIBLE_ID": "8",
+          "REGION_RESPONSIBLE_NAME": "Okanagan",
+          "GAME_MANAGEMENT_ZONE_ID": "8a",
+          "GAME_MANAGEMENT_ZONE_NAME": "Similkameen",
+          "FEATURE_AREA_SQM": 1005029252.3817,
+          "FEATURE_LENGTH_M": 176606.3204,
+          "OBJECTID": 542,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
     }
   ],
   "validation": [
@@ -300,5 +315,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:08:32.610Z",
-  "updated": "2026-10-21T16:08:32.610Z"
+  "updated": "2026-10-27T23:10:44.284Z"
 }

@@ -7,8 +7,9 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "AI runs disagree: side: run 1 null vs run 2 \"inside\"",
-    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 null vs run 2 \"inside\"",
+    "named area \"KDYD\": failed (no official layer for area type other)",
+    "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -248,7 +249,18 @@
   "disagreements": [
     "side: run 1 null vs run 2 \"inside\""
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "KDYD",
+      "kind": "other",
+      "layer": "-",
+      "status": "failed",
+      "matches": 0,
+      "ids": [],
+      "note": "no official layer for area type other",
+      "sample": []
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -264,5 +276,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:09:59.043Z",
-  "updated": "2026-10-21T16:09:59.043Z"
+  "updated": "2026-10-27T23:12:05.121Z"
 }

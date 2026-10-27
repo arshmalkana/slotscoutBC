@@ -7,8 +7,8 @@
   "change_type": "new",
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
-    "AI runs disagree: from: run 1 \"unnamed rd between dease lake and telegraph creek\" vs run 2 \"the unnamed rd between dease lake and telegraph creek\"",
-    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "road \"access road to the Golden Bear Mine\": none",
+    "road \"unnamed road between Dease Lake and Telegraph Creek\": none",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -182,10 +182,66 @@
     "geometry.side": "on either side"
   },
   "rejected_quotes": [],
-  "disagreements": [
-    "from: run 1 \"unnamed rd between dease lake and telegraph creek\" vs run 2 \"the unnamed rd between dease lake and telegraph creek\""
+  "disagreements": [],
+  "lookups": [
+    {
+      "query": "M.U. 6-22 and M.U. 6-26",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 2,
+      "ids": [
+        "6-22",
+        "6-26"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "6-22",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 6,
+          "REGION_RESPONSIBLE_ID": "6",
+          "REGION_RESPONSIBLE_NAME": "Skeena",
+          "GAME_MANAGEMENT_ZONE_ID": "6e",
+          "GAME_MANAGEMENT_ZONE_NAME": "Stikine",
+          "FEATURE_AREA_SQM": 13309920964.3739,
+          "FEATURE_LENGTH_M": 1223480.4723,
+          "OBJECTID": 444,
+          "SE_ANNO_CAD_DATA": null
+        },
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "6-26",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 6,
+          "REGION_RESPONSIBLE_ID": "6",
+          "REGION_RESPONSIBLE_NAME": "Skeena",
+          "GAME_MANAGEMENT_ZONE_ID": "6f",
+          "GAME_MANAGEMENT_ZONE_NAME": "Atlin",
+          "FEATURE_AREA_SQM": 19034527465.022,
+          "FEATURE_LENGTH_M": 916826.9607,
+          "OBJECTID": 441,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    },
+    {
+      "query": "access road to the Golden Bear Mine",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "matches": 0,
+      "ids": [],
+      "sample": []
+    },
+    {
+      "query": "unnamed road between Dease Lake and Telegraph Creek",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "matches": 0,
+      "ids": [],
+      "sample": []
+    }
   ],
-  "lookups": [],
   "validation": [
     {
       "check": "shape built",
@@ -196,5 +252,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:08:34.224Z",
-  "updated": "2026-10-21T16:08:34.224Z"
+  "updated": "2026-10-27T23:10:51.414Z"
 }
