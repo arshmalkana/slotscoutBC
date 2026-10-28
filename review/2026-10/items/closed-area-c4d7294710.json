@@ -10,7 +10,6 @@
     "AI runs disagree: steps: run 1 [\"|||\",\"beaver creek|the point of intersection with the midline of peters rd||creek\",\"peters rd|the point of intersection with the southerly boundary of sublot 101 kootenay land district||road\",\"sublot 101 and lot 2335|the point of intersection with the natural boundary of crawford bay||lot_line\",\"crawford bay|the point least distant from the junction of hwy 3a and crawford creek rd||shoreline\",\"|the point of intersection with the easterly boundary of the right of way of crawford creek rd||straight_line\",\"crawford creek rd|the point of intersection with the westerly boundary of the right of way of wadds rd||road\",\"wadds rd|the point of intersection with the northerly boundary of the right of way of hwy 3a||road\",\"hwy 3a|the point of commencement||road\"] vs run 2 [\"|||\",\"beaver creek|the point of intersection with the midline of peters rd||creek\",\"peters rd|the point of intersection with the southerly boundary of sublot 101 kootenay land district||road\",\"sublot 101 and lot 2335|the point of intersection with the natural boundary of crawford bay||lot_line\",\"crawford bay|the point least distant from the junction of hwy 3a and crawford creek rd||shoreline\",\"|the point of intersection with the easterly boundary of the right of way of crawford creek rd||\",\"crawford creek rd|the point of intersection with the westerly boundary of the right of way of wadds rd||road\",\"wadds rd|the point of intersection with the northerly boundary of the right of way of hwy 3a||road\",\"hwy 3a|the point of commencement||road\"]",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
     "approximate outline (corners) drawn from the places the walk names, using run 1's reading of the steps",
-    "\"Sublot 101 and Lot 2335\" was not found in the official layers; that side is drawn straight",
     "\"Crawford Bay\" was not found in the official layers; that side is drawn straight",
     "validation failed: two independent extractions agree (steps: run 1 [\"|||\",\"beaver creek|the point of intersection with the midline of peters rd||creek\",\"peters rd|the point of intersection with the southerly boundary of sublot 101 kootenay land district||road\",\"sublot 101 and lot 2335|the point of intersection with the natural boundary of crawford bay||lot_line\",\"crawford bay|the point least distant from the junction of hwy 3a and crawford creek rd||shoreline\",\"|the point of intersection with the easterly boundary of the right of way of crawford creek rd||straight_line\",\"crawford creek rd|the point of intersection with the westerly boundary of the right of way of wadds rd||road\",\"wadds rd|the point of intersection with the northerly boundary of the right of way of hwy 3a||road\",\"hwy 3a|the point of commencement||road\"] vs run 2 [\"|||\",\"beaver creek|the point of intersection with the midline of peters rd||creek\",\"peters rd|the point of intersection with the southerly boundary of sublot 101 kootenay land district||road\",\"sublot 101 and lot 2335|the point of intersection with the natural boundary of crawford bay||lot_line\",\"crawford bay|the point least distant from the junction of hwy 3a and crawford creek rd||shoreline\",\"|the point of intersection with the easterly boundary of the right of way of crawford creek rd||\",\"crawford creek rd|the point of intersection with the westerly boundary of the right of way of wadds rd||road\",\"wadds rd|the point of intersection with the northerly boundary of the right of way of hwy 3a||road\",\"hwy 3a|the point of commencement||road\"])"
   ],
@@ -351,7 +350,7 @@
     {
       "check": "area in expected range",
       "passed": true,
-      "detail": "2.544 km² (limit 500 km²)"
+      "detail": "3.185 km² (limit 500 km²)"
     },
     {
       "check": "inside the area the text names",
@@ -371,14 +370,14 @@
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
   "construction": [
     {
       "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
       "quote": "Commencing at the point of intersection of the northerly boundary of the right of way of Highway 3A and the westerly natural boundary of Beaver Creek",
-      "source": "WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP, WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP"
+      "source": "WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP, WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP, WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW"
     }
   ],
   "feature": {
@@ -389,15 +388,15 @@
         [
           [
             -116.83363752394149,
-            49.67547590624064
+            49.675475906240656
           ],
           [
             -116.8336366812484,
-            49.67544319490801
+            49.67544319490802
           ],
           [
             -116.83362501507328,
-            49.6752267150477
+            49.675226715047714
           ],
           [
             -116.83362425372846,
@@ -405,31 +404,31 @@
           ],
           [
             -116.83358348811367,
-            49.67466652102667
+            49.67466652102669
           ],
           [
             -116.83357367446447,
-            49.674594686967964
+            49.67459468696798
           ],
           [
             -116.83339624965747,
-            49.67370455907446
+            49.67370455907447
           ],
           [
             -116.83339568642306,
-            49.6737017677533
+            49.67370176775331
           ],
           [
             -116.83338259463895,
-            49.67363766790867
+            49.67363766790868
           ],
           [
             -116.83336427851904,
-            49.67356874220795
+            49.673568742207955
           ],
           [
             -116.83203326022688,
-            49.669511187791954
+            49.66951118779197
           ],
           [
             -116.83196106387699,
@@ -445,107 +444,123 @@
           ],
           [
             -116.83174035986231,
-            49.66901861765092
+            49.669018617650934
           ],
           [
-            -116.83159742868973,
-            49.66887016207881
+            -116.83160560851479,
+            49.6688771291415
           ],
           [
-            -116.83141279900325,
-            49.6687424213689
+            -116.8314329289714,
+            49.668754105727515
           ],
           [
-            -116.83119345544627,
-            49.668640227817406
+            -116.83122821937383,
+            49.668653749280374
           ],
           [
-            -116.83094769568608,
-            49.66856744727143
+            -116.8309984717166,
+            49.668579487456746
           ],
           [
-            -116.83068481653687,
-            49.66852683290829
+            -116.83075153304395,
+            49.66853385664249
           ],
           [
-            -116.83041476231249,
-            49.668519921102195
+            -116.8304958374627,
+            49.668518415335974
           ],
           [
-            -116.83014774870402,
-            49.66854697331501
+            -116.82547478855653,
+            49.66851667978213
           ],
           [
-            -116.82989387639995,
-            49.66860696620709
+            -116.82520098283123,
+            49.668534209136205
           ],
           [
-            -116.82966274905304,
-            49.668697630342365
+            -116.82495863704828,
+            49.66856563856633
           ],
           [
-            -116.82946311003457,
-            49.668815536024475
+            -116.8247237070307,
+            49.66861034815283
           ],
           [
-            -116.82930251170829,
-            49.668956223019414
+            -116.82450455108783,
+            49.66868105407919
           ],
           [
-            -116.80268061624263,
-            49.697752014006674
+            -116.82435440256154,
+            49.66874072313893
           ],
           [
-            -116.80256598586918,
-            49.697908324852484
+            -116.82415008554123,
+            49.66883972046035
           ],
           [
-            -116.80249974942404,
-            49.6980759406731
+            -116.8239771913588,
+            49.66896123369019
           ],
           [
-            -116.80248435860611,
-            49.69824865856125
+            -116.82385269036071,
+            49.669066732506145
           ],
           [
-            -116.80252038352302,
-            49.69842008673275
+            -116.82370270373345,
+            49.66922556503836
           ],
           [
-            -116.80260649151433,
-            49.69858388106548
+            -116.80261883358968,
+            49.69782653728211
           ],
           [
-            -116.80273949639327,
-            49.698733979884395
+            -116.8025240477119,
+            49.69799771863134
           ],
           [
-            -116.80291447629565,
-            49.69886482830277
+            -116.80248443332557,
+            49.698177733410915
           ],
           [
-            -116.80312495578424,
-            49.698971583814945
+            -116.80250161042198,
+            49.69835922288232
           ],
           [
-            -116.80336314547509,
-            49.699050295529396
+            -116.80257487744274,
+            49.69853476794214
           ],
           [
-            -116.8036202303197,
-            49.6990980504049
+            -116.80270123985825,
+            49.69869719241041
+          ],
+          [
+            -116.80287553249285,
+            49.698839856400994
+          ],
+          [
+            -116.80309063061095,
+            49.69895692777874
+          ],
+          [
+            -116.80333774114446,
+            49.69904362060223
+          ],
+          [
+            -116.80360676216038,
+            49.699096390799895
           ],
           [
             -116.80388669587155,
-            49.69911308107481
+            49.69911308107483
           ],
           [
-            -116.80527472155475,
+            -116.80527472155474,
             49.69910468092011
           ],
           [
             -116.80550416873949,
-            49.69909094008921
+            49.69909094008923
           ],
           [
             -116.80580447404013,
@@ -557,11 +572,11 @@
           ],
           [
             -116.80642676174699,
-            49.698908832290314
+            49.69890883229033
           ],
           [
             -116.80665830016183,
-            49.6988262814782
+            49.698826281478205
           ],
           [
             -116.80875794729774,
@@ -573,35 +588,35 @@
           ],
           [
             -116.81487408822007,
-            49.69473183343589
+            49.694731833435895
           ],
           [
             -116.81504030325216,
-            49.694630034536104
+            49.69463003453609
           ],
           [
             -116.83327064296077,
-            49.68145577284255
+            49.681455772842554
           ],
           [
-            -116.83345097548974,
-            49.68129157955628
+            -116.8334509751438,
+            49.68129157996064
           ],
           [
-            -116.8335703035493,
-            49.681105534610005
+            -116.83357030315292,
+            49.681105535498084
           ],
           [
-            -116.83362264138896,
-            49.68090697144087
+            -116.83362264126751,
+            49.68090697282521
           ],
           [
-            -116.83362487320014,
+            -116.83362487320015,
             49.68085737713678
           ],
           [
             -116.83363752394149,
-            49.67547590624064
+            49.675475906240656
           ]
         ]
       ]
@@ -652,7 +667,7 @@
         {
           "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
           "quote": "Commencing at the point of intersection of the northerly boundary of the right of way of Highway 3A and the westerly natural boundary of Beaver Creek",
-          "source": "WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP, WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP"
+          "source": "WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP, WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP, WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW"
         }
       ],
       "validation": [
@@ -669,7 +684,7 @@
         {
           "check": "area in expected range",
           "passed": true,
-          "detail": "2.544 km² (limit 500 km²)"
+          "detail": "3.185 km² (limit 500 km²)"
         },
         {
           "check": "inside the area the text names",
@@ -689,7 +704,7 @@
         {
           "check": "step directions match the line",
           "passed": null,
-          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+          "detail": "not run: a walk outline is approximate; a person checks it against the text"
         }
       ],
       "change_type": "new"
@@ -697,5 +712,5 @@
   },
   "status": "open",
   "created": "2026-10-21T16:09:56.619Z",
-  "updated": "2026-10-28T17:18:18.560Z"
+  "updated": "2026-10-28T20:04:27.875Z"
 }

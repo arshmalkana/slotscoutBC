@@ -5,11 +5,13 @@
   "title": "Closed Areas Regulation, Schedule 5, section 9 (Logan Lake)",
   "rule_id": "W5-009",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: method: run 1 \"admin_boundary\" vs run 2 \"other\"",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "approximate zone around the places the section names, using run 1's reading",
+    "a zone around the places the section names (Logan Lake): the outline of Logan Lake and 1 km around the named points; not the boundary",
+    "validation failed: two independent extractions agree (method: run 1 \"admin_boundary\" vs run 2 \"other\")"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nLogan Lake\n9 That portion of the Province of British Columbia in the vicinity of Logan Lake, KDYD, which is contained within the following described boundaries: Those waters of Logan Lake to the maximum high water mark.",
@@ -141,13 +143,398 @@
   "lookups": [],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "4.041 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "method: run 1 \"admin_boundary\" vs run 2 \"other\""
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Logan Lake): the outline of Logan Lake and 1 km around the named points; not the boundary",
+      "quote": "Those waters of Logan Lake",
+      "source": "WHSE_BASEMAPPING.FWA_LAKES_POLY, WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -120.82746396513966,
+            50.49417853518563
+          ],
+          [
+            -120.8273548230781,
+            50.49329871943739
+          ],
+          [
+            -120.82711065617443,
+            50.49242994540779
+          ],
+          [
+            -120.82673382301427,
+            50.491580579028216
+          ],
+          [
+            -120.82622795918083,
+            50.49075879889774
+          ],
+          [
+            -120.82559794199359,
+            50.48997251756741
+          ],
+          [
+            -120.82484984332298,
+            50.48922930540108
+          ],
+          [
+            -120.82399087094383,
+            50.48853631774386
+          ],
+          [
+            -120.82302929899863,
+            50.48790022609649
+          ],
+          [
+            -120.82197438824541,
+            50.48732715395552
+          ],
+          [
+            -120.82083629686016,
+            50.48682261793324
+          ],
+          [
+            -120.81962598265413,
+            50.48639147472147
+          ],
+          [
+            -120.81835509764522,
+            50.48603787440591
+          ],
+          [
+            -120.81703587599522,
+            50.485765220577655
+          ],
+          [
+            -120.81568101638612,
+            50.48557613762285
+          ],
+          [
+            -120.814303559961,
+            50.48547244550288
+          ],
+          [
+            -120.8129167649954,
+            50.485455142266
+          ],
+          [
+            -120.81153397949636,
+            50.48552439445717
+          ],
+          [
+            -120.81016851294527,
+            50.48567953551785
+          ],
+          [
+            -120.80883350840814,
+            50.48591907219078
+          ],
+          [
+            -120.80754181623433,
+            50.486240698868684
+          ],
+          [
+            -120.80170929482985,
+            50.487907079482085
+          ],
+          [
+            -120.80047325610668,
+            50.48830763859776
+          ],
+          [
+            -120.79930485534975,
+            50.48878333905215
+          ],
+          [
+            -120.79821534171478,
+            50.48932960178314
+          ],
+          [
+            -120.7972152060374,
+            50.48994116833062
+          ],
+          [
+            -120.7963140798687,
+            50.490612151388184
+          ],
+          [
+            -120.79552064273011,
+            50.491336091408456
+          ],
+          [
+            -120.79484253847949,
+            50.49210601872022
+          ],
+          [
+            -120.79428630159586,
+            50.492914520563176
+          ],
+          [
+            -120.79385729409684,
+            50.493753812397685
+          ],
+          [
+            -120.79355965370148,
+            50.494615812805854
+          ],
+          [
+            -120.79339625374607,
+            50.4954922212654
+          ],
+          [
+            -120.79336867524728,
+            50.49637459804923
+          ],
+          [
+            -120.79347719139255,
+            50.49725444548286
+          ],
+          [
+            -120.79372076461722,
+            50.498123289777894
+          ],
+          [
+            -120.79409705630847,
+            50.49897276265368
+          ],
+          [
+            -120.79460244905333,
+            50.499794681960495
+          ],
+          [
+            -120.79523208122704,
+            50.50058113052646
+          ],
+          [
+            -120.79597989359844,
+            50.50132453246734
+          ],
+          [
+            -120.79683868751167,
+            50.50201772622155
+          ],
+          [
+            -120.79780019409037,
+            50.50265403360414
+          ],
+          [
+            -120.79885515380317,
+            50.50322732421181
+          ],
+          [
+            -120.79999340562597,
+            50.503732074554875
+          ],
+          [
+            -120.80120398494394,
+            50.50416342134327
+          ],
+          [
+            -120.80247522924726,
+            50.50451720840995
+          ],
+          [
+            -120.80379489060043,
+            50.504790026816316
+          ],
+          [
+            -120.80515025379458,
+            50.50497924775042
+          ],
+          [
+            -120.80652825903834,
+            50.5050830478986
+          ],
+          [
+            -120.80791562799642,
+            50.505100427043885
+          ],
+          [
+            -120.80929899195115,
+            50.50503121772036
+          ],
+          [
+            -120.81066502084299,
+            50.50487608682958
+          ],
+          [
+            -120.81200055193487,
+            50.50463652920356
+          ],
+          [
+            -120.81329271685082,
+            50.50431485317633
+          ],
+          [
+            -120.81912685563287,
+            50.50264789367886
+          ],
+          [
+            -120.82036311139713,
+            50.50224713702856
+          ],
+          [
+            -120.8215316330741,
+            50.5017712257862
+          ],
+          [
+            -120.82262116398176,
+            50.50122474543282
+          ],
+          [
+            -120.82362120957075,
+            50.50061296122363
+          ],
+          [
+            -120.82452213856047,
+            50.4999417673904
+          ],
+          [
+            -120.82531527570497,
+            50.49921763028383
+          ],
+          [
+            -120.82599298529408,
+            50.49844752600738
+          ],
+          [
+            -120.82654874458824,
+            50.49763887314643
+          ],
+          [
+            -120.82697720648288,
+            50.496799461243974
+          ],
+          [
+            -120.82727425080562,
+            50.49593737571506
+          ],
+          [
+            -120.82743702375919,
+            50.49506091992518
+          ],
+          [
+            -120.82746396513966,
+            50.49417853518563
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-009",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 9",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nLogan Lake\n9 That portion of the Province of British Columbia in the vicinity of Logan Lake, KDYD, which is contained within the following described boundaries: Those waters of Logan Lake to the maximum high water mark.",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "admin_boundary",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Logan Lake): the outline of Logan Lake and 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "KDYD",
+        "geometry.feature": "Those waters of Logan Lake",
+        "effect": "No Shooting Areas",
+        "geometry.side": "Those waters of Logan Lake to the maximum high water mark"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "cb146daf0d87fa61a61045acfc875c840ed5d79535d1b3e7a681ba11db70d793",
+      "task_id": "closed_area-cb146daf0d87",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Logan Lake): the outline of Logan Lake and 1 km around the named points; not the boundary",
+          "quote": "Those waters of Logan Lake",
+          "source": "WHSE_BASEMAPPING.FWA_LAKES_POLY, WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "4.041 km² (limit none for this type)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": null,
+          "detail": "the text names no area, or it could not be found"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "method: run 1 \"admin_boundary\" vs run 2 \"other\""
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:10:14.560Z",
-  "updated": "2026-10-21T16:10:14.560Z"
+  "updated": "2026-10-28T20:11:55.062Z"
 }

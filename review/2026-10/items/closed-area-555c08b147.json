@@ -5,11 +5,14 @@
   "title": "Closed Areas Regulation, Schedule 5, section 32 (Sooke and Metchosin)",
   "rule_id": "W5-032",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: steps: run 1 [\"sluggett point|||\",\"|the low water mark at the extremity of willis point||straight_line\",\"saanich inlet|the point of intersection with the northern boundary of goldstream provincial park||shoreline\",\"goldstream provincial park|the point of intersection with the western boundary of the right of way of the esquimalt and nanaimo railway||other\",\"esquimalt and nanaimo railway|the point of intersection with the western boundary of the right of way of the b.c. hydro powerline||other\",\"b.c. hydro powerline|the point of intersection with the northern boundary of the right of way of the canadian national railway at the cooper s cove crossing||other\",\"canadian national railway|the point of intersection with the natural boundary of todd creek on the southern bank thereof||other\",\"todd creek|the point of intersection with the western natural boundary of sooke river||creek\",\"sooke river|the point of intersection with the northern boundary of the right of way of the b.c. hydro powerline||river\",\"b.c. hydro powerline|the point of intersection with young lake rd||other\",\"||800 metres|straight_line\",\"b.c. hydro powerline|the point of intersection with the east bank of tugwell creek||other\",\"tugwell creek|the intersection with the north boundary of the right of way of said powerline||creek\",\"b.c. hydro powerline|the point of intersection with the natural boundary of the jordan river||other\",\"jordan river|the confluence of sinn fein creek||river\",\"sinn fein creek|the crossing of jordan river main||creek\",\"jordan river main|the intersection with north main||road\",\"north main||100 metres|road\",\"north main|the intersection with uglow creek|100 metres|road\",\"uglow creek|the intersection of hwy 14||creek\",\"|the northern boundary of the right of way of hwy 14||\",\"hwy 14|the point of intersection with the western boundary of the right of way of that secondary rd leading from port renfrew to botanical beach provincial park||road\",\"secondary rd leading from port renfrew to botanical beach provincial park|the point of intersection with the northern boundary of said provincial park||road\",\"botanical beach provincial park|the point of intersection with the high water mark of juan de fuca strait on the northern shore thereof||other\",\"|the point of intersection with the high water mark at orveas bay||\",\"|a point in juan de fuca strait 300 metres from the high water mark|300 metres|straight_line\",\"|a point 300 metres south of the high water mark at the extremity of parsons point|300 metres|shoreline\",\"|a point 300 metres distant from the western high water mark of simpson point at the extremity thereof|300 metres|straight_line\",\"|a point due east of the extremity of cape calver|300 metres|shoreline\",\"|a point 300 metres due east of the high water mark of william head at the extremity thereof|300 metres|straight_line\",\"|a point due east of fisgard island|300 metres|shoreline\",\"|the point of intersection with the projection of the boundary of the township of esquimalt southeast of ashe head||straight_line\",\"township of esquimalt|the point of intersection with the southern boundary of the district of saanich||district_boundary\",\"district of saanich|the point of intersection with the southern natural boundary of tod creek||district_boundary\",\"tod creek|the point of intersection with the high water mark of tod inlet||creek\",\"tod inlet and brentwood bay|the point of commencement||shoreline\"] vs run 2 [\"sluggett point|||\",\"|the low water mark at the extremity of willis point||straight_line\",\"saanich inlet|the northern boundary of goldstream provincial park||shoreline\",\"goldstream provincial park|the western boundary of the right of way of the esquimalt and nanaimo railway||other\",\"esquimalt and nanaimo railway|the western boundary of the right of way of the b.c. hydro powerline||other\",\"b.c. hydro powerline|the northern boundary of the right of way of the canadian national railway at the cooper s cove crossing||other\",\"canadian national railway|the natural boundary of todd creek on the southern bank thereof||other\",\"todd creek|the western natural boundary of sooke river||creek\",\"sooke river|the northern boundary of the right of way of the b.c. hydro powerline||river\",\"b.c. hydro powerline|young lake rd||other\",\"||800 metres|\",\"|the east bank of tugwell creek||other\",\"tugwell creek|the north boundary of the right of way of said powerline||creek\",\"b.c. hydro powerline|the natural boundary of the jordan river||other\",\"jordan river|the confluence of sinn fein creek||river\",\"sinn fein creek|the crossing of jordan river main||creek\",\"jordan river main|north main||road\",\"north main||100 metres|road\",\"north main|uglow creek|100 metres|road\",\"uglow creek|hwy 14||creek\",\"|the northern boundary of the right of way of hwy 14||\",\"hwy 14|the western boundary of the right of way of that secondary rd leading from port renfrew to botanical beach provincial park||road\",\"|the northern boundary of said provincial park||road\",\"botanical beach provincial park|the high water mark of juan de fuca strait on the northern shore thereof||other\",\"|the high water mark at orveas bay||\",\"|a point in juan de fuca strait 300 metres from the high water mark|300 metres|straight_line\",\"|a point 300 metres south of the high water mark at the extremity of parsons point|300 metres|shoreline\",\"|a point 300 metres distant from the western high water mark of simpson point at the extremity thereof|300 metres|straight_line\",\"|a point due east of the extremity of cape calver|300 metres|shoreline\",\"|a point 300 metres due east of the high water mark of william head at the extremity thereof|300 metres|straight_line\",\"|a point due east of fisgard island|300 metres|shoreline\",\"|the projection of the boundary of the township of esquimalt southeast of ashe head||straight_line\",\"township of esquimalt|the southern boundary of the district of saanich||district_boundary\",\"district of saanich|the southern natural boundary of tod creek||district_boundary\",\"tod creek|the high water mark of tod inlet||creek\",\"tod inlet and brentwood bay|the point of commencement||shoreline\"]",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "the walk was too complex to trace within the time allowed; a person draws it",
+    "approximate zone around the places the section names, using run 1's reading",
+    "a zone around the places the section names (Sooke, Metchosin, Todd Creek, Sooke River, Young Lake, Tugwell Creek): 1 km around the named points; not the boundary",
+    "validation failed: two independent extractions agree (steps: run 1 [\"sluggett point|||\",\"|the low water mark at the extremity of willis point||straight_line\",\"saanich inlet|the point of intersection with the northern boundary of goldstream provincial park||shoreline\",\"goldstream provincial park|the point of intersection with the western boundary of the right of way of the esquimalt and nanaimo railway||other\",\"esquimalt and nanaimo railway|the point of intersection with the western boundary of the right of way of the b.c. hydro powerline||other\",\"b.c. hydro powerline|the point of intersection with the northern boundary of the right of way of the canadian national railway at the cooper s cove crossing||other\",\"canadian national railway|the point of intersection with the natural boundary of todd creek on the southern bank thereof||other\",\"todd creek|the point of intersection with the western natural boundary of sooke river||creek\",\"sooke river|the point of intersection with the northern boundary of the right of way of the b.c. hydro powerline||river\",\"b.c. hydro powerline|the point of intersection with young lake rd||other\",\"||800 metres|straight_line\",\"b.c. hydro powerline|the point of intersection with the east bank of tugwell creek||other\",\"tugwell creek|the intersection with the north boundary of the right of way of said powerline||creek\",\"b.c. hydro powerline|the point of intersection with the natural boundary of the jordan river||other\",\"jordan river|the confluence of sinn fein creek||river\",\"sinn fein creek|the crossing of jordan river main||creek\",\"jordan river main|the intersection with north main||road\",\"north main||100 metres|road\",\"north main|the intersection with uglow creek|100 metres|road\",\"uglow creek|the intersection of hwy 14||creek\",\"|the northern boundary of the right of way of hwy 14||\",\"hwy 14|the point of intersection with the western boundary of the right of way of that secondary rd leading from port renfrew to botanical beach provincial park||road\",\"secondary rd leading from port renfrew to botanical beach provincial park|the point of intersection with the northern boundary of said provincial park||road\",\"botanical beach provincial park|the point of intersection with the high water mark of juan de fuca strait on the northern shore thereof||other\",\"|the point of intersection with the high water mark at orveas bay||\",\"|a point in juan de fuca strait 300 metres from the high water mark|300 metres|straight_line\",\"|a point 300 metres south of the high water mark at the extremity of parsons point|300 metres|shoreline\",\"|a point 300 metres distant from the western high water mark of simpson point at the extremity thereof|300 metres|straight_line\",\"|a point due east of the extremity of cape calver|300 metres|shoreline\",\"|a point 300 metres due east of the high water mark of william head at the extremity thereof|300 metres|straight_line\",\"|a point due east of fisgard island|300 metres|shoreline\",\"|the point of intersection with the projection of the boundary of the township of esquimalt southeast of ashe head||straight_line\",\"township of esquimalt|the point of intersection with the southern boundary of the district of saanich||district_boundary\",\"district of saanich|the point of intersection with the southern natural boundary of tod creek||district_boundary\",\"tod creek|the point of intersection with the high water mark of tod inlet||creek\",\"tod inlet and brentwood bay|the point of commencement||shoreline\"] vs run 2 [\"sluggett point|||\",\"|the low water mark at the extremity of willis point||straight_line\",\"saanich inlet|the northern boundary of goldstream provincial park||shoreline\",\"goldstream provincial park|the western boundary of the right of way of the esquimalt and nanaimo railway||other\",\"esquimalt and nanaimo railway|the western boundary of the right of way of the b.c. hydro powerline||other\",\"b.c. hydro powerline|the northern boundary of the right of way of the canadian national railway at the cooper s cove crossing||other\",\"canadian national railway|the natural boundary of todd creek on the southern bank thereof||other\",\"todd creek|the western natural boundary of sooke river||creek\",\"sooke river|the northern boundary of the right of way of the b.c. hydro powerline||river\",\"b.c. hydro powerline|young lake rd||other\",\"||800 metres|\",\"|the east bank of tugwell creek||other\",\"tugwell creek|the north boundary of the right of way of said powerline||creek\",\"b.c. hydro powerline|the natural boundary of the jordan river||other\",\"jordan river|the confluence of sinn fein creek||river\",\"sinn fein creek|the crossing of jordan river main||creek\",\"jordan river main|north main||road\",\"north main||100 metres|road\",\"north main|uglow creek|100 metres|road\",\"uglow creek|hwy 14||creek\",\"|the northern boundary of the right of way of hwy 14||\",\"hwy 14|the western boundary of the right of way of that secondary rd leading from port renfrew to botanical beach provincial park||road\",\"|the northern boundary of said provincial park||road\",\"botanical beach provincial park|the high water mark of juan de fuca strait on the northern shore thereof||other\",\"|the high water mark at orveas bay||\",\"|a point in juan de fuca strait 300 metres from the high water mark|300 metres|straight_line\",\"|a point 300 metres south of the high water mark at the extremity of parsons point|300 metres|shoreline\",\"|a point 300 metres distant from the western high water mark of simpson point at the extremity thereof|300 metres|straight_line\",\"|a point due east of the extremity of cape calver|300 metres|shoreline\",\"|a point 300 metres due east of the high water mark of william head at the extremity thereof|300 metres|straight_line\",\"|a point due east of fisgard island|300 metres|shoreline\",\"|the projection of the boundary of the township of esquimalt southeast of ashe head||straight_line\",\"township of esquimalt|the southern boundary of the district of saanich||district_boundary\",\"district of saanich|the southern natural boundary of tod creek||district_boundary\",\"tod creek|the high water mark of tod inlet||creek\",\"tod inlet and brentwood bay|the point of commencement||shoreline\"])"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nSooke and Metchosin\n32 That portion of the Province of British Columbia in the South Saanich, Malahat, Goldstream, Otter Point, Sooke, Metchosin and Esquimalt Districts which is contained within the following described boundaries: Commencing at the high water mark at the extremity of Sluggett Point; thence southerly in a straight line to the low water mark at the extremity of Willis Point; thence southerly, westerly and southerly along the low water mark of Saanich Inlet to the point of intersection with the northern boundary of Goldstream Provincial Park; thence westerly along said northern boundary to the point of intersection with the western boundary of the right of way of the Esquimalt and Nanaimo Railway; thence southerly along said western boundary to the point of intersection with the western boundary of the right of way of the B.C. Hydro powerline; thence southerly and westerly along the western and northern boundaries of said right of way to the point of intersection with the northern boundary of the right of way of the Canadian National Railway, at the Cooper's Cove crossing; thence westerly and northwesterly along said railway right of way boundary to the point of intersection with the natural boundary of Todd Creek, on the southern bank thereof; thence in a general westerly direction along the said natural boundary to the point of intersection with the western natural boundary of Sooke River; thence in a general southerly direction along said western natural boundary to the point of intersection with the northern boundary of the right of way of the B.C. Hydro powerline; thence westerly along said right of way boundary to the point of intersection with Young Lake Road, then generally North and perpendicular to said right of way for a distance of 800 metres, then generally West paralleling said right of way to the point of intersection with the east bank of Tugwell Creek, then generally South following the east bank of Tugwell Creek to the intersection with the north boundary of the right of way of said powerline, then generally westerly along said right of way to the point of intersection with the natural boundary of the Jordan River, thence in a generally northerly direction along the east bank of Jordan River to the confluence of Sinn Fein Creek, thence in a generally northerly and westerly direction following Sinn Fein Creek to the crossing of Jordan River main; thence in a generally southerly and westerly direction following the north boundary of Jordan River main to the intersection with North main; thence following North main 100 metres north to 48° 44' north latitude, 124° 06' west longitude; thence in a southerly direction following North main 100 metres from the western shoulder to the intersection with Uglow Creek; thence in a southerly direction following Uglow Creek to the intersection of Highway 14; thence in a general southerly direction along said natural boundary to the northern boundary of the right of way of Highway 14; thence in a general westerly direction along the northern boundary of Highway 14 to the point of intersection with the western boundary of the right of way of that secondary road leading from Port Renfrew to Botanical Beach Provincial Park; thence in a general southwesterly direction along the western boundary of said secondary road to the point of intersection with the northern boundary of said Provincial Park; thence easterly and southerly along the northern and eastern boundaries of said Provincial Park to the point of intersection with the high water mark of Juan de Fuca Strait, on the northern shore thereof; thence in a general southeasterly direction to the point of intersection with the high water mark at Orveas Bay; thence due South from the said intersection to a point in Juan de Fuca Strait 300 metres from the high water mark; thence in a general easterly direction 300 metres out from the high water mark and parallel to the shoreline to a point 300 metres south of the high water mark at the extremity of Parsons Point; thence easterly in a straight line to a point 300 metres distant from the western high water mark of Simpson Point, at the extremity thereof; thence along a line 300 metres distant from and parallel to the high water mark in a general easterly and northerly direction to a point due East of the extremity of Cape Calver; thence northeasterly in a straight line to a point 300 metres due East of the high water mark of William Head, at the extremity thereof; thence along a line 300 metres distant from and parallel to the high water mark in a general westerly, northerly and easterly direction to a point due East of Fisgard Island; thence northeasterly in a straight line to the point of intersection with the projection of the boundary of the Township of Esquimalt, southeast of Ashe Head; thence northeasterly along said boundary to the point of intersection with the southern boundary of the District of Saanich; thence westerly and northerly along the southern and western boundaries of the District of Saanich to the point of intersection with the southern natural boundary of Tod Creek; thence in a general northwesterly direction along said natural boundary to the point of intersection with the high water mark of Tod Inlet; thence in a general northerly direction along the high water mark of Tod Inlet and Brentwood Bay to the point of commencement, except those parts of M.U.s 1-1 and 1-2 that are wholly contained and legally defined within the corporate limits of the Corporations of the Districts of Highlands, Sooke and Metchosin, the City of Colwood, Langford Municipality, and the Town of View Royal. [en. B.C. Reg. 322/95, s. 3 (a); am. B.C. Regs. 225/98, s. 4 (a); 170/2001, s. 3; 189/2002, s. 1 (a); 163/2008, App. 1; 130/2016, App. 1, s. 3.]",
@@ -1047,18 +1050,453 @@
   "lookups": [],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "121.158 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "steps: run 1 [\"sluggett point|||\",\"|the low water mark at the extremity of willis point||straight_line\",\"saanich inlet|the point of intersection with the northern boundary of goldstream provincial park||shoreline\",\"goldstream provincial park|the point of intersection with the western boundary of the right of way of the esquimalt and nanaimo railway||other\",\"esquimalt and nanaimo railway|the point of intersection with the western boundary of the right of way of the b.c. hydro powerline||other\",\"b.c. hydro powerline|the point of intersection with the northern boundary of the right of way of the canadian national railway at the cooper s cove crossing||other\",\"canadian national railway|the point of intersection with the natural boundary of todd creek on the southern bank thereof||other\",\"todd creek|the point of intersection with the western natural boundary of sooke river||creek\",\"sooke river|the point of intersection with the northern boundary of the right of way of the b.c. hydro powerline||river\",\"b.c. hydro powerline|the point of intersection with young lake rd||other\",\"||800 metres|straight_line\",\"b.c. hydro powerline|the point of intersection with the east bank of tugwell creek||other\",\"tugwell creek|the intersection with the north boundary of the right of way of said powerline||creek\",\"b.c. hydro powerline|the point of intersection with the natural boundary of the jordan river||other\",\"jordan river|the confluence of sinn fein creek||river\",\"sinn fein creek|the crossing of jordan river main||creek\",\"jordan river main|the intersection with north main||road\",\"north main||100 metres|road\",\"north main|the intersection with uglow creek|100 metres|road\",\"uglow creek|the intersection of hwy 14||creek\",\"|the northern boundary of the right of way of hwy 14||\",\"hwy 14|the point of intersection with the western boundary of the right of way of that secondary rd leading from port renfrew to botanical beach provincial park||road\",\"secondary rd leading from port renfrew to botanical beach provincial park|the point of intersection with the northern boundary of said provincial park||road\",\"botanical beach provincial park|the point of intersection with the high water mark of juan de fuca strait on the northern shore thereof||other\",\"|the point of intersection with the high water mark at orveas bay||\",\"|a point in juan de fuca strait 300 metres from the high water mark|300 metres|straight_line\",\"|a point 300 metres south of the high water mark at the extremity of parsons point|300 metres|shoreline\",\"|a point 300 metres distant from the western high water mark of simpson point at the extremity thereof|300 metres|straight_line\",\"|a point due east of the extremity of cape calver|300 metres|shoreline\",\"|a point 300 metres due east of the high water mark of william head at the extremity thereof|300 metres|straight_line\",\"|a point due east of fisgard island|300 metres|shoreline\",\"|the point of intersection with the projection of the boundary of the township of esquimalt southeast of ashe head||straight_line\",\"township of esquimalt|the point of intersection with the southern boundary of the district of saanich||district_boundary\",\"district of saanich|the point of intersection with the southern natural boundary of tod creek||district_boundary\",\"tod creek|the point of intersection with the high water mark of tod inlet||creek\",\"tod inlet and brentwood bay|the point of commencement||shoreline\"] vs run 2 [\"sluggett point|||\",\"|the low water mark at the extremity of willis point||straight_line\",\"saanich inlet|the northern boundary of goldstream provincial park||shoreline\",\"goldstream provincial park|the western boundary of the right of way of the esquimalt and nanaimo railway||other\",\"esquimalt and nanaimo railway|the western boundary of the right of way of the b.c. hydro powerline||other\",\"b.c. hydro powerline|the northern boundary of the right of way of the canadian national railway at the cooper s cove crossing||other\",\"canadian national railway|the natural boundary of todd creek on the southern bank thereof||other\",\"todd creek|the western natural boundary of sooke river||creek\",\"sooke river|the northern boundary of the right of way of the b.c. hydro powerline||river\",\"b.c. hydro powerline|young lake rd||other\",\"||800 metres|\",\"|the east bank of tugwell creek||other\",\"tugwell creek|the north boundary of the right of way of said powerline||creek\",\"b.c. hydro powerline|the natural boundary of the jordan river||other\",\"jordan river|the confluence of sinn fein creek||river\",\"sinn fein creek|the crossing of jordan river main||creek\",\"jordan river main|north main||road\",\"north main||100 metres|road\",\"north main|uglow creek|100 metres|road\",\"uglow creek|hwy 14||creek\",\"|the northern boundary of the right of way of hwy 14||\",\"hwy 14|the western boundary of the right of way of that secondary rd leading from port renfrew to botanical beach provincial park||road\",\"|the northern boundary of said provincial park||road\",\"botanical beach provincial park|the high water mark of juan de fuca strait on the northern shore thereof||other\",\"|the high water mark at orveas bay||\",\"|a point in juan de fuca strait 300 metres from the high water mark|300 metres|straight_line\",\"|a point 300 metres south of the high water mark at the extremity of parsons point|300 metres|shoreline\",\"|a point 300 metres distant from the western high water mark of simpson point at the extremity thereof|300 metres|straight_line\",\"|a point due east of the extremity of cape calver|300 metres|shoreline\",\"|a point 300 metres due east of the high water mark of william head at the extremity thereof|300 metres|straight_line\",\"|a point due east of fisgard island|300 metres|shoreline\",\"|the projection of the boundary of the township of esquimalt southeast of ashe head||straight_line\",\"township of esquimalt|the southern boundary of the district of saanich||district_boundary\",\"district of saanich|the southern natural boundary of tod creek||district_boundary\",\"tod creek|the high water mark of tod inlet||creek\",\"tod inlet and brentwood bay|the point of commencement||shoreline\"]"
     },
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Sooke, Metchosin, Todd Creek, Sooke River, Young Lake, Tugwell Creek): 1 km around the named points; not the boundary",
+      "quote": "Commencing at the high water mark at the extremity of Sluggett Point",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -123.53045132292951,
+            48.38741899771925
+          ],
+          [
+            -123.70686350633255,
+            48.43798276965348
+          ],
+          [
+            -123.70805501564567,
+            48.43827986114175
+          ],
+          [
+            -123.70928328700028,
+            48.438501485242625
+          ],
+          [
+            -123.71053748522957,
+            48.438645686830824
+          ],
+          [
+            -123.71180654608969,
+            48.438711193773976
+          ],
+          [
+            -123.7130792740137,
+            48.43869742817276
+          ],
+          [
+            -123.71434444103268,
+            48.438604511467226
+          ],
+          [
+            -123.71559088598536,
+            48.43843326336358
+          ],
+          [
+            -123.71680761313337,
+            48.43818519459157
+          ],
+          [
+            -123.71798388930584,
+            48.43786249355627
+          ],
+          [
+            -123.7191093387102,
+            48.437468007003304
+          ],
+          [
+            -123.85856758937713,
+            48.382737454052695
+          ],
+          [
+            -123.85966734216983,
+            48.38225521221192
+          ],
+          [
+            -123.86069128261921,
+            48.3817042439681
+          ],
+          [
+            -123.86162971089698,
+            48.38108977007323
+          ],
+          [
+            -123.86247373839461,
+            48.38041761283319
+          ],
+          [
+            -123.86321537191675,
+            48.37969414087783
+          ],
+          [
+            -123.86384758934551,
+            48.378926208757754
+          ],
+          [
+            -123.86436440606026,
+            48.3781210919431
+          ],
+          [
+            -123.8647609314876,
+            48.37728641784293
+          ],
+          [
+            -123.8650334152507,
+            48.37643009350084
+          ],
+          [
+            -123.86517928248773,
+            48.375560230654635
+          ],
+          [
+            -123.86519715801232,
+            48.37468506887077
+          ],
+          [
+            -123.86508687909601,
+            48.373812897483646
+          ],
+          [
+            -123.8648494967608,
+            48.37295197707927
+          ],
+          [
+            -123.86448726557869,
+            48.37211046126741
+          ],
+          [
+            -123.86400362208462,
+            48.37129631948229
+          ],
+          [
+            -123.8634031520154,
+            48.37051726154236
+          ],
+          [
+            -123.86269154669364,
+            48.36978066468164
+          ],
+          [
+            -123.86187554897586,
+            48.369093503741794
+          ],
+          [
+            -123.8609628892829,
+            48.36846228518373
+          ],
+          [
+            -123.85996221232197,
+            48.36789298554064
+          ],
+          [
+            -123.85888299519685,
+            48.36739099489258
+          ],
+          [
+            -123.85773545768195,
+            48.36696106589485
+          ],
+          [
+            -123.85653046550908,
+            48.3666072688398
+          ],
+          [
+            -123.85527942757905,
+            48.36633295317478
+          ],
+          [
+            -123.85399418806757,
+            48.36614071583832
+          ],
+          [
+            -123.85268691444048,
+            48.366032376711544
+          ],
+          [
+            -123.85136998243186,
+            48.36600896141634
+          ],
+          [
+            -123.53559239528323,
+            48.37017488550696
+          ],
+          [
+            -123.53428308981745,
+            48.370232611207165
+          ],
+          [
+            -123.53298834167087,
+            48.37037426024906
+          ],
+          [
+            -123.531720309211,
+            48.37059850248995
+          ],
+          [
+            -123.53049090032023,
+            48.3709032321819
+          ],
+          [
+            -123.5293116607297,
+            48.37128558771577
+          ],
+          [
+            -123.52819366572788,
+            48.37174197845373
+          ],
+          [
+            -123.52714741625532,
+            48.37226811840074
+          ],
+          [
+            -123.52618274035552,
+            48.37285906640041
+          ],
+          [
+            -123.52530870090423,
+            48.373509272480675
+          ],
+          [
+            -123.52453351048095,
+            48.374212629916784
+          ],
+          [
+            -123.52386445418236,
+            48.37496253252507
+          ],
+          [
+            -123.52330782110322,
+            48.37575193665281
+          ],
+          [
+            -123.52286884513192,
+            48.376573427284214
+          ],
+          [
+            -123.52255165562062,
+            48.377419287644265
+          ],
+          [
+            -123.52235923839976,
+            48.37828157164893
+          ],
+          [
+            -123.52229340751005,
+            48.37915217852267
+          ],
+          [
+            -123.52235478792568,
+            48.38002292888398
+          ],
+          [
+            -123.52254280943987,
+            48.38088564158475
+          ],
+          [
+            -123.52285571177907,
+            48.381732210581866
+          ],
+          [
+            -123.52329056090716,
+            48.38255468111872
+          ],
+          [
+            -123.52384327637508,
+            48.38334532449982
+          ],
+          [
+            -123.52450866946705,
+            48.38409671075466
+          ],
+          [
+            -123.52528049179234,
+            48.38480177850622
+          ],
+          [
+            -123.52615149387172,
+            48.38545390138553
+          ],
+          [
+            -123.52711349317275,
+            48.386046950365284
+          ],
+          [
+            -123.52815745095754,
+            48.386575351424334
+          ],
+          [
+            -123.52927355722231,
+            48.38703413799815
+          ],
+          [
+            -123.53045132292951,
+            48.38741899771925
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-032",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 32",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nSooke and Metchosin\n32 That portion of the Province of British Columbia in the South Saanich, Malahat, Goldstream, Otter Point, Sooke, Metchosin and Esquimalt Districts which is contained within the following described boundaries: Commencing at the high water mark at the extremity of Sluggett Point; thence southerly in a straight line to the low water mark at the extremity of Willis Point; thence southerly, westerly and southerly along the low water mark of Saanich Inlet to the point of intersection with the northern boundary of Goldstream Provincial Park; thence westerly along said northern boundary to the point of intersection with the western boundary of the right of way of the Esquimalt and Nanaimo Railway; thence southerly along said western boundary to the point of intersection with the western boundary of the right of way of the B.C. Hydro powerline; thence southerly and westerly along the western and northern boundaries of said right of way to the point of intersection with the northern boundary of the right of way of the Canadian National Railway, at the Cooper's Cove crossing; thence westerly and northwesterly along said railway right of way boundary to the point of intersection with the natural boundary of Todd Creek, on the southern bank thereof; thence in a general westerly direction along the said natural boundary to the point of intersection with the western natural boundary of Sooke River; thence in a general southerly direction along said western natural boundary to the point of intersection with the northern boundary of the right of way of the B.C. Hydro powerline; thence westerly along said right of way boundary to the point of intersection with Young Lake Road, then generally North and perpendicular to said right of way for a distance of 800 metres, then generally West paralleling said right of way to the point of intersection with the east bank of Tugwell Creek, then generally South following the east bank of Tugwell Creek to the intersection with the north boundary of the right of way of said powerline, then generally westerly along said right of way to the point of intersection with the natural boundary of the Jordan River, thence in a generally northerly direction along the east bank of Jordan River to the confluence of Sinn Fein Creek, thence in a generally northerly and westerly direction following Sinn Fein Creek to the crossing of Jordan River main; thence in a generally southerly and westerly direction following the north boundary of Jordan River main to the intersection with North main; thence following North main 100 metres north to 48° 44' north latitude, 124° 06' west longitude; thence in a southerly direction following North main 100 metres from the western shoulder to the intersection with Uglow Creek; thence in a southerly direction following Uglow Creek to the intersection of Highway 14; thence in a general southerly direction along said natural boundary to the northern boundary of the right of way of Highway 14; thence in a general westerly direction along the northern boundary of Highway 14 to the point of intersection with the western boundary of the right of way of that secondary road leading from Port Renfrew to Botanical Beach Provincial Park; thence in a general southwesterly direction along the western boundary of said secondary road to the point of intersection with the northern boundary of said Provincial Park; thence easterly and southerly along the northern and eastern boundaries of said Provincial Park to the point of intersection with the high water mark of Juan de Fuca Strait, on the northern shore thereof; thence in a general southeasterly direction to the point of intersection with the high water mark at Orveas Bay; thence due South from the said intersection to a point in Juan de Fuca Strait 300 metres from the high water mark; thence in a general easterly direction 300 metres out from the high water mark and parallel to the shoreline to a point 300 metres south of the high water mark at the extremity of Parsons Point; thence easterly in a straight line to a point 300 metres distant from the western high water mark of Simpson Point, at the extremity thereof; thence along a line 300 metres distant from and parallel to the high water mark in a general easterly and northerly direction to a point due East of the extremity of Cape Calver; thence northeasterly in a straight line to a point 300 metres due East of the high water mark of William Head, at the extremity thereof; thence along a line 300 metres distant from and parallel to the high water mark in a general westerly, northerly and easterly direction to a point due East of Fisgard Island; thence northeasterly in a straight line to the point of intersection with the projection of the boundary of the Township of Esquimalt, southeast of Ashe Head; thence northeasterly along said boundary to the point of intersection with the southern boundary of the District of Saanich; thence westerly and northerly along the southern and western boundaries of the District of Saanich to the point of intersection with the southern natural boundary of Tod Creek; thence in a general northwesterly direction along said natural boundary to the point of intersection with the high water mark of Tod Inlet; thence in a general northerly direction along the high water mark of Tod Inlet and Brentwood Bay to the point of commencement, except those parts of M.U.s 1-1 and 1-2 that are wholly contained and legally defined within the corporate limits of the Corporations of the Districts of Highlands, Sooke and Metchosin, the City of Colwood, Langford Municipality, and the Town of View Royal. [en. B.C. Reg. 322/95, s. 3 (a); am. B.C. Regs. 225/98, s. 4 (a); 170/2001, s. 3; 189/2002, s. 1 (a); 163/2008, App. 1; 130/2016, App. 1, s. 3.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [
+        "except those parts of M.U.s 1-1 and 1-2 that are wholly contained and legally defined within the corporate limits of the Corporations of the Districts of Highlands, Sooke and Metchosin, the City of Colwood, Langford Municipality, and the Town of View Royal"
+      ],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Sooke, Metchosin, Todd Creek, Sooke River, Young Lake, Tugwell Creek): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "South Saanich, Malahat, Goldstream, Otter Point, Sooke, Metchosin and Esquimalt Districts",
+        "effect": "No Shooting Areas",
+        "exemptions[0]": "except those parts of M.U.s 1-1 and 1-2 that are wholly contained and legally defined within the corporate limits of the Corporations of the Districts of Highlands, Sooke and Metchosin, the City of Colwood, Langford Municipality, and the Town of View Royal",
+        "geometry.steps[0]": "Commencing at the high water mark at the extremity of Sluggett Point",
+        "geometry.steps[1]": "thence southerly in a straight line to the low water mark at the extremity of Willis Point",
+        "geometry.steps[2]": "thence southerly, westerly and southerly along the low water mark of Saanich Inlet to the point of intersection with the northern boundary of Goldstream Provincial Park",
+        "geometry.steps[3]": "thence westerly along said northern boundary to the point of intersection with the western boundary of the right of way of the Esquimalt and Nanaimo Railway",
+        "geometry.steps[4]": "thence southerly along said western boundary to the point of intersection with the western boundary of the right of way of the B.C. Hydro powerline",
+        "geometry.steps[5]": "thence southerly and westerly along the western and northern boundaries of said right of way to the point of intersection with the northern boundary of the right of way of the Canadian National Railway, at the Cooper's Cove crossing",
+        "geometry.steps[6]": "thence westerly and northwesterly along said railway right of way boundary to the point of intersection with the natural boundary of Todd Creek, on the southern bank thereof",
+        "geometry.steps[7]": "thence in a general westerly direction along the said natural boundary to the point of intersection with the western natural boundary of Sooke River",
+        "geometry.steps[8]": "thence in a general southerly direction along said western natural boundary to the point of intersection with the northern boundary of the right of way of the B.C. Hydro powerline",
+        "geometry.steps[9]": "thence westerly along said right of way boundary to the point of intersection with Young Lake Road",
+        "geometry.steps[10]": "then generally North and perpendicular to said right of way for a distance of 800 metres",
+        "geometry.steps[11]": "then generally West paralleling said right of way to the point of intersection with the east bank of Tugwell Creek",
+        "geometry.steps[12]": "then generally South following the east bank of Tugwell Creek to the intersection with the north boundary of the right of way of said powerline",
+        "geometry.steps[13]": "then generally westerly along said right of way to the point of intersection with the natural boundary of the Jordan River",
+        "geometry.steps[14]": "thence in a generally northerly direction along the east bank of Jordan River to the confluence of Sinn Fein Creek",
+        "geometry.steps[15]": "thence in a generally northerly and westerly direction following Sinn Fein Creek to the crossing of Jordan River main",
+        "geometry.steps[16]": "thence in a generally southerly and westerly direction following the north boundary of Jordan River main to the intersection with North main",
+        "geometry.steps[17]": "thence following North main 100 metres north to 48° 44' north latitude, 124° 06' west longitude",
+        "geometry.steps[18]": "thence in a southerly direction following North main 100 metres from the western shoulder to the intersection with Uglow Creek",
+        "geometry.steps[19]": "thence in a southerly direction following Uglow Creek to the intersection of Highway 14",
+        "geometry.steps[20]": "thence in a general southerly direction along said natural boundary to the northern boundary of the right of way of Highway 14",
+        "geometry.steps[21]": "thence in a general westerly direction along the northern boundary of Highway 14 to the point of intersection with the western boundary of the right of way of that secondary road leading from Port Renfrew to Botanical Beach Provincial Park",
+        "geometry.steps[22]": "thence in a general southwesterly direction along the western boundary of said secondary road to the point of intersection with the northern boundary of said Provincial Park",
+        "geometry.steps[23]": "thence easterly and southerly along the northern and eastern boundaries of said Provincial Park to the point of intersection with the high water mark of Juan de Fuca Strait, on the northern shore thereof",
+        "geometry.steps[24]": "thence in a general southeasterly direction to the point of intersection with the high water mark at Orveas Bay",
+        "geometry.steps[25]": "thence due South from the said intersection to a point in Juan de Fuca Strait 300 metres from the high water mark",
+        "geometry.steps[26]": "thence in a general easterly direction 300 metres out from the high water mark and parallel to the shoreline to a point 300 metres south of the high water mark at the extremity of Parsons Point",
+        "geometry.steps[27]": "thence easterly in a straight line to a point 300 metres distant from the western high water mark of Simpson Point, at the extremity thereof",
+        "geometry.steps[28]": "thence along a line 300 metres distant from and parallel to the high water mark in a general easterly and northerly direction to a point due East of the extremity of Cape Calver",
+        "geometry.steps[29]": "thence northeasterly in a straight line to a point 300 metres due East of the high water mark of William Head, at the extremity thereof",
+        "geometry.steps[30]": "thence along a line 300 metres distant from and parallel to the high water mark in a general westerly, northerly and easterly direction to a point due East of Fisgard Island",
+        "geometry.steps[31]": "thence northeasterly in a straight line to the point of intersection with the projection of the boundary of the Township of Esquimalt, southeast of Ashe Head",
+        "geometry.steps[32]": "thence northeasterly along said boundary to the point of intersection with the southern boundary of the District of Saanich",
+        "geometry.steps[33]": "thence westerly and northerly along the southern and western boundaries of the District of Saanich to the point of intersection with the southern natural boundary of Tod Creek",
+        "geometry.steps[34]": "thence in a general northwesterly direction along said natural boundary to the point of intersection with the high water mark of Tod Inlet",
+        "geometry.steps[35]": "thence in a general northerly direction along the high water mark of Tod Inlet and Brentwood Bay to the point of commencement"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "43a8e84771abbd68f110a42bf99830b907e6461f77ff3cd75b370e0aa3dafcdc",
+      "task_id": "closed_area-43a8e84771ab",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Sooke, Metchosin, Todd Creek, Sooke River, Young Lake, Tugwell Creek): 1 km around the named points; not the boundary",
+          "quote": "Commencing at the high water mark at the extremity of Sluggett Point",
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "121.158 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": null,
+          "detail": "the text names no area, or it could not be found"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "steps: run 1 [\"sluggett point|||\",\"|the low water mark at the extremity of willis point||straight_line\",\"saanich inlet|the point of intersection with the northern boundary of goldstream provincial park||shoreline\",\"goldstream provincial park|the point of intersection with the western boundary of the right of way of the esquimalt and nanaimo railway||other\",\"esquimalt and nanaimo railway|the point of intersection with the western boundary of the right of way of the b.c. hydro powerline||other\",\"b.c. hydro powerline|the point of intersection with the northern boundary of the right of way of the canadian national railway at the cooper s cove crossing||other\",\"canadian national railway|the point of intersection with the natural boundary of todd creek on the southern bank thereof||other\",\"todd creek|the point of intersection with the western natural boundary of sooke river||creek\",\"sooke river|the point of intersection with the northern boundary of the right of way of the b.c. hydro powerline||river\",\"b.c. hydro powerline|the point of intersection with young lake rd||other\",\"||800 metres|straight_line\",\"b.c. hydro powerline|the point of intersection with the east bank of tugwell creek||other\",\"tugwell creek|the intersection with the north boundary of the right of way of said powerline||creek\",\"b.c. hydro powerline|the point of intersection with the natural boundary of the jordan river||other\",\"jordan river|the confluence of sinn fein creek||river\",\"sinn fein creek|the crossing of jordan river main||creek\",\"jordan river main|the intersection with north main||road\",\"north main||100 metres|road\",\"north main|the intersection with uglow creek|100 metres|road\",\"uglow creek|the intersection of hwy 14||creek\",\"|the northern boundary of the right of way of hwy 14||\",\"hwy 14|the point of intersection with the western boundary of the right of way of that secondary rd leading from port renfrew to botanical beach provincial park||road\",\"secondary rd leading from port renfrew to botanical beach provincial park|the point of intersection with the northern boundary of said provincial park||road\",\"botanical beach provincial park|the point of intersection with the high water mark of juan de fuca strait on the northern shore thereof||other\",\"|the point of intersection with the high water mark at orveas bay||\",\"|a point in juan de fuca strait 300 metres from the high water mark|300 metres|straight_line\",\"|a point 300 metres south of the high water mark at the extremity of parsons point|300 metres|shoreline\",\"|a point 300 metres distant from the western high water mark of simpson point at the extremity thereof|300 metres|straight_line\",\"|a point due east of the extremity of cape calver|300 metres|shoreline\",\"|a point 300 metres due east of the high water mark of william head at the extremity thereof|300 metres|straight_line\",\"|a point due east of fisgard island|300 metres|shoreline\",\"|the point of intersection with the projection of the boundary of the township of esquimalt southeast of ashe head||straight_line\",\"township of esquimalt|the point of intersection with the southern boundary of the district of saanich||district_boundary\",\"district of saanich|the point of intersection with the southern natural boundary of tod creek||district_boundary\",\"tod creek|the point of intersection with the high water mark of tod inlet||creek\",\"tod inlet and brentwood bay|the point of commencement||shoreline\"] vs run 2 [\"sluggett point|||\",\"|the low water mark at the extremity of willis point||straight_line\",\"saanich inlet|the northern boundary of goldstream provincial park||shoreline\",\"goldstream provincial park|the western boundary of the right of way of the esquimalt and nanaimo railway||other\",\"esquimalt and nanaimo railway|the western boundary of the right of way of the b.c. hydro powerline||other\",\"b.c. hydro powerline|the northern boundary of the right of way of the canadian national railway at the cooper s cove crossing||other\",\"canadian national railway|the natural boundary of todd creek on the southern bank thereof||other\",\"todd creek|the western natural boundary of sooke river||creek\",\"sooke river|the northern boundary of the right of way of the b.c. hydro powerline||river\",\"b.c. hydro powerline|young lake rd||other\",\"||800 metres|\",\"|the east bank of tugwell creek||other\",\"tugwell creek|the north boundary of the right of way of said powerline||creek\",\"b.c. hydro powerline|the natural boundary of the jordan river||other\",\"jordan river|the confluence of sinn fein creek||river\",\"sinn fein creek|the crossing of jordan river main||creek\",\"jordan river main|north main||road\",\"north main||100 metres|road\",\"north main|uglow creek|100 metres|road\",\"uglow creek|hwy 14||creek\",\"|the northern boundary of the right of way of hwy 14||\",\"hwy 14|the western boundary of the right of way of that secondary rd leading from port renfrew to botanical beach provincial park||road\",\"|the northern boundary of said provincial park||road\",\"botanical beach provincial park|the high water mark of juan de fuca strait on the northern shore thereof||other\",\"|the high water mark at orveas bay||\",\"|a point in juan de fuca strait 300 metres from the high water mark|300 metres|straight_line\",\"|a point 300 metres south of the high water mark at the extremity of parsons point|300 metres|shoreline\",\"|a point 300 metres distant from the western high water mark of simpson point at the extremity thereof|300 metres|straight_line\",\"|a point due east of the extremity of cape calver|300 metres|shoreline\",\"|a point 300 metres due east of the high water mark of william head at the extremity thereof|300 metres|straight_line\",\"|a point due east of fisgard island|300 metres|shoreline\",\"|the projection of the boundary of the township of esquimalt southeast of ashe head||straight_line\",\"township of esquimalt|the southern boundary of the district of saanich||district_boundary\",\"district of saanich|the southern natural boundary of tod creek||district_boundary\",\"tod creek|the high water mark of tod inlet||creek\",\"tod inlet and brentwood bay|the point of commencement||shoreline\"]"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: a walk outline is approximate; a person checks it against the text"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:08:32.345Z",
-  "updated": "2026-10-21T16:08:32.345Z"
+  "updated": "2026-10-28T19:54:21.349Z"
 }

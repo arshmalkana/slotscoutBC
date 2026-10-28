@@ -5,10 +5,11 @@
   "title": "Closed Areas Regulation, Schedule 3, section 37 (Line Creek Operations)",
   "rule_id": "W3-037",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Line Creek): 1 km around the named points; not the boundary"
   ],
   "source": {
     "text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nLine Creek Operations\n37 That portion of M.U. 4-23 in the vicinity of Sparwood outlined in red on the attached Map No. 3-37/18. [en. B.C. Reg. 239/2018, App. 1, s. 1.]",
@@ -144,13 +145,396 @@
   ],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "10.463 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Line Creek): 1 km around the named points; not the boundary",
+      "quote": null,
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -114.87117102137208,
+            49.89787973733879
+          ],
+          [
+            -114.87116150901576,
+            49.896997207440016
+          ],
+          [
+            -114.86829946548575,
+            49.86410510999918
+          ],
+          [
+            -114.86815586433491,
+            49.863227426682144
+          ],
+          [
+            -114.86787950565756,
+            49.86236304225885
+          ],
+          [
+            -114.86747305767217,
+            49.861520280289284
+          ],
+          [
+            -114.86694044073295,
+            49.86070725569198
+          ],
+          [
+            -114.86628678934268,
+            49.859931796644446
+          ],
+          [
+            -114.8655184025087,
+            49.8592013692586
+          ],
+          [
+            -114.86464268292676,
+            49.85852300575433
+          ],
+          [
+            -114.8636680655851,
+            49.85790323681961
+          ],
+          [
+            -114.8626039364801,
+            49.85734802880573
+          ],
+          [
+            -114.86146054222789,
+            49.8568627263588
+          ],
+          [
+            -114.86024889144278,
+            49.85645200103664
+          ],
+          [
+            -114.85898064882961,
+            49.856119806402454
+          ],
+          [
+            -114.85766802300589,
+            49.85586934002461
+          ],
+          [
+            -114.856323649128,
+            49.85570301274558
+          ],
+          [
+            -114.85496046744368,
+            49.85562242551356
+          ],
+          [
+            -114.85359159893198,
+            49.85562835399801
+          ],
+          [
+            -114.85223021921772,
+            49.85572074113612
+          ],
+          [
+            -114.85088943196428,
+            49.85589869768105
+          ],
+          [
+            -114.8495821429536,
+            49.856160510747046
+          ],
+          [
+            -114.84832093605493,
+            49.85650366026956
+          ],
+          [
+            -114.84711795226711,
+            49.856924843223524
+          ],
+          [
+            -114.84598477299069,
+            49.85742000536831
+          ],
+          [
+            -114.84493230864598,
+            49.85798438021606
+          ],
+          [
+            -114.84397069370416,
+            49.85861253485151
+          ],
+          [
+            -114.8431091891382,
+            49.859298422164485
+          ],
+          [
+            -114.84235609323115,
+            49.86003543899625
+          ],
+          [
+            -114.84171866160072,
+            49.86081648964275
+          ],
+          [
+            -114.84120303721285,
+            49.861634054106666
+          ],
+          [
+            -114.84081419106212,
+            49.86248026044427
+          ],
+          [
+            -114.84055587409702,
+            49.86334696051313
+          ],
+          [
+            -114.84043058086,
+            49.86422580839374
+          ],
+          [
+            -114.8404395252021,
+            49.86510834073151
+          ],
+          [
+            -114.84328264098743,
+            49.89800112189245
+          ],
+          [
+            -114.84342589325882,
+            49.89887883589112
+          ],
+          [
+            -114.84370202304497,
+            49.89974327841109
+          ],
+          [
+            -114.84410837781444,
+            49.900586123464585
+          ],
+          [
+            -114.84464105020305,
+            49.901399252653086
+          ],
+          [
+            -114.84529491541127,
+            49.90217483340337
+          ],
+          [
+            -114.8460636803614,
+            49.902905394464646
+          ],
+          [
+            -114.84693994414958,
+            49.90358389793696
+          ],
+          [
+            -114.84791526921562,
+            49.90420380713452
+          ],
+          [
+            -114.84898026254962,
+            49.90475914962698
+          ],
+          [
+            -114.85012466615544,
+            49.90524457484816
+          ],
+          [
+            -114.85133745589938,
+            49.905655405713865
+          ],
+          [
+            -114.85260694779014,
+            49.9059876837485
+          ],
+          [
+            -114.85392091066197,
+            49.90623820728212
+          ],
+          [
+            -114.85526668417002,
+            49.90640456234799
+          ],
+          [
+            -114.85663130095321,
+            49.90648514597971
+          ],
+          [
+            -114.85800161177968,
+            49.90647918168253
+          ],
+          [
+            -114.85936441245894,
+            49.90638672692791
+          ],
+          [
+            -114.86070657128795,
+            49.906208672598794
+          ],
+          [
+            -114.86201515579312,
+            49.905946734390966
+          ],
+          [
+            -114.86327755753656,
+            49.905603436254
+          ],
+          [
+            -114.86448161377518,
+            49.905182086032625
+          ],
+          [
+            -114.86561572479131,
+            49.90468674354518
+          ],
+          [
+            -114.8666689657582,
+            49.90412218140902
+          ],
+          [
+            -114.86763119205627,
+            49.90349383899298
+          ],
+          [
+            -114.86849313702265,
+            49.90280776994388
+          ],
+          [
+            -114.86924650119002,
+            49.90207058379562
+          ],
+          [
+            -114.86988403215595,
+            49.90128938222687
+          ],
+          [
+            -114.87039959431557,
+            49.900471690584375
+          ],
+          [
+            -114.8707882277905,
+            49.89962538533502
+          ],
+          [
+            -114.87104619599256,
+            49.89875861814767
+          ],
+          [
+            -114.87117102137208,
+            49.89787973733879
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W3-037",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 3, s. 37",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nLine Creek Operations\n37 That portion of M.U. 4-23 in the vicinity of Sparwood outlined in red on the attached Map No. 3-37/18. [en. B.C. Reg. 239/2018, App. 1, s. 1.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "other",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Line Creek): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "That portion of M.U. 4-23",
+        "effect": "No Shooting or Hunting Areas"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "fa8a2bf44d0e798ac321939ae4bb3d7c2b7bd56e22f3fa59bedb21bb48d7153e",
+      "task_id": "closed_area-fa8a2bf44d0e",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Line Creek): 1 km around the named points; not the boundary",
+          "quote": null,
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "10.463 km² (limit none for this type)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:10:36.758Z",
-  "updated": "2026-10-27T23:12:36.632Z"
+  "updated": "2026-10-28T20:16:13.582Z"
 }

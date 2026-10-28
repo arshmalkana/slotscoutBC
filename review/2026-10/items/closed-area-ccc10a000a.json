@@ -5,12 +5,12 @@
   "title": "Closed Areas Regulation, Schedule 1, section 14 (Ward Lake)",
   "rule_id": "W1-014",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 null vs run 2 \"inside\"",
     "named area \"Similkameen Division of Yale District\": none",
-    "named lot \"Lot 30 of Lots 334, 1494 and 333, Similkameen Division of Yale District, Plan 8423\": failed (no official layer for area type lot); the larger area is not drawn in its place",
-    "validation failed: shape built (no shape could be built)"
+    "District Lots 334, 1494, 333 (SDYD): the text names part of these lots",
+    "drawn whole: the text names only part of it, so the outline is approximate (\"possibly inside\")"
   ],
   "source": {
     "text": "Schedule 1 No Shooting, Hunting or Trapping Areas (Section 2)\nWard Lake\n14 That portion of the Province of British Columbia in the vicinity of Grand Forks within the following described boundaries: Lot 30 of Lots 334, 1494 and 333, Similkameen Division of Yale District, Plan 8423. [am. B.C. Reg. 162/87, s. 1.]",
@@ -145,25 +145,583 @@
       "sample": []
     },
     {
-      "query": "Lot 30 of Lots 334, 1494 and 333, Similkameen Division of Yale District, Plan 8423",
+      "query": "District Lots 334, 1494, 333 (SDYD)",
       "kind": "lot",
-      "layer": "-",
-      "status": "failed",
-      "matches": 0,
-      "ids": [],
-      "note": "no official layer for area type lot",
-      "sample": []
+      "layer": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW",
+      "status": "ok",
+      "matches": 3,
+      "ids": [
+        "4311760",
+        "4379360",
+        "4379520"
+      ],
+      "note": "the text names part of these lots",
+      "partial": true,
+      "sample": [
+        {
+          "PIN_SID": 4311760,
+          "SURVPARC_TYPE_CDE": 1,
+          "LAND_TITLE_OFFICE_IDENTIFIER": null,
+          "PARCEL_TYPE": "Primary",
+          "ACT_GOVERNING_PARCEL_SURVEY": "Land Act",
+          "PARCEL_SHORT_DESCRIPTION": "DL 1494",
+          "PARCEL_LEGAL_DESCRIPTION": "DISTRICT LOT 1494, SDYD",
+          "PRIMARY_PARCEL_OF_SUBDIV": null,
+          "SURVEYOR_GENERAL_PLAN_NO": "16TR1 OSOYOOS DIVISION OF YALE",
+          "CONFIRMED_DAT": "1899-11-09Z",
+          "PARCEL_AREA_DERIVATION": "Converted",
+          "PARCEL_AREA_IN_HECTARES": 129.5,
+          "STATE_OF_PARCEL_SURVEY": "Active",
+          "FEATURE_CODE": "FA90400000",
+          "FEATURE_AREA_SQM": 1316784.0709,
+          "FEATURE_LENGTH_M": 4860.089,
+          "OBJECTID": 59708,
+          "SE_ANNO_CAD_DATA": null
+        },
+        {
+          "PIN_SID": 4379360,
+          "SURVPARC_TYPE_CDE": 1,
+          "LAND_TITLE_OFFICE_IDENTIFIER": null,
+          "PARCEL_TYPE": "Primary",
+          "ACT_GOVERNING_PARCEL_SURVEY": "Land Act",
+          "PARCEL_SHORT_DESCRIPTION": "DL 333",
+          "PARCEL_LEGAL_DESCRIPTION": "DISTRICT LOT 333, SDYD.",
+          "PRIMARY_PARCEL_OF_SUBDIV": null,
+          "SURVEYOR_GENERAL_PLAN_NO": "16TR1 OSOYOOS DIVISION OF YALE",
+          "CONFIRMED_DAT": "1890-06-26Z",
+          "PARCEL_AREA_DERIVATION": "Converted",
+          "PARCEL_AREA_IN_HECTARES": 129.5,
+          "STATE_OF_PARCEL_SURVEY": "Active",
+          "FEATURE_CODE": "FA90400000",
+          "FEATURE_AREA_SQM": 1273619.4489,
+          "FEATURE_LENGTH_M": 4786.7569,
+          "OBJECTID": 60658,
+          "SE_ANNO_CAD_DATA": null
+        },
+        {
+          "PIN_SID": 4379520,
+          "SURVPARC_TYPE_CDE": 1,
+          "LAND_TITLE_OFFICE_IDENTIFIER": null,
+          "PARCEL_TYPE": "Primary",
+          "ACT_GOVERNING_PARCEL_SURVEY": "Land Act",
+          "PARCEL_SHORT_DESCRIPTION": "DL 334",
+          "PARCEL_LEGAL_DESCRIPTION": "DISTRICT LOT 334, SDYD",
+          "PRIMARY_PARCEL_OF_SUBDIV": null,
+          "SURVEYOR_GENERAL_PLAN_NO": "16TR1 OSOYOOS DIVISION OF YALE",
+          "CONFIRMED_DAT": "1890-06-26Z",
+          "PARCEL_AREA_DERIVATION": "Converted",
+          "PARCEL_AREA_IN_HECTARES": 129.5,
+          "STATE_OF_PARCEL_SURVEY": "Active",
+          "FEATURE_CODE": "FA90400000",
+          "FEATURE_AREA_SQM": 1276015.0572,
+          "FEATURE_LENGTH_M": 4795.49,
+          "OBJECTID": 60660,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
     }
   ],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.854 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "official boundary of the named area",
+      "quote": "Lot 30 of Lots 334, 1494 and 333, Similkameen Division of Yale District, Plan 8423",
+      "source": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -118.49698997,
+            49.05069615
+          ],
+          [
+            -118.49697897,
+            49.04970419
+          ],
+          [
+            -118.49697888,
+            49.04969609
+          ],
+          [
+            -118.49697746,
+            49.04956837
+          ],
+          [
+            -118.49697596,
+            49.04943254
+          ],
+          [
+            -118.49697588,
+            49.0494256
+          ],
+          [
+            -118.4969733,
+            49.04919354
+          ],
+          [
+            -118.49691046,
+            49.04351749
+          ],
+          [
+            -118.49684767,
+            49.03784372
+          ],
+          [
+            -118.49683103,
+            49.03633882
+          ],
+          [
+            -118.4920949,
+            49.0363937
+          ],
+          [
+            -118.4920606,
+            49.03639409
+          ],
+          [
+            -118.49188015,
+            49.03639618
+          ],
+          [
+            -118.49181451,
+            49.03639694
+          ],
+          [
+            -118.49137464,
+            49.03640203
+          ],
+          [
+            -118.49127598,
+            49.03640316
+          ],
+          [
+            -118.49108928,
+            49.03640533
+          ],
+          [
+            -118.49089166,
+            49.03640761
+          ],
+          [
+            -118.49086161,
+            49.03640796
+          ],
+          [
+            -118.49007834,
+            49.036417
+          ],
+          [
+            -118.48993919,
+            49.03641861
+          ],
+          [
+            -118.48971711,
+            49.03642118
+          ],
+          [
+            -118.4863851,
+            49.03645958
+          ],
+          [
+            -118.48591804,
+            49.03646497
+          ],
+          [
+            -118.48589066,
+            49.03646521
+          ],
+          [
+            -118.48495019,
+            49.03647388
+          ],
+          [
+            -118.48107833,
+            49.03650946
+          ],
+          [
+            -118.48061318,
+            49.03651373
+          ],
+          [
+            -118.4794489,
+            49.0365244
+          ],
+          [
+            -118.47921824,
+            49.03652652
+          ],
+          [
+            -118.47496182,
+            49.03656542
+          ],
+          [
+            -118.47411587,
+            49.03655812
+          ],
+          [
+            -118.47389436,
+            49.03655621
+          ],
+          [
+            -118.47267622,
+            49.03654569
+          ],
+          [
+            -118.47267163,
+            49.03654564
+          ],
+          [
+            -118.47203079,
+            49.0365401
+          ],
+          [
+            -118.47201581,
+            49.03653997
+          ],
+          [
+            -118.47149663,
+            49.03653548
+          ],
+          [
+            -118.4714363,
+            49.03653496
+          ],
+          [
+            -118.46959125,
+            49.03651899
+          ],
+          [
+            -118.4635726,
+            49.03646666
+          ],
+          [
+            -118.46357728,
+            49.036558
+          ],
+          [
+            -118.46362958,
+            49.03758115
+          ],
+          [
+            -118.46365364,
+            49.03805181
+          ],
+          [
+            -118.46380006,
+            49.04091621
+          ],
+          [
+            -118.46382179,
+            49.0413411
+          ],
+          [
+            -118.46383649,
+            49.04162881
+          ],
+          [
+            -118.46394604,
+            49.04377143
+          ],
+          [
+            -118.46397972,
+            49.04438248
+          ],
+          [
+            -118.46399627,
+            49.04468281
+          ],
+          [
+            -118.4640156,
+            49.04503357
+          ],
+          [
+            -118.46403055,
+            49.04530482
+          ],
+          [
+            -118.46435154,
+            49.05112805
+          ],
+          [
+            -118.46685361,
+            49.05109167
+          ],
+          [
+            -118.46745154,
+            49.05108297
+          ],
+          [
+            -118.46757607,
+            49.05108116
+          ],
+          [
+            -118.46805145,
+            49.05107424
+          ],
+          [
+            -118.46817827,
+            49.05107239
+          ],
+          [
+            -118.46847815,
+            49.05106803
+          ],
+          [
+            -118.46861493,
+            49.05106603
+          ],
+          [
+            -118.46994998,
+            49.05104658
+          ],
+          [
+            -118.47004081,
+            49.05104527
+          ],
+          [
+            -118.47038266,
+            49.05104028
+          ],
+          [
+            -118.47175054,
+            49.05102033
+          ],
+          [
+            -118.47192146,
+            49.05101784
+          ],
+          [
+            -118.47215946,
+            49.05101436
+          ],
+          [
+            -118.47216245,
+            49.05101431
+          ],
+          [
+            -118.47264507,
+            49.05100727
+          ],
+          [
+            -118.47296212,
+            49.05100264
+          ],
+          [
+            -118.47296428,
+            49.05100324
+          ],
+          [
+            -118.47313727,
+            49.05100009
+          ],
+          [
+            -118.47339057,
+            49.0509964
+          ],
+          [
+            -118.47367306,
+            49.05099227
+          ],
+          [
+            -118.47373243,
+            49.0509914
+          ],
+          [
+            -118.47407075,
+            49.05098646
+          ],
+          [
+            -118.47523431,
+            49.05096946
+          ],
+          [
+            -118.47556222,
+            49.05096537
+          ],
+          [
+            -118.47556691,
+            49.05096531
+          ],
+          [
+            -118.47584652,
+            49.05096182
+          ],
+          [
+            -118.4758489,
+            49.05096179
+          ],
+          [
+            -118.47585031,
+            49.05096178
+          ],
+          [
+            -118.47597897,
+            49.05096016
+          ],
+          [
+            -118.47598481,
+            49.0509601
+          ],
+          [
+            -118.47911105,
+            49.05092106
+          ],
+          [
+            -118.47949836,
+            49.05091621
+          ],
+          [
+            -118.479931,
+            49.05091081
+          ],
+          [
+            -118.48137054,
+            49.05089278
+          ],
+          [
+            -118.48454393,
+            49.050853
+          ],
+          [
+            -118.48583972,
+            49.05083673
+          ],
+          [
+            -118.48611234,
+            49.05083331
+          ],
+          [
+            -118.48613318,
+            49.05083304
+          ],
+          [
+            -118.49035528,
+            49.05077993
+          ],
+          [
+            -118.49155116,
+            49.05076485
+          ],
+          [
+            -118.49698997,
+            49.05069615
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W1-014",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 1, s. 14",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 1 No Shooting, Hunting or Trapping Areas (Section 2)\nWard Lake\n14 That portion of the Province of British Columbia in the vicinity of Grand Forks within the following described boundaries: Lot 30 of Lots 334, 1494 and 333, Similkameen Division of Yale District, Plan 8423. [am. B.C. Reg. 162/87, s. 1.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "admin_boundary",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "whole_feature",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "official boundary of the named area",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "Similkameen Division of Yale District",
+        "geometry.feature": "Lot 30 of Lots 334, 1494 and 333, Similkameen Division of Yale District, Plan 8423",
+        "effect": "No Shooting, Hunting or Trapping Areas"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "61fb525e4277a051adc83265021b3c0f8b279948267d100b196383c5d61a9f45",
+      "task_id": "closed_area-61fb525e4277",
+      "construction": [
+        {
+          "what": "official boundary of the named area",
+          "quote": "Lot 30 of Lots 334, 1494 and 333, Similkameen Division of Yale District, Plan 8423",
+          "source": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "3.854 km² (limit none for this type)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": null,
+          "detail": "the text names no area, or it could not be found"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:58:58.444Z",
-  "updated": "2026-10-27T23:10:50.169Z"
+  "updated": "2026-10-28T19:56:47.035Z"
 }

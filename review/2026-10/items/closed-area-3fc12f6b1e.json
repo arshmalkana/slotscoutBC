@@ -5,11 +5,13 @@
   "title": "Closed Areas Regulation, Schedule 8.1, section 1 (Burns Bog)",
   "rule_id": "W8-8.1-001",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: within: run 1 null vs run 2 \"new westminster district\"",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "approximate zone around the places the section names, using run 1's reading",
+    "a zone around the places the section names (Burns Bog): 1 km around the named points; not the boundary",
+    "validation failed: two independent extractions agree (within: run 1 null vs run 2 \"new westminster district\")"
   ],
   "source": {
     "text": "Schedule 8.1 No Hunting or Trapping Areas (Section 8.1)\nBurns Bog\n1 That portion of the Province of British Columbia described as follows: (a)Parcel identifier 000-914-991 Parcel \"D\" (Explanatory Plan 2515) District Lot 437 Group 2; except: Firstly: Parcel One (Reference Plan 8648); Secondly: Portions in Plans 64775 and LMP7813; Thirdly: Portions in Statutory Right of Way Plans 73154, 73156 and LMP45327 Fourthly: Portions in Plans BCP10127 and BCP10128, New Westminster District; (b)Parcel identifier 000-915-106 The West 100 acres of the Southeast Quarter of Section 23 Township 4; except: Firstly: the Right of Way of the Vancouver Victoria and Eastern Railway and Navigation Company as shown on Plan with Fee Deposited 8825F; Secondly: Parcel \"A\" (Reference Plan 15997); Thirdly: Part on Highway Plan 73514, New Westminster District; (c)Parcel identifier 000-915-084 Parcel One (Reference Plan 25703) of the Northeast Quarter of Section 14, Township 4, except: Firstly: Part subdivided by Plan 26104; Secondly: Part subdivided by Plan 40037; Thirdly: Part dedicated as road on Plan 50544; Fourthly: Part on Highway Plan 73154; and Fifthly: Part subdivided by Plan BCP10128, New Westminster District; (d)Parcel Identifier 000-915-114 Parcel 1 (Reference Plan 8648) District Lot 437, Group 2, New Westminster District, Except Part subdivided by Plan BCP11267; (e)Lot E, District Lot 437, Group 2, New Westminster District Plan BCP10127; (f)Parcel Identifier 000-915-122, Section 16, Township 4, New Westminster District; (g)Parcel Identifier 025-945-688 Lot A District Lot 437, Group 2, New Westminster District Plan BCP11267. [en. B.C. Reg. 151/2006, s. 6; am. B.C. Reg. 161/2024, App. 1, s. 4.]",
@@ -114,13 +116,387 @@
   "lookups": [],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.137 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "within: run 1 null vs run 2 \"new westminster district\""
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Burns Bog): 1 km around the named points; not the boundary",
+      "quote": null,
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -122.95986982406615,
+            49.12083251461348
+          ],
+          [
+            -122.95993574904769,
+            49.12171401053219
+          ],
+          [
+            -122.96013338221763,
+            49.12258703260616
+          ],
+          [
+            -122.96046082699311,
+            49.12344317248839
+          ],
+          [
+            -122.96091493610781,
+            49.124274183999574
+          ],
+          [
+            -122.96149134168327,
+            49.12507206258495
+          ],
+          [
+            -122.96218449708473,
+            49.12582912245863
+          ],
+          [
+            -122.96298773016645,
+            49.126538070690266
+          ],
+          [
+            -122.96389330740027,
+            49.12719207751788
+          ],
+          [
+            -122.9648925082751,
+            49.127784842207056
+          ],
+          [
+            -122.96597570925323,
+            49.12831065381839
+          ],
+          [
+            -122.9671324764767,
+            49.128764446295065
+          ],
+          [
+            -122.96835166632928,
+            49.12914184733657
+          ],
+          [
+            -122.9696215328832,
+            49.12943922058434
+          ],
+          [
+            -122.97092984119007,
+            49.129653700710385
+          ],
+          [
+            -122.97226398531959,
+            49.129783221068166
+          ],
+          [
+            -122.97361111000001,
+            49.12982653363725
+          ],
+          [
+            -122.97495823468043,
+            49.129783221068166
+          ],
+          [
+            -122.97629237880994,
+            49.129653700710385
+          ],
+          [
+            -122.97760068711682,
+            49.12943922058434
+          ],
+          [
+            -122.97887055367072,
+            49.12914184733657
+          ],
+          [
+            -122.98008974352331,
+            49.128764446295065
+          ],
+          [
+            -122.98124651074677,
+            49.12831065381839
+          ],
+          [
+            -122.98232971172492,
+            49.127784842207056
+          ],
+          [
+            -122.98332891259975,
+            49.12719207751788
+          ],
+          [
+            -122.98423448983357,
+            49.126538070690266
+          ],
+          [
+            -122.98503772291528,
+            49.12582912245863
+          ],
+          [
+            -122.98573087831673,
+            49.12507206258495
+          ],
+          [
+            -122.9863072838922,
+            49.124274183999574
+          ],
+          [
+            -122.98676139300689,
+            49.12344317248839
+          ],
+          [
+            -122.98708883778237,
+            49.12258703260616
+          ],
+          [
+            -122.98728647095233,
+            49.12171401053219
+          ],
+          [
+            -122.98735239593387,
+            49.12083251461348
+          ],
+          [
+            -122.98728598483378,
+            49.11995103436222
+          ],
+          [
+            -122.98708788422654,
+            49.119078058688416
+          ],
+          [
+            -122.98676000865838,
+            49.11822199415598
+          ],
+          [
+            -122.98630552195075,
+            49.11739108404858
+          ],
+          [
+            -122.98572880649277,
+            49.116593329024035
+          ],
+          [
+            -122.98503542082781,
+            49.11583641011991
+          ],
+          [
+            -122.98423204595055,
+            49.115127614849186
+          ],
+          [
+            -122.98332642083818,
+            49.11447376709557
+          ],
+          [
+            -122.98232726784184,
+            49.113881161480414
+          ],
+          [
+            -122.98124420865923,
+            49.11335550283
+          ],
+          [
+            -122.98008767169925,
+            49.11290185132289
+          ],
+          [
+            -122.97886879172916,
+            49.11252457384225
+          ],
+          [
+            -122.97759930276823,
+            49.11222730199826
+          ],
+          [
+            -122.97629142525405,
+            49.11201289722202
+          ],
+          [
+            -122.97495774856183,
+            49.11188342326442
+          ],
+          [
+            -122.97361111000001,
+            49.111840126362765
+          ],
+          [
+            -122.97226447143818,
+            49.11188342326442
+          ],
+          [
+            -122.97093079474595,
+            49.11201289722202
+          ],
+          [
+            -122.96962291723179,
+            49.11222730199826
+          ],
+          [
+            -122.96835342827086,
+            49.11252457384225
+          ],
+          [
+            -122.96713454830076,
+            49.11290185132289
+          ],
+          [
+            -122.96597801134078,
+            49.11335550283
+          ],
+          [
+            -122.96489495215818,
+            49.113881161480414
+          ],
+          [
+            -122.96389579916183,
+            49.11447376709557
+          ],
+          [
+            -122.96299017404947,
+            49.115127614849186
+          ],
+          [
+            -122.9621867991722,
+            49.11583641011991
+          ],
+          [
+            -122.96149341350723,
+            49.116593329024035
+          ],
+          [
+            -122.96091669804926,
+            49.11739108404858
+          ],
+          [
+            -122.96046221134164,
+            49.11822199415598
+          ],
+          [
+            -122.96013433577347,
+            49.119078058688416
+          ],
+          [
+            -122.95993623516623,
+            49.11995103436222
+          ],
+          [
+            -122.95986982406615,
+            49.12083251461348
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W8-8.1-001",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 8.1, s. 1",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 8.1 No Hunting or Trapping Areas (Section 8.1)\nBurns Bog\n1 That portion of the Province of British Columbia described as follows: (a)Parcel identifier 000-914-991 Parcel \"D\" (Explanatory Plan 2515) District Lot 437 Group 2; except: Firstly: Parcel One (Reference Plan 8648); Secondly: Portions in Plans 64775 and LMP7813; Thirdly: Portions in Statutory Right of Way Plans 73154, 73156 and LMP45327 Fourthly: Portions in Plans BCP10127 and BCP10128, New Westminster District; (b)Parcel identifier 000-915-106 The West 100 acres of the Southeast Quarter of Section 23 Township 4; except: Firstly: the Right of Way of the Vancouver Victoria and Eastern Railway and Navigation Company as shown on Plan with Fee Deposited 8825F; Secondly: Parcel \"A\" (Reference Plan 15997); Thirdly: Part on Highway Plan 73514, New Westminster District; (c)Parcel identifier 000-915-084 Parcel One (Reference Plan 25703) of the Northeast Quarter of Section 14, Township 4, except: Firstly: Part subdivided by Plan 26104; Secondly: Part subdivided by Plan 40037; Thirdly: Part dedicated as road on Plan 50544; Fourthly: Part on Highway Plan 73154; and Fifthly: Part subdivided by Plan BCP10128, New Westminster District; (d)Parcel Identifier 000-915-114 Parcel 1 (Reference Plan 8648) District Lot 437, Group 2, New Westminster District, Except Part subdivided by Plan BCP11267; (e)Lot E, District Lot 437, Group 2, New Westminster District Plan BCP10127; (f)Parcel Identifier 000-915-122, Section 16, Township 4, New Westminster District; (g)Parcel Identifier 025-945-688 Lot A District Lot 437, Group 2, New Westminster District Plan BCP11267. [en. B.C. Reg. 151/2006, s. 6; am. B.C. Reg. 161/2024, App. 1, s. 4.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_hunting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "other",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Burns Bog): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "effect": "No Hunting or Trapping Areas"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "fdf49db5ccbba9c3f03cdfee328cc73371a8aab3b363ac7355fe6d54e29bf3d4",
+      "task_id": "closed_area-fdf49db5ccbb",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Burns Bog): 1 km around the named points; not the boundary",
+          "quote": null,
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "3.137 km² (limit none for this type)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": null,
+          "detail": "the text names no area, or it could not be found"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "within: run 1 null vs run 2 \"new westminster district\""
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T22:00:19.800Z",
-  "updated": "2026-10-20T22:00:19.800Z"
+  "updated": "2026-10-28T20:16:21.657Z"
 }

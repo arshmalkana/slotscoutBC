@@ -1,0 +1,243 @@
+{
+  "type": "FeatureCollection",
+  "name": "W8-040",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -115.26760846,
+              49.3
+            ],
+            [
+              -115.2676164,
+              49.29817382
+            ],
+            [
+              -115.26225709,
+              49.29815987
+            ],
+            [
+              -115.26227012,
+              49.2908699
+            ],
+            [
+              -115.2622776,
+              49.28668551
+            ],
+            [
+              -115.26227775,
+              49.28602933
+            ],
+            [
+              -115.26228194,
+              49.28357994
+            ],
+            [
+              -115.26123078,
+              49.28357795
+            ],
+            [
+              -115.26080076,
+              49.28357727
+            ],
+            [
+              -115.25675379,
+              49.28356957
+            ],
+            [
+              -115.251228,
+              49.28355884
+            ],
+            [
+              -115.24569748,
+              49.28354781
+            ],
+            [
+              -115.23465891,
+              49.28354872
+            ],
+            [
+              -115.22362037,
+              49.28354858
+            ],
+            [
+              -115.22363424,
+              49.29075561
+            ],
+            [
+              -115.22364806,
+              49.29796264
+            ],
+            [
+              -115.22364881,
+              49.3
+            ],
+            [
+              -115.22367248,
+              49.3020626
+            ],
+            [
+              -115.22367382,
+              49.30217973
+            ],
+            [
+              -115.22367584,
+              49.3023553
+            ],
+            [
+              -115.22370937,
+              49.30527639
+            ],
+            [
+              -115.22374982,
+              49.30880006
+            ],
+            [
+              -115.22381581,
+              49.31259054
+            ],
+            [
+              -115.23267069,
+              49.31257864
+            ],
+            [
+              -115.23469073,
+              49.31257955
+            ],
+            [
+              -115.24373933,
+              49.31258321
+            ],
+            [
+              -115.24556567,
+              49.31258385
+            ],
+            [
+              -115.25659052,
+              49.31261149
+            ],
+            [
+              -115.26749058,
+              49.31263845
+            ],
+            [
+              -115.26761618,
+              49.31263875
+            ],
+            [
+              -115.26761728,
+              49.31141467
+            ],
+            [
+              -115.26761752,
+              49.31124564
+            ],
+            [
+              -115.26761769,
+              49.31114272
+            ],
+            [
+              -115.2676177,
+              49.31113293
+            ],
+            [
+              -115.26762143,
+              49.30865976
+            ],
+            [
+              -115.26761657,
+              49.30540596
+            ],
+            [
+              -115.26760848,
+              49.30001206
+            ],
+            [
+              -115.26760846,
+              49.3
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "rule_id": "W8-040",
+        "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 7, s. 40",
+        "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+        "source_text": "Schedule 7 No Hunting Areas (Section 8)\nNorbury Lake Park\n40 That portion of the Province of British Columbia in M.U. 4-22 being all Crown land in Kootenay Land District described as: Sublots 1 and 8 of District Lot 318, the whole containing 97 hectares, more or less. [en. B.C. Reg. 204/91, s. 13; am. B.C. Reg. 151/2006, s. 5 (a).]",
+        "source_version": "BC Laws consolidation current to October 13, 2026",
+        "effect": "no_hunting",
+        "period": null,
+        "exemptions": [],
+        "geometry_method": "admin_boundary",
+        "buffer_m": null,
+        "partial_extent": false,
+        "conservative": true,
+        "approximate": true,
+        "approximate_quality": "whole_feature",
+        "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+        "digitised_on": "2026-10-28",
+        "reviewed_by": null,
+        "reviewed_on": null,
+        "confidence": "low",
+        "notes": "official boundary of the named area",
+        "extraction_method": "ai",
+        "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+        "prompt_version": "closed_area.v1",
+        "quotes": {
+          "within": "in M.U. 4-22",
+          "geometry.feature": "Sublots 1 and 8 of District Lot 318",
+          "effect": "No Hunting Areas"
+        },
+        "run_agreement": true,
+        "status": "candidate",
+        "version": 1,
+        "unit_hash": "60caff708fc760ee0c341982605fbe1717d506d632e93931c7293f37720949b2",
+        "task_id": "closed_area-60caff708fc7",
+        "construction": [
+          {
+            "what": "official boundary of the named area",
+            "quote": "Sublots 1 and 8 of District Lot 318",
+            "source": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW"
+          }
+        ],
+        "validation": [
+          {
+            "check": "ring closes",
+            "passed": true,
+            "detail": "largest gap 0.0 m (limit 25 m)"
+          },
+          {
+            "check": "no self-crossing",
+            "passed": true,
+            "detail": "none"
+          },
+          {
+            "check": "area in expected range",
+            "passed": true,
+            "detail": "9.660 km² (limit none for this type)"
+          },
+          {
+            "check": "inside the area the text names",
+            "passed": true,
+            "detail": "100.0% inside"
+          },
+          {
+            "check": "overlaps the synopsis map shape",
+            "passed": null,
+            "detail": "no synopsis shape in inbox/synopsis for this area yet"
+          },
+          {
+            "check": "two independent extractions agree",
+            "passed": true,
+            "detail": "same landmarks, distances and effect"
+          }
+        ],
+        "change_type": "new"
+      }
+    }
+  ]
+}

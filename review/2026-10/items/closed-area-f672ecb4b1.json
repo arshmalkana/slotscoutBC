@@ -5,11 +5,16 @@
   "title": "Closed Areas Regulation, Schedule 5, section 133 (Buckley Bay)",
   "rule_id": "W5-133",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: steps: run 1 [\"|||\",\"|a point 450 metres offshore||straight_line\",\"lot 1|a point 450 metres offshore from the southeast corner of lot 1 which is also the northeast corner of lot 44|450 metres|other\",\"lot 44|a point on the east shore of vancouver island|450 metres|other\",\"vancouver island|the point of commencement||shoreline\"] vs run 2 [\"|||\",\"|a point 450 metres offshore|450 metres|\",\"lot 1|a point 450 metres offshore from the southeast corner of lot 1 which is also the northeast corner of lot 44|450 metres|other\",\"lot 44|a point on the east shore of vancouver island|450 metres|other\",\"vancouver island|the point of commencement||shoreline\"]",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "\"Lot 1\" was not found in the official layers; that side is drawn straight",
+    "\"Lot 44\" was not found in the official layers; that side is drawn straight",
+    "\"Vancouver Island\" was not found in the official layers; that side is drawn straight",
+    "approximate zone around the places the section names, using run 1's reading",
+    "a zone around the places the section names (Buckley Bay): 1 km around the named points; not the boundary",
+    "validation failed: two independent extractions agree (steps: run 1 [\"|||\",\"|a point 450 metres offshore||straight_line\",\"lot 1|a point 450 metres offshore from the southeast corner of lot 1 which is also the northeast corner of lot 44|450 metres|other\",\"lot 44|a point on the east shore of vancouver island|450 metres|other\",\"vancouver island|the point of commencement||shoreline\"] vs run 2 [\"|||\",\"|a point 450 metres offshore|450 metres|\",\"lot 1|a point 450 metres offshore from the southeast corner of lot 1 which is also the northeast corner of lot 44|450 metres|other\",\"lot 44|a point on the east shore of vancouver island|450 metres|other\",\"vancouver island|the point of commencement||shoreline\"])"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nBuckley Bay\n133 That portion of M.U. 1-06 in the vicinity of Buckley Bay, Nelson Land District, within the following described boundaries: Commencing at the northwest corner of Section 2, Lot 1 (Base Flat) on the mean high water mark of Lot 1; thence due North to a point 450 metres offshore; thence in an easterly and southerly direction maintaining a distance of 450 metres from the mean high water mark of Lot 1 to a point 450 metres offshore from the southeast corner of Lot 1 which is also the northeast corner of Lot 44; thence in a southerly and westerly direction maintaining a distance of 450 metres offshore from the mean high water mark of Lot 44 to a point on the east shore of Vancouver Island; thence generally northerly along the mean high water mark on the east shore of Vancouver Island to the point of commencement. [en. B.C. Reg. 221/2005, s. 3 (e).]",
@@ -266,18 +271,411 @@
   ],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "5.726 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "steps: run 1 [\"|||\",\"|a point 450 metres offshore||straight_line\",\"lot 1|a point 450 metres offshore from the southeast corner of lot 1 which is also the northeast corner of lot 44|450 metres|other\",\"lot 44|a point on the east shore of vancouver island|450 metres|other\",\"vancouver island|the point of commencement||shoreline\"] vs run 2 [\"|||\",\"|a point 450 metres offshore|450 metres|\",\"lot 1|a point 450 metres offshore from the southeast corner of lot 1 which is also the northeast corner of lot 44|450 metres|other\",\"lot 44|a point on the east shore of vancouver island|450 metres|other\",\"vancouver island|the point of commencement||shoreline\"]"
     },
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Buckley Bay): 1 km around the named points; not the boundary",
+      "quote": "Commencing at the northwest corner of Section 2, Lot 1 (Base Flat) on the mean high water mark of Lot 1",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -124.87099859929492,
+            49.53246924955265
+          ],
+          [
+            -124.8709592030033,
+            49.53158706885472
+          ],
+          [
+            -124.87078677216853,
+            49.530711642149456
+          ],
+          [
+            -124.87048297435783,
+            49.52985139968689
+          ],
+          [
+            -124.87005074178666,
+            49.5290146250549
+          ],
+          [
+            -124.86949424283098,
+            49.528209375443
+          ],
+          [
+            -124.86881884166317,
+            49.52744340410114
+          ],
+          [
+            -124.8680310464085,
+            49.52672408573892
+          ],
+          [
+            -124.86713844632861,
+            49.526058345580275
+          ],
+          [
+            -124.85471573239425,
+            49.51766072551276
+          ],
+          [
+            -124.853727248422,
+            49.517054866829675
+          ],
+          [
+            -124.85265207734302,
+            49.51651481760138
+          ],
+          [
+            -124.85150057183633,
+            49.51604577653807
+          ],
+          [
+            -124.8502838184005,
+            49.51565225866023
+          ],
+          [
+            -124.8490135307051,
+            49.51533805189726
+          ],
+          [
+            -124.84770193694789,
+            49.51510618067918
+          ],
+          [
+            -124.84636166229679,
+            49.51495887686935
+          ],
+          [
+            -124.84500560754064,
+            49.51489755831585
+          ],
+          [
+            -124.84364682510831,
+            49.514922815226264
+          ],
+          [
+            -124.84229839363998,
+            49.51503440449619
+          ],
+          [
+            -124.84097329230845,
+            49.51523125204521
+          ],
+          [
+            -124.8396842760897,
+            49.51551146313853
+          ],
+          [
+            -124.8384437531743,
+            49.515872340595266
+          ],
+          [
+            -124.83726366569022,
+            49.51631041070984
+          ],
+          [
+            -124.83615537487734,
+            49.516821456638795
+          ],
+          [
+            -124.83512955181277,
+            49.51740055893402
+          ],
+          [
+            -124.8341960747337,
+            49.51804214283514
+          ],
+          [
+            -124.833363933943,
+            49.51874003186872
+          ],
+          [
+            -124.83264114521218,
+            49.51948750724153
+          ],
+          [
+            -124.8320346725161,
+            49.5202773724594
+          ],
+          [
+            -124.83155036084631,
+            49.52110202255263
+          ],
+          [
+            -124.83119287975427,
+            49.521953517244285
+          ],
+          [
+            -124.83096567817525,
+            49.52282365735979
+          ],
+          [
+            -124.83087095097491,
+            49.52370406374371
+          ],
+          [
+            -124.83090961755097,
+            49.52458625792613
+          ],
+          [
+            -124.83108131270504,
+            49.5254617437624
+          ],
+          [
+            -124.83138438988371,
+            49.52632208926058
+          ],
+          [
+            -124.83181593676811,
+            49.52715900780873
+          ],
+          [
+            -124.8323718030718,
+            49.5279644380183
+          ],
+          [
+            -124.83304664028955,
+            49.52873062141377
+          ],
+          [
+            -124.8338339530219,
+            49.529450177217974
+          ],
+          [
+            -124.83472616138893,
+            49.53011617351027
+          ],
+          [
+            -124.84714860643078,
+            49.53851593359778
+          ],
+          [
+            -124.84813744289029,
+            49.53912184833031
+          ],
+          [
+            -124.84921306140026,
+            49.53966193939638
+          ],
+          [
+            -124.8503651013601,
+            49.540131003162465
+          ],
+          [
+            -124.85158246486353,
+            49.54052452018458
+          ],
+          [
+            -124.85285342369782,
+            49.54083869881389
+          ],
+          [
+            -124.85416573245963,
+            49.5410705117841
+          ],
+          [
+            -124.8555067466914,
+            49.541217725425405
+          ],
+          [
+            -124.85686354489333,
+            49.54127892122151
+          ],
+          [
+            -124.85822305322569,
+            49.541253509500336
+          ],
+          [
+            -124.85957217169151,
+            49.54114173512521
+          ],
+          [
+            -124.86089790057305,
+            49.54094467513162
+          ],
+          [
+            -124.86218746589421,
+            49.54066422833211
+          ],
+          [
+            -124.86342844269018,
+            49.5403030969906
+          ],
+          [
+            -124.86460887488757,
+            49.53986476074399
+          ],
+          [
+            -124.86571739063201,
+            49.53935344302417
+          ],
+          [
+            -124.86674331194548,
+            49.53877407030672
+          ],
+          [
+            -124.8676767576519,
+            49.53813222458129
+          ],
+          [
+            -124.86850873857637,
+            49.537434089505176
+          ],
+          [
+            -124.86923124409951,
+            49.536686390761524
+          ],
+          [
+            -124.86983731923448,
+            49.53589633120054
+          ],
+          [
+            -124.8703211314864,
+            49.53507152139122
+          ],
+          [
+            -124.87067802685567,
+            49.534219906255856
+          ],
+          [
+            -124.87090457445154,
+            49.53334968849642
+          ],
+          [
+            -124.87099859929492,
+            49.53246924955265
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-133",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 133",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nBuckley Bay\n133 That portion of M.U. 1-06 in the vicinity of Buckley Bay, Nelson Land District, within the following described boundaries: Commencing at the northwest corner of Section 2, Lot 1 (Base Flat) on the mean high water mark of Lot 1; thence due North to a point 450 metres offshore; thence in an easterly and southerly direction maintaining a distance of 450 metres from the mean high water mark of Lot 1 to a point 450 metres offshore from the southeast corner of Lot 1 which is also the northeast corner of Lot 44; thence in a southerly and westerly direction maintaining a distance of 450 metres offshore from the mean high water mark of Lot 44 to a point on the east shore of Vancouver Island; thence generally northerly along the mean high water mark on the east shore of Vancouver Island to the point of commencement. [en. B.C. Reg. 221/2005, s. 3 (e).]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Buckley Bay): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "M.U. 1-06",
+        "effect": "No Shooting Areas",
+        "geometry.steps[0]": "Commencing at the northwest corner of Section 2, Lot 1 (Base Flat) on the mean high water mark of Lot 1",
+        "geometry.steps[1]": "thence due North to a point 450 metres offshore",
+        "geometry.steps[2]": "thence in an easterly and southerly direction maintaining a distance of 450 metres from the mean high water mark of Lot 1 to a point 450 metres offshore from the southeast corner of Lot 1 which is also the northeast corner of Lot 44",
+        "geometry.steps[3]": "thence in a southerly and westerly direction maintaining a distance of 450 metres offshore from the mean high water mark of Lot 44 to a point on the east shore of Vancouver Island",
+        "geometry.steps[4]": "thence generally northerly along the mean high water mark on the east shore of Vancouver Island to the point of commencement"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "ad2fd0ae08a45509d00bd9d5236d5f38fd5e79f857bfec14a859351ae22d8de5",
+      "task_id": "closed_area-ad2fd0ae08a4",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Buckley Bay): 1 km around the named points; not the boundary",
+          "quote": "Commencing at the northwest corner of Section 2, Lot 1 (Base Flat) on the mean high water mark of Lot 1",
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "5.726 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "steps: run 1 [\"|||\",\"|a point 450 metres offshore||straight_line\",\"lot 1|a point 450 metres offshore from the southeast corner of lot 1 which is also the northeast corner of lot 44|450 metres|other\",\"lot 44|a point on the east shore of vancouver island|450 metres|other\",\"vancouver island|the point of commencement||shoreline\"] vs run 2 [\"|||\",\"|a point 450 metres offshore|450 metres|\",\"lot 1|a point 450 metres offshore from the southeast corner of lot 1 which is also the northeast corner of lot 44|450 metres|other\",\"lot 44|a point on the east shore of vancouver island|450 metres|other\",\"vancouver island|the point of commencement||shoreline\"]"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: a walk outline is approximate; a person checks it against the text"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:59:53.587Z",
-  "updated": "2026-10-28T17:18:20.050Z"
+  "updated": "2026-10-28T20:04:32.361Z"
 }

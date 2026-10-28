@@ -5,11 +5,13 @@
   "title": "Closed Areas Regulation, Schedule 4, section 5 (Naikoon Park)",
   "rule_id": "W4-005",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: steps: run 1 [\"lot 59 queen charlotte land district||50 m|\",\"lot 59|the point of intersection with the natural boundary of hecate strait||lot_line\",\"hecate strait|a point in hecate strait|201 m|straight_line\",\"hecate strait|a point due east of the most northerly point of lot 1350a|201 m|shoreline\",\"|||straight_line\",\"tlell river|the point of intersection with the northerly boundary of lot 1350|50 m|river\",\"lot 1350|the northeast corner of lot 1350||straight_line\",\"lot 1350|the southeast corner of lot 1350||straight_line\",\"lot 1350|a point 50 m due east of the natural boundary of tlell river on the right bank thereof|50 m|lot_line\",\"tlell river|the point of commencement|50 m|river\"] vs run 2 [\"tlell river||50 m|\",\"lot 59|the point of intersection with the natural boundary of hecate strait||lot_line\",\"hecate strait|a point in hecate strait|201 m|straight_line\",\"hecate strait|a point due east of the most northerly point of lot 1350a|201 m|shoreline\",\"|||straight_line\",\"tlell river|the point of intersection with the northerly boundary of lot 1350|50 m|river\",\"lot 1350|the northeast corner of lot 1350||straight_line\",\"lot 1350|the southeast corner of lot 1350||straight_line\",\"lot 1350|a point 50 m due east of the natural boundary of tlell river on the right bank thereof||lot_line\",\"tlell river|the point of commencement|50 m|river\"]",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "approximate outline (corners) drawn from the places the walk names, using run 1's reading of the steps",
+    "\"Hecate Strait\" was not found in the official layers; that side is drawn straight",
+    "validation failed: two independent extractions agree (steps: run 1 [\"lot 59 queen charlotte land district||50 m|\",\"lot 59|the point of intersection with the natural boundary of hecate strait||lot_line\",\"hecate strait|a point in hecate strait|201 m|straight_line\",\"hecate strait|a point due east of the most northerly point of lot 1350a|201 m|shoreline\",\"|||straight_line\",\"tlell river|the point of intersection with the northerly boundary of lot 1350|50 m|river\",\"lot 1350|the northeast corner of lot 1350||straight_line\",\"lot 1350|the southeast corner of lot 1350||straight_line\",\"lot 1350|a point 50 m due east of the natural boundary of tlell river on the right bank thereof|50 m|lot_line\",\"tlell river|the point of commencement|50 m|river\"] vs run 2 [\"tlell river||50 m|\",\"lot 59|the point of intersection with the natural boundary of hecate strait||lot_line\",\"hecate strait|a point in hecate strait|201 m|straight_line\",\"hecate strait|a point due east of the most northerly point of lot 1350a|201 m|shoreline\",\"|||straight_line\",\"tlell river|the point of intersection with the northerly boundary of lot 1350|50 m|river\",\"lot 1350|the northeast corner of lot 1350||straight_line\",\"lot 1350|the southeast corner of lot 1350||straight_line\",\"lot 1350|a point 50 m due east of the natural boundary of tlell river on the right bank thereof||lot_line\",\"tlell river|the point of commencement|50 m|river\"])"
   ],
   "source": {
     "text": "Schedule 4 Seasonal No Shooting or Hunting Areas (Section 5)\nNaikoon Park\n5 That portion of M.U. 6-13 in the Province of British Columbia contained within the following described boundaries: Commencing at a point on the northerly boundary of lot 59 Queen Charlotte Land District, said point lying 50 m due East of the natural boundary of Tlell River on the right bank thereof; thence easterly along the northerly boundary of Lot 59 to the point of intersection with the natural boundary of Hecate Strait; thence easterly 201 m in a straight line to a point in Hecate Strait; thence in a general northerly direction along a line 201 m east of the natural boundary of Hecate Strait to a point due East of the most northerly point of Lot 1350A; thence westerly in a straight line to the point; thence in a general southerly direction along a line 50 m easterly of the natural boundary of Tlell River on the right bank thereof to the point of intersection with the northerly boundary of Lot 1350; thence easterly in a straight line to the northeast corner of Lot 1350; thence southerly in a straight line to the southeast corner of Lot 1350; thence westerly along the southerly boundary of Lot 1350 to a point 50 m due East of the natural boundary of Tlell River on the right bank thereof; thence in a general southerly direction along a line 50 m easterly of the natural boundary of Tlell River on the right bank thereof to the point of commencement during the period April 1 to September 14. [en. B.C. Reg. 224/92, s. 4.]",
@@ -414,18 +416,416 @@
   ],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "0.736 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "steps: run 1 [\"lot 59 queen charlotte land district||50 m|\",\"lot 59|the point of intersection with the natural boundary of hecate strait||lot_line\",\"hecate strait|a point in hecate strait|201 m|straight_line\",\"hecate strait|a point due east of the most northerly point of lot 1350a|201 m|shoreline\",\"|||straight_line\",\"tlell river|the point of intersection with the northerly boundary of lot 1350|50 m|river\",\"lot 1350|the northeast corner of lot 1350||straight_line\",\"lot 1350|the southeast corner of lot 1350||straight_line\",\"lot 1350|a point 50 m due east of the natural boundary of tlell river on the right bank thereof|50 m|lot_line\",\"tlell river|the point of commencement|50 m|river\"] vs run 2 [\"tlell river||50 m|\",\"lot 59|the point of intersection with the natural boundary of hecate strait||lot_line\",\"hecate strait|a point in hecate strait|201 m|straight_line\",\"hecate strait|a point due east of the most northerly point of lot 1350a|201 m|shoreline\",\"|||straight_line\",\"tlell river|the point of intersection with the northerly boundary of lot 1350|50 m|river\",\"lot 1350|the northeast corner of lot 1350||straight_line\",\"lot 1350|the southeast corner of lot 1350||straight_line\",\"lot 1350|a point 50 m due east of the natural boundary of tlell river on the right bank thereof||lot_line\",\"tlell river|the point of commencement|50 m|river\"]"
     },
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at a point on the northerly boundary of lot 59 Queen Charlotte Land District, said point lying 50 m due East of the natural boundary of Tlell River on the right bank thereof",
+      "source": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW, WHSE_BASEMAPPING.FWA_RIVERS_POLY"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -131.94453734700969,
+            53.58113219923424
+          ],
+          [
+            -131.94453642360597,
+            53.58108164447306
+          ],
+          [
+            -131.9445258578518,
+            53.58092070460639
+          ],
+          [
+            -131.9445120755897,
+            53.58082977016737
+          ],
+          [
+            -131.9432532918887,
+            53.57554596590936
+          ],
+          [
+            -131.9432405238577,
+            53.57550072019866
+          ],
+          [
+            -131.94322006173684,
+            53.575438060452385
+          ],
+          [
+            -131.94317763278679,
+            53.57533877692047
+          ],
+          [
+            -131.9431072887116,
+            53.5752063277678
+          ],
+          [
+            -131.94310100651566,
+            53.57519477172294
+          ],
+          [
+            -131.94306615461667,
+            53.5751321121409
+          ],
+          [
+            -131.94299300207538,
+            53.5750244764473
+          ],
+          [
+            -131.9429434105549,
+            53.574963227011786
+          ],
+          [
+            -131.94287209445608,
+            53.574885248973374
+          ],
+          [
+            -131.93961551327487,
+            53.57170859410663
+          ],
+          [
+            -131.93942891850688,
+            53.57156250926266
+          ],
+          [
+            -131.93919630820417,
+            53.57144193289373
+          ],
+          [
+            -131.9389273510821,
+            53.5713518767155
+          ],
+          [
+            -131.93863322636312,
+            53.571296083854676
+          ],
+          [
+            -131.9383261591628,
+            53.57127687329359
+          ],
+          [
+            -131.93757175520778,
+            53.57127559332086
+          ],
+          [
+            -131.93754354636056,
+            53.57127570138019
+          ],
+          [
+            -131.9362026926512,
+            53.57128824675914
+          ],
+          [
+            -131.93589388151673,
+            53.571310097996886
+          ],
+          [
+            -131.93559909728538,
+            53.57136894574094
+          ],
+          [
+            -131.93533077004324,
+            53.57146230859117
+          ],
+          [
+            -131.93510021446608,
+            53.571586249747206
+          ],
+          [
+            -131.934917152758,
+            53.571735542983674
+          ],
+          [
+            -131.9349171514159,
+            53.57173554435486
+          ],
+          [
+            -131.93480215217787,
+            53.57188188803803
+          ],
+          [
+            -131.93473308253095,
+            53.57203808527076
+          ],
+          [
+            -131.93471217016932,
+            53.57219909941052
+          ],
+          [
+            -131.93474008997606,
+            53.57235973843391
+          ],
+          [
+            -131.93970557795657,
+            53.587461598954604
+          ],
+          [
+            -131.93979366474233,
+            53.587634618260225
+          ],
+          [
+            -131.93993825878206,
+            53.587793687234104
+          ],
+          [
+            -131.9401335197766,
+            53.587932380263126
+          ],
+          [
+            -131.9403715605027,
+            53.58804509476485
+          ],
+          [
+            -131.94064276554369,
+            53.588127277570095
+          ],
+          [
+            -131.94092874462896,
+            53.58817483977648
+          ],
+          [
+            -131.9412248608254,
+            53.588188371658234
+          ],
+          [
+            -131.94151973480191,
+            53.58816735320387
+          ],
+          [
+            -131.94180203497308,
+            53.588112592123295
+          ],
+          [
+            -131.94206091303508,
+            53.588026192802836
+          ],
+          [
+            -131.9422864209126,
+            53.58791147542262
+          ],
+          [
+            -131.9424698930826,
+            53.58777284834695
+          ],
+          [
+            -131.94260427957403,
+            53.58761563869562
+          ],
+          [
+            -131.9426790808918,
+            53.587501631797565
+          ],
+          [
+            -131.94272180730275,
+            53.58742699020063
+          ],
+          [
+            -131.9427749738944,
+            53.58731874955593
+          ],
+          [
+            -131.94277562424801,
+            53.58731742171418
+          ],
+          [
+            -131.94314496039885,
+            53.586561157233625
+          ],
+          [
+            -131.94317739263448,
+            53.58648125950136
+          ],
+          [
+            -131.94322742742256,
+            53.58632743888084
+          ],
+          [
+            -131.94323308710375,
+            53.58630901037523
+          ],
+          [
+            -131.94328289119505,
+            53.586136689755214
+          ],
+          [
+            -131.943283273445,
+            53.586135361203965
+          ],
+          [
+            -131.94359940556893,
+            53.58503159726743
+          ],
+          [
+            -131.94360338334758,
+            53.58501698155051
+          ],
+          [
+            -131.94366179551264,
+            53.584790530821216
+          ],
+          [
+            -131.94366233150038,
+            53.584788436422436
+          ],
+          [
+            -131.9445054864716,
+            53.58146716589177
+          ],
+          [
+            -131.94451468140056,
+            53.581423823308214
+          ],
+          [
+            -131.94452537918912,
+            53.58136115317379
+          ],
+          [
+            -131.94453287251906,
+            53.58128600929076
+          ],
+          [
+            -131.94453734700969,
+            53.58113219923424
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W4-005",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 4, s. 5",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 4 Seasonal No Shooting or Hunting Areas (Section 5)\nNaikoon Park\n5 That portion of M.U. 6-13 in the Province of British Columbia contained within the following described boundaries: Commencing at a point on the northerly boundary of lot 59 Queen Charlotte Land District, said point lying 50 m due East of the natural boundary of Tlell River on the right bank thereof; thence easterly along the northerly boundary of Lot 59 to the point of intersection with the natural boundary of Hecate Strait; thence easterly 201 m in a straight line to a point in Hecate Strait; thence in a general northerly direction along a line 201 m east of the natural boundary of Hecate Strait to a point due East of the most northerly point of Lot 1350A; thence westerly in a straight line to the point; thence in a general southerly direction along a line 50 m easterly of the natural boundary of Tlell River on the right bank thereof to the point of intersection with the northerly boundary of Lot 1350; thence easterly in a straight line to the northeast corner of Lot 1350; thence southerly in a straight line to the southeast corner of Lot 1350; thence westerly along the southerly boundary of Lot 1350 to a point 50 m due East of the natural boundary of Tlell River on the right bank thereof; thence in a general southerly direction along a line 50 m easterly of the natural boundary of Tlell River on the right bank thereof to the point of commencement during the period April 1 to September 14. [en. B.C. Reg. 224/92, s. 4.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting_seasonal",
+      "period": {
+        "start": "04-01",
+        "end": "09-14"
+      },
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "corners",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "That portion of M.U. 6-13",
+        "period": "during the period April 1 to September 14",
+        "effect": "Seasonal No Shooting or Hunting Areas",
+        "geometry.steps[0]": "Commencing at a point on the northerly boundary of lot 59 Queen Charlotte Land District, said point lying 50 m due East of the natural boundary of Tlell River on the right bank thereof",
+        "geometry.steps[1]": "thence easterly along the northerly boundary of Lot 59 to the point of intersection with the natural boundary of Hecate Strait",
+        "geometry.steps[2]": "thence easterly 201 m in a straight line to a point in Hecate Strait",
+        "geometry.steps[3]": "thence in a general northerly direction along a line 201 m east of the natural boundary of Hecate Strait to a point due East of the most northerly point of Lot 1350A",
+        "geometry.steps[4]": "thence westerly in a straight line to the point",
+        "geometry.steps[5]": "thence in a general southerly direction along a line 50 m easterly of the natural boundary of Tlell River on the right bank thereof to the point of intersection with the northerly boundary of Lot 1350",
+        "geometry.steps[6]": "thence easterly in a straight line to the northeast corner of Lot 1350",
+        "geometry.steps[7]": "thence southerly in a straight line to the southeast corner of Lot 1350",
+        "geometry.steps[8]": "thence westerly along the southerly boundary of Lot 1350 to a point 50 m due East of the natural boundary of Tlell River on the right bank thereof",
+        "geometry.steps[9]": "thence in a general southerly direction along a line 50 m easterly of the natural boundary of Tlell River on the right bank thereof to the point of commencement"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "6d59175dc9b6e1843f30e6f23ab1db6aca6699ff660502bfbd7935518deb1447",
+      "task_id": "closed_area-6d59175dc9b6",
+      "construction": [
+        {
+          "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+          "quote": "Commencing at a point on the northerly boundary of lot 59 Queen Charlotte Land District, said point lying 50 m due East of the natural boundary of Tlell River on the right bank thereof",
+          "source": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW, WHSE_BASEMAPPING.FWA_RIVERS_POLY"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "0.736 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "steps: run 1 [\"lot 59 queen charlotte land district||50 m|\",\"lot 59|the point of intersection with the natural boundary of hecate strait||lot_line\",\"hecate strait|a point in hecate strait|201 m|straight_line\",\"hecate strait|a point due east of the most northerly point of lot 1350a|201 m|shoreline\",\"|||straight_line\",\"tlell river|the point of intersection with the northerly boundary of lot 1350|50 m|river\",\"lot 1350|the northeast corner of lot 1350||straight_line\",\"lot 1350|the southeast corner of lot 1350||straight_line\",\"lot 1350|a point 50 m due east of the natural boundary of tlell river on the right bank thereof|50 m|lot_line\",\"tlell river|the point of commencement|50 m|river\"] vs run 2 [\"tlell river||50 m|\",\"lot 59|the point of intersection with the natural boundary of hecate strait||lot_line\",\"hecate strait|a point in hecate strait|201 m|straight_line\",\"hecate strait|a point due east of the most northerly point of lot 1350a|201 m|shoreline\",\"|||straight_line\",\"tlell river|the point of intersection with the northerly boundary of lot 1350|50 m|river\",\"lot 1350|the northeast corner of lot 1350||straight_line\",\"lot 1350|the southeast corner of lot 1350||straight_line\",\"lot 1350|a point 50 m due east of the natural boundary of tlell river on the right bank thereof||lot_line\",\"tlell river|the point of commencement|50 m|river\"]"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: a walk outline is approximate; a person checks it against the text"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:08:38.247Z",
-  "updated": "2026-10-28T17:11:29.374Z"
+  "updated": "2026-10-28T19:57:17.254Z"
 }

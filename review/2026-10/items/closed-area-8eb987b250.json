@@ -5,11 +5,12 @@
   "title": "Closed Areas Regulation, Schedule 3, section 4 (Sicamous)",
   "rule_id": "W3-004",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "named area \"Kamloops Division of Yale District\": none",
     "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Sicamous): 1 km around the named points; not the boundary"
   ],
   "source": {
     "text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nSicamous\n4 That portion of the Province of British Columbia in Kamloops Division of Yale District, except organized territory, which is contained within the following described boundaries: All waters of Mara and Shuswap Lakes Iying east of a straight line between Murdock and Semaphore Points and north of a line running east-west through the mouth of Sicamous Creek.",
@@ -151,13 +152,392 @@
   ],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.137 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Sicamous): 1 km around the named points; not the boundary",
+      "quote": "All waters of Mara and Shuswap Lakes",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -118.96575990013385,
+            50.836110243500094
+          ],
+          [
+            -118.9658282024271,
+            50.836991739907994
+          ],
+          [
+            -118.96603299457173,
+            50.83786476343456
+          ],
+          [
+            -118.96637231172174,
+            50.838720905676986
+          ],
+          [
+            -118.96684289290194,
+            50.83955192036531
+          ],
+          [
+            -118.96744021215001,
+            50.8403498028227
+          ],
+          [
+            -118.96815852187345,
+            50.84110686711447
+          ],
+          [
+            -118.96899090801303,
+            50.841815820140454
+          ],
+          [
+            -118.96992935648807,
+            50.842469831954425
+          ],
+          [
+            -118.9709648302897,
+            50.84306260163027
+          ],
+          [
+            -118.97208735648263,
+            50.84358841803691
+          ],
+          [
+            -118.97328612227906,
+            50.84404221493316
+          ],
+          [
+            -118.97454957925787,
+            50.84441961984859
+          ],
+          [
+            -118.97586555472252,
+            50.8447169962757
+          ],
+          [
+            -118.97722136911986,
+            50.84493147876428
+          ],
+          [
+            -118.97860395838136,
+            50.84506100057692
+          ],
+          [
+            -118.98,
+            50.84510431363726
+          ],
+          [
+            -118.98139604161865,
+            50.84506100057692
+          ],
+          [
+            -118.98277863088015,
+            50.84493147876428
+          ],
+          [
+            -118.98413444527749,
+            50.8447169962757
+          ],
+          [
+            -118.98545042074214,
+            50.84441961984859
+          ],
+          [
+            -118.98671387772094,
+            50.84404221493316
+          ],
+          [
+            -118.98791264351738,
+            50.84358841803691
+          ],
+          [
+            -118.9890351697103,
+            50.84306260163027
+          ],
+          [
+            -118.99007064351193,
+            50.842469831954425
+          ],
+          [
+            -118.99100909198698,
+            50.841815820140454
+          ],
+          [
+            -118.99184147812656,
+            50.84110686711447
+          ],
+          [
+            -118.99255978785,
+            50.8403498028227
+          ],
+          [
+            -118.99315710709807,
+            50.83955192036531
+          ],
+          [
+            -118.99362768827827,
+            50.838720905676986
+          ],
+          [
+            -118.99396700542827,
+            50.83786476343456
+          ],
+          [
+            -118.99417179757289,
+            50.836991739907994
+          ],
+          [
+            -118.99424009986616,
+            50.836110243500094
+          ],
+          [
+            -118.994171262229,
+            50.83522876374174
+          ],
+          [
+            -118.9939659553135,
+            50.834355789524
+          ],
+          [
+            -118.99362616374788,
+            50.83349972735475
+          ],
+          [
+            -118.99315516673892,
+            50.8326688204268
+          ],
+          [
+            -118.992557506229,
+            50.83187106927579
+          ],
+          [
+            -118.9918389429251,
+            50.83111415479042
+          ],
+          [
+            -118.99100640063143,
+            50.83040536431387
+          ],
+          [
+            -118.99006789942958,
+            50.829751521545624
+          ],
+          [
+            -118.98903247835473,
+            50.829158920915525
+          ],
+          [
+            -118.9879101083158,
+            50.82863326705833
+          ],
+          [
+            -118.98671159609978,
+            50.82817961996847
+          ],
+          [
+            -118.98544848038286,
+            50.827802346359455
+          ],
+          [
+            -118.98413292074697,
+            50.82750507769273
+          ],
+          [
+            -118.98277758076526,
+            50.82729067527735
+          ],
+          [
+            -118.98139550627471,
+            50.82716120277354
+          ],
+          [
+            -118.98,
+            50.82711790636276
+          ],
+          [
+            -118.9786044937253,
+            50.82716120277354
+          ],
+          [
+            -118.97722241923475,
+            50.82729067527735
+          ],
+          [
+            -118.97586707925304,
+            50.82750507769273
+          ],
+          [
+            -118.97455151961715,
+            50.827802346359455
+          ],
+          [
+            -118.97328840390021,
+            50.82817961996847
+          ],
+          [
+            -118.97208989168419,
+            50.82863326705833
+          ],
+          [
+            -118.97096752164528,
+            50.829158920915525
+          ],
+          [
+            -118.96993210057043,
+            50.829751521545624
+          ],
+          [
+            -118.96899359936857,
+            50.83040536431387
+          ],
+          [
+            -118.96816105707491,
+            50.83111415479042
+          ],
+          [
+            -118.967442493771,
+            50.83187106927579
+          ],
+          [
+            -118.96684483326109,
+            50.8326688204268
+          ],
+          [
+            -118.96637383625213,
+            50.83349972735475
+          ],
+          [
+            -118.96603404468651,
+            50.834355789524
+          ],
+          [
+            -118.965828737771,
+            50.83522876374174
+          ],
+          [
+            -118.96575990013385,
+            50.836110243500094
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W3-004",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 3, s. 4",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nSicamous\n4 That portion of the Province of British Columbia in Kamloops Division of Yale District, except organized territory, which is contained within the following described boundaries: All waters of Mara and Shuswap Lakes Iying east of a straight line between Murdock and Semaphore Points and north of a line running east-west through the mouth of Sicamous Creek.",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [
+        "organized territory"
+      ],
+      "geometry_method": "other",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Sicamous): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "Kamloops Division of Yale District",
+        "geometry.feature": "All waters of Mara and Shuswap Lakes",
+        "effect": "No Shooting or Hunting Areas",
+        "exemptions[0]": "except organized territory"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "1e9ddb06bf3e8b4c63d5b6de8227bbd5f4e0f8bda39a67122e3ab6362b7cf5d9",
+      "task_id": "closed_area-1e9ddb06bf3e",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Sicamous): 1 km around the named points; not the boundary",
+          "quote": "All waters of Mara and Shuswap Lakes",
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "3.137 km² (limit none for this type)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": null,
+          "detail": "the text names no area, or it could not be found"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:58:57.444Z",
-  "updated": "2026-10-27T23:10:08.954Z"
+  "updated": "2026-10-28T19:48:46.219Z"
 }

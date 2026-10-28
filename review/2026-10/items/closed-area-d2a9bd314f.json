@@ -5,11 +5,13 @@
   "title": "Closed Areas Regulation, Schedule 5.1, section 10 (Norrish Creek watershed)",
   "rule_id": "W6-010",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "effect read from the text (no_shooting) differs from the schedule's effect (no_shooting_hunting_exempt)",
     "no single road named and no list of roads the code can read",
-    "validation failed: shape built (no shape could be built)"
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Norrish Creek): 1 km around the named points; not the boundary",
+    "validation failed: area in expected range (3.137 km² (limit 2 km²))"
   ],
   "source": {
     "text": "Schedule 5.1 [en. B.C. Reg. 135/2017, App. 1, s. 2.] No Shooting Areas — Specified Crown Land (Section 7.1)\nNorrish Creek watershed\n10 Those portions of M.U. 2-8 being all Crown land within 400 m of the midline of any road within the Norrish Creek watershed.",
@@ -178,13 +180,391 @@
   ],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "3.137 km² (limit 2 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Norrish Creek): 1 km around the named points; not the boundary",
+      "quote": "Norrish Creek watershed",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -122.14903355619823,
+            49.17305473311003
+          ],
+          [
+            -122.14896707461865,
+            49.17217325287324
+          ],
+          [
+            -122.14876876468186,
+            49.17130027724228
+          ],
+          [
+            -122.14844054296954,
+            49.170444212779366
+          ],
+          [
+            -122.14798557665472,
+            49.16961330276546
+          ],
+          [
+            -122.14740825276117,
+            49.168815547854855
+          ],
+          [
+            -122.1467141357047,
+            49.16805862908071
+          ],
+          [
+            -122.14590991353329,
+            49.16734983395101
+          ],
+          [
+            -122.14500333339,
+            49.16669598634403
+          ],
+          [
+            -122.14400312682534,
+            49.166103380875505
+          ],
+          [
+            -122.14291892568153,
+            49.16557772236608
+          ],
+          [
+            -122.14176116935923,
+            49.1651240709889
+          ],
+          [
+            -122.14054100435915,
+            49.16474679362214
+          ],
+          [
+            -122.13927017706321,
+            49.16444952187162
+          ],
+          [
+            -122.13796092078215,
+            49.164235117164814
+          ],
+          [
+            -122.13662583815145,
+            49.16410564324998
+          ],
+          [
+            -122.13527778000001,
+            49.164062346362755
+          ],
+          [
+            -122.13392972184856,
+            49.16410564324998
+          ],
+          [
+            -122.13259463921787,
+            49.164235117164814
+          ],
+          [
+            -122.1312853829368,
+            49.16444952187162
+          ],
+          [
+            -122.13001455564086,
+            49.16474679362214
+          ],
+          [
+            -122.12879439064079,
+            49.1651240709889
+          ],
+          [
+            -122.12763663431848,
+            49.16557772236608
+          ],
+          [
+            -122.12655243317467,
+            49.166103380875505
+          ],
+          [
+            -122.12555222661003,
+            49.16669598634403
+          ],
+          [
+            -122.12464564646673,
+            49.16734983395101
+          ],
+          [
+            -122.12384142429532,
+            49.16805862908071
+          ],
+          [
+            -122.12314730723885,
+            49.168815547854855
+          ],
+          [
+            -122.12256998334529,
+            49.16961330276546
+          ],
+          [
+            -122.12211501703048,
+            49.170444212779366
+          ],
+          [
+            -122.12178679531816,
+            49.17130027724228
+          ],
+          [
+            -122.12158848538135,
+            49.17217325287324
+          ],
+          [
+            -122.12152200380179,
+            49.17305473311003
+          ],
+          [
+            -122.12158799785293,
+            49.173936229043115
+          ],
+          [
+            -122.12178583899673,
+            49.174809251159814
+          ],
+          [
+            -122.12211362866694,
+            49.175665391111465
+          ],
+          [
+            -122.12256821629366,
+            49.17649640271611
+          ],
+          [
+            -122.12314522940596,
+            49.177294281415385
+          ],
+          [
+            -122.12383911553108,
+            49.17805134141902
+          ],
+          [
+            -122.12464319549566,
+            49.178760289791676
+          ],
+          [
+            -122.12554972762157,
+            49.17941429676596
+          ],
+          [
+            -122.12654998220356,
+            49.180007061601806
+          ],
+          [
+            -122.12763432555414,
+            49.180532873354196
+          ],
+          [
+            -122.1287923128078,
+            49.180986665960866
+          ],
+          [
+            -122.13001278858913,
+            49.18136406711631
+          ],
+          [
+            -122.13128399457315,
+            49.181661440457596
+          ],
+          [
+            -122.13259368289634,
+            49.18187592065315
+          ],
+          [
+            -122.13392923432006,
+            49.18200544105372
+          ],
+          [
+            -122.13527778000001,
+            49.182048753637254
+          ],
+          [
+            -122.13662632567994,
+            49.18200544105372
+          ],
+          [
+            -122.13796187710366,
+            49.18187592065315
+          ],
+          [
+            -122.13927156542685,
+            49.181661440457596
+          ],
+          [
+            -122.14054277141088,
+            49.18136406711631
+          ],
+          [
+            -122.14176324719222,
+            49.180986665960866
+          ],
+          [
+            -122.14292123444586,
+            49.180532873354196
+          ],
+          [
+            -122.14400557779645,
+            49.180007061601806
+          ],
+          [
+            -122.14500583237844,
+            49.17941429676596
+          ],
+          [
+            -122.14591236450434,
+            49.178760289791676
+          ],
+          [
+            -122.14671644446894,
+            49.17805134141902
+          ],
+          [
+            -122.14741033059406,
+            49.177294281415385
+          ],
+          [
+            -122.14798734370635,
+            49.17649640271611
+          ],
+          [
+            -122.14844193133308,
+            49.175665391111465
+          ],
+          [
+            -122.14876972100328,
+            49.174809251159814
+          ],
+          [
+            -122.14896756214708,
+            49.173936229043115
+          ],
+          [
+            -122.14903355619823,
+            49.17305473311003
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W6-010",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5.1, s. 10",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5.1 [en. B.C. Reg. 135/2017, App. 1, s. 2.] No Shooting Areas — Specified Crown Land (Section 7.1)\nNorrish Creek watershed\n10 Those portions of M.U. 2-8 being all Crown land within 400 m of the midline of any road within the Norrish Creek watershed.",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting_hunting_exempt",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "road_buffer",
+      "buffer_m": 400,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Norrish Creek): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "M.U. 2-8",
+        "geometry.feature": "Norrish Creek watershed",
+        "geometry.buffer_m": "400 m",
+        "effect": "No Shooting Areas",
+        "geometry.side": "within 400 m of the midline"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "96179964fba7cc930ed6989d16f7e58358df9a04548da0d417306d6d8f2cf9fb",
+      "task_id": "closed_area-96179964fba7",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Norrish Creek): 1 km around the named points; not the boundary",
+          "quote": "Norrish Creek watershed",
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": false,
+          "detail": "3.137 km² (limit 2 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:59:52.840Z",
-  "updated": "2026-10-27T23:19:19.937Z"
+  "updated": "2026-10-28T20:03:27.583Z"
 }

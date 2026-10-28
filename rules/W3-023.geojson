@@ -949,24 +949,28 @@
               55.08251152
             ],
             [
-              -120.94728812887806,
-              55.082933671392794
+              -120.94505076,
+              55.08543362
             ],
             [
-              -121.03572307064351,
-              55.13799454406843
+              -120.94180679423486,
+              55.08905758066594
             ],
             [
-              -121.03598127488958,
-              55.138123001388855
+              -121.03582152995335,
+              55.138050344510425
             ],
             [
-              -121.03628197383323,
-              55.13821649718415
+              -121.03606860231106,
+              55.138155288479574
             ],
             [
-              -121.03661093299796,
-              55.13827060547772
+              -121.03634669499856,
+              55.138230725000234
+            ],
+            [
+              -121.03664516266623,
+              55.13827376633399
             ],
             [
               -121.03695257985535,
@@ -1181,7 +1185,7 @@
           {
             "check": "area in expected range",
             "passed": false,
-            "detail": "1676.105 km² (limit 500 km²)"
+            "detail": "1679.090 km² (limit 500 km²)"
           },
           {
             "check": "inside the area the text names",
@@ -1201,7 +1205,7 @@
           {
             "check": "step directions match the line",
             "passed": null,
-            "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+            "detail": "not run: a walk outline is approximate; a person checks it against the text"
           }
         ],
         "change_type": "new"

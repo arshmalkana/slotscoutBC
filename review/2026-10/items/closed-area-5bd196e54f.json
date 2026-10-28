@@ -5,10 +5,11 @@
   "title": "Closed Areas Regulation, Schedule 5, section 67 (Blubber Bay)",
   "rule_id": "W5-067",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Blubber Bay, Blubber Point): 1 km around the named points; not the boundary"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nBlubber Bay\n67 That portion of the Province of British Columbia in M.U. 2-16 in the vicinity of Blubber Bay contained within the following described boundaries: (1)within a 1 kilometre radius of the Blubber Bay Ferry Terminal, and (2)commencing at Blubber Point; thence westerly, southerly and southeasterly along the mean low water mark to the midpoint of Limekiln Bay; thence due North to the point of commencement. [en. B.C. Reg. 205/94, s. 15.]",
@@ -231,13 +232,405 @@
   ],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "5.756 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Blubber Bay, Blubber Point): 1 km around the named points; not the boundary",
+      "quote": "the Blubber Bay Ferry Terminal",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -124.6444874873384,
+            49.80098189025524
+          ],
+          [
+            -124.64439998695985,
+            49.800097327449386
+          ],
+          [
+            -124.64417801111068,
+            49.79922262022847
+          ],
+          [
+            -124.64382372306271,
+            49.79836626468165
+          ],
+          [
+            -124.64334057076121,
+            49.79753657820254
+          ],
+          [
+            -124.64273325308322,
+            49.7967416187407
+          ],
+          [
+            -124.64200767397747,
+            49.79598910658827
+          ],
+          [
+            -124.64117088493944,
+            49.79528634945897
+          ],
+          [
+            -124.63329646121812,
+            49.78930665871815
+          ],
+          [
+            -124.63235942882396,
+            49.788662047164614
+          ],
+          [
+            -124.63132891952871,
+            49.78807993535633
+          ],
+          [
+            -124.63021488978725,
+            49.78756594567718
+          ],
+          [
+            -124.62902810167992,
+            49.78712504237894
+          ],
+          [
+            -124.62778001901425,
+            49.786761483699735
+          ],
+          [
+            -124.62648269669666,
+            49.78647878079728
+          ],
+          [
+            -124.62514866443725,
+            49.78627966389023
+          ],
+          [
+            -124.62379080590499,
+            49.7861660559323
+          ],
+          [
+            -124.6224222344915,
+            49.7861390540716
+          ],
+          [
+            -124.62105616687438,
+            49.78619891907256
+          ],
+          [
+            -124.61970579559161,
+            49.786345072801744
+          ],
+          [
+            -124.6183841618469,
+            49.78657610380186
+          ],
+          [
+            -124.61710402976453,
+            49.78688978090042
+          ],
+          [
+            -124.61587776329841,
+            49.78728307472267
+          ],
+          [
+            -124.61471720697537,
+            49.78775218690286
+          ],
+          [
+            -124.61363357161675,
+            49.78829258671366
+          ],
+          [
+            -124.61263732613587,
+            49.788899054762865
+          ],
+          [
+            -124.60745577114375,
+            49.79237901691409
+          ],
+          [
+            -124.60656349175125,
+            49.79303985471235
+          ],
+          [
+            -124.60577509533888,
+            49.79375362938219
+          ],
+          [
+            -124.60509807558262,
+            49.79451356081859
+          ],
+          [
+            -124.60453886912424,
+            49.795312430147696
+          ],
+          [
+            -124.60410279427414,
+            49.79614264824483
+          ],
+          [
+            -124.60379400029763,
+            49.79699632778055
+          ],
+          [
+            -124.60361542777324,
+            49.79786535811292
+          ],
+          [
+            -124.6035687804083,
+            49.79874148231587
+          ],
+          [
+            -124.60365450858824,
+            49.79961637561368
+          ],
+          [
+            -124.60387180482623,
+            49.80048172447698
+          ],
+          [
+            -124.60421861116663,
+            49.80132930562886
+          ],
+          [
+            -124.60469163848194,
+            49.802151064210136
+          ],
+          [
+            -124.60528639748989,
+            49.80293919035985
+          ],
+          [
+            -124.60599724120468,
+            49.803686193481674
+          ],
+          [
+            -124.6068174184271,
+            49.80438497348874
+          ],
+          [
+            -124.60773913777135,
+            49.80502888834669
+          ],
+          [
+            -124.60875364162509,
+            49.805611817270766
+          ],
+          [
+            -124.60985128934257,
+            49.80612821897287
+          ],
+          [
+            -124.61102164888138,
+            49.80657318440198
+          ],
+          [
+            -124.61225359601075,
+            49.80694248347351
+          ],
+          [
+            -124.61353542014562,
+            49.80723260534032
+          ],
+          [
+            -124.62659310065965,
+            49.80973305059262
+          ],
+          [
+            -124.62792755248694,
+            49.8099429299962
+          ],
+          [
+            -124.62928754654457,
+            49.81006700232451
+          ],
+          [
+            -124.63065986482093,
+            49.81010406168444
+          ],
+          [
+            -124.63203116932327,
+            49.81005374788418
+          ],
+          [
+            -124.63338813192851,
+            49.80991654993975
+          ],
+          [
+            -124.63471756413708,
+            49.80969380131431
+          ],
+          [
+            -124.63600654545859,
+            49.809387666936516
+          ],
+          [
+            -124.63724254917163,
+            49.80900112212556
+          ],
+          [
+            -124.6384135642262,
+            49.80853792362896
+          ],
+          [
+            -124.63950821209598,
+            49.80800257305703
+          ],
+          [
+            -124.640515857439,
+            49.807400273071885
+          ],
+          [
+            -124.64142671148609,
+            49.80673687675998
+          ],
+          [
+            -124.6422319271501,
+            49.80601883068319
+          ],
+          [
+            -124.64292368493135,
+            49.80525311216533
+          ],
+          [
+            -124.64349526878566,
+            49.80444716142697
+          ],
+          [
+            -124.64394113122212,
+            49.803608809230916
+          ],
+          [
+            -124.6442569470032,
+            49.80274620074473
+          ],
+          [
+            -124.64443965493336,
+            49.80186771636217
+          ],
+          [
+            -124.6444874873384,
+            49.80098189025524
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-067",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 67",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nBlubber Bay\n67 That portion of the Province of British Columbia in M.U. 2-16 in the vicinity of Blubber Bay contained within the following described boundaries: (1)within a 1 kilometre radius of the Blubber Bay Ferry Terminal, and (2)commencing at Blubber Point; thence westerly, southerly and southeasterly along the mean low water mark to the midpoint of Limekiln Bay; thence due North to the point of commencement. [en. B.C. Reg. 205/94, s. 15.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "other",
+      "buffer_m": 1000,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Blubber Bay, Blubber Point): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "in M.U. 2-16",
+        "geometry.feature": "the Blubber Bay Ferry Terminal",
+        "geometry.buffer_m": "within a 1 kilometre radius",
+        "effect": "No Shooting Areas",
+        "geometry.steps[0]": "commencing at Blubber Point",
+        "geometry.steps[1]": "thence westerly, southerly and southeasterly along the mean low water mark to the midpoint of Limekiln Bay",
+        "geometry.steps[2]": "thence due North to the point of commencement"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "b734f9a7c42bea0a2acb8b2fd7fe58d18a86ca26694391ec63e0c2241bfc1263",
+      "task_id": "closed_area-b734f9a7c42b",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Blubber Bay, Blubber Point): 1 km around the named points; not the boundary",
+          "quote": "the Blubber Bay Ferry Terminal",
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "5.756 km² (limit none for this type)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:47:30.511Z",
-  "updated": "2026-10-27T23:12:03.955Z"
+  "updated": "2026-10-28T20:07:34.658Z"
 }

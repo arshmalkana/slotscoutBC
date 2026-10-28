@@ -5,11 +5,16 @@
   "title": "Closed Areas Regulation, Schedule 6, section 7 (Cowichan Bay)",
   "rule_id": "W7-007",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 \"inside\" vs run 2 null",
     "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "\"Skinner Point\" was not found in the official layers; that side is drawn straight",
+    "\"Cowichan Bay\" was not found in the official layers; that side is drawn straight",
+    "\"Tzuhalem Road\" was not found in the official layers; that side is drawn straight",
+    "\"Cowichan Bay\" was not found in the official layers; that side is drawn straight",
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Cowichan Bay, Skinner Point): 1 km around the named points; not the boundary"
   ],
   "source": {
     "text": "Schedule 6 Seasonal No Shooting Areas (Section 7)\nCowichan Bay\n7 That portion of British Columbia in the vicinity of Cowichan Bay contained within the following described boundaries: Commencing at the mean high water mark of Cowichan Bay at the most southerly extremity of Skinner Point; thence in a straight line to the point of intersection with the mean high water mark of Cowichan Bay at the most northerly extremity of the southerly shore thereof, east of Cowichan Bay Village; thence in a general westerly direction along the mean high water mark a distance of approximately 600 metres to a point due North of Cowichan Bay Road; thence due South to the northerly boundary of the right of way of Cowichan Bay Road; thence in a general westerly and northerly direction along the northerly boundary and along the easterly boundary of the right of way to the point of intersection with the easterly boundary of the right of way of Tzuhalem Road; thence in a general northerly direction along the easterly boundary to the point of intersection with the southerly boundary of the right of way of Khenipsen Road; thence in a general easterly direction along the southerly boundary to the most easterly extremity thereof; thence due South to the mean high water mark of Cowichan Bay; thence in a general easterly direction along the mean high water mark of Cowichan Bay to the point of commencement, including all intervening territory but excluding all Indian Reserve Lands, during the period March 11 to the Saturday following Labour Day, except those areas as described in sections 21 and 114 of Schedule 5 (No Shooting Areas). [en. B.C. Reg. 224/92, s. 14; am. B.C. Regs. 205/94, s. 23; 219/2000, s. 6.]",
@@ -341,18 +346,428 @@
   "lookups": [],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "9.085 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     },
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Cowichan Bay, Skinner Point): 1 km around the named points; not the boundary",
+      "quote": "Commencing at the mean high water mark of Cowichan Bay at the most southerly extremity of Skinner Point",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -123.58760188197235,
+            48.74892582518694
+          ],
+          [
+            -123.59232193123673,
+            48.75837079425119
+          ],
+          [
+            -123.59280210181237,
+            48.759193408396726
+          ],
+          [
+            -123.59340213696984,
+            48.759981081983994
+          ],
+          [
+            -123.59411627700548,
+            48.76072624697736
+          ],
+          [
+            -123.59493766499729,
+            48.76142174344067
+          ],
+          [
+            -123.59585841255779,
+            48.762060888392384
+          ],
+          [
+            -123.59686967554329,
+            48.76263754008504
+          ],
+          [
+            -123.59796173899498,
+            48.76314615708819
+          ],
+          [
+            -123.59912411049659,
+            48.76358185160408
+          ],
+          [
+            -123.60034562105001,
+            48.763940436500675
+          ],
+          [
+            -123.60161453249691,
+            48.76421846560687
+          ],
+          [
+            -123.60291865044906,
+            48.76441326688028
+          ],
+          [
+            -123.60424544163608,
+            48.764522968126336
+          ],
+          [
+            -123.60558215453494,
+            48.76454651501953
+          ],
+          [
+            -123.60691594211366,
+            48.76448368125253
+          ],
+          [
+            -123.60823398550038,
+            48.764335070714736
+          ],
+          [
+            -123.60952361737921,
+            48.76410211167899
+          ],
+          [
+            -123.6107724439185,
+            48.76378704305313
+          ],
+          [
+            -123.61196846404977,
+            48.76339289282919
+          ],
+          [
+            -123.61310018494352,
+            48.76292344893925
+          ],
+          [
+            -123.61415673256484,
+            48.76238322279977
+          ],
+          [
+            -123.6151279562409,
+            48.761777405897845
+          ],
+          [
+            -123.61600452623152,
+            48.76111181983859
+          ],
+          [
+            -123.61677802336288,
+            48.76039286033754
+          ],
+          [
+            -123.61744101986321,
+            48.75962743569875
+          ],
+          [
+            -123.63144997095785,
+            48.74143041155759
+          ],
+          [
+            -123.63199745404862,
+            48.74062280557605
+          ],
+          [
+            -123.6324219546486,
+            48.73978363303841
+          ],
+          [
+            -123.63271937079477,
+            48.73892101523719
+          ],
+          [
+            -123.63288683091292,
+            48.73804329993936
+          ],
+          [
+            -123.63292272136174,
+            48.73715898057442
+          ],
+          [
+            -123.63282670178718,
+            48.73627661402918
+          ],
+          [
+            -123.63259970814818,
+            48.73540473784583
+          ],
+          [
+            -123.63224394339535,
+            48.7345517876245
+          ],
+          [
+            -123.63176285590265,
+            48.733726015429035
+          ],
+          [
+            -123.63116110587072,
+            48.73293540998432
+          ],
+          [
+            -123.6304445200356,
+            48.73218761943583
+          ],
+          [
+            -123.62962003512894,
+            48.73148987741609
+          ],
+          [
+            -123.62869563064298,
+            48.730848933131114
+          ],
+          [
+            -123.6276802515548,
+            48.73027098613999
+          ],
+          [
+            -123.62658372176082,
+            48.72976162645539
+          ],
+          [
+            -123.625416649059,
+            48.729325780541416
+          ],
+          [
+            -123.62419032259702,
+            48.72896766372759
+          ],
+          [
+            -123.62291660377497,
+            48.72869073949655
+          ],
+          [
+            -123.62160781165329,
+            48.72849768603639
+          ],
+          [
+            -123.62027660396723,
+            48.72839037037864
+          ],
+          [
+            -123.61893585489122,
+            48.728369830370205
+          ],
+          [
+            -123.61759853072694,
+            48.72843626465234
+          ],
+          [
+            -123.6162775647068,
+            48.72858903074261
+          ],
+          [
+            -123.6149857321154,
+            48.728826651238506
+          ],
+          [
+            -123.61373552692594,
+            48.72914682808276
+          ],
+          [
+            -123.6125390411361,
+            48.72954646475414
+          ],
+          [
+            -123.61140784796217,
+            48.73002169617001
+          ],
+          [
+            -123.59267477114933,
+            48.7387715285402
+          ],
+          [
+            -123.59162438031771,
+            48.73931475491797
+          ],
+          [
+            -123.59065953214304,
+            48.739923097480784
+          ],
+          [
+            -123.58978947135141,
+            48.74059072943044
+          ],
+          [
+            -123.58902253576451,
+            48.74131125584322
+          ],
+          [
+            -123.58836607636863,
+            48.74207777486005
+          ],
+          [
+            -123.58782638679003,
+            48.742882943738024
+          ],
+          [
+            -123.58740864285565,
+            48.74371904913368
+          ],
+          [
+            -123.58711685282334,
+            48.744578080947406
+          ],
+          [
+            -123.5869538187653,
+            48.745451809023734
+          ],
+          [
+            -123.58692110948274,
+            48.74633186197472
+          ],
+          [
+            -123.58701904522037,
+            48.74720980737234
+          ],
+          [
+            -123.58724669433677,
+            48.74807723254258
+          ],
+          [
+            -123.58760188197235,
+            48.74892582518694
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W7-007",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 6, s. 7",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 6 Seasonal No Shooting Areas (Section 7)\nCowichan Bay\n7 That portion of British Columbia in the vicinity of Cowichan Bay contained within the following described boundaries: Commencing at the mean high water mark of Cowichan Bay at the most southerly extremity of Skinner Point; thence in a straight line to the point of intersection with the mean high water mark of Cowichan Bay at the most northerly extremity of the southerly shore thereof, east of Cowichan Bay Village; thence in a general westerly direction along the mean high water mark a distance of approximately 600 metres to a point due North of Cowichan Bay Road; thence due South to the northerly boundary of the right of way of Cowichan Bay Road; thence in a general westerly and northerly direction along the northerly boundary and along the easterly boundary of the right of way to the point of intersection with the easterly boundary of the right of way of Tzuhalem Road; thence in a general northerly direction along the easterly boundary to the point of intersection with the southerly boundary of the right of way of Khenipsen Road; thence in a general easterly direction along the southerly boundary to the most easterly extremity thereof; thence due South to the mean high water mark of Cowichan Bay; thence in a general easterly direction along the mean high water mark of Cowichan Bay to the point of commencement, including all intervening territory but excluding all Indian Reserve Lands, during the period March 11 to the Saturday following Labour Day, except those areas as described in sections 21 and 114 of Schedule 5 (No Shooting Areas). [en. B.C. Reg. 224/92, s. 14; am. B.C. Regs. 205/94, s. 23; 219/2000, s. 6.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting_seasonal",
+      "period": {
+        "start": "03-11",
+        "end": "saturday_after_labour_day"
+      },
+      "exemptions": [
+        "excluding all Indian Reserve Lands",
+        "except those areas as described in sections 21 and 114 of Schedule 5 (No Shooting Areas)"
+      ],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Cowichan Bay, Skinner Point): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "period": "during the period March 11 to the Saturday following Labour Day",
+        "effect": "Seasonal No Shooting Areas",
+        "geometry.side": "including all intervening territory",
+        "exemptions[0]": "excluding all Indian Reserve Lands",
+        "exemptions[1]": "except those areas as described in sections 21 and 114 of Schedule 5 (No Shooting Areas)",
+        "geometry.steps[0]": "Commencing at the mean high water mark of Cowichan Bay at the most southerly extremity of Skinner Point",
+        "geometry.steps[1]": "thence in a straight line to the point of intersection with the mean high water mark of Cowichan Bay at the most northerly extremity of the southerly shore thereof, east of Cowichan Bay Village",
+        "geometry.steps[2]": "thence in a general westerly direction along the mean high water mark a distance of approximately 600 metres to a point due North of Cowichan Bay Road",
+        "geometry.steps[3]": "thence due South to the northerly boundary of the right of way of Cowichan Bay Road",
+        "geometry.steps[4]": "thence in a general westerly and northerly direction along the northerly boundary and along the easterly boundary of the right of way to the point of intersection with the easterly boundary of the right of way of Tzuhalem Road",
+        "geometry.steps[5]": "thence in a general northerly direction along the easterly boundary to the point of intersection with the southerly boundary of the right of way of Khenipsen Road",
+        "geometry.steps[6]": "thence in a general easterly direction along the southerly boundary to the most easterly extremity thereof",
+        "geometry.steps[7]": "thence due South to the mean high water mark of Cowichan Bay",
+        "geometry.steps[8]": "thence in a general easterly direction along the mean high water mark of Cowichan Bay to the point of commencement"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "c6ab7f0602977178dc86773393d1474f82ea46d33904686f5dced37bab9119e2",
+      "task_id": "closed_area-c6ab7f060297",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Cowichan Bay, Skinner Point): 1 km around the named points; not the boundary",
+          "quote": "Commencing at the mean high water mark of Cowichan Bay at the most southerly extremity of Skinner Point",
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "9.085 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": null,
+          "detail": "the text names no area, or it could not be found"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: a walk outline is approximate; a person checks it against the text"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:10:14.338Z",
-  "updated": "2026-10-27T23:12:15.710Z"
+  "updated": "2026-10-28T20:10:44.378Z"
 }

@@ -5,11 +5,13 @@
   "title": "Closed Areas Regulation, Schedule 7, section 49 (Khutzeymateen Park)",
   "rule_id": "W8-049",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: side: run 1 null vs run 2 \"inside\"",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "approximate zone around the places the section names, using run 1's reading",
+    "a zone around the places the section names (Khutzeymateen Park): 1 km around the named points; not the boundary",
+    "validation failed: two independent extractions agree (side: run 1 null vs run 2 \"inside\")"
   ],
   "source": {
     "text": "Schedule 7 No Hunting Areas (Section 8)\nKhutzeymateen Park\n49 That portion of M.U. 6-14 within the boundaries of Khutzeymateen Park below the 1 000 metre elevation. [en. B.C. Reg. 151/2006, s. 5 (c).]",
@@ -133,16 +135,418 @@
   "disagreements": [
     "side: run 1 null vs run 2 \"inside\""
   ],
-  "lookups": [],
-  "validation": [
+  "lookups": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "query": "M.U. 6-14",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "6-14"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "6-14",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 6,
+          "REGION_RESPONSIBLE_ID": "6",
+          "REGION_RESPONSIBLE_NAME": "Skeena",
+          "GAME_MANAGEMENT_ZONE_ID": "6b",
+          "GAME_MANAGEMENT_ZONE_NAME": "North Coast",
+          "FEATURE_AREA_SQM": 13252670154.234,
+          "FEATURE_LENGTH_M": 927902.8669,
+          "OBJECTID": 453,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
     }
   ],
-  "construction": [],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.137 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": false,
+      "detail": "side: run 1 null vs run 2 \"inside\""
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Khutzeymateen Park): 1 km around the named points; not the boundary",
+      "quote": "within the boundaries of Khutzeymateen Park",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -129.79081526621948,
+            54.633332335630705
+          ],
+          [
+            -129.7907401138293,
+            54.63245085710597
+          ],
+          [
+            -129.79051606038482,
+            54.63157788653128
+          ],
+          [
+            -129.7901452729217,
+            54.630721830274375
+          ],
+          [
+            -129.78963133087527,
+            54.629890931300736
+          ],
+          [
+            -129.78897919128025,
+            54.62909318984028
+          ],
+          [
+            -129.7881951407441,
+            54.6283362864093
+          ],
+          [
+            -129.78728673466776,
+            54.62762750792619
+          ],
+          [
+            -129.7862627243077,
+            54.62697367762963
+          ],
+          [
+            -129.78513297238905,
+            54.62638108947032
+          ],
+          [
+            -129.78390835808582,
+            54.62585544760395
+          ],
+          [
+            -129.7826006722857,
+            54.62540181156436
+          ],
+          [
+            -129.78122250414538,
+            54.62502454764057
+          ],
+          [
+            -129.7797871200261,
+            54.62472728692206
+          ],
+          [
+            -129.77830833596758,
+            54.624512890412575
+          ],
+          [
+            -129.7768003849197,
+            54.62438342154555
+          ],
+          [
+            -129.77527778,
+            54.62434012636276
+          ],
+          [
+            -129.7737551750803,
+            54.62438342154555
+          ],
+          [
+            -129.77224722403244,
+            54.624512890412575
+          ],
+          [
+            -129.77076843997392,
+            54.62472728692206
+          ],
+          [
+            -129.76933305585467,
+            54.62502454764057
+          ],
+          [
+            -129.76795488771432,
+            54.62540181156436
+          ],
+          [
+            -129.7666472019142,
+            54.62585544760395
+          ],
+          [
+            -129.76542258761097,
+            54.62638108947032
+          ],
+          [
+            -129.76429283569232,
+            54.62697367762963
+          ],
+          [
+            -129.7632688253323,
+            54.62762750792619
+          ],
+          [
+            -129.7623604192559,
+            54.6283362864093
+          ],
+          [
+            -129.7615763687198,
+            54.62909318984028
+          ],
+          [
+            -129.76092422912475,
+            54.629890931300736
+          ],
+          [
+            -129.76041028707832,
+            54.630721830274375
+          ],
+          [
+            -129.7600394996152,
+            54.63157788653128
+          ],
+          [
+            -129.75981544617073,
+            54.63245085710597
+          ],
+          [
+            -129.75974029378054,
+            54.633332335630705
+          ],
+          [
+            -129.7598147758545,
+            54.63421383326196
+          ],
+          [
+            -129.76003818474263,
+            54.63508686042198
+          ],
+          [
+            -129.76040837817916,
+            54.63594300856847
+          ],
+          [
+            -129.7609217995569,
+            54.63677403120467
+          ],
+          [
+            -129.7615735118502,
+            54.63757192334839
+          ],
+          [
+            -129.7623572448725,
+            54.63832899869269
+          ],
+          [
+            -129.76326545542477,
+            54.63903796371265
+          ],
+          [
+            -129.76428939976438,
+            54.63969198800102
+          ],
+          [
+            -129.7654192177034,
+            54.64028477015215
+          ],
+          [
+            -129.76664402753062,
+            54.640810598555376
+          ],
+          [
+            -129.76795203084458,
+            54.6412644065083
+          ],
+          [
+            -129.7693306262866,
+            54.64164182111539
+          ],
+          [
+            -129.77076653107454,
+            54.6419392054965
+          ],
+          [
+            -129.7722459091597,
+            54.642153693895565
+          ],
+          [
+            -129.77375450476399,
+            54.64228321934792
+          ],
+          [
+            -129.77527778,
+            54.642326533637245
+          ],
+          [
+            -129.77680105523604,
+            54.64228321934792
+          ],
+          [
+            -129.77830965084033,
+            54.642153693895565
+          ],
+          [
+            -129.77978902892548,
+            54.6419392054965
+          ],
+          [
+            -129.78122493371342,
+            54.64164182111539
+          ],
+          [
+            -129.78260352915547,
+            54.6412644065083
+          ],
+          [
+            -129.78391153246943,
+            54.640810598555376
+          ],
+          [
+            -129.78513634229662,
+            54.64028477015215
+          ],
+          [
+            -129.78626616023564,
+            54.63969198800102
+          ],
+          [
+            -129.78729010457525,
+            54.63903796371265
+          ],
+          [
+            -129.78819831512752,
+            54.63832899869269
+          ],
+          [
+            -129.78898204814982,
+            54.63757192334839
+          ],
+          [
+            -129.7896337604431,
+            54.63677403120467
+          ],
+          [
+            -129.79014718182088,
+            54.63594300856847
+          ],
+          [
+            -129.79051737525742,
+            54.63508686042198
+          ],
+          [
+            -129.79074078414556,
+            54.63421383326196
+          ],
+          [
+            -129.79081526621948,
+            54.633332335630705
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W8-049",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 7, s. 49",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 7 No Hunting Areas (Section 8)\nKhutzeymateen Park\n49 That portion of M.U. 6-14 within the boundaries of Khutzeymateen Park below the 1 000 metre elevation. [en. B.C. Reg. 151/2006, s. 5 (c).]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_hunting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "other",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Khutzeymateen Park): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "That portion of M.U. 6-14",
+        "geometry.feature": "within the boundaries of Khutzeymateen Park",
+        "effect": "No Hunting Areas"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "6d13a853fe8650eea9d5bbe02ae22202f418f9bdff7c6f151ed3ff130b10b523",
+      "task_id": "closed_area-6d13a853fe86",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Khutzeymateen Park): 1 km around the named points; not the boundary",
+          "quote": "within the boundaries of Khutzeymateen Park",
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "3.137 km² (limit none for this type)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "side: run 1 null vs run 2 \"inside\""
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:08:38.106Z",
-  "updated": "2026-10-21T16:08:38.106Z"
+  "updated": "2026-10-28T19:57:15.361Z"
 }

@@ -5,11 +5,16 @@
   "title": "Closed Areas Regulation, Schedule 5, section 76 (Kaleden)",
   "rule_id": "W5-076",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: steps: run 1 [\"|||\",\"l. 3569s|the point of intersection with the midline of hwy 97||lot_line\",\"|the point of intersection with the easterly boundary of indian reserve l||straight_line\",\"indian reserve 1 and l. 2456s|the southeast corner of l. 2456s||other\",\"l. 213s l. 104s and l. 105s|the point of intersection with the midline of linden ave||lot_line\",\"linden ave|the most southerly point thereof||road\",\"|the point of intersection with the natural boundary of skaha lake on the westerly shore thereof||straight_line\",\"skaha lake|the point of commencement||shoreline\"] vs run 2 [\"|||\",\"l. 3569s|the point of intersection with the midline of hwy 97||lot_line\",\"|the point of intersection with the easterly boundary of indian reserve l||straight_line\",\"indian reserve 1 and l. 2456s|the southeast corner of l. 2456s||other\",\"l. 213s l. 104s and l. 105s|the point of intersection with the midline of linden ave||lot_line\",\"linden ave|the most southerly point thereof||road\",\"skaha lake|the point of intersection with the natural boundary of skaha lake on the westerly shore thereof||straight_line\",\"skaha lake|the point of commencement||shoreline\"]",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "\"L. 3569s\" was not found in the official layers; that side is drawn straight",
+    "\"Indian Reserve 1 and L. 2456s\" was not found in the official layers; that side is drawn straight",
+    "\"L. 213s, L. 104s and L. 105s\" was not found in the official layers; that side is drawn straight",
+    "approximate zone around the places the section names, using run 1's reading",
+    "a zone around the places the section names (Kaleden, Skaha Lake): 1 km around the named points; not the boundary",
+    "validation failed: two independent extractions agree (steps: run 1 [\"|||\",\"l. 3569s|the point of intersection with the midline of hwy 97||lot_line\",\"|the point of intersection with the easterly boundary of indian reserve l||straight_line\",\"indian reserve 1 and l. 2456s|the southeast corner of l. 2456s||other\",\"l. 213s l. 104s and l. 105s|the point of intersection with the midline of linden ave||lot_line\",\"linden ave|the most southerly point thereof||road\",\"|the point of intersection with the natural boundary of skaha lake on the westerly shore thereof||straight_line\",\"skaha lake|the point of commencement||shoreline\"] vs run 2 [\"|||\",\"l. 3569s|the point of intersection with the midline of hwy 97||lot_line\",\"|the point of intersection with the easterly boundary of indian reserve l||straight_line\",\"indian reserve 1 and l. 2456s|the southeast corner of l. 2456s||other\",\"l. 213s l. 104s and l. 105s|the point of intersection with the midline of linden ave||lot_line\",\"linden ave|the most southerly point thereof||road\",\"skaha lake|the point of intersection with the natural boundary of skaha lake on the westerly shore thereof||straight_line\",\"skaha lake|the point of commencement||shoreline\"])"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nKaleden\n76 That portion of the Province of British Columbia in the Similkameen Division of Yale Land District contained within the following described boundaries: Commencing at the point of intersection of the westerly boundary of L. 3569s and the natural boundary of Skaha Lake on the westerly shore thereof; thence southerly along the westerly boundary of L. 3569s to the point of intersection with the midline of Highway 97; thence due West to the point of intersection with the easterly boundary of Indian Reserve l; thence southerly along the easterly boundaries of Indian Reserve 1 and L. 2456s to the southeast corner of L. 2456s; thence easterly along the southerly boundaries of L. 213s, L. 104s and L. 105s to the point of intersection with the midline of Linden Avenue; thence in a general southerly direction along the midline of Linden Avenue to the most southerly point thereof; thence due East to the point of intersection with the natural boundary of Skaha Lake on the westerly shore thereof; thence in a general northerly direction along the natural boundary of Skaha Lake on the westerly shore thereof to the point of commencement. [en. B.C. Reg. 162/87, s. 20.]",
@@ -319,18 +324,414 @@
   "lookups": [],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "9.581 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "steps: run 1 [\"|||\",\"l. 3569s|the point of intersection with the midline of hwy 97||lot_line\",\"|the point of intersection with the easterly boundary of indian reserve l||straight_line\",\"indian reserve 1 and l. 2456s|the southeast corner of l. 2456s||other\",\"l. 213s l. 104s and l. 105s|the point of intersection with the midline of linden ave||lot_line\",\"linden ave|the most southerly point thereof||road\",\"|the point of intersection with the natural boundary of skaha lake on the westerly shore thereof||straight_line\",\"skaha lake|the point of commencement||shoreline\"] vs run 2 [\"|||\",\"l. 3569s|the point of intersection with the midline of hwy 97||lot_line\",\"|the point of intersection with the easterly boundary of indian reserve l||straight_line\",\"indian reserve 1 and l. 2456s|the southeast corner of l. 2456s||other\",\"l. 213s l. 104s and l. 105s|the point of intersection with the midline of linden ave||lot_line\",\"linden ave|the most southerly point thereof||road\",\"skaha lake|the point of intersection with the natural boundary of skaha lake on the westerly shore thereof||straight_line\",\"skaha lake|the point of commencement||shoreline\"]"
     },
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Kaleden, Skaha Lake): 1 km around the named points; not the boundary",
+      "quote": "Commencing at the point of intersection of the westerly boundary of L. 3569s and the natural boundary of Skaha Lake on the westerly shore thereof",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -119.57436276320723,
+            49.4203254418491
+          ],
+          [
+            -119.57409957643911,
+            49.42119122830398
+          ],
+          [
+            -119.57396810773547,
+            49.42206962633951
+          ],
+          [
+            -119.5739696302289,
+            49.42295217695132
+          ],
+          [
+            -119.57410413640903,
+            49.42383038068964
+          ],
+          [
+            -119.57437033792012,
+            49.42469577951374
+          ],
+          [
+            -119.5747656776989,
+            49.425540038265105
+          ],
+          [
+            -119.57528635434687,
+            49.426355024973894
+          ],
+          [
+            -119.57592735851122,
+            49.42713288922403
+          ],
+          [
+            -119.57668252093362,
+            49.42786613782039
+          ],
+          [
+            -119.57754457171099,
+            49.4285477070267
+          ],
+          [
+            -119.57850521020383,
+            49.42917103067602
+          ],
+          [
+            -119.57955518492271,
+            49.42973010349411
+          ],
+          [
+            -119.58068438262549,
+            49.430219539023085
+          ],
+          [
+            -119.58188192576772,
+            49.43063462158359
+          ],
+          [
+            -119.58313627736496,
+            49.43097135177198
+          ],
+          [
+            -119.58443535225365,
+            49.43122648505101
+          ],
+          [
+            -119.58576663367279,
+            49.43139756305968
+          ],
+          [
+            -119.58711729403637,
+            49.43148293733806
+          ],
+          [
+            -119.58847431872452,
+            49.431481785237004
+          ],
+          [
+            -119.58982463169147,
+            49.431394117857856
+          ],
+          [
+            -119.59115522167023,
+            49.43122077994535
+          ],
+          [
+            -119.59245326774797,
+            49.430963441734605
+          ],
+          [
+            -119.59370626309229,
+            49.43062458283128
+          ],
+          [
+            -119.59490213562736,
+            49.430207468281765
+          ],
+          [
+            -119.5960293644885,
+            49.429716117065546
+          ],
+          [
+            -119.59707709112651,
+            49.4291552633157
+          ],
+          [
+            -119.59803522398599,
+            49.42853031064378
+          ],
+          [
+            -119.59889453574517,
+            49.42784728001234
+          ],
+          [
+            -119.59964675217918,
+            49.42711275166039
+          ],
+          [
+            -119.60028463179077,
+            49.426333801644276
+          ],
+          [
+            -119.6008020354435,
+            49.42551793360902
+          ],
+          [
+            -119.60119398533162,
+            49.42467300644987
+          ],
+          [
+            -119.61194899841897,
+            49.396551762189006
+          ],
+          [
+            -119.61221138578368,
+            49.39568588996255
+          ],
+          [
+            -119.6123420997686,
+            49.39480744869462
+          ],
+          [
+            -119.61233988853645,
+            49.3939248987006
+          ],
+          [
+            -119.61220478052451,
+            49.39304673941152
+          ],
+          [
+            -119.61193808389618,
+            49.392181427520214
+          ],
+          [
+            -119.61154237367379,
+            49.39133729555664
+          ],
+          [
+            -119.61102146668657,
+            49.390522471675375
+          ],
+          [
+            -119.61038038458513,
+            49.389744801427064
+          ],
+          [
+            -119.60962530528708,
+            49.38901177226488
+          ],
+          [
+            -119.60876350332856,
+            49.38833044151059
+          ],
+          [
+            -119.60780327970292,
+            49.3877073684713
+          ],
+          [
+            -119.60675388186486,
+            49.38714855135744
+          ],
+          [
+            -119.60562541467358,
+            49.38665936960596
+          ],
+          [
+            -119.60442874313196,
+            49.38624453216073
+          ],
+          [
+            -119.60317538785641,
+            49.3859080322054
+          ],
+          [
+            -119.60187741428012,
+            49.38565310878073
+          ],
+          [
+            -119.60054731665106,
+            49.385482215653816
+          ],
+          [
+            -119.59919789793366,
+            49.385396997736294
+          ],
+          [
+            -119.59784214676304,
+            49.385398275276835
+          ],
+          [
+            -119.59649311262636,
+            49.38548603597882
+          ],
+          [
+            -119.59516378046311,
+            49.38565943511853
+          ],
+          [
+            -119.59386694588183,
+            49.38591680366265
+          ],
+          [
+            -119.59261509218433,
+            49.38625566430756
+          ],
+          [
+            -119.59142027037227,
+            49.38667275528741
+          ],
+          [
+            -119.59029398328268,
+            49.387164061723354
+          ],
+          [
+            -119.58924707496126,
+            49.387724854214795
+          ],
+          [
+            -119.58828962633261,
+            49.38834973430356
+          ],
+          [
+            -119.58743085816826,
+            49.38903268637632
+          ],
+          [
+            -119.58667904228524,
+            49.389767135509146
+          ],
+          [
+            -119.58604142182973,
+            49.390546010699936
+          ],
+          [
+            -119.58552414141631,
+            49.391361812883765
+          ],
+          [
+            -119.58513218779913,
+            49.39220668707873
+          ],
+          [
+            -119.57436276320723,
+            49.4203254418491
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-076",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 76",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nKaleden\n76 That portion of the Province of British Columbia in the Similkameen Division of Yale Land District contained within the following described boundaries: Commencing at the point of intersection of the westerly boundary of L. 3569s and the natural boundary of Skaha Lake on the westerly shore thereof; thence southerly along the westerly boundary of L. 3569s to the point of intersection with the midline of Highway 97; thence due West to the point of intersection with the easterly boundary of Indian Reserve l; thence southerly along the easterly boundaries of Indian Reserve 1 and L. 2456s to the southeast corner of L. 2456s; thence easterly along the southerly boundaries of L. 213s, L. 104s and L. 105s to the point of intersection with the midline of Linden Avenue; thence in a general southerly direction along the midline of Linden Avenue to the most southerly point thereof; thence due East to the point of intersection with the natural boundary of Skaha Lake on the westerly shore thereof; thence in a general northerly direction along the natural boundary of Skaha Lake on the westerly shore thereof to the point of commencement. [en. B.C. Reg. 162/87, s. 20.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Kaleden, Skaha Lake): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "in the Similkameen Division of Yale Land District",
+        "effect": "No Shooting Areas",
+        "geometry.steps[0]": "Commencing at the point of intersection of the westerly boundary of L. 3569s and the natural boundary of Skaha Lake on the westerly shore thereof",
+        "geometry.steps[1]": "thence southerly along the westerly boundary of L. 3569s to the point of intersection with the midline of Highway 97",
+        "geometry.steps[2]": "thence due West to the point of intersection with the easterly boundary of Indian Reserve l",
+        "geometry.steps[3]": "thence southerly along the easterly boundaries of Indian Reserve 1 and L. 2456s to the southeast corner of L. 2456s",
+        "geometry.steps[4]": "thence easterly along the southerly boundaries of L. 213s, L. 104s and L. 105s to the point of intersection with the midline of Linden Avenue",
+        "geometry.steps[5]": "thence in a general southerly direction along the midline of Linden Avenue to the most southerly point thereof",
+        "geometry.steps[6]": "thence due East to the point of intersection with the natural boundary of Skaha Lake on the westerly shore thereof",
+        "geometry.steps[7]": "thence in a general northerly direction along the natural boundary of Skaha Lake on the westerly shore thereof to the point of commencement"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "5962314ecaf631577bd565c514b17f47ce9ed3aa56cb6405d3ea58999c5a19bb",
+      "task_id": "closed_area-5962314ecaf6",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Kaleden, Skaha Lake): 1 km around the named points; not the boundary",
+          "quote": "Commencing at the point of intersection of the westerly boundary of L. 3569s and the natural boundary of Skaha Lake on the westerly shore thereof",
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "9.581 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": null,
+          "detail": "the text names no area, or it could not be found"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "steps: run 1 [\"|||\",\"l. 3569s|the point of intersection with the midline of hwy 97||lot_line\",\"|the point of intersection with the easterly boundary of indian reserve l||straight_line\",\"indian reserve 1 and l. 2456s|the southeast corner of l. 2456s||other\",\"l. 213s l. 104s and l. 105s|the point of intersection with the midline of linden ave||lot_line\",\"linden ave|the most southerly point thereof||road\",\"|the point of intersection with the natural boundary of skaha lake on the westerly shore thereof||straight_line\",\"skaha lake|the point of commencement||shoreline\"] vs run 2 [\"|||\",\"l. 3569s|the point of intersection with the midline of hwy 97||lot_line\",\"|the point of intersection with the easterly boundary of indian reserve l||straight_line\",\"indian reserve 1 and l. 2456s|the southeast corner of l. 2456s||other\",\"l. 213s l. 104s and l. 105s|the point of intersection with the midline of linden ave||lot_line\",\"linden ave|the most southerly point thereof||road\",\"skaha lake|the point of intersection with the natural boundary of skaha lake on the westerly shore thereof||straight_line\",\"skaha lake|the point of commencement||shoreline\"]"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: a walk outline is approximate; a person checks it against the text"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:08:33.444Z",
-  "updated": "2026-10-21T16:08:33.444Z"
+  "updated": "2026-10-28T19:56:18.833Z"
 }

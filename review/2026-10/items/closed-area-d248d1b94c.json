@@ -5,11 +5,15 @@
   "title": "Closed Areas Regulation, Schedule 5, section 75 (Okanagan Falls)",
   "rule_id": "W5-075",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: steps: run 1 [\"|its intersection with the mean high water mark of skaha lake||other\",\"hwy 97 right of way|the point of intersection with the westerly boundary of the right of way of green lake rd||\",\"|a point due west of a velocity drop structure on okanagan river northwest of the northeastern corner of lot 109 yale district||road\",\"|the easterly edge of the east river dyke||straight_line\",\"east river dyke|the southeasterly bank of shuttleworth creek||other\",\"shuttleworth creek|the second set of railway tracks||creek\",\"|the easterly edge of the maple st right of way||other\",\"maple st|the end of maple st||road\",\"|a point due east of the point of commencement||straight_line\",\"|the mean high water mark of skaha lake||straight_line\",\"skaha lake|the point of commencement||shoreline\"] vs run 2 [\"railway trestle|its intersection with the mean high water mark of skaha lake||other\",\"hwy 97|the point of intersection with the westerly boundary of the right of way of green lake rd||\",\"|a point due west of a velocity drop structure on okanagan river northwest of the northeastern corner of lot 109 yale district||road\",\"east river dyke|the easterly edge of the east river dyke||straight_line\",\"east river dyke|the southeasterly bank of shuttleworth creek||other\",\"shuttleworth creek|the second set of railway tracks||creek\",\"railway tracks|the easterly edge of the maple st right of way||other\",\"maple st|the end of maple st||road\",\"|a point due east of the point of commencement||straight_line\",\"skaha lake|the mean high water mark of skaha lake||straight_line\",\"skaha lake|the point of commencement||shoreline\"]",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "\"Highway 97 right of way\" was not found in the official layers; that side is drawn straight",
+    "\"East River Dyke\" was not found in the official layers; that side is drawn straight",
+    "approximate zone around the places the section names, using run 1's reading",
+    "a zone around the places the section names (Okanagan Falls, Shuttleworth Creek, Skaha Lake): 1 km around the named points; not the boundary",
+    "validation failed: two independent extractions agree (steps: run 1 [\"|its intersection with the mean high water mark of skaha lake||other\",\"hwy 97 right of way|the point of intersection with the westerly boundary of the right of way of green lake rd||\",\"|a point due west of a velocity drop structure on okanagan river northwest of the northeastern corner of lot 109 yale district||road\",\"|the easterly edge of the east river dyke||straight_line\",\"east river dyke|the southeasterly bank of shuttleworth creek||other\",\"shuttleworth creek|the second set of railway tracks||creek\",\"|the easterly edge of the maple st right of way||other\",\"maple st|the end of maple st||road\",\"|a point due east of the point of commencement||straight_line\",\"|the mean high water mark of skaha lake||straight_line\",\"skaha lake|the point of commencement||shoreline\"] vs run 2 [\"railway trestle|its intersection with the mean high water mark of skaha lake||other\",\"hwy 97|the point of intersection with the westerly boundary of the right of way of green lake rd||\",\"|a point due west of a velocity drop structure on okanagan river northwest of the northeastern corner of lot 109 yale district||road\",\"east river dyke|the easterly edge of the east river dyke||straight_line\",\"east river dyke|the southeasterly bank of shuttleworth creek||other\",\"shuttleworth creek|the second set of railway tracks||creek\",\"railway tracks|the easterly edge of the maple st right of way||other\",\"maple st|the end of maple st||road\",\"|a point due east of the point of commencement||straight_line\",\"skaha lake|the mean high water mark of skaha lake||straight_line\",\"skaha lake|the point of commencement||shoreline\"])"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nOkanagan Falls\n75 That portion of the Province of British Columbia in the Similkameen Division of Yale Land District within the following described boundaries: Commencing at the southeastern corner of the railway trestle which crosses the south end of Skaha Lake and proceeding northwesterly along the easterly edge of the trestle to its intersection with the mean high water mark of Skaha Lake; thence due West to a point on the westerly edge of the Highway 97 right of way to the point of intersection with the westerly boundary of the right of way of Green Lake Road; thence southerly along the westerly edge of the right of way to a point due West of a velocity drop structure on Okanagan River northwest of the northeastern corner of Lot 109 Yale District; thence due East to the easterly edge of the East River Dyke; thence northwesterly along the easterly edge of the dyke to the southeasterly bank of Shuttleworth Creek; thence northeasterly along the bank to the second set of railway tracks; thence southeasterly then northeasterly along the railway tracks to the easterly edge of the Maple Street right of way; thence northwesterly along the easterly edge of the right of way to the end of Maple Street; thence due North in a straight line to a point due East of the point of commencement; thence due West in a straight line to the mean high water mark of Skaha Lake; thence westerly along the mean high water mark to the point of commencement. [en. B.C. Reg. 109/85, s. 3 (i); am. B.C. Reg. 172/86, s. 2.]",
@@ -400,18 +404,425 @@
   "lookups": [],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "25.836 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "steps: run 1 [\"|its intersection with the mean high water mark of skaha lake||other\",\"hwy 97 right of way|the point of intersection with the westerly boundary of the right of way of green lake rd||\",\"|a point due west of a velocity drop structure on okanagan river northwest of the northeastern corner of lot 109 yale district||road\",\"|the easterly edge of the east river dyke||straight_line\",\"east river dyke|the southeasterly bank of shuttleworth creek||other\",\"shuttleworth creek|the second set of railway tracks||creek\",\"|the easterly edge of the maple st right of way||other\",\"maple st|the end of maple st||road\",\"|a point due east of the point of commencement||straight_line\",\"|the mean high water mark of skaha lake||straight_line\",\"skaha lake|the point of commencement||shoreline\"] vs run 2 [\"railway trestle|its intersection with the mean high water mark of skaha lake||other\",\"hwy 97|the point of intersection with the westerly boundary of the right of way of green lake rd||\",\"|a point due west of a velocity drop structure on okanagan river northwest of the northeastern corner of lot 109 yale district||road\",\"east river dyke|the easterly edge of the east river dyke||straight_line\",\"east river dyke|the southeasterly bank of shuttleworth creek||other\",\"shuttleworth creek|the second set of railway tracks||creek\",\"railway tracks|the easterly edge of the maple st right of way||other\",\"maple st|the end of maple st||road\",\"|a point due east of the point of commencement||straight_line\",\"skaha lake|the mean high water mark of skaha lake||straight_line\",\"skaha lake|the point of commencement||shoreline\"]"
     },
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Okanagan Falls, Shuttleworth Creek, Skaha Lake): 1 km around the named points; not the boundary",
+      "quote": "Commencing at the southeastern corner of the railway trestle which crosses the south end of Skaha Lake and proceeding northwesterly along the easterly edge of the trestle to its intersection with the mean high water mark of Skaha Lake",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -119.59387695167321,
+            49.34207064867275
+          ],
+          [
+            -119.59165249836471,
+            49.33373756962052
+          ],
+          [
+            -119.59135441798071,
+            49.3328745926425
+          ],
+          [
+            -119.59092769502458,
+            49.33203487170042
+          ],
+          [
+            -119.59037646362727,
+            49.331226529379045
+          ],
+          [
+            -119.58970606154358,
+            49.33045738434755
+          ],
+          [
+            -119.58892297832612,
+            49.32973487578384
+          ],
+          [
+            -119.58803479240004,
+            49.32906599148089
+          ],
+          [
+            -119.5870500976523,
+            49.32845720032736
+          ],
+          [
+            -119.58597842024966,
+            49.32791438981277
+          ],
+          [
+            -119.58483012649145,
+            49.327442809158384
+          ],
+          [
+            -119.58361632258783,
+            49.32704701862024
+          ],
+          [
+            -119.582348747331,
+            49.32673084545165
+          ],
+          [
+            -119.5810396586927,
+            49.326497346948166
+          ],
+          [
+            -119.57970171543876,
+            49.326348780929564
+          ],
+          [
+            -119.57834785489838,
+            49.32628658394199
+          ],
+          [
+            -119.57699116806123,
+            49.32631135739002
+          ],
+          [
+            -119.5756447732006,
+            49.32642286173066
+          ],
+          [
+            -119.57432168923536,
+            49.326620018786066
+          ],
+          [
+            -119.57303471004421,
+            49.326900922151694
+          ],
+          [
+            -119.57179628093895,
+            49.32726285560114
+          ],
+          [
+            -119.57061837848147,
+            49.327702319310184
+          ],
+          [
+            -119.56951239479896,
+            49.32821506364911
+          ],
+          [
+            -119.56848902750973,
+            49.32879613021846
+          ],
+          [
+            -119.56755817631836,
+            49.329439899734616
+          ],
+          [
+            -119.56672884727811,
+            49.330140146304885
+          ],
+          [
+            -119.56600906564452,
+            49.33089009757081
+          ],
+          [
+            -119.56540579816424,
+            49.331682500140765
+          ],
+          [
+            -119.55895423222124,
+            49.34131802582348
+          ],
+          [
+            -119.55850490439475,
+            49.34208200371867
+          ],
+          [
+            -119.55816398669629,
+            49.342869424865384
+          ],
+          [
+            -119.55793430550813,
+            49.343673773284365
+          ],
+          [
+            -119.55781776704161,
+            49.3444883925995
+          ],
+          [
+            -119.5578153413858,
+            49.34530654110617
+          ],
+          [
+            -119.5579270542943,
+            49.34612144755626
+          ],
+          [
+            -119.57407761588783,
+            49.42370935525531
+          ],
+          [
+            -119.5743282915512,
+            49.424584101519976
+          ],
+          [
+            -119.57471065018544,
+            49.42543845181795
+          ],
+          [
+            -119.57522095480516,
+            49.426264041049734
+          ],
+          [
+            -119.57585421497983,
+            49.427052785307005
+          ],
+          [
+            -119.57660423548182,
+            49.427796961075934
+          ],
+          [
+            -119.57746367677174,
+            49.42848928092435
+          ],
+          [
+            -119.57842412673588,
+            49.4291229649288
+          ],
+          [
+            -119.57947618297742,
+            49.42969180713893
+          ],
+          [
+            -119.58060954485879,
+            49.43019023642489
+          ],
+          [
+            -119.58181311439377,
+            49.43061337110856
+          ],
+          [
+            -119.58307510499995,
+            49.43095706684014
+          ],
+          [
+            -119.5843831570424,
+            49.4312179572479
+          ],
+          [
+            -119.58572445903191,
+            49.43139348696048
+          ],
+          [
+            -119.58708587328235,
+            49.431481936675205
+          ],
+          [
+            -119.58845406478918,
+            49.43148244002572
+          ],
+          [
+            -119.58981563205562,
+            49.43139499208179
+          ],
+          [
+            -119.59115723857593,
+            49.431220449397735
+          ],
+          [
+            -119.59246574367656,
+            49.43096052160874
+          ],
+          [
+            -119.59372833142379,
+            49.43061775465823
+          ],
+          [
+            -119.59493263632544,
+            49.430195505821814
+          ],
+          [
+            -119.59606686458649,
+            49.42969791077434
+          ],
+          [
+            -119.59711990972413,
+            49.429129843025024
+          ],
+          [
+            -119.59808146140384,
+            49.428496866121066
+          ],
+          [
+            -119.59894210642719,
+            49.42780517909061
+          ],
+          [
+            -119.59969342088043,
+            49.42706155566309
+          ],
+          [
+            -119.60032805254194,
+            49.42627327786546
+          ],
+          [
+            -119.60083979274438,
+            49.425448064648016
+          ],
+          [
+            -119.60122363699207,
+            49.424593996241725
+          ],
+          [
+            -119.60147583374724,
+            49.423719434990765
+          ],
+          [
+            -119.6015939209147,
+            49.42283294343777
+          ],
+          [
+            -119.60157674967823,
+            49.42194320046543
+          ],
+          [
+            -119.59405469956997,
+            49.34305520414357
+          ],
+          [
+            -119.59387695167321,
+            49.34207064867275
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-075",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 75",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nOkanagan Falls\n75 That portion of the Province of British Columbia in the Similkameen Division of Yale Land District within the following described boundaries: Commencing at the southeastern corner of the railway trestle which crosses the south end of Skaha Lake and proceeding northwesterly along the easterly edge of the trestle to its intersection with the mean high water mark of Skaha Lake; thence due West to a point on the westerly edge of the Highway 97 right of way to the point of intersection with the westerly boundary of the right of way of Green Lake Road; thence southerly along the westerly edge of the right of way to a point due West of a velocity drop structure on Okanagan River northwest of the northeastern corner of Lot 109 Yale District; thence due East to the easterly edge of the East River Dyke; thence northwesterly along the easterly edge of the dyke to the southeasterly bank of Shuttleworth Creek; thence northeasterly along the bank to the second set of railway tracks; thence southeasterly then northeasterly along the railway tracks to the easterly edge of the Maple Street right of way; thence northwesterly along the easterly edge of the right of way to the end of Maple Street; thence due North in a straight line to a point due East of the point of commencement; thence due West in a straight line to the mean high water mark of Skaha Lake; thence westerly along the mean high water mark to the point of commencement. [en. B.C. Reg. 109/85, s. 3 (i); am. B.C. Reg. 172/86, s. 2.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Okanagan Falls, Shuttleworth Creek, Skaha Lake): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "in the Similkameen Division of Yale Land District",
+        "effect": "No Shooting Areas",
+        "geometry.steps[0]": "Commencing at the southeastern corner of the railway trestle which crosses the south end of Skaha Lake and proceeding northwesterly along the easterly edge of the trestle to its intersection with the mean high water mark of Skaha Lake",
+        "geometry.steps[1]": "thence due West to a point on the westerly edge of the Highway 97 right of way to the point of intersection with the westerly boundary of the right of way of Green Lake Road",
+        "geometry.steps[2]": "thence southerly along the westerly edge of the right of way to a point due West of a velocity drop structure on Okanagan River northwest of the northeastern corner of Lot 109 Yale District",
+        "geometry.steps[3]": "thence due East to the easterly edge of the East River Dyke",
+        "geometry.steps[4]": "thence northwesterly along the easterly edge of the dyke to the southeasterly bank of Shuttleworth Creek",
+        "geometry.steps[5]": "thence northeasterly along the bank to the second set of railway tracks",
+        "geometry.steps[6]": "thence southeasterly then northeasterly along the railway tracks to the easterly edge of the Maple Street right of way",
+        "geometry.steps[7]": "thence northwesterly along the easterly edge of the right of way to the end of Maple Street",
+        "geometry.steps[8]": "thence due North in a straight line to a point due East of the point of commencement",
+        "geometry.steps[9]": "thence due West in a straight line to the mean high water mark of Skaha Lake",
+        "geometry.steps[10]": "thence westerly along the mean high water mark to the point of commencement"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "29bbb915c6d521bb9fe541d4df6b84563a00fab3b1eb8434f86547dfe82add06",
+      "task_id": "closed_area-29bbb915c6d5",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Okanagan Falls, Shuttleworth Creek, Skaha Lake): 1 km around the named points; not the boundary",
+          "quote": "Commencing at the southeastern corner of the railway trestle which crosses the south end of Skaha Lake and proceeding northwesterly along the easterly edge of the trestle to its intersection with the mean high water mark of Skaha Lake",
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "25.836 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": null,
+          "detail": "the text names no area, or it could not be found"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "steps: run 1 [\"|its intersection with the mean high water mark of skaha lake||other\",\"hwy 97 right of way|the point of intersection with the westerly boundary of the right of way of green lake rd||\",\"|a point due west of a velocity drop structure on okanagan river northwest of the northeastern corner of lot 109 yale district||road\",\"|the easterly edge of the east river dyke||straight_line\",\"east river dyke|the southeasterly bank of shuttleworth creek||other\",\"shuttleworth creek|the second set of railway tracks||creek\",\"|the easterly edge of the maple st right of way||other\",\"maple st|the end of maple st||road\",\"|a point due east of the point of commencement||straight_line\",\"|the mean high water mark of skaha lake||straight_line\",\"skaha lake|the point of commencement||shoreline\"] vs run 2 [\"railway trestle|its intersection with the mean high water mark of skaha lake||other\",\"hwy 97|the point of intersection with the westerly boundary of the right of way of green lake rd||\",\"|a point due west of a velocity drop structure on okanagan river northwest of the northeastern corner of lot 109 yale district||road\",\"east river dyke|the easterly edge of the east river dyke||straight_line\",\"east river dyke|the southeasterly bank of shuttleworth creek||other\",\"shuttleworth creek|the second set of railway tracks||creek\",\"railway tracks|the easterly edge of the maple st right of way||other\",\"maple st|the end of maple st||road\",\"|a point due east of the point of commencement||straight_line\",\"skaha lake|the mean high water mark of skaha lake||straight_line\",\"skaha lake|the point of commencement||shoreline\"]"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: a walk outline is approximate; a person checks it against the text"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:07:30.423Z",
-  "updated": "2026-10-21T16:07:30.423Z"
+  "updated": "2026-10-28T19:49:42.464Z"
 }

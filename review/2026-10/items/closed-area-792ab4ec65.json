@@ -8,12 +8,10 @@
   "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "approximate outline (vicinity) drawn from the places the walk names",
+    "approximate outline (traced) drawn from the places the walk names",
     "\"Highway 93/95 right of way\" was not found in the official layers; that side is drawn straight",
     "\"S.L. 10 and S.L. 9\" was not found in the official layers; that side is drawn straight",
-    "\"S.L.19\" was not found in the official layers; that side is drawn straight",
     "\"Highway 93/95 right of way\" was not found in the official layers; that side is drawn straight",
-    "\"S.L.19\" was not found in the official layers; that side is drawn straight",
     "\"Columbia Lake and Columbia River\" was not found in the official layers; that side is drawn straight",
     "\"Block P.3043\" was not found in the official layers; that side is drawn straight",
     "\"S.L.36\" was not found in the official layers; that side is drawn straight",
@@ -22,10 +20,8 @@
     "\"S.L.126\" was not found in the official layers; that side is drawn straight",
     "\"S.L.119\" was not found in the official layers; that side is drawn straight",
     "\"S.L.118\" was not found in the official layers; that side is drawn straight",
-    "\"D.L.5352\" was not found in the official layers; that side is drawn straight",
     "\"Westside Road right of way\" was not found in the official layers; that side is drawn straight",
-    "\"Highway 93/95 right of way\" was not found in the official layers; that side is drawn straight",
-    "the outline could not be placed: a 1 km zone around the place the section names is marked"
+    "\"Highway 93/95 right of way\" was not found in the official layers; that side is drawn straight"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nFairmont\n111 That portion of the Province of British Columbia in M.U. 4-25 that is contained within the following described boundaries: Commencing in the vicinity of Fairmont at the point of intersection of the midline of Dutch Creek and the easterly boundary of Highway 93/95 right of way; thence in a general southerly direction along the easterly boundary of Highway 93/95 right of way to the point of intersection with the south boundary of S.L. 10, D.L. 344, Kootenay Land District; thence in a general easterly direction along the southerly boundaries of S.L. 10 and S.L. 9 to the southeast corner of S.L.9; thence southerly in a straight line to the northeast corner of S.L.19; thence westerly along the northerly boundary of S.L.19 to the easterly boundary of Highway 93/95 right of way; thence southerly along the easterly boundary of Highway 93/95 right of way to the southerly boundary of S.L.19; thence easterly along the southerly boundary of S.L.19 and a prolongation thereof to the natural boundary of Columbia Lake on the westerly shore thereof; thence in a general northerly direction along the natural boundary of Columbia Lake on the westerly shore thereof to the point of intersection with an easterly prolongation of the north boundary of S.L.19; thence easterly in a straight line to the point of intersection with the natural boundary of Columbia Lake on the easterly shore thereof at its intersection with the natural boundary of Warspite Creek on the right bank thereof; thence in a general northerly direction along the natural boundary of Columbia Lake on the easterly shore thereof and the natural boundary of Columbia River on the right bank thereof to the south boundary of Block P.3043; thence easterly and northerly along the southerly and easterly boundaries of Block P.3043 to the south boundary of S.L.36; thence easterly and northerly along the southerly and easterly boundaries of S.L.36 to the south boundary of S.L.11; thence easterly and northerly along the southerly and easterly boundaries of S.L.11 and along a northerly prolongation to the south boundary of the Fairmont Ski Hill area; thence easterly, northerly and westerly along the southerly, easterly and northerly boundaries of the Fairmont Ski Hill area to the northerly boundary of S.L.126 at a point adjacent to its intersection with the midline of Cold Spring Creek; thence westerly along the northerly boundary of S.L.126 to the southeast corner of S.L.119; thence northerly and westerly along the easterly and northerly boundaries of S.L.119 to the northeast corner of S.L.118; thence westerly along the northerly boundary of S.L.118 and a prolongation thereof to the natural boundary of Columbia River on the right bank thereof; thence southerly along the natural boundary of Columbia River on the right bank thereof to the northerly boundary of D.L.5352; thence westerly along the northerly boundary of D.L.5352 and a prolongation thereof to the westerly boundary of Westside Road right of way; thence southerly along the westerly boundary of Westside Road right of way and a prolongation thereof to the southerly boundary of Highway 93/95 right of way; thence westerly along the southerly boundary of Highway 93/95 right of way to the point of commencement. [en. B.C. Reg. 204/91, s. 12; am. B.C. Regs. 277/91, Sch. 2, s. 4; 224/92, s. 11.]",
@@ -604,7 +600,7 @@
     {
       "check": "area in expected range",
       "passed": true,
-      "detail": "0.344 km² (limit 500 km²)"
+      "detail": "0.862 km² (limit 500 km²)"
     },
     {
       "check": "inside the area the text names",
@@ -624,14 +620,14 @@
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
   "construction": [
     {
-      "what": "approximate outline (vicinity): corners where the followed features meet, traced along them where found, padded 100 m",
+      "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
       "quote": "Commencing in the vicinity of Fairmont at the point of intersection of the midline of Dutch Creek and the easterly boundary of Highway 93/95 right of way",
-      "source": "WHSE_BASEMAPPING.FWA_LAKES_POLY, WHSE_BASEMAPPING.FWA_RIVERS_POLY"
+      "source": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW, WHSE_BASEMAPPING.FWA_LAKES_POLY, WHSE_BASEMAPPING.FWA_RIVERS_POLY"
     }
   ],
   "feature": {
@@ -640,6 +636,478 @@
       "type": "Polygon",
       "coordinates": [
         [
+          [
+            -115.87993715630712,
+            50.35284155252535
+          ],
+          [
+            -115.8796222,
+            50.35257642
+          ],
+          [
+            -115.87882988,
+            50.35232861
+          ],
+          [
+            -115.87834012,
+            50.3520694
+          ],
+          [
+            -115.87791207,
+            50.35170196
+          ],
+          [
+            -115.87749256,
+            50.351081
+          ],
+          [
+            -115.87722683,
+            50.35084316
+          ],
+          [
+            -115.87688369,
+            50.35068792
+          ],
+          [
+            -115.8762644,
+            50.35057683
+          ],
+          [
+            -115.87553966,
+            50.35044723
+          ],
+          [
+            -115.87301596,
+            50.35051702
+          ],
+          [
+            -115.87197053,
+            50.35047001
+          ],
+          [
+            -115.87134082,
+            50.35035466
+          ],
+          [
+            -115.87106905,
+            50.34996158
+          ],
+          [
+            -115.87107992,
+            50.34953431
+          ],
+          [
+            -115.87130533,
+            50.34922241
+          ],
+          [
+            -115.8726597,
+            50.34823258
+          ],
+          [
+            -115.87299803,
+            50.34784805
+          ],
+          [
+            -115.87311861,
+            50.34756178
+          ],
+          [
+            -115.87319384,
+            50.3469807
+          ],
+          [
+            -115.87300271,
+            50.34669016
+          ],
+          [
+            -115.87251062,
+            50.34632842
+          ],
+          [
+            -115.87234082,
+            50.3460393
+          ],
+          [
+            -115.87232622,
+            50.34551377
+          ],
+          [
+            -115.87268531,
+            50.3448743
+          ],
+          [
+            -115.87262132,
+            50.34454531
+          ],
+          [
+            -115.8723624,
+            50.34430746
+          ],
+          [
+            -115.87190984,
+            50.34407532
+          ],
+          [
+            -115.87142737,
+            50.34399556
+          ],
+          [
+            -115.87081439,
+            50.34399128
+          ],
+          [
+            -115.87053891,
+            50.3438802
+          ],
+          [
+            -115.87026432,
+            50.34361672
+          ],
+          [
+            -115.87002072,
+            50.34311255
+          ],
+          [
+            -115.86972514,
+            50.34276362
+          ],
+          [
+            -115.86965681,
+            50.34246026
+          ],
+          [
+            -115.86979302,
+            50.34227369
+          ],
+          [
+            -115.8699936,
+            50.34214551
+          ],
+          [
+            -115.87025134,
+            50.34208285
+          ],
+          [
+            -115.8705169,
+            50.34208285
+          ],
+          [
+            -115.87073056,
+            50.34216403
+          ],
+          [
+            -115.87086917,
+            50.34227939
+          ],
+          [
+            -115.87133304,
+            50.3429388
+          ],
+          [
+            -115.87168731,
+            50.34301998
+          ],
+          [
+            -115.87191471,
+            50.34291743
+          ],
+          [
+            -115.8720427,
+            50.34271377
+          ],
+          [
+            -115.87209461,
+            50.34218255
+          ],
+          [
+            -115.8722291,
+            50.34188916
+          ],
+          [
+            -115.87252195,
+            50.34166982
+          ],
+          [
+            -115.87319593,
+            50.34145762
+          ],
+          [
+            -115.87333742,
+            50.34119272
+          ],
+          [
+            -115.87311329,
+            50.3408566
+          ],
+          [
+            -115.87261208,
+            50.34080391
+          ],
+          [
+            -115.87199179,
+            50.34095487
+          ],
+          [
+            -115.87176446,
+            50.34097054
+          ],
+          [
+            -115.87152898,
+            50.34089505
+          ],
+          [
+            -115.87146138,
+            50.34069994
+          ],
+          [
+            -115.87161586,
+            50.34059313
+          ],
+          [
+            -115.87228424,
+            50.34043077
+          ],
+          [
+            -115.87244597,
+            50.34034246
+          ],
+          [
+            -115.87251564,
+            50.33975996
+          ],
+          [
+            -115.87260525,
+            50.33968875
+          ],
+          [
+            -115.87286475,
+            50.33964602
+          ],
+          [
+            -115.87350166,
+            50.33973148
+          ],
+          [
+            -115.87393053,
+            50.33969872
+          ],
+          [
+            -115.87406805,
+            50.3394267
+          ],
+          [
+            -115.87405551,
+            50.33936118
+          ],
+          [
+            -115.87329836,
+            50.33915325
+          ],
+          [
+            -115.87254149,
+            50.33883565
+          ],
+          [
+            -115.87188845,
+            50.33836851
+          ],
+          [
+            -115.87158781,
+            50.33792415
+          ],
+          [
+            -115.87154217,
+            50.33767492
+          ],
+          [
+            -115.87186024,
+            50.33716221
+          ],
+          [
+            -115.87176799,
+            50.33702833
+          ],
+          [
+            -115.87152442,
+            50.33684888
+          ],
+          [
+            -115.87123261,
+            50.33672925
+          ],
+          [
+            -115.87080618,
+            50.33672639
+          ],
+          [
+            -115.87057925,
+            50.33682182
+          ],
+          [
+            -115.87000637,
+            50.33724196
+          ],
+          [
+            -115.86967514,
+            50.33724338
+          ],
+          [
+            -115.86926361,
+            50.3371323
+          ],
+          [
+            -115.86842531,
+            50.33646207
+          ],
+          [
+            -115.86820905,
+            50.33628917
+          ],
+          [
+            -115.86778617,
+            50.33579924
+          ],
+          [
+            -115.86776378,
+            50.33562263
+          ],
+          [
+            -115.86787121,
+            50.33540046
+          ],
+          [
+            -115.86804783,
+            50.33531643
+          ],
+          [
+            -115.86897452,
+            50.33543749
+          ],
+          [
+            -115.86963845,
+            50.33530076
+          ],
+          [
+            -115.87040078,
+            50.33502874
+          ],
+          [
+            -115.87087705,
+            50.33477665
+          ],
+          [
+            -115.87101632,
+            50.33448612
+          ],
+          [
+            -115.87067966,
+            50.33422548
+          ],
+          [
+            -115.87013749,
+            50.33410016
+          ],
+          [
+            -115.8699442,
+            50.334009
+          ],
+          [
+            -115.86971182,
+            50.33382955
+          ],
+          [
+            -115.86964042,
+            50.3336914
+          ],
+          [
+            -115.86983397,
+            50.33352192
+          ],
+          [
+            -115.87028456,
+            50.33331968
+          ],
+          [
+            -115.87062131,
+            50.33322996
+          ],
+          [
+            -115.8713366,
+            50.33314451
+          ],
+          [
+            -115.87140277,
+            50.33299782
+          ],
+          [
+            -115.8713654,
+            50.332891
+          ],
+          [
+            -115.87114197,
+            50.33272437
+          ],
+          [
+            -115.87031532,
+            50.33251074
+          ],
+          [
+            -115.86977856,
+            50.33220738
+          ],
+          [
+            -115.8694116,
+            50.33189405
+          ],
+          [
+            -115.86933144,
+            50.33155652
+          ],
+          [
+            -115.86944462,
+            50.33107229
+          ],
+          [
+            -115.869715,
+            50.3307376
+          ],
+          [
+            -115.87009736,
+            50.3305083
+          ],
+          [
+            -115.87040193,
+            50.3305966
+          ],
+          [
+            -115.87060889,
+            50.3308672
+          ],
+          [
+            -115.87043041,
+            50.33129446
+          ],
+          [
+            -115.87048973,
+            50.33147249
+          ],
+          [
+            -115.87075897,
+            50.33162772
+          ],
+          [
+            -115.87109047,
+            50.33165478
+          ],
+          [
+            -115.87136033,
+            50.33146537
+          ],
+          [
+            -115.8714746,
+            50.3313201
+          ],
           [
             -115.87152329,
             50.33108937
@@ -713,228 +1181,104 @@
             50.32587107
           ],
           [
-            -115.86656958,
-            50.32609609
+            -115.86734321350784,
+            50.32600752202499
           ],
           [
-            -115.86626458,
-            50.32601492
+            -115.86635088263493,
+            50.326883700009354
           ],
           [
-            -115.86616589,
-            50.3258198
+            -115.86624631748816,
+            50.32699122040946
           ],
           [
-            -115.8663542,
-            50.32561614
+            -115.86579700718718,
+            50.32753526560704
           ],
           [
-            -115.8672044,
-            50.32511481
+            -115.86570119883385,
+            50.327681077615864
           ],
           [
-            -115.86769119,
-            50.32476731
+            -115.86564687389763,
+            50.327835348133576
           ],
           [
-            -115.86842515,
-            50.32445256
+            -115.86563571214099,
+            50.327993308173845
           ],
           [
-            -115.86854643,
-            50.32433577
+            -115.86616584929196,
+            50.33586777457207
           ],
           [
-            -115.86855772,
-            50.32408511
+            -115.86618017072082,
+            50.335962702947185
           ],
           [
-            -115.86810838,
-            50.32377179
+            -115.86951093481305,
+            50.35011652274747
           ],
           [
-            -115.86732506,
-            50.32354107
+            -115.86956131195171,
+            50.35025494547974
           ],
           [
-            -115.86682981,
-            50.32369203
+            -115.8698035395596,
+            50.350742028269735
           ],
           [
-            -115.86678482,
-            50.32377606
+            -115.8699004291934,
+            50.35088972933635
           ],
           [
-            -115.86686905,
-            50.32426172
+            -115.87003683294081,
+            50.35102412562066
           ],
           [
-            -115.8667999,
-            50.32443831
+            -115.87020842705985,
+            50.35114095670427
           ],
           [
-            -115.8666823,
-            50.32453374
+            -115.87040977213965,
+            50.35123651896396
           ],
           [
-            -115.86636724,
-            50.32451523
+            -115.87063448552321,
+            50.35130778299221
           ],
           [
-            -115.86574032,
-            50.32428735
+            -115.87804173631318,
+            50.353152175531804
           ],
           [
-            -115.86480564,
-            50.32430017
+            -115.87834960122156,
+            50.35320417792504
           ],
           [
-            -115.86384223,
-            50.32359661
+            -115.878667904984,
+            50.35321075193466
           ],
           [
-            -115.86330485,
-            50.32300556
+            -115.8789803962708,
+            50.353171561917726
           ],
           [
-            -115.86312402,
-            50.3227136
+            -115.87931800175167,
+            50.35310320068363
           ],
           [
-            -115.86307832,
-            50.3224487
+            -115.87959185535951,
+            50.35302650742174
           ],
           [
-            -115.86312312,
-            50.32181919
+            -115.87983418242396,
+            50.35291467321614
           ],
           [
-            -115.86338393,
-            50.32109712
-          ],
-          [
-            -115.86336734,
-            50.32090913
-          ],
-          [
-            -115.86327253,
-            50.32079519
-          ],
-          [
-            -115.86310813,
-            50.32072683
-          ],
-          [
-            -115.86270196498162,
-            50.32069582420584
-          ],
-          [
-            -115.86236421120891,
-            50.32140626501359
-          ],
-          [
-            -115.86247909,
-            50.32152296
-          ],
-          [
-            -115.86256465,
-            50.3217722
-          ],
-          [
-            -115.86252758,
-            50.32184483
-          ],
-          [
-            -115.86234205,
-            50.32194168
-          ],
-          [
-            -115.86212366790676,
-            50.32191223057695
-          ],
-          [
-            -115.86201843778773,
-            50.32213357457605
-          ],
-          [
-            -115.86174726808937,
-            50.32388802914886
-          ],
-          [
-            -115.86201741779186,
-            50.32564254848886
-          ],
-          [
-            -115.86281856324716,
-            50.32732970372433
-          ],
-          [
-            -115.86411996611811,
-            50.32888464793542
-          ],
-          [
-            -115.86587164713528,
-            50.33024760978093
-          ],
-          [
-            -115.8680063017553,
-            50.331366192868565
-          ],
-          [
-            -115.86939912620393,
-            50.33184152654209
-          ],
-          [
-            -115.86933144,
-            50.33155652
-          ],
-          [
-            -115.86944462,
-            50.33107229
-          ],
-          [
-            -115.869715,
-            50.3307376
-          ],
-          [
-            -115.87009736,
-            50.3305083
-          ],
-          [
-            -115.87040193,
-            50.3305966
-          ],
-          [
-            -115.87060889,
-            50.3308672
-          ],
-          [
-            -115.87043041,
-            50.33129446
-          ],
-          [
-            -115.87048973,
-            50.33147249
-          ],
-          [
-            -115.87075897,
-            50.33162772
-          ],
-          [
-            -115.87109047,
-            50.33165478
-          ],
-          [
-            -115.87136033,
-            50.33146537
-          ],
-          [
-            -115.8714746,
-            50.3313201
-          ],
-          [
-            -115.87152329,
-            50.33108937
+            -115.87993715630712,
+            50.35284155252535
           ]
         ]
       ]
@@ -953,13 +1297,13 @@
       "partial_extent": false,
       "conservative": true,
       "approximate": true,
-      "approximate_quality": "vicinity",
+      "approximate_quality": "traced",
       "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
       "digitised_on": "2026-10-28",
       "reviewed_by": null,
       "reviewed_on": null,
       "confidence": "low",
-      "notes": "approximate outline (vicinity): corners where the followed features meet, traced along them where found, padded 100 m",
+      "notes": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
       "extraction_method": "ai",
       "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
       "prompt_version": "closed_area.v1",
@@ -995,9 +1339,9 @@
       "task_id": "closed_area-f0914f8382cd",
       "construction": [
         {
-          "what": "approximate outline (vicinity): corners where the followed features meet, traced along them where found, padded 100 m",
+          "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
           "quote": "Commencing in the vicinity of Fairmont at the point of intersection of the midline of Dutch Creek and the easterly boundary of Highway 93/95 right of way",
-          "source": "WHSE_BASEMAPPING.FWA_LAKES_POLY, WHSE_BASEMAPPING.FWA_RIVERS_POLY"
+          "source": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW, WHSE_BASEMAPPING.FWA_LAKES_POLY, WHSE_BASEMAPPING.FWA_RIVERS_POLY"
         }
       ],
       "validation": [
@@ -1014,7 +1358,7 @@
         {
           "check": "area in expected range",
           "passed": true,
-          "detail": "0.344 km² (limit 500 km²)"
+          "detail": "0.862 km² (limit 500 km²)"
         },
         {
           "check": "inside the area the text names",
@@ -1034,7 +1378,7 @@
         {
           "check": "step directions match the line",
           "passed": null,
-          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+          "detail": "not run: a walk outline is approximate; a person checks it against the text"
         }
       ],
       "change_type": "new"
@@ -1042,5 +1386,5 @@
   },
   "status": "open",
   "created": "2026-10-21T16:10:36.231Z",
-  "updated": "2026-10-28T17:28:24.423Z"
+  "updated": "2026-10-28T20:15:23.787Z"
 }

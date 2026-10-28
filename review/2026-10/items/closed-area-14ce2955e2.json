@@ -5,10 +5,11 @@
   "title": "Closed Areas Regulation, Schedule 5, section 77 (Coal Mountain Operations)",
   "rule_id": "W5-077",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Coal Mountain): 1 km around the named points; not the boundary"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nCoal Mountain Operations\n77 That portion of M.U. 4-23 in the vicinity of Sparwood outlined in red on the attached Map No. 5-77/18. [en. B.C. Reg. 239/2018, App. 1, s. 4 (d).]",
@@ -144,13 +145,388 @@
   ],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.137 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Coal Mountain): 1 km around the named points; not the boundary",
+      "quote": null,
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -114.68153122982842,
+            49.483217504114656
+          ],
+          [
+            -114.68146432539805,
+            49.48233602396463
+          ],
+          [
+            -114.68126475958684,
+            49.481463048589895
+          ],
+          [
+            -114.68093446118871,
+            49.48060698454286
+          ],
+          [
+            -114.68047661748446,
+            49.479776075088516
+          ],
+          [
+            -114.67989564330345,
+            49.47897832085962
+          ],
+          [
+            -114.67919713829357,
+            49.47822140286311
+          ],
+          [
+            -114.67838783281898,
+            49.47751260857712
+          ],
+          [
+            -114.67747552301319,
+            49.47685876184752
+          ],
+          [
+            -114.67646899561855,
+            49.476266157256305
+          ],
+          [
+            -114.67537794333812,
+            49.47574049959042
+          ],
+          [
+            -114.6742128715171,
+            49.47528684899064
+          ],
+          [
+            -114.67298499705068,
+            49.47490957230525
+          ],
+          [
+            -114.67170614048925,
+            49.47461230111388
+          ],
+          [
+            -114.6703886123749,
+            49.47439789682257
+          ],
+          [
+            -114.66904509489726,
+            49.47426842316359
+          ],
+          [
+            -114.66768851999998,
+            49.474225126362754
+          ],
+          [
+            -114.66633194510273,
+            49.47426842316359
+          ],
+          [
+            -114.66498842762509,
+            49.47439789682257
+          ],
+          [
+            -114.66367089951073,
+            49.47461230111388
+          ],
+          [
+            -114.6623920429493,
+            49.47490957230525
+          ],
+          [
+            -114.66116416848287,
+            49.47528684899064
+          ],
+          [
+            -114.65999909666185,
+            49.47574049959042
+          ],
+          [
+            -114.65890804438143,
+            49.476266157256305
+          ],
+          [
+            -114.65790151698678,
+            49.47685876184752
+          ],
+          [
+            -114.656989207181,
+            49.47751260857712
+          ],
+          [
+            -114.65617990170641,
+            49.47822140286311
+          ],
+          [
+            -114.65548139669653,
+            49.47897832085962
+          ],
+          [
+            -114.65490042251552,
+            49.479776075088516
+          ],
+          [
+            -114.65444257881126,
+            49.48060698454286
+          ],
+          [
+            -114.65411228041314,
+            49.481463048589895
+          ],
+          [
+            -114.65391271460193,
+            49.48233602396463
+          ],
+          [
+            -114.65384581017156,
+            49.483217504114656
+          ],
+          [
+            -114.65391221858995,
+            49.48409900013385
+          ],
+          [
+            -114.65411130745065,
+            49.48497202250619
+          ],
+          [
+            -114.65444116628866,
+            49.485828162873226
+          ],
+          [
+            -114.65489862471526,
+            49.48665917503701
+          ],
+          [
+            -114.65547928270706,
+            49.48745705441772
+          ],
+          [
+            -114.65617755276713,
+            49.488214115198886
+          ],
+          [
+            -114.65698671356036,
+            49.488923064415275
+          ],
+          [
+            -114.65789897451317,
+            49.48957707226712
+          ],
+          [
+            -114.65890555076074,
+            49.49016983798057
+          ],
+          [
+            -114.6599967477225,
+            49.49069565057685
+          ],
+          [
+            -114.66116205449329,
+            49.49114944396131
+          ],
+          [
+            -114.66239024514891,
+            49.49152684579852
+          ],
+          [
+            -114.66366948698803,
+            49.491824219699325
+          ],
+          [
+            -114.66498745466252,
+            49.492038700310644
+          ],
+          [
+            -114.66633144909072,
+            49.49216822096725
+          ],
+          [
+            -114.66768851999998,
+            49.492211533637246
+          ],
+          [
+            -114.66904559090925,
+            49.49216822096725
+          ],
+          [
+            -114.67038958533746,
+            49.492038700310644
+          ],
+          [
+            -114.67170755301194,
+            49.491824219699325
+          ],
+          [
+            -114.67298679485107,
+            49.49152684579852
+          ],
+          [
+            -114.6742149855067,
+            49.49114944396131
+          ],
+          [
+            -114.67538029227747,
+            49.49069565057685
+          ],
+          [
+            -114.67647148923923,
+            49.49016983798057
+          ],
+          [
+            -114.6774780654868,
+            49.48957707226712
+          ],
+          [
+            -114.67839032643963,
+            49.488923064415275
+          ],
+          [
+            -114.67919948723284,
+            49.488214115198886
+          ],
+          [
+            -114.6798977572929,
+            49.48745705441772
+          ],
+          [
+            -114.68047841528472,
+            49.48665917503701
+          ],
+          [
+            -114.68093587371132,
+            49.485828162873226
+          ],
+          [
+            -114.68126573254933,
+            49.48497202250619
+          ],
+          [
+            -114.68146482141003,
+            49.48409900013385
+          ],
+          [
+            -114.68153122982842,
+            49.483217504114656
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-077",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 77",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nCoal Mountain Operations\n77 That portion of M.U. 4-23 in the vicinity of Sparwood outlined in red on the attached Map No. 5-77/18. [en. B.C. Reg. 239/2018, App. 1, s. 4 (d).]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "other",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Coal Mountain): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "That portion of M.U. 4-23",
+        "effect": "No Shooting Areas"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "60b5690762fbad6e4c353c4bad20fcf068a3b4482b61a430c24f0a25f38f6d27",
+      "task_id": "closed_area-60b5690762fb",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Coal Mountain): 1 km around the named points; not the boundary",
+          "quote": null,
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "3.137 km² (limit none for this type)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:08:33.901Z",
-  "updated": "2026-10-27T23:10:49.683Z"
+  "updated": "2026-10-28T19:56:35.439Z"
 }

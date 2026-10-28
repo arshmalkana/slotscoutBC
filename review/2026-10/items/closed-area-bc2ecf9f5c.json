@@ -8,7 +8,8 @@
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
     "named area \"Section 14, Township 77, Range 16 west of the 6th Meridian, Peace River Land District\": none",
-    "the geometry builder does not draw \"waterbody_buffer\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "waterbody \"Radar Lake\": none in the Freshwater Atlas",
+    "none of the places the section names was found in the official layers",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -149,6 +150,15 @@
       "matches": 0,
       "ids": [],
       "sample": []
+    },
+    {
+      "query": "Radar Lake",
+      "kind": "water",
+      "layer": "WHSE_BASEMAPPING.FWA_LAKES_POLY",
+      "status": "none",
+      "matches": 0,
+      "ids": [],
+      "sample": []
     }
   ],
   "validation": [
@@ -161,5 +171,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:10:36.594Z",
-  "updated": "2026-10-27T23:12:36.333Z"
+  "updated": "2026-10-28T20:16:13.064Z"
 }

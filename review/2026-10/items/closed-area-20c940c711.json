@@ -5,10 +5,11 @@
   "title": "Closed Areas Regulation, Schedule 3, section 28 (North Kitsumkalum)",
   "rule_id": "W3-028",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Lot 5118, Range 5 Coast District): the outline of Lot 5118, Range 5 Coast District; not the boundary"
   ],
   "source": {
     "text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nNorth Kitsumkalum\n28 That portion of Lot 5118, Range 5 Coast District, lying west of Kalum Lake Road. [en. B.C. Reg. 162/87, s. 4.]",
@@ -171,13 +172,179 @@
   ],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "0.647 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Lot 5118, Range 5 Coast District): the outline of Lot 5118, Range 5 Coast District; not the boundary",
+      "quote": "That portion of Lot 5118, Range 5 Coast District",
+      "source": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -128.78472168,
+            54.81787835
+          ],
+          [
+            -128.77789507,
+            54.81787026
+          ],
+          [
+            -128.7753548,
+            54.81786064
+          ],
+          [
+            -128.7750201,
+            54.81785927
+          ],
+          [
+            -128.77345168,
+            54.81785284
+          ],
+          [
+            -128.77219098,
+            54.8178453
+          ],
+          [
+            -128.77219289,
+            54.82506429
+          ],
+          [
+            -128.77510755,
+            54.82508852
+          ],
+          [
+            -128.77964119,
+            54.82513282
+          ],
+          [
+            -128.78027563,
+            54.82513775
+          ],
+          [
+            -128.78470564,
+            54.82517172
+          ],
+          [
+            -128.78472168,
+            54.81787835
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W3-028",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 3, s. 28",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nNorth Kitsumkalum\n28 That portion of Lot 5118, Range 5 Coast District, lying west of Kalum Lake Road. [en. B.C. Reg. 162/87, s. 4.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "other",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Lot 5118, Range 5 Coast District): the outline of Lot 5118, Range 5 Coast District; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "Range 5 Coast District",
+        "geometry.road": "Kalum Lake Road",
+        "geometry.feature": "That portion of Lot 5118, Range 5 Coast District",
+        "effect": "No Shooting or Hunting Areas",
+        "geometry.side": "lying west of Kalum Lake Road"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "543aa53888207b771e9306c41266fc9af9d1f5741da05d9365f8164b8024cd0b",
+      "task_id": "closed_area-543aa5388820",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Lot 5118, Range 5 Coast District): the outline of Lot 5118, Range 5 Coast District; not the boundary",
+          "quote": "That portion of Lot 5118, Range 5 Coast District",
+          "source": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "0.647 km² (limit none for this type)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:58:58.166Z",
-  "updated": "2026-10-28T17:10:26.625Z"
+  "updated": "2026-10-28T19:55:53.551Z"
 }

@@ -9,6 +9,11 @@
   "why": [
     "AI runs disagree: method: run 1 \"metes_and_bounds\" vs run 2 \"other\"; steps: run 1 [\"block 32 cowichan lake land district|||lot_line\",\"mayo lake rd|||road\",\"e. n. railway right of way|||other\",\"skutz falls rd|||road\"] vs run 2 []",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "\"Block 32, Cowichan Lake Land District\" was not found in the official layers; that side is drawn straight",
+    "\"Mayo Lake Road\" was not found in the official layers; that side is drawn straight",
+    "\"E. & N. Railway right of way\" was not found in the official layers; that side is drawn straight",
+    "\"Skutz Falls Road\" was not found in the official layers; that side is drawn straight",
+    "none of the places the section names was found in the official layers",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -208,11 +213,11 @@
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:08:32.763Z",
-  "updated": "2026-10-28T17:10:24.315Z"
+  "updated": "2026-10-28T19:55:45.153Z"
 }

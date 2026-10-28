@@ -5,10 +5,11 @@
   "title": "Closed Areas Regulation, Schedule 3, section 61 (Elkview Operations)",
   "rule_id": "W3-061",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Elkview): 1 km around the named points; not the boundary"
   ],
   "source": {
     "text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nElkview Operations\n61 That portion of M.U. 4-23 in the vicinity of Sparwood outlined in red on the attached Map No. 3-61/18. [en. B.C. Reg. 239/2018, App. 1, s. 3.]",
@@ -144,13 +145,388 @@
   ],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.137 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Elkview): 1 km around the named points; not the boundary",
+      "quote": null,
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -114.90252725634355,
+            49.741110276548035
+          ],
+          [
+            -114.9024599946965,
+            49.740228796470966
+          ],
+          [
+            -114.90225936797898,
+            49.73935582131179
+          ],
+          [
+            -114.90192731530168,
+            49.73849975761458
+          ],
+          [
+            -114.90146704093183,
+            49.7376688486309
+          ],
+          [
+            -114.90088298318793,
+            49.73687109497543
+          ],
+          [
+            -114.90018077148028,
+            49.736114177633056
+          ],
+          [
+            -114.89936717191954,
+            49.735405384056776
+          ],
+          [
+            -114.89845002202385,
+            49.73475153806518
+          ],
+          [
+            -114.89743815515833,
+            49.73415893421194
+          ],
+          [
+            -114.89634131543784,
+            49.73363327725565
+          ],
+          [
+            -114.89517006391354,
+            49.733179627309774
+          ],
+          [
+            -114.8939356769454,
+            49.73280235119753
+          ],
+          [
+            -114.8926500377367,
+            49.732505080476514
+          ],
+          [
+            -114.89132552206965,
+            49.7322906765347
+          ],
+          [
+            -114.88997487933605,
+            49.732161203090925
+          ],
+          [
+            -114.88861111,
+            49.73211790636276
+          ],
+          [
+            -114.88724734066395,
+            49.732161203090925
+          ],
+          [
+            -114.88589669793035,
+            49.7322906765347
+          ],
+          [
+            -114.88457218226331,
+            49.732505080476514
+          ],
+          [
+            -114.8832865430546,
+            49.73280235119753
+          ],
+          [
+            -114.88205215608646,
+            49.733179627309774
+          ],
+          [
+            -114.88088090456216,
+            49.73363327725565
+          ],
+          [
+            -114.87978406484167,
+            49.73415893421194
+          ],
+          [
+            -114.87877219797615,
+            49.73475153806518
+          ],
+          [
+            -114.87785504808046,
+            49.735405384056776
+          ],
+          [
+            -114.87704144851972,
+            49.736114177633056
+          ],
+          [
+            -114.87633923681207,
+            49.73687109497543
+          ],
+          [
+            -114.87575517906816,
+            49.7376688486309
+          ],
+          [
+            -114.87529490469832,
+            49.73849975761458
+          ],
+          [
+            -114.87496285202101,
+            49.73935582131179
+          ],
+          [
+            -114.8747622253035,
+            49.740228796470966
+          ],
+          [
+            -114.87469496365645,
+            49.741110276548035
+          ],
+          [
+            -114.87476172209166,
+            49.74199177263965
+          ],
+          [
+            -114.87496186493549,
+            49.742864795227035
+          ],
+          [
+            -114.87529347167224,
+            49.743720935943465
+          ],
+          [
+            -114.87575335517191,
+            49.74455194857759
+          ],
+          [
+            -114.87633709213695,
+            49.74534982853148
+          ],
+          [
+            -114.8770390654844,
+            49.74610688996668
+          ],
+          [
+            -114.87785251826361,
+            49.74681583989283
+          ],
+          [
+            -114.87876961859725,
+            49.747469848482815
+          ],
+          [
+            -114.87978153502479,
+            49.748062614934476
+          ],
+          [
+            -114.88087852152674,
+            49.74858842824064
+          ],
+          [
+            -114.88205001141121,
+            49.749042222279364
+          ],
+          [
+            -114.88328471915821,
+            49.74941962469005
+          ],
+          [
+            -114.88457074923711,
+            49.74971699906151
+          ],
+          [
+            -114.88589571084474,
+            49.74993148002256
+          ],
+          [
+            -114.88724683745208,
+            49.75006100089455
+          ],
+          [
+            -114.88861111,
+            49.75010431363725
+          ],
+          [
+            -114.88997538254792,
+            49.75006100089455
+          ],
+          [
+            -114.89132650915526,
+            49.74993148002256
+          ],
+          [
+            -114.89265147076289,
+            49.74971699906151
+          ],
+          [
+            -114.89393750084179,
+            49.74941962469005
+          ],
+          [
+            -114.89517220858879,
+            49.749042222279364
+          ],
+          [
+            -114.89634369847326,
+            49.74858842824064
+          ],
+          [
+            -114.89744068497521,
+            49.748062614934476
+          ],
+          [
+            -114.89845260140275,
+            49.747469848482815
+          ],
+          [
+            -114.89936970173639,
+            49.74681583989283
+          ],
+          [
+            -114.90018315451562,
+            49.74610688996668
+          ],
+          [
+            -114.90088512786305,
+            49.74534982853148
+          ],
+          [
+            -114.90146886482809,
+            49.74455194857759
+          ],
+          [
+            -114.90192874832776,
+            49.743720935943465
+          ],
+          [
+            -114.90226035506451,
+            49.742864795227035
+          ],
+          [
+            -114.90246049790834,
+            49.74199177263965
+          ],
+          [
+            -114.90252725634355,
+            49.741110276548035
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W3-061",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 3, s. 61",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nElkview Operations\n61 That portion of M.U. 4-23 in the vicinity of Sparwood outlined in red on the attached Map No. 3-61/18. [en. B.C. Reg. 239/2018, App. 1, s. 3.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "other",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Elkview): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "That portion of M.U. 4-23",
+        "effect": "No Shooting or Hunting Areas"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "07ff6e1fc5ae8d2b7e3ef3f353a72ab580737dbffd7e427d1e653c82bb7f46ed",
+      "task_id": "closed_area-07ff6e1fc5ae",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Elkview): 1 km around the named points; not the boundary",
+          "quote": null,
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "3.137 km² (limit none for this type)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:07:25.803Z",
-  "updated": "2026-10-27T23:10:06.167Z"
+  "updated": "2026-10-28T19:46:08.469Z"
 }

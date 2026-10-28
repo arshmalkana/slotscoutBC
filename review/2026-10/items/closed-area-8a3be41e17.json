@@ -5,10 +5,11 @@
   "title": "Closed Areas Regulation, Schedule 7, section 7 (Murtle Lake Nature Conservancy)",
   "rule_id": "W8-007",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "named other \"Murtle Lake Nature Conservancy Area\": failed (no official layer for area type other); the larger area is not drawn in its place",
-    "validation failed: shape built (no shape could be built)"
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Murtle Lake): 1 km around the named points; not the boundary"
   ],
   "source": {
     "text": "Schedule 7 No Hunting Areas (Section 8)\nMurtle Lake Nature Conservancy\n7 That portion of M.U. 3-45 known as the Murtle Lake Nature Conservancy Area.",
@@ -165,13 +166,389 @@
   ],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.137 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Murtle Lake): 1 km around the named points; not the boundary",
+      "quote": "the Murtle Lake Nature Conservancy Area",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -119.65159714715698,
+            52.13833242211886
+          ],
+          [
+            -119.6515263017945,
+            52.137450942759656
+          ],
+          [
+            -119.6513150334593,
+            52.13657796972081
+          ],
+          [
+            -119.65096538477016,
+            52.135721909464856
+          ],
+          [
+            -119.65048073039658,
+            52.13489100511104
+          ],
+          [
+            -119.64986574427614,
+            52.13409325709609
+          ],
+          [
+            -119.64912635435421,
+            52.13333634618812
+          ],
+          [
+            -119.64826968529148,
+            52.132627559592905
+          ],
+          [
+            -119.64730398969866,
+            52.131973720860785
+          ],
+          [
+            -119.64623856856659,
+            52.13138112426652
+          ],
+          [
+            -119.64508368166157,
+            52.130855474289845
+          ],
+          [
+            -119.64385044874997,
+            52.13040183077614
+          ],
+          [
+            -119.64255074260195,
+            52.13002456030152
+          ],
+          [
+            -119.64119707480162,
+            52.12972729420704
+          ],
+          [
+            -119.63980247545709,
+            52.129512893702966
+          ],
+          [
+            -119.63838036796129,
+            52.12938342237612
+          ],
+          [
+            -119.63694443999998,
+            52.12934012636274
+          ],
+          [
+            -119.63550851203868,
+            52.12938342237612
+          ],
+          [
+            -119.63408640454288,
+            52.129512893702966
+          ],
+          [
+            -119.63269180519835,
+            52.12972729420704
+          ],
+          [
+            -119.63133813739802,
+            52.13002456030152
+          ],
+          [
+            -119.63003843125,
+            52.13040183077614
+          ],
+          [
+            -119.6288051983384,
+            52.130855474289845
+          ],
+          [
+            -119.62765031143338,
+            52.13138112426652
+          ],
+          [
+            -119.62658489030132,
+            52.131973720860785
+          ],
+          [
+            -119.62561919470849,
+            52.132627559592905
+          ],
+          [
+            -119.62476252564576,
+            52.13333634618812
+          ],
+          [
+            -119.62402313572383,
+            52.13409325709609
+          ],
+          [
+            -119.62340814960339,
+            52.13489100511104
+          ],
+          [
+            -119.62292349522981,
+            52.135721909464856
+          ],
+          [
+            -119.62257384654067,
+            52.13657796972081
+          ],
+          [
+            -119.62236257820547,
+            52.137450942759656
+          ],
+          [
+            -119.622291732843,
+            52.13833242211886
+          ],
+          [
+            -119.6223620010429,
+            52.139213918922735
+          ],
+          [
+            -119.62257271439559,
+            52.140086943625235
+          ],
+          [
+            -119.62292185160992,
+            52.14094308777841
+          ],
+          [
+            -119.62340605767203,
+            52.141774105038884
+          ],
+          [
+            -119.62402067587276,
+            52.142571990631005
+          ],
+          [
+            -119.62475979240565,
+            52.14332905849963
+          ],
+          [
+            -119.62561629311624,
+            52.14403801540709
+          ],
+          [
+            -119.6265819318635,
+            52.14469203125804
+          ],
+          [
+            -119.6276474098411,
+            52.145284804971126
+          ],
+          [
+            -119.62880246509819,
+            52.145810625260054
+          ],
+          [
+            -119.63003597139878,
+            52.14626442573443
+          ],
+          [
+            -119.6313360454665,
+            52.14664183378623
+          ],
+          [
+            -119.6326901615783,
+            52.14693921278738
+          ],
+          [
+            -119.63408527239767,
+            52.147153697188685
+          ],
+          [
+            -119.63550793487607,
+            52.14728322017918
+          ],
+          [
+            -119.63694443999998,
+            52.14732653363724
+          ],
+          [
+            -119.6383809451239,
+            52.14728322017918
+          ],
+          [
+            -119.6398036076023,
+            52.147153697188685
+          ],
+          [
+            -119.64119871842168,
+            52.14693921278738
+          ],
+          [
+            -119.64255283453348,
+            52.14664183378623
+          ],
+          [
+            -119.64385290860119,
+            52.14626442573443
+          ],
+          [
+            -119.64508641490178,
+            52.145810625260054
+          ],
+          [
+            -119.64624147015887,
+            52.145284804971126
+          ],
+          [
+            -119.64730694813647,
+            52.14469203125804
+          ],
+          [
+            -119.64827258688373,
+            52.14403801540709
+          ],
+          [
+            -119.64912908759432,
+            52.14332905849963
+          ],
+          [
+            -119.64986820412722,
+            52.142571990631005
+          ],
+          [
+            -119.65048282232794,
+            52.141774105038884
+          ],
+          [
+            -119.65096702839006,
+            52.14094308777841
+          ],
+          [
+            -119.65131616560438,
+            52.140086943625235
+          ],
+          [
+            -119.65152687895707,
+            52.139213918922735
+          ],
+          [
+            -119.65159714715698,
+            52.13833242211886
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W8-007",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 7, s. 7",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 7 No Hunting Areas (Section 8)\nMurtle Lake Nature Conservancy\n7 That portion of M.U. 3-45 known as the Murtle Lake Nature Conservancy Area.",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_hunting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "admin_boundary",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Murtle Lake): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "That portion of M.U. 3-45",
+        "geometry.feature": "the Murtle Lake Nature Conservancy Area",
+        "effect": "No Hunting Areas"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "356886b5f5033a29b448c866eed49902a229220e2312ee3344bba76e83016967",
+      "task_id": "closed_area-356886b5f503",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Murtle Lake): 1 km around the named points; not the boundary",
+          "quote": "the Murtle Lake Nature Conservancy Area",
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "3.137 km² (limit none for this type)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:08:06.694Z",
-  "updated": "2026-10-27T23:10:20.202Z"
+  "updated": "2026-10-28T19:49:54.472Z"
 }

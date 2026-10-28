@@ -5,11 +5,13 @@
   "title": "Closed Areas Regulation, Schedule 3, section 55 (Sun Peaks Resort)",
   "rule_id": "W3-055",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: feature: run 1 \"sun peaks resort\" vs run 2 \"any ski lift run facility or development of the sun peaks resort\"",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "approximate zone around the places the section names, using run 1's reading",
+    "a zone around the places the section names (Sun Peaks): 1 km around the named points; not the boundary",
+    "validation failed: two independent extractions agree (feature: run 1 \"sun peaks resort\" vs run 2 \"any ski lift run facility or development of the sun peaks resort\")"
   ],
   "source": {
     "text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nSun Peaks Resort\n55 That portion of M.U. 3-27 in the vicinity of Kamloops, KDYD, which is contained within the following described boundaries: All land and waters within 400 metres of any ski lift, run, facility or development of the Sun Peaks Resort. [en. B.C. Reg. 322/95, s. 2 (b).]",
@@ -140,16 +142,419 @@
   "disagreements": [
     "feature: run 1 \"sun peaks resort\" vs run 2 \"any ski lift run facility or development of the sun peaks resort\""
   ],
-  "lookups": [],
-  "validation": [
+  "lookups": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "query": "M.U. 3-27",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "3-27"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "3-27",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 3,
+          "REGION_RESPONSIBLE_ID": "3",
+          "REGION_RESPONSIBLE_NAME": "Thompson",
+          "GAME_MANAGEMENT_ZONE_ID": "3c",
+          "GAME_MANAGEMENT_ZONE_NAME": "Bonaparte",
+          "FEATURE_AREA_SQM": 1680149800.2324,
+          "FEATURE_LENGTH_M": 232608.957,
+          "OBJECTID": 371,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
     }
   ],
-  "construction": [],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.137 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": false,
+      "detail": "feature: run 1 \"sun peaks resort\" vs run 2 \"any ski lift run facility or development of the sun peaks resort\""
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Sun Peaks): 1 km around the named points; not the boundary",
+      "quote": "any ski lift, run, facility or development of the Sun Peaks Resort",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -119.8936993081048,
+            50.88444357200575
+          ],
+          [
+            -119.89363039861487,
+            50.883562092261805
+          ],
+          [
+            -119.89342487833372,
+            50.88268911808664
+          ],
+          [
+            -119.8930847339649,
+            50.88183305598648
+          ],
+          [
+            -119.89261324813171,
+            50.881002149151485
+          ],
+          [
+            -119.89201496750076,
+            50.88020439811374
+          ],
+          [
+            -119.89129565876466,
+            50.87944748375755
+          ],
+          [
+            -119.8904622529166,
+            50.87873869342115
+          ],
+          [
+            -119.88952277836088,
+            50.87808485079866
+          ],
+          [
+            -119.88848628350868,
+            50.8774922503143
+          ],
+          [
+            -119.88736274960792,
+            50.87696659659723
+          ],
+          [
+            -119.88616299464796,
+            50.87651294963652
+          ],
+          [
+            -119.88489856926316,
+            50.876135676140684
+          ],
+          [
+            -119.88358164563475,
+            50.875838407566846
+          ],
+          [
+            -119.88222490045533,
+            50.87562400522048
+          ],
+          [
+            -119.88084139307587,
+            50.875494532759184
+          ],
+          [
+            -119.87944444000001,
+            50.87545123636275
+          ],
+          [
+            -119.87804748692416,
+            50.875494532759184
+          ],
+          [
+            -119.8766639795447,
+            50.87562400522048
+          ],
+          [
+            -119.87530723436527,
+            50.875838407566846
+          ],
+          [
+            -119.87399031073686,
+            50.876135676140684
+          ],
+          [
+            -119.87272588535207,
+            50.87651294963652
+          ],
+          [
+            -119.87152613039211,
+            50.87696659659723
+          ],
+          [
+            -119.87040259649133,
+            50.8774922503143
+          ],
+          [
+            -119.86936610163914,
+            50.87808485079866
+          ],
+          [
+            -119.86842662708341,
+            50.87873869342115
+          ],
+          [
+            -119.86759322123537,
+            50.87944748375755
+          ],
+          [
+            -119.86687391249926,
+            50.88020439811374
+          ],
+          [
+            -119.8662756318683,
+            50.881002149151485
+          ],
+          [
+            -119.86580414603512,
+            50.88183305598648
+          ],
+          [
+            -119.86546400166631,
+            50.88268911808664
+          ],
+          [
+            -119.86525848138514,
+            50.883562092261805
+          ],
+          [
+            -119.86518957189521,
+            50.88444357200575
+          ],
+          [
+            -119.86525794456186,
+            50.88532506842796
+          ],
+          [
+            -119.86546294864957,
+            50.88619809199699
+          ],
+          [
+            -119.86580261729176,
+            50.887054234308415
+          ],
+          [
+            -119.86627368614707,
+            50.88788524908963
+          ],
+          [
+            -119.8668716245731,
+            50.88868313166021
+          ],
+          [
+            -119.86759067902803,
+            50.88944019608114
+          ],
+          [
+            -119.86842392829048,
+            50.8901491492473
+          ],
+          [
+            -119.86936334997368,
+            50.890803161207046
+          ],
+          [
+            -119.87039989769835,
+            50.89139593102868
+          ],
+          [
+            -119.87152358818467,
+            50.891921747575516
+          ],
+          [
+            -119.8727235974258,
+            50.892375544600974
+          ],
+          [
+            -119.8739883650155,
+            50.892752949629674
+          ],
+          [
+            -119.87530570562178,
+            50.89305032614974
+          ],
+          [
+            -119.87666292652784,
+            50.893264808707386
+          ],
+          [
+            -119.87804695010082,
+            50.89339433056255
+          ],
+          [
+            -119.87944444000001,
+            50.89343764363725
+          ],
+          [
+            -119.88084192989919,
+            50.89339433056255
+          ],
+          [
+            -119.88222595347217,
+            50.893264808707386
+          ],
+          [
+            -119.88358317437823,
+            50.89305032614974
+          ],
+          [
+            -119.88490051498451,
+            50.892752949629674
+          ],
+          [
+            -119.88616528257421,
+            50.892375544600974
+          ],
+          [
+            -119.88736529181534,
+            50.891921747575516
+          ],
+          [
+            -119.88848898230167,
+            50.89139593102868
+          ],
+          [
+            -119.88952553002633,
+            50.890803161207046
+          ],
+          [
+            -119.89046495170955,
+            50.8901491492473
+          ],
+          [
+            -119.89129820097199,
+            50.88944019608114
+          ],
+          [
+            -119.89201725542692,
+            50.88868313166021
+          ],
+          [
+            -119.89261519385296,
+            50.88788524908963
+          ],
+          [
+            -119.89308626270825,
+            50.887054234308415
+          ],
+          [
+            -119.89342593135046,
+            50.88619809199699
+          ],
+          [
+            -119.89363093543815,
+            50.88532506842796
+          ],
+          [
+            -119.8936993081048,
+            50.88444357200575
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W3-055",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 3, s. 55",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nSun Peaks Resort\n55 That portion of M.U. 3-27 in the vicinity of Kamloops, KDYD, which is contained within the following described boundaries: All land and waters within 400 metres of any ski lift, run, facility or development of the Sun Peaks Resort. [en. B.C. Reg. 322/95, s. 2 (b).]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "other",
+      "buffer_m": 400,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Sun Peaks): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "That portion of M.U. 3-27",
+        "geometry.feature": "any ski lift, run, facility or development of the Sun Peaks Resort",
+        "geometry.buffer_m": "within 400 metres",
+        "effect": "No Shooting or Hunting Areas"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "641094842b62817bedb480df69d96e9f971c46270c6b987ba401ae649f794e6f",
+      "task_id": "closed_area-641094842b62",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Sun Peaks): 1 km around the named points; not the boundary",
+          "quote": "any ski lift, run, facility or development of the Sun Peaks Resort",
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "3.137 km² (limit none for this type)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "feature: run 1 \"sun peaks resort\" vs run 2 \"any ski lift run facility or development of the sun peaks resort\""
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:08:34.260Z",
-  "updated": "2026-10-21T16:08:34.260Z"
+  "updated": "2026-10-28T19:56:56.569Z"
 }

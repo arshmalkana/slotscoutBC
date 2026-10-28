@@ -5,10 +5,11 @@
   "title": "Closed Areas Regulation, Schedule 5, section 19 (Kathlyn Lake)",
   "rule_id": "W5-019",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Kathlyn Lake): the outline of Kathlyn Lake and 1 km around the named points; not the boundary"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nKathlyn Lake\n19 That portion of the Province of British Columbia in the vicinity of Kathlyn Lake, Range 5, Coast District, which is contained within the following described boundaries: Those waters of Kathlyn Lake to the maximum high water mark situate and lying within portions of Lots 10, 11, 14 and 15 of Township 1A, Range 5, Coast District.",
@@ -156,13 +157,390 @@
   ],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.137 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Kathlyn Lake): the outline of Kathlyn Lake and 1 km around the named points; not the boundary",
+      "quote": "Those waters of Kathlyn Lake",
+      "source": "WHSE_BASEMAPPING.FWA_LAKES_POLY, WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -127.22144415626865,
+            54.82416565858078
+          ],
+          [
+            -127.22136864675683,
+            54.82328418012408
+          ],
+          [
+            -127.2211435334399,
+            54.82241120975026
+          ],
+          [
+            -127.22077099367054,
+            54.82155515381934
+          ],
+          [
+            -127.22025462386101,
+            54.82072425528427
+          ],
+          [
+            -127.21959940451535,
+            54.81992651435811
+          ],
+          [
+            -127.21881165197354,
+            54.819169611536594
+          ],
+          [
+            -127.21789895734283,
+            54.818460833714724
+          ],
+          [
+            -127.21687011321413,
+            54.817807004105774
+          ],
+          [
+            -127.21573502887544,
+            54.81721441663402
+          ],
+          [
+            -127.21450463484375,
+            54.81668877542875
+          ],
+          [
+            -127.21319077763515,
+            54.81623513999837
+          ],
+          [
+            -127.21180610578631,
+            54.815857876608554
+          ],
+          [
+            -127.21036394821985,
+            54.81556061632824
+          ],
+          [
+            -127.20887818611875,
+            54.81534622014438
+          ],
+          [
+            -127.20736311953411,
+            54.81521675147786
+          ],
+          [
+            -127.20583333000002,
+            54.815173456362764
+          ],
+          [
+            -127.20430354046593,
+            54.81521675147786
+          ],
+          [
+            -127.20278847388128,
+            54.81534622014438
+          ],
+          [
+            -127.20130271178019,
+            54.81556061632824
+          ],
+          [
+            -127.19986055421373,
+            54.815857876608554
+          ],
+          [
+            -127.19847588236487,
+            54.81623513999837
+          ],
+          [
+            -127.19716202515627,
+            54.81668877542875
+          ],
+          [
+            -127.19593163112458,
+            54.81721441663402
+          ],
+          [
+            -127.19479654678591,
+            54.817807004105774
+          ],
+          [
+            -127.19376770265721,
+            54.818460833714724
+          ],
+          [
+            -127.1928550080265,
+            54.819169611536594
+          ],
+          [
+            -127.19206725548467,
+            54.81992651435811
+          ],
+          [
+            -127.19141203613903,
+            54.82072425528427
+          ],
+          [
+            -127.1908956663295,
+            54.82155515381934
+          ],
+          [
+            -127.19052312656014,
+            54.82241120975026
+          ],
+          [
+            -127.19029801324321,
+            54.82328418012408
+          ],
+          [
+            -127.19022250373138,
+            54.82416565858078
+          ],
+          [
+            -127.19029733498806,
+            54.82504715627946
+          ],
+          [
+            -127.1905217961148,
+            54.825920183639795
+          ],
+          [
+            -127.19089373482223,
+            54.82677633211178
+          ],
+          [
+            -127.19140957779656,
+            54.82760735518617
+          ],
+          [
+            -127.19206436477972,
+            54.82840524786391
+          ],
+          [
+            -127.19285179604722,
+            54.829162323817584
+          ],
+          [
+            -127.19376429283815,
+            54.82987128949882
+          ],
+          [
+            -127.19479307016451,
+            54.83052531447494
+          ],
+          [
+            -127.19592822130542,
+            54.8311180973139
+          ],
+          [
+            -127.19715881317686,
+            54.83164392637855
+          ],
+          [
+            -127.19847299165974,
+            54.832097734941094
+          ],
+          [
+            -127.19985809587105,
+            54.83247515008253
+          ],
+          [
+            -127.2013007802727,
+            54.83277253490219
+          ],
+          [
+            -127.2027871434358,
+            54.832987023627126
+          ],
+          [
+            -127.20430286221071,
+            54.833116549280156
+          ],
+          [
+            -127.20583333000002,
+            54.83315986363725
+          ],
+          [
+            -127.20736379778933,
+            54.833116549280156
+          ],
+          [
+            -127.20887951656424,
+            54.832987023627126
+          ],
+          [
+            -127.21036587972732,
+            54.83277253490219
+          ],
+          [
+            -127.21180856412897,
+            54.83247515008253
+          ],
+          [
+            -127.2131936683403,
+            54.832097734941094
+          ],
+          [
+            -127.21450784682318,
+            54.83164392637855
+          ],
+          [
+            -127.21573843869461,
+            54.8311180973139
+          ],
+          [
+            -127.21687358983552,
+            54.83052531447494
+          ],
+          [
+            -127.21790236716188,
+            54.82987128949882
+          ],
+          [
+            -127.21881486395282,
+            54.829162323817584
+          ],
+          [
+            -127.21960229522031,
+            54.82840524786391
+          ],
+          [
+            -127.22025708220347,
+            54.82760735518617
+          ],
+          [
+            -127.22077292517781,
+            54.82677633211178
+          ],
+          [
+            -127.22114486388523,
+            54.825920183639795
+          ],
+          [
+            -127.22136932501198,
+            54.82504715627946
+          ],
+          [
+            -127.22144415626865,
+            54.82416565858078
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-019",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 19",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nKathlyn Lake\n19 That portion of the Province of British Columbia in the vicinity of Kathlyn Lake, Range 5, Coast District, which is contained within the following described boundaries: Those waters of Kathlyn Lake to the maximum high water mark situate and lying within portions of Lots 10, 11, 14 and 15 of Township 1A, Range 5, Coast District.",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "other",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Kathlyn Lake): the outline of Kathlyn Lake and 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "Range 5, Coast District",
+        "geometry.feature": "Those waters of Kathlyn Lake",
+        "effect": "No Shooting Areas",
+        "geometry.side": "Those waters of Kathlyn Lake to the maximum high water mark"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "f4d1342fedfb4ead596a8cc03d92e5d3efdfb8f5654e743d0090f9c2a8ea6121",
+      "task_id": "closed_area-f4d1342fedfb",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Kathlyn Lake): the outline of Kathlyn Lake and 1 km around the named points; not the boundary",
+          "quote": "Those waters of Kathlyn Lake",
+          "source": "WHSE_BASEMAPPING.FWA_LAKES_POLY, WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "3.137 km² (limit none for this type)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T22:00:19.786Z",
-  "updated": "2026-10-28T17:29:01.423Z"
+  "updated": "2026-10-28T20:16:08.141Z"
 }

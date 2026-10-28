@@ -5,12 +5,17 @@
   "title": "Closed Areas Regulation, Schedule 3, section 36 (Conkle Lake Park)",
   "rule_id": "W3-036",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: steps: run 1 [\"lot 18895|||\",\"lot 18895|the northeast corner||lot_line\",\"||280 m|straight_line\",\"||540 m|straight_line\",\"|the west boundary of lot 18895 sdyd|3.1 km|straight_line\",\"lot 18895|the point of commencement||lot_line\"] vs run 2 [\"|||\",\"lot 18895|the northeast corner||lot_line\",\"||280 m|straight_line\",\"||540 m|straight_line\",\"|the west boundary of lot 18895 sdyd|3.1 km|straight_line\",\"lot 18895|the point of commencement||lot_line\"]",
     "AI runs also differ on fields this shape is not drawn from (not blocking): feature: run 1 \"lot 18895\" vs run 2 null; side: run 1 \"inside\" vs run 2 null",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "\"Lot 18895\" was not found in the official layers; that side is drawn straight",
+    "\"Lot 18895\" was not found in the official layers; that side is drawn straight",
+    "\"Lot 18895\" was not found in the official layers; that side is drawn straight",
+    "approximate zone around the places the section names, using run 1's reading",
+    "a zone around the places the section names (Conkle Lake Park): 1 km around the named points; not the boundary",
+    "validation failed: two independent extractions agree (steps: run 1 [\"lot 18895|||\",\"lot 18895|the northeast corner||lot_line\",\"||280 m|straight_line\",\"||540 m|straight_line\",\"|the west boundary of lot 18895 sdyd|3.1 km|straight_line\",\"lot 18895|the point of commencement||lot_line\"] vs run 2 [\"|||\",\"lot 18895|the northeast corner||lot_line\",\"||280 m|straight_line\",\"||540 m|straight_line\",\"|the west boundary of lot 18895 sdyd|3.1 km|straight_line\",\"lot 18895|the point of commencement||lot_line\"])"
   ],
   "source": {
     "text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nConkle Lake Park\n36 That portion of M.U. 8-12, in the vicinity of Rock Creek, contained within the following described boundaries: Commencing at the northwest corner of Lot 18895, Similkameen Division, Yale District, thence due East along the north boundary of said lot to the northeast corner; thence due West a distance of 280 m; thence south 27° E for a distance of 540 m; thence due West a distance of 3.1 km to the west boundary of Lot 18895, SDYD, thence northerly along said boundary to the point of commencement. [en. B.C. Reg. 162/87, s. 12.]",
@@ -287,18 +292,406 @@
   ],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.137 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "steps: run 1 [\"lot 18895|||\",\"lot 18895|the northeast corner||lot_line\",\"||280 m|straight_line\",\"||540 m|straight_line\",\"|the west boundary of lot 18895 sdyd|3.1 km|straight_line\",\"lot 18895|the point of commencement||lot_line\"] vs run 2 [\"|||\",\"lot 18895|the northeast corner||lot_line\",\"||280 m|straight_line\",\"||540 m|straight_line\",\"|the west boundary of lot 18895 sdyd|3.1 km|straight_line\",\"lot 18895|the point of commencement||lot_line\"]"
     },
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Conkle Lake Park): 1 km around the named points; not the boundary",
+      "quote": "Lot 18895, Similkameen Division, Yale District",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -119.11375554464183,
+            49.17222140313403
+          ],
+          [
+            -119.11368906418853,
+            49.171339922897026
+          ],
+          [
+            -119.11349075759684,
+            49.17046694726537
+          ],
+          [
+            -119.11316254141597,
+            49.16961088280134
+          ],
+          [
+            -119.11270758276534,
+            49.16877997278595
+          ],
+          [
+            -119.11213026859465,
+            49.16798221787353
+          ],
+          [
+            -119.11143616322593,
+            49.1672252990973
+          ],
+          [
+            -119.1106319545944,
+            49.16651650396535
+          ],
+          [
+            -119.10972538971264,
+            49.165862656356026
+          ],
+          [
+            -119.10872519998416,
+            49.16527005088516
+          ],
+          [
+            -119.10764101708905,
+            49.16474439237348
+          ],
+          [
+            -119.10648328025229,
+            49.16429074099423
+          ],
+          [
+            -119.10526313578715,
+            49.16391346362566
+          ],
+          [
+            -119.103992329878,
+            49.163616191873636
+          ],
+          [
+            -119.10268309562981,
+            49.163401787165725
+          ],
+          [
+            -119.10134803546622,
+            49.163272313250204
+          ],
+          [
+            -119.1,
+            49.16322901636275
+          ],
+          [
+            -119.09865196453377,
+            49.163272313250204
+          ],
+          [
+            -119.09731690437019,
+            49.163401787165725
+          ],
+          [
+            -119.09600767012199,
+            49.163616191873636
+          ],
+          [
+            -119.09473686421283,
+            49.16391346362566
+          ],
+          [
+            -119.0935167197477,
+            49.16429074099423
+          ],
+          [
+            -119.09235898291094,
+            49.16474439237348
+          ],
+          [
+            -119.09127480001582,
+            49.16527005088516
+          ],
+          [
+            -119.09027461028737,
+            49.165862656356026
+          ],
+          [
+            -119.08936804540559,
+            49.16651650396535
+          ],
+          [
+            -119.08856383677406,
+            49.1672252990973
+          ],
+          [
+            -119.08786973140533,
+            49.16798221787353
+          ],
+          [
+            -119.08729241723465,
+            49.16877997278595
+          ],
+          [
+            -119.08683745858401,
+            49.16961088280134
+          ],
+          [
+            -119.08650924240317,
+            49.17046694726537
+          ],
+          [
+            -119.08631093581145,
+            49.171339922897026
+          ],
+          [
+            -119.08624445535816,
+            49.17222140313403
+          ],
+          [
+            -119.08631044830555,
+            49.17310289906689
+          ],
+          [
+            -119.08650828612593,
+            49.173975921182915
+          ],
+          [
+            -119.08683607028466,
+            49.17483206113346
+          ],
+          [
+            -119.08729065026473,
+            49.175663072736604
+          ],
+          [
+            -119.0878676536685,
+            49.17646095143405
+          ],
+          [
+            -119.08856152811656,
+            49.17721801143561
+          ],
+          [
+            -119.08936559454783,
+            49.17792695980601
+          ],
+          [
+            -119.09027211141445,
+            49.17858096677796
+          ],
+          [
+            -119.09127234915802,
+            49.17917373161147
+          ],
+          [
+            -119.09235667425337,
+            49.1796995433616
+          ],
+          [
+            -119.09351464201076,
+            49.180153335966196
+          ],
+          [
+            -119.09473509724278,
+            49.180530737119824
+          ],
+          [
+            -119.09600628182251,
+            49.180828110459615
+          ],
+          [
+            -119.09731594809288,
+            49.181042590654044
+          ],
+          [
+            -119.09865147702784,
+            49.18117211105394
+          ],
+          [
+            -119.1,
+            49.18121542363725
+          ],
+          [
+            -119.10134852297215,
+            49.18117211105394
+          ],
+          [
+            -119.1026840519071,
+            49.181042590654044
+          ],
+          [
+            -119.10399371817748,
+            49.180828110459615
+          ],
+          [
+            -119.10526490275721,
+            49.180530737119824
+          ],
+          [
+            -119.10648535798923,
+            49.180153335966196
+          ],
+          [
+            -119.10764332574662,
+            49.1796995433616
+          ],
+          [
+            -119.10872765084197,
+            49.17917373161147
+          ],
+          [
+            -119.10972788858554,
+            49.17858096677796
+          ],
+          [
+            -119.11063440545216,
+            49.17792695980601
+          ],
+          [
+            -119.11143847188343,
+            49.17721801143561
+          ],
+          [
+            -119.11213234633149,
+            49.17646095143405
+          ],
+          [
+            -119.11270934973527,
+            49.175663072736604
+          ],
+          [
+            -119.11316392971533,
+            49.17483206113346
+          ],
+          [
+            -119.11349171387405,
+            49.173975921182915
+          ],
+          [
+            -119.11368955169443,
+            49.17310289906689
+          ],
+          [
+            -119.11375554464183,
+            49.17222140313403
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W3-036",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 3, s. 36",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nConkle Lake Park\n36 That portion of M.U. 8-12, in the vicinity of Rock Creek, contained within the following described boundaries: Commencing at the northwest corner of Lot 18895, Similkameen Division, Yale District, thence due East along the north boundary of said lot to the northeast corner; thence due West a distance of 280 m; thence south 27° E for a distance of 540 m; thence due West a distance of 3.1 km to the west boundary of Lot 18895, SDYD, thence northerly along said boundary to the point of commencement. [en. B.C. Reg. 162/87, s. 12.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Conkle Lake Park): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "That portion of M.U. 8-12",
+        "geometry.feature": "Lot 18895, Similkameen Division, Yale District",
+        "effect": "No Shooting or Hunting Areas",
+        "geometry.side": "contained within the following described boundaries",
+        "geometry.steps[0]": "Commencing at the northwest corner of Lot 18895, Similkameen Division, Yale District",
+        "geometry.steps[1]": "thence due East along the north boundary of said lot to the northeast corner",
+        "geometry.steps[2]": "thence due West a distance of 280 m",
+        "geometry.steps[3]": "thence south 27° E for a distance of 540 m",
+        "geometry.steps[4]": "thence due West a distance of 3.1 km to the west boundary of Lot 18895, SDYD",
+        "geometry.steps[5]": "thence northerly along said boundary to the point of commencement"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "cc3875e7afd52d1e8bb9e29f2b3f82f4de37432cabede54980ed250c8771825c",
+      "task_id": "closed_area-cc3875e7afd5",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Conkle Lake Park): 1 km around the named points; not the boundary",
+          "quote": "Lot 18895, Similkameen Division, Yale District",
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "3.137 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "steps: run 1 [\"lot 18895|||\",\"lot 18895|the northeast corner||lot_line\",\"||280 m|straight_line\",\"||540 m|straight_line\",\"|the west boundary of lot 18895 sdyd|3.1 km|straight_line\",\"lot 18895|the point of commencement||lot_line\"] vs run 2 [\"|||\",\"lot 18895|the northeast corner||lot_line\",\"||280 m|straight_line\",\"||540 m|straight_line\",\"|the west boundary of lot 18895 sdyd|3.1 km|straight_line\",\"lot 18895|the point of commencement||lot_line\"]"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: a walk outline is approximate; a person checks it against the text"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:10:20.081Z",
-  "updated": "2026-10-28T17:24:54.509Z"
+  "updated": "2026-10-28T20:12:06.021Z"
 }

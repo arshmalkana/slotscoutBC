@@ -5,11 +5,13 @@
   "title": "Closed Areas Regulation, Schedule 3, section 26 (Nekite River)",
   "rule_id": "W3-026",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: within: run 1 null vs run 2 \"british columbia\"; method: run 1 \"other\" vs run 2 \"waterbody_buffer\"; side: run 1 null vs run 2 \"both\"",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "approximate zone around the places the section names, using run 1's reading",
+    "a zone around the places the section names (Nekite River): 1 km around the named points; not the boundary",
+    "validation failed: two independent extractions agree (within: run 1 null vs run 2 \"british columbia\"; method: run 1 \"other\" vs run 2 \"waterbody_buffer\"; side: run 1 null vs run 2 \"both\")"
   ],
   "source": {
     "text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nNekite River\n26 That portion of the Province of British Columbia within 100 m of the Department of Fisheries and Oceans (Canada) spawning channel on the Nekite River, located approximately 10 km upstream from the Nekite River estuary at Smith Inlet (approximate position 51° 27' N. Lat., 127° 05' W. Long.). [en. B.C. Reg. 263/86.]",
@@ -137,13 +139,389 @@
   "lookups": [],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.137 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "within: run 1 null vs run 2 \"british columbia\"; method: run 1 \"other\" vs run 2 \"waterbody_buffer\"; side: run 1 null vs run 2 \"both\""
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Nekite River): 1 km around the named points; not the boundary",
+      "quote": "the Department of Fisheries and Oceans (Canada) spawning channel on the Nekite River",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -127.10280734098863,
+            51.39972133587946
+          ],
+          [
+            -127.10287647609553,
+            51.40060283245599
+          ],
+          [
+            -127.10308377650458,
+            51.40147585648329
+          ],
+          [
+            -127.10342725345758,
+            51.40233199953935
+          ],
+          [
+            -127.10390360614278,
+            51.40316301532293
+          ],
+          [
+            -127.10450825321197,
+            51.40396089911513
+          ],
+          [
+            -127.10523537666349,
+            51.40471796492996
+          ],
+          [
+            -127.10607797767723,
+            51.40542691960872
+          ],
+          [
+            -127.10702794387183,
+            51.40608093314169
+          ],
+          [
+            -127.10807612734155,
+            51.406673704536644
+          ],
+          [
+            -127.10921243272533,
+            51.407199522596386
+          ],
+          [
+            -127.11042591446032,
+            51.40765332101624
+          ],
+          [
+            -127.11170488228292,
+            51.408030727267175
+          ],
+          [
+            -127.11303701395722,
+            51.40832810479034
+          ],
+          [
+            -127.11440947414003,
+            51.40854258809337
+          ],
+          [
+            -127.11580903823017,
+            51.40867211040756
+          ],
+          [
+            -127.11722222,
+            51.40871542363724
+          ],
+          [
+            -127.11863540176984,
+            51.40867211040756
+          ],
+          [
+            -127.12003496585997,
+            51.40854258809337
+          ],
+          [
+            -127.12140742604278,
+            51.40832810479034
+          ],
+          [
+            -127.12273955771708,
+            51.408030727267175
+          ],
+          [
+            -127.12401852553968,
+            51.40765332101624
+          ],
+          [
+            -127.12523200727468,
+            51.407199522596386
+          ],
+          [
+            -127.12636831265844,
+            51.406673704536644
+          ],
+          [
+            -127.12741649612818,
+            51.40608093314169
+          ],
+          [
+            -127.12836646232276,
+            51.40542691960872
+          ],
+          [
+            -127.1292090633365,
+            51.40471796492996
+          ],
+          [
+            -127.12993618678803,
+            51.40396089911513
+          ],
+          [
+            -127.13054083385722,
+            51.40316301532293
+          ],
+          [
+            -127.13101718654241,
+            51.40233199953935
+          ],
+          [
+            -127.13136066349543,
+            51.40147585648329
+          ],
+          [
+            -127.13156796390447,
+            51.40060283245599
+          ],
+          [
+            -127.13163709901137,
+            51.39972133587946
+          ],
+          [
+            -127.13156741096986,
+            51.39883985629106
+          ],
+          [
+            -127.13135957887519,
+            51.3979668825753
+          ],
+          [
+            -127.13101561191787,
+            51.39711082122075
+          ],
+          [
+            -127.13053882974033,
+            51.396279915388895
+          ],
+          [
+            -127.12993383019585,
+            51.39548216557326
+          ],
+          [
+            -127.12920644483155,
+            51.394725252611195
+          ],
+          [
+            -127.12836368253271,
+            51.39401646378735
+          ],
+          [
+            -127.12741366187878,
+            51.39336262273775
+          ],
+          [
+            -127.12636553286833,
+            51.39277002382616
+          ],
+          [
+            -127.12522938876963,
+            51.39224437162133
+          ],
+          [
+            -127.12401616894738,
+            51.39179072605425
+          ],
+          [
+            -127.12273755360006,
+            51.3914134537799
+          ],
+          [
+            -127.12140585141812,
+            51.39111618620847
+          ],
+          [
+            -127.12003388123962,
+            51.39090178460696
+          ],
+          [
+            -127.11863484883519,
+            51.39077231260432
+          ],
+          [
+            -127.11722222,
+            51.39072901636276
+          ],
+          [
+            -127.11580959116482,
+            51.39077231260432
+          ],
+          [
+            -127.11441055876037,
+            51.39090178460696
+          ],
+          [
+            -127.11303858858189,
+            51.39111618620847
+          ],
+          [
+            -127.11170688639994,
+            51.3914134537799
+          ],
+          [
+            -127.11042827105261,
+            51.39179072605425
+          ],
+          [
+            -127.10921505123036,
+            51.39224437162133
+          ],
+          [
+            -127.10807890713167,
+            51.39277002382616
+          ],
+          [
+            -127.10703077812121,
+            51.39336262273775
+          ],
+          [
+            -127.1060807574673,
+            51.39401646378735
+          ],
+          [
+            -127.10523799516844,
+            51.394725252611195
+          ],
+          [
+            -127.10451060980414,
+            51.39548216557326
+          ],
+          [
+            -127.10390561025967,
+            51.396279915388895
+          ],
+          [
+            -127.10342882808212,
+            51.39711082122075
+          ],
+          [
+            -127.10308486112481,
+            51.3979668825753
+          ],
+          [
+            -127.10287702903013,
+            51.39883985629106
+          ],
+          [
+            -127.10280734098863,
+            51.39972133587946
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W3-026",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 3, s. 26",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nNekite River\n26 That portion of the Province of British Columbia within 100 m of the Department of Fisheries and Oceans (Canada) spawning channel on the Nekite River, located approximately 10 km upstream from the Nekite River estuary at Smith Inlet (approximate position 51° 27' N. Lat., 127° 05' W. Long.). [en. B.C. Reg. 263/86.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "other",
+      "buffer_m": 100,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Nekite River): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "geometry.feature": "the Department of Fisheries and Oceans (Canada) spawning channel on the Nekite River",
+        "geometry.buffer_m": "within 100 m",
+        "effect": "No Shooting or Hunting Areas"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "b40eb8094861c7e728b7572d5597030f10af44f40258c0d44d0c90992c11d6b3",
+      "task_id": "closed_area-b40eb8094861",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Nekite River): 1 km around the named points; not the boundary",
+          "quote": "the Department of Fisheries and Oceans (Canada) spawning channel on the Nekite River",
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "3.137 km² (limit none for this type)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": null,
+          "detail": "the text names no area, or it could not be found"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "within: run 1 null vs run 2 \"british columbia\"; method: run 1 \"other\" vs run 2 \"waterbody_buffer\"; side: run 1 null vs run 2 \"both\""
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:59:53.874Z",
-  "updated": "2026-10-20T21:59:53.874Z"
+  "updated": "2026-10-28T20:04:55.925Z"
 }

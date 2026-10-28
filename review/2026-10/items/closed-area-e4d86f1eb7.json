@@ -9,6 +9,7 @@
   "why": [
     "AI runs disagree: from: run 1 null vs run 2 \"adams river bridge\"",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "none of the places the section names was found in the official layers",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -161,7 +162,33 @@
   "disagreements": [
     "from: run 1 null vs run 2 \"adams river bridge\""
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U. 3-37",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "3-37"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "3-37",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 3,
+          "REGION_RESPONSIBLE_ID": "3",
+          "REGION_RESPONSIBLE_NAME": "Thompson",
+          "GAME_MANAGEMENT_ZONE_ID": "3d",
+          "GAME_MANAGEMENT_ZONE_NAME": "North Thompson",
+          "FEATURE_AREA_SQM": 1853834018.4204,
+          "FEATURE_LENGTH_M": 374471.1739,
+          "OBJECTID": 364,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -172,5 +199,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:08:33.918Z",
-  "updated": "2026-10-21T16:08:33.918Z"
+  "updated": "2026-10-28T19:56:36.920Z"
 }

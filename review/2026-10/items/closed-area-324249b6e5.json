@@ -10,10 +10,6 @@
     "AI runs disagree: steps: run 1 [\"l 9269|||\",\"l 9269|the northeast corner thereof||lot_line\",\"l 8782||approximately 0.65 km (0.4 mi.)|lot_line\",\"||approximately 1 km|\",\"dyke 1 of leach lake|the midline of summit creek||straight_line\",\"|the easterly boundary of hwy 3 right of way|approximately 610 m (2 000 ft.)|\",\"hwy 3|the westerly boundary of l 9269||road\",\"l 9269|the point of commencement||lot_line\",\"hwy 3|||\",\"old kootenay river channel|a point due east of the southerly boundary of dyke 3||river\",\"|the southerly boundary of dyke 3||\",\"dyke 3|the easterly boundary of west creston rd right of way||other\",\"west creston rd|the southerly boundary of hwy 3 right of way||road\",\"hwy 3|the point of commencement||road\"] vs run 2 [\"l 9269|||\",\"l 9269|the northeast corner thereof||lot_line\",\"l 8782||approximately 0.65 km (0.4 mi.)|lot_line\",\"||approximately 1 km|straight_line\",\"dyke 1 of leach lake|the point of intersection with the midline of summit creek||straight_line\",\"|the point of intersection with the easterly boundary of hwy 3 right of way|approximately 610 m (2 000 ft.)|straight_line\",\"hwy 3|the point of intersection with the westerly boundary of l 9269||road\",\"l 9269|the point of commencement||lot_line\",\"old kootenay river channel|||\",\"old kootenay river channel|a point due east of the southerly boundary of dyke 3||river\",\"|the point of intersection with the southerly boundary of dyke 3||straight_line\",\"dyke 3|the point of intersection with the easterly boundary of west creston rd right of way||other\",\"west creston rd|the point of intersection with the southerly boundary of hwy 3 right of way||road\",\"hwy 3|the point of commencement||road\"]",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
     "approximate outline (corners) drawn from the places the walk names, using run 1's reading of the steps",
-    "\"L 9269\" was not found in the official layers; that side is drawn straight",
-    "\"L 9269\" was not found in the official layers; that side is drawn straight",
-    "\"L 8782\" was not found in the official layers; that side is drawn straight",
-    "\"L 9269\" was not found in the official layers; that side is drawn straight",
     "\"dyke #3\" was not found in the official layers; that side is drawn straight",
     "validation failed: two independent extractions agree (steps: run 1 [\"l 9269|||\",\"l 9269|the northeast corner thereof||lot_line\",\"l 8782||approximately 0.65 km (0.4 mi.)|lot_line\",\"||approximately 1 km|\",\"dyke 1 of leach lake|the midline of summit creek||straight_line\",\"|the easterly boundary of hwy 3 right of way|approximately 610 m (2 000 ft.)|\",\"hwy 3|the westerly boundary of l 9269||road\",\"l 9269|the point of commencement||lot_line\",\"hwy 3|||\",\"old kootenay river channel|a point due east of the southerly boundary of dyke 3||river\",\"|the southerly boundary of dyke 3||\",\"dyke 3|the easterly boundary of west creston rd right of way||other\",\"west creston rd|the southerly boundary of hwy 3 right of way||road\",\"hwy 3|the point of commencement||road\"] vs run 2 [\"l 9269|||\",\"l 9269|the northeast corner thereof||lot_line\",\"l 8782||approximately 0.65 km (0.4 mi.)|lot_line\",\"||approximately 1 km|straight_line\",\"dyke 1 of leach lake|the point of intersection with the midline of summit creek||straight_line\",\"|the point of intersection with the easterly boundary of hwy 3 right of way|approximately 610 m (2 000 ft.)|straight_line\",\"hwy 3|the point of intersection with the westerly boundary of l 9269||road\",\"l 9269|the point of commencement||lot_line\",\"old kootenay river channel|||\",\"old kootenay river channel|a point due east of the southerly boundary of dyke 3||river\",\"|the point of intersection with the southerly boundary of dyke 3||straight_line\",\"dyke 3|the point of intersection with the easterly boundary of west creston rd right of way||other\",\"west creston rd|the point of intersection with the southerly boundary of hwy 3 right of way||road\",\"hwy 3|the point of commencement||road\"])"
   ],
@@ -524,7 +520,7 @@
     {
       "check": "area in expected range",
       "passed": true,
-      "detail": "0.163 km² (limit 500 km²)"
+      "detail": "0.263 km² (limit 500 km²)"
     },
     {
       "check": "inside the area the text names",
@@ -544,181 +540,351 @@
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
   "construction": [
     {
       "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
       "quote": "Commencing at the point of intersection of the westerly boundary of L 9269, Kootenay Land District and the midline of Summit Creek",
-      "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP, WHSE_BASEMAPPING.FWA_RIVERS_POLY"
+      "source": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW, WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP, WHSE_BASEMAPPING.FWA_RIVERS_POLY"
     }
   ],
   "feature": {
     "type": "Feature",
     "geometry": {
-      "type": "Polygon",
+      "type": "MultiPolygon",
       "coordinates": [
         [
           [
-            -116.63475376309185,
-            49.12897323950392
-          ],
+            [
+              -116.64734639791193,
+              49.14389244051766
+            ],
+            [
+              -116.64734639704173,
+              49.14389138540305
+            ],
+            [
+              -116.64734221549244,
+              49.141462255224965
+            ],
+            [
+              -116.64731553180783,
+              49.141286933023316
+            ],
+            [
+              -116.64723710892827,
+              49.141118378891385
+            ],
+            [
+              -116.64710995735089,
+              49.14096306219701
+            ],
+            [
+              -116.646938957732,
+              49.140826944177036
+            ],
+            [
+              -116.64673067351026,
+              49.140715249155186
+            ],
+            [
+              -116.64649309897166,
+              49.14063226404833
+            ],
+            [
+              -116.64623535242828,
+              49.14058117385234
+            ],
+            [
+              -116.6459673262846,
+              49.14056393941801
+            ],
+            [
+              -116.64569948014896,
+              49.14058119973096
+            ],
+            [
+              -116.64544190788295,
+              49.14063227075822
+            ],
+            [
+              -116.645204482323,
+              49.140715194935304
+            ],
+            [
+              -116.64499630420528,
+              49.140826793746385
+            ],
+            [
+              -116.6448253533458,
+              49.1409627895409
+            ],
+            [
+              -116.64469818277307,
+              49.14111796947842
+            ],
+            [
+              -116.64461966751985,
+              49.14128638532146
+            ],
+            [
+              -116.6445928177061,
+              49.141461581421545
+            ],
+            [
+              -116.64458693496394,
+              49.14351366158218
+            ],
+            [
+              -116.64458696017476,
+              49.14352104969269
+            ],
+            [
+              -116.64459658263345,
+              49.14451388980768
+            ],
+            [
+              -116.64462440599553,
+              49.144688291107244
+            ],
+            [
+              -116.64470343596541,
+              49.1448558454349
+            ],
+            [
+              -116.64483066853072,
+              49.1450101828188
+            ],
+            [
+              -116.64500126702204,
+              49.14514543570381
+            ],
+            [
+              -116.64520874594228,
+              49.14525646203948
+            ],
+            [
+              -116.6454452175087,
+              49.14533904079028
+            ],
+            [
+              -116.64570169153689,
+              49.14539003243217
+            ],
+            [
+              -116.64596841726426,
+              49.1454074983293
+            ],
+            [
+              -116.64623525411047,
+              49.145390774449645
+            ],
+            [
+              -116.64649205726998,
+              49.14534049661467
+            ],
+            [
+              -116.6467290634651,
+              49.14525857632236
+            ],
+            [
+              -116.64693726218285,
+              49.14514812806349
+            ],
+            [
+              -116.64710873827151,
+              49.14501335089663
+            ],
+            [
+              -116.64723697286614,
+              49.144859368787316
+            ],
+            [
+              -116.64731709119958,
+              49.14469203578507
+            ],
+            [
+              -116.64734604788075,
+              49.144517713448884
+            ],
+            [
+              -116.6473462774874,
+              49.144503533446155
+            ],
+            [
+              -116.64734635460171,
+              49.14449405051788
+            ],
+            [
+              -116.64734639791193,
+              49.14389244051766
+            ]
+          ]
+        ],
+        [
           [
-            -116.6347385482911,
-            49.128801412326126
-          ],
-          [
-            -116.63467358796017,
-            49.128634628612936
-          ],
-          [
-            -116.63456126190353,
-            49.12847899719864
-          ],
-          [
-            -116.63440568470132,
-            49.12834021838424
-          ],
-          [
-            -116.63421255495383,
-            49.128223375166954
-          ],
-          [
-            -116.63398894653214,
-            49.12813274708488
-          ],
-          [
-            -116.63387915208293,
-            49.128097266706895
-          ],
-          [
-            -116.63306346211508,
-            49.12783372099305
-          ],
-          [
-            -116.63295766830852,
-            49.12780309223897
-          ],
-          [
-            -116.62950444849406,
-            49.12691500976901
-          ],
-          [
-            -116.62939895570408,
-            49.12688790113616
-          ],
-          [
-            -116.62557372032668,
-            49.12590500773032
-          ],
-          [
-            -116.62531534811593,
-            49.125857061705844
-          ],
-          [
-            -116.62504766026166,
-            49.125842913826034
-          ],
-          [
-            -116.62478087895572,
-            49.125863104355574
-          ],
-          [
-            -116.62452519177712,
-            49.12591686227914
-          ],
-          [
-            -116.62429036271932,
-            49.12600213473956
-          ],
-          [
-            -116.62408535938043,
-            49.126115665418574
-          ],
-          [
-            -116.62391801054346,
-            49.12625311886936
-          ],
-          [
-            -116.62379470721658,
-            49.126409246056156
-          ],
-          [
-            -116.62372015854841,
-            49.12657808478327
-          ],
-          [
-            -116.62369721194227,
-            49.126753187363256
-          ],
-          [
-            -116.62372674424654,
-            49.12692786683324
-          ],
-          [
-            -116.62380762818694,
-            49.12709545231871
-          ],
-          [
-            -116.62393677533505,
-            49.12724954379356
-          ],
-          [
-            -116.62410925398447,
-            49.12738425650624
-          ],
-          [
-            -116.62431847744308,
-            49.12749444573558
-          ],
-          [
-            -116.62455645555782,
-            49.1275759032892
-          ],
-          [
-            -116.63286557247676,
-            49.12977294023662
-          ],
-          [
-            -116.63311776362895,
-            49.12982184702517
-          ],
-          [
-            -116.63337957507255,
-            49.12983842020138
-          ],
-          [
-            -116.63364141673303,
-            49.12982205269449
-          ],
-          [
-            -116.63389369742879,
-            49.12977334404169
-          ],
-          [
-            -116.63412717624828,
-            49.129694078423704
-          ],
-          [
-            -116.63433330108681,
-            49.12958715930107
-          ],
-          [
-            -116.6345045219341,
-            49.12945650304672
-          ],
-          [
-            -116.63463456743152,
-            49.129306895474215
-          ],
-          [
-            -116.63471867456623,
-            49.129143816519885
-          ],
-          [
-            -116.63475376309185,
-            49.12897323950392
+            [
+              -116.634753763089,
+              49.12897323950141
+            ],
+            [
+              -116.63473854828737,
+              49.12880141232371
+            ],
+            [
+              -116.63467358795585,
+              49.128634628610726
+            ],
+            [
+              -116.63456126189885,
+              49.12847899719673
+            ],
+            [
+              -116.63440568469655,
+              49.12834021838267
+            ],
+            [
+              -116.63421255494927,
+              49.12822337516576
+            ],
+            [
+              -116.6339889465281,
+              49.12813274708404
+            ],
+            [
+              -116.6338792478771,
+              49.12809729766061
+            ],
+            [
+              -116.63306346211073,
+              49.127833720992605
+            ],
+            [
+              -116.63295766830223,
+              49.12780309223806
+            ],
+            [
+              -116.6295048275882,
+              49.12691510722989
+            ],
+            [
+              -116.62939902999221,
+              49.12688792022685
+            ],
+            [
+              -116.62557372031858,
+              49.12590500773232
+            ],
+            [
+              -116.6253153481088,
+              49.12585706170782
+            ],
+            [
+              -116.62504766025583,
+              49.1258429138278
+            ],
+            [
+              -116.62478087895141,
+              49.125863104356974
+            ],
+            [
+              -116.6245251917745,
+              49.125916862280036
+            ],
+            [
+              -116.62429036271844,
+              49.12600213473982
+            ],
+            [
+              -116.62408535938123,
+              49.12611566541813
+            ],
+            [
+              -116.62391801054576,
+              49.126253118868156
+            ],
+            [
+              -116.62379470722024,
+              49.1264092460542
+            ],
+            [
+              -116.62372015855311,
+              49.12657808478062
+            ],
+            [
+              -116.62369721194773,
+              49.12675318736004
+            ],
+            [
+              -116.62372674425244,
+              49.12692786682959
+            ],
+            [
+              -116.62380762819299,
+              49.127095452314805
+            ],
+            [
+              -116.62393677534101,
+              49.12724954378958
+            ],
+            [
+              -116.62410925399006,
+              49.1273842565024
+            ],
+            [
+              -116.62431847744807,
+              49.12749444573206
+            ],
+            [
+              -116.62455645556204,
+              49.12757590328613
+            ],
+            [
+              -116.63286557248323,
+              49.12977294023804
+            ],
+            [
+              -116.63311776363506,
+              49.129821847026
+            ],
+            [
+              -116.63337957507808,
+              49.129838420201644
+            ],
+            [
+              -116.63364141673779,
+              49.12982205269418
+            ],
+            [
+              -116.63389369743264,
+              49.12977334404083
+            ],
+            [
+              -116.63412717625108,
+              49.12969407842235
+            ],
+            [
+              -116.63433330108846,
+              49.12958715929927
+            ],
+            [
+              -116.63450452193459,
+              49.12945650304459
+            ],
+            [
+              -116.63463456743081,
+              49.12930689547185
+            ],
+            [
+              -116.6347186745644,
+              49.1291438165174
+            ],
+            [
+              -116.634753763089,
+              49.12897323950141
+            ]
           ]
         ]
       ]
@@ -774,7 +940,7 @@
         {
           "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
           "quote": "Commencing at the point of intersection of the westerly boundary of L 9269, Kootenay Land District and the midline of Summit Creek",
-          "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP, WHSE_BASEMAPPING.FWA_RIVERS_POLY"
+          "source": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW, WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP, WHSE_BASEMAPPING.FWA_RIVERS_POLY"
         }
       ],
       "validation": [
@@ -791,7 +957,7 @@
         {
           "check": "area in expected range",
           "passed": true,
-          "detail": "0.163 km² (limit 500 km²)"
+          "detail": "0.263 km² (limit 500 km²)"
         },
         {
           "check": "inside the area the text names",
@@ -811,7 +977,7 @@
         {
           "check": "step directions match the line",
           "passed": null,
-          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+          "detail": "not run: a walk outline is approximate; a person checks it against the text"
         }
       ],
       "change_type": "new"
@@ -819,5 +985,5 @@
   },
   "status": "open",
   "created": "2026-10-21T16:07:26.580Z",
-  "updated": "2026-10-28T17:04:01.736Z"
+  "updated": "2026-10-28T19:47:42.986Z"
 }

@@ -9,6 +9,9 @@
   "why": [
     "AI runs disagree: steps: run 1 [\"international boundary between canada and the united states of america|a concrete marker establishing the international boundary||other\",\"|the mean high water mark in the vicinity of the point where 64 st municipality of delta meets the dyke bordering boundary bay||\",\"mean high water mark|the point of commencement||shoreline\"] vs run 2 [\"international boundary between canada and the united states of america|a concrete marker establishing the international boundary||other\",\"|the mean high water mark in the vicinity of the point where 64 st municipality of delta meets the dyke bordering boundary bay||\",\"|the point of commencement||shoreline\"]",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "\"International Boundary between Canada and the United States of America\" was not found in the official layers; that side is drawn straight",
+    "\"mean high water mark\" was not found in the official layers; that side is drawn straight",
+    "none of the places the section names was found in the official layers",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -217,11 +220,11 @@
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:47:18.015Z",
-  "updated": "2026-10-28T17:11:36.495Z"
+  "updated": "2026-10-28T19:57:28.885Z"
 }

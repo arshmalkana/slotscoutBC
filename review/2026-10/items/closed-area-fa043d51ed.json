@@ -8,6 +8,11 @@
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
     "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "\"SL 17\" was not found in the official layers; that side is drawn straight",
+    "\"SL 17\" was not found in the official layers; that side is drawn straight",
+    "\"SL 17\" was not found in the official layers; that side is drawn straight",
+    "\"SL 17\" was not found in the official layers; that side is drawn straight",
+    "none of the places the section names was found in the official layers",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -277,11 +282,11 @@
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:09:57.505Z",
-  "updated": "2026-10-27T23:12:01.460Z"
+  "updated": "2026-10-28T20:04:44.552Z"
 }

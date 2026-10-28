@@ -5,11 +5,13 @@
   "title": "Closed Areas Regulation, Schedule 7, section 39 (Cody Caves)",
   "rule_id": "W8-039",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: steps: run 1 [\"lot 6489||201.2 m|\",\"||201.2 m|\",\"||804.7 m|\",\"|the westerly limit of the right of way for the kootenay forest products logging rd|724.2 m more or less|\",\"|a point due east of the point of commencement||road\",\"|the point of commencement|603.5 m more or less|\"] vs run 2 [\"lot 6489||201.2 m|\",\"||201.2 m|straight_line\",\"||804.7 m|straight_line\",\"|the westerly limit of the right of way for the kootenay forest products logging rd|724.2 m more or less|straight_line\",\"kootenay forest products logging rd|a point due east of the point of commencement||road\",\"|the point of commencement|603.5 m more or less|straight_line\"]",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "approximate zone around the places the section names, using run 1's reading",
+    "a zone around the places the section names (Cody Caves): 1 km around the named points; not the boundary",
+    "validation failed: two independent extractions agree (steps: run 1 [\"lot 6489||201.2 m|\",\"||201.2 m|\",\"||804.7 m|\",\"|the westerly limit of the right of way for the kootenay forest products logging rd|724.2 m more or less|\",\"|a point due east of the point of commencement||road\",\"|the point of commencement|603.5 m more or less|\"] vs run 2 [\"lot 6489||201.2 m|\",\"||201.2 m|straight_line\",\"||804.7 m|straight_line\",\"|the westerly limit of the right of way for the kootenay forest products logging rd|724.2 m more or less|straight_line\",\"kootenay forest products logging rd|a point due east of the point of commencement||road\",\"|the point of commencement|603.5 m more or less|straight_line\"])"
   ],
   "source": {
     "text": "Schedule 7 No Hunting Areas (Section 8)\nCody Caves\n39 That portion of the Province of British Columbia in M.U. 4-18 being all Crown land and land covered by water in Kootenay Land District contained within the following described boundaries: Commencing at a point on the eastern boundary of Lot 6489, said point being 201.2 m south of the northeast corner of said Lot 6489; thence due West 201.2 m; thence due North 804.7 m; thence due East 724.2 m more or less to the westerly limit of the right of way for the Kootenay Forest Products logging road; thence southerly along the said westerly limit to a point due East of the point of commencement; thence due West 603.5 m more or less to the point of commencement; the whole containing 63 hectares, more or less. [en. B.C. Reg. 204/91, s. 13.]",
@@ -304,18 +306,404 @@
   ],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.137 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "steps: run 1 [\"lot 6489||201.2 m|\",\"||201.2 m|\",\"||804.7 m|\",\"|the westerly limit of the right of way for the kootenay forest products logging rd|724.2 m more or less|\",\"|a point due east of the point of commencement||road\",\"|the point of commencement|603.5 m more or less|\"] vs run 2 [\"lot 6489||201.2 m|\",\"||201.2 m|straight_line\",\"||804.7 m|straight_line\",\"|the westerly limit of the right of way for the kootenay forest products logging rd|724.2 m more or less|straight_line\",\"kootenay forest products logging rd|a point due east of the point of commencement||road\",\"|the point of commencement|603.5 m more or less|straight_line\"]"
     },
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Cody Caves): 1 km around the named points; not the boundary",
+      "quote": "Commencing at a point on the eastern boundary of Lot 6489, said point being 201.2 m south of the northeast corner of said Lot 6489",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -116.96669010357918,
+            49.727776936941204
+          ],
+          [
+            -116.96662286052755,
+            49.72689545686034
+          ],
+          [
+            -116.96642228903626,
+            49.72602248168996
+          ],
+          [
+            -116.96609032767893,
+            49.72516641797458
+          ],
+          [
+            -116.96563017983854,
+            49.724335508966455
+          ],
+          [
+            -116.96504628261086,
+            49.723537755281164
+          ],
+          [
+            -116.96434426385689,
+            49.722780837904814
+          ],
+          [
+            -116.9635308878265,
+            49.72207204429166
+          ],
+          [
+            -116.96261398988345,
+            49.721418198261716
+          ],
+          [
+            -116.96160240096596,
+            49.720825594370126
+          ],
+          [
+            -116.96050586251268,
+            49.720299937376964
+          ],
+          [
+            -116.9593349326749,
+            49.71984628739712
+          ],
+          [
+            -116.95810088471715,
+            49.71946901125508
+          ],
+          [
+            -116.95681559858131,
+            49.71917174050962
+          ],
+          [
+            -116.95549144665353,
+            49.71895733654965
+          ],
+          [
+            -116.95414117482731,
+            49.718827863094695
+          ],
+          [
+            -116.95277778,
+            49.71878456636276
+          ],
+          [
+            -116.9514143851727,
+            49.718827863094695
+          ],
+          [
+            -116.9500641133465,
+            49.71895733654965
+          ],
+          [
+            -116.94873996141871,
+            49.71917174050962
+          ],
+          [
+            -116.94745467528287,
+            49.71946901125508
+          ],
+          [
+            -116.94622062732512,
+            49.71984628739712
+          ],
+          [
+            -116.94504969748733,
+            49.720299937376964
+          ],
+          [
+            -116.94395315903405,
+            49.720825594370126
+          ],
+          [
+            -116.94294157011657,
+            49.721418198261716
+          ],
+          [
+            -116.94202467217353,
+            49.72207204429166
+          ],
+          [
+            -116.94121129614314,
+            49.722780837904814
+          ],
+          [
+            -116.94050927738915,
+            49.723537755281164
+          ],
+          [
+            -116.93992538016148,
+            49.724335508966455
+          ],
+          [
+            -116.9394652323211,
+            49.72516641797458
+          ],
+          [
+            -116.93913327096375,
+            49.72602248168996
+          ],
+          [
+            -116.93893269947247,
+            49.72689545686034
+          ],
+          [
+            -116.93886545642084,
+            49.727776936941204
+          ],
+          [
+            -116.93893219663617,
+            49.728658433029054
+          ],
+          [
+            -116.9391322846149,
+            49.72953145560527
+          ],
+          [
+            -116.93946380036449,
+            49.730387596303544
+          ],
+          [
+            -116.9399235576264,
+            49.73121860891322
+          ],
+          [
+            -116.94050713431461,
+            49.73201648883734
+          ],
+          [
+            -116.94120891488627,
+            49.73277355023855
+          ],
+          [
+            -116.94202214424473,
+            49.73348250012781
+          ],
+          [
+            -116.94293899266269,
+            49.73413650867945
+          ],
+          [
+            -116.94395063110518,
+            49.73472927509275
+          ],
+          [
+            -116.9450473162304,
+            49.73525508836202
+          ],
+          [
+            -116.94621848425048,
+            49.735708882366744
+          ],
+          [
+            -116.94745285274767,
+            49.73608628474764
+          ],
+          [
+            -116.948738529462,
+            49.73638365909465
+          ],
+          [
+            -116.95006312699756,
+            49.73659814003753
+          ],
+          [
+            -116.95141388233637,
+            49.73672766089832
+          ],
+          [
+            -116.95277778,
+            49.73677097363725
+          ],
+          [
+            -116.95414167766366,
+            49.73672766089832
+          ],
+          [
+            -116.95549243300246,
+            49.73659814003753
+          ],
+          [
+            -116.95681703053802,
+            49.73638365909465
+          ],
+          [
+            -116.95810270725234,
+            49.73608628474764
+          ],
+          [
+            -116.95933707574954,
+            49.735708882366744
+          ],
+          [
+            -116.96050824376962,
+            49.73525508836202
+          ],
+          [
+            -116.96160492889484,
+            49.73472927509275
+          ],
+          [
+            -116.96261656733734,
+            49.73413650867945
+          ],
+          [
+            -116.9635334157553,
+            49.73348250012781
+          ],
+          [
+            -116.96434664511375,
+            49.73277355023855
+          ],
+          [
+            -116.9650484256854,
+            49.73201648883734
+          ],
+          [
+            -116.96563200237361,
+            49.73121860891322
+          ],
+          [
+            -116.96609175963553,
+            49.730387596303544
+          ],
+          [
+            -116.96642327538513,
+            49.72953145560527
+          ],
+          [
+            -116.96662336336385,
+            49.728658433029054
+          ],
+          [
+            -116.96669010357918,
+            49.727776936941204
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W8-039",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 7, s. 39",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 7 No Hunting Areas (Section 8)\nCody Caves\n39 That portion of the Province of British Columbia in M.U. 4-18 being all Crown land and land covered by water in Kootenay Land District contained within the following described boundaries: Commencing at a point on the eastern boundary of Lot 6489, said point being 201.2 m south of the northeast corner of said Lot 6489; thence due West 201.2 m; thence due North 804.7 m; thence due East 724.2 m more or less to the westerly limit of the right of way for the Kootenay Forest Products logging road; thence southerly along the said westerly limit to a point due East of the point of commencement; thence due West 603.5 m more or less to the point of commencement; the whole containing 63 hectares, more or less. [en. B.C. Reg. 204/91, s. 13.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_hunting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Cody Caves): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "in M.U. 4-18",
+        "effect": "No Hunting Areas",
+        "geometry.steps[0]": "Commencing at a point on the eastern boundary of Lot 6489, said point being 201.2 m south of the northeast corner of said Lot 6489",
+        "geometry.steps[1]": "thence due West 201.2 m",
+        "geometry.steps[2]": "thence due North 804.7 m",
+        "geometry.steps[3]": "thence due East 724.2 m more or less to the westerly limit of the right of way for the Kootenay Forest Products logging road",
+        "geometry.steps[4]": "thence southerly along the said westerly limit to a point due East of the point of commencement",
+        "geometry.steps[5]": "thence due West 603.5 m more or less to the point of commencement"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "30e75254a992baf26c9da477ff476169b70f2c989566bf1e003f53d48a35d882",
+      "task_id": "closed_area-30e75254a992",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Cody Caves): 1 km around the named points; not the boundary",
+          "quote": "Commencing at a point on the eastern boundary of Lot 6489, said point being 201.2 m south of the northeast corner of said Lot 6489",
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "3.137 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "steps: run 1 [\"lot 6489||201.2 m|\",\"||201.2 m|\",\"||804.7 m|\",\"|the westerly limit of the right of way for the kootenay forest products logging rd|724.2 m more or less|\",\"|a point due east of the point of commencement||road\",\"|the point of commencement|603.5 m more or less|\"] vs run 2 [\"lot 6489||201.2 m|\",\"||201.2 m|straight_line\",\"||804.7 m|straight_line\",\"|the westerly limit of the right of way for the kootenay forest products logging rd|724.2 m more or less|straight_line\",\"kootenay forest products logging rd|a point due east of the point of commencement||road\",\"|the point of commencement|603.5 m more or less|straight_line\"]"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: a walk outline is approximate; a person checks it against the text"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:07:31.171Z",
-  "updated": "2026-10-28T17:05:18.979Z"
+  "updated": "2026-10-28T19:49:49.688Z"
 }

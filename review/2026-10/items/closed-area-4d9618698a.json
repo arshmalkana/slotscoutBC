@@ -5,10 +5,12 @@
   "title": "Closed Areas Regulation, Schedule 5, section 124 (Gillies Bay and Shelter Point Roads)",
   "rule_id": "W5-124",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "listed road \"Crescent Bay Road\" none in the official road layers",
-    "validation failed: shape built (no shape could be built)"
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Gillies Bay): 1 km around the named points; not the boundary",
+    "validation failed: area in expected range (6.590 km² (limit 2 km²))"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nGillies Bay and Shelter Point Roads\n124 Those portions of the Province of British Columbia in the vicinity of Texada Island in M.U. 2-16 within 0.2 km of either side of the midline of the following Texada Island roads: (a)Gillies Bay Road between its junction with Blubber Bay Road and Shelter Point Road; (b)Shelter Point Road between its junction with Central Road and its terminus at Mouat Bay; (c)Blubber Bay Road between its junction with Gillies Bay Road and its terminus at Blubber Bay; (d)Crescent Bay Road between its junction with Blubber Bay Road and its terminus. [en. B.C. Reg. 205/94, s. 22; am. B.C. Reg. 235/97, s. 3 (f).]",
@@ -636,135 +638,398 @@
   ],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "6.590 km² (limit 2 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     }
   ],
   "construction": [
     {
-      "what": "road centreline",
-      "quote": "Gillies Bay Road between its junction with Blubber Bay Road and Shelter Point Road;",
-      "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
-      "ids": [
-        "2698207",
-        "2661591",
-        "591036",
-        "2575692",
-        "2575693",
-        "1878852",
-        "591001",
-        "2698140",
-        "591005",
-        "2566433",
-        "2698137",
-        "2698134",
-        "1878854",
-        "1878853",
-        "2698206",
-        "2575776",
-        "2575777",
-        "2698176",
-        "2698175",
-        "198416",
-        "198420",
-        "201264",
-        "198429",
-        "201258",
-        "457706",
-        "457705",
-        "457704",
-        "457733",
-        "457734",
-        "457735",
-        "457730",
-        "457745",
-        "457748",
-        "457741",
-        "457740",
-        "457737",
-        "484579",
-        "484578",
-        "457751"
-      ]
-    },
-    {
-      "what": "start at the junction with the first limit",
+      "what": "approximate zone: a zone around the places the section names (Gillies Bay): 1 km around the named points; not the boundary",
       "quote": null,
-      "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
-      "point": [
-        -124.55631849,
-        49.75388397
-      ]
-    },
-    {
-      "what": "end at the junction with the second limit",
-      "quote": null,
-      "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
-      "point": [
-        -124.46131898,
-        49.6541417
-      ]
-    },
-    {
-      "what": "buffer 200 m either side, plus a 10 m conservative pad; round ends extend past each limit",
-      "quote": "0.2 km",
-      "source": "geometry builder"
-    },
-    {
-      "what": "road centreline",
-      "quote": "Shelter Point Road between its junction with Central Road and its terminus at Mouat Bay;",
-      "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
-      "ids": [
-        "2575159",
-        "2575160",
-        "2698121",
-        "1676456",
-        "2566429",
-        "1878861",
-        "1676457",
-        "198399",
-        "484576",
-        "484577",
-        "484575",
-        "484572"
-      ]
-    },
-    {
-      "what": "buffer 200 m either side, plus a 10 m conservative pad",
-      "quote": "0.2 km",
-      "source": "geometry builder"
-    },
-    {
-      "what": "road centreline",
-      "quote": "Blubber Bay Road between its junction with Gillies Bay Road and its terminus at Blubber Bay;",
-      "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
-      "ids": [
-        "2698241",
-        "2400559",
-        "2698220",
-        "2575830",
-        "2562171",
-        "2562170",
-        "2575831",
-        "2698195",
-        "2698217",
-        "1876260",
-        "590992",
-        "590430",
-        "590428",
-        "590427",
-        "574340",
-        "457699"
-      ]
-    },
-    {
-      "what": "buffer 200 m either side, plus a 10 m conservative pad",
-      "quote": "0.2 km",
-      "source": "geometry builder"
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
     }
   ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -124.49883145815186,
+            49.6814935174648
+          ],
+          [
+            -124.49881807002083,
+            49.680611008810935
+          ],
+          [
+            -124.49867106365829,
+            49.67973359866646
+          ],
+          [
+            -124.49839186190293,
+            49.67886973646741
+          ],
+          [
+            -124.49233367973261,
+            49.663841947766606
+          ],
+          [
+            -124.49192520923991,
+            49.66299993071633
+          ],
+          [
+            -124.49139121587953,
+            49.66218788112379
+          ],
+          [
+            -124.49073684732382,
+            49.66141361777944
+          ],
+          [
+            -124.489968409408,
+            49.660684595286796
+          ],
+          [
+            -124.48909330525154,
+            49.66000783234653
+          ],
+          [
+            -124.48811996386077,
+            49.659389844246405
+          ],
+          [
+            -124.4870577589041,
+            49.6588365802043
+          ],
+          [
+            -124.48591691844396,
+            49.65835336616396
+          ],
+          [
+            -124.4847084264948,
+            49.657944853591374
+          ],
+          [
+            -124.48344391735257,
+            49.65761497476108
+          ],
+          [
+            -124.48213556370924,
+            49.65736690496019
+          ],
+          [
+            -124.4807959596237,
+            49.657203031971115
+          ],
+          [
+            -124.4794379994686,
+            49.65712493312436
+          ],
+          [
+            -124.47807475400937,
+            49.65713336014099
+          ],
+          [
+            -124.47671934479973,
+            49.65722823190903
+          ],
+          [
+            -124.47538481809214,
+            49.65740863526271
+          ],
+          [
+            -124.47408401946699,
+            49.657672833757736
+          ],
+          [
+            -124.47282947037792,
+            49.65801828435804
+          ],
+          [
+            -124.47163324779163,
+            49.658441661875116
+          ],
+          [
+            -124.4705068680734,
+            49.65893889092662
+          ],
+          [
+            -124.4694611762283,
+            49.65950518510864
+          ],
+          [
+            -124.46850624155984,
+            49.66013509300752
+          ],
+          [
+            -124.46765126074622,
+            49.66082255061132
+          ],
+          [
+            -124.46690446926638,
+            49.661560939619335
+          ],
+          [
+            -124.46627306202853,
+            49.662343151092074
+          ],
+          [
+            -124.46576312396806,
+            49.66316165383147
+          ],
+          [
+            -124.46537957128746,
+            49.66400856683647
+          ],
+          [
+            -124.46512610391015,
+            49.66487573513882
+          ],
+          [
+            -124.46500516961396,
+            49.66575480829107
+          ],
+          [
+            -124.46501794019831,
+            49.66663732075308
+          ],
+          [
+            -124.46516429992514,
+            49.66751477340367
+          ],
+          [
+            -124.46544284635478,
+            49.66837871539359
+          ],
+          [
+            -124.471493282868,
+            49.68340790617718
+          ],
+          [
+            -124.47190157097145,
+            49.68424999507587
+          ],
+          [
+            -124.47243548111442,
+            49.685062134276876
+          ],
+          [
+            -124.47308987648552,
+            49.68583650074453
+          ],
+          [
+            -124.4738584588182,
+            49.686565634929835
+          ],
+          [
+            -124.47473382889568,
+            49.68724251268606
+          ],
+          [
+            -124.47570755770754,
+            49.68786061299907
+          ],
+          [
+            -124.47677026757599,
+            49.6884139808771
+          ],
+          [
+            -124.47791172247348,
+            49.68889728479091
+          ],
+          [
+            -124.47912092666046,
+            49.68930586810749
+          ],
+          [
+            -124.4803862306921,
+            49.689635794018706
+          ],
+          [
+            -124.48169544376829,
+            49.6898838835291
+          ],
+          [
+            -124.48303595133862,
+            49.69004774613391
+          ],
+          [
+            -124.48439483682255,
+            49.69012580288976
+          ],
+          [
+            -124.4857590062631,
+            49.69011730165362
+          ],
+          [
+            -124.48711531470357,
+            49.690022324342365
+          ],
+          [
+            -124.48845069306,
+            49.68984178614202
+          ],
+          [
+            -124.4897522742561,
+            49.68957742667477
+          ],
+          [
+            -124.49100751739626,
+            49.68923179320921
+          ],
+          [
+            -124.49220432877013,
+            49.68880821607722
+          ],
+          [
+            -124.49333117851525,
+            49.688310776535815
+          ],
+          [
+            -124.49437721180637,
+            49.6877442673865
+          ],
+          [
+            -124.49533235349487,
+            49.68711414673376
+          ],
+          [
+            -124.4961874051871,
+            49.68642648533176
+          ],
+          [
+            -124.49693413382408,
+            49.6856879080293
+          ],
+          [
+            -124.49756535091055,
+            49.68490552988082
+          ],
+          [
+            -124.49807498163206,
+            49.6840868875418
+          ],
+          [
+            -124.49845812319886,
+            49.683239866612666
+          ],
+          [
+            -124.49871109186148,
+            49.68237262563361
+          ],
+          [
+            -124.49883145815186,
+            49.6814935174648
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-124",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 124",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nGillies Bay and Shelter Point Roads\n124 Those portions of the Province of British Columbia in the vicinity of Texada Island in M.U. 2-16 within 0.2 km of either side of the midline of the following Texada Island roads: (a)Gillies Bay Road between its junction with Blubber Bay Road and Shelter Point Road; (b)Shelter Point Road between its junction with Central Road and its terminus at Mouat Bay; (c)Blubber Bay Road between its junction with Gillies Bay Road and its terminus at Blubber Bay; (d)Crescent Bay Road between its junction with Blubber Bay Road and its terminus. [en. B.C. Reg. 205/94, s. 22; am. B.C. Reg. 235/97, s. 3 (f).]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "road_buffer",
+      "buffer_m": 200,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Gillies Bay): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "M.U. 2-16",
+        "geometry.buffer_m": "0.2 km",
+        "effect": "No Shooting Areas",
+        "geometry.side": "either side of the midline"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "0d2935f2f4a764ca9b6e1252bde0d81323d1c2e9e8b25ae204800229a273a32b",
+      "task_id": "closed_area-0d2935f2f4a7",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Gillies Bay): 1 km around the named points; not the boundary",
+          "quote": null,
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": false,
+          "detail": "6.590 km² (limit 2 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:58:54.364Z",
-  "updated": "2026-10-27T23:17:11.731Z"
+  "updated": "2026-10-28T19:47:02.446Z"
 }

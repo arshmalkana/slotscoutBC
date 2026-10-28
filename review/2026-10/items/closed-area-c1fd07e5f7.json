@@ -5,10 +5,11 @@
   "title": "Closed Areas Regulation, Schedule 3, section 15 (Walter Clough Wildlife Management Area)",
   "rule_id": "W3-015",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
-    "named lot \"Block 5, District Lot 381, Kootenay District, Plan 725, and Block 8, District Lot 382, Kootenay District, Plan 722\": failed (no official layer for area type lot); the larger area is not drawn in its place",
-    "validation failed: shape built (no shape could be built)"
+    "District Lots 381, 382 (KOOTENAY): the text names part of these lots",
+    "drawn whole: the text names only part of it, so the outline is approximate (\"possibly inside\")",
+    "validation failed: inside the area the text names (60.6% inside)"
   ],
   "source": {
     "text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nWalter Clough Wildlife Management Area\n15 That portion of M.U. 4-17 which is contained within the following described lots: Block 5, District Lot 381, Kootenay District, Plan 725, and Block 8, District Lot 382, Kootenay District, Plan 722.",
@@ -149,25 +150,550 @@
       ]
     },
     {
-      "query": "Block 5, District Lot 381, Kootenay District, Plan 725, and Block 8, District Lot 382, Kootenay District, Plan 722",
+      "query": "District Lots 381, 382 (KOOTENAY)",
       "kind": "lot",
-      "layer": "-",
-      "status": "failed",
-      "matches": 0,
-      "ids": [],
-      "note": "no official layer for area type lot",
-      "sample": []
+      "layer": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW",
+      "status": "ok",
+      "matches": 2,
+      "ids": [
+        "9164630",
+        "9164500"
+      ],
+      "note": "the text names part of these lots",
+      "partial": true,
+      "sample": [
+        {
+          "PIN_SID": 9164630,
+          "SURVPARC_TYPE_CDE": 1,
+          "LAND_TITLE_OFFICE_IDENTIFIER": null,
+          "PARCEL_TYPE": "Primary",
+          "ACT_GOVERNING_PARCEL_SURVEY": "Land Act",
+          "PARCEL_SHORT_DESCRIPTION": "DL 382",
+          "PARCEL_LEGAL_DESCRIPTION": "DISTRICT LOT 382, KOOTENAY DISTRICT",
+          "PRIMARY_PARCEL_OF_SUBDIV": null,
+          "SURVEYOR_GENERAL_PLAN_NO": "10TR17 KOOTENAY",
+          "CONFIRMED_DAT": "1892-11-11Z",
+          "PARCEL_AREA_DERIVATION": "Converted",
+          "PARCEL_AREA_IN_HECTARES": 1035.997,
+          "STATE_OF_PARCEL_SURVEY": "Active",
+          "FEATURE_CODE": "FA90400000",
+          "FEATURE_AREA_SQM": 10317587.437,
+          "FEATURE_LENGTH_M": 12849.9817,
+          "OBJECTID": 136615,
+          "SE_ANNO_CAD_DATA": null
+        },
+        {
+          "PIN_SID": 9164500,
+          "SURVPARC_TYPE_CDE": 1,
+          "LAND_TITLE_OFFICE_IDENTIFIER": null,
+          "PARCEL_TYPE": "Primary",
+          "ACT_GOVERNING_PARCEL_SURVEY": "Land Act",
+          "PARCEL_SHORT_DESCRIPTION": "DL 381",
+          "PARCEL_LEGAL_DESCRIPTION": "DISTRICT LOT 381, KOOTENAY DISTRICT",
+          "PRIMARY_PARCEL_OF_SUBDIV": null,
+          "SURVEYOR_GENERAL_PLAN_NO": "10TR17 KOOTENAY",
+          "CONFIRMED_DAT": "1892-11-11Z",
+          "PARCEL_AREA_DERIVATION": "Converted",
+          "PARCEL_AREA_IN_HECTARES": 1035.997,
+          "STATE_OF_PARCEL_SURVEY": "Active",
+          "FEATURE_CODE": "FA90400000",
+          "FEATURE_AREA_SQM": 10307145.0061,
+          "FEATURE_LENGTH_M": 12840.3755,
+          "OBJECTID": 136614,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
     }
   ],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "20.556 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "60.6% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "official boundary of the named area",
+      "quote": "Block 5, District Lot 381, Kootenay District, Plan 725, and Block 8, District Lot 382, Kootenay District, Plan 722",
+      "source": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -117.50831415,
+            49.69624882
+          ],
+          [
+            -117.50774266,
+            49.69624764
+          ],
+          [
+            -117.50430369,
+            49.69624046
+          ],
+          [
+            -117.50266215,
+            49.696237
+          ],
+          [
+            -117.50220188,
+            49.69623603
+          ],
+          [
+            -117.50214955,
+            49.69623591
+          ],
+          [
+            -117.50112136,
+            49.69623373
+          ],
+          [
+            -117.49558584,
+            49.69622178
+          ],
+          [
+            -117.49534967,
+            49.69622125
+          ],
+          [
+            -117.49531588,
+            49.69622118
+          ],
+          [
+            -117.49515125,
+            49.69622082
+          ],
+          [
+            -117.49507945,
+            49.69622067
+          ],
+          [
+            -117.4950464,
+            49.6962206
+          ],
+          [
+            -117.49491309,
+            49.6962203
+          ],
+          [
+            -117.49487922,
+            49.69622022
+          ],
+          [
+            -117.49158737,
+            49.69621299
+          ],
+          [
+            -117.49155325,
+            49.69621287
+          ],
+          [
+            -117.48475912,
+            49.69618876
+          ],
+          [
+            -117.48051661,
+            49.69617351
+          ],
+          [
+            -117.48042655,
+            49.69617318
+          ],
+          [
+            -117.47865682,
+            49.69616803
+          ],
+          [
+            -117.46368618,
+            49.69609921
+          ],
+          [
+            -117.46364746,
+            49.7
+          ],
+          [
+            -117.46361528,
+            49.70324215
+          ],
+          [
+            -117.46354422,
+            49.71771316
+          ],
+          [
+            -117.46353045,
+            49.72055975
+          ],
+          [
+            -117.46353043,
+            49.72056243
+          ],
+          [
+            -117.46353002,
+            49.72064667
+          ],
+          [
+            -117.46353,
+            49.72064975
+          ],
+          [
+            -117.46350915,
+            49.72495631
+          ],
+          [
+            -117.45791345,
+            49.72493979
+          ],
+          [
+            -117.45425181,
+            49.72492884
+          ],
+          [
+            -117.44946019,
+            49.72495363
+          ],
+          [
+            -117.44897187,
+            49.72495461
+          ],
+          [
+            -117.44858742,
+            49.72495537
+          ],
+          [
+            -117.44778931,
+            49.72495698
+          ],
+          [
+            -117.4470401,
+            49.72495848
+          ],
+          [
+            -117.4470064,
+            49.75390866
+          ],
+          [
+            -117.45236015,
+            49.75390578
+          ],
+          [
+            -117.45296442,
+            49.75390543
+          ],
+          [
+            -117.46353254,
+            49.75389894
+          ],
+          [
+            -117.46661712,
+            49.75390046
+          ],
+          [
+            -117.46676916,
+            49.75390052
+          ],
+          [
+            -117.46712875,
+            49.75390148
+          ],
+          [
+            -117.46761336,
+            49.75390124
+          ],
+          [
+            -117.46791707,
+            49.75390109
+          ],
+          [
+            -117.46800981,
+            49.75390104
+          ],
+          [
+            -117.46941904,
+            49.75390033
+          ],
+          [
+            -117.46981548,
+            49.75390012
+          ],
+          [
+            -117.47130996,
+            49.75389934
+          ],
+          [
+            -117.47133139,
+            49.75389934
+          ],
+          [
+            -117.47152375,
+            49.75389924
+          ],
+          [
+            -117.4715933,
+            49.75389919
+          ],
+          [
+            -117.47170925,
+            49.75389913
+          ],
+          [
+            -117.47174049,
+            49.75389912
+          ],
+          [
+            -117.47477412,
+            49.75389746
+          ],
+          [
+            -117.47482149,
+            49.75389743
+          ],
+          [
+            -117.47489625,
+            49.75389739
+          ],
+          [
+            -117.47594531,
+            49.75389679
+          ],
+          [
+            -117.47595755,
+            49.75389678
+          ],
+          [
+            -117.476061,
+            49.75389673
+          ],
+          [
+            -117.47611693,
+            49.7538967
+          ],
+          [
+            -117.48081202,
+            49.75389393
+          ],
+          [
+            -117.4808913,
+            49.75389388
+          ],
+          [
+            -117.48194106,
+            49.75389324
+          ],
+          [
+            -117.48260736,
+            49.75389282
+          ],
+          [
+            -117.48339006,
+            49.75389233
+          ],
+          [
+            -117.48347507,
+            49.75389227
+          ],
+          [
+            -117.48499515,
+            49.75388839
+          ],
+          [
+            -117.49149428,
+            49.75389313
+          ],
+          [
+            -117.49148702,
+            49.75158636
+          ],
+          [
+            -117.49146589,
+            49.74488027
+          ],
+          [
+            -117.49146424,
+            49.74435372
+          ],
+          [
+            -117.49145634,
+            49.74158624
+          ],
+          [
+            -117.49145579,
+            49.74139572
+          ],
+          [
+            -117.49145516,
+            49.7411776
+          ],
+          [
+            -117.49145261,
+            49.74028369
+          ],
+          [
+            -117.49145176,
+            49.74003346
+          ],
+          [
+            -117.49145094,
+            49.73979107
+          ],
+          [
+            -117.49144903,
+            49.73923188
+          ],
+          [
+            -117.49143743,
+            49.73583528
+          ],
+          [
+            -117.49142904,
+            49.73316703
+          ],
+          [
+            -117.49142866,
+            49.73304422
+          ],
+          [
+            -117.49140331,
+            49.72498043
+          ],
+          [
+            -117.50819316,
+            49.72500748
+          ],
+          [
+            -117.50819321,
+            49.72499446
+          ],
+          [
+            -117.50819337,
+            49.72495542
+          ],
+          [
+            -117.50828372,
+            49.70348278
+          ],
+          [
+            -117.50829836,
+            49.7
+          ],
+          [
+            -117.50830836,
+            49.69762328
+          ],
+          [
+            -117.50831415,
+            49.69624882
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W3-015",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 3, s. 15",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nWalter Clough Wildlife Management Area\n15 That portion of M.U. 4-17 which is contained within the following described lots: Block 5, District Lot 381, Kootenay District, Plan 725, and Block 8, District Lot 382, Kootenay District, Plan 722.",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "admin_boundary",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "whole_feature",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "official boundary of the named area",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "M.U. 4-17",
+        "geometry.feature": "Block 5, District Lot 381, Kootenay District, Plan 725, and Block 8, District Lot 382, Kootenay District, Plan 722",
+        "effect": "No Shooting or Hunting Areas"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "4b9727d3243923ddd3c673808f7184f4d09594f62fa7b2568d04499a670a723d",
+      "task_id": "closed_area-4b9727d32439",
+      "construction": [
+        {
+          "what": "official boundary of the named area",
+          "quote": "Block 5, District Lot 381, Kootenay District, Plan 725, and Block 8, District Lot 382, Kootenay District, Plan 722",
+          "source": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "20.556 km² (limit none for this type)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": false,
+          "detail": "60.6% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:58:57.975Z",
-  "updated": "2026-10-27T23:10:44.551Z"
+  "updated": "2026-10-28T19:55:28.803Z"
 }

@@ -5,10 +5,12 @@
   "title": "Closed Areas Regulation, Schedule 5, section 60 (Whistler)",
   "rule_id": "W5-060",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "the walk was too complex to trace within the time allowed; a person draws it",
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Whistler, Sixteen Mile Creek, Rethel Creek): 1 km around the named points; not the boundary"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nWhistler\n60 Those portions of the Province of British Columbia in the vicinity of the Resort Municipality of Whistler within the following described boundaries: (1)and (2) Repealed. [B.C. Reg. 72/2014, App. 1, s. 3 (b).] (3)Commencing at the center line of Highway 99 at its junction with the easterly boundary of the Resort Municipality of Whistler, hereinafter referred to as Whistler, and proceeding in a northerly and westerly direction along the boundary of Whistler to its intersection with the 1 200 m contour line immediately east of Nineteen Mile Creek; thence easterly and northerly along the contour line approximately 2 km to a point on the contour line, above Sixteen Mile Creek, at the junction of the easterly and southerly slopes of Rainbow Mountain; thence due northeast in a straight line across Sixteen Mile Creek to the 1 050 m contour line; thence easterly and northerly along the contour line to a point due West of the intersection of the power line and Highway 99 approximately 3 km northeast of the point of commencement; thence due East to that intersection; thence along the southerly and the easterly boundary of Highway 99 to a point due North of the junction of Rethel Creek and the Green River; thence across the Green River and up the northern and eastern natural boundary of Rethel Creek to its intersection with the boundary of Garibaldi Provincial Park; thence westerly along the boundary of the park to its intersection with the eastern boundary of Whistler; thence northerly and easterly and northerly along the boundary of Whistler to the point of commencement. (4)Commencing at the southwest corner of the Brandywine Falls Provincial Park boundary; thence due West up the slope of Mount Brew to the 3 000 ft. (900 m) contour line; thence in a southerly direction along that contour line to the point of its intersection with the unnamed creek originating at Brew Lake; thence in a southerly direction downstream to the confluence of the unnamed creek with Roe Creek; thence in an easterly direction, downstream to the mouth of Roe Creek at Shadow Lake; thence in an easterly direction, along the high water mark of the northerly shore of Shadow Lake to the point of intersection of the high water mark with a perpendicular, downward projection of the centerline of Highway 99 from the center of the Highway 99 bridge across the connecting waterway between Daisy Lake and Shadow Lake; thence northerly along the centerline of Highway 99 to the point of intersection with Brandywine Falls Provincial Park boundary; thence westerly along the southern boundary of Brandywine Falls Provincial Park to the southwest corner of Brandywine Falls Provincial Park, being the point of commencement. [am. B.C. Regs. 225/98, s. 4 (b); 72/2014, App. 1, s. 3.]",
@@ -530,18 +532,430 @@
   "lookups": [],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "38.552 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     },
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Whistler, Sixteen Mile Creek, Rethel Creek): 1 km around the named points; not the boundary",
+      "quote": "Commencing at the center line of Highway 99 at its junction with the easterly boundary of the Resort Municipality of Whistler, hereinafter referred to as Whistler, and proceeding in a northerly and westerly direction along the boundary of Whistler to its intersection with the 1 200 m contour line immediately east of Nineteen Mile Creek",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -122.94309464553001,
+            50.11114701191677
+          ],
+          [
+            -122.88003434282324,
+            50.16308546571889
+          ],
+          [
+            -122.87925602876919,
+            50.16379343277614
+          ],
+          [
+            -122.87858758856673,
+            50.164546064989565
+          ],
+          [
+            -122.87803522283781,
+            50.16533638673856
+          ],
+          [
+            -122.87760405718524,
+            50.166157072731224
+          ],
+          [
+            -122.87729809450043,
+            50.16700051585407
+          ],
+          [
+            -122.87712017764592,
+            50.16785889764607
+          ],
+          [
+            -122.87707196286564,
+            50.16872426074583
+          ],
+          [
+            -122.87715390417885,
+            50.16958858264138
+          ],
+          [
+            -122.87736524891078,
+            50.17044385003987
+          ],
+          [
+            -122.87770404441204,
+            50.17128213316787
+          ],
+          [
+            -122.87816715591327,
+            50.17209565931298
+          ],
+          [
+            -122.8787502953592,
+            50.17287688492409
+          ],
+          [
+            -122.87944806096273,
+            50.17361856560041
+          ],
+          [
+            -122.88025398712057,
+            50.17431382331834
+          ],
+          [
+            -122.88116060423276,
+            50.174956210270565
+          ],
+          [
+            -122.88215950787682,
+            50.17553976872268
+          ],
+          [
+            -122.88324143669745,
+            50.176059086329886
+          ],
+          [
+            -122.88439635829126,
+            50.17650934639712
+          ],
+          [
+            -122.88561356228894,
+            50.176886372614405
+          ],
+          [
+            -122.88688175976937,
+            50.17718666784898
+          ],
+          [
+            -122.88818918807969,
+            50.1774074466324
+          ],
+          [
+            -122.88952372008357,
+            50.17754666103856
+          ],
+          [
+            -122.89087297681722,
+            50.177603019711114
+          ],
+          [
+            -122.91671116641483,
+            50.17788084237839
+          ],
+          [
+            -122.9181493686344,
+            50.17784891131412
+          ],
+          [
+            -122.91957491041191,
+            50.177722870494165
+          ],
+          [
+            -122.92097281349076,
+            50.17750404425084
+          ],
+          [
+            -122.92232839049744,
+            50.177194731804136
+          ],
+          [
+            -122.92362739949421,
+            50.176798183064456
+          ],
+          [
+            -122.92485619381418,
+            50.17631856443206
+          ],
+          [
+            -122.92600186559345,
+            50.17576091495581
+          ],
+          [
+            -122.92705238148399,
+            50.17513109331516
+          ],
+          [
+            -122.9279967091147,
+            50.17443571618645
+          ],
+          [
+            -123.01235783600502,
+            50.105342862476924
+          ],
+          [
+            -123.01314954401909,
+            50.104623166666066
+          ],
+          [
+            -123.01382766510872,
+            50.103857244917826
+          ],
+          [
+            -123.014385698258,
+            50.1030524462888
+          ],
+          [
+            -123.01481829554434,
+            50.10221649248222
+          ],
+          [
+            -123.01512131324804,
+            50.101357403711106
+          ],
+          [
+            -123.01529185137369,
+            50.100483421710955
+          ],
+          [
+            -123.01532828121249,
+            50.099602930642874
+          ],
+          [
+            -123.01523026069152,
+            50.09872437664718
+          ],
+          [
+            -123.01499873737252,
+            50.09785618681988
+          ],
+          [
+            -123.01463593908282,
+            50.09700668838979
+          ],
+          [
+            -123.01414535227863,
+            50.09618402887064
+          ],
+          [
+            -123.01353168835851,
+            50.09539609795324
+          ],
+          [
+            -123.01280083825962,
+            50.09465045188503
+          ],
+          [
+            -123.01195981578003,
+            50.093954241060196
+          ],
+          [
+            -123.01101669017741,
+            50.09331414151191
+          ],
+          [
+            -123.00998050869542,
+            50.09273629096104
+          ],
+          [
+            -123.00886120976324,
+            50.09222623003131
+          ],
+          [
+            -123.00766952770174,
+            50.09178884919104
+          ],
+          [
+            -123.00641688984906,
+            50.091428341927475
+          ],
+          [
+            -123.0051153070882,
+            50.091148164599325
+          ],
+          [
+            -123.003777258822,
+            50.09095100334961
+          ],
+          [
+            -123.0024155734909,
+            50.090838748393764
+          ],
+          [
+            -123.00104330577184,
+            50.09081247592737
+          ],
+          [
+            -122.99967361162587,
+            50.09087243782584
+          ],
+          [
+            -122.99831962238275,
+            50.09101805923362
+          ],
+          [
+            -122.99699431905994,
+            50.091247944066154
+          ],
+          [
+            -122.99571040811055,
+            50.09155988837204
+          ],
+          [
+            -122.99448019978185,
+            50.09195090142859
+          ],
+          [
+            -122.94734044632612,
+            50.108810765424856
+          ],
+          [
+            -122.94614689272815,
+            50.10928909955146
+          ],
+          [
+            -122.94503409021146,
+            50.109841743860585
+          ],
+          [
+            -122.94401324674972,
+            50.110463133684675
+          ],
+          [
+            -122.94309464553001,
+            50.11114701191677
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-060",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 60",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nWhistler\n60 Those portions of the Province of British Columbia in the vicinity of the Resort Municipality of Whistler within the following described boundaries: (1)and (2) Repealed. [B.C. Reg. 72/2014, App. 1, s. 3 (b).] (3)Commencing at the center line of Highway 99 at its junction with the easterly boundary of the Resort Municipality of Whistler, hereinafter referred to as Whistler, and proceeding in a northerly and westerly direction along the boundary of Whistler to its intersection with the 1 200 m contour line immediately east of Nineteen Mile Creek; thence easterly and northerly along the contour line approximately 2 km to a point on the contour line, above Sixteen Mile Creek, at the junction of the easterly and southerly slopes of Rainbow Mountain; thence due northeast in a straight line across Sixteen Mile Creek to the 1 050 m contour line; thence easterly and northerly along the contour line to a point due West of the intersection of the power line and Highway 99 approximately 3 km northeast of the point of commencement; thence due East to that intersection; thence along the southerly and the easterly boundary of Highway 99 to a point due North of the junction of Rethel Creek and the Green River; thence across the Green River and up the northern and eastern natural boundary of Rethel Creek to its intersection with the boundary of Garibaldi Provincial Park; thence westerly along the boundary of the park to its intersection with the eastern boundary of Whistler; thence northerly and easterly and northerly along the boundary of Whistler to the point of commencement. (4)Commencing at the southwest corner of the Brandywine Falls Provincial Park boundary; thence due West up the slope of Mount Brew to the 3 000 ft. (900 m) contour line; thence in a southerly direction along that contour line to the point of its intersection with the unnamed creek originating at Brew Lake; thence in a southerly direction downstream to the confluence of the unnamed creek with Roe Creek; thence in an easterly direction, downstream to the mouth of Roe Creek at Shadow Lake; thence in an easterly direction, along the high water mark of the northerly shore of Shadow Lake to the point of intersection of the high water mark with a perpendicular, downward projection of the centerline of Highway 99 from the center of the Highway 99 bridge across the connecting waterway between Daisy Lake and Shadow Lake; thence northerly along the centerline of Highway 99 to the point of intersection with Brandywine Falls Provincial Park boundary; thence westerly along the southern boundary of Brandywine Falls Provincial Park to the southwest corner of Brandywine Falls Provincial Park, being the point of commencement. [am. B.C. Regs. 225/98, s. 4 (b); 72/2014, App. 1, s. 3.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Whistler, Sixteen Mile Creek, Rethel Creek): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "effect": "No Shooting Areas",
+        "geometry.steps[0]": "Commencing at the center line of Highway 99 at its junction with the easterly boundary of the Resort Municipality of Whistler, hereinafter referred to as Whistler, and proceeding in a northerly and westerly direction along the boundary of Whistler to its intersection with the 1 200 m contour line immediately east of Nineteen Mile Creek",
+        "geometry.steps[1]": "thence easterly and northerly along the contour line approximately 2 km to a point on the contour line, above Sixteen Mile Creek, at the junction of the easterly and southerly slopes of Rainbow Mountain",
+        "geometry.steps[2]": "thence due northeast in a straight line across Sixteen Mile Creek to the 1 050 m contour line",
+        "geometry.steps[3]": "thence easterly and northerly along the contour line to a point due West of the intersection of the power line and Highway 99 approximately 3 km northeast of the point of commencement",
+        "geometry.steps[4]": "thence due East to that intersection",
+        "geometry.steps[5]": "thence along the southerly and the easterly boundary of Highway 99 to a point due North of the junction of Rethel Creek and the Green River",
+        "geometry.steps[6]": "thence across the Green River and up the northern and eastern natural boundary of Rethel Creek to its intersection with the boundary of Garibaldi Provincial Park",
+        "geometry.steps[7]": "thence westerly along the boundary of the park to its intersection with the eastern boundary of Whistler",
+        "geometry.steps[8]": "thence northerly and easterly and northerly along the boundary of Whistler to the point of commencement",
+        "geometry.steps[9]": "Commencing at the southwest corner of the Brandywine Falls Provincial Park boundary",
+        "geometry.steps[10]": "thence due West up the slope of Mount Brew to the 3 000 ft. (900 m) contour line",
+        "geometry.steps[11]": "thence in a southerly direction along that contour line to the point of its intersection with the unnamed creek originating at Brew Lake",
+        "geometry.steps[12]": "thence in a southerly direction downstream to the confluence of the unnamed creek with Roe Creek",
+        "geometry.steps[13]": "thence in an easterly direction, downstream to the mouth of Roe Creek at Shadow Lake",
+        "geometry.steps[14]": "thence in an easterly direction, along the high water mark of the northerly shore of Shadow Lake to the point of intersection of the high water mark with a perpendicular, downward projection of the centerline of Highway 99 from the center of the Highway 99 bridge across the connecting waterway between Daisy Lake and Shadow Lake",
+        "geometry.steps[15]": "thence northerly along the centerline of Highway 99 to the point of intersection with Brandywine Falls Provincial Park boundary",
+        "geometry.steps[16]": "thence westerly along the southern boundary of Brandywine Falls Provincial Park to the southwest corner of Brandywine Falls Provincial Park, being the point of commencement"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "83f3078f7e1242e6ef970c0f1366fcf9d3779dd6e49e394279feb032ab0df81a",
+      "task_id": "closed_area-83f3078f7e12",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Whistler, Sixteen Mile Creek, Rethel Creek): 1 km around the named points; not the boundary",
+          "quote": "Commencing at the center line of Highway 99 at its junction with the easterly boundary of the Resort Municipality of Whistler, hereinafter referred to as Whistler, and proceeding in a northerly and westerly direction along the boundary of Whistler to its intersection with the 1 200 m contour line immediately east of Nineteen Mile Creek",
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "38.552 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": null,
+          "detail": "the text names no area, or it could not be found"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: a walk outline is approximate; a person checks it against the text"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:47:18.141Z",
-  "updated": "2026-10-20T21:47:18.141Z"
+  "updated": "2026-10-28T20:02:27.461Z"
 }

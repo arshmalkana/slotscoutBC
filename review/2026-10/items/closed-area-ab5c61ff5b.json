@@ -5,10 +5,18 @@
   "title": "Closed Areas Regulation, Schedule 5, section 5 (Buntzen Lake)",
   "rule_id": "W5-005",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "\"Lot 226\" was not found in the official layers; that side is drawn straight",
+    "\"Lots 226 and 227\" was not found in the official layers; that side is drawn straight",
+    "\"Lot 227\" was not found in the official layers; that side is drawn straight",
+    "\"Lot 350\" was not found in the official layers; that side is drawn straight",
+    "\"Lot 348\" was not found in the official layers; that side is drawn straight",
+    "\"Sections 16, 21, 28 and 33, Township 39, WCM\" was not found in the official layers; that side is drawn straight",
+    "\"Indian Arm, Burrard Inlet, and the waters of Port Moody\" was not found in the official layers; that side is drawn straight",
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Buntzen Lake): 1 km around the named points; not the boundary"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nBuntzen Lake\n5 That portion of the Province of British Columbia in New Westminster District which is contained within the following described boundaries: Commencing at the southwest corner of Lot 226, Group 1, NWD, being a point on the high water mark of the waters of Port Moody, on the northerly shore thereof; thence northerly along the westerly boundary of said Lot 226 to the northwest corner thereof; thence easterly along the northerly boundaries of Lots 226 and 227 to the northeast corner of said Lot 227; thence southerly along the easterly boundary of said Lot 227 to the northerly boundary of Lot 350; thence easterly along said northerly boundary of Lot 350 to the northeast corner thereof; thence easterly, northerly and easterly along the northerly, westerly and northerly boundaries of Lot 348 to the northeast corner thereof; thence northerly along the easterly boundaries of Sections 16, 21, 28 and 33, Township 39, WCM, to the northeast corner of said Section 33; and from the northeast corner of said Section 33 in a straight line to the northeast corner of the District Municipality of North Vancouver; thence in a general southerly and easterly direction along the middle lines of Indian Arm, Burrard Inlet, and the waters of Port Moody to a point 365 m (1 200 feet) due North of the intersection of the centreline of North Road with the high water mark of the waters of Port Moody, on the southerly shore thereof; thence due East to a point due South of the aforesaid southwest corner of Lot 226; thence North to said southeast corner of Lot 226, being point of commencement, except thereout any lands which may lie within the corporate limits of any city, town, village or district municipality or any lands which may be hereinafter incorporated therein.",
@@ -426,18 +434,412 @@
   ],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.137 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     },
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Buntzen Lake): 1 km around the named points; not the boundary",
+      "quote": "Commencing at the southwest corner of Lot 226, Group 1, NWD, being a point on the high water mark of the waters of Port Moody, on the northerly shore thereof",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -122.87352195348059,
+            49.33055472855636
+          ],
+          [
+            -122.87345525809263,
+            49.32967324836349
+          ],
+          [
+            -122.87325631313576,
+            49.32880027286224
+          ],
+          [
+            -122.87292704136654,
+            49.32794420860985
+          ],
+          [
+            -122.87247062012523,
+            49.32711329887921
+          ],
+          [
+            -122.87189145049523,
+            49.3263155443137
+          ],
+          [
+            -122.87119511470712,
+            49.325558625933205
+          ],
+          [
+            -122.87038832220561,
+            49.32484983123061
+          ],
+          [
+            -122.86947884490539,
+            49.32419598406778
+          ],
+          [
+            -122.86847544226426,
+            49.32360337904338
+          ],
+          [
+            -122.8673877768982,
+            49.323077720960974
+          ],
+          [
+            -122.86622632155228,
+            49.32262406997734
+          ],
+          [
+            -122.8650022583216,
+            49.3222467929555
+          ],
+          [
+            -122.86372737109083,
+            49.32194952148804
+          ],
+          [
+            -122.86241393222225,
+            49.32173511699156
+          ],
+          [
+            -122.86107458457731,
+            49.32160564320624
+          ],
+          [
+            -122.85972222,
+            49.321562346362754
+          ],
+          [
+            -122.85836985542268,
+            49.32160564320624
+          ],
+          [
+            -122.85703050777775,
+            49.32173511699156
+          ],
+          [
+            -122.85571706890916,
+            49.32194952148804
+          ],
+          [
+            -122.8544421816784,
+            49.3222467929555
+          ],
+          [
+            -122.85321811844771,
+            49.32262406997734
+          ],
+          [
+            -122.85205666310179,
+            49.323077720960974
+          ],
+          [
+            -122.85096899773573,
+            49.32360337904338
+          ],
+          [
+            -122.84996559509462,
+            49.32419598406778
+          ],
+          [
+            -122.84905611779439,
+            49.32484983123061
+          ],
+          [
+            -122.84824932529287,
+            49.325558625933205
+          ],
+          [
+            -122.84755298950476,
+            49.3263155443137
+          ],
+          [
+            -122.84697381987476,
+            49.32711329887921
+          ],
+          [
+            -122.84651739863345,
+            49.32794420860985
+          ],
+          [
+            -122.84618812686425,
+            49.32880027286224
+          ],
+          [
+            -122.84598918190736,
+            49.32967324836349
+          ],
+          [
+            -122.8459224865194,
+            49.33055472855636
+          ],
+          [
+            -122.84598869009464,
+            49.331436224533036
+          ],
+          [
+            -122.8461871621389,
+            49.33230924677915
+          ],
+          [
+            -122.84651599806934,
+            49.333165386941076
+          ],
+          [
+            -122.84697203729473,
+            49.333996398828766
+          ],
+          [
+            -122.84755089341236,
+            49.334794277872994
+          ],
+          [
+            -122.84824699623978,
+            49.33555133827024
+          ],
+          [
+            -122.84905364528478,
+            49.33626028707001
+          ],
+          [
+            -122.84996307414565,
+            49.33691429448853
+          ],
+          [
+            -122.85096652522611,
+            49.33750705976865
+          ],
+          [
+            -122.85205433404862,
+            49.33803287194824
+          ],
+          [
+            -122.85321602235524,
+            49.33848666494864
+          ],
+          [
+            -122.85444039909825,
+            49.33886406644921
+          ],
+          [
+            -122.85571566834491,
+            49.33916144007374
+          ],
+          [
+            -122.8570295430523,
+            49.33937592047976
+          ],
+          [
+            -122.85836936360992,
+            49.33950544100995
+          ],
+          [
+            -122.85972222,
+            49.339548753637246
+          ],
+          [
+            -122.86107507639007,
+            49.33950544100995
+          ],
+          [
+            -122.86241489694768,
+            49.33937592047976
+          ],
+          [
+            -122.86372877165508,
+            49.33916144007374
+          ],
+          [
+            -122.86500404090174,
+            49.33886406644921
+          ],
+          [
+            -122.86622841764475,
+            49.33848666494864
+          ],
+          [
+            -122.86739010595137,
+            49.33803287194824
+          ],
+          [
+            -122.86847791477389,
+            49.33750705976865
+          ],
+          [
+            -122.86948136585434,
+            49.33691429448853
+          ],
+          [
+            -122.8703907947152,
+            49.33626028707001
+          ],
+          [
+            -122.87119744376021,
+            49.33555133827024
+          ],
+          [
+            -122.87189354658763,
+            49.334794277872994
+          ],
+          [
+            -122.87247240270527,
+            49.333996398828766
+          ],
+          [
+            -122.87292844193065,
+            49.333165386941076
+          ],
+          [
+            -122.87325727786109,
+            49.33230924677915
+          ],
+          [
+            -122.87345574990535,
+            49.331436224533036
+          ],
+          [
+            -122.87352195348059,
+            49.33055472855636
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-005",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 5",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nBuntzen Lake\n5 That portion of the Province of British Columbia in New Westminster District which is contained within the following described boundaries: Commencing at the southwest corner of Lot 226, Group 1, NWD, being a point on the high water mark of the waters of Port Moody, on the northerly shore thereof; thence northerly along the westerly boundary of said Lot 226 to the northwest corner thereof; thence easterly along the northerly boundaries of Lots 226 and 227 to the northeast corner of said Lot 227; thence southerly along the easterly boundary of said Lot 227 to the northerly boundary of Lot 350; thence easterly along said northerly boundary of Lot 350 to the northeast corner thereof; thence easterly, northerly and easterly along the northerly, westerly and northerly boundaries of Lot 348 to the northeast corner thereof; thence northerly along the easterly boundaries of Sections 16, 21, 28 and 33, Township 39, WCM, to the northeast corner of said Section 33; and from the northeast corner of said Section 33 in a straight line to the northeast corner of the District Municipality of North Vancouver; thence in a general southerly and easterly direction along the middle lines of Indian Arm, Burrard Inlet, and the waters of Port Moody to a point 365 m (1 200 feet) due North of the intersection of the centreline of North Road with the high water mark of the waters of Port Moody, on the southerly shore thereof; thence due East to a point due South of the aforesaid southwest corner of Lot 226; thence North to said southeast corner of Lot 226, being point of commencement, except thereout any lands which may lie within the corporate limits of any city, town, village or district municipality or any lands which may be hereinafter incorporated therein.",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [
+        "except thereout any lands which may lie within the corporate limits of any city, town, village or district municipality or any lands which may be hereinafter incorporated therein"
+      ],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Buntzen Lake): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "in New Westminster District",
+        "effect": "No Shooting Areas",
+        "exemptions[0]": "except thereout any lands which may lie within the corporate limits of any city, town, village or district municipality or any lands which may be hereinafter incorporated therein",
+        "geometry.steps[0]": "Commencing at the southwest corner of Lot 226, Group 1, NWD, being a point on the high water mark of the waters of Port Moody, on the northerly shore thereof",
+        "geometry.steps[1]": "thence northerly along the westerly boundary of said Lot 226 to the northwest corner thereof",
+        "geometry.steps[2]": "thence easterly along the northerly boundaries of Lots 226 and 227 to the northeast corner of said Lot 227",
+        "geometry.steps[3]": "thence southerly along the easterly boundary of said Lot 227 to the northerly boundary of Lot 350",
+        "geometry.steps[4]": "thence easterly along said northerly boundary of Lot 350 to the northeast corner thereof",
+        "geometry.steps[5]": "thence easterly, northerly and easterly along the northerly, westerly and northerly boundaries of Lot 348 to the northeast corner thereof",
+        "geometry.steps[6]": "thence northerly along the easterly boundaries of Sections 16, 21, 28 and 33, Township 39, WCM, to the northeast corner of said Section 33",
+        "geometry.steps[7]": "from the northeast corner of said Section 33 in a straight line to the northeast corner of the District Municipality of North Vancouver",
+        "geometry.steps[8]": "thence in a general southerly and easterly direction along the middle lines of Indian Arm, Burrard Inlet, and the waters of Port Moody to a point 365 m (1 200 feet) due North of the intersection of the centreline of North Road with the high water mark of the waters of Port Moody, on the southerly shore thereof",
+        "geometry.steps[9]": "thence due East to a point due South of the aforesaid southwest corner of Lot 226",
+        "geometry.steps[10]": "thence North to said southeast corner of Lot 226, being point of commencement"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "c33ab027aa7f7a5e548b5ef68e07f384ac38de2a6156acce6ba909c650a66cf5",
+      "task_id": "closed_area-c33ab027aa7f",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Buntzen Lake): 1 km around the named points; not the boundary",
+          "quote": "Commencing at the southwest corner of Lot 226, Group 1, NWD, being a point on the high water mark of the waters of Port Moody, on the northerly shore thereof",
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "3.137 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: a walk outline is approximate; a person checks it against the text"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:47:35.520Z",
-  "updated": "2026-10-28T17:22:42.098Z"
+  "updated": "2026-10-28T20:09:36.826Z"
 }

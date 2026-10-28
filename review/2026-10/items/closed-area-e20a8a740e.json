@@ -8,6 +8,13 @@
   "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
   "why": [
     "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "\"District Lots 36 and 25, Tp 24\" was not found in the official layers; that side is drawn straight",
+    "\"Lot 30\" was not found in the official layers; that side is drawn straight",
+    "\"Lot 30\" was not found in the official layers; that side is drawn straight",
+    "\"District Lot 24, Tp 24\" was not found in the official layers; that side is drawn straight",
+    "\"the fence which forms the southerly and westerly boundaries of the community pasture\" was not found in the official layers; that side is drawn straight",
+    "\"District Lots 34, 35 and 36, Tp 24\" was not found in the official layers; that side is drawn straight",
+    "none of the places the section names was found in the official layers",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -339,11 +346,11 @@
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:58:54.548Z",
-  "updated": "2026-10-27T23:10:07.969Z"
+  "updated": "2026-10-28T19:48:04.962Z"
 }

@@ -5,10 +5,12 @@
   "title": "Closed Areas Regulation, Schedule 5, section 38 (Wells)",
   "rule_id": "W5-038",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "\"Lot 7795, Cariboo Land District\" was not found in the official layers; that side is drawn straight",
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Wells, Jack of Clubs Lake): 1 km around the named points; not the boundary"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nWells\n38 That portion of the Province of British Columbia, in the vicinity of Wells, Cariboo Land District, which is contained within the following described boundaries: Commencing at the northeast corner of Lot 131, Cariboo Land District; thence due South to the southeast corner of Lot 11062, Cariboo Land District; thence southwesterly to the most southern portion of Lot 7795, Cariboo Land District; thence in a generally westerly direction along the southern boundary, and the extension thereof, of Lot 7795, Cariboo Land District, to the mean high water mark of the easterly shore of Jack of Clubs Lake; thence southwesterly along the shore of said lake to the most southerly portion thereof; thence in a northwesterly direction to the intersection of Jack of Clubs Creek Road and Highway 26; thence in a northeasterly direction along said highway to a point due South of the western boundary of Lot 289, Cariboo Land District; thence due North to a point due West of the northwest corner of Lot 131, Cariboo Land District; thence due East to the point of commencement. Repealed 39-40 Repealed. [B.C. Reg. 322/95, s. 3 (b).]",
@@ -369,18 +371,419 @@
   ],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "8.606 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     },
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Wells, Jack of Clubs Lake): 1 km around the named points; not the boundary",
+      "quote": "Commencing at the northeast corner of Lot 131, Cariboo Land District",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -121.60913394022481,
+            53.09000460371109
+          ],
+          [
+            -121.60910710629948,
+            53.08911597398402
+          ],
+          [
+            -121.60893435715428,
+            53.08823327439428
+          ],
+          [
+            -121.60861738878286,
+            53.08736512553021
+          ],
+          [
+            -121.60815930516729,
+            53.08652000535975
+          ],
+          [
+            -121.60756458764283,
+            53.08570616647134
+          ],
+          [
+            -121.60683905084538,
+            53.08493155553415
+          ],
+          [
+            -121.605989785683,
+            53.08420373576174
+          ],
+          [
+            -121.60502508989781,
+            53.0835298131332
+          ],
+          [
+            -121.60395438690338,
+            53.08291636708921
+          ],
+          [
+            -121.60278813369504,
+            53.08236938637579
+          ],
+          [
+            -121.60153771873456,
+            53.08189421065828
+          ],
+          [
+            -121.60021535080574,
+            53.081495478471844
+          ],
+          [
+            -121.59883393992351,
+            53.08117708201286
+          ],
+          [
+            -121.59740697145322,
+            53.08094212920863
+          ],
+          [
+            -121.59594837466186,
+            53.0807929134335
+          ],
+          [
+            -121.5944723869748,
+            53.080730891163235
+          ],
+          [
+            -121.59299341525184,
+            53.080756667784826
+          ],
+          [
+            -121.59152589542494,
+            53.08086999169839
+          ],
+          [
+            -121.59008415185477,
+            53.08106975676844
+          ],
+          [
+            -121.58868225776614,
+            53.08135401310057
+          ],
+          [
+            -121.58733389811223,
+            53.08171998603984
+          ],
+          [
+            -121.58605223619462,
+            53.082164103206395
+          ],
+          [
+            -121.55990714096664,
+            53.09228428530022
+          ],
+          [
+            -121.5587439771027,
+            53.092782993241514
+          ],
+          [
+            -121.55766524645823,
+            53.09334600627209
+          ],
+          [
+            -121.55668077283512,
+            53.09396819896002
+          ],
+          [
+            -121.55579952310232,
+            53.09464390689365
+          ],
+          [
+            -121.55502952551197,
+            53.09536697818373
+          ],
+          [
+            -121.5543777965086,
+            53.09613082940803
+          ],
+          [
+            -121.55385027670057,
+            53.096928505491654
+          ],
+          [
+            -121.55345177658161,
+            53.09775274298093
+          ],
+          [
+            -121.55318593250264,
+            53.09859603613718
+          ],
+          [
+            -121.55305517330302,
+            53.099450705250376
+          ],
+          [
+            -121.55306069791422,
+            53.10030896655247
+          ],
+          [
+            -121.55320246414938,
+            53.10116300309462
+          ],
+          [
+            -121.55347918879227,
+            53.10200503594372
+          ],
+          [
+            -121.5538883589946,
+            53.10282739504911
+          ],
+          [
+            -121.55442625488924,
+            53.103622589134226
+          ],
+          [
+            -121.55508798322289,
+            53.104383373974656
+          ],
+          [
+            -121.55956818294128,
+            53.10898411945068
+          ],
+          [
+            -121.56038233115537,
+            53.1097321087297
+          ],
+          [
+            -121.56131613624204,
+            53.11042790334069
+          ],
+          [
+            -121.56236038261308,
+            53.111064632438875
+          ],
+          [
+            -121.56350476271044,
+            53.11163600814931
+          ],
+          [
+            -121.5647379787456,
+            53.1121363877426
+          ],
+          [
+            -121.56604785428537,
+            53.1125608294408
+          ],
+          [
+            -121.56742145457915,
+            53.112905141298164
+          ],
+          [
+            -121.5688452144358,
+            53.11316592267041
+          ],
+          [
+            -121.570305072379,
+            53.11334059785958
+          ],
+          [
+            -121.5717866097476,
+            53.113427441599185
+          ],
+          [
+            -121.57327519335549,
+            53.11342559612594
+          ],
+          [
+            -121.57475612028998,
+            53.113335079667664
+          ],
+          [
+            -121.57621476340547,
+            53.113156786262934
+          ],
+          [
+            -121.57763671606152,
+            53.11289247691423
+          ],
+          [
+            -121.57900793466298,
+            53.11254476216261
+          ],
+          [
+            -121.58031487758207,
+            53.11211707625792
+          ],
+          [
+            -121.5815446390793,
+            53.111613643181556
+          ],
+          [
+            -121.58268507689102,
+            53.111039434860544
+          ],
+          [
+            -121.58372493221712,
+            53.11040012198883
+          ],
+          [
+            -121.60539075952757,
+            53.09567586406095
+          ],
+          [
+            -121.60631449591605,
+            53.09498142813171
+          ],
+          [
+            -121.60711954264067,
+            53.09423562592291
+          ],
+          [
+            -121.60779804059676,
+            53.093445744065185
+          ],
+          [
+            -121.60834336821206,
+            53.09261949944386
+          ],
+          [
+            -121.60875020591455,
+            53.091764963743074
+          ],
+          [
+            -121.60901458783142,
+            53.090890484538356
+          ],
+          [
+            -121.60913394022481,
+            53.09000460371109
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-038",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 38",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nWells\n38 That portion of the Province of British Columbia, in the vicinity of Wells, Cariboo Land District, which is contained within the following described boundaries: Commencing at the northeast corner of Lot 131, Cariboo Land District; thence due South to the southeast corner of Lot 11062, Cariboo Land District; thence southwesterly to the most southern portion of Lot 7795, Cariboo Land District; thence in a generally westerly direction along the southern boundary, and the extension thereof, of Lot 7795, Cariboo Land District, to the mean high water mark of the easterly shore of Jack of Clubs Lake; thence southwesterly along the shore of said lake to the most southerly portion thereof; thence in a northwesterly direction to the intersection of Jack of Clubs Creek Road and Highway 26; thence in a northeasterly direction along said highway to a point due South of the western boundary of Lot 289, Cariboo Land District; thence due North to a point due West of the northwest corner of Lot 131, Cariboo Land District; thence due East to the point of commencement. Repealed 39-40 Repealed. [B.C. Reg. 322/95, s. 3 (b).]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Wells, Jack of Clubs Lake): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "in the vicinity of Wells, Cariboo Land District",
+        "effect": "No Shooting Areas",
+        "geometry.steps[0]": "Commencing at the northeast corner of Lot 131, Cariboo Land District",
+        "geometry.steps[1]": "thence due South to the southeast corner of Lot 11062, Cariboo Land District",
+        "geometry.steps[2]": "thence southwesterly to the most southern portion of Lot 7795, Cariboo Land District",
+        "geometry.steps[3]": "thence in a generally westerly direction along the southern boundary, and the extension thereof, of Lot 7795, Cariboo Land District, to the mean high water mark of the easterly shore of Jack of Clubs Lake",
+        "geometry.steps[4]": "thence southwesterly along the shore of said lake to the most southerly portion thereof",
+        "geometry.steps[5]": "thence in a northwesterly direction to the intersection of Jack of Clubs Creek Road and Highway 26",
+        "geometry.steps[6]": "thence in a northeasterly direction along said highway to a point due South of the western boundary of Lot 289, Cariboo Land District",
+        "geometry.steps[7]": "thence due North to a point due West of the northwest corner of Lot 131, Cariboo Land District",
+        "geometry.steps[8]": "thence due East to the point of commencement"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "e4d7759229ff8e31b23d4c0d796369eca3e2c4f17c02c113d72e5632ea8ccdd9",
+      "task_id": "closed_area-e4d7759229ff",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Wells, Jack of Clubs Lake): 1 km around the named points; not the boundary",
+          "quote": "Commencing at the northeast corner of Lot 131, Cariboo Land District",
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "8.606 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: a walk outline is approximate; a person checks it against the text"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:10:35.753Z",
-  "updated": "2026-10-28T17:28:19.997Z"
+  "updated": "2026-10-28T20:15:08.196Z"
 }

@@ -5,10 +5,11 @@
   "title": "Closed Areas Regulation, Schedule 3, section 59 (Fording River/Greenhills Operations)",
   "rule_id": "W3-059",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Fording River): 1 km around the named points; not the boundary"
   ],
   "source": {
     "text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nFording River/Greenhills Operations\n59 That portion of M.U. 4-23 in the vicinity of Elkford outlined in red on the attached Map No. 3-59/18. [en. B.C. Reg. 95/2015, App. 3, s. 1; am. B.C. Reg. 239/2018, App. 1, s. 2.]",
@@ -144,13 +145,388 @@
   ],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.137 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Fording River): 1 km around the named points; not the boundary",
+      "quote": null,
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -114.89062361008727,
+            49.88277693235719
+          ],
+          [
+            -114.89055615000088,
+            49.88189545232053
+          ],
+          [
+            -114.89035493394698,
+            49.88102247728073
+          ],
+          [
+            -114.89002190676742,
+            49.88016641377729
+          ],
+          [
+            -114.88956028216562,
+            49.8793355050543
+          ],
+          [
+            -114.8889745115084,
+            49.87853775171641
+          ],
+          [
+            -114.88827024073912,
+            49.87778083473634
+          ],
+          [
+            -114.88745425582565,
+            49.87707204155314
+          ],
+          [
+            -114.88653441727517,
+            49.8764181959703
+          ],
+          [
+            -114.88551958435173,
+            49.8758255925258
+          ],
+          [
+            -114.88441952972921,
+            49.875299935962495
+          ],
+          [
+            -114.88324484540313,
+            49.8748462863788
+          ],
+          [
+            -114.88200684076584,
+            49.874469010583994
+          ],
+          [
+            -114.88071743382396,
+            49.87417174012348
+          ],
+          [
+            -114.87938903660014,
+            49.87395733637524
+          ],
+          [
+            -114.87803443581656,
+            49.873827863050664
+          ],
+          [
+            -114.87666667,
+            49.87378456636275
+          ],
+          [
+            -114.87529890418344,
+            49.873827863050664
+          ],
+          [
+            -114.87394430339985,
+            49.87395733637524
+          ],
+          [
+            -114.87261590617605,
+            49.87417174012348
+          ],
+          [
+            -114.87132649923417,
+            49.874469010583994
+          ],
+          [
+            -114.87008849459689,
+            49.8748462863788
+          ],
+          [
+            -114.86891381027078,
+            49.875299935962495
+          ],
+          [
+            -114.86781375564827,
+            49.8758255925258
+          ],
+          [
+            -114.86679892272483,
+            49.8764181959703
+          ],
+          [
+            -114.86587908417437,
+            49.87707204155314
+          ],
+          [
+            -114.8650630992609,
+            49.87778083473634
+          ],
+          [
+            -114.8643588284916,
+            49.87853775171641
+          ],
+          [
+            -114.86377305783438,
+            49.8793355050543
+          ],
+          [
+            -114.86331143323258,
+            49.88016641377729
+          ],
+          [
+            -114.86297840605302,
+            49.88102247728073
+          ],
+          [
+            -114.86277718999914,
+            49.88189545232053
+          ],
+          [
+            -114.86270972991272,
+            49.88277693235719
+          ],
+          [
+            -114.86277668277445,
+            49.883658428488914
+          ],
+          [
+            -114.86297741109605,
+            49.8845314511954
+          ],
+          [
+            -114.86330998877894,
+            49.885387592105346
+          ],
+          [
+            -114.8637712193936,
+            49.886218604999954
+          ],
+          [
+            -114.86435666671393,
+            49.887016485271324
+          ],
+          [
+            -114.8650606972222,
+            49.887773547068775
+          ],
+          [
+            -114.86587653418366,
+            49.888482497388004
+          ],
+          [
+            -114.86679632277685,
+            49.88913650638683
+          ],
+          [
+            -114.86781120565755,
+            49.88972927324735
+          ],
+          [
+            -114.86891140823202,
+            49.890255086946695
+          ],
+          [
+            -114.87008633281908,
+            49.89070888134778
+          ],
+          [
+            -114.87132466079326,
+            49.89108628407608
+          ],
+          [
+            -114.8726144617223,
+            49.891383658708236
+          ],
+          [
+            -114.87394330844279,
+            49.891598139862985
+          ],
+          [
+            -114.87529839695873,
+            49.89172766085426
+          ],
+          [
+            -114.87666667,
+            49.89177097363725
+          ],
+          [
+            -114.87803494304127,
+            49.89172766085426
+          ],
+          [
+            -114.87939003155722,
+            49.891598139862985
+          ],
+          [
+            -114.8807188782777,
+            49.891383658708236
+          ],
+          [
+            -114.88200867920675,
+            49.89108628407608
+          ],
+          [
+            -114.88324700718093,
+            49.89070888134778
+          ],
+          [
+            -114.88442193176797,
+            49.890255086946695
+          ],
+          [
+            -114.88552213434247,
+            49.88972927324735
+          ],
+          [
+            -114.88653701722316,
+            49.88913650638683
+          ],
+          [
+            -114.88745680581634,
+            49.888482497388004
+          ],
+          [
+            -114.8882726427778,
+            49.887773547068775
+          ],
+          [
+            -114.88897667328608,
+            49.887016485271324
+          ],
+          [
+            -114.88956212060641,
+            49.886218604999954
+          ],
+          [
+            -114.89002335122106,
+            49.885387592105346
+          ],
+          [
+            -114.89035592890396,
+            49.8845314511954
+          ],
+          [
+            -114.89055665722556,
+            49.883658428488914
+          ],
+          [
+            -114.89062361008727,
+            49.88277693235719
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W3-059",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 3, s. 59",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nFording River/Greenhills Operations\n59 That portion of M.U. 4-23 in the vicinity of Elkford outlined in red on the attached Map No. 3-59/18. [en. B.C. Reg. 95/2015, App. 3, s. 1; am. B.C. Reg. 239/2018, App. 1, s. 2.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "other",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Fording River): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "That portion of M.U. 4-23",
+        "effect": "No Shooting or Hunting Areas"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "f2c50e7e3ad618b958c9758087f892175bb9f46b5b07713f167210207458e921",
+      "task_id": "closed_area-f2c50e7e3ad6",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Fording River): 1 km around the named points; not the boundary",
+          "quote": null,
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "3.137 km² (limit none for this type)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T22:00:19.758Z",
-  "updated": "2026-10-27T23:12:35.594Z"
+  "updated": "2026-10-28T20:15:24.644Z"
 }

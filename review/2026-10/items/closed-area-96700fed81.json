@@ -9,6 +9,8 @@
   "why": [
     "named area \"KDYD\": failed (no official layer for area type other)",
     "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "\"Tranquille and Red Lake road\" was not found in the official layers; that side is drawn straight",
+    "\"Tranquille\" names more than one place and nothing narrows it",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -231,11 +233,11 @@
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:47:35.547Z",
-  "updated": "2026-10-20T21:47:35.547Z"
+  "updated": "2026-10-28T20:12:39.979Z"
 }

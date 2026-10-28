@@ -5,10 +5,14 @@
   "title": "Closed Areas Regulation, Schedule 5, section 119 (Lion's Bay)",
   "rule_id": "W5-119",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "\"watershed of Harvey Creek\" was not found in the official layers; that side is drawn straight",
+    "\"watershed of Rundle Creek\" was not found in the official layers; that side is drawn straight",
+    "\"Howe Sound\" was not found in the official layers; that side is drawn straight",
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Magnesia Creek, Howe Sound): 1 km around the named points; not the boundary"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nLion's Bay\n119 That portion of the Province of British Columbia in the vicinity of Lion's Bay contained within the following described boundaries: Commencing at the point of intersection of the mean low water mark of Howe Sound and the midline of Magnesia Creek; thence easterly along the midline of Magnesia Creek and along the easterly prolongation thereof to the apex of Mt. Harvey; thence in a general easterly, southerly and westerly direction along the northerly, easterly and southerly boundaries of the watershed of Harvey Creek to the point of intersection with the southerly boundary of the watershed of Rundle Creek; thence westerly along the southerly boundary of the watershed of Rundle Creek and along the prolongation thereof to the point of intersection with the mean low water mark of Howe Sound; thence in a general northerly direction along the mean low water mark of Howe Sound to the point of commencement. [en. B.C. Reg. 224/92, s. 13.]",
@@ -226,18 +230,410 @@
   "lookups": [],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "15.407 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     },
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Magnesia Creek, Howe Sound): 1 km around the named points; not the boundary",
+      "quote": "Commencing at the point of intersection of the mean low water mark of Howe Sound and the midline of Magnesia Creek",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -123.31025819138573,
+            49.50797235853405
+          ],
+          [
+            -123.31149245201611,
+            49.50834190853382
+          ],
+          [
+            -123.31277656860158,
+            49.50863110883547
+          ],
+          [
+            -123.31409816875357,
+            49.50883717283759
+          ],
+          [
+            -123.31544451833649,
+            49.50895811497208
+          ],
+          [
+            -123.31680264435035,
+            49.50899276986716
+          ],
+          [
+            -123.31815946013404,
+            49.50894080359464
+          ],
+          [
+            -123.31950189167257,
+            49.50880271689304
+          ],
+          [
+            -123.32081700378144,
+            49.50857984033456
+          ],
+          [
+            -123.3220921249423,
+            49.50827432148318
+          ],
+          [
+            -123.32331496957775,
+            49.50788910416856
+          ],
+          [
+            -123.32447375657833,
+            49.50742790007707
+          ],
+          [
+            -123.32555732293172,
+            49.50689515293571
+          ],
+          [
+            -123.32655523135422,
+            49.50629599563664
+          ],
+          [
+            -123.32745787088204,
+            49.50563620071827
+          ],
+          [
+            -123.32825654945167,
+            49.504922124683056
+          ],
+          [
+            -123.32894357757633,
+            49.50416064669201
+          ],
+          [
+            -123.32951234231436,
+            49.503359102229155
+          ],
+          [
+            -123.3299573708201,
+            49.50252521237872
+          ],
+          [
+            -123.33027438287085,
+            49.50166700939881
+          ],
+          [
+            -123.33046033187053,
+            49.50079275931079
+          ],
+          [
+            -123.33051343394398,
+            49.499910882252536
+          ],
+          [
+            -123.33043318485068,
+            49.49902987136355
+          ],
+          [
+            -123.3302203645658,
+            49.49815821098458
+          ],
+          [
+            -123.32987702949444,
+            49.49730429495933
+          ],
+          [
+            -123.32940649240496,
+            49.49647634582501
+          ],
+          [
+            -123.32881329028463,
+            49.49568233566869
+          ],
+          [
+            -123.32810314043647,
+            49.49492990940997
+          ],
+          [
+            -123.32728288524788,
+            49.49422631124669
+          ],
+          [
+            -123.32636042616984,
+            49.493578314969234
+          ],
+          [
+            -123.32534464754698,
+            49.492992158811376
+          ],
+          [
+            -123.32424533103519,
+            49.49247348546208
+          ],
+          [
+            -123.32307306143163,
+            49.492027287812164
+          ],
+          [
+            -123.24780418940225,
+            49.46647588763629
+          ],
+          [
+            -123.24657146478583,
+            49.46610566048082
+          ],
+          [
+            -123.24528885454592,
+            49.465815727803346
+          ],
+          [
+            -123.24396870529822,
+            49.46560888036779
+          ],
+          [
+            -123.24262372441976,
+            49.46548710916589
+          ],
+          [
+            -123.2412668579151,
+            49.46545158628363
+          ],
+          [
+            -123.23991116600406,
+            49.46550265363778
+          ],
+          [
+            -123.23856969761903,
+            49.46563981969041
+          ],
+          [
+            -123.23725536501018,
+            49.46586176417231
+          ],
+          [
+            -123.23598081965554,
+            49.466166350770386
+          ],
+          [
+            -123.23475833066072,
+            49.46655064765811
+          ],
+          [
+            -123.23359966681075,
+            49.46701095567256
+          ],
+          [
+            -123.23251598340121,
+            49.4675428438693
+          ],
+          [
+            -123.2315177149324,
+            49.46814119211521
+          ],
+          [
+            -123.23061447469479,
+            49.46880024031203
+          ],
+          [
+            -123.22981496221033,
+            49.46951364378003
+          ],
+          [
+            -123.22912687941981,
+            49.47027453427195
+          ],
+          [
+            -123.22855685642448,
+            49.471075586032555
+          ],
+          [
+            -123.22811038750085,
+            49.471909086271594
+          ],
+          [
+            -123.22779177800953,
+            49.47276700937381
+          ],
+          [
+            -123.22760410271643,
+            49.4736410941344
+          ],
+          [
+            -123.22754917593582,
+            49.47452292327797
+          ],
+          [
+            -123.22762753379261,
+            49.475404004496944
+          ],
+          [
+            -123.22783842878437,
+            49.47627585222981
+          ],
+          [
+            -123.22817983670627,
+            49.47713006939191
+          ],
+          [
+            -123.2286484758828,
+            49.477958428271435
+          ],
+          [
+            -123.22923983853094,
+            49.47875294981028
+          ],
+          [
+            -123.2299482339623,
+            49.47950598050466
+          ],
+          [
+            -123.23076684321616,
+            49.48021026618284
+          ],
+          [
+            -123.23168778460365,
+            49.48085902194643
+          ],
+          [
+            -123.23270218953701,
+            49.48144599759881
+          ],
+          [
+            -123.23380028791647,
+            49.481965537927444
+          ],
+          [
+            -123.23497150225327,
+            49.482412637255514
+          ],
+          [
+            -123.31025819138573,
+            49.50797235853405
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-119",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 119",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nLion's Bay\n119 That portion of the Province of British Columbia in the vicinity of Lion's Bay contained within the following described boundaries: Commencing at the point of intersection of the mean low water mark of Howe Sound and the midline of Magnesia Creek; thence easterly along the midline of Magnesia Creek and along the easterly prolongation thereof to the apex of Mt. Harvey; thence in a general easterly, southerly and westerly direction along the northerly, easterly and southerly boundaries of the watershed of Harvey Creek to the point of intersection with the southerly boundary of the watershed of Rundle Creek; thence westerly along the southerly boundary of the watershed of Rundle Creek and along the prolongation thereof to the point of intersection with the mean low water mark of Howe Sound; thence in a general northerly direction along the mean low water mark of Howe Sound to the point of commencement. [en. B.C. Reg. 224/92, s. 13.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Magnesia Creek, Howe Sound): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "effect": "No Shooting Areas",
+        "geometry.steps[0]": "Commencing at the point of intersection of the mean low water mark of Howe Sound and the midline of Magnesia Creek",
+        "geometry.steps[1]": "thence easterly along the midline of Magnesia Creek and along the easterly prolongation thereof to the apex of Mt. Harvey",
+        "geometry.steps[2]": "thence in a general easterly, southerly and westerly direction along the northerly, easterly and southerly boundaries of the watershed of Harvey Creek to the point of intersection with the southerly boundary of the watershed of Rundle Creek",
+        "geometry.steps[3]": "thence westerly along the southerly boundary of the watershed of Rundle Creek and along the prolongation thereof to the point of intersection with the mean low water mark of Howe Sound",
+        "geometry.steps[4]": "thence in a general northerly direction along the mean low water mark of Howe Sound to the point of commencement"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "d4115c46e5366c156c6c5700b5d2981dfbb3fb30a4f4de1e93e8492f8b7001a9",
+      "task_id": "closed_area-d4115c46e536",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Magnesia Creek, Howe Sound): 1 km around the named points; not the boundary",
+          "quote": "Commencing at the point of intersection of the mean low water mark of Howe Sound and the midline of Magnesia Creek",
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "15.407 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": null,
+          "detail": "the text names no area, or it could not be found"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: a walk outline is approximate; a person checks it against the text"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T22:00:18.799Z",
-  "updated": "2026-10-20T22:00:18.799Z"
+  "updated": "2026-10-28T20:13:18.680Z"
 }

@@ -364,14 +364,14 @@
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
   "construction": [
     {
       "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
       "quote": "Commencing at the point of intersection of the natural boundary of Kitsumkalum River on the easterly shore thereof and the natural boundary of Skeena River on the northerly shore thereof",
-      "source": "WHSE_BASEMAPPING.FWA_RIVERS_POLY, WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP"
+      "source": "WHSE_BASEMAPPING.FWA_RIVERS_POLY, WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP, WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW"
     }
   ],
   "feature": {
@@ -600,7 +600,7 @@
         {
           "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
           "quote": "Commencing at the point of intersection of the natural boundary of Kitsumkalum River on the easterly shore thereof and the natural boundary of Skeena River on the northerly shore thereof",
-          "source": "WHSE_BASEMAPPING.FWA_RIVERS_POLY, WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP"
+          "source": "WHSE_BASEMAPPING.FWA_RIVERS_POLY, WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP, WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW"
         }
       ],
       "validation": [
@@ -637,7 +637,7 @@
         {
           "check": "step directions match the line",
           "passed": null,
-          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+          "detail": "not run: a walk outline is approximate; a person checks it against the text"
         }
       ],
       "change_type": "new"
@@ -645,5 +645,5 @@
   },
   "status": "open",
   "created": "2026-10-21T16:10:14.380Z",
-  "updated": "2026-10-28T17:24:44.434Z"
+  "updated": "2026-10-28T20:11:50.997Z"
 }

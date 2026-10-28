@@ -5,11 +5,14 @@
   "title": "Closed Areas Regulation, Schedule 7, section 33 (Tweedsmuir Park)",
   "rule_id": "W8-033",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: steps: run 1 [\"tweedsmuir provincial park||1 km|\",\"tetachuck lake redfern rapids and eutsuk lake|the natural boundary of whitesail lake on the southerly shore thereof|1 km|shoreline\",\"whitesail lake and little whitesail lake|the midline of mccuish creek||shoreline\",\"mccuish creek|the easterly boundary of the watershed of sias creek||creek\",\"gamsby river kimsquit river and sakumtha river|a prolongation of the midline of chezko river||other\",\"chezko river|a point 1 km due south of the natural boundary of eutsuk lake on the southerly shore thereof|1 km|river\",\"eutsuk lake redfern rapids and tetachuck lake|the easterly boundary of tweedsmuir park|1 km|shoreline\",\"|the point of commencement||straight_line\",\"tweedsmuir park|||\",\"takia river|the midline of kohasganko creek||river\",\"kohasganko creek|a point in lot 698 coast land district range 3 where kohasganko creek turns and flows in a general westerly direction||creek\",\"|the easterly boundary of tweedsmuir park||straight_line\",\"tweedsmuir park|the midline of hwy 20||other\",\"hwy 20|a point next to benchmark 3907 coast land district range 3||road\",\"young creek|the apex of king mountain||other\",\"burnt bridge creek|the westerly boundary of tweedsmuir park||other\",\"tweedsmuir park|the point of commencement||other\",\"hotnarko river|||\",\"tweedsmuir park|the midline of an unnamed stream flowing easterly into talchako river east of melikan mountain||other\",\"|the apex of caribou mountain||straight_line\",\"|the apex of mount marvin||straight_line\",\"|the point of intersection of the midlines of atnarko river and hotnarko river||straight_line\",\"hotnarko river|the point of commencement||river\"] vs run 2 [\"tweedsmuir provincial park||1 km|\",\"tetachuck lake redfern rapids and eutsuk lake|the point of intersection with the natural boundary of whitesail lake on the southerly shore thereof|1 km|shoreline\",\"whitesail lake and little whitesail lake|the point of intersection with the midline of mccuish creek||shoreline\",\"mccuish creek|the point of intersection with the easterly boundary of the watershed of sias creek||creek\",\"the watersheds of gamsby river kimsquit river and sakumtha river|the point of intersection with a prolongation of the midline of chezko river||other\",\"chezko river|a point 1 km due south of the natural boundary of eutsuk lake on the southerly shore thereof|1 km|river\",\"eutsuk lake redfern rapids and tetachuck lake|the point of intersection with the easterly boundary of tweedsmuir park|1 km|shoreline\",\"|the point of commencement||straight_line\",\"tweedsmuir park|||\",\"takia river|the point of intersection with the midline of kohasganko creek||river\",\"kohasganko creek|a point in lot 698 coast land district range 3 where kohasganko creek turns and flows in a general westerly direction||creek\",\"|the point of intersection with the easterly boundary of tweedsmuir park||straight_line\",\"tweedsmuir park|the point of intersection with the midline of hwy 20||other\",\"hwy 20|a point next to benchmark 3907 coast land district range 3||road\",\"the watershed of young creek|the apex of king mountain||other\",\"the main tributary of burnt bridge creek|the point of intersection with the westerly boundary of tweedsmuir park||other\",\"tweedsmuir park|the point of commencement||other\",\"hotnarko river|||\",\"tweedsmuir park|the point of intersection with the midline of an unnamed stream flowing easterly into talchako river east of melikan mountain||other\",\"|the apex of caribou mountain||straight_line\",\"|the apex of mount marvin||straight_line\",\"|the point of intersection of the midlines of atnarko river and hotnarko river||straight_line\",\"hotnarko river|the point of commencement||river\"]",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "the walk was too complex to trace within the time allowed; a person draws it",
+    "approximate zone around the places the section names, using run 1's reading",
+    "a zone around the places the section names (Takia River, Kohasganko Creek): 1 km around the named points; not the boundary",
+    "validation failed: two independent extractions agree (steps: run 1 [\"tweedsmuir provincial park||1 km|\",\"tetachuck lake redfern rapids and eutsuk lake|the natural boundary of whitesail lake on the southerly shore thereof|1 km|shoreline\",\"whitesail lake and little whitesail lake|the midline of mccuish creek||shoreline\",\"mccuish creek|the easterly boundary of the watershed of sias creek||creek\",\"gamsby river kimsquit river and sakumtha river|a prolongation of the midline of chezko river||other\",\"chezko river|a point 1 km due south of the natural boundary of eutsuk lake on the southerly shore thereof|1 km|river\",\"eutsuk lake redfern rapids and tetachuck lake|the easterly boundary of tweedsmuir park|1 km|shoreline\",\"|the point of commencement||straight_line\",\"tweedsmuir park|||\",\"takia river|the midline of kohasganko creek||river\",\"kohasganko creek|a point in lot 698 coast land district range 3 where kohasganko creek turns and flows in a general westerly direction||creek\",\"|the easterly boundary of tweedsmuir park||straight_line\",\"tweedsmuir park|the midline of hwy 20||other\",\"hwy 20|a point next to benchmark 3907 coast land district range 3||road\",\"young creek|the apex of king mountain||other\",\"burnt bridge creek|the westerly boundary of tweedsmuir park||other\",\"tweedsmuir park|the point of commencement||other\",\"hotnarko river|||\",\"tweedsmuir park|the midline of an unnamed stream flowing easterly into talchako river east of melikan mountain||other\",\"|the apex of caribou mountain||straight_line\",\"|the apex of mount marvin||straight_line\",\"|the point of intersection of the midlines of atnarko river and hotnarko river||straight_line\",\"hotnarko river|the point of commencement||river\"] vs run 2 [\"tweedsmuir provincial park||1 km|\",\"tetachuck lake redfern rapids and eutsuk lake|the point of intersection with the natural boundary of whitesail lake on the southerly shore thereof|1 km|shoreline\",\"whitesail lake and little whitesail lake|the point of intersection with the midline of mccuish creek||shoreline\",\"mccuish creek|the point of intersection with the easterly boundary of the watershed of sias creek||creek\",\"the watersheds of gamsby river kimsquit river and sakumtha river|the point of intersection with a prolongation of the midline of chezko river||other\",\"chezko river|a point 1 km due south of the natural boundary of eutsuk lake on the southerly shore thereof|1 km|river\",\"eutsuk lake redfern rapids and tetachuck lake|the point of intersection with the easterly boundary of tweedsmuir park|1 km|shoreline\",\"|the point of commencement||straight_line\",\"tweedsmuir park|||\",\"takia river|the point of intersection with the midline of kohasganko creek||river\",\"kohasganko creek|a point in lot 698 coast land district range 3 where kohasganko creek turns and flows in a general westerly direction||creek\",\"|the point of intersection with the easterly boundary of tweedsmuir park||straight_line\",\"tweedsmuir park|the point of intersection with the midline of hwy 20||other\",\"hwy 20|a point next to benchmark 3907 coast land district range 3||road\",\"the watershed of young creek|the apex of king mountain||other\",\"the main tributary of burnt bridge creek|the point of intersection with the westerly boundary of tweedsmuir park||other\",\"tweedsmuir park|the point of commencement||other\",\"hotnarko river|||\",\"tweedsmuir park|the point of intersection with the midline of an unnamed stream flowing easterly into talchako river east of melikan mountain||other\",\"|the apex of caribou mountain||straight_line\",\"|the apex of mount marvin||straight_line\",\"|the point of intersection of the midlines of atnarko river and hotnarko river||straight_line\",\"hotnarko river|the point of commencement||river\"])"
   ],
   "source": {
     "text": "Schedule 7 No Hunting Areas (Section 8)\nTweedsmuir Park\n33 Those portions of M.U.s 5-10, 5-11, 6-01 and 6-02 contained within the following described boundaries: (1)Commencing at a point on the easterly boundary of Tweedsmuir Provincial Park, said point lying 1 km due North of the natural boundary of Tetachuck Lake on the northerly shore thereof; thence in a general southwesterly, westerly and northwesterly direction along a line 1 km inland of the natural boundaries of Tetachuck Lake, Redfern Rapids and Eutsuk Lake to the point of intersection with the natural boundary of Whitesail Lake on the southerly shore thereof; thence in a general westerly direction along the natural boundaries of Whitesail Lake and Little Whitesail Lake to the point of intersection with the midline of McCuish Creek; thence in a general southwesterly direction along the midline of McCuish Creek and a prolongation thereof to the point of intersection with the easterly boundary of the watershed of Sias Creek; thence in a general southeasterly direction along the easterly boundaries of the watersheds of Gamsby River, Kimsquit River and Sakumtha River to the point of intersection with a prolongation of the midline of Chezko River; thence in a general northeasterly direction along the midline of Chezko River to a point 1 km due South of the natural boundary of Eutsuk Lake on the southerly shore thereof; thence in a general easterly direction along a line 1 km south of the natural boundaries of Eutsuk Lake, Redfern Rapids and Tetachuck Lake on the southerly shores thereof to the point of intersection with the easterly boundary of Tweedsmuir Park; thence northerly in a straight line to the point of commencement; (2)Commencing on the westerly boundary of Tweedsmuir Park at the point of intersection of the midlines of Dean River and Takia River; thence in a general easterly direction along the midline of Takia River to the point of intersection with the midline of Kohasganko Creek; thence in a general easterly direction along the midline of Kohasganko Creek to a point in Lot 698, Coast Land District Range 3 where Kohasganko Creek turns and flows in a general westerly direction; thence northeasterly in a straight line to the point of intersection with the easterly boundary of Tweedsmuir Park; thence in a general southerly direction along the easterly boundary of Tweedsmuir Park to the point of intersection with the midline of Highway 20; thence in a general westerly and southwesterly direction along the midline of Highway 20 to a point next to benchmark 3907 Coast Land District Range 3; thence in a general westerly direction along the southerly boundary of the watershed of Young Creek to the apex of King mountain; thence in a general westerly and southerly direction along the southerly and easterly boundaries of the main tributary of Burnt Bridge Creek to the point of intersection with the westerly boundary of Tweedsmuir Park; thence in a general northerly direction along the westerly boundary of Tweedsmuir Park to the point of commencement; (3)Commencing at the point of intersection of the midline of Hotnarko River and the easterly boundary of Tweedsmuir Park; thence in a general southerly, westerly and northerly direction along the easterly, southerly and westerly boundaries of Tweedsmuir Park to the point of intersection with the midline of an unnamed stream flowing easterly into Talchako River east of Melikan mountain; thence southeasterly in a straight line to the apex of Caribou Mountain; thence northeasterly in a straight line to the apex of Mount Marvin; thence northeasterly in a straight line to the point of intersection of the midlines of Atnarko River and Hotnarko River; thence in a general northeasterly direction along the midline of Hotnarko River to the point of commencement. [en. B.C. Reg. 167/88, s. 9.]",
@@ -753,18 +756,433 @@
   ],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "17.376 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "steps: run 1 [\"tweedsmuir provincial park||1 km|\",\"tetachuck lake redfern rapids and eutsuk lake|the natural boundary of whitesail lake on the southerly shore thereof|1 km|shoreline\",\"whitesail lake and little whitesail lake|the midline of mccuish creek||shoreline\",\"mccuish creek|the easterly boundary of the watershed of sias creek||creek\",\"gamsby river kimsquit river and sakumtha river|a prolongation of the midline of chezko river||other\",\"chezko river|a point 1 km due south of the natural boundary of eutsuk lake on the southerly shore thereof|1 km|river\",\"eutsuk lake redfern rapids and tetachuck lake|the easterly boundary of tweedsmuir park|1 km|shoreline\",\"|the point of commencement||straight_line\",\"tweedsmuir park|||\",\"takia river|the midline of kohasganko creek||river\",\"kohasganko creek|a point in lot 698 coast land district range 3 where kohasganko creek turns and flows in a general westerly direction||creek\",\"|the easterly boundary of tweedsmuir park||straight_line\",\"tweedsmuir park|the midline of hwy 20||other\",\"hwy 20|a point next to benchmark 3907 coast land district range 3||road\",\"young creek|the apex of king mountain||other\",\"burnt bridge creek|the westerly boundary of tweedsmuir park||other\",\"tweedsmuir park|the point of commencement||other\",\"hotnarko river|||\",\"tweedsmuir park|the midline of an unnamed stream flowing easterly into talchako river east of melikan mountain||other\",\"|the apex of caribou mountain||straight_line\",\"|the apex of mount marvin||straight_line\",\"|the point of intersection of the midlines of atnarko river and hotnarko river||straight_line\",\"hotnarko river|the point of commencement||river\"] vs run 2 [\"tweedsmuir provincial park||1 km|\",\"tetachuck lake redfern rapids and eutsuk lake|the point of intersection with the natural boundary of whitesail lake on the southerly shore thereof|1 km|shoreline\",\"whitesail lake and little whitesail lake|the point of intersection with the midline of mccuish creek||shoreline\",\"mccuish creek|the point of intersection with the easterly boundary of the watershed of sias creek||creek\",\"the watersheds of gamsby river kimsquit river and sakumtha river|the point of intersection with a prolongation of the midline of chezko river||other\",\"chezko river|a point 1 km due south of the natural boundary of eutsuk lake on the southerly shore thereof|1 km|river\",\"eutsuk lake redfern rapids and tetachuck lake|the point of intersection with the easterly boundary of tweedsmuir park|1 km|shoreline\",\"|the point of commencement||straight_line\",\"tweedsmuir park|||\",\"takia river|the point of intersection with the midline of kohasganko creek||river\",\"kohasganko creek|a point in lot 698 coast land district range 3 where kohasganko creek turns and flows in a general westerly direction||creek\",\"|the point of intersection with the easterly boundary of tweedsmuir park||straight_line\",\"tweedsmuir park|the point of intersection with the midline of hwy 20||other\",\"hwy 20|a point next to benchmark 3907 coast land district range 3||road\",\"the watershed of young creek|the apex of king mountain||other\",\"the main tributary of burnt bridge creek|the point of intersection with the westerly boundary of tweedsmuir park||other\",\"tweedsmuir park|the point of commencement||other\",\"hotnarko river|||\",\"tweedsmuir park|the point of intersection with the midline of an unnamed stream flowing easterly into talchako river east of melikan mountain||other\",\"|the apex of caribou mountain||straight_line\",\"|the apex of mount marvin||straight_line\",\"|the point of intersection of the midlines of atnarko river and hotnarko river||straight_line\",\"hotnarko river|the point of commencement||river\"]"
     },
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Takia River, Kohasganko Creek): 1 km around the named points; not the boundary",
+      "quote": "Commencing at a point on the easterly boundary of Tweedsmuir Provincial Park, said point lying 1 km due North of the natural boundary of Tetachuck Lake on the northerly shore thereof",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -126.35110976862562,
+            52.73944700183875
+          ],
+          [
+            -126.35110093710436,
+            52.73944214767604
+          ],
+          [
+            -126.34993083413856,
+            52.73891582041967
+          ],
+          [
+            -126.34868118355676,
+            52.7384614533459
+          ],
+          [
+            -126.34736401611059,
+            52.7380834199472
+          ],
+          [
+            -126.3459920113653,
+            52.73778535886557
+          ],
+          [
+            -126.2362894214218,
+            52.717511579267054
+          ],
+          [
+            -126.23487698602086,
+            52.71729505539567
+          ],
+          [
+            -126.23343632576685,
+            52.71716341817613
+          ],
+          [
+            -126.23198130675051,
+            52.717117934574254
+          ],
+          [
+            -126.23052593300669,
+            52.717159042351874
+          ],
+          [
+            -126.22908421197769,
+            52.71728634586137
+          ],
+          [
+            -126.22767001994453,
+            52.717498619846566
+          ],
+          [
+            -126.22629696870854,
+            52.71779382121403
+          ],
+          [
+            -126.22497827479577,
+            52.71816910866231
+          ],
+          [
+            -126.22372663243237,
+            52.718620869981805
+          ],
+          [
+            -126.22255409150405,
+            52.71914475676514
+          ],
+          [
+            -126.22147194166736,
+            52.71973572619617
+          ],
+          [
+            -126.22049060372227,
+            52.7203880895192
+          ],
+          [
+            -126.21961952928865,
+            52.721095566724685
+          ],
+          [
+            -126.21886710975168,
+            52.72185134692917
+          ],
+          [
+            -126.21824059535365,
+            52.72264815387137
+          ],
+          [
+            -126.21774602521559,
+            52.723478315897594
+          ],
+          [
+            -126.2173881689683,
+            52.72433383976579
+          ],
+          [
+            -126.21717048056277,
+            52.7252064875606
+          ],
+          [
+            -126.21709506471493,
+            52.726087855981
+          ],
+          [
+            -126.21716265631882,
+            52.726969457238894
+          ],
+          [
+            -126.21737261303882,
+            52.72784280079056
+          ],
+          [
+            -126.2177229211648,
+            52.72869947511459
+          ],
+          [
+            -126.21821021468668,
+            52.729531228747966
+          ],
+          [
+            -126.2188298074168,
+            52.73033004979899
+          ],
+          [
+            -126.21957573786219,
+            52.731088243169644
+          ],
+          [
+            -126.22044082642448,
+            52.73179850474093
+          ],
+          [
+            -126.2214167443849,
+            52.73245399180399
+          ],
+          [
+            -126.22249409401564,
+            52.73304838905537
+          ],
+          [
+            -126.22366249905075,
+            52.7335759695169
+          ],
+          [
+            -126.22491070464564,
+            52.734031649789905
+          ],
+          [
+            -126.22622668586216,
+            52.7344110391077
+          ],
+          [
+            -126.22759776363037,
+            52.73471048171007
+          ],
+          [
+            -126.33733962118464,
+            52.754992263907575
+          ],
+          [
+            -126.33875378632364,
+            52.75520756985772
+          ],
+          [
+            -126.3401960211045,
+            52.755337930291425
+          ],
+          [
+            -126.34165242773544,
+            52.755382089001436
+          ],
+          [
+            -126.34223865774452,
+            52.75536499625375
+          ],
+          [
+            -126.3422366,
+            52.74657127
+          ],
+          [
+            -126.34253207,
+            52.74647174
+          ],
+          [
+            -126.34277012,
+            52.74640111
+          ],
+          [
+            -126.34305133,
+            52.74632549
+          ],
+          [
+            -126.34330654,
+            52.74627126
+          ],
+          [
+            -126.343521,
+            52.74615617
+          ],
+          [
+            -126.34371846,
+            52.74596876
+          ],
+          [
+            -126.34389599,
+            52.74575692
+          ],
+          [
+            -126.34398104,
+            52.74554999
+          ],
+          [
+            -126.34403038,
+            52.74533428
+          ],
+          [
+            -126.34405681,
+            52.74498117
+          ],
+          [
+            -126.34405543,
+            52.7444356
+          ],
+          [
+            -126.34421972,
+            52.74376486
+          ],
+          [
+            -126.34462606,
+            52.74317447
+          ],
+          [
+            -126.34527447,
+            52.74266444
+          ],
+          [
+            -126.34604161,
+            52.742232
+          ],
+          [
+            -126.34648611,
+            52.74196119
+          ],
+          [
+            -126.34687503,
+            52.74171111
+          ],
+          [
+            -126.34720835,
+            52.74148177
+          ],
+          [
+            -126.34780869,
+            52.74111153
+          ],
+          [
+            -126.34880865,
+            52.74055839
+          ],
+          [
+            -126.34975382,
+            52.74006696
+          ],
+          [
+            -126.35063963,
+            52.73971208
+          ],
+          [
+            -126.35110976862562,
+            52.73944700183875
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W8-033",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 7, s. 33",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 7 No Hunting Areas (Section 8)\nTweedsmuir Park\n33 Those portions of M.U.s 5-10, 5-11, 6-01 and 6-02 contained within the following described boundaries: (1)Commencing at a point on the easterly boundary of Tweedsmuir Provincial Park, said point lying 1 km due North of the natural boundary of Tetachuck Lake on the northerly shore thereof; thence in a general southwesterly, westerly and northwesterly direction along a line 1 km inland of the natural boundaries of Tetachuck Lake, Redfern Rapids and Eutsuk Lake to the point of intersection with the natural boundary of Whitesail Lake on the southerly shore thereof; thence in a general westerly direction along the natural boundaries of Whitesail Lake and Little Whitesail Lake to the point of intersection with the midline of McCuish Creek; thence in a general southwesterly direction along the midline of McCuish Creek and a prolongation thereof to the point of intersection with the easterly boundary of the watershed of Sias Creek; thence in a general southeasterly direction along the easterly boundaries of the watersheds of Gamsby River, Kimsquit River and Sakumtha River to the point of intersection with a prolongation of the midline of Chezko River; thence in a general northeasterly direction along the midline of Chezko River to a point 1 km due South of the natural boundary of Eutsuk Lake on the southerly shore thereof; thence in a general easterly direction along a line 1 km south of the natural boundaries of Eutsuk Lake, Redfern Rapids and Tetachuck Lake on the southerly shores thereof to the point of intersection with the easterly boundary of Tweedsmuir Park; thence northerly in a straight line to the point of commencement; (2)Commencing on the westerly boundary of Tweedsmuir Park at the point of intersection of the midlines of Dean River and Takia River; thence in a general easterly direction along the midline of Takia River to the point of intersection with the midline of Kohasganko Creek; thence in a general easterly direction along the midline of Kohasganko Creek to a point in Lot 698, Coast Land District Range 3 where Kohasganko Creek turns and flows in a general westerly direction; thence northeasterly in a straight line to the point of intersection with the easterly boundary of Tweedsmuir Park; thence in a general southerly direction along the easterly boundary of Tweedsmuir Park to the point of intersection with the midline of Highway 20; thence in a general westerly and southwesterly direction along the midline of Highway 20 to a point next to benchmark 3907 Coast Land District Range 3; thence in a general westerly direction along the southerly boundary of the watershed of Young Creek to the apex of King mountain; thence in a general westerly and southerly direction along the southerly and easterly boundaries of the main tributary of Burnt Bridge Creek to the point of intersection with the westerly boundary of Tweedsmuir Park; thence in a general northerly direction along the westerly boundary of Tweedsmuir Park to the point of commencement; (3)Commencing at the point of intersection of the midline of Hotnarko River and the easterly boundary of Tweedsmuir Park; thence in a general southerly, westerly and northerly direction along the easterly, southerly and westerly boundaries of Tweedsmuir Park to the point of intersection with the midline of an unnamed stream flowing easterly into Talchako River east of Melikan mountain; thence southeasterly in a straight line to the apex of Caribou Mountain; thence northeasterly in a straight line to the apex of Mount Marvin; thence northeasterly in a straight line to the point of intersection of the midlines of Atnarko River and Hotnarko River; thence in a general northeasterly direction along the midline of Hotnarko River to the point of commencement. [en. B.C. Reg. 167/88, s. 9.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_hunting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Takia River, Kohasganko Creek): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "Those portions of M.U.s 5-10, 5-11, 6-01 and 6-02",
+        "effect": "No Hunting Areas",
+        "geometry.steps[0]": "Commencing at a point on the easterly boundary of Tweedsmuir Provincial Park, said point lying 1 km due North of the natural boundary of Tetachuck Lake on the northerly shore thereof",
+        "geometry.steps[1]": "thence in a general southwesterly, westerly and northwesterly direction along a line 1 km inland of the natural boundaries of Tetachuck Lake, Redfern Rapids and Eutsuk Lake to the point of intersection with the natural boundary of Whitesail Lake on the southerly shore thereof",
+        "geometry.steps[2]": "thence in a general westerly direction along the natural boundaries of Whitesail Lake and Little Whitesail Lake to the point of intersection with the midline of McCuish Creek",
+        "geometry.steps[3]": "thence in a general southwesterly direction along the midline of McCuish Creek and a prolongation thereof to the point of intersection with the easterly boundary of the watershed of Sias Creek",
+        "geometry.steps[4]": "thence in a general southeasterly direction along the easterly boundaries of the watersheds of Gamsby River, Kimsquit River and Sakumtha River to the point of intersection with a prolongation of the midline of Chezko River",
+        "geometry.steps[5]": "thence in a general northeasterly direction along the midline of Chezko River to a point 1 km due South of the natural boundary of Eutsuk Lake on the southerly shore thereof",
+        "geometry.steps[6]": "thence in a general easterly direction along a line 1 km south of the natural boundaries of Eutsuk Lake, Redfern Rapids and Tetachuck Lake on the southerly shores thereof to the point of intersection with the easterly boundary of Tweedsmuir Park",
+        "geometry.steps[7]": "thence northerly in a straight line to the point of commencement",
+        "geometry.steps[8]": "Commencing on the westerly boundary of Tweedsmuir Park at the point of intersection of the midlines of Dean River and Takia River",
+        "geometry.steps[9]": "thence in a general easterly direction along the midline of Takia River to the point of intersection with the midline of Kohasganko Creek",
+        "geometry.steps[10]": "thence in a general easterly direction along the midline of Kohasganko Creek to a point in Lot 698, Coast Land District Range 3 where Kohasganko Creek turns and flows in a general westerly direction",
+        "geometry.steps[11]": "thence northeasterly in a straight line to the point of intersection with the easterly boundary of Tweedsmuir Park",
+        "geometry.steps[12]": "thence in a general southerly direction along the easterly boundary of Tweedsmuir Park to the point of intersection with the midline of Highway 20",
+        "geometry.steps[13]": "thence in a general westerly and southwesterly direction along the midline of Highway 20 to a point next to benchmark 3907 Coast Land District Range 3",
+        "geometry.steps[14]": "thence in a general westerly direction along the southerly boundary of the watershed of Young Creek to the apex of King mountain",
+        "geometry.steps[15]": "thence in a general westerly and southerly direction along the southerly and easterly boundaries of the main tributary of Burnt Bridge Creek to the point of intersection with the westerly boundary of Tweedsmuir Park",
+        "geometry.steps[16]": "thence in a general northerly direction along the westerly boundary of Tweedsmuir Park to the point of commencement",
+        "geometry.steps[17]": "Commencing at the point of intersection of the midline of Hotnarko River and the easterly boundary of Tweedsmuir Park",
+        "geometry.steps[18]": "thence in a general southerly, westerly and northerly direction along the easterly, southerly and westerly boundaries of Tweedsmuir Park to the point of intersection with the midline of an unnamed stream flowing easterly into Talchako River east of Melikan mountain",
+        "geometry.steps[19]": "thence southeasterly in a straight line to the apex of Caribou Mountain",
+        "geometry.steps[20]": "thence northeasterly in a straight line to the apex of Mount Marvin",
+        "geometry.steps[21]": "thence northeasterly in a straight line to the point of intersection of the midlines of Atnarko River and Hotnarko River",
+        "geometry.steps[22]": "thence in a general northeasterly direction along the midline of Hotnarko River to the point of commencement"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "c0e4691a394fc4d9464f60a023397e4c77a240a582d13870e247fa8fd3776706",
+      "task_id": "closed_area-c0e4691a394f",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Takia River, Kohasganko Creek): 1 km around the named points; not the boundary",
+          "quote": "Commencing at a point on the easterly boundary of Tweedsmuir Provincial Park, said point lying 1 km due North of the natural boundary of Tetachuck Lake on the northerly shore thereof",
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "17.376 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "steps: run 1 [\"tweedsmuir provincial park||1 km|\",\"tetachuck lake redfern rapids and eutsuk lake|the natural boundary of whitesail lake on the southerly shore thereof|1 km|shoreline\",\"whitesail lake and little whitesail lake|the midline of mccuish creek||shoreline\",\"mccuish creek|the easterly boundary of the watershed of sias creek||creek\",\"gamsby river kimsquit river and sakumtha river|a prolongation of the midline of chezko river||other\",\"chezko river|a point 1 km due south of the natural boundary of eutsuk lake on the southerly shore thereof|1 km|river\",\"eutsuk lake redfern rapids and tetachuck lake|the easterly boundary of tweedsmuir park|1 km|shoreline\",\"|the point of commencement||straight_line\",\"tweedsmuir park|||\",\"takia river|the midline of kohasganko creek||river\",\"kohasganko creek|a point in lot 698 coast land district range 3 where kohasganko creek turns and flows in a general westerly direction||creek\",\"|the easterly boundary of tweedsmuir park||straight_line\",\"tweedsmuir park|the midline of hwy 20||other\",\"hwy 20|a point next to benchmark 3907 coast land district range 3||road\",\"young creek|the apex of king mountain||other\",\"burnt bridge creek|the westerly boundary of tweedsmuir park||other\",\"tweedsmuir park|the point of commencement||other\",\"hotnarko river|||\",\"tweedsmuir park|the midline of an unnamed stream flowing easterly into talchako river east of melikan mountain||other\",\"|the apex of caribou mountain||straight_line\",\"|the apex of mount marvin||straight_line\",\"|the point of intersection of the midlines of atnarko river and hotnarko river||straight_line\",\"hotnarko river|the point of commencement||river\"] vs run 2 [\"tweedsmuir provincial park||1 km|\",\"tetachuck lake redfern rapids and eutsuk lake|the point of intersection with the natural boundary of whitesail lake on the southerly shore thereof|1 km|shoreline\",\"whitesail lake and little whitesail lake|the point of intersection with the midline of mccuish creek||shoreline\",\"mccuish creek|the point of intersection with the easterly boundary of the watershed of sias creek||creek\",\"the watersheds of gamsby river kimsquit river and sakumtha river|the point of intersection with a prolongation of the midline of chezko river||other\",\"chezko river|a point 1 km due south of the natural boundary of eutsuk lake on the southerly shore thereof|1 km|river\",\"eutsuk lake redfern rapids and tetachuck lake|the point of intersection with the easterly boundary of tweedsmuir park|1 km|shoreline\",\"|the point of commencement||straight_line\",\"tweedsmuir park|||\",\"takia river|the point of intersection with the midline of kohasganko creek||river\",\"kohasganko creek|a point in lot 698 coast land district range 3 where kohasganko creek turns and flows in a general westerly direction||creek\",\"|the point of intersection with the easterly boundary of tweedsmuir park||straight_line\",\"tweedsmuir park|the point of intersection with the midline of hwy 20||other\",\"hwy 20|a point next to benchmark 3907 coast land district range 3||road\",\"the watershed of young creek|the apex of king mountain||other\",\"the main tributary of burnt bridge creek|the point of intersection with the westerly boundary of tweedsmuir park||other\",\"tweedsmuir park|the point of commencement||other\",\"hotnarko river|||\",\"tweedsmuir park|the point of intersection with the midline of an unnamed stream flowing easterly into talchako river east of melikan mountain||other\",\"|the apex of caribou mountain||straight_line\",\"|the apex of mount marvin||straight_line\",\"|the point of intersection of the midlines of atnarko river and hotnarko river||straight_line\",\"hotnarko river|the point of commencement||river\"]"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: a walk outline is approximate; a person checks it against the text"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:09:58.810Z",
-  "updated": "2026-10-28T17:22:26.274Z"
+  "updated": "2026-10-28T20:09:08.200Z"
 }

@@ -9,6 +9,15 @@
   "why": [
     "AI runs disagree: within: run 1 \"delta\" vs run 2 \"municipality of delta\"; steps: run 1 [\"|||\",\"western flood protection dyke||150 metres|shoreline\",\"roberts bank superport causeway and loading pods|a point 150 metres south of the high water mark of the southernmost extremity of the deltaport loading pods of the terminal|150 m|other\",\"|the most southerly of the two navigation towers located approximately 750 metres offshore from the south side of the causeway||straight_line\",\"|a point 150 metres southeast of the high water mark of the south shore of the causeway||straight_line\",\"roberts bank superport causeway|a point on the high water mark of the western flood protection dyke 150 metres southeast of the high water mark of the causeway||other\",\"western flood protection dyke|the point of intersection of the center line of 27b ave and the western flood protection dyke being the point of commencement||shoreline\",\"|||\",\"|a point on the high water mark of the western flood protection dyke located 150 metres in a southeasterly direction perpendicular from the high water mark of the tsawwassen ferry terminal causeway||straight_line\",\"tsawwassen ferry terminal causeway|a point located 150 metres seaward and southeast of the high water mark of the extreme southernmost point of the tsawwassen ferry terminal loading pod|150 metres|other\",\"|the easternmost point on the southern edge of the wave protection rock wall||straight_line\",\"wave protection rock wall|the extreme westernmost end of the wave protection rock wall being marked by a navigation light beacon||\",\"navigation light beacon towers|the beacon tower located immediately southwest of the westernmost point of the terminal loading pod||other\",\"|the intersection of the westerly boundary of the tsawwassen indian reserve||straight_line\",\"tsawwassen indian reserve|the extreme southwesterly corner of the tsawwassen indian reserve being the point of commencement|approximately 350 metres|reserve_boundary\"] vs run 2 [\"|||\",\"western flood protection dyke||150 metres|shoreline\",\"roberts bank superport causeway and loading pods|a point 150 metres south of the high water mark of the southernmost extremity of the deltaport loading pods of the terminal|150 m|other\",\"|the most southerly of the two navigation towers located approximately 750 metres offshore from the south side of the causeway||straight_line\",\"|a point 150 metres southeast of the high water mark of the south shore of the causeway||straight_line\",\"roberts bank superport causeway|a point on the high water mark of the western flood protection dyke 150 metres southeast of the high water mark of the causeway||other\",\"western flood protection dyke|the point of intersection of the center line of 27b ave and the western flood protection dyke being the point of commencement||shoreline\",\"|||\",\"|a point on the high water mark of the western flood protection dyke located 150 metres in a southeasterly direction perpendicular from the high water mark of the tsawwassen ferry terminal causeway||straight_line\",\"causeway and terminal loading pod|a point located 150 metres seaward and southeast of the high water mark of the extreme southernmost point of the tsawwassen ferry terminal loading pod|150 metres|other\",\"|the easternmost point on the southern edge of the wave protection rock wall||straight_line\",\"|the extreme westernmost end of the wave protection rock wall being marked by a navigation light beacon||\",\"navigation light beacon towers|the beacon tower located immediately southwest of the westernmost point of the terminal loading pod||other\",\"|the intersection of the westerly boundary of the tsawwassen indian reserve||straight_line\",\"tsawwassen indian reserve|the extreme southwesterly corner of the tsawwassen indian reserve being the point of commencement|approximately 350 metres|reserve_boundary\"]",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "\"western flood protection dyke\" was not found in the official layers; that side is drawn straight",
+    "\"Roberts Bank Superport Causeway and loading pods\" was not found in the official layers; that side is drawn straight",
+    "\"Roberts Bank Superport Causeway\" was not found in the official layers; that side is drawn straight",
+    "\"western flood protection dyke\" was not found in the official layers; that side is drawn straight",
+    "\"Tsawwassen Ferry Terminal Causeway\" was not found in the official layers; that side is drawn straight",
+    "\"wave protection rock wall\" was not found in the official layers; that side is drawn straight",
+    "\"navigation light beacon towers\" was not found in the official layers; that side is drawn straight",
+    "\"Tsawwassen Indian Reserve\" was not found in the official layers; that side is drawn straight",
+    "none of the places the section names was found in the official layers",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -500,11 +509,11 @@
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:58:54.532Z",
-  "updated": "2026-10-20T21:58:54.532Z"
+  "updated": "2026-10-28T19:47:58.963Z"
 }

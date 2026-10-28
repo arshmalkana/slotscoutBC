@@ -5,12 +5,16 @@
   "title": "Closed Areas Regulation, Schedule 8, section 1 (Cecil Lake)",
   "rule_id": "W8-8-001",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: steps: run 1 [\"sections 22 27 and 34|the northeasterly corner of section 34||lot_line\",\"|the northwesterly corner of section 35 township 85 range 15 w6||\",\"sections 35 26 and 23|the southwesterly corner of section 23||lot_line\",\"|the point of commencement||\"] vs run 2 [\"sections 22 27 and 34|northeasterly corner of section 34||lot_line\",\"|northwesterly corner of section 35 township 85 range 15 w6||\",\"sections 35 26 and 23|southwesterly corner of section 23||lot_line\",\"|point of commencement||\"]",
     "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 \"inside\" vs run 2 null",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "\"Sections 22, 27 and 34\" was not found in the official layers; that side is drawn straight",
+    "\"Sections 35, 26 and 23\" was not found in the official layers; that side is drawn straight",
+    "approximate zone around the places the section names, using run 1's reading",
+    "a zone around the places the section names (Cecil Lake): 1 km around the named points; not the boundary",
+    "validation failed: two independent extractions agree (steps: run 1 [\"sections 22 27 and 34|the northeasterly corner of section 34||lot_line\",\"|the northwesterly corner of section 35 township 85 range 15 w6||\",\"sections 35 26 and 23|the southwesterly corner of section 23||lot_line\",\"|the point of commencement||\"] vs run 2 [\"sections 22 27 and 34|northeasterly corner of section 34||lot_line\",\"|northwesterly corner of section 35 township 85 range 15 w6||\",\"sections 35 26 and 23|southwesterly corner of section 23||lot_line\",\"|point of commencement||\"])"
   ],
   "source": {
     "text": "Schedule 8 Seasonal No Hunting Areas (Section 9)\nCecil Lake\n1 During the period June 1 to October 15 in that portion of M.U. 7-33 contained within the following described boundaries: Commencing at the southeasterly corner of Section 22, Township 85, Range 16, W6 and proceeding northerly along the easterly boundaries of Sections 22, 27 and 34 to the northeasterly corner of Section 34; thence easterly to the point of intersection with the northwesterly corner of Section 35, Township 85, Range 15, W6; thence southerly along the westerly boundaries of Sections 35, 26 and 23 to the southwesterly corner of Section 23; thence westerly to the point of commencement. [am. B.C. Reg. 172/86, s. 4.]",
@@ -289,18 +293,415 @@
   ],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "11.709 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "steps: run 1 [\"sections 22 27 and 34|the northeasterly corner of section 34||lot_line\",\"|the northwesterly corner of section 35 township 85 range 15 w6||\",\"sections 35 26 and 23|the southwesterly corner of section 23||lot_line\",\"|the point of commencement||\"] vs run 2 [\"sections 22 27 and 34|northeasterly corner of section 34||lot_line\",\"|northwesterly corner of section 35 township 85 range 15 w6||\",\"sections 35 26 and 23|southwesterly corner of section 23||lot_line\",\"|point of commencement||\"]"
     },
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Cecil Lake): 1 km around the named points; not the boundary",
+      "quote": "Commencing at the southeasterly corner of Section 22, Township 85, Range 16, W6 and proceeding northerly along the easterly boundaries of Sections 22, 27 and 34 to the northeasterly corner of Section 34",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -120.61816804650252,
+            56.337022646038406
+          ],
+          [
+            -120.61810356836908,
+            56.33614081888822
+          ],
+          [
+            -120.61788347881104,
+            56.335266740959675
+          ],
+          [
+            -120.61750990778982,
+            56.33440882928164
+          ],
+          [
+            -120.61698646260027,
+            56.333575344647834
+          ],
+          [
+            -120.61631819276158,
+            56.33277431211336
+          ],
+          [
+            -120.61551154106307,
+            56.33201344378047
+          ],
+          [
+            -120.57741436585461,
+            56.29977429560507
+          ],
+          [
+            -120.57647860852548,
+            56.29906062903092
+          ],
+          [
+            -120.57542132105996,
+            56.29840128171673
+          ],
+          [
+            -120.57425268696515,
+            56.29780260057069
+          ],
+          [
+            -120.5729839599672,
+            56.29727034824195
+          ],
+          [
+            -120.57162735566507,
+            56.29680964773754
+          ],
+          [
+            -120.57019593400058,
+            56.29642493319532
+          ],
+          [
+            -120.56870347367222,
+            56.296119907283014
+          ],
+          [
+            -120.56716433969537,
+            56.29589750562945
+          ],
+          [
+            -120.56559334537387,
+            56.29575986862732
+          ],
+          [
+            -120.56400561000079,
+            56.29570832087577
+          ],
+          [
+            -120.56241641364461,
+            56.29574335845933
+          ],
+          [
+            -120.56084105040426,
+            56.29586464418364
+          ],
+          [
+            -120.55929468153064,
+            56.29607101081368
+          ],
+          [
+            -120.55779218981327,
+            56.29636047228376
+          ],
+          [
+            -120.55634803661897,
+            56.296730242772256
+          ],
+          [
+            -120.55497612294563,
+            56.29717676345952
+          ],
+          [
+            -120.55368965581637,
+            56.29769573671407
+          ],
+          [
+            -120.55250102129064,
+            56.29828216738093
+          ],
+          [
+            -120.55142166530749,
+            56.298930410778745
+          ],
+          [
+            -120.55046198350361,
+            56.299634226947
+          ],
+          [
+            -120.5496312210653,
+            56.300386840626054
+          ],
+          [
+            -120.5489373835802,
+            56.3011810063961
+          ],
+          [
+            -120.54838715975147,
+            56.302009078352086
+          ],
+          [
+            -120.54798585672602,
+            56.30286308364811
+          ],
+          [
+            -120.54773734866929,
+            56.30373479920543
+          ],
+          [
+            -120.54764403909398,
+            56.304615830849194
+          ],
+          [
+            -120.54770683731954,
+            56.30549769411347
+          ],
+          [
+            -120.54792514930368,
+            56.30637189593762
+          ],
+          [
+            -120.5482968829508,
+            56.3072300164682
+          ],
+          [
+            -120.54881846786127,
+            56.30806379017781
+          ],
+          [
+            -120.54948488934731,
+            56.308865185518805
+          ],
+          [
+            -120.55028973640177,
+            56.30962648234254
+          ],
+          [
+            -120.58837383290303,
+            56.341873953963585
+          ],
+          [
+            -120.5893108625572,
+            56.34258753082164
+          ],
+          [
+            -120.59036961428194,
+            56.34324675977153
+          ],
+          [
+            -120.59153989297208,
+            56.34384528910606
+          ],
+          [
+            -120.59281042733996,
+            56.3443773516779
+          ],
+          [
+            -120.59416897849681,
+            56.34483782055499
+          ],
+          [
+            -120.59560245793331,
+            56.345222258506446
+          ],
+          [
+            -120.59709705375806,
+            56.345526960837965
+          ],
+          [
+            -120.59863836397122,
+            56.34574899116031
+          ],
+          [
+            -120.60021153547976,
+            56.3458862097429
+          ],
+          [
+            -120.60180140750394,
+            56.34593729417668
+          ],
+          [
+            -120.60339265797892,
+            56.345901752145
+          ],
+          [
+            -120.60496995152737,
+            56.34577992617814
+          ],
+          [
+            -120.60651808756158,
+            56.345572990345346
+          ],
+          [
+            -120.60802214707307,
+            56.34528293891637
+          ],
+          [
+            -120.60946763668026,
+            56.344912567103066
+          ],
+          [
+            -120.61084062853345,
+            56.34446544406854
+          ],
+          [
+            -120.61212789471628,
+            56.34394587846645
+          ],
+          [
+            -120.61331703483991,
+            56.343358876845706
+          ],
+          [
+            -120.61439659559257,
+            56.3427100953253
+          ],
+          [
+            -120.61535618108876,
+            56.3420057850083
+          ],
+          [
+            -120.61618655295354,
+            56.3412527316658
+          ],
+          [
+            -120.61687971917898,
+            56.34045819027553
+          ],
+          [
+            -120.61742901090189,
+            56.33962981505016
+          ],
+          [
+            -120.61782914637062,
+            56.338775585632995
+          ],
+          [
+            -120.61807628149464,
+            56.33790373017522
+          ],
+          [
+            -120.61816804650252,
+            56.337022646038406
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W8-8-001",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 8, s. 1",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 8 Seasonal No Hunting Areas (Section 9)\nCecil Lake\n1 During the period June 1 to October 15 in that portion of M.U. 7-33 contained within the following described boundaries: Commencing at the southeasterly corner of Section 22, Township 85, Range 16, W6 and proceeding northerly along the easterly boundaries of Sections 22, 27 and 34 to the northeasterly corner of Section 34; thence easterly to the point of intersection with the northwesterly corner of Section 35, Township 85, Range 15, W6; thence southerly along the westerly boundaries of Sections 35, 26 and 23 to the southwesterly corner of Section 23; thence westerly to the point of commencement. [am. B.C. Reg. 172/86, s. 4.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_hunting",
+      "period": {
+        "start": "06-01",
+        "end": "10-15"
+      },
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Cecil Lake): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "that portion of M.U. 7-33",
+        "period": "During the period June 1 to October 15",
+        "effect": "Seasonal No Hunting Areas",
+        "geometry.side": "contained within the following described boundaries",
+        "geometry.steps[0]": "Commencing at the southeasterly corner of Section 22, Township 85, Range 16, W6 and proceeding northerly along the easterly boundaries of Sections 22, 27 and 34 to the northeasterly corner of Section 34",
+        "geometry.steps[1]": "thence easterly to the point of intersection with the northwesterly corner of Section 35, Township 85, Range 15, W6",
+        "geometry.steps[2]": "thence southerly along the westerly boundaries of Sections 35, 26 and 23 to the southwesterly corner of Section 23",
+        "geometry.steps[3]": "thence westerly to the point of commencement"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "dae1192114e4b8705ff87ccf57515848451f3c88ad0f9d22066258386aab90a5",
+      "task_id": "closed_area-dae1192114e4",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Cecil Lake): 1 km around the named points; not the boundary",
+          "quote": "Commencing at the southeasterly corner of Section 22, Township 85, Range 16, W6 and proceeding northerly along the easterly boundaries of Sections 22, 27 and 34 to the northeasterly corner of Section 34",
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "11.709 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "steps: run 1 [\"sections 22 27 and 34|the northeasterly corner of section 34||lot_line\",\"|the northwesterly corner of section 35 township 85 range 15 w6||\",\"sections 35 26 and 23|the southwesterly corner of section 23||lot_line\",\"|the point of commencement||\"] vs run 2 [\"sections 22 27 and 34|northeasterly corner of section 34||lot_line\",\"|northwesterly corner of section 35 township 85 range 15 w6||\",\"sections 35 26 and 23|southwesterly corner of section 23||lot_line\",\"|point of commencement||\"]"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: a walk outline is approximate; a person checks it against the text"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:10:30.917Z",
-  "updated": "2026-10-28T17:26:21.165Z"
+  "updated": "2026-10-28T20:13:55.593Z"
 }

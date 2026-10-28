@@ -5,11 +5,15 @@
   "title": "Closed Areas Regulation, Schedule 10, section 2 (Groundbirch)",
   "rule_id": "W10-002",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: steps: run 1 [\"|||\",\"|the headwaters of the north fork of the unnamed creek locally known as rainey creek|5.6 km (3.5 miles)|\",\"unnamed creek locally known as rainey creek|the confluence with coldstream creek||creek\",\"coldstream creek|the confluence with an unnamed creek being the north fork of coldstream creek||creek\",\"unnamed creek being the north fork of coldstream creek|a point due west of the southeast corner of the northeast quarter of section 2 tp 78 r 19 w6m||creek\",\"|the point of commencement||\"] vs run 2 [\"groundbirch community pasture|||\",\"|the headwaters of the north fork of the unnamed creek locally known as rainey creek|5.6 km (3.5 miles)|\",\"the unnamed creek locally known as rainey creek|the confluence with coldstream creek||creek\",\"coldstream creek|the confluence with an unnamed creek being the north fork of coldstream creek||creek\",\"an unnamed creek being the north fork of coldstream creek|a point due west of the southeast corner of the northeast quarter of section 2 tp 78 r 19 w6m||creek\",\"|the point of commencement||\"]",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "\"unnamed creek (locally known as Rainey Creek)\" was not found in the official layers; that side is drawn straight",
+    "\"unnamed creek being the north fork of Coldstream Creek\" was not found in the official layers; that side is drawn straight",
+    "approximate zone around the places the section names, using run 1's reading",
+    "a zone around the places the section names (Groundbirch): 1 km around the named points; not the boundary",
+    "validation failed: two independent extractions agree (steps: run 1 [\"|||\",\"|the headwaters of the north fork of the unnamed creek locally known as rainey creek|5.6 km (3.5 miles)|\",\"unnamed creek locally known as rainey creek|the confluence with coldstream creek||creek\",\"coldstream creek|the confluence with an unnamed creek being the north fork of coldstream creek||creek\",\"unnamed creek being the north fork of coldstream creek|a point due west of the southeast corner of the northeast quarter of section 2 tp 78 r 19 w6m||creek\",\"|the point of commencement||\"] vs run 2 [\"groundbirch community pasture|||\",\"|the headwaters of the north fork of the unnamed creek locally known as rainey creek|5.6 km (3.5 miles)|\",\"the unnamed creek locally known as rainey creek|the confluence with coldstream creek||creek\",\"coldstream creek|the confluence with an unnamed creek being the north fork of coldstream creek||creek\",\"an unnamed creek being the north fork of coldstream creek|a point due west of the southeast corner of the northeast quarter of section 2 tp 78 r 19 w6m||creek\",\"|the point of commencement||\"])"
   ],
   "source": {
     "text": "Schedule 10 Firearms Using Shot Only Areas (Seasonal) (Section 10 (1) (b))\nGroundbirch\n2 During the period June 1 to October 31 in that portion of M.U. 7-21 contained within the following described boundaries: Commencing at the northeast corner of the Groundbirch Community Pasture (situated at the southeast corner of the northeast quarter of Section 2, Tp 78, R 19, W6M); thence southerly 5.6 km (3.5 miles) to the headwaters of the north fork of the unnamed creek (locally known as Rainey Creek); thence westerly along the middle thread of the unnamed creek to the confluence with Coldstream Creek; thence westerly along the middle thread of Coldstream Creek to the confluence with an unnamed creek being the north fork of Coldstream Creek; thence northeasterly along the middle thread of the unnamed creek to a point due West of the southeast corner of the northeast quarter of Section 2, Tp 78, R 19, W6M; thence due East to the point of commencement. [en. B.C. Reg. 109/85, s. 7.]",
@@ -313,18 +317,316 @@
   ],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "1.535 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "steps: run 1 [\"|||\",\"|the headwaters of the north fork of the unnamed creek locally known as rainey creek|5.6 km (3.5 miles)|\",\"unnamed creek locally known as rainey creek|the confluence with coldstream creek||creek\",\"coldstream creek|the confluence with an unnamed creek being the north fork of coldstream creek||creek\",\"unnamed creek being the north fork of coldstream creek|a point due west of the southeast corner of the northeast quarter of section 2 tp 78 r 19 w6m||creek\",\"|the point of commencement||\"] vs run 2 [\"groundbirch community pasture|||\",\"|the headwaters of the north fork of the unnamed creek locally known as rainey creek|5.6 km (3.5 miles)|\",\"the unnamed creek locally known as rainey creek|the confluence with coldstream creek||creek\",\"coldstream creek|the confluence with an unnamed creek being the north fork of coldstream creek||creek\",\"an unnamed creek being the north fork of coldstream creek|a point due west of the southeast corner of the northeast quarter of section 2 tp 78 r 19 w6m||creek\",\"|the point of commencement||\"]"
     },
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Groundbirch): 1 km around the named points; not the boundary",
+      "quote": "Commencing at the northeast corner of the Groundbirch Community Pasture (situated at the southeast corner of the northeast quarter of Section 2, Tp 78, R 19, W6M)",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -120.93924175632418,
+            55.781312753437085
+          ],
+          [
+            -120.93917568025323,
+            55.780559914077635
+          ],
+          [
+            -120.93894505602695,
+            55.77968694474093
+          ],
+          [
+            -120.93856340516344,
+            55.77883089049304
+          ],
+          [
+            -120.93803441235293,
+            55.77799999422225
+          ],
+          [
+            -120.9373631801332,
+            55.777202256054544
+          ],
+          [
+            -120.93655617944019,
+            55.776445356379654
+          ],
+          [
+            -120.93562118703608,
+            55.775736581971685
+          ],
+          [
+            -120.9345672104266,
+            55.77508275591274
+          ],
+          [
+            -120.93340440099813,
+            55.774490171990706
+          ],
+          [
+            -120.93214395621571,
+            55.77396453419851
+          ],
+          [
+            -120.93079801182478,
+            55.77351090191349
+          ],
+          [
+            -120.9293795250938,
+            55.77313364128046
+          ],
+          [
+            -120.92790215021748,
+            55.7728363832625
+          ],
+          [
+            -120.9263801070733,
+            55.772621988759674
+          ],
+          [
+            -120.92482804458534,
+            55.772492521128314
+          ],
+          [
+            -120.9232609,
+            55.77244922636275
+          ],
+          [
+            -120.92169375541468,
+            55.772492521128314
+          ],
+          [
+            -120.92014169292672,
+            55.772621988759674
+          ],
+          [
+            -120.91861964978253,
+            55.7728363832625
+          ],
+          [
+            -120.91714227490621,
+            55.77313364128046
+          ],
+          [
+            -120.91572378817523,
+            55.77351090191349
+          ],
+          [
+            -120.91437784378431,
+            55.77396453419851
+          ],
+          [
+            -120.91311739900188,
+            55.774490171990706
+          ],
+          [
+            -120.91195458957341,
+            55.77508275591274
+          ],
+          [
+            -120.91090061296393,
+            55.775736581971685
+          ],
+          [
+            -120.90996562055983,
+            55.776445356379654
+          ],
+          [
+            -120.90915861986682,
+            55.777202256054544
+          ],
+          [
+            -120.90848738764709,
+            55.77799999422225
+          ],
+          [
+            -120.90795839483658,
+            55.77883089049304
+          ],
+          [
+            -120.90757674397305,
+            55.77968694474093
+          ],
+          [
+            -120.90734611974679,
+            55.780559914077635
+          ],
+          [
+            -120.90728228141789,
+            55.78128725766729
+          ],
+          [
+            -120.9095407,
+            55.78128718
+          ],
+          [
+            -120.9099395,
+            55.78128714
+          ],
+          [
+            -120.91016383,
+            55.78128713
+          ],
+          [
+            -120.92322531,
+            55.7812853
+          ],
+          [
+            -120.92440676,
+            55.7812874
+          ],
+          [
+            -120.92990638,
+            55.78129705
+          ],
+          [
+            -120.93094258,
+            55.78129883
+          ],
+          [
+            -120.93625274,
+            55.78130788
+          ],
+          [
+            -120.93924175632418,
+            55.781312753437085
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W10-002",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 10, s. 2",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 10 Firearms Using Shot Only Areas (Seasonal) (Section 10 (1) (b))\nGroundbirch\n2 During the period June 1 to October 31 in that portion of M.U. 7-21 contained within the following described boundaries: Commencing at the northeast corner of the Groundbirch Community Pasture (situated at the southeast corner of the northeast quarter of Section 2, Tp 78, R 19, W6M); thence southerly 5.6 km (3.5 miles) to the headwaters of the north fork of the unnamed creek (locally known as Rainey Creek); thence westerly along the middle thread of the unnamed creek to the confluence with Coldstream Creek; thence westerly along the middle thread of Coldstream Creek to the confluence with an unnamed creek being the north fork of Coldstream Creek; thence northeasterly along the middle thread of the unnamed creek to a point due West of the southeast corner of the northeast quarter of Section 2, Tp 78, R 19, W6M; thence due East to the point of commencement. [en. B.C. Reg. 109/85, s. 7.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "shot_only_seasonal",
+      "period": {
+        "start": "06-01",
+        "end": "10-31"
+      },
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Groundbirch): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "in that portion of M.U. 7-21",
+        "period": "During the period June 1 to October 31",
+        "effect": "Firearms Using Shot Only Areas (Seasonal)",
+        "geometry.steps[0]": "Commencing at the northeast corner of the Groundbirch Community Pasture (situated at the southeast corner of the northeast quarter of Section 2, Tp 78, R 19, W6M)",
+        "geometry.steps[1]": "thence southerly 5.6 km (3.5 miles) to the headwaters of the north fork of the unnamed creek (locally known as Rainey Creek)",
+        "geometry.steps[2]": "thence westerly along the middle thread of the unnamed creek to the confluence with Coldstream Creek",
+        "geometry.steps[3]": "thence westerly along the middle thread of Coldstream Creek to the confluence with an unnamed creek being the north fork of Coldstream Creek",
+        "geometry.steps[4]": "thence northeasterly along the middle thread of the unnamed creek to a point due West of the southeast corner of the northeast quarter of Section 2, Tp 78, R 19, W6M",
+        "geometry.steps[5]": "thence due East to the point of commencement"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "70664c906dd89f4bd8cf86b989f5a50d780d438236ada79528292dd7b987585c",
+      "task_id": "closed_area-70664c906dd8",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Groundbirch): 1 km around the named points; not the boundary",
+          "quote": "Commencing at the northeast corner of the Groundbirch Community Pasture (situated at the southeast corner of the northeast quarter of Section 2, Tp 78, R 19, W6M)",
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "1.535 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "steps: run 1 [\"|||\",\"|the headwaters of the north fork of the unnamed creek locally known as rainey creek|5.6 km (3.5 miles)|\",\"unnamed creek locally known as rainey creek|the confluence with coldstream creek||creek\",\"coldstream creek|the confluence with an unnamed creek being the north fork of coldstream creek||creek\",\"unnamed creek being the north fork of coldstream creek|a point due west of the southeast corner of the northeast quarter of section 2 tp 78 r 19 w6m||creek\",\"|the point of commencement||\"] vs run 2 [\"groundbirch community pasture|||\",\"|the headwaters of the north fork of the unnamed creek locally known as rainey creek|5.6 km (3.5 miles)|\",\"the unnamed creek locally known as rainey creek|the confluence with coldstream creek||creek\",\"coldstream creek|the confluence with an unnamed creek being the north fork of coldstream creek||creek\",\"an unnamed creek being the north fork of coldstream creek|a point due west of the southeast corner of the northeast quarter of section 2 tp 78 r 19 w6m||creek\",\"|the point of commencement||\"]"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: a walk outline is approximate; a person checks it against the text"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:59:04.478Z",
-  "updated": "2026-10-28T17:11:35.478Z"
+  "updated": "2026-10-28T19:57:25.813Z"
 }

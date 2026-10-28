@@ -5,11 +5,14 @@
   "title": "Closed Areas Regulation, Schedule 5, section 16 (Provincial Gaol Camp No. 1)",
   "rule_id": "W5-016",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: within: run 1 null vs run 2 \"yale district\"",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "approximate zone around the places the section names, using run 1's reading",
+    "a zone around the places the section names (Chilliwack River): 1 km around the named points; not the boundary",
+    "validation failed: area in expected range (3.137 km² (limit 2 km²))",
+    "validation failed: two independent extractions agree (within: run 1 null vs run 2 \"yale district\")"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nProvincial Gaol Camp No. 1\n16 That portion of the Province of British Columbia in the Chilliwack River Valley, Yale District, which is contained within the following described boundaries: Commencing at the point 1.6 km (1 mile) west of the Provincial Gaol Service Camp No. 1 and extending for a distance of 800 m (0.5 mile) north and south of Chilliwack River Road East to Chilliwack Lake, Yale District. The western boundary is indicated by signs erected by the Ministry of the Attorney General.",
@@ -178,13 +181,392 @@
   "lookups": [],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "3.137 km² (limit 2 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": false,
+      "detail": "within: run 1 null vs run 2 \"yale district\""
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Chilliwack River): 1 km around the named points; not the boundary",
+      "quote": null,
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -121.95015414175559,
+            49.097221405292196
+          ],
+          [
+            -121.95022003557422,
+            49.0981029012044
+          ],
+          [
+            -121.95041757491077,
+            49.098975923259076
+          ],
+          [
+            -121.95074486407718,
+            49.09983206310997
+          ],
+          [
+            -121.95119875729758,
+            49.10066307457896
+          ],
+          [
+            -121.95177488876561,
+            49.101460953112934
+          ],
+          [
+            -121.95246771448048,
+            49.102218012927956
+          ],
+          [
+            -121.95327056546712,
+            49.10292696109591
+          ],
+          [
+            -121.95417571187458,
+            49.10358096785732
+          ],
+          [
+            -121.95517443733988,
+            49.10417373248028
+          ],
+          [
+            -121.95625712290467,
+            49.10469954402793
+          ],
+          [
+            -121.95741333967739,
+            49.10515333644593
+          ],
+          [
+            -121.95863194934728,
+            49.10553073743598
+          ],
+          [
+            -121.95990121157982,
+            49.10582811064154
+          ],
+          [
+            -121.96120889725378,
+            49.106042590736216
+          ],
+          [
+            -121.9625424064432,
+            49.106172111074684
+          ],
+          [
+            -121.96388889,
+            49.106215423637245
+          ],
+          [
+            -121.96523537355682,
+            49.106172111074684
+          ],
+          [
+            -121.96656888274624,
+            49.106042590736216
+          ],
+          [
+            -121.96787656842021,
+            49.10582811064154
+          ],
+          [
+            -121.96914583065275,
+            49.10553073743598
+          ],
+          [
+            -121.97036444032264,
+            49.10515333644593
+          ],
+          [
+            -121.97152065709534,
+            49.10469954402793
+          ],
+          [
+            -121.97260334266015,
+            49.10417373248028
+          ],
+          [
+            -121.97360206812543,
+            49.10358096785732
+          ],
+          [
+            -121.97450721453289,
+            49.10292696109591
+          ],
+          [
+            -121.97531006551955,
+            49.102218012927956
+          ],
+          [
+            -121.97600289123442,
+            49.101460953112934
+          ],
+          [
+            -121.97657902270245,
+            49.10066307457896
+          ],
+          [
+            -121.97703291592285,
+            49.09983206310997
+          ],
+          [
+            -121.97736020508925,
+            49.098975923259076
+          ],
+          [
+            -121.9775577444258,
+            49.0981029012044
+          ],
+          [
+            -121.97762363824444,
+            49.097221405292196
+          ],
+          [
+            -121.97755725894298,
+            49.096339925034385
+          ],
+          [
+            -121.97735925278045,
+            49.09546694934125
+          ],
+          [
+            -121.97703153338476,
+            49.094610884777445
+          ],
+          [
+            -121.9765772630652,
+            49.09377997462781
+          ],
+          [
+            -121.9760008221199,
+            49.09298221955183
+          ],
+          [
+            -121.97530776644268,
+            49.09222530058903
+          ],
+          [
+            -121.97450477384587,
+            49.09151650525465
+          ],
+          [
+            -121.9735995796225,
+            49.09086265743483
+          ],
+          [
+            -121.97260090197307,
+            49.090270051753485
+          ],
+          [
+            -121.97151835801837,
+            49.089744393039425
+          ],
+          [
+            -121.97036237120804,
+            49.089290741473654
+          ],
+          [
+            -121.96914407101539,
+            49.08891346394161
+          ],
+          [
+            -121.96787518588201,
+            49.088616192055426
+          ],
+          [
+            -121.96656793043736,
+            49.08840178724783
+          ],
+          [
+            -121.96523488807395,
+            49.08827231327093
+          ],
+          [
+            -121.96388889,
+            49.08822901636275
+          ],
+          [
+            -121.96254289192608,
+            49.08827231327093
+          ],
+          [
+            -121.96120984956266,
+            49.08840178724783
+          ],
+          [
+            -121.959902594118,
+            49.088616192055426
+          ],
+          [
+            -121.95863370898464,
+            49.08891346394161
+          ],
+          [
+            -121.95741540879199,
+            49.089290741473654
+          ],
+          [
+            -121.95625942198166,
+            49.089744393039425
+          ],
+          [
+            -121.95517687802696,
+            49.090270051753485
+          ],
+          [
+            -121.95417820037751,
+            49.09086265743483
+          ],
+          [
+            -121.95327300615416,
+            49.09151650525465
+          ],
+          [
+            -121.95247001355735,
+            49.09222530058903
+          ],
+          [
+            -121.95177695788011,
+            49.09298221955183
+          ],
+          [
+            -121.95120051693482,
+            49.09377997462781
+          ],
+          [
+            -121.95074624661527,
+            49.094610884777445
+          ],
+          [
+            -121.95041852721958,
+            49.09546694934125
+          ],
+          [
+            -121.95022052105705,
+            49.096339925034385
+          ],
+          [
+            -121.95015414175559,
+            49.097221405292196
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-016",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 16",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nProvincial Gaol Camp No. 1\n16 That portion of the Province of British Columbia in the Chilliwack River Valley, Yale District, which is contained within the following described boundaries: Commencing at the point 1.6 km (1 mile) west of the Provincial Gaol Service Camp No. 1 and extending for a distance of 800 m (0.5 mile) north and south of Chilliwack River Road East to Chilliwack Lake, Yale District. The western boundary is indicated by signs erected by the Ministry of the Attorney General.",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "road_buffer",
+      "buffer_m": 800,
+      "partial_extent": true,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Chilliwack River): 1 km around the named points; not the boundary From point 1.6 km (1 mile) west of the Provincial Gaol Service Camp No. 1 to Chilliwack Lake.",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "geometry.road": "Chilliwack River Road",
+        "geometry.buffer_m": "800 m (0.5 mile)",
+        "geometry.from": "the point 1.6 km (1 mile) west of the Provincial Gaol Service Camp No. 1",
+        "geometry.to": "East to Chilliwack Lake",
+        "effect": "No Shooting Areas",
+        "geometry.side": "north and south of Chilliwack River Road"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "5e64f75a4166916c1ade10014cf54114b0d53324341538941ccb96832624b82b",
+      "task_id": "closed_area-5e64f75a4166",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Chilliwack River): 1 km around the named points; not the boundary",
+          "quote": null,
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": false,
+          "detail": "3.137 km² (limit 2 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": null,
+          "detail": "the text names no area, or it could not be found"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "within: run 1 null vs run 2 \"yale district\""
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:47:08.108Z",
-  "updated": "2026-10-20T21:47:08.108Z"
+  "updated": "2026-10-28T19:56:34.452Z"
 }

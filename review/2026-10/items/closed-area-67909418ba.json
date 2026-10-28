@@ -9,6 +9,10 @@
   "why": [
     "AI runs disagree: steps: run 1 [\"|||\",\"b.c. rail right of way|the point of intersection with the boundary of the cariboo hwy in the southwestern corner of lot 2137 lillooet land district||other\",\"cariboo hwy|the point of intersection with the northerly boundary of an unnamed rd||road\",\"|the point of intersection with the easterly boundary of the b.c. hydro transmission line right of way||road\",\"b.c. hydro transmission line right of way|the point of intersection with the northerly boundary of lot 2150 lillooet land district||other\",\"lot 2150|the point of commencement||lot_line\"] vs run 2 [\"|||\",\"b.c. rail right of way|the point of intersection with the boundary of the cariboo hwy in the southwestern corner of lot 2137 lillooet land district||other\",\"cariboo hwy|the point of intersection with the northerly boundary of an unnamed rd||road\",\"unnamed rd|the point of intersection with the easterly boundary of the b.c. hydro transmission line right of way||road\",\"b.c. hydro transmission line right of way|the point of intersection with the northerly boundary of lot 2150 lillooet land district||other\",\"lot 2150|the point of commencement||lot_line\"]",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "\"B.C. Rail Right of way\" was not found in the official layers; that side is drawn straight",
+    "\"B.C. Hydro transmission line right of way\" was not found in the official layers; that side is drawn straight",
+    "\"Lot 2150\" was not found in the official layers; that side is drawn straight",
+    "\"Cariboo\" names more than one place and nothing narrows it",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -262,11 +266,11 @@
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
   "construction": [],
   "status": "open",
   "created": "2026-10-20T22:00:11.220Z",
-  "updated": "2026-10-20T22:00:11.220Z"
+  "updated": "2026-10-28T20:09:57.901Z"
 }

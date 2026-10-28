@@ -5,10 +5,10 @@
   "title": "Closed Areas Regulation, Schedule 3, section 16 (Argenta Marsh Wildlife Management Area)",
   "rule_id": "W3-016",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
-    "named lot \"Lot A, District Lot 1884, Kootenay District, Plan 13962\": failed (no official layer for area type lot); the larger area is not drawn in its place",
-    "validation failed: shape built (no shape could be built)"
+    "District Lot 1884 (KOOTENAY): the text names part of these lots",
+    "drawn whole: the text names only part of it, so the outline is approximate (\"possibly inside\")"
   ],
   "source": {
     "text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nArgenta Marsh Wildlife Management Area\n16 That portion of M.U. 4-19 which is contained within the following described lot: Lot A, District Lot 1884, Kootenay District, Plan 13962.",
@@ -149,25 +149,661 @@
       ]
     },
     {
-      "query": "Lot A, District Lot 1884, Kootenay District, Plan 13962",
+      "query": "District Lot 1884 (KOOTENAY)",
       "kind": "lot",
-      "layer": "-",
-      "status": "failed",
-      "matches": 0,
-      "ids": [],
-      "note": "no official layer for area type lot",
-      "sample": []
+      "layer": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "8755580"
+      ],
+      "note": "the text names part of these lots",
+      "partial": true,
+      "sample": [
+        {
+          "PIN_SID": 8755580,
+          "SURVPARC_TYPE_CDE": 1,
+          "LAND_TITLE_OFFICE_IDENTIFIER": null,
+          "PARCEL_TYPE": "Primary",
+          "ACT_GOVERNING_PARCEL_SURVEY": "Land Act",
+          "PARCEL_SHORT_DESCRIPTION": "DL 1884",
+          "PARCEL_LEGAL_DESCRIPTION": "DISTRICT LOT 1884, KOOTENAY DISTRICT",
+          "PRIMARY_PARCEL_OF_SUBDIV": null,
+          "SURVEYOR_GENERAL_PLAN_NO": "4TR2 KOOTENAY",
+          "CONFIRMED_DAT": "1897-12-16Z",
+          "PARCEL_AREA_DERIVATION": "Converted",
+          "PARCEL_AREA_IN_HECTARES": 92.268,
+          "STATE_OF_PARCEL_SURVEY": "Active",
+          "FEATURE_CODE": "FA90400000",
+          "FEATURE_AREA_SQM": 879677.0751,
+          "FEATURE_LENGTH_M": 4083.3303,
+          "OBJECTID": 131891,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
     }
   ],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "0.877 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "official boundary of the named area",
+      "quote": "Lot A, District Lot 1884, Kootenay District, Plan 13962",
+      "source": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -116.91143064,
+            50.18563221
+          ],
+          [
+            -116.91143066,
+            50.18572009
+          ],
+          [
+            -116.91143066,
+            50.18572912
+          ],
+          [
+            -116.91143066,
+            50.18577054
+          ],
+          [
+            -116.91143091,
+            50.18713566
+          ],
+          [
+            -116.91185918,
+            50.18713561
+          ],
+          [
+            -116.91478909,
+            50.18713518
+          ],
+          [
+            -116.91484963,
+            50.18713461
+          ],
+          [
+            -116.91502075,
+            50.18713457
+          ],
+          [
+            -116.91529279,
+            50.18713449
+          ],
+          [
+            -116.922563,
+            50.18713264
+          ],
+          [
+            -116.92983407,
+            50.18713049
+          ],
+          [
+            -116.92983325,
+            50.18566803
+          ],
+          [
+            -116.92983321,
+            50.18559961
+          ],
+          [
+            -116.92983306,
+            50.18533945
+          ],
+          [
+            -116.92983299,
+            50.18525793
+          ],
+          [
+            -116.92967981,
+            50.18517766
+          ],
+          [
+            -116.9294656,
+            50.18496068
+          ],
+          [
+            -116.92935538,
+            50.18480377
+          ],
+          [
+            -116.92911776,
+            50.18461678
+          ],
+          [
+            -116.92893548,
+            50.18435209
+          ],
+          [
+            -116.92875521,
+            50.18416922
+          ],
+          [
+            -116.92845886,
+            50.18382254
+          ],
+          [
+            -116.92740532,
+            50.18367962
+          ],
+          [
+            -116.92734824,
+            50.18367669
+          ],
+          [
+            -116.92730337,
+            50.18367905
+          ],
+          [
+            -116.92723405,
+            50.18369196
+          ],
+          [
+            -116.92713181,
+            50.1837098
+          ],
+          [
+            -116.92704549,
+            50.18372594
+          ],
+          [
+            -116.92695521,
+            50.18373526
+          ],
+          [
+            -116.92684767,
+            50.18374457
+          ],
+          [
+            -116.9267574,
+            50.18374195
+          ],
+          [
+            -116.9266791,
+            50.183724
+          ],
+          [
+            -116.92661676,
+            50.18368902
+          ],
+          [
+            -116.92653982,
+            50.18365572
+          ],
+          [
+            -116.92644695,
+            50.18361816
+          ],
+          [
+            -116.92634346,
+            50.18358059
+          ],
+          [
+            -116.92625457,
+            50.18354814
+          ],
+          [
+            -116.92614841,
+            50.18351653
+          ],
+          [
+            -116.92603828,
+            50.18348578
+          ],
+          [
+            -116.92595334,
+            50.18347209
+          ],
+          [
+            -116.92588698,
+            50.18346181
+          ],
+          [
+            -116.92570596,
+            50.18343394
+          ],
+          [
+            -116.92559751,
+            50.18338
+          ],
+          [
+            -116.9254873,
+            50.18332372
+          ],
+          [
+            -116.9253894,
+            50.18327903
+          ],
+          [
+            -116.92532013,
+            50.18324461
+          ],
+          [
+            -116.92525436,
+            50.1832113
+          ],
+          [
+            -116.92518915,
+            50.18315816
+          ],
+          [
+            -116.92513631,
+            50.18311309
+          ],
+          [
+            -116.92508018,
+            50.18306346
+          ],
+          [
+            -116.92505445,
+            50.18301224
+          ],
+          [
+            -116.92505649,
+            50.18300406
+          ],
+          [
+            -116.92504767,
+            50.1829533
+          ],
+          [
+            -116.92504724,
+            50.1829504
+          ],
+          [
+            -116.92504675,
+            50.18290255
+          ],
+          [
+            -116.92505328,
+            50.18286281
+          ],
+          [
+            -116.92507628,
+            50.18281475
+          ],
+          [
+            -116.92508102,
+            50.18277501
+          ],
+          [
+            -116.92506728,
+            50.18268761
+          ],
+          [
+            -116.92500278,
+            50.18260875
+          ],
+          [
+            -116.92495337,
+            50.1825076
+          ],
+          [
+            -116.92493875,
+            50.18245055
+          ],
+          [
+            -116.92488976,
+            50.18233539
+          ],
+          [
+            -116.92485067,
+            50.18225166
+          ],
+          [
+            -116.92482615,
+            50.18216315
+          ],
+          [
+            -116.92481149,
+            50.18210725
+          ],
+          [
+            -116.92478316,
+            50.18202579
+          ],
+          [
+            -116.924746,
+            50.18193621
+          ],
+          [
+            -116.92474746,
+            50.18188484
+          ],
+          [
+            -116.92475572,
+            50.18184857
+          ],
+          [
+            -116.92475448,
+            50.18182876
+          ],
+          [
+            -116.92475461,
+            50.18182404
+          ],
+          [
+            -116.92475349,
+            50.18180621
+          ],
+          [
+            -116.92475237,
+            50.18178466
+          ],
+          [
+            -116.92476566,
+            50.18176006
+          ],
+          [
+            -116.924799,
+            50.18172825
+          ],
+          [
+            -116.92484687,
+            50.18169516
+          ],
+          [
+            -116.9248909,
+            50.18166797
+          ],
+          [
+            -116.9249379,
+            50.18166406
+          ],
+          [
+            -116.92501381,
+            50.18165639
+          ],
+          [
+            -116.92506967,
+            50.18164534
+          ],
+          [
+            -116.92511537,
+            50.18163449
+          ],
+          [
+            -116.92517385,
+            50.18160716
+          ],
+          [
+            -116.92521021,
+            50.18158584
+          ],
+          [
+            -116.92523621,
+            50.18155994
+          ],
+          [
+            -116.92525,
+            50.18152713
+          ],
+          [
+            -116.92525367,
+            50.18148878
+          ],
+          [
+            -116.92525484,
+            50.18147776
+          ],
+          [
+            -116.92525091,
+            50.18142527
+          ],
+          [
+            -116.9252557,
+            50.18138321
+          ],
+          [
+            -116.92525598,
+            50.18137264
+          ],
+          [
+            -116.92525718,
+            50.18133794
+          ],
+          [
+            -116.92523866,
+            50.18129258
+          ],
+          [
+            -116.92520007,
+            50.1812471
+          ],
+          [
+            -116.92517152,
+            50.18119899
+          ],
+          [
+            -116.92516569,
+            50.18118903
+          ],
+          [
+            -116.92513306,
+            50.18113094
+          ],
+          [
+            -116.92510755,
+            50.18107745
+          ],
+          [
+            -116.92510346,
+            50.18102963
+          ],
+          [
+            -116.92509269,
+            50.18096433
+          ],
+          [
+            -116.92508385,
+            50.18089436
+          ],
+          [
+            -116.92507367,
+            50.18080809
+          ],
+          [
+            -116.92506085,
+            50.18075331
+          ],
+          [
+            -116.92504634,
+            50.18069039
+          ],
+          [
+            -116.92503164,
+            50.180638
+          ],
+          [
+            -116.92502442,
+            50.18057618
+          ],
+          [
+            -116.92502755,
+            50.18052828
+          ],
+          [
+            -116.92502296,
+            50.18043846
+          ],
+          [
+            -116.92501942,
+            50.18037076
+          ],
+          [
+            -116.92502473,
+            50.18031002
+          ],
+          [
+            -116.92502997,
+            50.1802516
+          ],
+          [
+            -116.92503876,
+            50.18019667
+          ],
+          [
+            -116.92504584,
+            50.18013824
+          ],
+          [
+            -116.92504369,
+            50.1800869
+          ],
+          [
+            -116.92504369,
+            50.18008358
+          ],
+          [
+            -116.92398277,
+            50.1800922
+          ],
+          [
+            -116.92377246,
+            50.18009391
+          ],
+          [
+            -116.9237207,
+            50.18009433
+          ],
+          [
+            -116.91142961,
+            50.18019307
+          ],
+          [
+            -116.91142963,
+            50.18024246
+          ],
+          [
+            -116.91143001,
+            50.18224313
+          ],
+          [
+            -116.9114301,
+            50.18271645
+          ],
+          [
+            -116.91143064,
+            50.18563221
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W3-016",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 3, s. 16",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nArgenta Marsh Wildlife Management Area\n16 That portion of M.U. 4-19 which is contained within the following described lot: Lot A, District Lot 1884, Kootenay District, Plan 13962.",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "admin_boundary",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "whole_feature",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "official boundary of the named area",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "M.U. 4-19",
+        "geometry.feature": "Lot A, District Lot 1884, Kootenay District, Plan 13962",
+        "effect": "No Shooting or Hunting Areas"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "192ad6ccdffcfa7f04e7fe3720d4b3487a2d3da84d61ee2da4c08ce9769f3cfe",
+      "task_id": "closed_area-192ad6ccdffc",
+      "construction": [
+        {
+          "what": "official boundary of the named area",
+          "quote": "Lot A, District Lot 1884, Kootenay District, Plan 13962",
+          "source": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "0.877 km² (limit none for this type)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:58:54.540Z",
-  "updated": "2026-10-27T23:10:07.710Z"
+  "updated": "2026-10-28T19:47:59.616Z"
 }

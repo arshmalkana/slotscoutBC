@@ -1,0 +1,236 @@
+{
+  "type": "FeatureCollection",
+  "name": "W8-036",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -120.01533753179712,
+              54.10138791493799
+            ],
+            [
+              -120.01526335297868,
+              54.100506436226944
+            ],
+            [
+              -120.01504218909017,
+              54.09963346510214
+            ],
+            [
+              -120.01467617904198,
+              54.09877740795246
+            ],
+            [
+              -120.01416885598651,
+              54.09794650777776
+            ],
+            [
+              -120.01352511297402,
+              54.097148764854104
+            ],
+            [
+              -120.01275115555151,
+              54.09639185975399
+            ],
+            [
+              -120.01185444177153,
+              54.09568307945996
+            ],
+            [
+              -120.01084361019744,
+              54.09502924728029
+            ],
+            [
+              -120.0097283966052,
+              54.094436657238006
+            ],
+            [
+              -120.0085195401875,
+              54.09391101356113
+            ],
+            [
+              -120.00722868016518,
+              54.09345737585307
+            ],
+            [
+              -120.00586824380001,
+              54.093080110466914
+            ],
+            [
+              -120.00445132688365,
+              54.0927828485483
+            ],
+            [
+              -120.0029915678465,
+              54.0925684511471
+            ],
+            [
+              -120.00150301669098,
+              54.09243898173097
+            ],
+            [
+              -120.00131412433134,
+              54.09243354056434
+            ],
+            [
+              -120.00131212862493,
+              54.11034429688381
+            ],
+            [
+              -120.00150366553311,
+              54.110338779533485
+            ],
+            [
+              -120.00299284059614,
+              54.110209254630725
+            ],
+            [
+              -120.00445317462975,
+              54.10999476712411
+            ],
+            [
+              -120.00587059553469,
+              54.109697383944024
+            ],
+            [
+              -120.00723144551257,
+              54.10931997080032
+            ],
+            [
+              -120.00852261287686,
+              54.108866164516904
+            ],
+            [
+              -120.00973165855478,
+              54.108340337925085
+            ],
+            [
+              -120.01084693605236,
+              54.107747557657646
+            ],
+            [
+              -120.01185770372103,
+              54.10709353525283
+            ],
+            [
+              -120.01275422824074,
+              54.10638457204386
+            ],
+            [
+              -120.01352787832121,
+              54.10562749836839
+            ],
+            [
+              -120.01417120772095,
+              54.104829607687236
+            ],
+            [
+              -120.01467802678786,
+              54.10399858625107
+            ],
+            [
+              -120.01504346183968,
+              54.103142438996
+            ],
+            [
+              -120.01526400182077,
+              54.10226941238456
+            ],
+            [
+              -120.01533753179712,
+              54.10138791493799
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "rule_id": "W8-036",
+        "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 7, s. 36",
+        "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+        "source_text": "Schedule 7 No Hunting Areas (Section 8)\nKakwa Recreation Area\n36 That portion of the Province of British Columbia in M.U. 7-19 which is contained within the following described boundaries: Commencing at Mile Post 25 on the British Columbia/Alberta boundary north of Intersection Mountain; thence due South along the British Columbia/Alberta boundary to the point of intersection with the southerly boundary of the watershed of Sheep Creek; thence in a general westerly and northerly direction along the southerly and westerly boundaries of the watershed of Sheep Creek and Cecilia Creek and Kakwa River to Mount Hanigton; thence in a general northerly and easterly direction along the northerly boundary of the watershed of Kakwa River to Mount Minnes; thence easterly to the point of commencement. [en. B.C. Reg. 185/90, s. 11.]",
+        "source_version": "BC Laws consolidation current to October 13, 2026",
+        "effect": "no_hunting",
+        "period": null,
+        "exemptions": [],
+        "geometry_method": "metes_and_bounds",
+        "buffer_m": null,
+        "partial_extent": false,
+        "conservative": true,
+        "approximate": true,
+        "approximate_quality": "vicinity",
+        "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+        "digitised_on": "2026-10-28",
+        "reviewed_by": null,
+        "reviewed_on": null,
+        "confidence": "low",
+        "notes": "approximate zone: a zone around the places the section names (Kakwa River): 1 km around the named points; not the boundary",
+        "extraction_method": "ai",
+        "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+        "prompt_version": "closed_area.v1",
+        "quotes": {
+          "within": "in M.U. 7-19",
+          "effect": "No Hunting Areas",
+          "geometry.steps[0]": "Commencing at Mile Post 25 on the British Columbia/Alberta boundary north of Intersection Mountain",
+          "geometry.steps[1]": "thence due South along the British Columbia/Alberta boundary to the point of intersection with the southerly boundary of the watershed of Sheep Creek",
+          "geometry.steps[2]": "thence in a general westerly and northerly direction along the southerly and westerly boundaries of the watershed of Sheep Creek and Cecilia Creek and Kakwa River to Mount Hanigton",
+          "geometry.steps[3]": "thence in a general northerly and easterly direction along the northerly boundary of the watershed of Kakwa River to Mount Minnes",
+          "geometry.steps[4]": "thence easterly to the point of commencement"
+        },
+        "run_agreement": false,
+        "status": "candidate",
+        "version": 1,
+        "unit_hash": "f4174a580f47c203e537a21e2a72fa34db368ac0e26c85fd485f2d521ffbeaff",
+        "task_id": "closed_area-f4174a580f47",
+        "construction": [
+          {
+            "what": "approximate zone: a zone around the places the section names (Kakwa River): 1 km around the named points; not the boundary",
+            "quote": "Commencing at Mile Post 25 on the British Columbia/Alberta boundary north of Intersection Mountain",
+            "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+          }
+        ],
+        "validation": [
+          {
+            "check": "ring closes",
+            "passed": true,
+            "detail": "largest gap 0.0 m (limit 25 m)"
+          },
+          {
+            "check": "no self-crossing",
+            "passed": true,
+            "detail": "none"
+          },
+          {
+            "check": "area in expected range",
+            "passed": true,
+            "detail": "1.397 km² (limit 500 km²)"
+          },
+          {
+            "check": "inside the area the text names",
+            "passed": true,
+            "detail": "100.0% inside"
+          },
+          {
+            "check": "overlaps the synopsis map shape",
+            "passed": null,
+            "detail": "no synopsis shape in inbox/synopsis for this area yet"
+          },
+          {
+            "check": "two independent extractions agree",
+            "passed": false,
+            "detail": "steps: run 1 [\"british columbia alberta boundary|||\",\"british columbia alberta boundary|the southerly boundary of the watershed of sheep creek||other\",\"sheep creek and cecilia creek and kakwa river|mount hanigton||other\",\"kakwa river|mount minnes||other\",\"|the point of commencement||\"] vs run 2 [\"mile post 25|||\",\"british columbia alberta boundary|the point of intersection with the southerly boundary of the watershed of sheep creek||other\",\"the watershed of sheep creek and cecilia creek and kakwa river|mount hanigton||other\",\"the watershed of kakwa river|mount minnes||other\",\"|the point of commencement||\"]"
+          },
+          {
+            "check": "step directions match the line",
+            "passed": null,
+            "detail": "not run: a walk outline is approximate; a person checks it against the text"
+          }
+        ],
+        "change_type": "new"
+      }
+    }
+  ]
+}

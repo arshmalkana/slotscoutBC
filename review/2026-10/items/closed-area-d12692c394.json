@@ -14,7 +14,6 @@
     "\"Alberni Municipal boundary\" was not found in the official layers; that side is drawn straight",
     "\"Port Alberni Municipal boundary\" was not found in the official layers; that side is drawn straight",
     "\"Alberni Inlet\" was not found in the official layers; that side is drawn straight",
-    "\"District Lot 124\" was not found in the official layers; that side is drawn straight",
     "the outline could not be placed: a 1 km zone around the place the section names is marked",
     "validation failed: two independent extractions agree (steps: run 1 [\"|||\",\"|the intersection of r w 997 macmillan bloedel pipeline||straight_line\",\"r w 997|its intersection with the alberni municipal boundary||other\",\"alberni municipal boundary|its intersection with the port alberni municipal boundary||district_boundary\",\"port alberni municipal boundary|the most southwesterly boundary of lot 232||district_boundary\",\"alberni inlet|the southeast corner of block 678||\",\"|a point approximately 182 m due east of the southeast corner of district lot 124|approximately 182 m|shoreline\",\"district lot 124|the point of commencement||lot_line\"] vs run 2 [\"district lot 124 alberni district|||\",\"|the intersection of r w 997 macmillan bloedel pipeline||straight_line\",\"r w 997|its intersection with the alberni municipal boundary||other\",\"alberni municipal boundary|its intersection with the port alberni municipal boundary||district_boundary\",\"port alberni municipal boundary|the most southwesterly boundary of lot 232||district_boundary\",\"alberni inlet|the southeast corner of block 678||\",\"|a point approximately 182 m due east of the southeast corner of district lot 124|approximately 182 m|shoreline\",\"district lot 124|the point of commencement||lot_line\"])"
   ],
@@ -390,14 +389,14 @@
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
   "construction": [
     {
       "what": "approximate outline (vicinity): corners where the followed features meet, traced along them where found, padded 100 m",
       "quote": "Commencing at the northeast corner of District Lot 124 Alberni District",
-      "source": "BC Geographical Names"
+      "source": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW"
     }
   ],
   "feature": {
@@ -586,7 +585,7 @@
         {
           "what": "approximate outline (vicinity): corners where the followed features meet, traced along them where found, padded 100 m",
           "quote": "Commencing at the northeast corner of District Lot 124 Alberni District",
-          "source": "BC Geographical Names"
+          "source": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW"
         }
       ],
       "validation": [
@@ -623,7 +622,7 @@
         {
           "check": "step directions match the line",
           "passed": null,
-          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+          "detail": "not run: a walk outline is approximate; a person checks it against the text"
         }
       ],
       "change_type": "new"
@@ -631,5 +630,5 @@
   },
   "status": "open",
   "created": "2026-10-21T16:09:19.372Z",
-  "updated": "2026-10-28T17:17:44.646Z"
+  "updated": "2026-10-28T20:03:46.521Z"
 }

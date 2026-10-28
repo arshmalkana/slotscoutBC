@@ -9,6 +9,9 @@
   "why": [
     "AI runs disagree: steps: run 1 [\"|||\",\"|the ordinary high water mark at the most northeasterly point of tangil peninsula at porter head||straight_line\",\"|the most easterly peak on the tangil peninsula||straight_line\",\"the watershed boundary that separates those creeks that flow into dana inlet from those that flow into logan inlet|the peak at the intersection of the northerly boundary of the watershed of crescent inlet with the said watershed boundary that separates those creeks that flow into dana inlet from those that flow into logan inlet||other\",\"|the northeast corner of lot 663||straight_line\",\"lot 663|the intersection with the southerly boundary of the watershed of crescent inlet||lot_line\",\"the watershed of said crescent inlet and of tasu sound|a point on the o.h.w.m. at tasu head||other\",\"|||straight_line\"] vs run 2 []",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "\"the watershed boundary that separates those creeks that flow into Dana Inlet from those that flow into Logan Inlet\" was not found in the official layers; that side is drawn straight",
+    "\"the watershed of said Crescent Inlet and of Tasu sound\" was not found in the official layers; that side is drawn straight",
+    "a zone around Moresby Island would cover 2600 km2, too wide to mark",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -300,11 +303,11 @@
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:47:33.023Z",
-  "updated": "2026-10-28T17:21:00.200Z"
+  "updated": "2026-10-28T20:07:48.061Z"
 }

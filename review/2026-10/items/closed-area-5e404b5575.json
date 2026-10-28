@@ -5,10 +5,11 @@
   "title": "Closed Areas Regulation, Schedule 7, section 37 (Silver Star Recreation Area)",
   "rule_id": "W8-037",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Silver Star): 1 km around the named points; not the boundary"
   ],
   "source": {
     "text": "Schedule 7 No Hunting Areas (Section 8)\nSilver Star Recreation Area\n37 Those portions of M.U.s 8-22, 8-25 and 8-26 in the vicinity of Vernon being the Silver Star Recreation Area that are outlined in red on the attached Map No. 7-3/18. [en. B.C. Reg. 115/2018, App. 1, s. 9.]",
@@ -183,13 +184,389 @@
   ],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.137 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Silver Star): 1 km around the named points; not the boundary",
+      "quote": "being the Silver Star Recreation Area",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -119.07354039046194,
+            50.35722136814079
+          ],
+          [
+            -119.07347225412974,
+            50.35633988824124
+          ],
+          [
+            -119.07326902979526,
+            50.35546691360642
+          ],
+          [
+            -119.0729326818314,
+            50.35461085076026
+          ],
+          [
+            -119.0724664560979,
+            50.3537799429216
+          ],
+          [
+            -119.07187484842655,
+            50.352982190661066
+          ],
+          [
+            -119.07116356110039,
+            50.352225274910005
+          ],
+          [
+            -119.07033944775415,
+            50.35151648306023
+          ],
+          [
+            -119.06941044723385,
+            50.350862638863994
+          ],
+          [
+            -119.06838550705764,
+            50.350270036806
+          ],
+          [
+            -119.06727449721821,
+            50.34974438157586
+          ],
+          [
+            -119.06608811515798,
+            50.349290733220755
+          ],
+          [
+            -119.06483778283119,
+            50.34891345850278
+          ],
+          [
+            -119.06353553684062,
+            50.34861618892597
+          ],
+          [
+            -119.0621939127024,
+            50.34840178583437
+          ],
+          [
+            -119.06082582434573,
+            50.34827231291413
+          ],
+          [
+            -119.05944443999998,
+            50.348229016362765
+          ],
+          [
+            -119.05806305565423,
+            50.34827231291413
+          ],
+          [
+            -119.05669496729757,
+            50.34840178583437
+          ],
+          [
+            -119.05535334315935,
+            50.34861618892597
+          ],
+          [
+            -119.05405109716878,
+            50.34891345850278
+          ],
+          [
+            -119.05280076484198,
+            50.349290733220755
+          ],
+          [
+            -119.05161438278176,
+            50.34974438157586
+          ],
+          [
+            -119.05050337294233,
+            50.350270036806
+          ],
+          [
+            -119.04947843276611,
+            50.350862638863994
+          ],
+          [
+            -119.04854943224582,
+            50.35151648306023
+          ],
+          [
+            -119.04772531889957,
+            50.352225274910005
+          ],
+          [
+            -119.04701403157341,
+            50.352982190661066
+          ],
+          [
+            -119.04642242390206,
+            50.3537799429216
+          ],
+          [
+            -119.04595619816857,
+            50.35461085076026
+          ],
+          [
+            -119.04561985020472,
+            50.35546691360642
+          ],
+          [
+            -119.04541662587023,
+            50.35633988824124
+          ],
+          [
+            -119.04534848953803,
+            50.35722136814079
+          ],
+          [
+            -119.04541610489932,
+            50.35810286440857
+          ],
+          [
+            -119.04561882828351,
+            50.35897588751908
+          ],
+          [
+            -119.04595471456892,
+            50.359832029085474
+          ],
+          [
+            -119.04642053563786,
+            50.36066304286376
+          ],
+          [
+            -119.04701181120961,
+            50.36146092421207
+          ],
+          [
+            -119.04772285176348,
+            50.362217987238346
+          ],
+          [
+            -119.04854681314809,
+            50.36292693889106
+          ],
+          [
+            -119.04947576235722,
+            50.36358094927675
+          ],
+          [
+            -119.05050075384456,
+            50.36417371752424
+          ],
+          [
+            -119.05161191564557,
+            50.36469953255732
+          ],
+          [
+            -119.05279854447804,
+            50.36515332818764
+          ],
+          [
+            -119.05404920890446,
+            50.365530731993424
+          ],
+          [
+            -119.05535185955956,
+            50.36582810750986
+          ],
+          [
+            -119.0566939453763,
+            50.366042589321715
+          ],
+          [
+            -119.05806253468327,
+            50.366172110717635
+          ],
+          [
+            -119.05944443999998,
+            50.36621542363724
+          ],
+          [
+            -119.0608263453167,
+            50.366172110717635
+          ],
+          [
+            -119.06219493462368,
+            50.366042589321715
+          ],
+          [
+            -119.06353702044039,
+            50.36582810750986
+          ],
+          [
+            -119.06483967109551,
+            50.365530731993424
+          ],
+          [
+            -119.06609033552193,
+            50.36515332818764
+          ],
+          [
+            -119.06727696435439,
+            50.36469953255732
+          ],
+          [
+            -119.06838812615541,
+            50.36417371752424
+          ],
+          [
+            -119.06941311764275,
+            50.36358094927675
+          ],
+          [
+            -119.07034206685188,
+            50.36292693889106
+          ],
+          [
+            -119.07116602823649,
+            50.362217987238346
+          ],
+          [
+            -119.07187706879034,
+            50.36146092421207
+          ],
+          [
+            -119.07246834436211,
+            50.36066304286376
+          ],
+          [
+            -119.07293416543105,
+            50.359832029085474
+          ],
+          [
+            -119.07327005171646,
+            50.35897588751908
+          ],
+          [
+            -119.07347277510065,
+            50.35810286440857
+          ],
+          [
+            -119.07354039046194,
+            50.35722136814079
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W8-037",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 7, s. 37",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 7 No Hunting Areas (Section 8)\nSilver Star Recreation Area\n37 Those portions of M.U.s 8-22, 8-25 and 8-26 in the vicinity of Vernon being the Silver Star Recreation Area that are outlined in red on the attached Map No. 7-3/18. [en. B.C. Reg. 115/2018, App. 1, s. 9.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_hunting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "other",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Silver Star): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "Those portions of M.U.s 8-22, 8-25 and 8-26",
+        "geometry.feature": "being the Silver Star Recreation Area",
+        "effect": "No Hunting Areas"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "24f920e861f1aba3367d89595e5720fbf9b3a1aae2ea80d9e308880f2024293e",
+      "task_id": "closed_area-24f920e861f1",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Silver Star): 1 km around the named points; not the boundary",
+          "quote": "being the Silver Star Recreation Area",
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "3.137 km² (limit none for this type)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:07:30.153Z",
-  "updated": "2026-10-27T23:10:13.006Z"
+  "updated": "2026-10-28T19:49:09.609Z"
 }

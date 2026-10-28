@@ -9,6 +9,7 @@
   "why": [
     "AI runs disagree: steps: run 1 [\"||2 km|\",\"||25 m|straight_line\",\"central rd|a point 25 m due north of the junction of the midlines of central rd and imperial limestone rd|approximately 16 km|other\",\"|the midline of central rd|25 m|straight_line\",\"|a point 25 m south of the midline of central rd||straight_line\",\"central rd|a point 25 m southwest of the point of commencement||other\",\"|the point of commencement|25 m|straight_line\"] vs run 2 [\"||2 km|\",\"||25 m|\",\"central rd|a point 25 m due north of the junction of the midlines of central rd and imperial limestone rd|approximately 16 km|other\",\"|the midline of central rd|25 m|\",\"|a point 25 m south of the midline of central rd||\",\"central rd|a point 25 m southwest of the point of commencement||other\",\"|the point of commencement|25 m|\"]",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "none of the places the section names was found in the official layers",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -323,11 +324,11 @@
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
   "construction": [],
   "status": "open",
   "created": "2026-10-20T22:00:18.844Z",
-  "updated": "2026-10-28T17:26:22.425Z"
+  "updated": "2026-10-28T20:13:57.499Z"
 }

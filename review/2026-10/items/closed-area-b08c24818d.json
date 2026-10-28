@@ -5,10 +5,13 @@
   "title": "Closed Areas Regulation, Schedule 5, section 120 (Tow Hill)",
   "rule_id": "W5-120",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "\"Tow Hill Provincial Park\" was not found in the official layers; that side is drawn straight",
+    "\"McIntyre Bay\" was not found in the official layers; that side is drawn straight",
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (McIntyre Bay): 1 km around the named points; not the boundary"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nTow Hill\n120 That portion of the Province of British Columbia in Queen Charlotte Land District contained within the following described boundaries: Commencing at the southwest corner of Lot 228, that Lot being Tow Hill Provincial Park; thence easterly and northerly along the southerly and easterly boundaries of Tow Hill Provincial Park to the point of intersection with the mean low water mark of McIntyre Bay at the mouth of Hiellen River; thence in a general northerly and westerly direction along the mean low water mark of McIntyre Bay to the point of intersection with the prolongation of the westerly boundary of Tow Hill Provincial Park; thence southerly to the point of commencement. [en. B.C. Reg. 224/92, s. 13.]",
@@ -214,18 +217,402 @@
   ],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.137 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     },
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (McIntyre Bay): 1 km around the named points; not the boundary",
+      "quote": "Commencing at the southwest corner of Lot 228, that Lot being Tow Hill Provincial Park",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -131.9819975281805,
+            54.08333235558461
+          ],
+          [
+            -131.9819233818536,
+            54.082450876867334
+          ],
+          [
+            -131.98170231440392,
+            54.081577905724096
+          ],
+          [
+            -131.98133646380333,
+            54.08072184854452
+          ],
+          [
+            -131.98082936165957,
+            54.079890948329606
+          ],
+          [
+            -131.98018589888744,
+            54.07909320535695
+          ],
+          [
+            -131.97941227832857,
+            54.078336300200924
+          ],
+          [
+            -131.9785159547864,
+            54.077627519846246
+          ],
+          [
+            -131.97750556306318,
+            54.076973687603505
+          ],
+          [
+            -131.9763908346978,
+            54.07638109749816
+          ],
+          [
+            -131.975182504211,
+            54.075855453760646
+          ],
+          [
+            -131.97389220576162,
+            54.075401815996706
+          ],
+          [
+            -131.97253236120807,
+            54.07502455056157
+          ],
+          [
+            -131.97111606064897,
+            54.074727288602766
+          ],
+          [
+            -131.96965693658692,
+            54.07451289117169
+          ],
+          [
+            -131.9681690329182,
+            54.074383421737174
+          ],
+          [
+            -131.96666667,
+            54.074340126362756
+          ],
+          [
+            -131.9651643070818,
+            54.074383421737174
+          ],
+          [
+            -131.9636764034131,
+            54.07451289117169
+          ],
+          [
+            -131.96221727935105,
+            54.074727288602766
+          ],
+          [
+            -131.96080097879195,
+            54.07502455056157
+          ],
+          [
+            -131.9594411342384,
+            54.075401815996706
+          ],
+          [
+            -131.958150835789,
+            54.075855453760646
+          ],
+          [
+            -131.9569425053022,
+            54.07638109749816
+          ],
+          [
+            -131.95582777693684,
+            54.076973687603505
+          ],
+          [
+            -131.95481738521363,
+            54.077627519846246
+          ],
+          [
+            -131.95392106167145,
+            54.078336300200924
+          ],
+          [
+            -131.95314744111258,
+            54.07909320535695
+          ],
+          [
+            -131.95250397834045,
+            54.079890948329606
+          ],
+          [
+            -131.9519968761967,
+            54.08072184854452
+          ],
+          [
+            -131.9516310255961,
+            54.081577905724096
+          ],
+          [
+            -131.95140995814643,
+            54.082450876867334
+          ],
+          [
+            -131.95133581181952,
+            54.08333235558461
+          ],
+          [
+            -131.9514093100168,
+            54.084213853025005
+          ],
+          [
+            -131.95162975424407,
+            54.085086879618075
+          ],
+          [
+            -131.9519950304796,
+            54.08594302684329
+          ],
+          [
+            -131.95250162918816,
+            54.086774048239256
+          ],
+          [
+            -131.9531446788017,
+            54.08757193887145
+          ],
+          [
+            -131.95391799235605,
+            54.08832901249102
+          ],
+          [
+            -131.95481412684572,
+            54.08903797563932
+          ],
+          [
+            -131.95582445473372,
+            54.08969199798107
+          ],
+          [
+            -131.95693924693424,
+            54.09028477818543
+          ],
+          [
+            -131.95814776647347,
+            54.09081060471656
+          ],
+          [
+            -131.95943837192735,
+            54.09126441094406
+          ],
+          [
+            -131.9607986296395,
+            54.09164182403875
+          ],
+          [
+            -131.9622154336338,
+            54.091939207178626
+          ],
+          [
+            -131.96367513206096,
+            54.092153694655345
+          ],
+          [
+            -131.9651636589521,
+            54.0922832195397
+          ],
+          [
+            -131.96666667,
+            54.09232653363724
+          ],
+          [
+            -131.96816968104793,
+            54.0922832195397
+          ],
+          [
+            -131.96965820793906,
+            54.092153694655345
+          ],
+          [
+            -131.97111790636623,
+            54.091939207178626
+          ],
+          [
+            -131.97253471036052,
+            54.09164182403875
+          ],
+          [
+            -131.97389496807267,
+            54.09126441094406
+          ],
+          [
+            -131.97518557352655,
+            54.09081060471656
+          ],
+          [
+            -131.97639409306578,
+            54.09028477818543
+          ],
+          [
+            -131.9775088852663,
+            54.08969199798107
+          ],
+          [
+            -131.9785192131543,
+            54.08903797563932
+          ],
+          [
+            -131.97941534764396,
+            54.08832901249102
+          ],
+          [
+            -131.98018866119833,
+            54.08757193887145
+          ],
+          [
+            -131.98083171081186,
+            54.086774048239256
+          ],
+          [
+            -131.98133830952042,
+            54.08594302684329
+          ],
+          [
+            -131.98170358575592,
+            54.085086879618075
+          ],
+          [
+            -131.98192402998322,
+            54.084213853025005
+          ],
+          [
+            -131.9819975281805,
+            54.08333235558461
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-120",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 120",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nTow Hill\n120 That portion of the Province of British Columbia in Queen Charlotte Land District contained within the following described boundaries: Commencing at the southwest corner of Lot 228, that Lot being Tow Hill Provincial Park; thence easterly and northerly along the southerly and easterly boundaries of Tow Hill Provincial Park to the point of intersection with the mean low water mark of McIntyre Bay at the mouth of Hiellen River; thence in a general northerly and westerly direction along the mean low water mark of McIntyre Bay to the point of intersection with the prolongation of the westerly boundary of Tow Hill Provincial Park; thence southerly to the point of commencement. [en. B.C. Reg. 224/92, s. 13.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (McIntyre Bay): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "in Queen Charlotte Land District",
+        "effect": "No Shooting Areas",
+        "geometry.steps[0]": "Commencing at the southwest corner of Lot 228, that Lot being Tow Hill Provincial Park",
+        "geometry.steps[1]": "thence easterly and northerly along the southerly and easterly boundaries of Tow Hill Provincial Park to the point of intersection with the mean low water mark of McIntyre Bay at the mouth of Hiellen River",
+        "geometry.steps[2]": "thence in a general northerly and westerly direction along the mean low water mark of McIntyre Bay to the point of intersection with the prolongation of the westerly boundary of Tow Hill Provincial Park",
+        "geometry.steps[3]": "thence southerly to the point of commencement"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "b573c3ea39cdaf3285dacaf17b04c47e8f32636c060cbe027fd5add69bdadfe9",
+      "task_id": "closed_area-b573c3ea39cd",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (McIntyre Bay): 1 km around the named points; not the boundary",
+          "quote": "Commencing at the southwest corner of Lot 228, that Lot being Tow Hill Provincial Park",
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "3.137 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: a walk outline is approximate; a person checks it against the text"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:09:57.634Z",
-  "updated": "2026-10-28T17:18:41.128Z"
+  "updated": "2026-10-28T20:05:03.155Z"
 }

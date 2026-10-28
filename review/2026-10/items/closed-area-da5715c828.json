@@ -392,14 +392,14 @@
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
   "construction": [
     {
       "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
       "quote": "Commencing at the confluence of the mean high water mark of Lakelse Lake and Schulbuckhand Creek",
-      "source": "WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP, WHSE_BASEMAPPING.FWA_LAKES_POLY"
+      "source": "WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP, WHSE_BASEMAPPING.FWA_LAKES_POLY, WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW"
     }
   ],
   "feature": {
@@ -688,7 +688,7 @@
         {
           "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
           "quote": "Commencing at the confluence of the mean high water mark of Lakelse Lake and Schulbuckhand Creek",
-          "source": "WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP, WHSE_BASEMAPPING.FWA_LAKES_POLY"
+          "source": "WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP, WHSE_BASEMAPPING.FWA_LAKES_POLY, WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW"
         }
       ],
       "validation": [
@@ -725,7 +725,7 @@
         {
           "check": "step directions match the line",
           "passed": null,
-          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+          "detail": "not run: a walk outline is approximate; a person checks it against the text"
         }
       ],
       "change_type": "new"
@@ -733,5 +733,5 @@
   },
   "status": "open",
   "created": "2026-10-21T16:08:45.455Z",
-  "updated": "2026-10-28T17:13:14.168Z"
+  "updated": "2026-10-28T19:59:35.120Z"
 }

@@ -5,10 +5,11 @@
   "title": "Closed Areas Regulation, Schedule 5, section 93 (Cold Fish Lake Camp)",
   "rule_id": "W5-093",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Cold Fish Lake): 1 km around the named points; not the boundary"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nCold Fish Lake Camp\n93 Those portions of the Province of British Columbia in M.U. 6-20, being all areas within 1 km of Cold Fish Lake Camp. [en. B.C. Reg. 162/87, s. 29.]",
@@ -164,13 +165,390 @@
   ],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.137 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Cold Fish Lake): 1 km around the named points; not the boundary",
+      "quote": "Cold Fish Lake Camp",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -128.7976458983864,
+            57.66222110517686
+          ],
+          [
+            -128.79756453469443,
+            57.66133962781487
+          ],
+          [
+            -128.79732205209226,
+            57.660466660672554
+          ],
+          [
+            -128.79692079707576,
+            57.65961060998562
+          ],
+          [
+            -128.7963646443211,
+            57.658779718505414
+          ],
+          [
+            -128.79565895897142,
+            57.65798198617381
+          ],
+          [
+            -128.79481054461849,
+            57.65722509315624
+          ],
+          [
+            -128.79382757749434,
+            57.656516325971
+          ],
+          [
+            -128.79271952751725,
+            57.65586250742269
+          ],
+          [
+            -128.79149706696066,
+            57.655269931010665
+          ],
+          [
+            -128.79017196762965,
+            57.654744300439376
+          ],
+          [
+            -128.78875698753674,
+            57.65429067480879
+          ],
+          [
+            -128.78726574816687,
+            57.65391342000814
+          ],
+          [
+            -128.78571260350802,
+            57.65361616677653
+          ],
+          [
+            -128.78411250210135,
+            57.653401775830176
+          ],
+          [
+            -128.78248084342763,
+            57.65327231038883
+          ],
+          [
+            -128.78083333,
+            57.653229016362744
+          ],
+          [
+            -128.7791858165724,
+            57.65327231038883
+          ],
+          [
+            -128.7775541578987,
+            57.653401775830176
+          ],
+          [
+            -128.77595405649203,
+            57.65361616677653
+          ],
+          [
+            -128.77440091183317,
+            57.65391342000814
+          ],
+          [
+            -128.77290967246327,
+            57.65429067480879
+          ],
+          [
+            -128.7714946923704,
+            57.654744300439376
+          ],
+          [
+            -128.77016959303938,
+            57.655269931010665
+          ],
+          [
+            -128.7689471324828,
+            57.65586250742269
+          ],
+          [
+            -128.76783908250567,
+            57.656516325971
+          ],
+          [
+            -128.76685611538156,
+            57.65722509315624
+          ],
+          [
+            -128.76600770102863,
+            57.65798198617381
+          ],
+          [
+            -128.76530201567894,
+            57.658779718505414
+          ],
+          [
+            -128.7647458629243,
+            57.65961060998562
+          ],
+          [
+            -128.76434460790776,
+            57.660466660672554
+          ],
+          [
+            -128.7641021253056,
+            57.66133962781487
+          ],
+          [
+            -128.76402076161364,
+            57.66222110517686
+          ],
+          [
+            -128.76410131211694,
+            57.663102603959885
+          ],
+          [
+            -128.7643430127808,
+            57.66397563454204
+          ],
+          [
+            -128.7647435471589,
+            57.66483178824967
+          ],
+          [
+            -128.76529906826863,
+            57.66566281837243
+          ],
+          [
+            -128.7660042352407,
+            57.66646071964048
+          ],
+          [
+            -128.7668522644043,
+            57.66721780539623
+          ],
+          [
+            -128.76783499433,
+            57.66792678171461
+          ],
+          [
+            -128.76894296421494,
+            57.66858081775411
+          ],
+          [
+            -128.7701655048636,
+            57.66917361165734
+          ],
+          [
+            -128.77149084139293,
+            57.66969945136178
+          ],
+          [
+            -128.7729062066751,
+            57.670153269730584
+          ],
+          [
+            -128.77439796442255,
+            57.67053069346768
+          ],
+          [
+            -128.77595174072633,
+            57.67082808534186
+          ],
+          [
+            -128.77755256277155,
+            57.67104257930894
+          ],
+          [
+            -128.77918500338365,
+            57.671172108190135
+          ],
+          [
+            -128.78083333,
+            57.671215423637236
+          ],
+          [
+            -128.7824816566164,
+            57.671172108190135
+          ],
+          [
+            -128.7841140972285,
+            57.67104257930894
+          ],
+          [
+            -128.78571491927372,
+            57.67082808534186
+          ],
+          [
+            -128.78726869557747,
+            57.67053069346768
+          ],
+          [
+            -128.78876045332495,
+            57.670153269730584
+          ],
+          [
+            -128.7901758186071,
+            57.66969945136178
+          ],
+          [
+            -128.79150115513644,
+            57.66917361165734
+          ],
+          [
+            -128.7927236957851,
+            57.66858081775411
+          ],
+          [
+            -128.79383166567004,
+            57.66792678171461
+          ],
+          [
+            -128.79481439559575,
+            57.66721780539623
+          ],
+          [
+            -128.79566242475934,
+            57.66646071964048
+          ],
+          [
+            -128.7963675917314,
+            57.66566281837243
+          ],
+          [
+            -128.79692311284114,
+            57.66483178824967
+          ],
+          [
+            -128.79732364721923,
+            57.66397563454204
+          ],
+          [
+            -128.7975653478831,
+            57.663102603959885
+          ],
+          [
+            -128.7976458983864,
+            57.66222110517686
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-093",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 93",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nCold Fish Lake Camp\n93 Those portions of the Province of British Columbia in M.U. 6-20, being all areas within 1 km of Cold Fish Lake Camp. [en. B.C. Reg. 162/87, s. 29.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "other",
+      "buffer_m": 1000,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Cold Fish Lake): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "M.U. 6-20",
+        "geometry.feature": "Cold Fish Lake Camp",
+        "geometry.buffer_m": "within 1 km",
+        "effect": "No Shooting Areas"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "42c72f39fa7c8860b0fb9247511a087aba08a124b3a3fe56b1bf683eb36dcbe6",
+      "task_id": "closed_area-42c72f39fa7c",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Cold Fish Lake): 1 km around the named points; not the boundary",
+          "quote": "Cold Fish Lake Camp",
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "3.137 km² (limit none for this type)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:08:32.310Z",
-  "updated": "2026-10-27T23:10:38.914Z"
+  "updated": "2026-10-28T19:53:21.626Z"
 }

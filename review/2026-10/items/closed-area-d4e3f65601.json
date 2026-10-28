@@ -9,6 +9,10 @@
   "why": [
     "AI runs disagree: steps: run 1 [\"bcr mackenzie branch line|||\",\"missinchinka river|an unnamed stream running westerly into the missinchinka river|approximately 9 km|river\",\"|the crossing of the bcr line||creek\",\"bcr|the junction of the bcr branch line to mackenzie||other\",\"|the point of commencement||other\"] vs run 2 [\"missinchinka river|||\",\"missinchinka river|an unnamed stream running westerly into the missinchinka river|approximately 9 km|river\",\"|the crossing of the bcr line||creek\",\"bcr|the junction of the bcr branch line to mackenzie||other\",\"|the point of commencement||other\"]",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "\"BCR MacKenzie branch line\" was not found in the official layers; that side is drawn straight",
+    "\"Missinchinka River\" was not found in the official layers; that side is drawn straight",
+    "\"BCR\" was not found in the official layers; that side is drawn straight",
+    "none of the places the section names was found in the official layers",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -295,11 +299,11 @@
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:08:32.361Z",
-  "updated": "2026-10-28T17:09:42.478Z"
+  "updated": "2026-10-28T19:54:24.531Z"
 }

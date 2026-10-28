@@ -1,0 +1,257 @@
+{
+  "type": "FeatureCollection",
+  "name": "W5-127",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -120.62957521,
+              49.92679815
+            ],
+            [
+              -120.62950551,
+              49.92637002
+            ],
+            [
+              -120.62937408,
+              49.92594426
+            ],
+            [
+              -120.62744745748287,
+              49.921491292969144
+            ],
+            [
+              -120.62744742594437,
+              49.92149129862478
+            ],
+            [
+              -120.62736681166898,
+              49.921507460221015
+            ],
+            [
+              -120.62075076892636,
+              49.92297624229377
+            ],
+            [
+              -120.62048993456666,
+              49.9230543069814
+            ],
+            [
+              -120.6202594648895,
+              49.923165112239026
+            ],
+            [
+              -120.62006913225585,
+              49.9233039598242
+            ],
+            [
+              -120.61992700737845,
+              49.92346496242949
+            ],
+            [
+              -120.6198391170873,
+              49.92364129328472
+            ],
+            [
+              -120.61980918871797,
+              49.9238254755998
+            ],
+            [
+              -120.61979686838741,
+              49.93108260545104
+            ],
+            [
+              -120.61982318996716,
+              49.93125733791184
+            ],
+            [
+              -120.61990174539764,
+              49.93142544959289
+            ],
+            [
+              -120.62002954179513,
+              49.93158053448475
+            ],
+            [
+              -120.62020170978919,
+              49.93171668291387
+            ],
+            [
+              -120.62041168902165,
+              49.931828706754175
+            ],
+            [
+              -120.62065147811239,
+              49.931912337148226
+            ],
+            [
+              -120.62091193956823,
+              49.93196438719957
+            ],
+            [
+              -120.62118314801515,
+              49.931982873432986
+            ],
+            [
+              -120.62140608892507,
+              49.931983983834584
+            ],
+            [
+              -120.62425074148537,
+              49.9319980140941
+            ],
+            [
+              -120.6243320428795,
+              49.93199841410095
+            ],
+            [
+              -120.62738525984744,
+              49.93201339438042
+            ],
+            [
+              -120.62764562635394,
+              49.93199893478884
+            ],
+            [
+              -120.6278972541604,
+              49.931953515693024
+            ],
+            [
+              -120.62813133878319,
+              49.931878726318544
+            ],
+            [
+              -120.62833968967229,
+              49.93177718355483
+            ],
+            [
+              -120.62851501682766,
+              49.9316524403763
+            ],
+            [
+              -120.62865118588358,
+              49.931508861508
+            ],
+            [
+              -120.62874343273339,
+              49.931351470688426
+            ],
+            [
+              -120.62936602388427,
+              49.92988674811435
+            ],
+            [
+              -120.62935984,
+              49.92954134
+            ],
+            [
+              -120.62935191,
+              49.92909832
+            ],
+            [
+              -120.62956867,
+              49.92723336
+            ],
+            [
+              -120.62957521,
+              49.92679815
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "rule_id": "W5-127",
+        "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 127",
+        "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+        "source_text": "Schedule 5 No Shooting Areas (Section 6)\nWillow Heights Wildlife Reserve\n127 That portion of the Province of British Columbia within M.U. 8-06 in the Kamloops Division of Yale which is contained within the following described boundaries: Commencing at the westernmost point of the northern boundary of Lot 1855; thence southerly along the western boundary of Lot 1855 and along the western boundary of Lot 1912 to the point of intersection with the eastern boundary of the right of way of Highway 5A; thence southerly along said right of way boundary to the point of intersection with the southern boundary of Lot 4751; thence easterly along said southern boundary to the southeast corner of Lot 4751; thence northerly along the eastern boundary of said Lot and along the eastern boundary of Lot 1912 to the point of intersection with the southern boundary of Lot 1855; thence easterly along said southern boundary to the southeast corner of Lot 1855; thence northerly along the eastern boundary and westerly along the northern boundary of said Lot to the point of commencement; including all lands thus encompassed excepting any private lands; all within the Kamloops Division of Yale District. [en. B.C. Reg. 322/95, s. 3 (d).]",
+        "source_version": "BC Laws consolidation current to October 13, 2026",
+        "effect": "no_shooting",
+        "period": null,
+        "exemptions": [
+          "excepting any private lands"
+        ],
+        "geometry_method": "metes_and_bounds",
+        "buffer_m": null,
+        "partial_extent": false,
+        "conservative": true,
+        "approximate": true,
+        "approximate_quality": "traced",
+        "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+        "digitised_on": "2026-10-28",
+        "reviewed_by": null,
+        "reviewed_on": null,
+        "confidence": "low",
+        "notes": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+        "extraction_method": "ai",
+        "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+        "prompt_version": "closed_area.v1",
+        "quotes": {
+          "within": "within M.U. 8-06",
+          "effect": "No Shooting Areas",
+          "exemptions[0]": "excepting any private lands",
+          "geometry.steps[0]": "Commencing at the westernmost point of the northern boundary of Lot 1855",
+          "geometry.steps[1]": "thence southerly along the western boundary of Lot 1855 and along the western boundary of Lot 1912 to the point of intersection with the eastern boundary of the right of way of Highway 5A",
+          "geometry.steps[2]": "thence southerly along said right of way boundary to the point of intersection with the southern boundary of Lot 4751",
+          "geometry.steps[3]": "thence easterly along said southern boundary to the southeast corner of Lot 4751",
+          "geometry.steps[4]": "thence northerly along the eastern boundary of said Lot and along the eastern boundary of Lot 1912 to the point of intersection with the southern boundary of Lot 1855",
+          "geometry.steps[5]": "thence easterly along said southern boundary to the southeast corner of Lot 1855",
+          "geometry.steps[6]": "thence northerly along the eastern boundary and westerly along the northern boundary of said Lot to the point of commencement"
+        },
+        "run_agreement": true,
+        "status": "candidate",
+        "version": 1,
+        "unit_hash": "48c464c0692c074eff919db25cd34ecfe83eb1e8ed9b6a86dcab09f8333ce6a8",
+        "task_id": "closed_area-48c464c0692c",
+        "construction": [
+          {
+            "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+            "quote": "Commencing at the westernmost point of the northern boundary of Lot 1855",
+            "source": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW, WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP"
+          }
+        ],
+        "validation": [
+          {
+            "check": "ring closes",
+            "passed": true,
+            "detail": "largest gap 0.0 m (limit 25 m)"
+          },
+          {
+            "check": "no self-crossing",
+            "passed": true,
+            "detail": "none"
+          },
+          {
+            "check": "area in expected range",
+            "passed": true,
+            "detail": "0.705 km² (limit 500 km²)"
+          },
+          {
+            "check": "inside the area the text names",
+            "passed": true,
+            "detail": "100.0% inside"
+          },
+          {
+            "check": "overlaps the synopsis map shape",
+            "passed": null,
+            "detail": "no synopsis shape in inbox/synopsis for this area yet"
+          },
+          {
+            "check": "two independent extractions agree",
+            "passed": true,
+            "detail": "same landmarks, distances and effect"
+          },
+          {
+            "check": "step directions match the line",
+            "passed": null,
+            "detail": "not run: a walk outline is approximate; a person checks it against the text"
+          }
+        ],
+        "change_type": "new"
+      }
+    }
+  ]
+}

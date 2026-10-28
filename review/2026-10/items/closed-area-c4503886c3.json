@@ -18,7 +18,6 @@
     "\"Atwood East Road\" was not found in the official layers; that side is drawn straight",
     "\"Hardy Mountain Road\" was not found in the official layers; that side is drawn straight",
     "\"Vancouver, Victoria and Eastern Railway right of way (abandoned)\" was not found in the official layers; that side is drawn straight",
-    "\"D.L. 365 and D.L. 497\" was not found in the official layers; that side is drawn straight",
     "\"Canada/USA international boundary\" was not found in the official layers; that side is drawn straight",
     "validation failed: two independent extractions agree (steps: run 1 [\"|||\",\"vancouver victoria and eastern railway r w plan a209|a point of intersection with the midline of the burlington northern railway r w||other\",\"burlington northern railway r w|a point of intersection with the midline of marchel rd||other\",\"marchel rd|the intersection of the canada usa international boundary||road\",\"canada usa border|the point due south of the end point of dergousoff rd||other\",\"dergousoff rd|a point of intersection with the midline of the burlington northern railway r w||road\",\"burlington northern railway r w|a point of intersection of gilpin rd||other\",\"gilpin rd|a point of intersection with the midline of atwood east rd||road\",\"atwood east rd|a point of intersection with the midline of whitehall rd||road\",\"whitehall rd|a point of intersection with the midline of hwy 3 r w plan h748||road\",\"hwy 3|the point of intersection with the midline of kenmore rd at the municipal boundary of the city of grand forks||road\",\"kenmore rd|a point of intersection with the midline of cameron ave||road\",\"cameron ave|the point of intersection with the municipal boundary of the city of grand forks at the midline of the kettle river||road\",\"city of grand forks|a point of intersection with the midlines of coalchute rd northfork franklin rd and hardy mountain rd||district_boundary\",\"northfork franklin rd|a point of intersection with the midline of eagle ridge rd||road\",\"eagle ridge rd|the end of eagle ridge rd||road\",\"|the 700 metre contour||\",\"|the midline of hardy mountain rd||\",\"hardy mountain rd|a point of intersection with the midline of reservoir rd||road\",\"reservoir rd|a point of intersection with the midline of the vancouver victoria and eastern railway right of way abandoned||road\",\"vancouver victoria and eastern railway right of way abandoned|a point of intersection with the western boundary of d.l. 365 similkameen division yale land district||other\",\"d.l. 365 and d.l. 497|the point of intersection with the canada usa international boundary||lot_line\",\"canada usa international boundary|the point of commencement||other\"] vs run 2 [\"|||\",\"said right of way|a point of intersection with the midline of the burlington northern railway r w||other\",\"said right of way|a point of intersection with the midline of marchel rd||other\",\"marchel rd|the intersection of the canada usa international boundary||road\",\"canada usa border|the point due south of the end point of dergousoff rd||other\",\"dergousoff rd|a point of intersection with the midline of the burlington northern railway r w||road\",\"said right of way|a point of intersection of gilpin rd||other\",\"gilpin rd|a point of intersection with the midline of atwood east rd||road\",\"atwood east rd|a point of intersection with the midline of whitehall rd||road\",\"whitehall rd|a point of intersection with the midline of hwy 3 r w plan h748||road\",\"hwy 3|the point of intersection with the midline of kenmore rd at the municipal boundary of the city of grand forks||road\",\"kenmore rd|a point of intersection with the midline of cameron ave||road\",\"cameron ave|the point of intersection with the municipal boundary of the city of grand forks at the midline of the kettle river||road\",\"city of grand forks|a point of intersection with the midlines of coalchute rd northfork franklin rd and hardy mountain rd||district_boundary\",\"northfork franklin rd|a point of intersection with the midline of eagle ridge rd||road\",\"eagle ridge rd|the end of eagle ridge rd||road\",\"|the 700 metre contour||\",\"|the midline of hardy mountain rd||\",\"hardy mountain rd|a point of intersection with the midline of reservoir rd||road\",\"reservoir rd|a point of intersection with the midline of the vancouver victoria and eastern railway right of way abandoned||road\",\"said right of way|a point of intersection with the western boundary of d.l. 365 similkameen division yale land district||other\",\"d.l. 365 and d.l. 497|the point of intersection with the canada usa international boundary||lot_line\",\"said international boundary|the point of commencement||other\"])"
   ],
@@ -674,14 +673,14 @@
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
   "construction": [
     {
       "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
       "quote": "Commencing at the point of intersection of the Vancouver, Victoria and Eastern Railway R/W (Plan A209) and the Canada/USA international boundary",
-      "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP, WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP, WHSE_BASEMAPPING.TRIM_CONTOUR_LINES (700 m)"
+      "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP, WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP, WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW, WHSE_BASEMAPPING.TRIM_CONTOUR_LINES (700 m)"
     }
   ],
   "feature": {
@@ -913,7 +912,7 @@
         {
           "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
           "quote": "Commencing at the point of intersection of the Vancouver, Victoria and Eastern Railway R/W (Plan A209) and the Canada/USA international boundary",
-          "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP, WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP, WHSE_BASEMAPPING.TRIM_CONTOUR_LINES (700 m)"
+          "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP, WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP, WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW, WHSE_BASEMAPPING.TRIM_CONTOUR_LINES (700 m)"
         }
       ],
       "validation": [
@@ -950,7 +949,7 @@
         {
           "check": "step directions match the line",
           "passed": null,
-          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+          "detail": "not run: a walk outline is approximate; a person checks it against the text"
         }
       ],
       "change_type": "new"
@@ -958,5 +957,5 @@
   },
   "status": "open",
   "created": "2026-10-20T21:47:18.041Z",
-  "updated": "2026-10-28T17:12:54.823Z"
+  "updated": "2026-10-28T19:59:07.611Z"
 }

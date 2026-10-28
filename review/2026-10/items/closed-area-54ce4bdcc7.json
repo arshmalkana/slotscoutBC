@@ -10,7 +10,7 @@
     "AI runs disagree: steps: run 1 [\"|the summit of mt. bergeron||straight_line\",\"|a point on the middle thread of bullmoose creek||straight_line\",\"bullmoose creek|its confluence with wolverine river||creek\",\"|the southerly bank of wolverine river||\",\"wolverine river|the westerly bank of murray river||river\",\"murray river|a point opposite the southerly bank of flatbed creek||river\",\"|the southerly bank of flatbed creek||\",\"flatbed creek|hwy 52||creek\",\"|the tumbler ridge height of land||straight_line\",\"|a point due east of the southeast corner of lot 304 peace river district||other\",\"|the easterly bank of murray river||straight_line\",\"murray river|the point of commencement||river\"] vs run 2 [\"|the summit of mt. bergeron||straight_line\",\"|a point on the middle thread of bullmoose creek||straight_line\",\"bullmoose creek|its confluence with wolverine river||creek\",\"|the southerly bank of wolverine river||straight_line\",\"wolverine river|the westerly bank of murray river||river\",\"murray river|a point opposite the southerly bank of flatbed creek||river\",\"|the southerly bank of flatbed creek||straight_line\",\"flatbed creek|hwy 52||creek\",\"|the tumbler ridge height of land||straight_line\",\"|a point due east of the southeast corner of lot 304 peace river district||other\",\"|the easterly bank of murray river||straight_line\",\"murray river|the point of commencement||river\"]",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
     "approximate outline (corners) drawn from the places the walk names, using run 1's reading of the steps",
-    "validation failed: area in expected range (1676.105 km² (limit 500 km²))",
+    "validation failed: area in expected range (1679.090 km² (limit 500 km²))",
     "validation failed: two independent extractions agree (steps: run 1 [\"|the summit of mt. bergeron||straight_line\",\"|a point on the middle thread of bullmoose creek||straight_line\",\"bullmoose creek|its confluence with wolverine river||creek\",\"|the southerly bank of wolverine river||\",\"wolverine river|the westerly bank of murray river||river\",\"murray river|a point opposite the southerly bank of flatbed creek||river\",\"|the southerly bank of flatbed creek||\",\"flatbed creek|hwy 52||creek\",\"|the tumbler ridge height of land||straight_line\",\"|a point due east of the southeast corner of lot 304 peace river district||other\",\"|the easterly bank of murray river||straight_line\",\"murray river|the point of commencement||river\"] vs run 2 [\"|the summit of mt. bergeron||straight_line\",\"|a point on the middle thread of bullmoose creek||straight_line\",\"bullmoose creek|its confluence with wolverine river||creek\",\"|the southerly bank of wolverine river||straight_line\",\"wolverine river|the westerly bank of murray river||river\",\"murray river|a point opposite the southerly bank of flatbed creek||river\",\"|the southerly bank of flatbed creek||straight_line\",\"flatbed creek|hwy 52||creek\",\"|the tumbler ridge height of land||straight_line\",\"|a point due east of the southeast corner of lot 304 peace river district||other\",\"|the easterly bank of murray river||straight_line\",\"murray river|the point of commencement||river\"])"
   ],
   "source": {
@@ -458,7 +458,7 @@
     {
       "check": "area in expected range",
       "passed": false,
-      "detail": "1676.105 km² (limit 500 km²)"
+      "detail": "1679.090 km² (limit 500 km²)"
     },
     {
       "check": "inside the area the text names",
@@ -478,7 +478,7 @@
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
   "construction": [
@@ -1435,24 +1435,28 @@
             55.08251152
           ],
           [
-            -120.94728812887806,
-            55.082933671392794
+            -120.94505076,
+            55.08543362
           ],
           [
-            -121.03572307064351,
-            55.13799454406843
+            -120.94180679423486,
+            55.08905758066594
           ],
           [
-            -121.03598127488958,
-            55.138123001388855
+            -121.03582152995335,
+            55.138050344510425
           ],
           [
-            -121.03628197383323,
-            55.13821649718415
+            -121.03606860231106,
+            55.138155288479574
           ],
           [
-            -121.03661093299796,
-            55.13827060547772
+            -121.03634669499856,
+            55.138230725000234
+          ],
+          [
+            -121.03664516266623,
+            55.13827376633399
           ],
           [
             -121.03695257985535,
@@ -1667,7 +1671,7 @@
         {
           "check": "area in expected range",
           "passed": false,
-          "detail": "1676.105 km² (limit 500 km²)"
+          "detail": "1679.090 km² (limit 500 km²)"
         },
         {
           "check": "inside the area the text names",
@@ -1687,7 +1691,7 @@
         {
           "check": "step directions match the line",
           "passed": null,
-          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+          "detail": "not run: a walk outline is approximate; a person checks it against the text"
         }
       ],
       "change_type": "new"
@@ -1695,5 +1699,5 @@
   },
   "status": "open",
   "created": "2026-10-20T21:59:04.465Z",
-  "updated": "2026-10-28T17:11:33.912Z"
+  "updated": "2026-10-28T19:57:22.498Z"
 }

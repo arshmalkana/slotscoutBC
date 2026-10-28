@@ -5,10 +5,13 @@
   "title": "Closed Areas Regulation, Schedule 5, section 92 (Hemlock Valley)",
   "rule_id": "W5-092",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "\"Hemlock Valley Recreation Area Road\" was not found in the official layers; that side is drawn straight",
+    "\"Hemlock Valley Recreation Area Road\" was not found in the official layers; that side is drawn straight",
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Hemlock Valley): 1 km around the named points; not the boundary"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nHemlock Valley\n92 That portion of the Province of British Columbia in M.U. 2-19 contained within the following described boundaries: Commencing at the point of intersection of the midline of Weaver Creek Road and the midline of Hemlock Valley Recreation Area Road; thence in a general northerly direction along the midline of Hemlock Valley Recreation Area Road to the point of intersection with the midline of Sakwi Creek at 840 m elevation and including all intervening territory for 50 m on either side of the midline of said road; thence in a general northerly direction along the midline of said road to Hemlock Valley Recreation Area and including all intervening territory for 150 m on either side of the midline of said road. [en. B.C. Reg. 162/87, s. 28; am. B.C. Reg. 459/90, s. 2.]",
@@ -275,18 +278,405 @@
   ],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.137 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     },
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Hemlock Valley): 1 km around the named points; not the boundary",
+      "quote": "Commencing at the point of intersection of the midline of Weaver Creek Road and the midline of Hemlock Valley Recreation Area Road",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -121.94909053387497,
+            49.37694361720961
+          ],
+          [
+            -121.94902377515471,
+            49.376062137029734
+          ],
+          [
+            -121.94882464210028,
+            49.375189161566844
+          ],
+          [
+            -121.94849505929737,
+            49.37433309737671
+          ],
+          [
+            -121.94803820709788,
+            49.37350218772985
+          ],
+          [
+            -121.94745849074968,
+            49.37270443326639
+          ],
+          [
+            -121.94676149776028,
+            49.37194751500234
+          ],
+          [
+            -121.94595394391222,
+            49.371238720426064
+          ],
+          [
+            -121.94504360845774,
+            49.37058487339459
+          ],
+          [
+            -121.94403925912084,
+            49.369992268501534
+          ],
+          [
+            -121.94295056763299,
+            49.36946661054542
+          ],
+          [
+            -121.94178801661593,
+            49.369012959678166
+          ],
+          [
+            -121.9405627987081,
+            49.36863568275835
+          ],
+          [
+            -121.93928670890261,
+            49.368338411374594
+          ],
+          [
+            -121.937972031129,
+            49.36812400694033
+          ],
+          [
+            -121.93663142016385,
+            49.367994533193325
+          ],
+          [
+            -121.93527778000002,
+            49.367951236362764
+          ],
+          [
+            -121.93392413983618,
+            49.367994533193325
+          ],
+          [
+            -121.93258352887104,
+            49.36812400694033
+          ],
+          [
+            -121.93126885109743,
+            49.368338411374594
+          ],
+          [
+            -121.92999276129194,
+            49.36863568275835
+          ],
+          [
+            -121.92876754338411,
+            49.369012959678166
+          ],
+          [
+            -121.92760499236704,
+            49.36946661054542
+          ],
+          [
+            -121.92651630087919,
+            49.369992268501534
+          ],
+          [
+            -121.9255119515423,
+            49.37058487339459
+          ],
+          [
+            -121.92460161608781,
+            49.371238720426064
+          ],
+          [
+            -121.92379406223975,
+            49.37194751500234
+          ],
+          [
+            -121.92309706925035,
+            49.37270443326639
+          ],
+          [
+            -121.92251735290216,
+            49.37350218772985
+          ],
+          [
+            -121.92206050070267,
+            49.37433309737671
+          ],
+          [
+            -121.92173091789975,
+            49.375189161566844
+          ],
+          [
+            -121.92153178484533,
+            49.376062137029734
+          ],
+          [
+            -121.92146502612506,
+            49.37694361720961
+          ],
+          [
+            -121.92153129176147,
+            49.37782511319918
+          ],
+          [
+            -121.92172995068098,
+            49.37869813548356
+          ],
+          [
+            -121.92205909651867,
+            49.37955427570768
+          ],
+          [
+            -121.92251556571493,
+            49.3803852876791
+          ],
+          [
+            -121.92309496774047,
+            49.38118316682534
+          ],
+          [
+            -121.92379172716706,
+            49.38194022733899
+          ],
+          [
+            -121.92459913718785,
+            49.38264917626508
+          ],
+          [
+            -121.9255094240778,
+            49.38330318381499
+          ],
+          [
+            -121.92651382197917,
+            49.3838959492265
+          ],
+          [
+            -121.92760265729427,
+            49.38442176153244
+          ],
+          [
+            -121.9287654418741,
+            49.38487555464929
+          ],
+          [
+            -121.92999097410457,
+            49.38525295625193
+          ],
+          [
+            -121.93126744691332,
+            49.385550329960225
+          ],
+          [
+            -121.9325825616522,
+            49.3857648104285
+          ],
+          [
+            -121.93392364675229,
+            49.38589433099701
+          ],
+          [
+            -121.93527778000002,
+            49.385937643637256
+          ],
+          [
+            -121.93663191324774,
+            49.38589433099701
+          ],
+          [
+            -121.93797299834785,
+            49.3857648104285
+          ],
+          [
+            -121.93928811308672,
+            49.385550329960225
+          ],
+          [
+            -121.94056458589546,
+            49.38525295625193
+          ],
+          [
+            -121.94179011812594,
+            49.38487555464929
+          ],
+          [
+            -121.94295290270576,
+            49.38442176153244
+          ],
+          [
+            -121.94404173802087,
+            49.3838959492265
+          ],
+          [
+            -121.94504613592223,
+            49.38330318381499
+          ],
+          [
+            -121.94595642281219,
+            49.38264917626508
+          ],
+          [
+            -121.94676383283297,
+            49.38194022733899
+          ],
+          [
+            -121.94746059225956,
+            49.38118316682534
+          ],
+          [
+            -121.94803999428511,
+            49.3803852876791
+          ],
+          [
+            -121.94849646348138,
+            49.37955427570768
+          ],
+          [
+            -121.94882560931904,
+            49.37869813548356
+          ],
+          [
+            -121.94902426823857,
+            49.37782511319918
+          ],
+          [
+            -121.94909053387497,
+            49.37694361720961
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-092",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 92",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nHemlock Valley\n92 That portion of the Province of British Columbia in M.U. 2-19 contained within the following described boundaries: Commencing at the point of intersection of the midline of Weaver Creek Road and the midline of Hemlock Valley Recreation Area Road; thence in a general northerly direction along the midline of Hemlock Valley Recreation Area Road to the point of intersection with the midline of Sakwi Creek at 840 m elevation and including all intervening territory for 50 m on either side of the midline of said road; thence in a general northerly direction along the midline of said road to Hemlock Valley Recreation Area and including all intervening territory for 150 m on either side of the midline of said road. [en. B.C. Reg. 162/87, s. 28; am. B.C. Reg. 459/90, s. 2.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": true,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Hemlock Valley): 1 km around the named points; not the boundary From Hemlock Valley Recreation Area Road to Hemlock Valley Recreation Area Road.",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "M.U. 2-19",
+        "geometry.road": "along the midline of Hemlock Valley Recreation Area Road",
+        "geometry.from": "the point of intersection of the midline of Weaver Creek Road and the midline of Hemlock Valley Recreation Area Road",
+        "geometry.to": "to Hemlock Valley Recreation Area",
+        "effect": "No Shooting Areas",
+        "geometry.side": "on either side of the midline of said road",
+        "geometry.steps[0]": "Commencing at the point of intersection of the midline of Weaver Creek Road and the midline of Hemlock Valley Recreation Area Road",
+        "geometry.steps[1]": "thence in a general northerly direction along the midline of Hemlock Valley Recreation Area Road to the point of intersection with the midline of Sakwi Creek at 840 m elevation and including all intervening territory for 50 m on either side of the midline of said road",
+        "geometry.steps[2]": "thence in a general northerly direction along the midline of said road to Hemlock Valley Recreation Area and including all intervening territory for 150 m on either side of the midline of said road"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "caf4fa112b371e88f71adedb66a309c06a4f666c19376bf183d51164c8157fb8",
+      "task_id": "closed_area-caf4fa112b37",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Hemlock Valley): 1 km around the named points; not the boundary",
+          "quote": "Commencing at the point of intersection of the midline of Weaver Creek Road and the midline of Hemlock Valley Recreation Area Road",
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "3.137 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: a walk outline is approximate; a person checks it against the text"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T22:00:11.369Z",
-  "updated": "2026-10-27T23:12:16.699Z"
+  "updated": "2026-10-28T20:11:54.119Z"
 }

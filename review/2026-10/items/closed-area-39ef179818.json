@@ -5,10 +5,11 @@
   "title": "Closed Areas Regulation, Schedule 5, section 57 (Greenhills Operations)",
   "rule_id": "W5-057",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Greenhills): 1 km around the named points; not the boundary"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nGreenhills Operations\n57 That portion of M.U. 4-23 in the vicinity of Elkford outlined in red on the attached Map No. 5-57/18. [en. B.C. Reg. 72/2014, App. 1, s. 2; am. B.C. Reg. 239/2018, App. 1, s. 4 (c).]",
@@ -144,13 +145,388 @@
   ],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.137 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Greenhills): 1 km around the named points; not the boundary",
+      "quote": null,
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -114.84836814222356,
+            50.01710777836059
+          ],
+          [
+            -114.84830049250581,
+            50.016226298362476
+          ],
+          [
+            -114.84809871328304,
+            50.01535332343652
+          ],
+          [
+            -114.84776475487391,
+            50.014497260117864
+          ],
+          [
+            -114.84730183999909,
+            50.01366635164348
+          ],
+          [
+            -114.84671443249438,
+            50.01286859860846
+          ],
+          [
+            -114.84600819410213,
+            50.01211168197389
+          ],
+          [
+            -114.84518992976564,
+            50.011402889165566
+          ],
+          [
+            -114.84426752196033,
+            50.01074904397254
+          ],
+          [
+            -114.84324985469891,
+            50.01015644091781
+          ],
+          [
+            -114.84214672794609,
+            50.0096307847293
+          ],
+          [
+            -114.84096876326744,
+            50.009177135490994
+          ],
+          [
+            -114.83972730162077,
+            50.008799859998916
+          ],
+          [
+            -114.83843429427026,
+            50.008502589786836
+          ],
+          [
+            -114.83710218786953,
+            50.00828818622319
+          ],
+          [
+            -114.83574380481312,
+            50.00815871301229
+          ],
+          [
+            -114.83437222,
+            50.00811541636276
+          ],
+          [
+            -114.83300063518688,
+            50.00815871301229
+          ],
+          [
+            -114.83164225213046,
+            50.00828818622319
+          ],
+          [
+            -114.83031014572974,
+            50.008502589786836
+          ],
+          [
+            -114.82901713837923,
+            50.008799859998916
+          ],
+          [
+            -114.82777567673256,
+            50.009177135490994
+          ],
+          [
+            -114.82659771205391,
+            50.0096307847293
+          ],
+          [
+            -114.82549458530109,
+            50.01015644091781
+          ],
+          [
+            -114.82447691803968,
+            50.01074904397254
+          ],
+          [
+            -114.82355451023437,
+            50.011402889165566
+          ],
+          [
+            -114.82273624589789,
+            50.01211168197389
+          ],
+          [
+            -114.82203000750562,
+            50.01286859860846
+          ],
+          [
+            -114.8214426000009,
+            50.01366635164348
+          ],
+          [
+            -114.82097968512609,
+            50.014497260117864
+          ],
+          [
+            -114.82064572671696,
+            50.01535332343652
+          ],
+          [
+            -114.82044394749418,
+            50.016226298362476
+          ],
+          [
+            -114.82037629777645,
+            50.01710777836059
+          ],
+          [
+            -114.82044343642598,
+            50.017989274530564
+          ],
+          [
+            -114.82064472422059,
+            50.01886229735063
+          ],
+          [
+            -114.82097822972695,
+            50.019718438445125
+          ],
+          [
+            -114.82144074762913,
+            50.02054945158816
+          ],
+          [
+            -114.82202782934682,
+            50.021347332162286
+          ],
+          [
+            -114.82273382565747,
+            50.02210439430519
+          ],
+          [
+            -114.82355194092082,
+            50.0228133449993
+          ],
+          [
+            -114.82447429839029,
+            50.023467354388
+          ],
+          [
+            -114.82549201598749,
+            50.024060121638435
+          ],
+          [
+            -114.82659529181343,
+            50.02458593571273
+          ],
+          [
+            -114.82777349857366,
+            50.02503973045939
+          ],
+          [
+            -114.82901528600733,
+            50.025417133490606
+          ],
+          [
+            -114.83030869033047,
+            50.02571450837135
+          ],
+          [
+            -114.831641249634,
+            50.025928989710835
+          ],
+          [
+            -114.83300012411861,
+            50.02605851081585
+          ],
+          [
+            -114.83437222,
+            50.02610182363725
+          ],
+          [
+            -114.83574431588139,
+            50.02605851081585
+          ],
+          [
+            -114.837103190366,
+            50.025928989710835
+          ],
+          [
+            -114.83843574966954,
+            50.02571450837135
+          ],
+          [
+            -114.83972915399266,
+            50.025417133490606
+          ],
+          [
+            -114.84097094142635,
+            50.02503973045939
+          ],
+          [
+            -114.84214914818658,
+            50.02458593571273
+          ],
+          [
+            -114.8432524240125,
+            50.024060121638435
+          ],
+          [
+            -114.84427014160971,
+            50.023467354388
+          ],
+          [
+            -114.84519249907919,
+            50.0228133449993
+          ],
+          [
+            -114.84601061434253,
+            50.02210439430519
+          ],
+          [
+            -114.84671661065319,
+            50.021347332162286
+          ],
+          [
+            -114.84730369237089,
+            50.02054945158816
+          ],
+          [
+            -114.84776621027306,
+            50.019718438445125
+          ],
+          [
+            -114.84809971577943,
+            50.01886229735063
+          ],
+          [
+            -114.84830100357404,
+            50.017989274530564
+          ],
+          [
+            -114.84836814222356,
+            50.01710777836059
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-057",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 57",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nGreenhills Operations\n57 That portion of M.U. 4-23 in the vicinity of Elkford outlined in red on the attached Map No. 5-57/18. [en. B.C. Reg. 72/2014, App. 1, s. 2; am. B.C. Reg. 239/2018, App. 1, s. 4 (c).]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "other",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Greenhills): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "That portion of M.U. 4-23",
+        "effect": "No Shooting Areas"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "53a5b927508a1916cdf9fa5770b3da29c991b2c3713bb26ad09058745a2c59f8",
+      "task_id": "closed_area-53a5b927508a",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Greenhills): 1 km around the named points; not the boundary",
+          "quote": null,
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "3.137 km² (limit none for this type)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:08:33.140Z",
-  "updated": "2026-10-27T23:10:48.132Z"
+  "updated": "2026-10-28T19:55:49.541Z"
 }

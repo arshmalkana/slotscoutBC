@@ -12,7 +12,6 @@
     "not built: the AI runs disagree, so the area stays grey until a person decides",
     "approximate outline (corners) drawn from the places the walk names, using run 1's reading of the steps",
     "\"Jewel Lake meadow\" was not found in the official layers; that side is drawn straight",
-    "\"D.L. 1875s\" was not found in the official layers; that side is drawn straight",
     "validation failed: two independent extractions agree (steps: run 1 [\"jewel lake rd|||\",\"jewel lake rd|the point of intersection with the westerly boundary of jewel lake provincial park|25 metres|road\",\"jewel lake provincial park|a point 100 metres east of the natural boundary of jewel lake on the easterly shore thereof||other\",\"jewel lake|the point of intersection with the boundary of jewel lake meadow|100 metres|shoreline\",\"jewel lake meadow|a point of intersection with the northern boundary of d.l. 1875s||other\",\"d.l. 1875s|the point of commencement||lot_line\"] vs run 2 [\"jewel lake rd||25 metres|\",\"jewel lake rd|the point of intersection with the westerly boundary of jewel lake provincial park|25 metres|road\",\"jewel lake provincial park|a point 100 metres east of the natural boundary of jewel lake on the easterly shore thereof|100 metres|other\",\"jewel lake|the point of intersection with the boundary of jewel lake meadow|100 metres|shoreline\",\"jewel lake meadow|a point of intersection with the northern boundary of d.l. 1875s||other\",\"d.l. 1875s|the point of commencement||lot_line\"])"
   ],
   "source": {
@@ -293,7 +292,7 @@
     {
       "check": "area in expected range",
       "passed": true,
-      "detail": "0.351 km² (limit 500 km²)"
+      "detail": "1.071 km² (limit 500 km²)"
     },
     {
       "check": "inside the area the text names",
@@ -313,14 +312,14 @@
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
   "construction": [
     {
       "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
       "quote": "Commencing at a point 25 metres west of the point of intersection of the midline of Jewel Lake Road and the northwest corner of D.L. 1875s, Similkameen Division, Yale Land District",
-      "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP, WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW, WHSE_BASEMAPPING.FWA_LAKES_POLY"
+      "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP, WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW, WHSE_BASEMAPPING.FWA_LAKES_POLY, WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW"
     }
   ],
   "feature": {
@@ -330,196 +329,212 @@
       "coordinates": [
         [
           [
-            -118.61903965001636,
-            49.17202238512833
+            -118.63144724658294,
+            49.15860839999766
           ],
           [
-            -118.61903847612972,
-            49.1718454664201
+            -118.63142263513487,
+            49.15842891328745
           ],
           [
-            -118.618984348314,
-            49.171672121452175
+            -118.6313437988043,
+            49.15825623890442
           ],
           [
-            -118.61887936190806,
-            49.17150905884812
+            -118.63121390357244,
+            49.15809731007384
           ],
           [
-            -118.61872758042615,
-            49.171362589230334
+            -118.63103816524593,
+            49.15795850794425
           ],
           [
-            -118.61853487823417,
-            49.17123838100994
+            -118.63082866595214,
+            49.15784756050969
           ],
           [
-            -118.61830871317153,
-            49.171141241037525
+            -118.63059009597005,
+            49.15776547309233
           ],
           [
-            -118.61805783792347,
-            49.171074928599204
+            -118.63033162297118,
+            49.15771540007313
           ],
           [
-            -118.61779196131374,
-            49.171042009952764
+            -118.63006317932741,
+            49.157699265605174
           ],
           [
-            -118.61752137262144,
-            49.17104375902938
+            -118.62979508049149,
+            49.1577176896855
           ],
           [
-            -118.61725654345116,
-            49.171080108140956
+            -118.62953762866849,
+            49.1577699643344
           ],
           [
-            -118.6170077225531,
-            49.17114965059915
+            -118.62930071699566,
+            49.157854080796525
           ],
           [
-            -118.61678453926054,
-            49.17124969514496
+            -118.62909344942948,
+            49.157966806719585
           ],
           [
-            -118.60750446441075,
-            49.17635439239739
+            -118.62875968689063,
+            49.15818793707756
           ],
           [
-            -118.60732060002397,
-            49.17647691677956
+            -118.62864657219814,
+            49.1582729266821
           ],
           [
-            -118.60717569051909,
-            49.17662004502252
+            -118.60729810360311,
+            49.176495593624736
           ],
           [
-            -118.60707501444149,
-            49.176778563818004
+            -118.60716135890905,
+            49.1766381395118
           ],
           [
-            -118.60702223929054,
-            49.176946699219705
+            -118.60706762390076,
+            49.17679484223372
           ],
           [
-            -118.60701928787829,
-            49.17711832694254
+            -118.60702018005736,
+            49.17696021663564
           ],
           [
-            -118.60706626822267,
-            49.177287195431106
+            -118.60702068856556,
+            49.177128473967095
           ],
           [
-            -118.60716146953918,
-            49.17744715357263
+            -118.60706913210868,
+            49.17729372450494
           ],
           [
-            -118.60730142448692,
-            49.17759237476046
+            -118.60716381540553,
+            49.17745018371891
           ],
           [
-            -118.60740896969945,
-            49.17768337897289
+            -118.60730142449033,
+            49.17759237476273
           ],
           [
-            -118.607706517467,
-            49.17793515176958
+            -118.60740896970312,
+            49.17768337897533
           ],
           [
-            -118.60788788186862,
-            49.17806134798535
+            -118.60770651747056,
+            49.177935151771806
           ],
           [
-            -118.60810288145153,
-            49.17816248352094
+            -118.60788788187051,
+            49.178061347986365
           ],
           [
-            -118.60834354586017,
-            49.17823480904663
+            -118.60810288145142,
+            49.17816248352088
           ],
           [
-            -118.60860095315019,
-            49.17827564327287
+            -118.6083435458579,
+            49.17823480904569
           ],
           [
-            -118.60886556058153,
-            49.17828347236686
+            -118.60860095314571,
+            49.178275643271334
           ],
           [
-            -118.61278044440657,
-            49.17815228763606
+            -118.60886556057497,
+            49.17828347236501
           ],
           [
-            -118.613042203045,
-            49.178126850987596
+            -118.61278044439779,
+            49.17815228763533
           ],
           [
-            -118.61329166795504,
-            49.17806912129022
+            -118.6130422030361,
+            49.17812685098716
           ],
           [
-            -118.61351960781857,
-            49.177981234814624
+            -118.61329166794627,
+            49.17806912128993
           ],
           [
-            -118.61371758795947,
-            49.177866443760095
+            -118.6135196078102,
+            49.1779812348143
           ],
           [
-            -118.61387808642783,
-            49.17775357238261
+            -118.61371758795163,
+            49.177866443759584
           ],
           [
-            -118.613982736224,
-            49.177679971472195
+            -118.61387808642014,
+            49.177753572382166
           ],
           [
-            -118.61402793856179,
-            49.177646555310105
+            -118.61398273621637,
+            49.17767997147179
           ],
           [
-            -118.61596192920254,
-            49.17614323772999
+            -118.61402793855459,
+            49.177646555309444
           ],
           [
-            -118.61596913658896,
-            49.17613758835236
+            -118.61596192919674,
+            49.17614323773039
           ],
           [
-            -118.61619763536727,
-            49.17595698626106
+            -118.61596913658344,
+            49.17613758835257
           ],
           [
-            -118.61627716193053,
-            49.17588756771212
+            -118.6161976353619,
+            49.175956986261376
           ],
           [
-            -118.61846723547312,
-            49.173770146163974
+            -118.61627716192554,
+            49.175887567712216
           ],
           [
-            -118.61858975345586,
-            49.17362416571458
+            -118.61846723547035,
+            49.17377014616515
           ],
           [
-            -118.61873844881453,
-            49.17339996409424
+            -118.61848660757278,
+            49.173750888391105
           ],
           [
-            -118.61881924429404,
-            49.173237228410414
+            -118.630034544146,
+            49.16194087284454
           ],
           [
-            -118.61887873977857,
-            49.173062127720605
+            -118.63008718419675,
+            49.16188225213889
           ],
           [
-            -118.61890537549488,
-            49.17295168671594
+            -118.63036037841412,
+            49.161549849281215
           ],
           [
-            -118.61903965001636,
-            49.17202238512833
+            -118.63043255239243,
+            49.16144699123048
+          ],
+          [
+            -118.63064385445998,
+            49.161087788888565
+          ],
+          [
+            -118.63070485786614,
+            49.16095383354544
+          ],
+          [
+            -118.63141664435186,
+            49.158787492205185
+          ],
+          [
+            -118.63144724658294,
+            49.15860839999766
           ]
         ]
       ]
@@ -568,7 +583,7 @@
         {
           "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
           "quote": "Commencing at a point 25 metres west of the point of intersection of the midline of Jewel Lake Road and the northwest corner of D.L. 1875s, Similkameen Division, Yale Land District",
-          "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP, WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW, WHSE_BASEMAPPING.FWA_LAKES_POLY"
+          "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP, WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW, WHSE_BASEMAPPING.FWA_LAKES_POLY, WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW"
         }
       ],
       "validation": [
@@ -585,7 +600,7 @@
         {
           "check": "area in expected range",
           "passed": true,
-          "detail": "0.351 km² (limit 500 km²)"
+          "detail": "1.071 km² (limit 500 km²)"
         },
         {
           "check": "inside the area the text names",
@@ -605,7 +620,7 @@
         {
           "check": "step directions match the line",
           "passed": null,
-          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+          "detail": "not run: a walk outline is approximate; a person checks it against the text"
         }
       ],
       "change_type": "new"
@@ -613,5 +628,5 @@
   },
   "status": "open",
   "created": "2026-10-21T16:10:14.319Z",
-  "updated": "2026-10-28T17:23:01.003Z"
+  "updated": "2026-10-28T20:10:00.003Z"
 }

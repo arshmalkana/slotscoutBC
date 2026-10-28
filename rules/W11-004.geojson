@@ -231,7 +231,7 @@
           {
             "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
             "quote": "Commencing at the point of intersection of the Vancouver, Victoria and Eastern Railway R/W (Plan A209) and the Canada/USA international boundary",
-            "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP, WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP, WHSE_BASEMAPPING.TRIM_CONTOUR_LINES (700 m)"
+            "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP, WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP, WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW, WHSE_BASEMAPPING.TRIM_CONTOUR_LINES (700 m)"
           }
         ],
         "validation": [
@@ -268,7 +268,7 @@
           {
             "check": "step directions match the line",
             "passed": null,
-            "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+            "detail": "not run: a walk outline is approximate; a person checks it against the text"
           }
         ],
         "change_type": "new"

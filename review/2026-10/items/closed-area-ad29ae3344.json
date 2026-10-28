@@ -9,6 +9,8 @@
   "why": [
     "AI runs disagree: steps: run 1 [\"lot 9170|||\",\"lot 9170|the northeast corner of said lot 9170||straight_line\",\"lot 9170|the northwest corner of said lot 9170||straight_line\",\"lot 9497|the northeast corner of lot 9497||straight_line\",\"lot 9497|the northwest corner of said lot 9497||straight_line\",\"lot 6166|the southwest corner of lot 6166||straight_line\",\"lot 6166|the southeast corner of said lot 6166||straight_line\",\"lot 6166|the northeast corner of said lot 6166||straight_line\",\"||7.6 km (4.7 miles)|straight_line\",\"||8.7 km (5.4 miles)|straight_line\",\"||2.0 km (1.2 miles)|straight_line\",\"||3.5 km (2.2 miles)|straight_line\",\"|the point of commencement||straight_line\"] vs run 2 [\"lot 9170 cariboo district|||\",\"lot 9170|the northeast corner of said lot 9170||\",\"lot 9170|the northwest corner of said lot 9170||\",\"lot 9497|the northeast corner of lot 9497||\",\"lot 9497|the northwest corner of said lot 9497||\",\"lot 6166|the southwest corner of lot 6166||\",\"lot 6166|the southeast corner of said lot 6166||\",\"lot 6166|the northeast corner of said lot 6166||\",\"||7.6 km (4.7 miles)|\",\"||8.7 km (5.4 miles)|\",\"||2.0 km (1.2 miles)|\",\"||3.5 km (2.2 miles)|\",\"|the point of commencement||\"]",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "\"Lot 9170\" was not found in the official layers; that side is drawn straight",
+    "none of the places the section names was found in the official layers",
     "validation failed: shape built (no shape could be built)"
   ],
   "source": {
@@ -452,11 +454,11 @@
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:08:44.690Z",
-  "updated": "2026-10-21T16:08:44.690Z"
+  "updated": "2026-10-28T19:57:39.959Z"
 }

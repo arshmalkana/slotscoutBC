@@ -5,10 +5,12 @@
   "title": "Closed Areas Regulation, Schedule 5, section 91 (Waugh Lake — Skookumchuck)",
   "rule_id": "W5-091",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "\"BC Hydro right of way\" was not found in the official layers; that side is drawn straight",
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Waugh Lake, Brown Lake, Skookumchuck Narrows): 1 km around the named points; not the boundary"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nWaugh Lake — Skookumchuck\n91 That portion of the Province of British Columbia in M.U. 2-5 contained within the following described boundaries: Commencing at the most northerly point of the natural boundary of Agamemnon Channel on the southerly shore thereof adjacent to and west of Earls Cove; thence due South to the point of intersection with the southerly boundary of the BC Hydro right of way; thence in a general easterly and southerly direction along the southerly boundary of the BC Hydro right of way to its intersection with Highway 101; thence along a straight line due East to the mean low water mark of the northwest bay of Brown Lake; thence easterly along the mean low water mark of the northwest bay of Brown Lake to its most northeasterly point; thence more or less east in a straight line to the most westerly point on the mean high water mark on Boom Isles; thence northerly in a straight line along Skookumchuck Narrows to the most northerly point on the mean highwater mark of Sutton Islets; thence more or less west in a straight line to the most northerly point on the natural boundary of Agamemnon Channel on the southerly shore thereof; thence more or less west in a straight line to the most southwesterly point on the natural boundary of Agamemnon Channel on the northerly shore thereof at Nile Point; thence more or less southwesterly in a straight line to the point of commencement. [en. B.C. Reg. 205/94, s. 19.]",
@@ -352,18 +354,420 @@
   ],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "9.538 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     },
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Waugh Lake, Brown Lake, Skookumchuck Narrows): 1 km around the named points; not the boundary",
+      "quote": "Commencing at the most northerly point of the natural boundary of Agamemnon Channel on the southerly shore thereof adjacent to and west of Earls Cove",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -123.95779807160339,
+            49.74391071313985
+          ],
+          [
+            -123.95777657049801,
+            49.74302984059678
+          ],
+          [
+            -123.95762180335939,
+            49.742154553968895
+          ],
+          [
+            -123.95733526244047,
+            49.7412932522705
+          ],
+          [
+            -123.95691970408538,
+            49.740454199878
+          ],
+          [
+            -123.95637912202595,
+            49.739645447259164
+          ],
+          [
+            -123.95571870883097,
+            49.73887475377009
+          ],
+          [
+            -123.95494480588667,
+            49.73814951325924
+          ],
+          [
+            -123.95406484239577,
+            49.73747668318941
+          ],
+          [
+            -123.95308726398618,
+            49.736862717955525
+          ],
+          [
+            -123.95202145161785,
+            49.736313507034275
+          ],
+          [
+            -123.95087763156822,
+            49.735834318556265
+          ],
+          [
+            -123.9496667773592,
+            49.735429748838676
+          ],
+          [
+            -123.94840050456492,
+            49.735103678359096
+          ],
+          [
+            -123.94709095950515,
+            49.73485923459018
+          ],
+          [
+            -123.94575070288631,
+            49.734698762049014
+          ],
+          [
+            -123.91714475125478,
+            49.73219922113486
+          ],
+          [
+            -123.91581397394329,
+            49.732124585700724
+          ],
+          [
+            -123.91447825725952,
+            49.73213276393749
+          ],
+          [
+            -123.91314990571578,
+            49.73222368050776
+          ],
+          [
+            -123.91184115608944,
+            49.73239649789286
+          ],
+          [
+            -123.91056406488143,
+            49.73264962409534
+          ],
+          [
+            -123.90933039742158,
+            49.73298072728064
+          ],
+          [
+            -123.90815151963493,
+            49.73338675722439
+          ],
+          [
+            -123.90703829345856,
+            49.733863973368955
+          ],
+          [
+            -123.90600097686688,
+            49.73440797923305
+          ],
+          [
+            -123.90504912942114,
+            49.73501376285965
+          ],
+          [
+            -123.90419152421063,
+            49.73567574293205
+          ],
+          [
+            -123.89669090484642,
+            49.74206391716022
+          ],
+          [
+            -123.89591102247049,
+            49.74280138472677
+          ],
+          [
+            -123.89524817101379,
+            49.743585205307724
+          ],
+          [
+            -123.8947088935396,
+            49.744407648614654
+          ],
+          [
+            -123.89429851523586,
+            49.7452606030481
+          ],
+          [
+            -123.89402109067606,
+            49.74613565564904
+          ],
+          [
+            -123.8938793635766,
+            49.74702417503761
+          ],
+          [
+            -123.89387473945713,
+            49.74791739652341
+          ],
+          [
+            -123.89400727148436,
+            49.748806508548995
+          ],
+          [
+            -123.89427565965029,
+            49.749682739614535
+          ],
+          [
+            -123.89467726330497,
+            49.75053744482641
+          ],
+          [
+            -123.89520812693142,
+            49.75136219121512
+          ],
+          [
+            -123.89586301891917,
+            49.752148840979196
+          ],
+          [
+            -123.89663548296397,
+            49.752889631832325
+          ],
+          [
+            -123.8975179015947,
+            49.75357725365784
+          ],
+          [
+            -123.89850157120728,
+            49.75420492071161
+          ],
+          [
+            -123.89957678786992,
+            49.75476643865739
+          ],
+          [
+            -123.90073294305525,
+            49.75525626576961
+          ],
+          [
+            -123.90195862835489,
+            49.755669567696174
+          ],
+          [
+            -123.90324174814131,
+            49.756002265237136
+          ],
+          [
+            -123.9045696390602,
+            49.75625107466467
+          ],
+          [
+            -123.90592919516877,
+            49.756413540183296
+          ],
+          [
+            -123.90730699747631,
+            49.75648805820754
+          ],
+          [
+            -123.90868944659961,
+            49.7564738932157
+          ],
+          [
+            -123.91006289721341,
+            49.756371185021635
+          ],
+          [
+            -123.94618042837385,
+            49.75248158375455
+          ],
+          [
+            -123.94751275742239,
+            49.7522941265895
+          ],
+          [
+            -123.94881029200897,
+            49.75202332995866
+          ],
+          [
+            -123.95006057468117,
+            49.751671793886906
+          ],
+          [
+            -123.9512516023704,
+            49.751242893545296
+          ],
+          [
+            -123.9523719417666,
+            49.75074074679622
+          ],
+          [
+            -123.95341083918204,
+            49.750170174600605
+          ],
+          [
+            -123.95435832384433,
+            49.749536654670415
+          ],
+          [
+            -123.95520530362386,
+            49.74884626881413
+          ],
+          [
+            -123.95594365227527,
+            49.7481056444841
+          ],
+          [
+            -123.95656628735593,
+            49.74732189108991
+          ],
+          [
+            -123.9570672380765,
+            49.746502531692585
+          ],
+          [
+            -123.95744170243671,
+            49.74565543073791
+          ],
+          [
+            -123.95768609310406,
+            49.74478871852539
+          ],
+          [
+            -123.95779807160339,
+            49.74391071313985
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-091",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 91",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nWaugh Lake — Skookumchuck\n91 That portion of the Province of British Columbia in M.U. 2-5 contained within the following described boundaries: Commencing at the most northerly point of the natural boundary of Agamemnon Channel on the southerly shore thereof adjacent to and west of Earls Cove; thence due South to the point of intersection with the southerly boundary of the BC Hydro right of way; thence in a general easterly and southerly direction along the southerly boundary of the BC Hydro right of way to its intersection with Highway 101; thence along a straight line due East to the mean low water mark of the northwest bay of Brown Lake; thence easterly along the mean low water mark of the northwest bay of Brown Lake to its most northeasterly point; thence more or less east in a straight line to the most westerly point on the mean high water mark on Boom Isles; thence northerly in a straight line along Skookumchuck Narrows to the most northerly point on the mean highwater mark of Sutton Islets; thence more or less west in a straight line to the most northerly point on the natural boundary of Agamemnon Channel on the southerly shore thereof; thence more or less west in a straight line to the most southwesterly point on the natural boundary of Agamemnon Channel on the northerly shore thereof at Nile Point; thence more or less southwesterly in a straight line to the point of commencement. [en. B.C. Reg. 205/94, s. 19.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Waugh Lake, Brown Lake, Skookumchuck Narrows): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "in M.U. 2-5",
+        "effect": "No Shooting Areas",
+        "geometry.steps[0]": "Commencing at the most northerly point of the natural boundary of Agamemnon Channel on the southerly shore thereof adjacent to and west of Earls Cove",
+        "geometry.steps[1]": "thence due South to the point of intersection with the southerly boundary of the BC Hydro right of way",
+        "geometry.steps[2]": "thence in a general easterly and southerly direction along the southerly boundary of the BC Hydro right of way to its intersection with Highway 101",
+        "geometry.steps[3]": "thence along a straight line due East to the mean low water mark of the northwest bay of Brown Lake",
+        "geometry.steps[4]": "thence easterly along the mean low water mark of the northwest bay of Brown Lake to its most northeasterly point",
+        "geometry.steps[5]": "thence more or less east in a straight line to the most westerly point on the mean high water mark on Boom Isles",
+        "geometry.steps[6]": "thence northerly in a straight line along Skookumchuck Narrows to the most northerly point on the mean highwater mark of Sutton Islets",
+        "geometry.steps[7]": "thence more or less west in a straight line to the most northerly point on the natural boundary of Agamemnon Channel on the southerly shore thereof",
+        "geometry.steps[8]": "thence more or less west in a straight line to the most southwesterly point on the natural boundary of Agamemnon Channel on the northerly shore thereof at Nile Point",
+        "geometry.steps[9]": "thence more or less southwesterly in a straight line to the point of commencement"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "b5afb440abe05d1851d6a7d610b5d5b3742bf401ccc5344b89162d2d48bb3070",
+      "task_id": "closed_area-b5afb440abe0",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Waugh Lake, Brown Lake, Skookumchuck Narrows): 1 km around the named points; not the boundary",
+          "quote": "Commencing at the most northerly point of the natural boundary of Agamemnon Channel on the southerly shore thereof adjacent to and west of Earls Cove",
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "9.538 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: a walk outline is approximate; a person checks it against the text"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:47:28.008Z",
-  "updated": "2026-10-27T23:12:03.770Z"
+  "updated": "2026-10-28T20:05:06.359Z"
 }

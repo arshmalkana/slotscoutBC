@@ -5,10 +5,11 @@
   "title": "Closed Areas Regulation, Schedule 13, section 1 (Delta/Surrey Dykes)",
   "rule_id": "W12-001",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Delta): 1 km around the named points; not the boundary"
   ],
   "source": {
     "text": "Schedule 13 Non-toxic Shot Only Areas (Section 10 (1) (d))\nDelta/Surrey Dykes\n1 Those portions of M.U. 2-4 within the Corporation of Delta being any dyke and the seaward or river side of any dyke, and within that part of the Corporation of the District of Surrey South of Highway 99 being any dyke facing Mud Bay and the seaward side of any said dyke. [en. B.C. Reg. 211/93, s. 13.]",
@@ -144,13 +145,396 @@
   ],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "7.223 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Delta): 1 km around the named points; not the boundary",
+      "quote": null,
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -123.09973917558312,
+            49.088875945620664
+          ],
+          [
+            -123.09970106714178,
+            49.08799374740026
+          ],
+          [
+            -123.09953110945088,
+            49.08711824326247
+          ],
+          [
+            -123.09923094609269,
+            49.086257864215135
+          ],
+          [
+            -123.0988034741273,
+            49.08542089518008
+          ],
+          [
+            -123.09825281594945,
+            49.08461539524329
+          ],
+          [
+            -123.0975842793723,
+            49.083849120094634
+          ],
+          [
+            -123.09680430633094,
+            49.08312944740227
+          ],
+          [
+            -123.09592041070623,
+            49.0824633058378
+          ],
+          [
+            -123.0949411058733,
+            49.08185710843271
+          ],
+          [
+            -123.09387582267577,
+            49.08131669090479
+          ],
+          [
+            -123.09273481861683,
+            49.080847255545216
+          ],
+          [
+            -123.09152907914165,
+            49.08045332120299
+          ],
+          [
+            -123.09027021195845,
+            49.080138679845525
+          ],
+          [
+            -123.08897033541224,
+            49.079906360110414
+          ],
+          [
+            -123.06157629320376,
+            49.07594124130678
+          ],
+          [
+            -123.06024810740003,
+            49.075793165040665
+          ],
+          [
+            -123.05890416489125,
+            49.075731065144126
+          ],
+          [
+            -123.05755740163227,
+            49.07575553935035
+          ],
+          [
+            -123.05622078068454,
+            49.07586635208658
+          ],
+          [
+            -123.0549071676438,
+            49.07606243673774
+          ],
+          [
+            -123.05362920699827,
+            49.07634190589678
+          ],
+          [
+            -123.05239920059822,
+            49.07670206950305
+          ],
+          [
+            -123.05122898939787,
+            49.07713946069613
+          ],
+          [
+            -123.05012983960022,
+            49.07764986913783
+          ],
+          [
+            -123.04911233429472,
+            49.07822838148406
+          ],
+          [
+            -123.04818627162564,
+            49.07886942861981
+          ],
+          [
+            -123.04736057046856,
+            49.07956683920532
+          ],
+          [
+            -123.04664318452215,
+            49.0803138990213
+          ],
+          [
+            -123.04604102564282,
+            49.08110341554507
+          ],
+          [
+            -123.04555989716316,
+            49.08192778713881
+          ],
+          [
+            -123.04520443784095,
+            49.082779076186924
+          ],
+          [
+            -123.04497807698469,
+            49.08364908548057
+          ],
+          [
+            -123.04488300119549,
+            49.08452943711636
+          ],
+          [
+            -123.04492013305445,
+            49.08541165315078
+          ],
+          [
+            -123.04508912197076,
+            49.08628723723488
+          ],
+          [
+            -123.04538834728862,
+            49.087147756443684
+          ],
+          [
+            -123.04581493363368,
+            49.08798492251166
+          ],
+          [
+            -123.04636477836122,
+            49.08879067169155
+          ],
+          [
+            -123.04703259085078,
+            49.089557242465624
+          ],
+          [
+            -123.04781194327757,
+            49.090277250359144
+          ],
+          [
+            -123.0486953323784,
+            49.09094375913298
+          ],
+          [
+            -123.04967425162265,
+            49.091550347666775
+          ],
+          [
+            -123.05073927309647,
+            49.092091171885265
+          ],
+          [
+            -123.05188013831365,
+            49.09256102112835
+          ],
+          [
+            -123.05308585707739,
+            49.092955368418096
+          ],
+          [
+            -123.05434481343883,
+            49.09327041413578
+          ],
+          [
+            -123.05564487772708,
+            49.09350312268499
+          ],
+          [
+            -123.08304813736841,
+            49.09746964418394
+          ],
+          [
+            -123.08437697105887,
+            49.0976174588007
+          ],
+          [
+            -123.08572153785823,
+            49.097679262911626
+          ],
+          [
+            -123.08706888189704,
+            49.09765446098822
+          ],
+          [
+            -123.08840602050158,
+            49.09754329201601
+          ],
+          [
+            -123.08972006949416,
+            49.097346827188005
+          ],
+          [
+            -123.09099836753613,
+            49.09706695956643
+          ],
+          [
+            -123.09222859830697,
+            49.09670638581314
+          ],
+          [
+            -123.0933989093329,
+            49.09626858016598
+          ],
+          [
+            -123.09449802631258,
+            49.095757760914104
+          ],
+          [
+            -123.09551536183179,
+            49.09517884969727
+          ],
+          [
+            -123.09644111741508,
+            49.094537424024345
+          ],
+          [
+            -123.09726637792791,
+            49.09383966347122
+          ],
+          [
+            -123.09798319741877,
+            49.09309229007989
+          ],
+          [
+            -123.09858467557541,
+            49.09230250353592
+          ],
+          [
+            -123.09906502406102,
+            49.091477911751944
+          ],
+          [
+            -123.09941962209662,
+            49.090626457528785
+          ],
+          [
+            -123.09964506076004,
+            49.089756342002964
+          ],
+          [
+            -123.09973917558312,
+            49.088875945620664
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W12-001",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 13, s. 1",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 13 Non-toxic Shot Only Areas (Section 10 (1) (d))\nDelta/Surrey Dykes\n1 Those portions of M.U. 2-4 within the Corporation of Delta being any dyke and the seaward or river side of any dyke, and within that part of the Corporation of the District of Surrey South of Highway 99 being any dyke facing Mud Bay and the seaward side of any said dyke. [en. B.C. Reg. 211/93, s. 13.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "non_toxic",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "other",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Delta): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "Those portions of M.U. 2-4",
+        "effect": "Non-toxic Shot Only Areas"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "940cf05ceb0ac988606bbd2723edb4d642402fa36ed8fdd889ca56b6bd6f3db0",
+      "task_id": "closed_area-940cf05ceb0a",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Delta): 1 km around the named points; not the boundary",
+          "quote": null,
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "7.223 km² (limit none for this type)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:47:25.506Z",
-  "updated": "2026-10-27T23:11:46.062Z"
+  "updated": "2026-10-28T20:03:26.670Z"
 }

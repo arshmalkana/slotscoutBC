@@ -5,11 +5,13 @@
   "title": "Closed Areas Regulation, Schedule 9, section 29 (Nanaimo to Ladysmith)",
   "rule_id": "W9-029",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: feature: run 1 \"closed area 9 29 22\" vs run 2 null",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "approximate zone around the places the section names, using run 1's reading",
+    "a zone around the places the section names (Nanaimo): 1 km around the named points; not the boundary",
+    "validation failed: two independent extractions agree (feature: run 1 \"closed area 9 29 22\" vs run 2 null)"
   ],
   "source": {
     "text": "Schedule 9 Firearms Using Shot Only Areas (Section 10 (1) (a))\nNanaimo to Ladysmith\n29 That portion of the Province of British Columbia on Vancouver Island shown outlined in red on the attached map 'Closed Area 9-29/22', other than a portion of land that is reserve within the meaning of the Indian Act (Canada). [en. B.C. Reg. 157/2022, App. 3, s. 6.]",
@@ -140,13 +142,392 @@
   "lookups": [],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.137 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "feature: run 1 \"closed area 9 29 22\" vs run 2 null"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Nanaimo): 1 km around the named points; not the boundary",
+      "quote": "shown outlined in red on the attached map 'Closed Area 9-29/22'",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -123.92430233034452,
+            49.163888063374166
+          ],
+          [
+            -123.92436831225729,
+            49.16476955930472
+          ],
+          [
+            -123.92456611685148,
+            49.16564258141392
+          ],
+          [
+            -123.92489384590937,
+            49.16649872135338
+          ],
+          [
+            -123.92534834944165,
+            49.1673297329416
+          ],
+          [
+            -123.92592525578445,
+            49.16812761162086
+          ],
+          [
+            -123.926619013491,
+            49.16888467160167
+          ],
+          [
+            -123.92742294462302,
+            49.16959361994954
+          ],
+          [
+            -123.92832930893466,
+            49.17024762689807
+          ],
+          [
+            -123.92932937833642,
+            49.17084039170815
+          ],
+          [
+            -123.93041352092459,
+            49.171366203435745
+          ],
+          [
+            -123.93157129376812,
+            49.171819996019586
+          ],
+          [
+            -123.93279154355821,
+            49.17219739715502
+          ],
+          [
+            -123.93406251414855,
+            49.172494770479865
+          ],
+          [
+            -123.93537195994539,
+            49.1727092506632
+          ],
+          [
+            -123.93670726404889,
+            49.17283877105626
+          ],
+          [
+            -123.93805556000001,
+            49.172882083637255
+          ],
+          [
+            -123.93940385595111,
+            49.17283877105626
+          ],
+          [
+            -123.94073916005462,
+            49.1727092506632
+          ],
+          [
+            -123.94204860585145,
+            49.172494770479865
+          ],
+          [
+            -123.9433195764418,
+            49.17219739715502
+          ],
+          [
+            -123.94453982623189,
+            49.171819996019586
+          ],
+          [
+            -123.94569759907542,
+            49.171366203435745
+          ],
+          [
+            -123.94678174166359,
+            49.17084039170815
+          ],
+          [
+            -123.94778181106534,
+            49.17024762689807
+          ],
+          [
+            -123.94868817537699,
+            49.16959361994954
+          ],
+          [
+            -123.949492106509,
+            49.16888467160167
+          ],
+          [
+            -123.95018586421556,
+            49.16812761162086
+          ],
+          [
+            -123.95076277055836,
+            49.1673297329416
+          ],
+          [
+            -123.95121727409064,
+            49.16649872135338
+          ],
+          [
+            -123.95154500314852,
+            49.16564258141392
+          ],
+          [
+            -123.95174280774272,
+            49.16476955930472
+          ],
+          [
+            -123.9518087896555,
+            49.163888063374166
+          ],
+          [
+            -123.95174232046212,
+            49.163006583134845
+          ],
+          [
+            -123.95154404731329,
+            49.16213360749635
+          ],
+          [
+            -123.95121588643295,
+            49.16127754302122
+          ],
+          [
+            -123.95076100440512,
+            49.1604466329909
+          ],
+          [
+            -123.95018378743904,
+            49.15964887806027
+          ],
+          [
+            -123.94948979891853,
+            49.158891959263286
+          ],
+          [
+            -123.94868572565198,
+            49.15818316410881
+          ],
+          [
+            -123.94777931334741,
+            49.157529316476065
+          ],
+          [
+            -123.94677929193857,
+            49.15693671098178
+          ],
+          [
+            -123.94569529148488,
+            49.15641105244759
+          ],
+          [
+            -123.94453774945526,
+            49.155957401047594
+          ],
+          [
+            -123.94331781028843,
+            49.155580123660826
+          ],
+          [
+            -123.94204721819366,
+            49.15528285189388
+          ],
+          [
+            -123.94073820421929,
+            49.15506844717487
+          ],
+          [
+            -123.9394033686705,
+            49.15493897325253
+          ],
+          [
+            -123.93805556000001,
+            49.15489567636276
+          ],
+          [
+            -123.93670775132951,
+            49.15493897325253
+          ],
+          [
+            -123.93537291578072,
+            49.15506844717487
+          ],
+          [
+            -123.93406390180634,
+            49.15528285189388
+          ],
+          [
+            -123.93279330971157,
+            49.155580123660826
+          ],
+          [
+            -123.93157337054474,
+            49.155957401047594
+          ],
+          [
+            -123.93041582851512,
+            49.15641105244759
+          ],
+          [
+            -123.92933182806144,
+            49.15693671098178
+          ],
+          [
+            -123.92833180665261,
+            49.157529316476065
+          ],
+          [
+            -123.92742539434802,
+            49.15818316410881
+          ],
+          [
+            -123.92662132108147,
+            49.158891959263286
+          ],
+          [
+            -123.92592733256096,
+            49.15964887806027
+          ],
+          [
+            -123.92535011559488,
+            49.1604466329909
+          ],
+          [
+            -123.92489523356706,
+            49.16127754302122
+          ],
+          [
+            -123.92456707268671,
+            49.16213360749635
+          ],
+          [
+            -123.92436879953789,
+            49.163006583134845
+          ],
+          [
+            -123.92430233034452,
+            49.163888063374166
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W9-029",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 9, s. 29",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 9 Firearms Using Shot Only Areas (Section 10 (1) (a))\nNanaimo to Ladysmith\n29 That portion of the Province of British Columbia on Vancouver Island shown outlined in red on the attached map 'Closed Area 9-29/22', other than a portion of land that is reserve within the meaning of the Indian Act (Canada). [en. B.C. Reg. 157/2022, App. 3, s. 6.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "shot_only",
+      "period": null,
+      "exemptions": [
+        "a portion of land that is reserve within the meaning of the Indian Act (Canada)"
+      ],
+      "geometry_method": "other",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Nanaimo): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "on Vancouver Island",
+        "geometry.feature": "shown outlined in red on the attached map 'Closed Area 9-29/22'",
+        "effect": "Firearms Using Shot Only Areas",
+        "exemptions[0]": "other than a portion of land that is reserve within the meaning of the Indian Act (Canada)"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "93f68aa3b8e818b4f11d71fd3c781dce417362220309ab3925c7a64a3bb88cf3",
+      "task_id": "closed_area-93f68aa3b8e8",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Nanaimo): 1 km around the named points; not the boundary",
+          "quote": "shown outlined in red on the attached map 'Closed Area 9-29/22'",
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "3.137 km² (limit none for this type)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": null,
+          "detail": "the text names no area, or it could not be found"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "feature: run 1 \"closed area 9 29 22\" vs run 2 null"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:59:52.230Z",
-  "updated": "2026-10-20T21:59:52.230Z"
+  "updated": "2026-10-28T20:03:25.738Z"
 }

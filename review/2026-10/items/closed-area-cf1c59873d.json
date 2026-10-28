@@ -5,11 +5,14 @@
   "title": "Closed Areas Regulation, Schedule 3, section 50 (Ucluelet)",
   "rule_id": "W3-050",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 \"inside\" vs run 2 null",
     "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "\"Ucluth Peninsula\" was not found in the official layers; that side is drawn straight",
+    "\"Ucluelet Inlet\" was not found in the official layers; that side is drawn straight",
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Ucluelet, Ucluth Peninsula, Ucluelet Inlet): 1 km around the named points; not the boundary"
   ],
   "source": {
     "text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nUcluelet\n50 That portion of the Province of British Columbia in M.U. 1-8 that is contained within the following described boundaries: Commencing at the southernmost point on Amphitrite Point on the natural boundary of Ucluth Peninsula; thence more or less east in a straight line to the most southerly point on the natural boundary of Ucluelet Inlet on an unnamed peninsula directly south of Indian Reserve #5; thence in a generally northwesterly, southwesterly and southeasterly direction along the natural boundary of Ucluelet Inlet along the mean high water mark to the point of commencement. [en. B.C. Reg. 211/93, s. 6.]",
@@ -213,18 +216,414 @@
   ],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "10.050 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     },
     {
       "check": "step directions match the line",
       "passed": null,
-      "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Ucluelet, Ucluth Peninsula, Ucluelet Inlet): 1 km around the named points; not the boundary",
+      "quote": "Commencing at the southernmost point on Amphitrite Point on the natural boundary of Ucluth Peninsula",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -125.59118932386485,
+            48.94940115142515
+          ],
+          [
+            -125.59115671885785,
+            48.948504778483354
+          ],
+          [
+            -125.5909883683302,
+            48.947614992680556
+          ],
+          [
+            -125.59068595280654,
+            48.94674063810405
+          ],
+          [
+            -125.59025248495284,
+            48.94589040500212
+          ],
+          [
+            -125.5896922793688,
+            48.945072743442054
+          ],
+          [
+            -125.58901090946867,
+            48.94429577937197
+          ],
+          [
+            -125.58821515188829,
+            48.94356723391816
+          ],
+          [
+            -125.58731291897887,
+            48.94289434671765
+          ],
+          [
+            -125.58631318006364,
+            48.94228380404462
+          ],
+          [
+            -125.58522587224451,
+            48.94174167244163
+          ],
+          [
+            -125.58406180164611,
+            48.9412733385116
+          ],
+          [
+            -125.58283253607857,
+            48.94088345546529
+          ],
+          [
+            -125.58155029018234,
+            48.940575896952
+          ],
+          [
+            -125.55016628380784,
+            48.934188106561805
+          ],
+          [
+            -125.54888765212483,
+            48.933971444947424
+          ],
+          [
+            -125.54758320107028,
+            48.933836703435404
+          ],
+          [
+            -125.5462650609895,
+            48.933785134996775
+          ],
+          [
+            -125.54494548931858,
+            48.93381721916731
+          ],
+          [
+            -125.54363675678447,
+            48.933932657595584
+          ],
+          [
+            -125.54235103348248,
+            48.934130376812796
+          ],
+          [
+            -125.54110027588216,
+            48.934408538199165
+          ],
+          [
+            -125.53989611580381,
+            48.93476455505476
+          ],
+          [
+            -125.53874975239091,
+            48.93519511661716
+          ],
+          [
+            -125.5376718480756,
+            48.93569621880466
+          ],
+          [
+            -125.53667242949996,
+            48.93626320140088
+          ],
+          [
+            -125.53576079430954,
+            48.93689079133741
+          ],
+          [
+            -125.53494542468385,
+            48.93757315167498
+          ],
+          [
+            -125.53423390840666,
+            48.93830393582977
+          ],
+          [
+            -125.53363286821104,
+            48.9390763465439
+          ],
+          [
+            -125.53314790005842,
+            48.93988319905409
+          ],
+          [
+            -125.53278352093032,
+            48.940716987873344
+          ],
+          [
+            -125.53254312662288,
+            48.94156995656715
+          ],
+          [
+            -125.5324289599445,
+            48.94243416987654
+          ],
+          [
+            -125.53244208961932,
+            48.94330158751909
+          ],
+          [
+            -125.53258240010213,
+            48.94416413898182
+          ],
+          [
+            -125.53284859240776,
+            48.945013798610994
+          ],
+          [
+            -125.53323819595663,
+            48.9458426602999
+          ],
+          [
+            -125.5337475913354,
+            48.946643011079274
+          ],
+          [
+            -125.53437204376893,
+            48.94740740292422
+          ],
+          [
+            -125.53510574699995,
+            48.948128722108365
+          ],
+          [
+            -125.5498266657272,
+            48.96118568254034
+          ],
+          [
+            -125.55068331784577,
+            48.96187171239306
+          ],
+          [
+            -125.55163877098165,
+            48.962498982644604
+          ],
+          [
+            -125.5526837280452,
+            48.963061387282146
+          ],
+          [
+            -125.55380801963489,
+            48.96355345151635
+          ],
+          [
+            -125.5550007030451,
+            48.96397038514276
+          ],
+          [
+            -125.55625016885054,
+            48.964308129236514
+          ],
+          [
+            -125.55754425402573,
+            48.964563395722855
+          ],
+          [
+            -125.55887036049339,
+            48.964733699435556
+          ],
+          [
+            -125.56021557794033,
+            48.96481738234874
+          ],
+          [
+            -125.56156680969677,
+            48.96481362974445
+          ],
+          [
+            -125.56291090044452,
+            48.964722478157256
+          ],
+          [
+            -125.56423476450077,
+            48.964544815018
+          ],
+          [
+            -125.56552551341828,
+            48.964282370000184
+          ],
+          [
+            -125.56677058165027,
+            48.96393769815375
+          ],
+          [
+            -125.56795784904727,
+            48.963514154992005
+          ],
+          [
+            -125.58462613275869,
+            48.95684645850705
+          ],
+          [
+            -125.58575529716386,
+            48.95634227210092
+          ],
+          [
+            -125.58680236672826,
+            48.95576675114818
+          ],
+          [
+            -125.58775693205556,
+            48.95512561882105
+          ],
+          [
+            -125.58860950471423,
+            48.95442525052058
+          ],
+          [
+            -125.58935161154787,
+            48.953672610408454
+          ],
+          [
+            -125.5899758788363,
+            48.952875182088846
+          ],
+          [
+            -125.59047610547307,
+            48.95204089413278
+          ],
+          [
+            -125.59084732443708,
+            48.95117804118902
+          ],
+          [
+            -125.59108585195362,
+            48.9502952014685
+          ],
+          [
+            -125.59118932386485,
+            48.94940115142515
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W3-050",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 3, s. 50",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nUcluelet\n50 That portion of the Province of British Columbia in M.U. 1-8 that is contained within the following described boundaries: Commencing at the southernmost point on Amphitrite Point on the natural boundary of Ucluth Peninsula; thence more or less east in a straight line to the most southerly point on the natural boundary of Ucluelet Inlet on an unnamed peninsula directly south of Indian Reserve #5; thence in a generally northwesterly, southwesterly and southeasterly direction along the natural boundary of Ucluelet Inlet along the mean high water mark to the point of commencement. [en. B.C. Reg. 211/93, s. 6.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Ucluelet, Ucluth Peninsula, Ucluelet Inlet): 1 km around the named points; not the boundary",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "in M.U. 1-8",
+        "effect": "No Shooting or Hunting Areas",
+        "geometry.side": "contained within the following described boundaries",
+        "geometry.steps[0]": "Commencing at the southernmost point on Amphitrite Point on the natural boundary of Ucluth Peninsula",
+        "geometry.steps[1]": "thence more or less east in a straight line to the most southerly point on the natural boundary of Ucluelet Inlet on an unnamed peninsula directly south of Indian Reserve #5",
+        "geometry.steps[2]": "thence in a generally northwesterly, southwesterly and southeasterly direction along the natural boundary of Ucluelet Inlet along the mean high water mark to the point of commencement"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "9d45c703bc774163dcb7934a9a10d60f2c68ff0578c143e6c56d885b2766c8f8",
+      "task_id": "closed_area-9d45c703bc77",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Ucluelet, Ucluth Peninsula, Ucluelet Inlet): 1 km around the named points; not the boundary",
+          "quote": "Commencing at the southernmost point on Amphitrite Point on the natural boundary of Ucluth Peninsula",
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "10.050 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: a walk outline is approximate; a person checks it against the text"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:09:19.353Z",
-  "updated": "2026-10-27T23:11:47.269Z"
+  "updated": "2026-10-28T20:03:45.333Z"
 }

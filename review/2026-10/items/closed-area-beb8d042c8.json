@@ -5,11 +5,13 @@
   "title": "Closed Areas Regulation, Schedule 1, section 2 (Columbia Lake and River)",
   "rule_id": "W1-002",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: side: run 1 null vs run 2 \"inside\"",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "approximate zone around the places the section names, using run 1's reading",
+    "a zone around the places the section names (Columbia Lake): 1 km around the named points; not the boundary",
+    "validation failed: two independent extractions agree (side: run 1 null vs run 2 \"inside\")"
   ],
   "source": {
     "text": "Schedule 1 No Shooting, Hunting or Trapping Areas (Section 2)\nColumbia Lake and River\n2 That portion of the Province, in the vicinity of Columbia Lake, Kootenay Land District, that is within the following boundaries: The portion of the Columbia River and Columbia Lake, below the high water level and including all marshes, sand and gravel bars, located in M.U.s 4-25 and 4-26 bounded at the south on Columbia Lake by a straight line running between the southeast corner of Lot 450, Kootenay Land District, and the mouth of Warspite Creek, and at the north by the south side of the Highway 93/95 bridge over the Columbia River.",
@@ -167,16 +169,434 @@
   "disagreements": [
     "side: run 1 null vs run 2 \"inside\""
   ],
-  "lookups": [],
-  "validation": [
+  "lookups": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "query": "M.U.s 4-25 and 4-26",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 2,
+      "ids": [
+        "4-25",
+        "4-26"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "4-25",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 4,
+          "REGION_RESPONSIBLE_ID": "4",
+          "REGION_RESPONSIBLE_NAME": "Kootenay",
+          "GAME_MANAGEMENT_ZONE_ID": "4Ea",
+          "GAME_MANAGEMENT_ZONE_NAME": "Fernie",
+          "FEATURE_AREA_SQM": 3188411049.525,
+          "FEATURE_LENGTH_M": 441989.3062,
+          "OBJECTID": 398,
+          "SE_ANNO_CAD_DATA": null
+        },
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "4-26",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 4,
+          "REGION_RESPONSIBLE_ID": "4",
+          "REGION_RESPONSIBLE_NAME": "Kootenay",
+          "GAME_MANAGEMENT_ZONE_ID": "4Eb",
+          "GAME_MANAGEMENT_ZONE_NAME": "Cranbrook",
+          "FEATURE_AREA_SQM": 3187006767.0464,
+          "FEATURE_LENGTH_M": 324377.8352,
+          "OBJECTID": 405,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
     }
   ],
-  "construction": [],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.137 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": false,
+      "detail": "side: run 1 null vs run 2 \"inside\""
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Columbia Lake): 1 km around the named points; not the boundary",
+      "quote": "The portion of the Columbia River and Columbia Lake",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -115.86544613465257,
+            50.22638804208933
+          ],
+          [
+            -115.86537818661873,
+            50.22550656215169
+          ],
+          [
+            -115.86517552147181,
+            50.2246335874044
+          ],
+          [
+            -115.86484009814639,
+            50.223777524375684
+          ],
+          [
+            -115.86437515354844,
+            50.2229466162914
+          ],
+          [
+            -115.86378517112882,
+            50.22214886373165
+          ],
+          [
+            -115.86307583748332,
+            50.221391947639226
+          ],
+          [
+            -115.86225398740554,
+            50.220683155419096
+          ],
+          [
+            -115.86132753792889,
+            50.22002931083775
+          ],
+          [
+            -115.8603054119982,
+            50.21943670839465
+          ],
+          [
+            -115.85919745250887,
+            50.218911052794226
+          ],
+          [
+            -115.85801432754295,
+            50.21845740409789
+          ],
+          [
+            -115.8567674277132,
+            50.218080129080825
+          ],
+          [
+            -115.85546875660087,
+            50.21778285925857
+          ],
+          [
+            -115.85413081533696,
+            50.21756845598458
+          ],
+          [
+            -115.85276648243153,
+            50.21743898295205
+          ],
+          [
+            -115.85138889,
+            50.21739568636275
+          ],
+          [
+            -115.85001129756846,
+            50.21743898295205
+          ],
+          [
+            -115.84864696466303,
+            50.21756845598458
+          ],
+          [
+            -115.84730902339913,
+            50.21778285925857
+          ],
+          [
+            -115.84601035228681,
+            50.218080129080825
+          ],
+          [
+            -115.84476345245706,
+            50.21845740409789
+          ],
+          [
+            -115.84358032749114,
+            50.218911052794226
+          ],
+          [
+            -115.84247236800181,
+            50.21943670839465
+          ],
+          [
+            -115.8414502420711,
+            50.22002931083775
+          ],
+          [
+            -115.84052379259445,
+            50.220683155419096
+          ],
+          [
+            -115.83970194251668,
+            50.221391947639226
+          ],
+          [
+            -115.83899260887117,
+            50.22214886373165
+          ],
+          [
+            -115.83840262645155,
+            50.2229466162914
+          ],
+          [
+            -115.8379376818536,
+            50.223777524375684
+          ],
+          [
+            -115.83760225852818,
+            50.2246335874044
+          ],
+          [
+            -115.83739959338126,
+            50.22550656215169
+          ],
+          [
+            -115.83733164534742,
+            50.22638804208933
+          ],
+          [
+            -115.83739907624906,
+            50.227269538319334
+          ],
+          [
+            -115.83760124413686,
+            50.22814256131762
+          ],
+          [
+            -115.83793620918567,
+            50.22899870270169
+          ],
+          [
+            -115.83840075210078,
+            50.22982971623453
+          ],
+          [
+            -115.83899040486781,
+            50.23062759728374
+          ],
+          [
+            -115.83969949355934,
+            50.23138465996872
+          ],
+          [
+            -115.8405211927952,
+            50.23209361125104
+          ],
+          [
+            -115.84144759133872,
+            50.232747621251555
+          ],
+          [
+            -115.84246976820249,
+            50.23334038911381
+          ],
+          [
+            -115.84357787853372,
+            50.233866203776444
+          ],
+          [
+            -115.84476124845358,
+            50.23431999906535
+          ],
+          [
+            -115.84600847793591,
+            50.23469740257188
+          ],
+          [
+            -115.84730755073106,
+            50.2349947778427
+          ],
+          [
+            -115.84864595027163,
+            50.23520925947205
+          ],
+          [
+            -115.8500107804362,
+            50.23533878075557
+          ],
+          [
+            -115.85138889,
+            50.23538209363725
+          ],
+          [
+            -115.8527669995638,
+            50.23533878075557
+          ],
+          [
+            -115.85413182972836,
+            50.23520925947205
+          ],
+          [
+            -115.85547022926893,
+            50.2349947778427
+          ],
+          [
+            -115.8567693020641,
+            50.23469740257188
+          ],
+          [
+            -115.85801653154643,
+            50.23431999906535
+          ],
+          [
+            -115.85919990146627,
+            50.233866203776444
+          ],
+          [
+            -115.86030801179751,
+            50.23334038911381
+          ],
+          [
+            -115.86133018866128,
+            50.232747621251555
+          ],
+          [
+            -115.8622565872048,
+            50.23209361125104
+          ],
+          [
+            -115.86307828644065,
+            50.23138465996872
+          ],
+          [
+            -115.86378737513218,
+            50.23062759728374
+          ],
+          [
+            -115.86437702789921,
+            50.22982971623453
+          ],
+          [
+            -115.86484157081433,
+            50.22899870270169
+          ],
+          [
+            -115.86517653586314,
+            50.22814256131762
+          ],
+          [
+            -115.86537870375093,
+            50.227269538319334
+          ],
+          [
+            -115.86544613465257,
+            50.22638804208933
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W1-002",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 1, s. 2",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 1 No Shooting, Hunting or Trapping Areas (Section 2)\nColumbia Lake and River\n2 That portion of the Province, in the vicinity of Columbia Lake, Kootenay Land District, that is within the following boundaries: The portion of the Columbia River and Columbia Lake, below the high water level and including all marshes, sand and gravel bars, located in M.U.s 4-25 and 4-26 bounded at the south on Columbia Lake by a straight line running between the southeast corner of Lot 450, Kootenay Land District, and the mouth of Warspite Creek, and at the north by the south side of the Highway 93/95 bridge over the Columbia River.",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "other",
+      "buffer_m": null,
+      "partial_extent": true,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate zone: a zone around the places the section names (Columbia Lake): 1 km around the named points; not the boundary From a straight line running between the southeast corner of Lot 450, Kootenay Land District, and the mouth of Warspite Creek to Highway 93/95.",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "located in M.U.s 4-25 and 4-26",
+        "geometry.feature": "The portion of the Columbia River and Columbia Lake",
+        "geometry.from": "bounded at the south on Columbia Lake by a straight line running between the southeast corner of Lot 450, Kootenay Land District, and the mouth of Warspite Creek",
+        "geometry.to": "at the north by the south side of the Highway 93/95 bridge over the Columbia River",
+        "effect": "No Shooting, Hunting or Trapping Areas"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "bb03a902f9e7696e14cd980908d3d9169a2ce61c5f3f9f42b4aacebe42d653e2",
+      "task_id": "closed_area-bb03a902f9e7",
+      "construction": [
+        {
+          "what": "approximate zone: a zone around the places the section names (Columbia Lake): 1 km around the named points; not the boundary",
+          "quote": "The portion of the Columbia River and Columbia Lake",
+          "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "3.137 km² (limit none for this type)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "side: run 1 null vs run 2 \"inside\""
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:47:33.017Z",
-  "updated": "2026-10-27T23:12:04.541Z"
+  "updated": "2026-10-28T20:07:40.433Z"
 }
