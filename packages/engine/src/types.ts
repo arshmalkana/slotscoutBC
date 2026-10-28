@@ -176,7 +176,9 @@ export interface DigitisedRuleProps {
     | "road_buffer"
     | "metes_and_bounds"
     | "georeferenced_map"
-    | "contour";
+    | "contour"
+    /** An approximate zone around the places the text names, when no outline could be drawn. */
+    | "named_places";
   buffer_m: number | null;
   partial_extent: boolean;
   conservative: boolean;

@@ -11,7 +11,7 @@ import { listFiles, log, readJson, rel } from "../lib/util.js";
  * 5.2, 5.5, Appendix A and B; Addendum A 9). Fails on errors; warnings are listed for the report.
  */
 const EFFECTS: DigitisedRuleProps["effect"][] = ["no_shooting", "no_shooting_seasonal", "shot_only", "shot_only_seasonal", "no_rifle", "non_toxic", "no_shooting_hunting_exempt", "no_hunting"];
-const METHODS: DigitisedRuleProps["geometry_method"][] = ["admin_boundary", "road_buffer", "metes_and_bounds", "georeferenced_map", "contour"];
+const METHODS: DigitisedRuleProps["geometry_method"][] = ["admin_boundary", "road_buffer", "metes_and_bounds", "georeferenced_map", "contour", "named_places"];
 const REQUIRED: (keyof DigitisedRuleProps)[] = ["rule_id", "authority", "source_url", "source_text", "source_version", "effect", "period", "exemptions", "geometry_method", "buffer_m", "partial_extent", "conservative", "digitised_by", "digitised_on", "reviewed_by", "reviewed_on", "confidence", "notes"];
 const STATUSES = ["not_started", "in_progress", "digitised", "reviewed", "not_applicable"];
 const FEATURE_STATUS = ["candidate", "provisional", "approved", "retired"];
@@ -46,7 +46,8 @@ export function validate(_opts: { month?: string } = {}) {
       if (p.extraction_method === "ai" && (!p.model_version || !p.prompt_version)) errors.push(`${where}: AI extraction must record model_version and prompt_version`);
       if (p.extraction_method === "ai" && (!p.quotes || !Object.keys(p.quotes).length)) errors.push(`${where}: AI extraction must carry its quotes`);
       for (const [field, q] of Object.entries(p.quotes ?? {})) if (!String(p.source_text ?? "").replace(/\s+/g, " ").includes(String(q).replace(/\s+/g, " "))) errors.push(`${where}: quote for ${field} is not in source_text`);
-      if (p.effect?.endsWith("_seasonal")) {
+      // A retired version is history and never reaches the map; every version that can still needs its period.
+      if (p.effect?.endsWith("_seasonal") && p.status !== "retired") {
         if (!p.period) errors.push(`${where}: seasonal effect needs a period`);
         else
           for (const e of [p.period.start, p.period.end]) {

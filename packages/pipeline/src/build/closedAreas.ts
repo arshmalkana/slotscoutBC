@@ -116,7 +116,7 @@ export async function buildClosedArea(t: Task, month: string): Promise<{ state: 
   const lookups: Lookup[] = [];
   let built: Built = { geometry: null, construction: [], problems: [] };
   let area: Feature<Polygon | MultiPolygon> | null = null;
-  let approximate: { quality: string; notes: string[]; toleranceM?: number } | null = null;
+  let approximate: { quality: string; notes: string[]; toleranceM?: number; method?: DigitisedRuleProps["geometry_method"] } | null = null;
   if (a && agreed) {
     if (a.within) {
       const l = await lookupArea(a.within.type, a.within.name);
@@ -250,7 +250,7 @@ export async function buildClosedArea(t: Task, month: string): Promise<{ state: 
     if (shape) {
       const how = maps.map((m) => `${m.file} (${m.style === "highlight" ? `yellow-highlighted roads, ${m.bufferM} m` : "red outline"})`).join("; ");
       built = { geometry: shape.geometry, construction: [{ what: `outline read by code from the official map image: ${how}${area ? `; clipped to ${a?.within?.name}` : ""}`, quote: null, source: maps.map((m) => m.url).join(" ") }], problems: [] };
-      approximate = { quality: "map_image", notes: [], toleranceM: Math.max(...maps.map((m) => m.toleranceM ?? 50)) };
+      approximate = { quality: "map_image", notes: [], toleranceM: Math.max(...maps.map((m) => m.toleranceM ?? 50)), method: "georeferenced_map" };
       why.push(`outline read from the official map (${maps.map((m) => m.file).join(", ")}); firm more than ${approximate.toleranceM} m inside, "possibly inside" nearer the edge`);
     }
   }
@@ -272,7 +272,7 @@ export async function buildClosedArea(t: Task, month: string): Promise<{ state: 
         ],
         problems: [],
       };
-      approximate = { quality: w.quality!, notes: w.notes };
+      approximate = { quality: w.quality!, notes: w.notes, method: "metes_and_bounds" };
       why.push(`approximate outline (${w.quality}) drawn from the places the walk names${agreed ? "" : ", using run 1's reading of the steps"}`, ...w.notes);
     } else why.push(...w.notes);
   }
@@ -290,7 +290,7 @@ export async function buildClosedArea(t: Task, month: string): Promise<{ state: 
     const z = await placesZone({ heading: headingPlaces(t.title.match(/\(([^)]+)\)\s*$/)?.[1] ?? ""), names: [...typed.map((f) => f.name), ...names], areas: typed, bufferM: g.buffer_m ?? null }, area);
     if (z.geometry) {
       built = { geometry: z.geometry, construction: [{ what: `approximate zone: ${z.notes[0]}`, quote: c1.quotes["geometry.feature"] ?? steps.find((s) => s.quote)?.quote ?? null, source: z.layers.join(", ") }], problems: [] };
-      approximate = { quality: "vicinity", notes: z.notes };
+      approximate = { quality: "vicinity", notes: z.notes, method: "named_places" };
       why.push(`approximate zone around the places the section names${agreed ? "" : ", using run 1's reading"}`, ...z.notes);
     } else why.push(...z.notes);
   }
@@ -299,6 +299,10 @@ export async function buildClosedArea(t: Task, month: string): Promise<{ state: 
   if (a?.geometry?.method === "metes_and_bounds") validation.push({ check: "step directions match the line", passed: null, detail: "not run: a walk outline is approximate; a person checks it against the text" });
   for (const v of validation.filter((x) => x.passed === false)) why.push(`validation failed: ${v.check} (${v.detail})`);
 
+  // A seasonal closure whose period is not one range ("March 11 to August 31, and on Mondays … September 1 to March 10")
+  // is shown in force all year: stricter than the text, until a person enters the period.
+  const seasonalAllYear = !!a && String(scheduleEffect ?? a.effect).endsWith("_seasonal") && !a.period;
+  if (seasonalAllYear) why.push("the period was not read as one date range, so the shape is shown in force all year (stricter than the text) until a person enters it");
   const file = ruleId ? readJsonIf<RuleFile>(rulePath(ruleId), { type: "FeatureCollection", name: ruleId, features: [] }) : null;
   const approved = file?.features.find((f) => f.properties.status === "approved" || (!f.properties.status && f.properties.reviewed_by));
   let feature: RuleFile["features"][number] | null = null;
@@ -311,9 +315,10 @@ export async function buildClosedArea(t: Task, month: string): Promise<{ state: 
       source_text: t.source_text,
       source_version: t.source.version,
       effect: (scheduleEffect ?? a.effect) as DigitisedRuleProps["effect"],
-      period: a.period ? { start: normaliseEndpoint(a.period.start), end: normaliseEndpoint(a.period.end) } : null,
+      period: a.period ? { start: normaliseEndpoint(a.period.start), end: normaliseEndpoint(a.period.end) } : seasonalAllYear ? { start: "01-01", end: "12-31" } : null,
       exemptions: a.exemptions ?? [],
-      geometry_method: a.geometry.method === "waterbody_buffer" ? "road_buffer" : a.geometry.method,
+      // How code drew the shape (a map reading, a walk, a zone), else the method the text describes.
+      geometry_method: approximate?.method ?? (a.geometry.method === "waterbody_buffer" ? "road_buffer" : a.geometry.method),
       buffer_m: a.geometry.buffer_m ?? null,
       partial_extent: !!(a.geometry.from || a.geometry.to),
       conservative: true,
