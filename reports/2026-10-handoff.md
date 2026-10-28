@@ -93,7 +93,7 @@ Open `review/2026-10/index.html`. Approve or reject each with `make approve ITEM
 - **Map-only readings:** a road or km point seen on a map image but not in the text or OCR text is shown to the person but never counted.
 - **W5-049 (Sch. 5 s. 49, "Huntingdon and Sumas Mountain"):** the text says "Electoral Area H of the Fraser Valley Regional District" (as amended in 1996). Code now draws the named Area H, never the whole regional district; the whole-FVRD shape is retired. Electoral area letters have been reassigned since 1996, so a person should still confirm today's Area H is the area s. 49 means.
 
-## 6a. The gemini branch (audited 2026-10-22, then deleted; tip was `c7280f8`)
+## 6a. The gemini branch (audited 2026-10-22; kept on GitHub at Arsh's choice, tip `c7280f8`)
 
 A separate run of the October pipeline on Windows (5 commits on top of `0260b7b`). Adopted: the official place-name aliases (`data/aliases.json`), Windows path separators in two file filters, and starting the regression script through a shell on Windows. Not adopted, because each one marks something reviewed that no record shows a person checked, and each would turn grey spots green:
 
@@ -118,7 +118,8 @@ A separate run of the October pipeline on Windows (5 commits on top of `0260b7b`
 - [ ] Save the five remaining BC Laws copies listed in `inbox/README.md` (ids corrected; 18/2024 replaced 196/99)
 - [ ] Confirm today's Electoral Area H is the area W5-049 (s. 49) means
 - [ ] Look at the 3 held closed areas (W3-023, W9-009, W3-015) and the 43 not drawn (listed in the review packet)
-- [ ] Enter W4-003's period by hand (it is shown in force all year until then)
+- [ ] W4-003 (Pitt WMA): its period has weekday rules the rule format cannot hold yet; it is shown in force all year (stricter) and, being an approximate outline, as "possibly inside" (grey)
+- [ ] Save the Squamish-Lillooet Electoral Area A firearms bylaw PDF (https://slrd.civicweb.net/Documents/DocumentDisplay.aspx?ID=154243; its host's robots.txt blocks automated access) into `inbox/bylaws/ea:SLRD Electoral Area A/`; the October extraction only had the landing page, so `target_shooting` is unknown and Area A stays grey
 - [ ] Identify the jurisdiction that differs between the Province's count and the boundary layers
 - [ ] Add Region 2 bylaw document URLs or copies for the jurisdictions still not found
 - [ ] Hand-digitise Region 2 closed areas for the gold set; put people's answers in `gold/answers/`
