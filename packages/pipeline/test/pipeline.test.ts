@@ -9,7 +9,8 @@ import { parseClosedArea } from "../src/lib/ruleparse.js";
 import { ruleIdFor, splitBylaw, splitRegulation } from "../src/lib/units.js";
 import { normaliseUnit, quoteFound } from "../src/lib/util.js";
 import { classifyAgainst, partsInside } from "../src/build/closedAreas.js";
-import { landDistrictName, muIds } from "../src/lib/gazetteer.js";
+import { landDistrictKey, landDistrictName, muIds, parseLots, splitWaterbodies } from "../src/lib/gazetteer.js";
+import { headingPlaces, placeForms } from "../src/lib/walk.js";
 import { legendSymbols, mapIdFromFile, nameWords } from "../src/lib/mapimage.js";
 import { parseRoadList } from "../src/lib/roadlist.js";
 
@@ -192,6 +193,29 @@ describe("reading names and road lists from the official text", () => {
     expect(legendSymbols("No Shooting or Hunting Area")).toEqual([{ colour: "red", bufferM: null }]);
     expect([...nameWords("Chilko — Newton")]).toEqual(["chilko", "newton"]);
     expect(nameWords("no_hunting_area_-_400m_chilko-newton_road_mu_5-4_and_5-5.pdf").has("lord")).toBe(false);
+  });
+
+  it("reads district lots and the land district they are in, and notices when only part of a lot is meant", () => {
+    expect(parseLots("District Lots 7, 7A and 11 of the Queen Charlotte Land District")).toEqual({ lots: ["7", "7A", "11"], district: "QUEEN CHARLOTTE", partial: false });
+    expect(parseLots("Lot 495, New Westminster District")).toEqual({ lots: ["495"], district: "NEW WESTMINSTER", partial: false });
+    expect(parseLots("L. 3569s")?.lots).toEqual(["3569S"]);
+    expect(parseLots("Lot A, District Lot 1884, Kootenay District, Plan 13962")).toEqual({ lots: ["1884"], district: "KOOTENAY", partial: true });
+    expect(parseLots("Lot 30 of Lots 334, 1494 and 333, Similkameen Division of Yale District, Plan 8423")).toEqual({ lots: ["334", "1494", "333"], district: "SDYD", partial: true });
+    expect(parseLots("Bowen Island")).toBeNull();
+    expect(landDistrictKey("Range 5, Coast District")).toBe("RANGE 5 COAST");
+    expect(landDistrictKey("KDYD")).toBe("KDYD");
+    expect(landDistrictKey("M.U. 4-22")).toBeNull();
+  });
+
+  it("splits named waterbodies and reads the places a heading names", () => {
+    expect(splitWaterbodies("McQueen, Griffin and Isobel Lakes")).toEqual(["McQueen Lake", "Griffin Lake", "Isobel Lake"]);
+    expect(splitWaterbodies("Columbia River and Columbia Lake")).toEqual(["Columbia River", "Columbia Lake"]);
+    expect(splitWaterbodies("Babine River")).toEqual(["Babine River"]);
+    expect(headingPlaces("Lafarge to Pritchard")).toEqual(["Lafarge", "Pritchard"]);
+    expect(headingPlaces("Mt. Bergeron — Tumbler Ridge")).toEqual(["Mount Bergeron", "Tumbler Ridge"]);
+    expect(headingPlaces("The Province")).toEqual([]);
+    expect(placeForms("Line Creek Operations")).toEqual(["Line Creek Operations", "Line Creek"]);
+    expect(placeForms("the Blubber Bay Ferry Terminal")).toEqual(["Blubber Bay Ferry Terminal", "Blubber Bay"]);
   });
 
   it("gives up on a list it cannot read rather than drawing part of it", () => {

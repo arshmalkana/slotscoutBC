@@ -209,7 +209,7 @@ export interface DigitisedRuleProps {
    * or a zone around the named place). A spot inside reads "possibly inside", never a firm answer.
    */
   approximate?: boolean;
-  approximate_quality?: "traced" | "corners" | "vicinity" | "map_image";
+  approximate_quality?: "traced" | "corners" | "vicinity" | "map_image" | "whole_feature";
   /** For an outline read from an official map image: how far it can be off. Deeper inside than this is a firm answer. */
   approximate_tolerance_m?: number;
 }

@@ -5,9 +5,9 @@ import { normaliseEndpoint, type DigitisedRuleProps } from "@slotscout/engine";
 import { blockingDisagreements, checkQuotes, disagreements, schemaErrors } from "../lib/answers.js";
 import { config, today } from "../lib/config.js";
 import { EFFECT_BY_RULE } from "../lib/effects.js";
-import { areaShape, lookupArea, lookupRoad, type Lookup } from "../lib/gazetteer.js";
+import { areaShape, landDistrictKey, lookupArea, lookupLots, lookupRoad, lookupWater, parseLots, splitWaterbodies, type Lookup } from "../lib/gazetteer.js";
 import { isForestRoad, parseRoadList } from "../lib/roadlist.js";
-import { vicinityPoint, walkOutline, type WalkStep } from "../lib/walk.js";
+import { headingPlaces, landmarkName, placesZone, vicinityPoint, walkOutline, type WalkStep } from "../lib/walk.js";
 import { buildAdminBoundary, buildRoadBuffer, validateShape, type Built } from "../lib/geometry.js";
 import { nameWords } from "../lib/mapimage.js";
 import { P, monthDir } from "../lib/paths.js";
@@ -39,11 +39,6 @@ export function sectionMaps(t: Task, month: string): ClosedAreaMap[] {
   const words = nameWords(t.title.match(/\(([^)]+)\)\s*$/)?.[1] ?? "");
   if (!words.size) return [];
   return index.filter((m) => !m.mapId && [...words].every((w) => nameWords(`${m.file} ${m.title}`).has(w)));
-}
-
-/** Sections drawn only on a map attached to the regulation ("outlined in red on the attached map"). */
-export function citesMap(text: string): boolean {
-  return /attached map|Map No\.\s*\d/i.test(text);
 }
 
 /** The parts of a named feature lying mostly (at least half their area) inside the area the text places it in. */
@@ -121,6 +116,7 @@ export async function buildClosedArea(t: Task, month: string): Promise<{ state: 
   const lookups: Lookup[] = [];
   let built: Built = { geometry: null, construction: [], problems: [] };
   let area: Feature<Polygon | MultiPolygon> | null = null;
+  let approximate: { quality: string; notes: string[]; toleranceM?: number } | null = null;
   if (a && agreed) {
     if (a.within) {
       const l = await lookupArea(a.within.type, a.within.name);
@@ -186,21 +182,51 @@ export async function buildClosedArea(t: Task, month: string): Promise<{ state: 
       // that instead closes far more ground than the section does (W5-049 drew all of the FVRD).
       const own = g.feature && g.feature.name.trim().toLowerCase() !== String(a.within?.name ?? "").trim().toLowerCase() ? g.feature : null;
       if (own) {
-        const l = await lookupArea(own.type, own.name);
+        // District lots come from the Crown survey parcels; the land district is in the lot text or the area named.
+        const lots = own.type === "lot" ? parseLots(own.name) : null;
+        if (lots && !lots.district) lots.district = landDistrictKey(String(a.within?.name ?? ""));
+        const l = lots ? await lookupLots(lots, area ? turf.bbox(area) : null) : await lookupArea(own.type, own.name);
         lookups.push(l);
-        const parts = partsInside(l.features, area);
+        const parts = l.status === "ok" || l.status === "ambiguous" || !lots ? partsInside(l.features, area) : [];
+        if (lots && l.note) why.push(`${l.query}: ${l.note}`);
         if (!parts.length) {
           const found = l.status === "ok" || l.status === "ambiguous" ? `none inside ${a.within?.name ?? "the area named"}` : l.status;
           why.push(`named ${own.type.replace("_", " ")} "${own.name}": ${found}${l.note ? ` (${l.note})` : ""}; the larger area is not drawn in its place`);
-        } else if (!area && parts.length > 1) {
+        } else if (lots && l.status !== "ok") {
+          why.push(`${l.query}: ${l.status}; drawn by a person`);
+        } else if (!lots && !area && parts.length > 1) {
           why.push(`named ${own.type.replace("_", " ")} "${own.name}": ${parts.length} official features have this name and no surrounding area was found to choose between them`);
         } else {
           const shape = areaShape({ ...l, features: parts as unknown as Lookup["features"] });
           if (shape) built = buildAdminBoundary(shape, c1.quotes["geometry.feature"], l.layer);
+          if (shape && l.partial) approximate = { quality: "whole_feature", notes: [] };
           if (own.type === "electoral_area")
             why.push(`electoral area letters are reassigned over time: check that today's ${own.name} is the area this section means (its heading: ${t.title.match(/\(([^)]+)\)\s*$/)?.[1] ?? "none"})`);
         }
       } else if (area) built = buildAdminBoundary(area, c1.quotes.within, lookups[0]!.layer);
+    } else if (g.method === "waterbody_buffer" && g.feature?.name && g.buffer_m) {
+      // Each lake, river or creek named, from the Freshwater Atlas, buffered by the distance the text gives.
+      const parts: Feature<Polygon | MultiPolygon>[] = [];
+      for (const name of splitWaterbodies(g.feature.name)) {
+        const l = await lookupWater(name, area ? turf.bbox(area) : null);
+        lookups.push(l);
+        if (l.status !== "ok") {
+          built.problems.push(`waterbody "${name}": ${l.status} in the Freshwater Atlas`);
+          continue;
+        }
+        const fs = area ? l.features.filter((f) => turf.booleanIntersects(f as Feature, area!)) : l.features;
+        const buffered = fs.map((f) => turf.buffer(f as Feature, g.buffer_m, { units: "meters", steps: 8 }) as Feature<Polygon | MultiPolygon>);
+        if (buffered.length) parts.push(buffered.length > 1 ? turf.union(turf.featureCollection(buffered))! : buffered[0]!);
+      }
+      if (!built.problems.length && parts.length) {
+        let shape: Feature<Polygon | MultiPolygon> | null = parts.length > 1 ? turf.union(turf.featureCollection(parts)) : parts[0]!;
+        if (shape && area) shape = turf.intersect(turf.featureCollection([shape, area]));
+        if (shape) {
+          built = { geometry: shape.geometry, construction: [{ what: `${g.buffer_m} m around ${g.feature.name}${area ? `, clipped to ${a.within?.name}` : ""}`, quote: c1.quotes["geometry.feature"] ?? null, source: [...new Set(lookups.map((l) => l.layer))].join(", ") }], problems: [] };
+          // A stretch ("from … to …") is drawn along the whole waterbody in the area: more than the law, so approximate.
+          if (g.from || g.to) approximate = { quality: "whole_feature", notes: [] };
+        }
+      }
     } else {
       built.problems.push(`the geometry builder does not draw "${g.method}" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled`);
     }
@@ -208,7 +234,7 @@ export async function buildClosedArea(t: Task, month: string): Promise<{ state: 
   } else if (!a) why.push("no usable answer to build from");
   else why.push("not built: the AI runs disagree, so the area stays grey until a person decides");
 
-  let approximate: { quality: string; notes: string[]; toleranceM?: number } | null = null;
+  if (approximate?.quality === "whole_feature") why.push("drawn whole: the text names only part of it, so the outline is approximate (\"possibly inside\")");
   // A section drawn on a map the Province publishes: the outline code read from that map, when no
   // text-drawn shape passed its checks (W8-053's road buffer came out at 58 km2; its map shows 4).
   const maps = sectionMaps(t, month);
@@ -232,7 +258,7 @@ export async function buildClosedArea(t: Task, month: string): Promise<{ state: 
   // A walk ("commencing at …; thence along …") with no exact shape gets an approximate outline, by Arsh's
   // instruction (2026-10-28). It is marked approximate: the engine shows "possibly inside", never a boundary.
   const steps = (a?.geometry?.steps ?? []) as WalkStep[];
-  if (!built.geometry && a && steps.filter((s) => s.feature || s.until).length >= 2 && !citesMap(t.source_text)) {
+  if (!built.geometry && a && steps.filter((s) => s.feature || s.until).length >= 2) {
     if (!area && a.within) {
       const l = await lookupArea(a.within.type, a.within.name);
       if (l.status === "ok") (lookups.push(l), (area = areaShape(l)));
@@ -248,11 +274,29 @@ export async function buildClosedArea(t: Task, month: string): Promise<{ state: 
       };
       approximate = { quality: w.quality!, notes: w.notes };
       why.push(`approximate outline (${w.quality}) drawn from the places the walk names${agreed ? "" : ", using run 1's reading of the steps"}`, ...w.notes);
+    } else why.push(...w.notes);
+  }
+
+  // Still nothing: a zone around the places the section names, found in the official layers (Arsh's
+  // instruction, 2026-10-28: mark every closed area at least approximately). Shown only as "possibly inside".
+  if (!built.geometry && a) {
+    if (!area && a.within) {
+      const l = await lookupArea(a.within.type, a.within.name);
+      if (l.status === "ok") (lookups.push(l), (area = areaShape(l)));
     }
+    const g = a.geometry ?? {};
+    const names = [g.road?.name, g.from?.road ?? g.from?.name, g.to?.road ?? g.to?.name, ...steps.flatMap((s) => [s.feature, landmarkName(s.until ?? ""), s.start ? landmarkName(s.start) : null])].filter((n): n is string => !!n && !/^(unnamed|private)/i.test(n));
+    const typed = g.feature?.name ? [{ type: String(g.feature.type ?? "other"), name: String(g.feature.name) }] : [];
+    const z = await placesZone({ heading: headingPlaces(t.title.match(/\(([^)]+)\)\s*$/)?.[1] ?? ""), names: [...typed.map((f) => f.name), ...names], areas: typed, bufferM: g.buffer_m ?? null }, area);
+    if (z.geometry) {
+      built = { geometry: z.geometry, construction: [{ what: `approximate zone: ${z.notes[0]}`, quote: c1.quotes["geometry.feature"] ?? steps.find((s) => s.quote)?.quote ?? null, source: z.layers.join(", ") }], problems: [] };
+      approximate = { quality: "vicinity", notes: z.notes };
+      why.push(`approximate zone around the places the section names${agreed ? "" : ", using run 1's reading"}`, ...z.notes);
+    } else why.push(...z.notes);
   }
 
   const validation = validateShape({ geometry: built.geometry, method: a?.geometry?.method ?? "other", within: area, synopsis: null, runAgreement: c1.answer && c2.answer ? agreed : null, disagreements: dis });
-  if (a?.geometry?.method === "metes_and_bounds") validation.push({ check: "step directions match the line", passed: null, detail: "not run: metes-and-bounds walks are drawn by a person in this version" });
+  if (a?.geometry?.method === "metes_and_bounds") validation.push({ check: "step directions match the line", passed: null, detail: "not run: a walk outline is approximate; a person checks it against the text" });
   for (const v of validation.filter((x) => x.passed === false)) why.push(`validation failed: ${v.check} (${v.detail})`);
 
   const file = ruleId ? readJsonIf<RuleFile>(rulePath(ruleId), { type: "FeatureCollection", name: ruleId, features: [] }) : null;

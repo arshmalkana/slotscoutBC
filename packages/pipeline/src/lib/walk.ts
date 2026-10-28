@@ -1,6 +1,6 @@
 import * as turf from "@turf/turf";
 import type { Feature, LineString, MultiPolygon, Polygon, Position } from "geojson";
-import { components, lookupRoad, wfsQuery, type AnyFeature } from "./gazetteer.js";
+import { components, lookupArea, lookupLots, lookupRoad, parseLots, wfsQuery, type AnyFeature } from "./gazetteer.js";
 import { isForestRoad } from "./roadlist.js";
 
 /**
@@ -86,8 +86,15 @@ const boxShape = (b: number[] | null) => (b ? ` AND BBOX(SHAPE,${b[0]},${b[1]},$
 export async function resolveStep(step: WalkStep, area: Feature<Polygon | MultiPolygon> | null, bbox: number[] | null): Promise<Resolved | null> {
   const name = (step.feature ?? "").trim();
   const follow = (step.follow ?? "").toLowerCase();
-  if (!name || follow === "straight_line" || follow === "lot_line") return null;
+  if (!name || follow === "straight_line") return null;
   try {
+    // District lots ("Lot 1855", "L. 3569s", "Lots 314, 549 and 550") from the Crown survey parcels.
+    const lots = follow === "lot_line" || /^(district )?lots?\s+\d|^(D\.?)?L\.?\s?\d/i.test(name) ? parseLots(name) : null;
+    if (follow === "lot_line" || lots) {
+      if (!lots) return null;
+      const l = await lookupLots(lots, bbox);
+      return l.status === "ok" ? { lines: toLines(l.features), layer: l.layer } : null;
+    }
     if (follow === "road" || /\b(road|highway|hwy|fsr)\b/i.test(name)) {
       if (/private|unnamed|logging company/i.test(name)) return null;
       const hwy = name.match(/^(?:highway|hwy)\.?\s*(?:no\.?\s*)?(\d+[a-z]?)$/i) ?? name.match(/^(?:no\.?\s*)?(\d+[a-z]?)\s+highway$/i);
@@ -414,4 +421,102 @@ export async function vicinityPoint(text: string, area: Feature<Polygon | MultiP
   } catch {
     return null;
   }
+}
+
+/** What a section names about where it is, for a zone when nothing better could be drawn. */
+export interface Places {
+  /** The section heading, split into places ("Lafarge to Pritchard" -> Lafarge, Pritchard). */
+  heading: string[];
+  /** Features, roads and landmarks the text names. */
+  names: string[];
+  /** Named areas with a type (lake, island, park, reserve, lot) that have their own outline in the official layers. */
+  areas: { type: string; name: string }[];
+  bufferM: number | null;
+}
+
+const GENERIC_TAIL = /\s+(operations|camp|resort|ferry terminal|terminals?|wildlife management area|wildlife reserve|nature conservancy( area)?|recreation area|seed orchard|sewage lagoons|environmental demonstration areas?|dykes?|watersheds?|access road|forest service road|fsr|road|highway|trail corridor|corridor|park)$/i;
+const CLUSTER_KM = 15;
+const ZONE_MAX_KM2 = 500;
+
+/** Name forms to try in BC Geographical Names: as written, without a leading "the", without a generic tail ("Line Creek Operations" -> "Line Creek"). */
+export function placeForms(name: string): string[] {
+  const n = name.replace(/^the /i, "").replace(/[.,;]+$/, "").trim();
+  const forms = new Set([n]);
+  let cut = n;
+  while (GENERIC_TAIL.test(cut)) forms.add((cut = cut.replace(GENERIC_TAIL, "").trim()));
+  return [...forms].filter((f) => f.length >= 3 && /[a-z]/i.test(f));
+}
+
+/** "Lafarge to Pritchard", "Delta/Surrey Dykes", "Mt. Bergeron — Tumbler Ridge" -> the places in a heading. */
+export function headingPlaces(heading: string): string[] {
+  return heading
+    .split(/\s+(?:to|and)\s+|\s*[\/—–]\s*|\s+-\s+/)
+    .map((h) => h.replace(/^Mt\.?\s/i, "Mount ").trim())
+    .filter((h) => h && !/^(closed areas regulation|schedule|section|the province|provincial parks|highways)\b/i.test(h));
+}
+
+/**
+ * A zone around the places a section names, from the official layers, when no outline could be drawn: named
+ * areas (lakes, islands, parks, reserves, lots) by their own outlines, other places by their BC Geographical
+ * Names point, kept to the cluster around the heading's place. Always approximate ("vicinity").
+ */
+export async function placesZone(p: Places, area: Feature<Polygon | MultiPolygon> | null): Promise<WalkResult> {
+  const notes: string[] = [];
+  const layers = new Set<string>();
+  const b = area ? turf.bbox(area) : null;
+  type Cand = { name: string; heading: boolean; at: Position; shape: Feature<Polygon | MultiPolygon> | null; alone: boolean };
+  const cands: Cand[] = [];
+  for (const a of p.areas) {
+    const l = a.type === "lot" ? (parseLots(a.name) ? await lookupLots(parseLots(a.name)!, b) : null) : ["lake", "island", "park", "reserve"].includes(a.type) ? await lookupArea(a.type, a.name) : null;
+    if (!l || (l.status !== "ok" && l.status !== "ambiguous")) continue;
+    for (const f of l.features) {
+      if (!f.geometry || !/Polygon/.test(f.geometry.type)) continue;
+      const shape = f as Feature<Polygon | MultiPolygon>;
+      if (area && !turf.booleanIntersects(shape, area)) continue;
+      cands.push({ name: a.name, heading: false, at: turf.centroid(shape).geometry.coordinates, shape, alone: false });
+      layers.add(l.layer);
+    }
+  }
+  const seen = new Set<string>();
+  for (const [name, heading] of [...p.heading.map((h) => [h, true] as const), ...p.names.map((n) => [n, false] as const)]) {
+    for (const form of placeForms(name)) {
+      if (seen.has(form.toLowerCase())) break;
+      seen.add(form.toLowerCase());
+      let fs: AnyFeature[] = [];
+      try {
+        fs = (await wfsQuery("WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP", `GEOGRAPHICAL_NAME ILIKE '${esc(form)}'${box(b)}`, 20)).filter((f) => f.geometry?.type === "Point");
+      } catch {
+        fs = [];
+      }
+      if (!fs.length) continue;
+      for (const f of fs) cands.push({ name: form, heading, at: (f.geometry as { coordinates: Position }).coordinates, shape: null, alone: fs.length > 1 && !area });
+      layers.add("WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP");
+      break;
+    }
+  }
+  if (!cands.length) return { geometry: null, quality: null, notes: ["none of the places the section names was found in the official layers"], layers: [] };
+  // The cluster with the most named places near it (heading places first) is where the section is.
+  const near = (a: Cand, c: Cand) => turf.distance(a.at, c.at, { units: "kilometers" }) <= CLUSTER_KM;
+  const score = (c: Cand) => new Set(cands.filter((o) => near(c, o)).map((o) => o.name)).size * 2 + (c.heading ? 1 : 0);
+  const anchor = cands.reduce((best, c) => (score(c) > score(best) ? c : best));
+  const kept = cands.filter((c) => near(anchor, c));
+  const names = [...new Set(kept.map((c) => c.name))];
+  // A lone same-named place picked from several across the province pins nothing down.
+  if (names.length === 1 && kept.every((c) => c.alone)) return { geometry: null, quality: null, notes: [`"${names[0]}" names more than one place and nothing narrows it`], layers: [] };
+  const pad = Math.max(p.bufferM ?? 0, VICINITY_M);
+  const parts: Feature<Polygon | MultiPolygon>[] = kept.filter((c) => c.shape).map((c) => (p.bufferM ? (turf.buffer(c.shape!, p.bufferM, { units: "meters" }) as Feature<Polygon | MultiPolygon>) : c.shape!));
+  const pts = kept.filter((c) => !c.shape).map((c) => c.at);
+  if (pts.length) {
+    const hull = pts.length >= 3 ? turf.convex(turf.featureCollection(pts.map((q) => turf.point(q)))) : null;
+    parts.push(turf.buffer(hull ?? (pts.length === 2 ? turf.lineString(pts) : turf.point(pts[0]!)), pad, { units: "meters", steps: 16 }) as Feature<Polygon | MultiPolygon>);
+  }
+  let shape: Feature<Polygon | MultiPolygon> | null = parts.length > 1 ? turf.union(turf.featureCollection(parts)) : parts[0]!;
+  if (shape && area) shape = turf.intersect(turf.featureCollection([shape, area]));
+  if (!shape) return { geometry: null, quality: null, notes: ["the places found lie outside the area the section names"], layers: [] };
+  const km2 = turf.area(shape) / 1e6;
+  if (km2 > ZONE_MAX_KM2) return { geometry: null, quality: null, notes: [`a zone around ${names.join(", ")} would cover ${Math.round(km2)} km2, too wide to mark`], layers: [] };
+  const outlined = [...new Set(kept.filter((c) => c.shape).map((c) => c.name))];
+  const how = [outlined.length ? `the outline of ${outlined.join(", ")}${p.bufferM ? ` plus ${p.bufferM} m` : ""}` : "", pts.length ? `${pad / 1000} km around the named points` : ""].filter(Boolean).join(" and ");
+  notes.push(`a zone around the places the section names (${names.join(", ")}): ${how}; not the boundary`);
+  return { geometry: shape.geometry, quality: "vicinity", notes, layers: [...layers] };
 }

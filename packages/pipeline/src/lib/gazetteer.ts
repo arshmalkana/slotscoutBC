@@ -24,6 +24,8 @@ export interface Lookup {
   ids: string[];
   note?: string;
   features: AnyFeature[];
+  /** The features found are more than the law covers (whole lots for part of one, a whole river for a stretch) or less (some lots not found). */
+  partial?: boolean;
 }
 
 const AREA_LAYERS: Record<string, { layer: string; field: string; geom: string }> = {
@@ -203,4 +205,106 @@ export function components(fs: AnyFeature[]): AnyFeature[][] {
 export async function ftenSection(fileSection: string): Promise<AnyFeature[]> {
   const [file, sec] = fileSection.split(".");
   return wfsQuery("WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW", `FOREST_FILE_ID='${esc(file!)}' AND ROAD_SECTION_ID='${esc(sec!)}'`, 50);
+}
+
+/** Land districts as Tantalis writes them in parcel descriptions ("DISTRICT LOT 3569S, SDYD", "DISTRICT LOT 495, GROUP 2, NEW WESTMINSTER DIST."). */
+const LAND_DISTRICT_KEYS: [RegExp, string][] = [
+  [/new westminster|\bN\.?\s?W\.?\s?D\b/i, "NEW WESTMINSTER"],
+  [/kamloops division|\bK\.?D\.?Y\.?D\b/i, "KDYD"],
+  [/osoyoos division|\bO\.?D\.?Y\.?D\b/i, "ODYD"],
+  [/similkameen division|\bS\.?D\.?Y\.?D\b/i, "SDYD"],
+  [/yale division|\bY\.?D\.?Y\.?D\b/i, "YDYD"],
+  [/queen charlotte|haida gwaii/i, "QUEEN CHARLOTTE"],
+  [/\bkootenay (land )?district|\bK\.\s?D\./i, "KOOTENAY"],
+  ...["Peace River", "Cariboo", "Lillooet", "Cassiar", "Cowichan", "Nanaimo", "Rupert", "Sayward", "Nootka", "Alberni", "Clayoquot", "Comox", "Newcastle", "Renfrew", "Quatsino", "Barclay", "Esquimalt", "Highland", "Metchosin", "Sooke", "Goldstream", "Shawnigan", "Chemainus", "Cedar", "Cranberry", "Oyster", "Wellington", "Douglas", "Quamichan", "Somenos", "Sahtlam", "Dunsmuir", "Mountain", "Helmcken", "Malahat", "Otter", "Lake"].map(
+    (d): [RegExp, string] => [new RegExp(`\\b${d} (land )?district\\b`, "i"), `${d.toUpperCase()} DIST`],
+  ),
+];
+
+/** The land district a description names, as a fragment of Tantalis's parcel description; null when none is named. */
+export function landDistrictKey(text: string): string | null {
+  const range = text.match(/\brange (\d+),? coast\b/i);
+  if (range) return `RANGE ${range[1]} COAST`;
+  for (const [re, key] of LAND_DISTRICT_KEYS) if (re.test(text)) return key;
+  return null;
+}
+
+export interface LotRef {
+  /** District lot numbers as Tantalis writes them after "DL " ("7A", "3569S"). */
+  lots: string[];
+  district: string | null;
+  /** The text names part of the lots (a plan lot, a block, a quarter): drawing the whole lots covers more than the law. */
+  partial: boolean;
+}
+
+/** District lots a description names: "District Lots 7, 7A and 11", "Lot 495, New Westminster District", "L. 3569s", "Lot 30 of Lots 334, 1494 and 333". */
+export function parseLots(text: string): LotRef | null {
+  const t = text.replace(/\s+/g, " ");
+  const list = String.raw`((?:\d+[A-Za-z]?\b(?:\s*,\s*|\s+and\s+|\s*&\s*)?)+)`;
+  // The district lots a sub-lot sits in ("Lot A, District Lot 1884", "Lot 30 of Lots 334 …") are what the layer holds.
+  let found = [...t.matchAll(new RegExp(String.raw`\b(?:District Lots?|D\.?L\.?s?|of Lots?)\s+` + list, "gi"))];
+  if (!found.length) found = [...t.matchAll(new RegExp(String.raw`\b(?:Lots?\s+|L\.?\s?(?=\d))` + list, "gi"))];
+  const lots = [...new Set(found.flatMap((m) => m[1]!.match(/\d+[A-Za-z]?\b/g) ?? []).map((l) => l.toUpperCase()))];
+  if (!lots.length) return null;
+  const partial = /\b(plan|block|parcel|sublots?|quarter|portion|part of)\b|\blot [a-z]\b|\blot \d+[a-z]? of lots?\b/i.test(t);
+  return { lots, district: landDistrictKey(t), partial };
+}
+
+/** District lots in the Crown survey parcel layer; the land district (or the surrounding area) tells same-numbered lots apart. */
+export async function lookupLots(ref: LotRef, bbox: number[] | null): Promise<Lookup> {
+  const layer = "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW";
+  const query = `District Lot${ref.lots.length > 1 ? "s" : ""} ${ref.lots.join(", ")}${ref.district ? ` (${ref.district})` : ""}`;
+  if (!ref.district && !bbox) return { query, kind: "lot", layer, status: "ambiguous", matches: 0, ids: [], note: "no land district or surrounding area to tell same-numbered lots apart", features: [] };
+  try {
+    const where = [
+      `PARCEL_SHORT_DESCRIPTION IN (${ref.lots.map((l) => `'DL ${esc(l)}'`).join(",")})`,
+      ref.district ? `PARCEL_LEGAL_DESCRIPTION ILIKE '%${esc(ref.district)}%'` : "",
+      bbox ? `BBOX(SHAPE,${bbox[0]},${bbox[1]},${bbox[2]},${bbox[3]},'EPSG:4326')` : "",
+    ].filter(Boolean);
+    const fs = (await wfsQuery(layer, where.join(" AND "), 500)).filter((f) => f.geometry && /Polygon/.test(f.geometry.type));
+    const got = new Set(fs.map((f) => String(f.properties.PARCEL_SHORT_DESCRIPTION).replace(/^DL /, "")));
+    const missing = ref.lots.filter((l) => !got.has(l));
+    // One number in one district is one lot; more means the place is not pinned down.
+    const twice = [...got].filter((l) => new Set(fs.filter((f) => f.properties.PARCEL_SHORT_DESCRIPTION === `DL ${l}`).map((f) => String(f.properties.PARCEL_LEGAL_DESCRIPTION))).size > 1);
+    const status = !fs.length ? "none" : twice.length ? "ambiguous" : "ok";
+    const notes = [missing.length ? `not found: ${missing.join(", ")}` : "", twice.length ? `more than one lot numbered ${twice.join(", ")} here` : "", ref.partial ? "the text names part of these lots" : ""].filter(Boolean);
+    return { query, kind: "lot", layer, status, matches: got.size, ids: fs.map((f) => String(f.properties.PIN_SID)), note: notes.join("; ") || undefined, features: fs, partial: ref.partial || missing.length > 0 };
+  } catch (e) {
+    return { query, kind: "lot", layer, status: "failed", matches: 0, ids: [], note: (e as Error).message, features: [] };
+  }
+}
+
+/** "McQueen, Griffin and Isobel Lakes" -> three lakes; "Columbia River and Columbia Lake" -> two. */
+export function splitWaterbodies(name: string): string[] {
+  const n = name.replace(/^the /i, "").trim();
+  const plural = n.match(/^(.+?)\s+(Lakes|Rivers|Creeks)$/i);
+  if (plural && /,| and /.test(plural[1]!)) {
+    const kind = plural[2]!.replace(/s$/i, "");
+    return plural[1]!.split(/\s*,\s*|\s+and\s+/).filter(Boolean).map((p) => `${p.trim()} ${kind}`);
+  }
+  const parts = n.split(/\s+and\s+/);
+  return parts.length > 1 && parts.every((p) => /\b(lake|river|creek|slough|channel)\b/i.test(p)) ? parts.map((p) => p.trim()) : [n];
+}
+
+/** A lake, river or creek in the Freshwater Atlas: lake and river polygons, else the stream lines. */
+export async function lookupWater(name: string, bbox: number[] | null): Promise<Lookup> {
+  const b = bbox ? ` AND BBOX(GEOMETRY,${bbox[0]},${bbox[1]},${bbox[2]},${bbox[3]},'EPSG:4326')` : "";
+  const tries: [string, string, number][] = /\blake\b/i.test(name)
+    ? [["WHSE_BASEMAPPING.FWA_LAKES_POLY", "GNIS_NAME_1", 50]]
+    : [
+        ["WHSE_BASEMAPPING.FWA_RIVERS_POLY", "GNIS_NAME_1", 300],
+        ["WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP", "GNIS_NAME", 3000],
+      ];
+  try {
+    for (const [layer, field, count] of tries) {
+      const fs = await wfsQuery(layer, `${field} ILIKE '${esc(name)}'${b}`, count);
+      if (fs.length) {
+        const ids = [...new Set(fs.map((f) => String(f.properties.WATERSHED_GROUP_CODE ?? "") + String(f.properties.BLUE_LINE_KEY ?? f.properties.WATERBODY_POLY_ID ?? "")))];
+        return { query: name, kind: "water", layer, status: "ok", matches: ids.length, ids: ids.slice(0, 20), features: fs };
+      }
+    }
+    return { query: name, kind: "water", layer: tries.map((t) => t[0]).join(" / "), status: "none", matches: 0, ids: [], features: [] };
+  } catch (e) {
+    return { query: name, kind: "water", layer: "-", status: "failed", matches: 0, ids: [], note: (e as Error).message, features: [] };
+  }
 }

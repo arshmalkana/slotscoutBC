@@ -393,6 +393,7 @@ const APPROX_HOW: Record<string, string> = {
   corners: "drawn by code between the corners it could place; some sides are straight",
   vicinity: "a zone around the places the regulation names, not its boundary",
   map_image: "read by code from the colours of the official map image",
+  whole_feature: "the whole lots or waterbody the regulation names, drawn in full; the closed area is only part of it",
 };
 
 function checkWildlife(ctx: Context): void {
