@@ -36,7 +36,7 @@ Prepared by Claude Code (Addendum A 10.3 step 13), last updated 2026-10-28. Appr
 - **Held for a person (3):** W3-023 (Mt. Bergeron) and W9-009 (Nicomen, Schedule 9) walks whose corners spread over 1,500 km²; W3-015 (Walter Clough WMA), whose lots lie outside the management unit the text names.
 - **Not drawn (43):** no place the section names could be found in the official layers (often a misspelling, such as "De Courcey" for De Courcy Island, or a private road), the named places are far-apart namesakes (Salmon Arm, Elbow Lake, Campbell River, Dawson Creek), the zone would exceed 500 km² (Gwaii Haanas, Tweedsmuir Park), or the section is province-wide (W3-019 "The Province", W5-028 "Highways", W8-027 "Provincial Parks"). Their areas stay grey.
 - **Bylaws:** Arsh supplied the SLRD Electoral Area A firearms bylaw (1293-2013); both readings agree that target shooting depends on its mapped zones (Schedules V to Z) and a 100 m rule, and it is approved. A zoned bylaw shows "Cannot confirm" until its zones are drawn: fixed on 2026-10-28, because before that the check passed every spot in a zoned jurisdiction with no drawn zones (Chilliwack 2740, Richmond 4183, SLRD Area D 1294-2013, approved 2026-10-23), which could show green where the bylaw bans shooting.
-- **BC Laws:** 4 of 6 regulations in hand (Closed Areas, Motor Vehicle Prohibition 18/2024, Wildfire 38/2005, Forest Recreation 16/2004, each current to October 20, 2026); the Hunting (190/84) and Park (180/90) regulations are still to come. Only the Closed Areas Regulation is split into sections; the others are dated copies the rules cite.
+- **BC Laws:** all 6 regulations in hand: Closed Areas (current to October 13, 2026) and, saved by Arsh on 2026-10-28, Hunting 190/84, Park 180/90, Forest Recreation 16/2004, Wildfire 38/2005 and Motor Vehicle Prohibition 18/2024 (each current to October 20, 2026). Only the Closed Areas Regulation is split into sections; the others are dated copies the rules cite.
 - **Checks:** validate 0 errors; regression passed with no false greens; release `2026-10-r1` publishable with 208 approved closed-area features. The October sign-off of 2026-10-23 stands; every decision since is listed in `releases/2026-10/release.json` with its note.
 
 ## 2. What was run for October, with counts
@@ -117,7 +117,7 @@ A separate run of the October pipeline on Windows (5 commits on top of `0260b7b`
 - [ ] Read the 13 `road_notice_block` items first (they keep P6 grey in 9 districts)
 - [ ] Check the District Manager readings (`dm_notice`): each road counts on the map only after you approve it
 - [ ] Work through the closed-area items, starting with Region 2; check each against the consolidation saved on 2026-10-20
-- [ ] Save the two remaining BC Laws copies (Hunting 190/84, Park 180/90) listed in `inbox/README.md`
+- [ ] Bowen Island Municipality: its site refuses automated connections; save its firearm bylaw into `inbox/bylaws/muni:Bowen Island Municipality/`
 - [ ] Draw the zones of the four zoned bylaws (Chilliwack, Richmond, SLRD Areas A and D); until then those places show Cannot confirm
 - [ ] Confirm today's Electoral Area H is the area W5-049 (s. 49) means
 - [ ] Look at the 3 held closed areas (W3-023, W9-009, W3-015) and the 43 not drawn (listed in the review packet)
