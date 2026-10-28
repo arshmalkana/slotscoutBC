@@ -1,14 +1,14 @@
 {
   "id": "2026-10-r1",
   "month": "2026-10",
-  "builtAt": "2026-10-28T20:35:22.359Z",
+  "builtAt": "2026-10-28T23:10:52.977Z",
   "publishable": true,
   "missing": [],
   "includes": {
     "approvedRuleFeatures": 208,
     "candidatesExcluded": 22
   },
-  "openReviewItemsExcluded": 47,
+  "openReviewItemsExcluded": 46,
   "decisions": [
     {
       "item": "bylaw-12fc977003",
@@ -33,6 +33,18 @@
       "decision": "approved",
       "by": "Arsh",
       "on": "2026-10-23"
+    },
+    {
+      "item": "bylaw-7c045990b9",
+      "decision": "approved",
+      "by": "Arsh",
+      "on": "2026-10-28"
+    },
+    {
+      "item": "bylaw-b934f10fbd",
+      "decision": "rejected",
+      "by": "Arsh",
+      "on": "2026-10-28"
     },
     {
       "item": "bylaw-ef7c79bc45",
@@ -2309,12 +2321,12 @@
       "buildings": "b50d2140ec8f870e85d9be94b52a5cc3d1f4c270bd54f5681e00c64c774c26cc",
       "nr_districts": "0c5b01f36d1dc540735103ecc34b12260fe7835dfe784845b870238315d635b2"
     },
-    "files": 78
+    "files": 85
   },
   "files": [
     {
       "file": "bylaws.json",
-      "sha256": "c7d81c1326fc6d50332c22b77a1bb49247850095e49ed63c150507ab00e4b3f5"
+      "sha256": "92cbb8d2958b2deea64a8b5ae16fd8a770e568b659543f74ca99fdde3fae4808"
     },
     {
       "file": "config.toml",

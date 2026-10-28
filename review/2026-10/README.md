@@ -1,10 +1,9 @@
 # Review packet 2026-10
 
-Open the HTML packet for maps and both runs: `review/2026-10/index.html`. 47 open item(s). Approve with `make approve ITEM=<id> BY=<initials>` (people only).
+Open the HTML packet for maps and both runs: `review/2026-10/index.html`. 46 open item(s). Approve with `make approve ITEM=<id> BY=<initials>` (people only).
 
 | Item | Kind | Change | Title | Why | Status |
 | --- | --- | --- | --- | --- | --- |
-| `bylaw-b934f10fbd` | bylaw | new_source | Squamish-Lillooet Regional District: Firearms Electoral Area A (Bylaw 1293-2013) | a person checks every extracted bylaw rule before first use | open |
 | `closed-area-1861d63b24` | closed_area | new | Closed Areas Regulation, Schedule 1, section 12 (Tunkwa Lake) | AI runs disagree: side: run 1 null vs run 2 "inside" | open |
 | `closed-area-92d655fa0e` | closed_area | new | Closed Areas Regulation, Schedule 1, section 17 (Gwaii Haanas National Park Rese | AI runs disagree: steps: run 1 ["///","/the ordinary high water mark at the most northeasterly point of tangil peninsula | open |
 | `closed-area-e20a8a740e` | closed_area | new | Closed Areas Regulation, Schedule 10, section 3 (One Island Pasture) | the geometry builder does not draw "metes_and_bounds" descriptions yet; a digitiser draws this shape with the extracted  | open |
@@ -54,6 +53,8 @@ Open the HTML packet for maps and both runs: `review/2026-10/index.html`. 47 ope
 | `bylaw-62f344c1b8` | bylaw | new_source | City of Chilliwack: Firearms Regulation Bylaw 2001 (Bylaw 2740) | a person checks every extracted bylaw rule before first use | approved |
 | `bylaw-230d956800` | bylaw | new_source | City of Langley: Firearms Regulation Bylaw, 2015, No. 2961 (Bylaw 2961) | a person checks every extracted bylaw rule before first use | approved |
 | `bylaw-7698b0d8e6` | bylaw | new_source | City of Richmond: Regulating the Discharge of Firearms Bylaw No. 4183 (Bylaw 418 | a person checks every extracted bylaw rule before first use | approved |
+| `bylaw-7c045990b9` | bylaw | new_source | ea:SLRD Electoral Area A: Squamish-Lillooet Regional District Electoral Area A F | a person checks every extracted bylaw rule before first use | approved |
+| `bylaw-b934f10fbd` | bylaw | new_source | Squamish-Lillooet Regional District: Firearms Electoral Area A (Bylaw 1293-2013) | a person checks every extracted bylaw rule before first use | rejected |
 | `bylaw-ef7c79bc45` | bylaw | new_source | Squamish-Lillooet Regional District: Squamish-Lillooet Regional District Elector | a person checks every extracted bylaw rule before first use | approved |
 | `bylaw-12fc977003` | bylaw | new_source | Village of Belcarra: Village of Belcarra Firearms Control Bylaw No. 498, 2016 (B | a person checks every extracted bylaw rule before first use | approved |
 | `closed-area-b113cf8135` | closed_area | new | Closed Areas Regulation, Schedule 1, section 1 (Bergenham and Moberly) | AI runs disagree: steps: run 1 ["///","/the centre line of hwy 1//","hwy 1/the southerly boundary of sublot 13 of sectio | approved |

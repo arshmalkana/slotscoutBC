@@ -1,6 +1,6 @@
 {
   "month": "2026-10",
-  "updatedAt": "2026-10-28T20:35:40.759Z",
+  "updatedAt": "2026-10-28T23:11:09.674Z",
   "extractor": "agent",
   "autopublish": {
     "configured": false,
@@ -9,7 +9,7 @@
   },
   "pull": {
     "startedAt": "2026-10-19T16:53:43.915Z",
-    "updatedAt": "2026-10-22T05:29:49.504Z",
+    "updatedAt": "2026-10-28T23:04:07.868Z",
     "sources": {
       "bcparks_advisories": {
         "status": "skipped",
@@ -105,7 +105,7 @@
       },
       "closed_areas": {
         "status": "partial",
-        "detail": "1 of 6 regulations from copies a person saved in inbox/bclaws; waiting for 190_84_00_multi, 180_90_00_multi, 16_2004, 38_2005, 18_2024; 1 unconfirmed excerpt(s) in inbox/excerpts"
+        "detail": "4 of 6 regulations from copies a person saved in inbox/bclaws; waiting for 190_84_00_multi, 180_90_00_multi; 1 unconfirmed excerpt(s) in inbox/excerpts"
       },
       "road_notices": {
         "status": "ok",
@@ -179,34 +179,34 @@
       {
         "source": "closed_areas",
         "what": "legal text",
-        "error": "no dated copy of 190_84_00_multi, 180_90_00_multi, 16_2004, 38_2005, 18_2024: waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)"
+        "error": "no dated copy of 190_84_00_multi, 180_90_00_multi: waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)"
       }
     ]
   },
   "changes": {
     "comparedWith": null,
-    "new": 699,
+    "new": 721,
     "changed": 0,
     "removed": 0,
     "unchanged": 0
   },
   "extraction": {
-    "tasks": 339,
+    "tasks": 340,
     "waiting": 0,
-    "run1Done": 339,
-    "run2Done": 339,
+    "run1Done": 340,
+    "run2Done": 340,
     "withImages": 37
   },
   "progress": [
     {
       "step": "pull",
       "part": "BC Laws regulations in hand",
-      "done": 1,
+      "done": 4,
       "total": 6,
-      "left": 5,
-      "percent": 16,
-      "last": "waiting for 190_84_00_multi, 180_90_00_multi, 16_2004, 38_2005, 18_2024",
-      "at": "2026-10-22T05:29:49.497Z"
+      "left": 2,
+      "percent": 66,
+      "last": "waiting for 190_84_00_multi, 180_90_00_multi",
+      "at": "2026-10-28T23:04:07.865Z"
     },
     {
       "step": "pull",
@@ -261,12 +261,12 @@
     {
       "step": "pull",
       "part": "inbox files",
-      "done": 4,
-      "total": 4,
+      "done": 8,
+      "total": 8,
       "left": 0,
       "percent": 100,
       "last": "inbox/notes/2026-10-20 BC Laws 196_99 page (repealed).txt",
-      "at": "2026-10-20T15:12:16.142Z"
+      "at": "2026-10-28T23:04:07.838Z"
     },
     {
       "step": "split",
@@ -276,7 +276,7 @@
       "left": 0,
       "percent": 100,
       "last": "District of Lillooet",
-      "at": "2026-10-20T15:12:18.957Z"
+      "at": "2026-10-28T23:04:21.404Z"
     },
     {
       "step": "split",
@@ -286,7 +286,7 @@
       "left": 0,
       "percent": 100,
       "last": "DVA-d66840c9-upper_driftwood_deactivation_advertisement",
-      "at": "2026-10-20T15:12:18.949Z"
+      "at": "2026-10-28T23:04:21.396Z"
     },
     {
       "step": "split",
@@ -296,37 +296,37 @@
       "left": 0,
       "percent": 100,
       "last": "DVA",
-      "at": "2026-10-20T15:12:17.030Z"
+      "at": "2026-10-28T23:04:19.463Z"
     },
     {
       "step": "queue",
       "part": "AI tasks written",
-      "done": 339,
-      "total": 339,
+      "done": 340,
+      "total": 340,
       "left": 0,
       "percent": 100,
-      "last": "bylaw-1af291427d0b",
-      "at": "2026-10-20T15:12:19.977Z"
+      "last": "bylaw-72c56a8d94c3",
+      "at": "2026-10-28T23:04:51.217Z"
     },
     {
       "step": "extract",
       "part": "run 1 answers",
-      "done": 339,
-      "total": 339,
+      "done": 340,
+      "total": 340,
       "left": 0,
       "percent": 100,
       "last": "",
-      "at": "2026-10-28T20:35:40.761Z"
+      "at": "2026-10-28T23:11:09.676Z"
     },
     {
       "step": "extract",
       "part": "run 2 answers",
-      "done": 339,
-      "total": 339,
+      "done": 340,
+      "total": 340,
       "left": 0,
       "percent": 100,
       "last": "",
-      "at": "2026-10-28T20:35:40.761Z"
+      "at": "2026-10-28T23:11:09.676Z"
     },
     {
       "step": "build",
@@ -366,9 +366,9 @@
     "retired": 4
   },
   "review": {
-    "thisMonth": 345,
-    "open": 47,
-    "openAllMonths": 47,
+    "thisMonth": 346,
+    "open": 46,
+    "openAllMonths": 46,
     "looserOpen": 0
   },
   "tests": {
