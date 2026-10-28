@@ -1,6 +1,7 @@
 import { beforeAll, describe, expect, it } from "vitest";
 import { parseNoticesPage, parseNoticesPageFull } from "@slotscout/engine";
 import { loadData, type StoredNotice } from "../src/data.js";
+import { displayFeature } from "../src/display.js";
 import { MAP_LAYERS, sldFor, tileBounds } from "../src/maplayers.js";
 import { mergeWithStore, unreadBlocks } from "../src/roadNotices.js";
 import { buildApp } from "../src/server.js";
@@ -228,5 +229,16 @@ describe("HTTP API", () => {
   it("rejects empty problem reports", async () => {
     const r = await app.inject({ method: "POST", url: "/v1/reports", payload: { message: "" } });
     expect(r.statusCode).toBe(400);
+  });
+});
+
+describe("closed-area shapes for the map", () => {
+  it("sends a light copy: few properties, outlines simplified, rings still closed", () => {
+    const ring = [...Array.from({ length: 200 }, (_, i) => [-122 + i * 0.00001, 49]), [-121.99, 49.01], [-122, 49.01], [-122, 49]];
+    const f = displayFeature({ type: "Feature", geometry: { type: "Polygon", coordinates: [ring] }, properties: { rule_id: "W5-001", effect: "no_shooting", authority: "s. 1", approximate: true, approximate_quality: "vicinity", source_text: "x".repeat(5000) } as never });
+    const out = (f.geometry as { coordinates: number[][][] }).coordinates[0]!;
+    expect(out.length).toBeLessThan(10);
+    expect(out[0]).toEqual(out[out.length - 1]);
+    expect(f.properties).toEqual({ rule_id: "W5-001", effect: "no_shooting", authority: "s. 1", approximate: true, approximate_quality: "vicinity" });
   });
 });

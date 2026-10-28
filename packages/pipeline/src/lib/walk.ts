@@ -489,7 +489,10 @@ export async function placesZone(p: Places, area: Feature<Polygon | MultiPolygon
         fs = [];
       }
       if (!fs.length) continue;
-      for (const f of fs) cands.push({ name: form, heading, at: (f.geometry as { coordinates: Position }).coordinates, shape: null, alone: fs.length > 1 && !area });
+      // Same-named points close together (a community and its creek or bay) are one place; far apart, they pin nothing down.
+      const pts = fs.map((f) => (f.geometry as { coordinates: Position }).coordinates);
+      const spread = pts.some((x) => pts.some((y) => turf.distance(x, y, { units: "kilometers" }) > CLUSTER_KM));
+      for (const at of pts) cands.push({ name: form, heading, at, shape: null, alone: spread && !area });
       layers.add("WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP");
       break;
     }

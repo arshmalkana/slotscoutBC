@@ -10,6 +10,7 @@ import { LIGHTS, RULES, RULES_BY_ID, featureState, inBCBox, normaliseProfile, ty
 import { config } from "./config.js";
 import { checkPoint, sourceStats } from "./check.js";
 import { data } from "./data.js";
+import { displayFeature } from "./display.js";
 import { FINDER_MAX_RADIUS_KM, findSpots } from "./finder.js";
 import { errorText, getBinary } from "./http.js";
 import { MAP_LAYERS, MAP_LAYERS_BY_ID, sldFor, tileBounds } from "./maplayers.js";
@@ -190,11 +191,17 @@ export async function buildApp(opts: { logger?: boolean } = {}): Promise<Fastify
     })),
   }));
 
+  // Display copies, made once per data load (the pipeline's files can change under a running server).
+  const shown = new WeakMap<object, unknown>();
   app.get("/v1/digitised.geojson", async (_req, reply) => {
-    // Only shapes that count: approved by a person, or published stricter under the one-way rule.
-    const reviewed = data().digitised.filter((f) => ["approved", "provisional"].includes(featureState(f)));
+    const all = data().digitised;
+    if (!shown.has(all)) {
+      // Only shapes that count: approved by a person, or published stricter under the one-way rule.
+      const reviewed = all.filter((f) => ["approved", "provisional"].includes(featureState(f)));
+      shown.set(all, { type: "FeatureCollection", features: reviewed.map(({ bbox: _b, ...f }) => displayFeature(f)) });
+    }
     reply.header("Cache-Control", "public, max-age=3600");
-    return { type: "FeatureCollection", features: reviewed.map(({ bbox: _b, ...f }) => f) };
+    return shown.get(all);
   });
 
   app.get("/v1/tiles/:layer/:z/:x/:y.png", { config: { rateLimit: { max: 1200, timeWindow: "1 minute" } } }, async (req, reply) => {
