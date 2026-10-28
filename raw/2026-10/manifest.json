@@ -2,17 +2,17 @@
   "month": "2026-10",
   "userAgent": "SlotScoutBot/0.1 (+https://slotscout.ca/about; data@slotscout.ca)",
   "startedAt": "2026-10-19T16:53:43.915Z",
-  "updatedAt": "2026-10-28T23:04:07.868Z",
+  "updatedAt": "2026-10-28T23:35:32.210Z",
   "sources": {
     "bcparks_advisories": {
       "status": "skipped",
       "detail": "planned source, not pulled yet",
-      "at": "2026-10-28T23:04:07.648Z"
+      "at": "2026-10-28T23:35:32.103Z"
     },
     "licensee_notices": {
       "status": "skipped",
       "detail": "planned source, not pulled yet",
-      "at": "2026-10-28T23:04:07.648Z"
+      "at": "2026-10-28T23:35:32.103Z"
     },
     "wmu": {
       "status": "ok",
@@ -120,9 +120,9 @@
       "at": "2026-10-19T17:11:56.588Z"
     },
     "closed_areas": {
-      "status": "partial",
-      "detail": "4 of 6 regulations from copies a person saved in inbox/bclaws; waiting for 190_84_00_multi, 180_90_00_multi; 1 unconfirmed excerpt(s) in inbox/excerpts",
-      "at": "2026-10-28T23:04:07.866Z"
+      "status": "ok",
+      "detail": "6 of 6 regulations from copies a person saved in inbox/bclaws; 1 unconfirmed excerpt(s) in inbox/excerpts",
+      "at": "2026-10-28T23:35:32.206Z"
     },
     "road_notices": {
       "status": "ok",
@@ -814,6 +814,24 @@
       "fetchedAt": "2026-10-28T23:02:51.862Z",
       "committed": true,
       "note": "copied from inbox/bclaws/18_2024.pdf"
+    },
+    {
+      "path": "raw/2026-10/bclaws/180_90_00_multi.pdf",
+      "sha256": "6eb9ae5feadee1faa40ef55a7233cd286d7f739179af2cca0043776c8cbd4d8d",
+      "bytes": 743959,
+      "source": "closed_areas",
+      "fetchedAt": "2026-10-28T23:35:08.858Z",
+      "committed": true,
+      "note": "copied from inbox/bclaws/180_90_00_multi.pdf"
+    },
+    {
+      "path": "raw/2026-10/bclaws/190_84_00_multi.pdf",
+      "sha256": "c01241d87d52f5e4c1df7f98ce0d53fbe9f5ca6f8b62b13d769f4c917555b63d",
+      "bytes": 1970427,
+      "source": "closed_areas",
+      "fetchedAt": "2026-10-28T23:35:08.855Z",
+      "committed": true,
+      "note": "copied from inbox/bclaws/190_84_00_multi.pdf"
     },
     {
       "path": "raw/2026-10/bclaws/38_2005.pdf",
@@ -1518,6 +1536,24 @@
       "note": "copied from inbox/bclaws/18_2024.pdf"
     },
     {
+      "path": "raw/2026-10/inbox/bclaws/180_90_00_multi.pdf",
+      "sha256": "6eb9ae5feadee1faa40ef55a7233cd286d7f739179af2cca0043776c8cbd4d8d",
+      "bytes": 743959,
+      "source": "inbox",
+      "fetchedAt": "2026-10-28T23:35:08.858Z",
+      "committed": true,
+      "note": "copied from inbox/bclaws/180_90_00_multi.pdf"
+    },
+    {
+      "path": "raw/2026-10/inbox/bclaws/190_84_00_multi.pdf",
+      "sha256": "c01241d87d52f5e4c1df7f98ce0d53fbe9f5ca6f8b62b13d769f4c917555b63d",
+      "bytes": 1970427,
+      "source": "inbox",
+      "fetchedAt": "2026-10-28T23:35:08.855Z",
+      "committed": true,
+      "note": "copied from inbox/bclaws/190_84_00_multi.pdf"
+    },
+    {
       "path": "raw/2026-10/inbox/bclaws/38_2005.pdf",
       "sha256": "074caa03dccf60342b5a5a6c5e91a4d4feece4b813f6f8c90aa9e2f4a4c8d385",
       "bytes": 556993,
@@ -1578,12 +1614,6 @@
       "what": "muni:Bowen Island Municipality",
       "error": "robots.txt for www.bimbc.ca could not be read, so automated access is not assumed",
       "at": "2026-10-19T20:21:18.643Z"
-    },
-    {
-      "source": "closed_areas",
-      "what": "legal text",
-      "error": "no dated copy of 190_84_00_multi, 180_90_00_multi: waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)",
-      "at": "2026-10-28T23:04:07.866Z"
     }
   ]
 }

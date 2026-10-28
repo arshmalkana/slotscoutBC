@@ -53,4 +53,3 @@ First pull: this is the baseline every later month is compared with.
 ## Failed or missing sources
 
 - **bylaws** muni:Bowen Island Municipality: robots.txt for www.bimbc.ca could not be read, so automated access is not assumed
-- **closed_areas** legal text: no dated copy of 190_84_00_multi, 180_90_00_multi: waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)
