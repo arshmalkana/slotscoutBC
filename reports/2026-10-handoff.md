@@ -118,7 +118,7 @@ A separate run of the October pipeline on Windows (5 commits on top of `0260b7b`
 - [ ] Check the District Manager readings (`dm_notice`): each road counts on the map only after you approve it
 - [ ] Work through the closed-area items, starting with Region 2; check each against the consolidation saved on 2026-10-20
 - [ ] Save the two remaining BC Laws copies (Hunting 190/84, Park 180/90) listed in `inbox/README.md`
-- [ ] Draw the zones of the three zoned bylaws (Chilliwack, Richmond, SLRD Areas A and D); until then those places show Cannot confirm
+- [ ] Draw the zones of the four zoned bylaws (Chilliwack, Richmond, SLRD Areas A and D); until then those places show Cannot confirm
 - [ ] Confirm today's Electoral Area H is the area W5-049 (s. 49) means
 - [ ] Look at the 3 held closed areas (W3-023, W9-009, W3-015) and the 43 not drawn (listed in the review packet)
 - [ ] W4-003 (Pitt WMA): its period has weekday rules the rule format cannot hold yet; it is shown in force all year (stricter) and, being an approximate outline, as "possibly inside" (grey)
