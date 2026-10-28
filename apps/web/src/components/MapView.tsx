@@ -280,8 +280,11 @@ export const MapView = forwardRef<MapViewHandle, Props>(function MapView(props, 
     }
     if (!map.getSource("digitised")) map.addSource("digitised", { type: "geojson", data: `${location.origin}/v1/digitised.geojson` });
     if (!map.getLayer("digitised-fill")) {
-      map.addLayer({ id: "digitised-fill", type: "fill", source: "digitised", paint: { "fill-color": "#be185d", "fill-opacity": 0.18 } });
-      map.addLayer({ id: "digitised-line", type: "line", source: "digitised", paint: { "line-color": "#9d174d", "line-width": 1.5, "line-dasharray": [3, 2] } });
+      // Exact closed areas: solid outline. Approximate ones (placed by code from the places the text names): grey, dashed.
+      const approx: ["==", ["get", string], boolean] = ["==", ["get", "approximate"], true];
+      map.addLayer({ id: "digitised-fill", type: "fill", source: "digitised", paint: { "fill-color": ["case", approx, "#6b7280", "#be185d"], "fill-opacity": ["case", approx, 0.12, 0.18] } });
+      map.addLayer({ id: "digitised-line", type: "line", source: "digitised", filter: ["!", approx], paint: { "line-color": "#9d174d", "line-width": 1.5 } });
+      map.addLayer({ id: "digitised-approx-line", type: "line", source: "digitised", filter: approx, paint: { "line-color": "#4b5563", "line-width": 1.5, "line-dasharray": [3, 2] } });
     }
     for (const id of ["fz", "fan", "candidates-src"]) if (!map.getSource(id)) map.addSource(id, { type: "geojson", data: EMPTY });
     if (!map.getLayer("fz-fill")) {

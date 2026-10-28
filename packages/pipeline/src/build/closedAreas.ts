@@ -7,6 +7,7 @@ import { config, today } from "../lib/config.js";
 import { EFFECT_BY_RULE } from "../lib/effects.js";
 import { areaShape, lookupArea, lookupRoad, type Lookup } from "../lib/gazetteer.js";
 import { isForestRoad, parseRoadList } from "../lib/roadlist.js";
+import { vicinityPoint, walkOutline, type WalkStep } from "../lib/walk.js";
 import { buildAdminBoundary, buildRoadBuffer, validateShape, type Built } from "../lib/geometry.js";
 import { P } from "../lib/paths.js";
 import { itemId, upsertItem } from "../lib/review.js";
@@ -25,6 +26,11 @@ const EFFECT_STRICTNESS: Record<string, number> = { no_shooting: 5, no_shooting_
 
 export function rulePath(ruleId: string): string {
   return join(P.rules, `${ruleId}.geojson`);
+}
+
+/** Sections drawn only on a map attached to the regulation ("outlined in red on the attached map"). */
+export function citesMap(text: string): boolean {
+  return /attached map|Map No\.\s*\d/i.test(text);
 }
 
 /** The parts of a named feature lying mostly (at least half their area) inside the area the text places it in. */
@@ -189,6 +195,29 @@ export async function buildClosedArea(t: Task, month: string): Promise<{ state: 
   } else if (!a) why.push("no usable answer to build from");
   else why.push("not built: the AI runs disagree, so the area stays grey until a person decides");
 
+  // A walk ("commencing at …; thence along …") with no exact shape gets an approximate outline, by Arsh's
+  // instruction (2026-10-28). It is marked approximate: the engine shows "possibly inside", never a boundary.
+  let approximate: { quality: string; notes: string[] } | null = null;
+  const steps = (a?.geometry?.steps ?? []) as WalkStep[];
+  if (!built.geometry && a && steps.filter((s) => s.feature || s.until).length >= 2 && !citesMap(t.source_text)) {
+    if (!area && a.within) {
+      const l = await lookupArea(a.within.type, a.within.name);
+      if (l.status === "ok") (lookups.push(l), (area = areaShape(l)));
+    }
+    const w = await walkOutline(steps, area, await vicinityPoint(t.source_text, area));
+    if (w.geometry) {
+      built = {
+        geometry: w.geometry,
+        construction: [
+          { what: `approximate outline (${w.quality}): corners where the followed features meet, traced along them where found, padded 100 m`, quote: steps.find((s) => s.quote)?.quote ?? null, source: w.layers.join(", ") || "BC Geographical Names" },
+        ],
+        problems: [],
+      };
+      approximate = { quality: w.quality!, notes: w.notes };
+      why.push(`approximate outline (${w.quality}) drawn from the places the walk names${agreed ? "" : ", using run 1's reading of the steps"}`, ...w.notes);
+    }
+  }
+
   const validation = validateShape({ geometry: built.geometry, method: a?.geometry?.method ?? "other", within: area, synopsis: null, runAgreement: c1.answer && c2.answer ? agreed : null, disagreements: dis });
   if (a?.geometry?.method === "metes_and_bounds") validation.push({ check: "step directions match the line", passed: null, detail: "not run: metes-and-bounds walks are drawn by a person in this version" });
   for (const v of validation.filter((x) => x.passed === false)) why.push(`validation failed: ${v.check} (${v.detail})`);
@@ -211,11 +240,12 @@ export async function buildClosedArea(t: Task, month: string): Promise<{ state: 
       buffer_m: a.geometry.buffer_m ?? null,
       partial_extent: !!(a.geometry.from || a.geometry.to),
       conservative: true,
+      ...(approximate ? { approximate: true, approximate_quality: approximate.quality as DigitisedRuleProps["approximate_quality"] } : {}),
       digitised_by: `pipeline (${(r1 as Answer).mode} mode: ${aiModel}; ${rule ? "rule parser cross-check" : "no rule parse"})`,
       digitised_on: today(),
       reviewed_by: null,
       reviewed_on: null,
-      confidence: why.length ? "low" : "medium",
+      confidence: approximate || why.length ? "low" : "medium",
       notes: [built.construction.map((c) => c.what).join("; "), a.geometry.from || a.geometry.to ? `From ${a.geometry.from?.road ?? a.geometry.from?.name} to ${a.geometry.to?.road ?? a.geometry.to?.name}.` : ""].filter(Boolean).join(" "),
       extraction_method: "ai",
       model_version: `${aiModel} / ${(r2 as Answer).model}`,

@@ -204,6 +204,12 @@ export interface DigitisedRuleProps {
   change_type?: "new" | "stricter" | "looser" | "unclear" | "cosmetic";
   version?: number;
   unit_hash?: string;
+  /**
+   * An outline placed approximately from the places the text names (a metes-and-bounds walk traced by code,
+   * or a zone around the named place). A spot inside reads "possibly inside", never a firm answer.
+   */
+  approximate?: boolean;
+  approximate_quality?: "traced" | "corners" | "vicinity" | "map_image";
 }
 
 export type CoverageStatus = "not_started" | "in_progress" | "digitised" | "reviewed";

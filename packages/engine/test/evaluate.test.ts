@@ -153,6 +153,16 @@ describe("evaluate: profile-dependent Closed Areas rules", () => {
     expect(r.verdict.reason).toMatch(/non-toxic/);
   });
 
+  it("an approved approximate outline reads 'possibly inside' (grey), never red or green", () => {
+    const area = digitised(square(PIN, 300), { rule_id: "W5-056", effect: "no_shooting", approximate: true, approximate_quality: "corners" });
+    const inside = evaluate(baseInput({ digitised: [area] }));
+    expect(inside.verdict.state).toBe("grey");
+    expect(check(inside, "W5").reason).toMatch(/possibly inside a No Shooting area.*approximate/);
+    const outside = evaluate(baseInput({ digitised: [digitised(square(PIN, 300, 5000), { rule_id: "W5-056", effect: "no_shooting", approximate: true })] }));
+    expect(outside.verdict.state).not.toBe("red");
+    expect(outside.checks.some((c) => c.ruleId === "W5" && c.status === "unknown")).toBe(false);
+  });
+
   it("Schedule 5.1 hunting-exempt areas: red for target shooting, amber (never green) for hunting", () => {
     const area = digitised(square(PIN, 300), { rule_id: "W6-001", effect: "no_shooting_hunting_exempt" });
     expect(evaluate(baseInput({ digitised: [area] })).verdict.state).toBe("red");

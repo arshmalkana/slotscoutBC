@@ -377,6 +377,24 @@ export function featureState(f: Feature<Geometry, DigitisedRuleProps>): "approve
 
 const PROVISIONAL_NOTE = "AI-read change published under the one-way rule: it can only make the map stricter, and a person confirms it within 24 hours.";
 
+const EFFECT_LABEL: Record<string, string> = {
+  no_shooting: "a No Shooting area",
+  no_shooting_seasonal: "a seasonal No Shooting area",
+  no_shooting_hunting_exempt: "a No Shooting area (hunting exempt)",
+  shot_only: "a shot-only area",
+  shot_only_seasonal: "a seasonal shot-only area",
+  no_rifle: "a no-rifle area",
+  non_toxic: "a non-toxic shot area",
+  no_hunting: "a No Hunting area",
+};
+
+const APPROX_HOW: Record<string, string> = {
+  traced: "traced by code along the boundaries the regulation names",
+  corners: "drawn by code between the corners it could place; some sides are straight",
+  vicinity: "a zone around the places the regulation names, not its boundary",
+  map_image: "read by code from the colours of the official map image",
+};
+
 function checkWildlife(ctx: Context): void {
   const wmuProblem = ctx.problem("wmu", false);
   const { region, mu } = wildlifeRegion(ctx);
@@ -402,6 +420,29 @@ function checkWildlife(ctx: Context): void {
       continue;
     }
     const inside = rel.inside;
+    if (f.properties.approximate) {
+      // An approximate outline marks where a closed area roughly is; it never decides a spot either way.
+      if (!inside) continue;
+      const p = f.properties;
+      const w = wRuleOf(p.rule_id);
+      const list = byRule.get(w) ?? [];
+      list.push({
+        ruleId: w,
+        light: "wildlife",
+        status: "unknown",
+        reason: `Cannot confirm: possibly inside ${EFFECT_LABEL[p.effect] ?? "a closed area"} (${p.authority}). This outline is approximate, ${APPROX_HOW[p.approximate_quality ?? "corners"]}; read the regulation text before shooting here.`,
+        citation: p.authority,
+        sourceUrl: p.source_url,
+        sources: ["closed_areas"],
+        dataDate: p.reviewed_on ?? p.digitised_on,
+        sourceText: p.source_text,
+        notes: [p.notes].filter(Boolean),
+        nearestM: Math.round(rel.edgeDistanceM),
+        nearestBearingDeg: Math.round(rel.bearingDeg),
+      });
+      byRule.set(w, list);
+      continue;
+    }
     if (!inside && rel.distanceM <= ctx.radius) {
       const prohibits =
         ["no_shooting", "no_shooting_hunting_exempt"].includes(f.properties.effect) ||
