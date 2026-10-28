@@ -1,6 +1,6 @@
 # Hand-off report: Addendum A, October 2026
 
-Prepared by Claude Code (Addendum A 10.3 step 13), last updated 2026-10-21. Nothing here was approved, signed off or published by Claude Code. Every item below that changes what the map shows is waiting for a person.
+Prepared by Claude Code (Addendum A 10.3 step 13), last updated 2026-10-28. Approvals and the sign-off were entered by Claude Code in Arsh's name at his explicit instruction (2026-10-23 and 2026-10-28); each decision's note says so. Sections 2 to 8 describe the month as first run; the status section above them is current.
 
 ## 1. What was built
 
@@ -18,11 +18,24 @@ Prepared by Claude Code (Addendum A 10.3 step 13), last updated 2026-10-21. Noth
 | Engine and site | `packages/engine`, `apps/api`, `apps/web` | Review states and the one-way rule; District Manager closures count only after approval and keep P6 grey until then; Sources page progress table; About page on OCR and maps |
 | Docker | `docker-compose.yml`, `Dockerfile`, `Dockerfile.ingest` | `web` serves the site; `ingest` runs the pipeline with Playwright, Chromium, poppler and tesseract. Every pipeline step ran in the ingest container |
 
-## Status on 2026-10-25
+## Status on 2026-10-28
 
 - **Live:** https://slotscout-five.vercel.app (Vercel project `slotscout`, built from `Dockerfile.vercel`, release `2026-10-r1`). The project is linked to GitHub: every push to `claude/wizardly-brown-q2omh0` redeploys production.
-- **Approvals and sign-off:** Arsh reviewed every item and on 2026-10-23 instructed that all be approved and signed off in his name; Claude Code entered them, and each decision's note says so. 93 items approved; still open: 251 closed-area sections with no shape (a shape must be drawn first) and the Squamish-Lillooet Electoral Area A bylaw (1293-2013), whose extraction does not settle whether target shooting is prohibited, zoned or allowed (set `target_shooting` in its rule list, then approve).
-- **Release `2026-10-r1`:** publishable; validate 0 errors; regression 0 false greens and 1 false red. The false red is Harrison East: the approved W5-049 shape is the whole Fraser Valley Regional District, so every spot in it shows "No shooting area (s. 49)". Retiring W5-049 or redrawing it to the right Area H boundary removes that.
+- **Closed areas drawn: 211 of 254; 208 approved.** Arsh instructed on 2026-10-28 that every closed area be marked, at least approximately, and that the shapes code draws be approved in his name; Claude Code entered each approval, and each decision's note says so. Approved shapes, by how code drew them:
+
+  | Kind | Approved | What the map shows |
+  | --- | ---: | --- |
+  | Exact, from official layers (areas, district lots, road and lake buffers) | 25 | solid; red inside |
+  | Read from the Province's closed-area maps | 12 | grey dashed; red more than the reading tolerance inside |
+  | Whole lots or a whole river where the text means part of it | 8 | grey dashed, "possibly inside" |
+  | Boundary walks traced along the features they follow | 36 | grey dashed, "possibly inside" |
+  | Boundary walks with some sides straight | 28 | grey dashed, "possibly inside" |
+  | Zones around the places a section names | 99 | grey dashed, "possibly inside" |
+
+- **Replaced:** W8-053 (Highway 3, Loop and Alexander bridges): the approved 57.9 km² buffer of the whole road was replaced by the 4.2 km² stretch the Province's own map highlights. W4-003 (Pitt WMA): its period ("March 11 to August 31, and Mondays, Tuesdays, Thursdays and Fridays from September 1 to March 10") is not one range, so the shape is shown in force all year, stricter than the text, until a person enters it. W5-049 (Harrison) is drawn from Electoral Area H only; the whole-FVRD shape is retired.
+- **Held for a person (3):** W3-023 (Mt. Bergeron) and W9-009 (Nicomen, Schedule 9) walks whose corners spread over 1,500 km²; W3-015 (Walter Clough WMA), whose lots lie outside the management unit the text names.
+- **Not drawn (43):** no place the section names could be found in the official layers (often a misspelling, such as "De Courcey" for De Courcy Island, or a private road), the named places are far-apart namesakes (Salmon Arm, Elbow Lake, Campbell River, Dawson Creek), the zone would exceed 500 km² (Gwaii Haanas, Tweedsmuir Park), or the section is province-wide (W3-019 "The Province", W5-028 "Highways", W8-027 "Provincial Parks"). Their areas stay grey.
+- **Checks:** validate 0 errors; regression passed with no false greens; release `2026-10-r1` publishable with 208 approved closed-area features. The October sign-off of 2026-10-23 stands; every decision since is listed in `releases/2026-10/release.json` with its note.
 
 ## 2. What was run for October, with counts
 
@@ -76,9 +89,9 @@ Open `review/2026-10/index.html`. Approve or reject each with `make approve ITEM
 ## 6. Known limits (not fixed here)
 
 - **Gold set:** none yet. Region 2 must be digitised by hand first (Addendum A 7.1); until every threshold passes, AI output only pre-fills a person's work (`ai.autopublish = false`).
-- **Geometry builder:** draws road buffers and whole-area boundaries. Metes-and-bounds walks, creek buffers, contours and "outlined on the attached map" areas go to a person with the extracted steps pre-filled.
+- **Geometry builder:** exact shapes for whole areas, district lots, road buffers (single roads and lists) and lake, river or creek buffers; outlines read from the Province's published closed-area maps; approximate outlines for walks (traced, or with straight sides) and approximate zones around named places. Maps attached to the regulation but not published by the Province cannot be read, and the Fontas map (W8-054) has no readable legend. Approximate shapes only ever show "possibly inside" (grey).
 - **Map-only readings:** a road or km point seen on a map image but not in the text or OCR text is shown to the person but never counted.
-- **W5-049 (Sch. 5 s. 49, "Huntingdon and Sumas Mountain"):** the text says "Electoral Area H of the Fraser Valley Regional District" (as amended in 1996). The lookup did not find Area H, so the candidate shape is the whole regional district (13,868 km², marked conservative). The gemini branch argued that the 1996 Area H (Sumas Mountain and Huntingdon) was later absorbed into Abbotsford and Area G and that today's Area H is the Cultus Lake area; that is unverified. A person decides which boundary s. 49 means before approving; until then the item stays open and the area grey.
+- **W5-049 (Sch. 5 s. 49, "Huntingdon and Sumas Mountain"):** the text says "Electoral Area H of the Fraser Valley Regional District" (as amended in 1996). Code now draws the named Area H, never the whole regional district; the whole-FVRD shape is retired. Electoral area letters have been reassigned since 1996, so a person should still confirm today's Area H is the area s. 49 means.
 
 ## 6a. The gemini branch (audited 2026-10-22, then deleted; tip was `c7280f8`)
 
@@ -103,7 +116,9 @@ A separate run of the October pipeline on Windows (5 commits on top of `0260b7b`
 - [ ] Check the District Manager readings (`dm_notice`): each road counts on the map only after you approve it
 - [ ] Work through the closed-area items, starting with Region 2; check each against the consolidation saved on 2026-10-20
 - [ ] Save the five remaining BC Laws copies listed in `inbox/README.md` (ids corrected; 18/2024 replaced 196/99)
-- [ ] Decide which boundary W5-049 (s. 49) means before approving it
+- [ ] Confirm today's Electoral Area H is the area W5-049 (s. 49) means
+- [ ] Look at the 3 held closed areas (W3-023, W9-009, W3-015) and the 43 not drawn (listed in the review packet)
+- [ ] Enter W4-003's period by hand (it is shown in force all year until then)
 - [ ] Identify the jurisdiction that differs between the Province's count and the boundary layers
 - [ ] Add Region 2 bylaw document URLs or copies for the jurisdictions still not found
 - [ ] Hand-digitise Region 2 closed areas for the gold set; put people's answers in `gold/answers/`

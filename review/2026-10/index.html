@@ -16,8 +16,8 @@ svg .junction{fill:var(--accent)}svg .pt{fill:var(--mut)}svg .pt.closed,svg .pt.
 .nomap{color:var(--mut);font-size:.85rem;padding:20px;border:1px dashed var(--line)}nav a{margin-right:10px}
 .pages{display:flex;gap:10px;overflow-x:auto}.pages img{max-height:420px;max-width:100%;border:1px solid var(--line);background:#fff}</style></head><body>
 <h1>SlotScout review packet, 2026-10</h1>
-<p>48 open item(s), 297 decided. Nothing here counts on the map until a person approves it; looser changes keep the older, stricter version live. Claude Code prepares this packet and never approves (CLAUDE.md).</p>
-<nav><a href="#k-bylaw">bylaw (1)</a><a href="#k-closed_area">closed area (47)</a></nav>
+<p>47 open item(s), 298 decided. Nothing here counts on the map until a person approves it; looser changes keep the older, stricter version live. Claude Code prepares this packet and never approves (CLAUDE.md).</p>
+<nav><a href="#k-bylaw">bylaw (1)</a><a href="#k-closed_area">closed area (46)</a></nav>
 <h2 id="k-bylaw" style="margin-top:28px">bylaw</h2><article id="bylaw-b934f10fbd" class="item open">
 <header><h2>Squamish-Lillooet Regional District: Firearms Electoral Area A (Bylaw 1293-2013)</h2><div><span class="badge new_source">new source</span> <span class="badge bylaw">bylaw</span>  <span class="status">open</span></div></header>
 <p class="decision"><strong>Decision needed:</strong> Check every extracted rule against the bylaw before first use (Addendum A 5.3). Zone maps are traced by hand. Approving marks the register entry reviewed today.</p>
@@ -2677,206 +2677,6 @@ The Province
 }</pre></div></div></details>
 
 <p class="cmd">Person only: <code>make approve ITEM=closed-area-e24ded4794 BY=&lt;initials&gt;</code> or <code>make approve ITEM=closed-area-e24ded4794 BY=&lt;initials&gt; DECISION=reject NOTE="why"</code></p>
-</article>
-<article id="closed-area-96700fed81" class="item open">
-<header><h2>Closed Areas Regulation, Schedule 3, section 2 (Tranquille Wildlife Management Area)</h2><div><span class="badge new">new</span> <span class="badge closed_area">closed area</span> <code>W3-002</code> <span class="status">open</span></div></header>
-<p class="decision"><strong>Decision needed:</strong> No shape was built. Draw it from the extracted fields, or reject the extraction.</p>
-<ul class="why"><li>named area &quot;KDYD&quot;: failed (no official layer for area type other)</li><li>the geometry builder does not draw &quot;metes_and_bounds&quot; descriptions yet; a digitiser draws this shape with the extracted steps pre-filled</li><li>&quot;Tranquille and Red Lake road&quot; was not found in the official layers; that side is drawn straight</li><li>&quot;Tranquille&quot; names more than one place and nothing narrows it</li><li>validation failed: shape built (no shape could be built)</li></ul>
-
-
-<div class="grid"><section><h3>Source text</h3><p class="meta">BC Laws consolidation current to October 13, 2026 · <a href="https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi">source</a></p>
-<blockquote>Schedule 3 <mark>No Shooting or Hunting Areas</mark> (Section 4)
-Tranquille Wildlife Management Area
-2 That portion of the Province of British Columbia in the vicinity of the City of Kamloops, <mark>KDYD</mark>, which is contained within the following described boundaries: <mark>Commencing at the northeast corner of Lot 341</mark>; <mark>thence southerly then easterly following the fence line to the southeast corner of Lot 341 at the low water mark</mark>; <mark>thence westerly following the shoreline at the low water mark to the southwest corner of the Tranquille Wildlife Management Area on the lakeshore at low water mark</mark>; <mark>thence northerly and easterly along the western and northern boundary of the Tranquille Wildlife Management Area following the Tranquille and Red Lake road right of way to the point of commencement</mark>. [en. B.C. Reg. 205/94, s. 2.]</blockquote>
-<table><tr><th>Field</th><th>Quote</th></tr><tr><td><code>within</code></td><td>KDYD</td></tr><tr><td><code>effect</code></td><td>No Shooting or Hunting Areas</td></tr><tr><td><code>geometry.steps[0]</code></td><td>Commencing at the northeast corner of Lot 341</td></tr><tr><td><code>geometry.steps[1]</code></td><td>thence southerly then easterly following the fence line to the southeast corner of Lot 341 at the low water mark</td></tr><tr><td><code>geometry.steps[2]</code></td><td>thence westerly following the shoreline at the low water mark to the southwest corner of the Tranquille Wildlife Management Area on the lakeshore at low water mark</td></tr><tr><td><code>geometry.steps[3]</code></td><td>thence northerly and easterly along the western and northern boundary of the Tranquille Wildlife Management Area following the Tranquille and Red Lake road right of way to the point of commencement</td></tr></table>
-
-</section>
-<section><h3>Map</h3><div class="nomap">No shape or placed point to draw.</div><p class="legend"><span class="sw cand"></span> candidate (drawn with a conservative pad) <span class="sw prev"></span> approved version <span class="sw junction"></span> limit junction</p>
-<h3>Validation</h3><table><tr class="fail"><td>✗</td><td>shape built</td><td>no shape could be built</td></tr><tr class="na"><td>–</td><td>step directions match the line</td><td>not run: a walk outline is approximate; a person checks it against the text</td></tr></table>
-
-<h3>Place lookups</h3><table><tr><th>Name</th><th>Layer</th><th>Result</th></tr><tr class="fail"><td>KDYD</td><td><code>-</code></td><td>failed (0) no official layer for area type other</td></tr></table>
-</section></div>
-<details><summary>Extractions (run1, run2)</summary><div class="runs"><div><h4>run1</h4><pre>{
- &quot;task_id&quot;: &quot;closed_area-ce38456662f3&quot;,
- &quot;run&quot;: 1,
- &quot;mode&quot;: &quot;agent&quot;,
- &quot;model&quot;: &quot;Claude Code agent mode&quot;,
- &quot;prompt_version&quot;: &quot;closed_area.v1&quot;,
- &quot;schema_id&quot;: &quot;closed_area.v1&quot;,
- &quot;produced_at&quot;: &quot;2026-10-20T21:47:30Z&quot;,
- &quot;answer&quot;: {
-  &quot;effect&quot;: &quot;no_shooting&quot;,
-  &quot;exemptions&quot;: [],
-  &quot;period&quot;: null,
-  &quot;within&quot;: {
-   &quot;type&quot;: &quot;other&quot;,
-   &quot;name&quot;: &quot;KDYD&quot;
-  },
-  &quot;geometry&quot;: {
-   &quot;method&quot;: &quot;metes_and_bounds&quot;,
-   &quot;road&quot;: null,
-   &quot;feature&quot;: null,
-   &quot;buffer_m&quot;: null,
-   &quot;side&quot;: null,
-   &quot;from&quot;: null,
-   &quot;to&quot;: null,
-   &quot;steps&quot;: [
-    {
-     &quot;start&quot;: &quot;the northeast corner of Lot 341&quot;,
-     &quot;direction&quot;: null,
-     &quot;follow&quot;: null,
-     &quot;feature&quot;: null,
-     &quot;side_or_bank&quot;: null,
-     &quot;until&quot;: null,
-     &quot;distance&quot;: null,
-     &quot;quote&quot;: &quot;Commencing at the northeast corner of Lot 341&quot;
-    },
-    {
-     &quot;start&quot;: null,
-     &quot;direction&quot;: &quot;southerly then easterly&quot;,
-     &quot;follow&quot;: &quot;other&quot;,
-     &quot;feature&quot;: null,
-     &quot;side_or_bank&quot;: null,
-     &quot;until&quot;: &quot;the southeast corner of Lot 341 at the low water mark&quot;,
-     &quot;distance&quot;: null,
-     &quot;quote&quot;: &quot;thence southerly then easterly following the fence line to the southeast corner of Lot 341 at the low water mark&quot;
-    },
-    {
-     &quot;start&quot;: null,
-     &quot;direction&quot;: &quot;westerly&quot;,
-     &quot;follow&quot;: &quot;shoreline&quot;,
-     &quot;feature&quot;: null,
-     &quot;side_or_bank&quot;: &quot;at the low water mark&quot;,
-     &quot;until&quot;: &quot;the southwest corner of the Tranquille Wildlife Management Area on the lakeshore at low water mark&quot;,
-     &quot;distance&quot;: null,
-     &quot;quote&quot;: &quot;thence westerly following the shoreline at the low water mark to the southwest corner of the Tranquille Wildlife Management Area on the lakeshore at low water mark&quot;
-    },
-    {
-     &quot;start&quot;: null,
-     &quot;direction&quot;: &quot;northerly and easterly&quot;,
-     &quot;follow&quot;: &quot;road&quot;,
-     &quot;feature&quot;: &quot;Tranquille and Red Lake road&quot;,
-     &quot;side_or_bank&quot;: null,
-     &quot;until&quot;: &quot;the point of commencement&quot;,
-     &quot;distance&quot;: null,
-     &quot;quote&quot;: &quot;thence northerly and easterly along the western and northern boundary of the Tranquille Wildlife Management Area following the Tranquille and Red Lake road right of way to the point of commencement&quot;
-    }
-   ]
-  },
-  &quot;quotes&quot;: [
-   {
-    &quot;field&quot;: &quot;effect&quot;,
-    &quot;quote&quot;: &quot;No Shooting or Hunting Areas&quot;
-   },
-   {
-    &quot;field&quot;: &quot;within&quot;,
-    &quot;quote&quot;: &quot;KDYD&quot;
-   }
-  ],
-  &quot;uncertain&quot;: []
- }
-}</pre></div><div><h4>run2</h4><pre>{
- &quot;task_id&quot;: &quot;closed_area-ce38456662f3&quot;,
- &quot;run&quot;: 2,
- &quot;mode&quot;: &quot;agent&quot;,
- &quot;model&quot;: &quot;Claude Code agent mode, fresh subagent&quot;,
- &quot;prompt_version&quot;: &quot;closed_area.v1&quot;,
- &quot;schema_id&quot;: &quot;closed_area.v1&quot;,
- &quot;produced_at&quot;: &quot;2026-10-20T21:47:30Z&quot;,
- &quot;answer&quot;: {
-  &quot;effect&quot;: &quot;no_shooting&quot;,
-  &quot;exemptions&quot;: [],
-  &quot;period&quot;: null,
-  &quot;within&quot;: {
-   &quot;type&quot;: &quot;other&quot;,
-   &quot;name&quot;: &quot;KDYD&quot;
-  },
-  &quot;geometry&quot;: {
-   &quot;method&quot;: &quot;metes_and_bounds&quot;,
-   &quot;road&quot;: null,
-   &quot;feature&quot;: null,
-   &quot;buffer_m&quot;: null,
-   &quot;side&quot;: null,
-   &quot;from&quot;: null,
-   &quot;to&quot;: null,
-   &quot;steps&quot;: [
-    {
-     &quot;start&quot;: &quot;the northeast corner of Lot 341&quot;,
-     &quot;direction&quot;: null,
-     &quot;follow&quot;: null,
-     &quot;feature&quot;: null,
-     &quot;side_or_bank&quot;: null,
-     &quot;until&quot;: null,
-     &quot;distance&quot;: null,
-     &quot;quote&quot;: &quot;Commencing at the northeast corner of Lot 341&quot;
-    },
-    {
-     &quot;start&quot;: null,
-     &quot;direction&quot;: &quot;southerly then easterly&quot;,
-     &quot;follow&quot;: &quot;other&quot;,
-     &quot;feature&quot;: null,
-     &quot;side_or_bank&quot;: null,
-     &quot;until&quot;: &quot;the southeast corner of Lot 341 at the low water mark&quot;,
-     &quot;distance&quot;: null,
-     &quot;quote&quot;: &quot;thence southerly then easterly following the fence line to the southeast corner of Lot 341 at the low water mark&quot;
-    },
-    {
-     &quot;start&quot;: null,
-     &quot;direction&quot;: &quot;westerly&quot;,
-     &quot;follow&quot;: &quot;shoreline&quot;,
-     &quot;feature&quot;: null,
-     &quot;side_or_bank&quot;: &quot;at the low water mark&quot;,
-     &quot;until&quot;: &quot;the southwest corner of the Tranquille Wildlife Management Area on the lakeshore at low water mark&quot;,
-     &quot;distance&quot;: null,
-     &quot;quote&quot;: &quot;thence westerly following the shoreline at the low water mark to the southwest corner of the Tranquille Wildlife Management Area on the lakeshore at low water mark&quot;
-    },
-    {
-     &quot;start&quot;: null,
-     &quot;direction&quot;: &quot;northerly and easterly&quot;,
-     &quot;follow&quot;: &quot;road&quot;,
-     &quot;feature&quot;: &quot;Tranquille and Red Lake road&quot;,
-     &quot;side_or_bank&quot;: null,
-     &quot;until&quot;: &quot;the point of commencement&quot;,
-     &quot;distance&quot;: null,
-     &quot;quote&quot;: &quot;thence northerly and easterly along the western and northern boundary of the Tranquille Wildlife Management Area following the Tranquille and Red Lake road right of way to the point of commencement&quot;
-    }
-   ]
-  },
-  &quot;quotes&quot;: [
-   {
-    &quot;field&quot;: &quot;effect&quot;,
-    &quot;quote&quot;: &quot;No Shooting or Hunting Areas&quot;
-   },
-   {
-    &quot;field&quot;: &quot;within&quot;,
-    &quot;quote&quot;: &quot;KDYD&quot;
-   },
-   {
-    &quot;field&quot;: &quot;geometry.method&quot;,
-    &quot;quote&quot;: &quot;Commencing at the northeast corner of Lot 341&quot;
-   },
-   {
-    &quot;field&quot;: &quot;geometry.steps[0]&quot;,
-    &quot;quote&quot;: &quot;Commencing at the northeast corner of Lot 341&quot;
-   },
-   {
-    &quot;field&quot;: &quot;geometry.steps[1]&quot;,
-    &quot;quote&quot;: &quot;thence southerly then easterly following the fence line to the southeast corner of Lot 341 at the low water mark&quot;
-   },
-   {
-    &quot;field&quot;: &quot;geometry.steps[2]&quot;,
-    &quot;quote&quot;: &quot;thence westerly following the shoreline at the low water mark to the southwest corner of the Tranquille Wildlife Management Area on the lakeshore at low water mark&quot;
-   },
-   {
-    &quot;field&quot;: &quot;geometry.steps[3]&quot;,
-    &quot;quote&quot;: &quot;thence northerly and easterly along the western and northern boundary of the Tranquille Wildlife Management Area following the Tranquille and Red Lake road right of way to the point of commencement&quot;
-   }
-  ],
-  &quot;uncertain&quot;: []
- }
-}</pre></div></div></details>
-
-<p class="cmd">Person only: <code>make approve ITEM=closed-area-96700fed81 BY=&lt;initials&gt;</code> or <code>make approve ITEM=closed-area-96700fed81 BY=&lt;initials&gt; DECISION=reject NOTE="why"</code></p>
 </article>
 <article id="closed-area-54ce4bdcc7" class="item open">
 <header><h2>Closed Areas Regulation, Schedule 3, section 23 (Mt. Bergeron — Tumbler Ridge)</h2><div><span class="badge new">new</span> <span class="badge closed_area">closed area</span> <code>W3-023</code> <span class="status">open</span></div></header>
@@ -16205,6 +16005,214 @@ Argenta Marsh Wildlife Management Area
 }</pre></div></div></details>
 
 <p class="cmd">Person only: <code>make approve ITEM=closed-area-89bc80f69b BY=&lt;initials&gt;</code> or <code>make approve ITEM=closed-area-89bc80f69b BY=&lt;initials&gt; DECISION=reject NOTE="why"</code></p>
+</article>
+<article id="closed-area-96700fed81" class="item approved">
+<header><h2>Closed Areas Regulation, Schedule 3, section 2 (Tranquille Wildlife Management Area)</h2><div><span class="badge new">new</span> <span class="badge closed_area">closed area</span> <code>W3-002</code> <span class="status">approved by Arsh on 2026-10-28</span></div></header>
+<p class="decision"><strong>Decision needed:</strong> Check the shape against the text and the map, then approve or reject the candidate.</p>
+<ul class="why"><li>named area &quot;KDYD&quot;: failed (no official layer for area type other)</li><li>the geometry builder does not draw &quot;metes_and_bounds&quot; descriptions yet; a digitiser draws this shape with the extracted steps pre-filled</li><li>&quot;Tranquille and Red Lake road&quot; was not found in the official layers; that side is drawn straight</li><li>approximate zone around the places the section names</li><li>a zone around the places the section names (Tranquille): 1 km around the named points; not the boundary</li></ul>
+
+
+<div class="grid"><section><h3>Source text</h3><p class="meta">BC Laws consolidation current to October 13, 2026 · <a href="https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi">source</a></p>
+<blockquote>Schedule 3 <mark>No Shooting or Hunting Areas</mark> (Section 4)
+Tranquille Wildlife Management Area
+2 That portion of the Province of British Columbia in the vicinity of the City of Kamloops, <mark>KDYD</mark>, which is contained within the following described boundaries: <mark>Commencing at the northeast corner of Lot 341</mark>; <mark>thence southerly then easterly following the fence line to the southeast corner of Lot 341 at the low water mark</mark>; <mark>thence westerly following the shoreline at the low water mark to the southwest corner of the Tranquille Wildlife Management Area on the lakeshore at low water mark</mark>; <mark>thence northerly and easterly along the western and northern boundary of the Tranquille Wildlife Management Area following the Tranquille and Red Lake road right of way to the point of commencement</mark>. [en. B.C. Reg. 205/94, s. 2.]</blockquote>
+<table><tr><th>Field</th><th>Quote</th></tr><tr><td><code>within</code></td><td>KDYD</td></tr><tr><td><code>effect</code></td><td>No Shooting or Hunting Areas</td></tr><tr><td><code>geometry.steps[0]</code></td><td>Commencing at the northeast corner of Lot 341</td></tr><tr><td><code>geometry.steps[1]</code></td><td>thence southerly then easterly following the fence line to the southeast corner of Lot 341 at the low water mark</td></tr><tr><td><code>geometry.steps[2]</code></td><td>thence westerly following the shoreline at the low water mark to the southwest corner of the Tranquille Wildlife Management Area on the lakeshore at low water mark</td></tr><tr><td><code>geometry.steps[3]</code></td><td>thence northerly and easterly along the western and northern boundary of the Tranquille Wildlife Management Area following the Tranquille and Red Lake road right of way to the point of commencement</td></tr></table>
+
+</section>
+<section><h3>Map</h3><svg viewBox="0 0 520 420" width="100%" role="img" aria-label="Map of the built shape">
+<rect width="520" height="420" class="bg"/>
+
+<path d="M20.3,305.6L20.0,314.1L20.5,322.6L21.8,331.0L24.0,339.2L26.9,347.2L30.6,354.9L35.0,362.1L40.2,368.9L45.9,375.2L52.3,380.8L59.2,385.8L66.5,390.1L74.2,393.7L82.3,396.5L90.5,398.5L98.9,399.7L107.4,400.0L115.9,399.5L124.3,398.2L132.6,396.0L140.5,393.1L148.2,389.4L155.4,385.0L162.2,379.8L168.5,374.1L174.1,367.7L179.1,360.8L183.4,353.5L187.0,345.8L189.8,337.7L191.8,329.5L193.0,321.0L211.5,114.4L211.8,105.9L211.3,97.4L210.0,89.0L207.9,80.8L204.9,72.8L201.2,65.1L196.8,57.9L191.7,51.1L185.9,44.8L179.5,39.2L172.6,34.2L165.3,29.9L157.6,26.3L149.5,23.5L141.3,21.5L132.8,20.3L124.3,20.0L115.8,20.5L107.4,21.8L99.2,24.0L91.2,26.9L83.6,30.6L76.3,35.0L69.5,40.2L63.3,45.9L57.6,52.3L52.6,59.2L48.3,66.5L44.7,74.2L41.9,82.3L39.9,90.5L38.8,99.0L20.3,305.6Z" class="cand"/>
+
+
+<line x1="20" y1="412" x2="106.6" y2="412" class="bar"/><text x="110.6" y="416" class="lbl">1000 m</text>
+<text x="504" y="20" class="lbl">N↑</text>
+</svg><p class="legend"><span class="sw cand"></span> candidate (drawn with a conservative pad) <span class="sw prev"></span> approved version <span class="sw junction"></span> limit junction</p>
+<h3>Validation</h3><table><tr class="ok"><td>✓</td><td>ring closes</td><td>largest gap 0.0 m (limit 25 m)</td></tr><tr class="ok"><td>✓</td><td>no self-crossing</td><td>none</td></tr><tr class="ok"><td>✓</td><td>area in expected range</td><td>7.924 km² (limit 500 km²)</td></tr><tr class="na"><td>–</td><td>inside the area the text names</td><td>the text names no area, or it could not be found</td></tr><tr class="na"><td>–</td><td>overlaps the synopsis map shape</td><td>no synopsis shape in inbox/synopsis for this area yet</td></tr><tr class="ok"><td>✓</td><td>two independent extractions agree</td><td>same landmarks, distances and effect</td></tr><tr class="na"><td>–</td><td>step directions match the line</td><td>not run: a walk outline is approximate; a person checks it against the text</td></tr></table>
+<h3>How the shape was built</h3><ol><li>approximate zone: a zone around the places the section names (Tranquille): 1 km around the named points; not the boundary <q>Commencing at the northeast corner of Lot 341</q> <span class="meta">(WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP)</span></li></ol>
+<h3>Place lookups</h3><table><tr><th>Name</th><th>Layer</th><th>Result</th></tr><tr class="fail"><td>KDYD</td><td><code>-</code></td><td>failed (0) no official layer for area type other</td></tr></table>
+</section></div>
+<details><summary>Extractions (run1, run2)</summary><div class="runs"><div><h4>run1</h4><pre>{
+ &quot;task_id&quot;: &quot;closed_area-ce38456662f3&quot;,
+ &quot;run&quot;: 1,
+ &quot;mode&quot;: &quot;agent&quot;,
+ &quot;model&quot;: &quot;Claude Code agent mode&quot;,
+ &quot;prompt_version&quot;: &quot;closed_area.v1&quot;,
+ &quot;schema_id&quot;: &quot;closed_area.v1&quot;,
+ &quot;produced_at&quot;: &quot;2026-10-20T21:47:30Z&quot;,
+ &quot;answer&quot;: {
+  &quot;effect&quot;: &quot;no_shooting&quot;,
+  &quot;exemptions&quot;: [],
+  &quot;period&quot;: null,
+  &quot;within&quot;: {
+   &quot;type&quot;: &quot;other&quot;,
+   &quot;name&quot;: &quot;KDYD&quot;
+  },
+  &quot;geometry&quot;: {
+   &quot;method&quot;: &quot;metes_and_bounds&quot;,
+   &quot;road&quot;: null,
+   &quot;feature&quot;: null,
+   &quot;buffer_m&quot;: null,
+   &quot;side&quot;: null,
+   &quot;from&quot;: null,
+   &quot;to&quot;: null,
+   &quot;steps&quot;: [
+    {
+     &quot;start&quot;: &quot;the northeast corner of Lot 341&quot;,
+     &quot;direction&quot;: null,
+     &quot;follow&quot;: null,
+     &quot;feature&quot;: null,
+     &quot;side_or_bank&quot;: null,
+     &quot;until&quot;: null,
+     &quot;distance&quot;: null,
+     &quot;quote&quot;: &quot;Commencing at the northeast corner of Lot 341&quot;
+    },
+    {
+     &quot;start&quot;: null,
+     &quot;direction&quot;: &quot;southerly then easterly&quot;,
+     &quot;follow&quot;: &quot;other&quot;,
+     &quot;feature&quot;: null,
+     &quot;side_or_bank&quot;: null,
+     &quot;until&quot;: &quot;the southeast corner of Lot 341 at the low water mark&quot;,
+     &quot;distance&quot;: null,
+     &quot;quote&quot;: &quot;thence southerly then easterly following the fence line to the southeast corner of Lot 341 at the low water mark&quot;
+    },
+    {
+     &quot;start&quot;: null,
+     &quot;direction&quot;: &quot;westerly&quot;,
+     &quot;follow&quot;: &quot;shoreline&quot;,
+     &quot;feature&quot;: null,
+     &quot;side_or_bank&quot;: &quot;at the low water mark&quot;,
+     &quot;until&quot;: &quot;the southwest corner of the Tranquille Wildlife Management Area on the lakeshore at low water mark&quot;,
+     &quot;distance&quot;: null,
+     &quot;quote&quot;: &quot;thence westerly following the shoreline at the low water mark to the southwest corner of the Tranquille Wildlife Management Area on the lakeshore at low water mark&quot;
+    },
+    {
+     &quot;start&quot;: null,
+     &quot;direction&quot;: &quot;northerly and easterly&quot;,
+     &quot;follow&quot;: &quot;road&quot;,
+     &quot;feature&quot;: &quot;Tranquille and Red Lake road&quot;,
+     &quot;side_or_bank&quot;: null,
+     &quot;until&quot;: &quot;the point of commencement&quot;,
+     &quot;distance&quot;: null,
+     &quot;quote&quot;: &quot;thence northerly and easterly along the western and northern boundary of the Tranquille Wildlife Management Area following the Tranquille and Red Lake road right of way to the point of commencement&quot;
+    }
+   ]
+  },
+  &quot;quotes&quot;: [
+   {
+    &quot;field&quot;: &quot;effect&quot;,
+    &quot;quote&quot;: &quot;No Shooting or Hunting Areas&quot;
+   },
+   {
+    &quot;field&quot;: &quot;within&quot;,
+    &quot;quote&quot;: &quot;KDYD&quot;
+   }
+  ],
+  &quot;uncertain&quot;: []
+ }
+}</pre></div><div><h4>run2</h4><pre>{
+ &quot;task_id&quot;: &quot;closed_area-ce38456662f3&quot;,
+ &quot;run&quot;: 2,
+ &quot;mode&quot;: &quot;agent&quot;,
+ &quot;model&quot;: &quot;Claude Code agent mode, fresh subagent&quot;,
+ &quot;prompt_version&quot;: &quot;closed_area.v1&quot;,
+ &quot;schema_id&quot;: &quot;closed_area.v1&quot;,
+ &quot;produced_at&quot;: &quot;2026-10-20T21:47:30Z&quot;,
+ &quot;answer&quot;: {
+  &quot;effect&quot;: &quot;no_shooting&quot;,
+  &quot;exemptions&quot;: [],
+  &quot;period&quot;: null,
+  &quot;within&quot;: {
+   &quot;type&quot;: &quot;other&quot;,
+   &quot;name&quot;: &quot;KDYD&quot;
+  },
+  &quot;geometry&quot;: {
+   &quot;method&quot;: &quot;metes_and_bounds&quot;,
+   &quot;road&quot;: null,
+   &quot;feature&quot;: null,
+   &quot;buffer_m&quot;: null,
+   &quot;side&quot;: null,
+   &quot;from&quot;: null,
+   &quot;to&quot;: null,
+   &quot;steps&quot;: [
+    {
+     &quot;start&quot;: &quot;the northeast corner of Lot 341&quot;,
+     &quot;direction&quot;: null,
+     &quot;follow&quot;: null,
+     &quot;feature&quot;: null,
+     &quot;side_or_bank&quot;: null,
+     &quot;until&quot;: null,
+     &quot;distance&quot;: null,
+     &quot;quote&quot;: &quot;Commencing at the northeast corner of Lot 341&quot;
+    },
+    {
+     &quot;start&quot;: null,
+     &quot;direction&quot;: &quot;southerly then easterly&quot;,
+     &quot;follow&quot;: &quot;other&quot;,
+     &quot;feature&quot;: null,
+     &quot;side_or_bank&quot;: null,
+     &quot;until&quot;: &quot;the southeast corner of Lot 341 at the low water mark&quot;,
+     &quot;distance&quot;: null,
+     &quot;quote&quot;: &quot;thence southerly then easterly following the fence line to the southeast corner of Lot 341 at the low water mark&quot;
+    },
+    {
+     &quot;start&quot;: null,
+     &quot;direction&quot;: &quot;westerly&quot;,
+     &quot;follow&quot;: &quot;shoreline&quot;,
+     &quot;feature&quot;: null,
+     &quot;side_or_bank&quot;: &quot;at the low water mark&quot;,
+     &quot;until&quot;: &quot;the southwest corner of the Tranquille Wildlife Management Area on the lakeshore at low water mark&quot;,
+     &quot;distance&quot;: null,
+     &quot;quote&quot;: &quot;thence westerly following the shoreline at the low water mark to the southwest corner of the Tranquille Wildlife Management Area on the lakeshore at low water mark&quot;
+    },
+    {
+     &quot;start&quot;: null,
+     &quot;direction&quot;: &quot;northerly and easterly&quot;,
+     &quot;follow&quot;: &quot;road&quot;,
+     &quot;feature&quot;: &quot;Tranquille and Red Lake road&quot;,
+     &quot;side_or_bank&quot;: null,
+     &quot;until&quot;: &quot;the point of commencement&quot;,
+     &quot;distance&quot;: null,
+     &quot;quote&quot;: &quot;thence northerly and easterly along the western and northern boundary of the Tranquille Wildlife Management Area following the Tranquille and Red Lake road right of way to the point of commencement&quot;
+    }
+   ]
+  },
+  &quot;quotes&quot;: [
+   {
+    &quot;field&quot;: &quot;effect&quot;,
+    &quot;quote&quot;: &quot;No Shooting or Hunting Areas&quot;
+   },
+   {
+    &quot;field&quot;: &quot;within&quot;,
+    &quot;quote&quot;: &quot;KDYD&quot;
+   },
+   {
+    &quot;field&quot;: &quot;geometry.method&quot;,
+    &quot;quote&quot;: &quot;Commencing at the northeast corner of Lot 341&quot;
+   },
+   {
+    &quot;field&quot;: &quot;geometry.steps[0]&quot;,
+    &quot;quote&quot;: &quot;Commencing at the northeast corner of Lot 341&quot;
+   },
+   {
+    &quot;field&quot;: &quot;geometry.steps[1]&quot;,
+    &quot;quote&quot;: &quot;thence southerly then easterly following the fence line to the southeast corner of Lot 341 at the low water mark&quot;
+   },
+   {
+    &quot;field&quot;: &quot;geometry.steps[2]&quot;,
+    &quot;quote&quot;: &quot;thence westerly following the shoreline at the low water mark to the southwest corner of the Tranquille Wildlife Management Area on the lakeshore at low water mark&quot;
+   },
+   {
+    &quot;field&quot;: &quot;geometry.steps[3]&quot;,
+    &quot;quote&quot;: &quot;thence northerly and easterly along the western and northern boundary of the Tranquille Wildlife Management Area following the Tranquille and Red Lake road right of way to the point of commencement&quot;
+   }
+  ],
+  &quot;uncertain&quot;: []
+ }
+}</pre></div></div></details>
+
+<p class="cmd">Person only: <code>make approve ITEM=closed-area-96700fed81 BY=&lt;initials&gt;</code> or <code>make approve ITEM=closed-area-96700fed81 BY=&lt;initials&gt; DECISION=reject NOTE="why"</code></p>
 </article>
 <article id="closed-area-6f2b779d96" class="item approved">
 <header><h2>Closed Areas Regulation, Schedule 3, section 22 (Pitt Wildlife Management Area)</h2><div><span class="badge new">new</span> <span class="badge closed_area">closed area</span> <code>W3-022</code> <span class="status">approved by Arsh on 2026-10-28</span></div></header>

@@ -1,6 +1,6 @@
 # Review packet 2026-10
 
-Open the HTML packet for maps and both runs: `review/2026-10/index.html`. 48 open item(s). Approve with `make approve ITEM=<id> BY=<initials>` (people only).
+Open the HTML packet for maps and both runs: `review/2026-10/index.html`. 47 open item(s). Approve with `make approve ITEM=<id> BY=<initials>` (people only).
 
 | Item | Kind | Change | Title | Why | Status |
 | --- | --- | --- | --- | --- | --- |
@@ -11,7 +11,6 @@ Open the HTML packet for maps and both runs: `review/2026-10/index.html`. 48 ope
 | `closed-area-07278855d6` | closed_area | new | Closed Areas Regulation, Schedule 2, section 1 (Stum Lake) | named lake "Stum Lake": none; the larger area is not drawn in its place | open |
 | `closed-area-c1fd07e5f7` | closed_area | new | Closed Areas Regulation, Schedule 3, section 15 (Walter Clough Wildlife Manageme | District Lots 381, 382 (KOOTENAY): the text names part of these lots | open |
 | `closed-area-e24ded4794` | closed_area | new | Closed Areas Regulation, Schedule 3, section 19 (The Province) | named area "British Columbia": failed (no official layer for area type other) | open |
-| `closed-area-96700fed81` | closed_area | new | Closed Areas Regulation, Schedule 3, section 2 (Tranquille Wildlife Management A | named area "KDYD": failed (no official layer for area type other) | open |
 | `closed-area-54ce4bdcc7` | closed_area | new | Closed Areas Regulation, Schedule 3, section 23 (Mt. Bergeron — Tumbler Ridge) | AI runs disagree: steps: run 1 ["/the summit of mt. bergeron//straight_line","/a point on the middle thread of bullmoose | open |
 | `closed-area-e4d86f1eb7` | closed_area | new | Closed Areas Regulation, Schedule 3, section 31 (Roderick Haig-Brown Recreation  | AI runs disagree: from: run 1 null vs run 2 "adams river bridge" | open |
 | `closed-area-a078a28ecb` | closed_area | new | Closed Areas Regulation, Schedule 3, section 38 (Okanagan Connector Highway) | road "Coquihalla Phase III (Okanagan Connector) Highway": none | open |
@@ -81,6 +80,7 @@ Open the HTML packet for maps and both runs: `review/2026-10/index.html`. 48 ope
 | `closed-area-21ce779919` | closed_area | new | Closed Areas Regulation, Schedule 3, section 13 (Tabor Mountain) | AI runs disagree: steps: run 1 ["///","willow river/a point between its confluence with bowes creek and its confluence w | approved |
 | `closed-area-770d66a649` | closed_area | new | Closed Areas Regulation, Schedule 3, section 16 (Argenta Marsh Wildlife Manageme | District Lot 1884 (KOOTENAY): the text names part of these lots | approved |
 | `closed-area-89bc80f69b` | closed_area | new | Closed Areas Regulation, Schedule 3, section 17 (North Thormanby Island) | every permanent boundary is reviewed by a person (Addendum A 3) | approved |
+| `closed-area-96700fed81` | closed_area | new | Closed Areas Regulation, Schedule 3, section 2 (Tranquille Wildlife Management A | named area "KDYD": failed (no official layer for area type other) | approved |
 | `closed-area-6f2b779d96` | closed_area | new | Closed Areas Regulation, Schedule 3, section 22 (Pitt Wildlife Management Area) | AI runs disagree: steps: run 1 ["///","pitt river/a point due west of the coast guard navigation marker on the natural b | approved |
 | `closed-area-edf3a10269` | closed_area | new | Closed Areas Regulation, Schedule 3, section 24 (Kamloops) | named area "3-19, 3-10, 3-17 and 3-28": none (management unit 3-10 not found) | approved |
 | `closed-area-1908b49149` | closed_area | new | Closed Areas Regulation, Schedule 3, section 25 (Stone Mountain) | 3 separate roads with this name in the area and no limits to choose one | approved |
