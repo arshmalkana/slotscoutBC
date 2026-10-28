@@ -1,0 +1,175 @@
+{
+  "task_id": "bylaw-72c56a8d94c3",
+  "run": 1,
+  "mode": "agent",
+  "model": "Claude Code agent mode",
+  "prompt_version": "bylaw.v1",
+  "schema_id": "bylaw.v1",
+  "produced_at": "2026-10-28T23:06:41.385895Z",
+  "answer": {
+    "bylaw": {
+      "title": "Squamish-Lillooet Regional District Electoral Area A Firearms Bylaw No. 1293-2013",
+      "number": "1293-2013",
+      "adopted_on": "2013-07-22",
+      "amended_by": [
+        "1317-2014",
+        "1490-2016"
+      ]
+    },
+    "definitions": [
+      {
+        "term": "Firearm",
+        "meaning": "the same meaning as in the Firearms Act (British Columbia)",
+        "quote": "“Firearm” or “Firearms” shall have the same meaning as in the Firearms Act (British Columbia) Chapter"
+      },
+      {
+        "term": "Permit",
+        "meaning": "the same meaning as in the Firearms Act (British Columbia)",
+        "quote": "“Permit” shall have the same meaning as in the Firearms Act (British Columbia) Chapter 145 R.S.B.C and Amendments."
+      },
+      {
+        "term": "Chief Provincial Firearms Officer",
+        "meaning": "the same meaning as in the Firearms Act (British Columbia)",
+        "quote": "“Chief Provincial Firearms Officer” shall have the same meaning as in the Firearms Act (British Columbia) Chapter 145 R.S.B.C and Amendments."
+      }
+    ],
+    "prohibitions": [
+      {
+        "what": "discharge a firearm within the limits of the areas defined in Schedule V, W, X, Y, and Z",
+        "firearm_types": [
+          "all_firearms"
+        ],
+        "where": "the areas defined in Schedule V, W, X, Y, and Z attached to and forming part of this bylaw",
+        "quote": "No person may: (a) discharge a firearm within the limits of the areas defined in Schedule V, W, X, Y, and Z attached to and forming part of this bylaw"
+      },
+      {
+        "what": "discharge a firearm on or across a highway or within 100 meters of any school building, school yard, public park, playground, church, cemetery, workshop, place of business, dwelling house, or other place where persons may be assembled or engage in work of any kind",
+        "firearm_types": [
+          "all_firearms"
+        ],
+        "where": "on or across a highway or within 100 meters of any school building, school yard, public park, playground, church, cemetery, workshop, place of business, dwelling house, or other place where persons may be assembled or engage in work of any kind",
+        "quote": "(b) without limiting the foregoing, discharge a firearm on or across a highway or within 100 meters of any school building, school yard, public park, playground, church, cemetery, workshop, place of business, dwelling house, or other place where persons may be assembled or engage in work of any kind."
+      }
+    ],
+    "exceptions": [
+      {
+        "applies_to": "Section 3",
+        "firearm_type": null,
+        "hunting_only": null,
+        "permit": null,
+        "season": null,
+        "quote": "(vi) otherwise authorized by any provincial or federal enactment to possess and to discharge a firearm in the performance of his or her duties, when engaged in his or her official duties"
+      },
+      {
+        "applies_to": "Section 3",
+        "firearm_type": null,
+        "hunting_only": null,
+        "permit": "a permit issued by the Chief Provincial Firearms Officer to discharge a firearm in an indoor shooting range",
+        "season": null,
+        "quote": "(b) who is authorized by a permit issued by the Chief Provincial Firearms Officer to discharge a firearm in an indoor shooting range under the Firearms Act (British Columbia)"
+      },
+      {
+        "applies_to": "Section 3",
+        "firearm_type": null,
+        "hunting_only": null,
+        "permit": "a shooting range approved by the Chief Provincial Firearms Officer",
+        "season": null,
+        "quote": "(c) who is on a shooting range approved by the Chief Provincial Firearms Officer."
+      },
+      {
+        "applies_to": "Section 3",
+        "firearm_type": null,
+        "hunting_only": null,
+        "permit": null,
+        "season": null,
+        "quote": "(d) who is a bonafide farmer or their agent acting on behalf of the farmer in rural zoned properties when engaged in a farm operation and the firearm is discharged for the purpose of protecting his or her crops or livestock from birds or animals, or for the purpose of slaughtering livestock on his or her own property"
+      },
+      {
+        "applies_to": "Section 3",
+        "firearm_type": null,
+        "hunting_only": null,
+        "permit": "licenced guide or outfitter operating with their provincially approved tenure area",
+        "season": null,
+        "quote": "(e) who is a licenced guide or outfitter operating with their provincially approved tenure area and offering limited target practice activities to their registered guests."
+      },
+      {
+        "applies_to": "Section 3",
+        "firearm_type": null,
+        "hunting_only": true,
+        "permit": null,
+        "season": null,
+        "quote": "(f) who is a licenced hunter engaged in authorized hunting activities in accordance with Provincial and Federal regulations."
+      },
+      {
+        "applies_to": "Section 3",
+        "firearm_type": null,
+        "hunting_only": null,
+        "permit": "permission granted by resolution of the Regional Board for a rifle range or trap club",
+        "season": null,
+        "quote": "The Regional Board may by resolution, on receipt of a written application from an approved club or organization, grant permission to the applicant for the operation of rifle range or trap club, or both, within a closed area"
+      }
+    ],
+    "distance_rules": [
+      {
+        "distance_m": 100,
+        "from_what": "any school building, school yard, public park, playground, church, cemetery, workshop, place of business, dwelling house, or other place where persons may be assembled or engage in work of any kind",
+        "quote": "within 100 meters of any school building, school yard, public park, playground, church, cemetery, workshop, place of business, dwelling house, or other place where persons may be assembled or engage in work of any kind"
+      }
+    ],
+    "schedule_maps": [
+      {
+        "name": "Schedule V",
+        "description": "No Shooting Areas, SLRD Electoral Area A",
+        "quote": "Schedule V No Shooting Areas Bylaw No. 1293-2013 SLRD Electoral Area A"
+      },
+      {
+        "name": "Schedule W",
+        "description": "No Shooting Area",
+        "quote": "SCHEDULE W FIREARMS BYLAW NO. 1293 SQUAMISH - LILLOOET REGIONAL DISTRICT"
+      },
+      {
+        "name": "Schedule X (Gun Lake)",
+        "description": "No Shooting Area, Gun Lake",
+        "quote": "SCHEDULE X (GUN LAKE) FIREARMS BYLAW NO. 1293"
+      },
+      {
+        "name": "Schedule Y (Gold Bridge)",
+        "description": "No Shooting Area, Gold Bridge",
+        "quote": "SCHEDULE Y (GOLD BRIDGE) FIREARMS BYLAW NO. 1293"
+      },
+      {
+        "name": "Schedule Z (Ogden-Bralorne)",
+        "description": "No Shooting Area, Ogden-Bralorne",
+        "quote": "SCHEDULE Z (OGDEN-BRALORNE) FIREARMS BYLAW NO. 1293"
+      }
+    ],
+    "target_shooting": "zoned",
+    "quotes": [
+      {
+        "field": "bylaw.title",
+        "quote": "Squamish-Lillooet Regional District Electoral Area A Firearms Bylaw No. 1293-2013"
+      },
+      {
+        "field": "bylaw.number",
+        "quote": "BYLAW NO. 1293-2013"
+      },
+      {
+        "field": "bylaw.adopted_on",
+        "quote": "ADOPTED this 22nd day of JULY, 2013."
+      },
+      {
+        "field": "bylaw.amended_by",
+        "quote": "1317-2014 An amendment to the firearms Bylaw that imposes"
+      },
+      {
+        "field": "bylaw.amended_by",
+        "quote": "1490-2016 An amendment to the firearms Bylaw that prohibits the"
+      },
+      {
+        "field": "target_shooting",
+        "quote": "No person may: (a) discharge a firearm within the limits of the areas defined in Schedule V, W, X, Y, and Z attached to and forming part of this bylaw"
+      }
+    ],
+    "uncertain": []
+  }
+}
