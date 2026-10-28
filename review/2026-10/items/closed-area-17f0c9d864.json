@@ -5,10 +5,10 @@
   "title": "Closed Areas Regulation, Schedule 5, section 87 (Mascot Gold Mines Limited)",
   "rule_id": "W5-087",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "approximate outline (traced) drawn from the places the walk names"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nMascot Gold Mines Limited\n87 Commencing at the point of intersection of the midline of the Apex Alpine to Nickel Plate Road and the midline of Sunset Creek; thence in a general southerly direction along the midline of Sunset Creek to the point of intersection with the midline of Cahill Creek; thence in a general southerly direction along the midline of Cahill Creek to the point of intersection with the midline of Hedley-Nickel Plate Road; thence in a general southerly direction along the midline of the said road a distance of 3 290 m; thence due West 1 525 m; thence due North 3 900 m to a point due West of the apex of Lookout Mountain; thence due East to the apex of Lookout Mountain; thence more or less east in a straight line to the point of commencement. [en. B.C. Reg. 162/87, s. 23.]",
@@ -305,9 +305,34 @@
   "lookups": [],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "7.132 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     },
     {
       "check": "step directions match the line",
@@ -315,8 +340,330 @@
       "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at the point of intersection of the midline of the Apex Alpine to Nickel Plate Road and the midline of Sunset Creek",
+      "source": "WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP, WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -120.02717139591537,
+            49.336891286864024
+          ],
+          [
+            -120.02696679926797,
+            49.33692698623368
+          ],
+          [
+            -120.02672392334941,
+            49.33698576879059
+          ],
+          [
+            -120.02650218633035,
+            49.33707309328658
+          ],
+          [
+            -120.02630940209714,
+            49.33718588250807
+          ],
+          [
+            -120.02295369482691,
+            49.33955575313689
+          ],
+          [
+            -120.02285194969078,
+            49.33963655936469
+          ],
+          [
+            -120.02274744869112,
+            49.33973015835833
+          ],
+          [
+            -120.02267174988043,
+            49.3398056440996
+          ],
+          [
+            -119.99386122723342,
+            49.37192185783205
+          ],
+          [
+            -119.9937516022836,
+            49.37207563066046
+          ],
+          [
+            -119.99368824511507,
+            49.37224006757158
+          ],
+          [
+            -119.99367340768616,
+            49.37240932506268
+          ],
+          [
+            -119.99370761776943,
+            49.372577388264276
+          ],
+          [
+            -119.99378966012668,
+            49.37273828468735
+          ],
+          [
+            -119.99391661962643,
+            49.372886296473155
+          ],
+          [
+            -119.9940839847826,
+            49.3730161636019
+          ],
+          [
+            -119.99903217660494,
+            49.37619199497664
+          ],
+          [
+            -119.99919505114887,
+            49.37628148870208
+          ],
+          [
+            -120.00415121664838,
+            49.37860318318052
+          ],
+          [
+            -120.00437111400909,
+            49.37868729888191
+          ],
+          [
+            -120.00461101671614,
+            49.37874365950547
+          ],
+          [
+            -120.00486274592508,
+            49.37877034357298
+          ],
+          [
+            -120.00511771953218,
+            49.37876644135385
+          ],
+          [
+            -120.00536724480571,
+            49.37873208588516
+          ],
+          [
+            -120.01057862710445,
+            49.37767920748933
+          ],
+          [
+            -120.01063430501878,
+            49.37766710691808
+          ],
+          [
+            -120.01083789807775,
+            49.377619706101584
+          ],
+          [
+            -120.01084883521703,
+            49.37761712581797
+          ],
+          [
+            -120.02397633026463,
+            49.37447837191607
+          ],
+          [
+            -120.02412833989537,
+            49.374435104674816
+          ],
+          [
+            -120.02451504455198,
+            49.374306502579635
+          ],
+          [
+            -120.02480558311649,
+            49.374177081538775
+          ],
+          [
+            -120.02512949402876,
+            49.373989178972295
+          ],
+          [
+            -120.0253607806749,
+            49.3738157131349
+          ],
+          [
+            -120.02559477768536,
+            49.373586610814186
+          ],
+          [
+            -120.02576361556362,
+            49.37335557945712
+          ],
+          [
+            -120.02588669931525,
+            49.37309777805727
+          ],
+          [
+            -120.02592074506566,
+            49.37301165685281
+          ],
+          [
+            -120.03271897666743,
+            49.351439477552226
+          ],
+          [
+            -120.0327407985284,
+            49.351344902240875
+          ],
+          [
+            -120.03279548828796,
+            49.3509749015929
+          ],
+          [
+            -120.03280179938433,
+            49.35089591035842
+          ],
+          [
+            -120.03295552851493,
+            49.338388468539605
+          ],
+          [
+            -120.03293215097483,
+            49.33821629254118
+          ],
+          [
+            -120.03285865417432,
+            49.33805021078603
+          ],
+          [
+            -120.03273775356688,
+            49.33789635832066
+          ],
+          [
+            -120.03257391558657,
+            49.33776041838796
+          ],
+          [
+            -120.03237319261063,
+            49.337647412505824
+          ],
+          [
+            -120.03214299936357,
+            49.33756151499444
+          ],
+          [
+            -120.031891839025,
+            49.33750589879992
+          ],
+          [
+            -120.02784492701655,
+            49.33688464984924
+          ],
+          [
+            -120.02762087365508,
+            49.33686270055437
+          ],
+          [
+            -120.02739432827366,
+            49.33686493294577
+          ],
+          [
+            -120.02717139591537,
+            49.336891286864024
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-087",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 87",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nMascot Gold Mines Limited\n87 Commencing at the point of intersection of the midline of the Apex Alpine to Nickel Plate Road and the midline of Sunset Creek; thence in a general southerly direction along the midline of Sunset Creek to the point of intersection with the midline of Cahill Creek; thence in a general southerly direction along the midline of Cahill Creek to the point of intersection with the midline of Hedley-Nickel Plate Road; thence in a general southerly direction along the midline of the said road a distance of 3 290 m; thence due West 1 525 m; thence due North 3 900 m to a point due West of the apex of Lookout Mountain; thence due East to the apex of Lookout Mountain; thence more or less east in a straight line to the point of commencement. [en. B.C. Reg. 162/87, s. 23.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "traced",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "effect": "No Shooting Areas",
+        "geometry.steps[0]": "Commencing at the point of intersection of the midline of the Apex Alpine to Nickel Plate Road and the midline of Sunset Creek",
+        "geometry.steps[1]": "thence in a general southerly direction along the midline of Sunset Creek to the point of intersection with the midline of Cahill Creek",
+        "geometry.steps[2]": "thence in a general southerly direction along the midline of Cahill Creek to the point of intersection with the midline of Hedley-Nickel Plate Road",
+        "geometry.steps[3]": "thence in a general southerly direction along the midline of the said road a distance of 3 290 m",
+        "geometry.steps[4]": "thence due West 1 525 m",
+        "geometry.steps[5]": "thence due North 3 900 m to a point due West of the apex of Lookout Mountain",
+        "geometry.steps[6]": "thence due East to the apex of Lookout Mountain",
+        "geometry.steps[7]": "thence more or less east in a straight line to the point of commencement"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "d9c45470876ba15c709689c553d23f344eaa6c47b1ee8a344f50dbc855b05733",
+      "task_id": "closed_area-d9c45470876b",
+      "construction": [
+        {
+          "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+          "quote": "Commencing at the point of intersection of the midline of the Apex Alpine to Nickel Plate Road and the midline of Sunset Creek",
+          "source": "WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP, WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "7.132 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": null,
+          "detail": "the text names no area, or it could not be found"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:10:21.684Z",
-  "updated": "2026-10-21T16:10:21.684Z"
+  "updated": "2026-10-28T17:26:15.257Z"
 }

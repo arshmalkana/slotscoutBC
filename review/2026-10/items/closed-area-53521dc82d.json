@@ -5,11 +5,16 @@
   "title": "Closed Areas Regulation, Schedule 4, section 3 (Pitt Wildlife Management Area)",
   "rule_id": "W4-003",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: within: run 1 null vs run 2 \"nwd\"",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "approximate outline (traced) drawn from the places the walk names, using run 1's reading of the steps",
+    "\"Coquitlam District Municipal Boundary\" was not found in the official layers; that side is drawn straight",
+    "\"dyke\" was not found in the official layers; that side is drawn straight",
+    "\"Maple Ridge District Municipal Boundary\" was not found in the official layers; that side is drawn straight",
+    "\"dyke\" was not found in the official layers; that side is drawn straight",
+    "validation failed: two independent extractions agree (within: run 1 null vs run 2 \"nwd\")"
   ],
   "source": {
     "text": "Schedule 4 Seasonal No Shooting or Hunting Areas (Section 5)\nPitt Wildlife Management Area\n3 (1)Repealed. [B.C. Reg. 235/97, s. 2.] (2)That portion of the Province of British Columbia in the vicinity of Pitt Lake, NWD, within the following described boundaries: Commencing at the intersection of Koerner Road and Rannie Road and proceeding due West to the easterly Coquitlam District Municipal Boundary; thence proceeding northerly and northeasterly along the boundary to the northern boundary of the Coquitlam District Municipality; thence proceeding southeasterly to the point where the dyke bordering the eastern side of Fox Reach intersects a dyke running southeasterly from the western end of Grant Narrows; thence proceeding southeasterly, easterly and northeasterly along the southerly and westerly sides of the dyke to the western Maple Ridge District Municipal Boundary; thence proceeding southerly and westerly along the boundary to Koerner Road (also known as the X-Y line); thence proceeding west along Koerner Road to a dyke (completed March 1978) running generally north and northwest from Koerner Road to Rannie Road; thence proceeding north and northwest along the easterly side of the dyke to Rannie Road; thence proceeding southwesterly and southerly along Rannie Road to the point of commencement for the period March 11 to August 31 annually and on Mondays, Tuesdays, Thursdays and Fridays during the period September 1 to March 10 annually. [en. B.C. Reg. 46/89, s. 4; am. B.C. Regs. 190/96, s. 4; 235/97, s. 2.]",
@@ -316,9 +321,34 @@
   "lookups": [],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "2.362 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "within: run 1 null vs run 2 \"nwd\""
     },
     {
       "check": "step directions match the line",
@@ -326,8 +356,270 @@
       "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at the intersection of Koerner Road and Rannie Road and proceeding due West to the easterly Coquitlam District Municipal Boundary",
+      "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -122.64297066156,
+            49.30448832859889
+          ],
+          [
+            -122.64296771602241,
+            49.304686178563735
+          ],
+          [
+            -122.64296766820503,
+            49.30469042166288
+          ],
+          [
+            -122.64292381777459,
+            49.3104209211383
+          ],
+          [
+            -122.64292380184173,
+            49.310424203893916
+          ],
+          [
+            -122.6428921807443,
+            49.32581403351032
+          ],
+          [
+            -122.64291656916643,
+            49.32598357905045
+          ],
+          [
+            -122.64298955717933,
+            49.3261470887674
+          ],
+          [
+            -122.64310852825574,
+            49.32629870000339
+          ],
+          [
+            -122.64326921703515,
+            49.32643297667027
+          ],
+          [
+            -122.64346586221444,
+            49.32654510417717
+          ],
+          [
+            -122.64369141309949,
+            49.32663106207817
+          ],
+          [
+            -122.64393778241408,
+            49.32668776824686
+          ],
+          [
+            -122.64419613630099,
+            49.326713189404956
+          ],
+          [
+            -122.64445721111196,
+            49.32670641403934
+          ],
+          [
+            -122.64471164562019,
+            49.32666768509086
+          ],
+          [
+            -122.64495031673471,
+            49.32659839124194
+          ],
+          [
+            -122.64516466666912,
+            49.32650101711561
+          ],
+          [
+            -122.66519050472033,
+            49.31542423289081
+          ],
+          [
+            -122.66537889164614,
+            49.31529722997903
+          ],
+          [
+            -122.66552555578482,
+            49.31514866881983
+          ],
+          [
+            -122.66562483742578,
+            49.314984282732205
+          ],
+          [
+            -122.66567290558393,
+            49.31481041569611
+          ],
+          [
+            -122.6656679057792,
+            49.31463377751149
+          ],
+          [
+            -122.66561003152232,
+            49.314461184849506
+          ],
+          [
+            -122.66550151676124,
+            49.31429929818995
+          ],
+          [
+            -122.66534654959203,
+            49.31415436479718
+          ],
+          [
+            -122.66515111057696,
+            49.31403197765133
+          ],
+          [
+            -122.64520327926094,
+            49.30379057453807
+          ],
+          [
+            -122.64496784446011,
+            49.30369306285978
+          ],
+          [
+            -122.64470713724886,
+            49.30362843021078
+          ],
+          [
+            -122.64443181893321,
+            49.30359931964586
+          ],
+          [
+            -122.644153148225,
+            49.303606921594366
+          ],
+          [
+            -122.64388252090464,
+            49.303650925187114
+          ],
+          [
+            -122.64363100388347,
+            49.303729530966926
+          ],
+          [
+            -122.64340888270384,
+            49.30383952446313
+          ],
+          [
+            -122.64322524096848,
+            49.30397640762397
+          ],
+          [
+            -122.64308758888815,
+            49.30413458273572
+          ],
+          [
+            -122.64300155613438,
+            49.30430758131208
+          ],
+          [
+            -122.64297066156,
+            49.30448832859889
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W4-003",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 4, s. 3",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 4 Seasonal No Shooting or Hunting Areas (Section 5)\nPitt Wildlife Management Area\n3 (1)Repealed. [B.C. Reg. 235/97, s. 2.] (2)That portion of the Province of British Columbia in the vicinity of Pitt Lake, NWD, within the following described boundaries: Commencing at the intersection of Koerner Road and Rannie Road and proceeding due West to the easterly Coquitlam District Municipal Boundary; thence proceeding northerly and northeasterly along the boundary to the northern boundary of the Coquitlam District Municipality; thence proceeding southeasterly to the point where the dyke bordering the eastern side of Fox Reach intersects a dyke running southeasterly from the western end of Grant Narrows; thence proceeding southeasterly, easterly and northeasterly along the southerly and westerly sides of the dyke to the western Maple Ridge District Municipal Boundary; thence proceeding southerly and westerly along the boundary to Koerner Road (also known as the X-Y line); thence proceeding west along Koerner Road to a dyke (completed March 1978) running generally north and northwest from Koerner Road to Rannie Road; thence proceeding north and northwest along the easterly side of the dyke to Rannie Road; thence proceeding southwesterly and southerly along Rannie Road to the point of commencement for the period March 11 to August 31 annually and on Mondays, Tuesdays, Thursdays and Fridays during the period September 1 to March 10 annually. [en. B.C. Reg. 46/89, s. 4; am. B.C. Regs. 190/96, s. 4; 235/97, s. 2.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting_seasonal",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "traced",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "effect": "Seasonal No Shooting or Hunting Areas",
+        "geometry.steps[0]": "Commencing at the intersection of Koerner Road and Rannie Road and proceeding due West to the easterly Coquitlam District Municipal Boundary",
+        "geometry.steps[1]": "thence proceeding northerly and northeasterly along the boundary to the northern boundary of the Coquitlam District Municipality",
+        "geometry.steps[2]": "thence proceeding southeasterly to the point where the dyke bordering the eastern side of Fox Reach intersects a dyke running southeasterly from the western end of Grant Narrows",
+        "geometry.steps[3]": "thence proceeding southeasterly, easterly and northeasterly along the southerly and westerly sides of the dyke to the western Maple Ridge District Municipal Boundary",
+        "geometry.steps[4]": "thence proceeding southerly and westerly along the boundary to Koerner Road (also known as the X-Y line)",
+        "geometry.steps[5]": "thence proceeding west along Koerner Road to a dyke (completed March 1978) running generally north and northwest from Koerner Road to Rannie Road",
+        "geometry.steps[6]": "thence proceeding north and northwest along the easterly side of the dyke to Rannie Road",
+        "geometry.steps[7]": "thence proceeding southwesterly and southerly along Rannie Road to the point of commencement"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "374aae84b80f13c3ae5a497ccaedca8e0e501150b5dc8f4f28dcfe027a1f08ee",
+      "task_id": "closed_area-374aae84b80f",
+      "construction": [
+        {
+          "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+          "quote": "Commencing at the intersection of Koerner Road and Rannie Road and proceeding due West to the easterly Coquitlam District Municipal Boundary",
+          "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "2.362 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": null,
+          "detail": "the text names no area, or it could not be found"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "within: run 1 null vs run 2 \"nwd\""
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:47:08.004Z",
-  "updated": "2026-10-20T21:47:08.004Z"
+  "updated": "2026-10-28T17:05:54.148Z"
 }

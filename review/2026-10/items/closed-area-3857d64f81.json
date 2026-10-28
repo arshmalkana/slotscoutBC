@@ -5,11 +5,12 @@
   "title": "Closed Areas Regulation, Schedule 5, section 56 (Popkum)",
   "rule_id": "W5-056",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: steps: run 1 [\"|||\",\"district of chilliwack|the intersection of the district boundary with the southerly boundary of the cheam no. 1 indian reserve||district_boundary\",\"cheam no. 1 indian reserve|the southerly natural boundary of the fraser river||reserve_boundary\",\"fraser river|its intersection with the westerly boundary of the popkum no. i indian reserve||river\",\"popkum no. i indian reserve|the most southerly corner of the reserve||reserve_boundary\",\"|a point 400 m southeast of hwy no. 1|400 m|straight_line\",\"hwy no. 1|a point due south of the point of commencement|400 m|road\",\"|the point of commencement||straight_line\"] vs run 2 [\"|||\",\"district of chilliwack|the intersection of the district boundary with the southerly boundary of the cheam no. 1 indian reserve||district_boundary\",\"cheam no. 1 indian reserve|the southerly natural boundary of the fraser river||reserve_boundary\",\"fraser river|its intersection with the westerly boundary of the popkum no. i indian reserve||shoreline\",\"popkum no. i indian reserve|the most southerly corner of the reserve||reserve_boundary\",\"|a point 400 m southeast of hwy no. 1|400 m|straight_line\",\"hwy no. 1|a point due south of the point of commencement|400 m distant|road\",\"|the point of commencement||straight_line\"]",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "approximate outline (corners) drawn from the places the walk names, using run 1's reading of the steps",
+    "validation failed: two independent extractions agree (steps: run 1 [\"|||\",\"district of chilliwack|the intersection of the district boundary with the southerly boundary of the cheam no. 1 indian reserve||district_boundary\",\"cheam no. 1 indian reserve|the southerly natural boundary of the fraser river||reserve_boundary\",\"fraser river|its intersection with the westerly boundary of the popkum no. i indian reserve||river\",\"popkum no. i indian reserve|the most southerly corner of the reserve||reserve_boundary\",\"|a point 400 m southeast of hwy no. 1|400 m|straight_line\",\"hwy no. 1|a point due south of the point of commencement|400 m|road\",\"|the point of commencement||straight_line\"] vs run 2 [\"|||\",\"district of chilliwack|the intersection of the district boundary with the southerly boundary of the cheam no. 1 indian reserve||district_boundary\",\"cheam no. 1 indian reserve|the southerly natural boundary of the fraser river||reserve_boundary\",\"fraser river|its intersection with the westerly boundary of the popkum no. i indian reserve||shoreline\",\"popkum no. i indian reserve|the most southerly corner of the reserve||reserve_boundary\",\"|a point 400 m southeast of hwy no. 1|400 m|straight_line\",\"hwy no. 1|a point due south of the point of commencement|400 m distant|road\",\"|the point of commencement||straight_line\"])"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nPopkum\n56 That portion of the Province of British Columbia contained within the following described boundaries: Commencing at the intersection of the easterly boundary of the District of Chilliwack and Highway No. 1; thence northerly, easterly and northerly along the district boundary to the intersection of the District boundary with the southerly boundary of the Cheam No. 1 Indian Reserve; thence easterly and northerly along the reserve boundary to the southerly natural boundary of the Fraser River: thence easterly along the natural boundary to its intersection with the westerly boundary of the Popkum No. I Indian Reserve; thence southeasterly along the reserve boundary to the most southerly corner of the reserve; thence southeast in a straight line to a point 400 m southeast of Highway No. 1; thence southwesterly parallel to and 400 m distant from the highway to a point due South of the point of commencement; thence northerly to the point of commencement.",
@@ -308,9 +309,34 @@
   "lookups": [],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.829 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "steps: run 1 [\"|||\",\"district of chilliwack|the intersection of the district boundary with the southerly boundary of the cheam no. 1 indian reserve||district_boundary\",\"cheam no. 1 indian reserve|the southerly natural boundary of the fraser river||reserve_boundary\",\"fraser river|its intersection with the westerly boundary of the popkum no. i indian reserve||river\",\"popkum no. i indian reserve|the most southerly corner of the reserve||reserve_boundary\",\"|a point 400 m southeast of hwy no. 1|400 m|straight_line\",\"hwy no. 1|a point due south of the point of commencement|400 m|road\",\"|the point of commencement||straight_line\"] vs run 2 [\"|||\",\"district of chilliwack|the intersection of the district boundary with the southerly boundary of the cheam no. 1 indian reserve||district_boundary\",\"cheam no. 1 indian reserve|the southerly natural boundary of the fraser river||reserve_boundary\",\"fraser river|its intersection with the westerly boundary of the popkum no. i indian reserve||shoreline\",\"popkum no. i indian reserve|the most southerly corner of the reserve||reserve_boundary\",\"|a point 400 m southeast of hwy no. 1|400 m|straight_line\",\"hwy no. 1|a point due south of the point of commencement|400 m distant|road\",\"|the point of commencement||straight_line\"]"
     },
     {
       "check": "step directions match the line",
@@ -318,8 +344,278 @@
       "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at the intersection of the easterly boundary of the District of Chilliwack and Highway No. 1",
+      "source": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP, WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES, WHSE_BASEMAPPING.FWA_RIVERS_POLY, WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -121.78590593804667,
+            49.16709782322978
+          ],
+          [
+            -121.7859059231518,
+            49.16709782312387
+          ],
+          [
+            -121.78565671639252,
+            49.16711090847551
+          ],
+          [
+            -121.78541524887922,
+            49.167153273136904
+          ],
+          [
+            -121.7851894984167,
+            49.167223517434294
+          ],
+          [
+            -121.78498692361606,
+            49.1673193205789
+          ],
+          [
+            -121.7848142174955,
+            49.16743751733203
+          ],
+          [
+            -121.78467708635837,
+            49.16757420256783
+          ],
+          [
+            -121.77603311561568,
+            49.17817898165451
+          ],
+          [
+            -121.77593965049628,
+            49.17832231947848
+          ],
+          [
+            -121.7758854356496,
+            49.1784740520459
+          ],
+          [
+            -121.77046025746651,
+            49.20314174321435
+          ],
+          [
+            -121.77044852388977,
+            49.203321406687
+          ],
+          [
+            -121.77049173352788,
+            49.20349900366104
+          ],
+          [
+            -121.77058815926866,
+            49.203667433128565
+          ],
+          [
+            -121.77073394611847,
+            49.20381996056399
+          ],
+          [
+            -121.77092326526773,
+            49.203950487213895
+          ],
+          [
+            -121.77114854710636,
+            49.204053793974055
+          ],
+          [
+            -121.77140078387808,
+            49.20412575009774
+          ],
+          [
+            -121.77166988987385,
+            49.204163478386256
+          ],
+          [
+            -121.77194510475714,
+            49.20416547025161
+          ],
+          [
+            -121.772215423885,
+            49.20413164604782
+          ],
+          [
+            -121.78844826910455,
+            49.20097263512979
+          ],
+          [
+            -121.7887157755135,
+            49.20089974830171
+          ],
+          [
+            -121.78895399044474,
+            49.20079187413087
+          ],
+          [
+            -121.78915235027381,
+            49.2006537963908
+          ],
+          [
+            -121.78930205899213,
+            49.200491638213386
+          ],
+          [
+            -121.789396478249,
+            49.20031259052604
+          ],
+          [
+            -121.78943142166572,
+            49.200124593142924
+          ],
+          [
+            -121.78955668924148,
+            49.19480047255958
+          ],
+          [
+            -121.78955677108091,
+            49.19479639130713
+          ],
+          [
+            -121.78967716910033,
+            49.18753345987959
+          ],
+          [
+            -121.78967278818267,
+            49.18745135476553
+          ],
+          [
+            -121.78726196012116,
+            49.16792476372191
+          ],
+          [
+            -121.78721824244379,
+            49.16776117018067
+          ],
+          [
+            -121.78712926470845,
+            49.16760562191884
+          ],
+          [
+            -121.78699806147546,
+            49.167463423152945
+          ],
+          [
+            -121.78682910709335,
+            49.16733942283671
+          ],
+          [
+            -121.78662816309091,
+            49.16723784932604
+          ],
+          [
+            -121.78640208169723,
+            49.16716216620938
+          ],
+          [
+            -121.78615857219138,
+            49.167114954216395
+          ],
+          [
+            -121.78590593804667,
+            49.16709782322978
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-056",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 56",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nPopkum\n56 That portion of the Province of British Columbia contained within the following described boundaries: Commencing at the intersection of the easterly boundary of the District of Chilliwack and Highway No. 1; thence northerly, easterly and northerly along the district boundary to the intersection of the District boundary with the southerly boundary of the Cheam No. 1 Indian Reserve; thence easterly and northerly along the reserve boundary to the southerly natural boundary of the Fraser River: thence easterly along the natural boundary to its intersection with the westerly boundary of the Popkum No. I Indian Reserve; thence southeasterly along the reserve boundary to the most southerly corner of the reserve; thence southeast in a straight line to a point 400 m southeast of Highway No. 1; thence southwesterly parallel to and 400 m distant from the highway to a point due South of the point of commencement; thence northerly to the point of commencement.",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "corners",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "effect": "No Shooting Areas",
+        "geometry.steps[0]": "Commencing at the intersection of the easterly boundary of the District of Chilliwack and Highway No. 1",
+        "geometry.steps[1]": "thence northerly, easterly and northerly along the district boundary to the intersection of the District boundary with the southerly boundary of the Cheam No. 1 Indian Reserve",
+        "geometry.steps[2]": "thence easterly and northerly along the reserve boundary to the southerly natural boundary of the Fraser River",
+        "geometry.steps[3]": "thence easterly along the natural boundary to its intersection with the westerly boundary of the Popkum No. I Indian Reserve",
+        "geometry.steps[4]": "thence southeasterly along the reserve boundary to the most southerly corner of the reserve",
+        "geometry.steps[5]": "thence southeast in a straight line to a point 400 m southeast of Highway No. 1",
+        "geometry.steps[6]": "thence southwesterly parallel to and 400 m distant from the highway to a point due South of the point of commencement",
+        "geometry.steps[7]": "thence northerly to the point of commencement"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "148f1a23c5f0548b0e021f3f01c18407934bfdf506e44d04cef7af358c88079f",
+      "task_id": "closed_area-148f1a23c5f0",
+      "construction": [
+        {
+          "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+          "quote": "Commencing at the intersection of the easterly boundary of the District of Chilliwack and Highway No. 1",
+          "source": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP, WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES, WHSE_BASEMAPPING.FWA_RIVERS_POLY, WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "3.829 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": null,
+          "detail": "the text names no area, or it could not be found"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "steps: run 1 [\"|||\",\"district of chilliwack|the intersection of the district boundary with the southerly boundary of the cheam no. 1 indian reserve||district_boundary\",\"cheam no. 1 indian reserve|the southerly natural boundary of the fraser river||reserve_boundary\",\"fraser river|its intersection with the westerly boundary of the popkum no. i indian reserve||river\",\"popkum no. i indian reserve|the most southerly corner of the reserve||reserve_boundary\",\"|a point 400 m southeast of hwy no. 1|400 m|straight_line\",\"hwy no. 1|a point due south of the point of commencement|400 m|road\",\"|the point of commencement||straight_line\"] vs run 2 [\"|||\",\"district of chilliwack|the intersection of the district boundary with the southerly boundary of the cheam no. 1 indian reserve||district_boundary\",\"cheam no. 1 indian reserve|the southerly natural boundary of the fraser river||reserve_boundary\",\"fraser river|its intersection with the westerly boundary of the popkum no. i indian reserve||shoreline\",\"popkum no. i indian reserve|the most southerly corner of the reserve||reserve_boundary\",\"|a point 400 m southeast of hwy no. 1|400 m|straight_line\",\"hwy no. 1|a point due south of the point of commencement|400 m distant|road\",\"|the point of commencement||straight_line\"]"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:47:03.222Z",
-  "updated": "2026-10-20T21:47:03.222Z"
+  "updated": "2026-10-28T17:04:08.933Z"
 }

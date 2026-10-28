@@ -284,7 +284,33 @@
   "disagreements": [
     "steps: run 1 [\"hwy 95 right of way and the edgewater south approach rd right of way|||\",\"edgewater south approach rd right of way|its intersection with the northerly boundary of district lot 348 plan 1954 parcel b||road\",\"district lot 348 plan 1954 parcel b|the easterly boundary of the canadian pacific railway right of way||lot_line\",\"canadian pacific railway right of way|its intersection with the southerly boundary of lot 353||other\",\"lot 353|the westerly boundary of the bench rd right of way||lot_line\",\"bench rd right of way|its intersection with the westerly boundary of the mccauley st right of way||road\",\"mccauley st right of way|its intersection with the westerly boundary of the hwy 95 right of way||road\",\"hwy 95|the point of commencement||road\"] vs run 2 [\"hwy 95 edgewater south approach rd|||\",\"edgewater south approach rd|its intersection with the northerly boundary of district lot 348 plan 1954 parcel b||road\",\"district lot 348 plan 1954 parcel b|the easterly boundary of the canadian pacific railway right of way||lot_line\",\"canadian pacific railway|its intersection with the southerly boundary of lot 353||other\",\"lot 353|the westerly boundary of the bench rd right of way||lot_line\",\"bench rd|its intersection with the westerly boundary of the mccauley st right of way||road\",\"mccauley st|its intersection with the westerly boundary of the hwy 95 right of way||road\",\"hwy 95|the point of commencement||road\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U. 4-35",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "4-35"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "4-35",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 4,
+          "REGION_RESPONSIBLE_ID": "4",
+          "REGION_RESPONSIBLE_NAME": "Kootenay",
+          "GAME_MANAGEMENT_ZONE_ID": "4Ec",
+          "GAME_MANAGEMENT_ZONE_NAME": "Golden",
+          "FEATURE_AREA_SQM": 2671243217.6689,
+          "FEATURE_LENGTH_M": 330493.6472,
+          "OBJECTID": 388,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -300,5 +326,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:07:26.552Z",
-  "updated": "2026-10-21T16:07:26.552Z"
+  "updated": "2026-10-28T17:03:58.169Z"
 }

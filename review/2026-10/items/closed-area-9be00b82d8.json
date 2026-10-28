@@ -291,7 +291,33 @@
   "disagreements": [
     "steps: run 1 [\"||917 m (3 000 feet)|\",\"|the bc hydro transmission line near claim post mcewer no. 32 and 33|2.8 km (1.75 miles)|straight_line\",\"bc hydro transmission line||approximately 7.7 km (4.78 miles)|other\",\"|claim post bill no. 27 and 28 located 800 m 0.5 mile east of the tailings dam|2.4 km (1.5 miles)|straight_line\",\"|the east end outlet of long lake|approximately 7.2 km (4.5 miles)|straight_line\",\"|the ridge north of macdonald lake to claim post ally no. 15 and 16||\",\"|the point of commencement||straight_line\"] vs run 2 [\"||917 m (3 000 feet)|\",\"|the bc hydro transmission line near claim post mcewer no. 32 and 33|2.8 km (1.75 miles)|\",\"bc hydro transmission line||approximately 7.7 km (4.78 miles)|other\",\"|claim post bill no. 27 and 28 located 800 m 0.5 mile east of the tailings dam|2.4 km (1.5 miles)|\",\"|the east end outlet of long lake|approximately 7.2 km (4.5 miles)|\",\"|the ridge north of macdonald lake to claim post ally no. 15 and 16||\",\"|the point of commencement||\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U. 8-08",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "8-8"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "8-8",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 8,
+          "REGION_RESPONSIBLE_ID": "8",
+          "REGION_RESPONSIBLE_NAME": "Okanagan",
+          "GAME_MANAGEMENT_ZONE_ID": "8b",
+          "GAME_MANAGEMENT_ZONE_NAME": "Okanagan",
+          "FEATURE_AREA_SQM": 1900103145.0627,
+          "FEATURE_LENGTH_M": 263158.812,
+          "OBJECTID": 537,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -307,5 +333,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T22:00:18.859Z",
-  "updated": "2026-10-20T22:00:18.859Z"
+  "updated": "2026-10-28T17:28:06.350Z"
 }

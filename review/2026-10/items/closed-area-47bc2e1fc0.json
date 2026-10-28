@@ -258,7 +258,33 @@
     "side: run 1 \"inside\" vs run 2 null",
     "steps: run 1 [\"lot 18895|||\",\"lot 18895|the northeast corner||lot_line\",\"||280 m|straight_line\",\"||540 m|straight_line\",\"|the west boundary of lot 18895 sdyd|3.1 km|straight_line\",\"lot 18895|the point of commencement||lot_line\"] vs run 2 [\"|||\",\"lot 18895|the northeast corner||lot_line\",\"||280 m|straight_line\",\"||540 m|straight_line\",\"|the west boundary of lot 18895 sdyd|3.1 km|straight_line\",\"lot 18895|the point of commencement||lot_line\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U. 8-12",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "8-12"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "8-12",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 8,
+          "REGION_RESPONSIBLE_ID": "8",
+          "REGION_RESPONSIBLE_NAME": "Okanagan",
+          "GAME_MANAGEMENT_ZONE_ID": "8d",
+          "GAME_MANAGEMENT_ZONE_NAME": "Kettle",
+          "FEATURE_AREA_SQM": 2264914724.0727,
+          "FEATURE_LENGTH_M": 404462.6916,
+          "OBJECTID": 530,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -274,5 +300,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:10:20.081Z",
-  "updated": "2026-10-27T23:12:24.921Z"
+  "updated": "2026-10-28T17:24:54.509Z"
 }

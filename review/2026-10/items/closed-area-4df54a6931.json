@@ -5,12 +5,15 @@
   "title": "Closed Areas Regulation, Schedule 3, section 52 (JeweI Lake)",
   "rule_id": "W3-052",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: steps: run 1 [\"jewel lake rd|||\",\"jewel lake rd|the point of intersection with the westerly boundary of jewel lake provincial park|25 metres|road\",\"jewel lake provincial park|a point 100 metres east of the natural boundary of jewel lake on the easterly shore thereof||other\",\"jewel lake|the point of intersection with the boundary of jewel lake meadow|100 metres|shoreline\",\"jewel lake meadow|a point of intersection with the northern boundary of d.l. 1875s||other\",\"d.l. 1875s|the point of commencement||lot_line\"] vs run 2 [\"jewel lake rd||25 metres|\",\"jewel lake rd|the point of intersection with the westerly boundary of jewel lake provincial park|25 metres|road\",\"jewel lake provincial park|a point 100 metres east of the natural boundary of jewel lake on the easterly shore thereof|100 metres|other\",\"jewel lake|the point of intersection with the boundary of jewel lake meadow|100 metres|shoreline\",\"jewel lake meadow|a point of intersection with the northern boundary of d.l. 1875s||other\",\"d.l. 1875s|the point of commencement||lot_line\"]",
     "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 \"inside\" vs run 2 null",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "approximate outline (corners) drawn from the places the walk names, using run 1's reading of the steps",
+    "\"Jewel Lake meadow\" was not found in the official layers; that side is drawn straight",
+    "\"D.L. 1875s\" was not found in the official layers; that side is drawn straight",
+    "validation failed: two independent extractions agree (steps: run 1 [\"jewel lake rd|||\",\"jewel lake rd|the point of intersection with the westerly boundary of jewel lake provincial park|25 metres|road\",\"jewel lake provincial park|a point 100 metres east of the natural boundary of jewel lake on the easterly shore thereof||other\",\"jewel lake|the point of intersection with the boundary of jewel lake meadow|100 metres|shoreline\",\"jewel lake meadow|a point of intersection with the northern boundary of d.l. 1875s||other\",\"d.l. 1875s|the point of commencement||lot_line\"] vs run 2 [\"jewel lake rd||25 metres|\",\"jewel lake rd|the point of intersection with the westerly boundary of jewel lake provincial park|25 metres|road\",\"jewel lake provincial park|a point 100 metres east of the natural boundary of jewel lake on the easterly shore thereof|100 metres|other\",\"jewel lake|the point of intersection with the boundary of jewel lake meadow|100 metres|shoreline\",\"jewel lake meadow|a point of intersection with the northern boundary of d.l. 1875s||other\",\"d.l. 1875s|the point of commencement||lot_line\"])"
   ],
   "source": {
     "text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nJeweI Lake\n52 That portion of M.U. 8-14 in the Province of British Columbia that is contained within the following described boundaries: Commencing at a point 25 metres west of the point of intersection of the midline of Jewel Lake Road and the northwest corner of D.L. 1875s, Similkameen Division, Yale Land District; thence in a general northeasterly direction following 25 metres west of the midline of Jewel Lake Road to the point of intersection with the westerly boundary of Jewel Lake Provincial Park; thence in a general northerly, easterly, southerly then westerly direction along the westerly, northerly, easterly and southerly boundaries of Jewel Lake Provincial Park to a point 100 metres east of the natural boundary of Jewel Lake on the easterly shore thereof; thence in a general southwesterly direction following 100 metres east from the natural boundary of Jewel Lake on the easterly shore thereof to the point of intersection with the boundary of Jewel Lake meadow; thence more or less southwesterly following the eastern boundary of Jewel Lake meadow to a point of intersection with the northern boundary of D.L. 1875s; thence westerly along said boundary to the point of commencement. [en. B.C. Reg. 211/93, s. 6.]",
@@ -249,12 +252,63 @@
     "side: run 1 \"inside\" vs run 2 null",
     "steps: run 1 [\"jewel lake rd|||\",\"jewel lake rd|the point of intersection with the westerly boundary of jewel lake provincial park|25 metres|road\",\"jewel lake provincial park|a point 100 metres east of the natural boundary of jewel lake on the easterly shore thereof||other\",\"jewel lake|the point of intersection with the boundary of jewel lake meadow|100 metres|shoreline\",\"jewel lake meadow|a point of intersection with the northern boundary of d.l. 1875s||other\",\"d.l. 1875s|the point of commencement||lot_line\"] vs run 2 [\"jewel lake rd||25 metres|\",\"jewel lake rd|the point of intersection with the westerly boundary of jewel lake provincial park|25 metres|road\",\"jewel lake provincial park|a point 100 metres east of the natural boundary of jewel lake on the easterly shore thereof|100 metres|other\",\"jewel lake|the point of intersection with the boundary of jewel lake meadow|100 metres|shoreline\",\"jewel lake meadow|a point of intersection with the northern boundary of d.l. 1875s||other\",\"d.l. 1875s|the point of commencement||lot_line\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U. 8-14",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "8-14"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "8-14",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 8,
+          "REGION_RESPONSIBLE_ID": "8",
+          "REGION_RESPONSIBLE_NAME": "Okanagan",
+          "GAME_MANAGEMENT_ZONE_ID": "8d",
+          "GAME_MANAGEMENT_ZONE_NAME": "Kettle",
+          "FEATURE_AREA_SQM": 2529454317.4101,
+          "FEATURE_LENGTH_M": 388660.4204,
+          "OBJECTID": 529,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "0.351 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "steps: run 1 [\"jewel lake rd|||\",\"jewel lake rd|the point of intersection with the westerly boundary of jewel lake provincial park|25 metres|road\",\"jewel lake provincial park|a point 100 metres east of the natural boundary of jewel lake on the easterly shore thereof||other\",\"jewel lake|the point of intersection with the boundary of jewel lake meadow|100 metres|shoreline\",\"jewel lake meadow|a point of intersection with the northern boundary of d.l. 1875s||other\",\"d.l. 1875s|the point of commencement||lot_line\"] vs run 2 [\"jewel lake rd||25 metres|\",\"jewel lake rd|the point of intersection with the westerly boundary of jewel lake provincial park|25 metres|road\",\"jewel lake provincial park|a point 100 metres east of the natural boundary of jewel lake on the easterly shore thereof|100 metres|other\",\"jewel lake|the point of intersection with the boundary of jewel lake meadow|100 metres|shoreline\",\"jewel lake meadow|a point of intersection with the northern boundary of d.l. 1875s||other\",\"d.l. 1875s|the point of commencement||lot_line\"]"
     },
     {
       "check": "step directions match the line",
@@ -262,8 +316,302 @@
       "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at a point 25 metres west of the point of intersection of the midline of Jewel Lake Road and the northwest corner of D.L. 1875s, Similkameen Division, Yale Land District",
+      "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP, WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW, WHSE_BASEMAPPING.FWA_LAKES_POLY"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -118.61903965001636,
+            49.17202238512833
+          ],
+          [
+            -118.61903847612972,
+            49.1718454664201
+          ],
+          [
+            -118.618984348314,
+            49.171672121452175
+          ],
+          [
+            -118.61887936190806,
+            49.17150905884812
+          ],
+          [
+            -118.61872758042615,
+            49.171362589230334
+          ],
+          [
+            -118.61853487823417,
+            49.17123838100994
+          ],
+          [
+            -118.61830871317153,
+            49.171141241037525
+          ],
+          [
+            -118.61805783792347,
+            49.171074928599204
+          ],
+          [
+            -118.61779196131374,
+            49.171042009952764
+          ],
+          [
+            -118.61752137262144,
+            49.17104375902938
+          ],
+          [
+            -118.61725654345116,
+            49.171080108140956
+          ],
+          [
+            -118.6170077225531,
+            49.17114965059915
+          ],
+          [
+            -118.61678453926054,
+            49.17124969514496
+          ],
+          [
+            -118.60750446441075,
+            49.17635439239739
+          ],
+          [
+            -118.60732060002397,
+            49.17647691677956
+          ],
+          [
+            -118.60717569051909,
+            49.17662004502252
+          ],
+          [
+            -118.60707501444149,
+            49.176778563818004
+          ],
+          [
+            -118.60702223929054,
+            49.176946699219705
+          ],
+          [
+            -118.60701928787829,
+            49.17711832694254
+          ],
+          [
+            -118.60706626822267,
+            49.177287195431106
+          ],
+          [
+            -118.60716146953918,
+            49.17744715357263
+          ],
+          [
+            -118.60730142448692,
+            49.17759237476046
+          ],
+          [
+            -118.60740896969945,
+            49.17768337897289
+          ],
+          [
+            -118.607706517467,
+            49.17793515176958
+          ],
+          [
+            -118.60788788186862,
+            49.17806134798535
+          ],
+          [
+            -118.60810288145153,
+            49.17816248352094
+          ],
+          [
+            -118.60834354586017,
+            49.17823480904663
+          ],
+          [
+            -118.60860095315019,
+            49.17827564327287
+          ],
+          [
+            -118.60886556058153,
+            49.17828347236686
+          ],
+          [
+            -118.61278044440657,
+            49.17815228763606
+          ],
+          [
+            -118.613042203045,
+            49.178126850987596
+          ],
+          [
+            -118.61329166795504,
+            49.17806912129022
+          ],
+          [
+            -118.61351960781857,
+            49.177981234814624
+          ],
+          [
+            -118.61371758795947,
+            49.177866443760095
+          ],
+          [
+            -118.61387808642783,
+            49.17775357238261
+          ],
+          [
+            -118.613982736224,
+            49.177679971472195
+          ],
+          [
+            -118.61402793856179,
+            49.177646555310105
+          ],
+          [
+            -118.61596192920254,
+            49.17614323772999
+          ],
+          [
+            -118.61596913658896,
+            49.17613758835236
+          ],
+          [
+            -118.61619763536727,
+            49.17595698626106
+          ],
+          [
+            -118.61627716193053,
+            49.17588756771212
+          ],
+          [
+            -118.61846723547312,
+            49.173770146163974
+          ],
+          [
+            -118.61858975345586,
+            49.17362416571458
+          ],
+          [
+            -118.61873844881453,
+            49.17339996409424
+          ],
+          [
+            -118.61881924429404,
+            49.173237228410414
+          ],
+          [
+            -118.61887873977857,
+            49.173062127720605
+          ],
+          [
+            -118.61890537549488,
+            49.17295168671594
+          ],
+          [
+            -118.61903965001636,
+            49.17202238512833
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W3-052",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 3, s. 52",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nJeweI Lake\n52 That portion of M.U. 8-14 in the Province of British Columbia that is contained within the following described boundaries: Commencing at a point 25 metres west of the point of intersection of the midline of Jewel Lake Road and the northwest corner of D.L. 1875s, Similkameen Division, Yale Land District; thence in a general northeasterly direction following 25 metres west of the midline of Jewel Lake Road to the point of intersection with the westerly boundary of Jewel Lake Provincial Park; thence in a general northerly, easterly, southerly then westerly direction along the westerly, northerly, easterly and southerly boundaries of Jewel Lake Provincial Park to a point 100 metres east of the natural boundary of Jewel Lake on the easterly shore thereof; thence in a general southwesterly direction following 100 metres east from the natural boundary of Jewel Lake on the easterly shore thereof to the point of intersection with the boundary of Jewel Lake meadow; thence more or less southwesterly following the eastern boundary of Jewel Lake meadow to a point of intersection with the northern boundary of D.L. 1875s; thence westerly along said boundary to the point of commencement. [en. B.C. Reg. 211/93, s. 6.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "corners",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "That portion of M.U. 8-14",
+        "effect": "No Shooting or Hunting Areas",
+        "geometry.side": "contained within the following described boundaries",
+        "geometry.steps[0]": "Commencing at a point 25 metres west of the point of intersection of the midline of Jewel Lake Road and the northwest corner of D.L. 1875s, Similkameen Division, Yale Land District",
+        "geometry.steps[1]": "thence in a general northeasterly direction following 25 metres west of the midline of Jewel Lake Road to the point of intersection with the westerly boundary of Jewel Lake Provincial Park",
+        "geometry.steps[2]": "thence in a general northerly, easterly, southerly then westerly direction along the westerly, northerly, easterly and southerly boundaries of Jewel Lake Provincial Park to a point 100 metres east of the natural boundary of Jewel Lake on the easterly shore thereof",
+        "geometry.steps[3]": "thence in a general southwesterly direction following 100 metres east from the natural boundary of Jewel Lake on the easterly shore thereof to the point of intersection with the boundary of Jewel Lake meadow",
+        "geometry.steps[4]": "thence more or less southwesterly following the eastern boundary of Jewel Lake meadow to a point of intersection with the northern boundary of D.L. 1875s",
+        "geometry.steps[5]": "thence westerly along said boundary to the point of commencement"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "c650801a1d873de0b34bc337072ffaadc1ef884883de5d366e9b665d0e7a979e",
+      "task_id": "closed_area-c650801a1d87",
+      "construction": [
+        {
+          "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+          "quote": "Commencing at a point 25 metres west of the point of intersection of the midline of Jewel Lake Road and the northwest corner of D.L. 1875s, Similkameen Division, Yale Land District",
+          "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP, WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW, WHSE_BASEMAPPING.FWA_LAKES_POLY"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "0.351 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "steps: run 1 [\"jewel lake rd|||\",\"jewel lake rd|the point of intersection with the westerly boundary of jewel lake provincial park|25 metres|road\",\"jewel lake provincial park|a point 100 metres east of the natural boundary of jewel lake on the easterly shore thereof||other\",\"jewel lake|the point of intersection with the boundary of jewel lake meadow|100 metres|shoreline\",\"jewel lake meadow|a point of intersection with the northern boundary of d.l. 1875s||other\",\"d.l. 1875s|the point of commencement||lot_line\"] vs run 2 [\"jewel lake rd||25 metres|\",\"jewel lake rd|the point of intersection with the westerly boundary of jewel lake provincial park|25 metres|road\",\"jewel lake provincial park|a point 100 metres east of the natural boundary of jewel lake on the easterly shore thereof|100 metres|other\",\"jewel lake|the point of intersection with the boundary of jewel lake meadow|100 metres|shoreline\",\"jewel lake meadow|a point of intersection with the northern boundary of d.l. 1875s||other\",\"d.l. 1875s|the point of commencement||lot_line\"]"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:10:14.319Z",
-  "updated": "2026-10-27T23:12:15.692Z"
+  "updated": "2026-10-28T17:23:01.003Z"
 }

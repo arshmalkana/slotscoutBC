@@ -5,11 +5,15 @@
   "title": "Closed Areas Regulation, Schedule 1, section 4 (George C. Reifel)",
   "rule_id": "W1-004",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: steps: run 1 [\"|||\",\"d cross dyke on district lot 194 reifel island|a point in the middle of ewen slough to meet a line drawn due north from the property line separating district lot 192a and the department of national defence property||other\",\"|the north bank of london slough||straight_line\",\"london slough|the point where the slough forks||other\",\"|a point 2 508 m in an east west line from the sea dyke||straight_line\",\"||1 125 m|straight_line\",\"||894 m|straight_line\",\"|the stone dyke extending west from the northwest corner of reifel island||straight_line\",\"the stone dyke|the point of intersection of the reifel property||other\",\"said property line|the point of commencement||lot_line\"] vs run 2 [\"|||\",\"d cross dyke on district lot 194 reifel island|a point in the middle of ewen slough to meet a line drawn due north from the property line separating district lot 192a and the department of national defence property||other\",\"|the north bank of london slough||straight_line\",\"london slough|the point where the slough forks||other\",\"|a point 2 508 m in an east west line from the sea dyke|2 508 m|straight_line\",\"||1 125 m|straight_line\",\"||894 m|straight_line\",\"|the stone dyke extending west from the northwest corner of reifel island||straight_line\",\"stone dyke|the point of intersection of the reifel property||other\",\"said property line|the point of commencement||lot_line\"]",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "approximate outline (traced) drawn from the places the walk names, using run 1's reading of the steps",
+    "\"\"D\" cross dyke on District Lot 194 (Reifel Island)\" was not found in the official layers; that side is drawn straight",
+    "\"the stone dyke\" was not found in the official layers; that side is drawn straight",
+    "\"said property line\" was not found in the official layers; that side is drawn straight",
+    "validation failed: two independent extractions agree (steps: run 1 [\"|||\",\"d cross dyke on district lot 194 reifel island|a point in the middle of ewen slough to meet a line drawn due north from the property line separating district lot 192a and the department of national defence property||other\",\"|the north bank of london slough||straight_line\",\"london slough|the point where the slough forks||other\",\"|a point 2 508 m in an east west line from the sea dyke||straight_line\",\"||1 125 m|straight_line\",\"||894 m|straight_line\",\"|the stone dyke extending west from the northwest corner of reifel island||straight_line\",\"the stone dyke|the point of intersection of the reifel property||other\",\"said property line|the point of commencement||lot_line\"] vs run 2 [\"|||\",\"d cross dyke on district lot 194 reifel island|a point in the middle of ewen slough to meet a line drawn due north from the property line separating district lot 192a and the department of national defence property||other\",\"|the north bank of london slough||straight_line\",\"london slough|the point where the slough forks||other\",\"|a point 2 508 m in an east west line from the sea dyke|2 508 m|straight_line\",\"||1 125 m|straight_line\",\"||894 m|straight_line\",\"|the stone dyke extending west from the northwest corner of reifel island||straight_line\",\"stone dyke|the point of intersection of the reifel property||other\",\"said property line|the point of commencement||lot_line\"])"
   ],
   "source": {
     "text": "Schedule 1 No Shooting, Hunting or Trapping Areas (Section 2)\nGeorge C. Reifel\n4 That portion of the Province, in the vicinity of the Corporation of Delta, that is within the following boundaries: Commencing at the midpoint of the channel separating District Lot 470 (Albion Island) and District Lot 473 (Harlock Island), NWD; thence in a southerly direction parallel to \"D\" cross dyke on District Lot 194 (Reifel Island) to a point in the middle of Ewen Slough to meet a line drawn due North from the property line separating District Lot 192A and the Department of National Defence property; thence from the southeast corner of said property due West to the north bank of London Slough; thence along the north bank of London Slough to the point where the slough forks; thence due West to a point 2 508 m in an east-west line from the sea dyke; thence on a bearing of 47 east of north (true) for 1 125 m; thence on a bearing of 17° east of north (true) for 894 m; thence on a bearing of 31° east of north (true) to intersect the stone dyke extending west from the northwest corner of Reifel Island; thence along the northern edge of the stone dyke to the point of intersection of the Reifel property; thence easterly along said property line to the point of commencement.",
@@ -318,9 +322,34 @@
   "lookups": [],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "0.693 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "steps: run 1 [\"|||\",\"d cross dyke on district lot 194 reifel island|a point in the middle of ewen slough to meet a line drawn due north from the property line separating district lot 192a and the department of national defence property||other\",\"|the north bank of london slough||straight_line\",\"london slough|the point where the slough forks||other\",\"|a point 2 508 m in an east west line from the sea dyke||straight_line\",\"||1 125 m|straight_line\",\"||894 m|straight_line\",\"|the stone dyke extending west from the northwest corner of reifel island||straight_line\",\"the stone dyke|the point of intersection of the reifel property||other\",\"said property line|the point of commencement||lot_line\"] vs run 2 [\"|||\",\"d cross dyke on district lot 194 reifel island|a point in the middle of ewen slough to meet a line drawn due north from the property line separating district lot 192a and the department of national defence property||other\",\"|the north bank of london slough||straight_line\",\"london slough|the point where the slough forks||other\",\"|a point 2 508 m in an east west line from the sea dyke|2 508 m|straight_line\",\"||1 125 m|straight_line\",\"||894 m|straight_line\",\"|the stone dyke extending west from the northwest corner of reifel island||straight_line\",\"stone dyke|the point of intersection of the reifel property||other\",\"said property line|the point of commencement||lot_line\"]"
     },
     {
       "check": "step directions match the line",
@@ -328,8 +357,296 @@
       "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at the midpoint of the channel separating District Lot 470 (Albion Island) and District Lot 473 (Harlock Island), NWD",
+      "source": "WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -123.16775052091792,
+            49.084734120311275
+          ],
+          [
+            -123.16357087253756,
+            49.08794282259195
+          ],
+          [
+            -123.1635179067055,
+            49.08798611698835
+          ],
+          [
+            -123.16335279532255,
+            49.08812995542278
+          ],
+          [
+            -123.16320164998467,
+            49.08829629063206
+          ],
+          [
+            -123.16197516505518,
+            49.09005232740141
+          ],
+          [
+            -123.16193297815468,
+            49.090119838814395
+          ],
+          [
+            -123.15660809096394,
+            49.0997346194301
+          ],
+          [
+            -123.1565404832459,
+            49.09991004524
+          ],
+          [
+            -123.15652787215728,
+            49.10009078120256
+          ],
+          [
+            -123.15657076870134,
+            49.10026951240231
+          ],
+          [
+            -123.15666743729258,
+            49.10043900498488
+          ],
+          [
+            -123.15681396591025,
+            49.10059239894269
+          ],
+          [
+            -123.15700442435732,
+            49.10072348578076
+          ],
+          [
+            -123.15723110423183,
+            49.100826959821546
+          ],
+          [
+            -123.15748483090447,
+            49.10089863297307
+          ],
+          [
+            -123.15775533487678,
+            49.10093560426313
+          ],
+          [
+            -123.15803166748466,
+            49.100936377273165
+          ],
+          [
+            -123.15830264411152,
+            49.10090092071541
+          ],
+          [
+            -123.15847966688841,
+            49.10086532009884
+          ],
+          [
+            -123.15857561442671,
+            49.100843450799985
+          ],
+          [
+            -123.15875400697968,
+            49.1007978800308
+          ],
+          [
+            -123.15908314874608,
+            49.10067742473041
+          ],
+          [
+            -123.1593018200999,
+            49.100569173165894
+          ],
+          [
+            -123.159321002805,
+            49.10055950172967
+          ],
+          [
+            -123.16253582045348,
+            49.09890881819566
+          ],
+          [
+            -123.16272876472908,
+            49.09878818371548
+          ],
+          [
+            -123.16300238360607,
+            49.09858025125641
+          ],
+          [
+            -123.16314714915899,
+            49.098447596414196
+          ],
+          [
+            -123.16325295645167,
+            49.09830000810732
+          ],
+          [
+            -123.17036041679006,
+            49.08547207885042
+          ],
+          [
+            -123.17042806165857,
+            49.08529649285078
+          ],
+          [
+            -123.17044062464308,
+            49.085115590969075
+          ],
+          [
+            -123.17039759695224,
+            49.084936708185516
+          ],
+          [
+            -123.17030072378299,
+            49.08476709753476
+          ],
+          [
+            -123.17015393346735,
+            49.08461363602931
+          ],
+          [
+            -123.16996317811942,
+            49.08448254584055
+          ],
+          [
+            -123.16973619225521,
+            49.084379142038905
+          ],
+          [
+            -123.16948217917961,
+            49.08430761711695
+          ],
+          [
+            -123.16921143785662,
+            49.08427087102748
+          ],
+          [
+            -123.16893494538701,
+            49.08427039362292
+          ],
+          [
+            -123.1686639120121,
+            49.08430620425944
+          ],
+          [
+            -123.16840932667193,
+            49.084376851012145
+          ],
+          [
+            -123.1681815115294,
+            49.084479469533626
+          ],
+          [
+            -123.16790712259412,
+            49.08463185742854
+          ],
+          [
+            -123.16775052091792,
+            49.084734120311275
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W1-004",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 1, s. 4",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 1 No Shooting, Hunting or Trapping Areas (Section 2)\nGeorge C. Reifel\n4 That portion of the Province, in the vicinity of the Corporation of Delta, that is within the following boundaries: Commencing at the midpoint of the channel separating District Lot 470 (Albion Island) and District Lot 473 (Harlock Island), NWD; thence in a southerly direction parallel to \"D\" cross dyke on District Lot 194 (Reifel Island) to a point in the middle of Ewen Slough to meet a line drawn due North from the property line separating District Lot 192A and the Department of National Defence property; thence from the southeast corner of said property due West to the north bank of London Slough; thence along the north bank of London Slough to the point where the slough forks; thence due West to a point 2 508 m in an east-west line from the sea dyke; thence on a bearing of 47 east of north (true) for 1 125 m; thence on a bearing of 17° east of north (true) for 894 m; thence on a bearing of 31° east of north (true) to intersect the stone dyke extending west from the northwest corner of Reifel Island; thence along the northern edge of the stone dyke to the point of intersection of the Reifel property; thence easterly along said property line to the point of commencement.",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "traced",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "effect": "No Shooting, Hunting or Trapping Areas",
+        "geometry.steps[0]": "Commencing at the midpoint of the channel separating District Lot 470 (Albion Island) and District Lot 473 (Harlock Island), NWD",
+        "geometry.steps[1]": "thence in a southerly direction parallel to \"D\" cross dyke on District Lot 194 (Reifel Island) to a point in the middle of Ewen Slough to meet a line drawn due North from the property line separating District Lot 192A and the Department of National Defence property",
+        "geometry.steps[2]": "thence from the southeast corner of said property due West to the north bank of London Slough",
+        "geometry.steps[3]": "thence along the north bank of London Slough to the point where the slough forks",
+        "geometry.steps[4]": "thence due West to a point 2 508 m in an east-west line from the sea dyke",
+        "geometry.steps[5]": "thence on a bearing of 47 east of north (true) for 1 125 m",
+        "geometry.steps[6]": "thence on a bearing of 17° east of north (true) for 894 m",
+        "geometry.steps[7]": "thence on a bearing of 31° east of north (true) to intersect the stone dyke extending west from the northwest corner of Reifel Island",
+        "geometry.steps[8]": "thence along the northern edge of the stone dyke to the point of intersection of the Reifel property",
+        "geometry.steps[9]": "thence easterly along said property line to the point of commencement"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "0eab0fc7d7e183787a3445f37b570290b35f29fc41651bc7c945b980f58b9591",
+      "task_id": "closed_area-0eab0fc7d7e1",
+      "construction": [
+        {
+          "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+          "quote": "Commencing at the midpoint of the channel separating District Lot 470 (Albion Island) and District Lot 473 (Harlock Island), NWD",
+          "source": "WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "0.693 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": null,
+          "detail": "the text names no area, or it could not be found"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "steps: run 1 [\"|||\",\"d cross dyke on district lot 194 reifel island|a point in the middle of ewen slough to meet a line drawn due north from the property line separating district lot 192a and the department of national defence property||other\",\"|the north bank of london slough||straight_line\",\"london slough|the point where the slough forks||other\",\"|a point 2 508 m in an east west line from the sea dyke||straight_line\",\"||1 125 m|straight_line\",\"||894 m|straight_line\",\"|the stone dyke extending west from the northwest corner of reifel island||straight_line\",\"the stone dyke|the point of intersection of the reifel property||other\",\"said property line|the point of commencement||lot_line\"] vs run 2 [\"|||\",\"d cross dyke on district lot 194 reifel island|a point in the middle of ewen slough to meet a line drawn due north from the property line separating district lot 192a and the department of national defence property||other\",\"|the north bank of london slough||straight_line\",\"london slough|the point where the slough forks||other\",\"|a point 2 508 m in an east west line from the sea dyke|2 508 m|straight_line\",\"||1 125 m|straight_line\",\"||894 m|straight_line\",\"|the stone dyke extending west from the northwest corner of reifel island||straight_line\",\"stone dyke|the point of intersection of the reifel property||other\",\"said property line|the point of commencement||lot_line\"]"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:47:03.210Z",
-  "updated": "2026-10-20T21:47:03.210Z"
+  "updated": "2026-10-28T17:03:33.386Z"
 }

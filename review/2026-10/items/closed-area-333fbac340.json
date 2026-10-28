@@ -5,10 +5,11 @@
   "title": "Closed Areas Regulation, Schedule 5, section 68 (Lund)",
   "rule_id": "W5-068",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "approximate outline (traced) drawn from the places the walk names",
+    "\"Thulin Passage\" was not found in the official layers; that side is drawn straight"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nLund\n68 That portion of the Province of British Columbia in M.U. 2-12 contained within the following described boundaries: Commencing at a point on the mean high water mark that is the most southerly point of the natural boundary of Thulin Lake; thence northerly along the mean high water mark on the westerly natural boundary of the lake to the northernmost tip of the lake; thence along a straight line due West to the right of way of Finn Bay Road; thence northwesterly along the right of way to its intersection with Norlund Road; thence in a straight line southwest to a point on the mean low water mark on the natural boundary of Thulin Passage; thence southerly along the natural boundary to the most southwesterly point of land bordering the entrance to Thulin passage; thence along a straight line easterly to the point of land southwest of Lund which is the northeasterly terminus of the Savary Island marine telephone cable; thence southerly along the natural boundary to a small unnamed bay approximately 500 m southeasterly from the telephone cable terminus point; thence along a straight line due East to the Highway 101 right of way; thence along a straight line due North to the point of commencement. [en. B.C. Reg. 205/94, s. 16; am. B.C. Reg. 301/2010, App. 1.]",
@@ -352,9 +353,34 @@
   ],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "0.874 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     },
     {
       "check": "step directions match the line",
@@ -362,8 +388,305 @@
       "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at a point on the mean high water mark that is the most southerly point of the natural boundary of Thulin Lake",
+      "source": "WHSE_BASEMAPPING.FWA_LAKES_POLY, WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -124.77911045943155,
+            49.9947347788976
+          ],
+          [
+            -124.77909712395733,
+            49.9945632472929
+          ],
+          [
+            -124.77906435991085,
+            49.994419577682706
+          ],
+          [
+            -124.77905167496114,
+            49.99437264992274
+          ],
+          [
+            -124.7777413703874,
+            49.99018541536771
+          ],
+          [
+            -124.77767137702448,
+            49.99003295687946
+          ],
+          [
+            -124.77756072653929,
+            49.989890802887366
+          ],
+          [
+            -124.77741287623803,
+            49.98976339459482
+          ],
+          [
+            -124.7772324455253,
+            49.98965471248408
+          ],
+          [
+            -124.77702507156516,
+            49.98956815197038
+          ],
+          [
+            -124.7687350400463,
+            49.98674292864544
+          ],
+          [
+            -124.7687271393683,
+            49.98674025640461
+          ],
+          [
+            -124.7589289574996,
+            49.983451210919526
+          ],
+          [
+            -124.758677071543,
+            49.98338577967332
+          ],
+          [
+            -124.75841026584847,
+            49.98335289320652
+          ],
+          [
+            -124.7581386060579,
+            49.98335379220757
+          ],
+          [
+            -124.75787234091074,
+            49.983388442760415
+          ],
+          [
+            -124.7576215156593,
+            49.9834555376238
+          ],
+          [
+            -124.75739559315463,
+            49.98355254554099
+          ],
+          [
+            -124.75720309688741,
+            49.98367580672084
+          ],
+          [
+            -124.75705128944215,
+            49.983820670891056
+          ],
+          [
+            -124.75694589849137,
+            49.983981672718556
+          ],
+          [
+            -124.75689090066777,
+            49.98415273798299
+          ],
+          [
+            -124.75667076285511,
+            49.985475735350995
+          ],
+          [
+            -124.75666294276371,
+            49.985583048438464
+          ],
+          [
+            -124.75666594842339,
+            49.985732348474535
+          ],
+          [
+            -124.75672611502225,
+            49.98598188766809
+          ],
+          [
+            -124.7567854018493,
+            49.98610748835007
+          ],
+          [
+            -124.75688075384802,
+            49.98625858902146
+          ],
+          [
+            -124.7572289481785,
+            49.98669259593518
+          ],
+          [
+            -124.75745664279559,
+            49.98697639836781
+          ],
+          [
+            -124.75753686214851,
+            49.98706387747975
+          ],
+          [
+            -124.7577203597879,
+            49.9872403793137
+          ],
+          [
+            -124.75788354903621,
+            49.98736962084766
+          ],
+          [
+            -124.75805204893892,
+            49.98748032229538
+          ],
+          [
+            -124.75828624538086,
+            49.987604001886474
+          ],
+          [
+            -124.77694769266758,
+            49.99544651463904
+          ],
+          [
+            -124.77718426957624,
+            49.99552631032581
+          ],
+          [
+            -124.77744012985963,
+            49.99557573937347
+          ],
+          [
+            -124.77770594169169,
+            49.99559299897991
+          ],
+          [
+            -124.77797201022926,
+            49.99557745964239
+          ],
+          [
+            -124.77822863126494,
+            49.99552968812098
+          ],
+          [
+            -124.7784664452217,
+            49.99545142676397
+          ],
+          [
+            -124.77867677856808,
+            49.99534552995004
+          ],
+          [
+            -124.77885196019237,
+            49.99521585996704
+          ],
+          [
+            -124.77898560119132,
+            49.99506714612788
+          ],
+          [
+            -124.7790728278664,
+            49.99490481226483
+          ],
+          [
+            -124.77911045943155,
+            49.9947347788976
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-068",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 68",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nLund\n68 That portion of the Province of British Columbia in M.U. 2-12 contained within the following described boundaries: Commencing at a point on the mean high water mark that is the most southerly point of the natural boundary of Thulin Lake; thence northerly along the mean high water mark on the westerly natural boundary of the lake to the northernmost tip of the lake; thence along a straight line due West to the right of way of Finn Bay Road; thence northwesterly along the right of way to its intersection with Norlund Road; thence in a straight line southwest to a point on the mean low water mark on the natural boundary of Thulin Passage; thence southerly along the natural boundary to the most southwesterly point of land bordering the entrance to Thulin passage; thence along a straight line easterly to the point of land southwest of Lund which is the northeasterly terminus of the Savary Island marine telephone cable; thence southerly along the natural boundary to a small unnamed bay approximately 500 m southeasterly from the telephone cable terminus point; thence along a straight line due East to the Highway 101 right of way; thence along a straight line due North to the point of commencement. [en. B.C. Reg. 205/94, s. 16; am. B.C. Reg. 301/2010, App. 1.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "traced",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "in M.U. 2-12",
+        "effect": "No Shooting Areas",
+        "geometry.steps[0]": "Commencing at a point on the mean high water mark that is the most southerly point of the natural boundary of Thulin Lake",
+        "geometry.steps[1]": "thence northerly along the mean high water mark on the westerly natural boundary of the lake to the northernmost tip of the lake",
+        "geometry.steps[2]": "thence along a straight line due West to the right of way of Finn Bay Road",
+        "geometry.steps[3]": "thence northwesterly along the right of way to its intersection with Norlund Road",
+        "geometry.steps[4]": "thence in a straight line southwest to a point on the mean low water mark on the natural boundary of Thulin Passage",
+        "geometry.steps[5]": "thence southerly along the natural boundary to the most southwesterly point of land bordering the entrance to Thulin passage",
+        "geometry.steps[6]": "thence along a straight line easterly to the point of land southwest of Lund which is the northeasterly terminus of the Savary Island marine telephone cable",
+        "geometry.steps[7]": "thence southerly along the natural boundary to a small unnamed bay approximately 500 m southeasterly from the telephone cable terminus point",
+        "geometry.steps[8]": "thence along a straight line due East to the Highway 101 right of way",
+        "geometry.steps[9]": "thence along a straight line due North to the point of commencement"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "ba0d1970b2f09ae68eff13114535aa97918920228ff1d4af2a1b4ef460ceef0e",
+      "task_id": "closed_area-ba0d1970b2f0",
+      "construction": [
+        {
+          "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+          "quote": "Commencing at a point on the mean high water mark that is the most southerly point of the natural boundary of Thulin Lake",
+          "source": "WHSE_BASEMAPPING.FWA_LAKES_POLY, WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "0.874 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:47:33.009Z",
-  "updated": "2026-10-27T23:12:04.525Z"
+  "updated": "2026-10-28T17:20:59.887Z"
 }

@@ -522,7 +522,33 @@
     "side: run 1 \"inside\" vs run 2 null",
     "steps: run 1 [\"|||\",\"|the northwest corner of sunset prairie community pasture|approximately 10 km|straight_line\",\"sunset prairie community pasture|the point of intersection with a pipeline right of way|approximately 700 m|other\",\"a fence that parallels the pipeline right of way|a point due north of the northwest corner of lot 31 tp 79 r 19 w6|approximately 5.8 km|other\",\"|the northwest corner of lot 31|approximately 6 km|straight_line\",\"|the southwest corner of lot 30||straight_line\",\"|the southeast corner of lot 29||straight_line\",\"|the northeast corner of lot 33||straight_line\",\"|the northeast corner of lot 31 tp 79 r 18 w6||straight_line\",\"|the northwest corner of lot 5 tp 80 r 18 w6||straight_line\",\"|the northwest corner of lot 4||straight_line\",\"lot 4|the southwest corner of lot 10||lot_line\",\"|the point of commencement||straight_line\"] vs run 2 [\"|||\",\"|northwest corner of sunset prairie community pasture|approximately 10 km|straight_line\",\"the said pasture|point of intersection with a pipeline right of way|approximately 700 m|other\",\"a fence that parallels the pipeline right of way|a point due north of the northwest corner of lot 31 tp 79 r 19 w6|approximately 5.8 km|other\",\"|northwest corner of lot 31|approximately 6 km|straight_line\",\"|southwest corner of lot 30||straight_line\",\"|southeast corner of lot 29||straight_line\",\"|northeast corner of lot 33||straight_line\",\"|northeast corner of lot 31 tp 79 r 18 w6||straight_line\",\"|northwest corner of lot 5 tp 80 r 18 w6||straight_line\",\"|northwest corner of lot 4||straight_line\",\"lot 4|southwest corner of lot 10||lot_line\",\"|point of commencement||straight_line\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U. 7-32",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "7-32"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "7-32",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 7,
+          "REGION_RESPONSIBLE_ID": "7B",
+          "REGION_RESPONSIBLE_NAME": "Omineca",
+          "GAME_MANAGEMENT_ZONE_ID": "7Pb",
+          "GAME_MANAGEMENT_ZONE_NAME": "North Peace",
+          "FEATURE_AREA_SQM": 3663629582.4358,
+          "FEATURE_LENGTH_M": 335538.4441,
+          "OBJECTID": 492,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -538,5 +564,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:08:38.053Z",
-  "updated": "2026-10-27T23:10:56.942Z"
+  "updated": "2026-10-28T17:11:28.422Z"
 }

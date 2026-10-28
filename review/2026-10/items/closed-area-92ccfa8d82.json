@@ -5,10 +5,10 @@
   "title": "Closed Areas Regulation, Schedule 5, section 62 (Squamish)",
   "rule_id": "W5-062",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "approximate outline (corners) drawn from the places the walk names"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nSquamish\n62 That portion of the Province of British Columbia within the following described boundaries: Commencing at the southeast corner of the District Municipality of Squamish; thence due East to the 400 m contour line; thence northerly along the contour to the point of its intersection with Gonzales Creek; thence up the creek to the 600 m contour line; thence northeasterly to its intersection with a road which lies between the Stawamus River and Shannon Creek; thence northeasterly down the road to its crossing of the Stawamus River; thence down the river to its intersection with the boundary of the District of Squamish; thence westerly and southerly along the boundary line of the District to the point of commencement, excepting any Indian Reserve lands.",
@@ -287,9 +287,34 @@
   "lookups": [],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "50.332 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     },
     {
       "check": "step directions match the line",
@@ -297,8 +322,297 @@
       "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at the southeast corner of the District Municipality of Squamish",
+      "source": "WHSE_BASEMAPPING.TRIM_CONTOUR_LINES (400 m), WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP, WHSE_BASEMAPPING.FWA_RIVERS_POLY, WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP, WHSE_BASEMAPPING.TRIM_CONTOUR_LINES (600 m)"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -123.17297929900104,
+            49.65442659582753
+          ],
+          [
+            -123.17236534875457,
+            49.65318612282776
+          ],
+          [
+            -123.17236446591178,
+            49.65318434536715
+          ],
+          [
+            -123.17233748459502,
+            49.65313021567458
+          ],
+          [
+            -123.17231959097984,
+            49.65309660556254
+          ],
+          [
+            -123.1722630886692,
+            49.65299691619752
+          ],
+          [
+            -123.1722374151522,
+            49.65295491257226
+          ],
+          [
+            -123.17216728285428,
+            49.652848093344794
+          ],
+          [
+            -123.17210895199224,
+            49.652769953458495
+          ],
+          [
+            -123.17126381398224,
+            49.651764693589435
+          ],
+          [
+            -123.17108479315696,
+            49.65159921709182
+          ],
+          [
+            -123.17085323684182,
+            49.6514637884651
+          ],
+          [
+            -123.17058083080279,
+            49.65136524205276
+          ],
+          [
+            -122.95534897414801,
+            49.592673799474326
+          ],
+          [
+            -122.95508259878893,
+            49.59262053479378
+          ],
+          [
+            -122.95480517390688,
+            49.592602863086725
+          ],
+          [
+            -122.95452789904233,
+            49.59262149775297
+          ],
+          [
+            -122.95426196768052,
+            49.592675686518106
+          ],
+          [
+            -122.95401811544596,
+            49.59276324179783
+          ],
+          [
+            -122.95380618676626,
+            49.59288062899635
+          ],
+          [
+            -122.95363473748662,
+            49.59302310917769
+          ],
+          [
+            -122.95351068947052,
+            49.593184930353694
+          ],
+          [
+            -122.95343905112769,
+            49.59335955967131
+          ],
+          [
+            -122.95342271515689,
+            49.593539947130395
+          ],
+          [
+            -122.95346234167751,
+            49.59371881018913
+          ],
+          [
+            -122.95355633148245,
+            49.59388892776949
+          ],
+          [
+            -122.95370089050714,
+            49.59404343179407
+          ],
+          [
+            -122.95389018292725,
+            49.59417608448266
+          ],
+          [
+            -123.1301269867326,
+            49.694782188493825
+          ],
+          [
+            -123.13033351744538,
+            49.694879466312905
+          ],
+          [
+            -123.13056407980841,
+            49.694950655317534
+          ],
+          [
+            -123.13081088785985,
+            49.69499335146797
+          ],
+          [
+            -123.13106560693895,
+            49.69500611291802
+          ],
+          [
+            -123.1313196351869,
+            49.69498850871369
+          ],
+          [
+            -123.13156439407811,
+            49.69494113334879
+          ],
+          [
+            -123.13490328207662,
+            49.69407149842198
+          ],
+          [
+            -123.13515840460782,
+            49.69398414809783
+          ],
+          [
+            -123.1353801416431,
+            49.693864600476424
+          ],
+          [
+            -123.13555893427322,
+            49.69371800931136
+          ],
+          [
+            -123.17295351211028,
+            49.65543778096898
+          ],
+          [
+            -123.17308524308214,
+            49.65526368200486
+          ],
+          [
+            -123.17315627856729,
+            49.65507535151775
+          ],
+          [
+            -123.173163318273,
+            49.654881541188956
+          ],
+          [
+            -123.17310603582395,
+            49.65469125724256
+          ],
+          [
+            -123.17298331633188,
+            49.654434848966716
+          ],
+          [
+            -123.17297929900104,
+            49.65442659582753
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-062",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 62",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nSquamish\n62 That portion of the Province of British Columbia within the following described boundaries: Commencing at the southeast corner of the District Municipality of Squamish; thence due East to the 400 m contour line; thence northerly along the contour to the point of its intersection with Gonzales Creek; thence up the creek to the 600 m contour line; thence northeasterly to its intersection with a road which lies between the Stawamus River and Shannon Creek; thence northeasterly down the road to its crossing of the Stawamus River; thence down the river to its intersection with the boundary of the District of Squamish; thence westerly and southerly along the boundary line of the District to the point of commencement, excepting any Indian Reserve lands.",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [
+        "excepting any Indian Reserve lands"
+      ],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "corners",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "effect": "No Shooting Areas",
+        "exemptions[0]": "excepting any Indian Reserve lands",
+        "geometry.steps[0]": "Commencing at the southeast corner of the District Municipality of Squamish",
+        "geometry.steps[1]": "thence due East to the 400 m contour line",
+        "geometry.steps[2]": "thence northerly along the contour to the point of its intersection with Gonzales Creek",
+        "geometry.steps[3]": "thence up the creek to the 600 m contour line",
+        "geometry.steps[4]": "thence northeasterly to its intersection with a road which lies between the Stawamus River and Shannon Creek",
+        "geometry.steps[5]": "thence northeasterly down the road to its crossing of the Stawamus River",
+        "geometry.steps[6]": "thence down the river to its intersection with the boundary of the District of Squamish",
+        "geometry.steps[7]": "thence westerly and southerly along the boundary line of the District to the point of commencement"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "127444e3208214f06f9078d7220e91a78d1c2e1de713106ce16c7ef2df72c04c",
+      "task_id": "closed_area-127444e32082",
+      "construction": [
+        {
+          "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+          "quote": "Commencing at the southeast corner of the District Municipality of Squamish",
+          "source": "WHSE_BASEMAPPING.TRIM_CONTOUR_LINES (400 m), WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP, WHSE_BASEMAPPING.FWA_RIVERS_POLY, WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP, WHSE_BASEMAPPING.TRIM_CONTOUR_LINES (600 m)"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "50.332 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": null,
+          "detail": "the text names no area, or it could not be found"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:47:03.214Z",
-  "updated": "2026-10-20T21:47:03.214Z"
+  "updated": "2026-10-28T17:03:55.531Z"
 }

@@ -5,11 +5,14 @@
   "title": "Closed Areas Regulation, Schedule 1, section 7 (McGillivray Creek)",
   "rule_id": "W1-007",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: steps: run 1 [\"|||\",\"little sumas river|the south shoreline of the fraser river||river\",\"fraser river|miller slough where it enters the fraser river||river\",\"miller slough|the south boundary of the provincial dyke||other\",\"provincial dyke|the north bank of mcgillivray creek||other\",\"mcgillivray creek|the point of commencement||creek\"] vs run 2 [\"|||\",\"little sumas river|the south shoreline of the fraser river||river\",\"fraser river|miller slough where it enters the fraser river||shoreline\",\"miller slough|the south boundary of the provincial dyke||other\",\"dyke|the north bank of mcgillivray creek||other\",\"mcgillivray creek|the point of commencement||creek\"]",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "approximate outline (traced) drawn from the places the walk names, using run 1's reading of the steps",
+    "\"Little Sumas River\" was not found in the official layers; that side is drawn straight",
+    "\"Provincial Dyke\" was not found in the official layers; that side is drawn straight",
+    "validation failed: two independent extractions agree (steps: run 1 [\"|||\",\"little sumas river|the south shoreline of the fraser river||river\",\"fraser river|miller slough where it enters the fraser river||river\",\"miller slough|the south boundary of the provincial dyke||other\",\"provincial dyke|the north bank of mcgillivray creek||other\",\"mcgillivray creek|the point of commencement||creek\"] vs run 2 [\"|||\",\"little sumas river|the south shoreline of the fraser river||river\",\"fraser river|miller slough where it enters the fraser river||shoreline\",\"miller slough|the south boundary of the provincial dyke||other\",\"dyke|the north bank of mcgillivray creek||other\",\"mcgillivray creek|the point of commencement||creek\"])"
   ],
   "source": {
     "text": "Schedule 1 No Shooting, Hunting or Trapping Areas (Section 2)\nMcGillivray Creek\n7 That portion of the Province, in the vicinity of the City of Chilliwack, that is within the following boundaries: Commencing at the junction of the north bank of McGillivray Creek and Little Sumas River; thence in a northerly and westerly direction following the east and north banks of the Little Sumas River to the south shoreline of the Fraser River; thence following the south shoreline of the Fraser River in a northeasterly, southeasterly and easterly direction to Miller Slough where it enters the Fraser River; thence southerly following the west bank of Miller Slough to the south boundary of the Provincial Dyke; thence southwesterly and southerly along the south boundary of the dyke to the north bank of McGillivray Creek; thence westerly along the north bank of McGillivray Creek to the point of commencement.",
@@ -234,9 +237,34 @@
   "lookups": [],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "1.439 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "steps: run 1 [\"|||\",\"little sumas river|the south shoreline of the fraser river||river\",\"fraser river|miller slough where it enters the fraser river||river\",\"miller slough|the south boundary of the provincial dyke||other\",\"provincial dyke|the north bank of mcgillivray creek||other\",\"mcgillivray creek|the point of commencement||creek\"] vs run 2 [\"|||\",\"little sumas river|the south shoreline of the fraser river||river\",\"fraser river|miller slough where it enters the fraser river||shoreline\",\"miller slough|the south boundary of the provincial dyke||other\",\"dyke|the north bank of mcgillivray creek||other\",\"mcgillivray creek|the point of commencement||creek\"]"
     },
     {
       "check": "step directions match the line",
@@ -244,8 +272,324 @@
       "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at the junction of the north bank of McGillivray Creek and Little Sumas River",
+      "source": "WHSE_BASEMAPPING.FWA_RIVERS_POLY, WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -121.67937491772919,
+            50.5511617714672
+          ],
+          [
+            -121.67862673578338,
+            50.55168302476614
+          ],
+          [
+            -121.67859610709735,
+            50.551705076921316
+          ],
+          [
+            -121.67598744508705,
+            50.55364624287307
+          ],
+          [
+            -121.67585859080604,
+            50.55375868400229
+          ],
+          [
+            -121.67579922983374,
+            50.55381993338957
+          ],
+          [
+            -121.67568685028802,
+            50.55396299483552
+          ],
+          [
+            -121.67561612039496,
+            50.554116439206524
+          ],
+          [
+            -121.67558927623234,
+            50.55427541635912
+          ],
+          [
+            -121.67558775460802,
+            50.55432953634067
+          ],
+          [
+            -121.67558912878211,
+            50.55438834587066
+          ],
+          [
+            -121.67608202183573,
+            50.5609682018384
+          ],
+          [
+            -121.67608222968435,
+            50.56097089132005
+          ],
+          [
+            -121.67609300563565,
+            50.56110619145051
+          ],
+          [
+            -121.67609320622257,
+            50.56110864362175
+          ],
+          [
+            -121.6765800327735,
+            50.56690660951472
+          ],
+          [
+            -121.67658145856547,
+            50.56692132062966
+          ],
+          [
+            -121.67662699620291,
+            50.567335761180345
+          ],
+          [
+            -121.6766303355863,
+            50.56736102142498
+          ],
+          [
+            -121.67665389107302,
+            50.56751341170919
+          ],
+          [
+            -121.67667122420039,
+            50.567590789107896
+          ],
+          [
+            -121.67906963189601,
+            50.57573871768872
+          ],
+          [
+            -121.6791492535754,
+            50.57591131134976
+          ],
+          [
+            -121.67928136206676,
+            50.57607039235945
+          ],
+          [
+            -121.67946067433223,
+            50.57620959844503
+          ],
+          [
+            -121.67968001928627,
+            50.57632336215765
+          ],
+          [
+            -121.67993062456776,
+            50.576407133562014
+          ],
+          [
+            -121.68020246739212,
+            50.576457562232676
+          ],
+          [
+            -121.68048467544841,
+            50.576472631273596
+          ],
+          [
+            -121.68076596179905,
+            50.576451737996855
+          ],
+          [
+            -121.68103507637635,
+            50.576395718031144
+          ],
+          [
+            -121.68128125600316,
+            50.57630681189533
+          ],
+          [
+            -121.68149465492455,
+            50.576188575374545
+          ],
+          [
+            -121.6816667386191,
+            50.57604573728675
+          ],
+          [
+            -121.6817906251329,
+            50.57588401033196
+          ],
+          [
+            -121.68186136028201,
+            50.57570986259406
+          ],
+          [
+            -121.6820217510261,
+            50.57504617067203
+          ],
+          [
+            -121.68203188964048,
+            50.57499414438588
+          ],
+          [
+            -121.68585571555482,
+            50.54921733823577
+          ],
+          [
+            -121.68585548113606,
+            50.54904707232277
+          ],
+          [
+            -121.68580474691692,
+            50.54887988605217
+          ],
+          [
+            -121.68570533196032,
+            50.548721772128744
+          ],
+          [
+            -121.68556080017335,
+            50.548578398005695
+          ],
+          [
+            -121.68537633250389,
+            50.54845490275253
+          ],
+          [
+            -121.68515854119808,
+            50.54835571286788
+          ],
+          [
+            -121.6849152327813,
+            50.548284383636705
+          ],
+          [
+            -121.6846551282591,
+            50.548243471714734
+          ],
+          [
+            -121.68438755056371,
+            50.54823444350396
+          ],
+          [
+            -121.68412209044287,
+            50.54825762260117
+          ],
+          [
+            -121.68386826275714,
+            50.54831217820121
+          ],
+          [
+            -121.68363516549498,
+            50.54839615487039
+          ],
+          [
+            -121.68343115371783,
+            50.54850654262416
+          ],
+          [
+            -121.6794052404614,
+            50.551141297611025
+          ],
+          [
+            -121.67937491772919,
+            50.5511617714672
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W1-007",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 1, s. 7",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 1 No Shooting, Hunting or Trapping Areas (Section 2)\nMcGillivray Creek\n7 That portion of the Province, in the vicinity of the City of Chilliwack, that is within the following boundaries: Commencing at the junction of the north bank of McGillivray Creek and Little Sumas River; thence in a northerly and westerly direction following the east and north banks of the Little Sumas River to the south shoreline of the Fraser River; thence following the south shoreline of the Fraser River in a northeasterly, southeasterly and easterly direction to Miller Slough where it enters the Fraser River; thence southerly following the west bank of Miller Slough to the south boundary of the Provincial Dyke; thence southwesterly and southerly along the south boundary of the dyke to the north bank of McGillivray Creek; thence westerly along the north bank of McGillivray Creek to the point of commencement.",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "traced",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "effect": "No Shooting, Hunting or Trapping Areas",
+        "geometry.steps[0]": "Commencing at the junction of the north bank of McGillivray Creek and Little Sumas River",
+        "geometry.steps[1]": "thence in a northerly and westerly direction following the east and north banks of the Little Sumas River to the south shoreline of the Fraser River",
+        "geometry.steps[2]": "thence following the south shoreline of the Fraser River in a northeasterly, southeasterly and easterly direction to Miller Slough where it enters the Fraser River",
+        "geometry.steps[3]": "thence southerly following the west bank of Miller Slough to the south boundary of the Provincial Dyke",
+        "geometry.steps[4]": "thence southwesterly and southerly along the south boundary of the dyke to the north bank of McGillivray Creek",
+        "geometry.steps[5]": "thence westerly along the north bank of McGillivray Creek to the point of commencement"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "5041d362c8c54840c61d0b146c26c9851c75566c08495eb5fa508d91817b04d1",
+      "task_id": "closed_area-5041d362c8c5",
+      "construction": [
+        {
+          "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+          "quote": "Commencing at the junction of the north bank of McGillivray Creek and Little Sumas River",
+          "source": "WHSE_BASEMAPPING.FWA_RIVERS_POLY, WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "1.439 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": null,
+          "detail": "the text names no area, or it could not be found"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "steps: run 1 [\"|||\",\"little sumas river|the south shoreline of the fraser river||river\",\"fraser river|miller slough where it enters the fraser river||river\",\"miller slough|the south boundary of the provincial dyke||other\",\"provincial dyke|the north bank of mcgillivray creek||other\",\"mcgillivray creek|the point of commencement||creek\"] vs run 2 [\"|||\",\"little sumas river|the south shoreline of the fraser river||river\",\"fraser river|miller slough where it enters the fraser river||shoreline\",\"miller slough|the south boundary of the provincial dyke||other\",\"dyke|the north bank of mcgillivray creek||other\",\"mcgillivray creek|the point of commencement||creek\"]"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:47:08.085Z",
-  "updated": "2026-10-20T21:47:08.085Z"
+  "updated": "2026-10-28T17:10:18.356Z"
 }

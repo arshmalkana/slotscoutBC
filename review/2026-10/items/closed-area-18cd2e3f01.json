@@ -5,10 +5,13 @@
   "title": "Closed Areas Regulation, Schedule 9, section 11 (Sechelt)",
   "rule_id": "W9-011",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "approximate outline (corners) drawn from the places the walk names",
+    "\"Lee Bay\" was not found in the official layers; that side is drawn straight",
+    "\"Crosstrees Road\" was not found in the official layers; that side is drawn straight",
+    "\"Agamemnon Channel\" was not found in the official layers; that side is drawn straight"
   ],
   "source": {
     "text": "Schedule 9 Firearms Using Shot Only Areas (Section 10 (1) (a))\nSechelt\n11 That portion of the Province of British Columbia in M.U. 2-5 on the Sechelt Peninsula within the following described boundaries: Commencing at Daniel Point; thence northerly, easterly and southerly along the mean low water mark of the natural boundary of Lee Bay to the west end of Keelson Road; thence along the northerly and easterly boundary of the road to Crosstrees Road; thence easterly along its northerly boundary to Irvines Landing Road; thence easterly along the road to the point of its intersection with Mixal Road and Garden Bay Road; thence easterly along the northerly boundary of Garden Bay Road to its intersection with Myers Creek; thence northeasterly up the Creek to its intersection with Highway 101; thence along the westerly boundary of Highway 101 to the most westerly point of the road approximately 2.2 kilometres north of its intersection with Myers Creek; thence in a straight line due northwest to the natural boundary of Sakinaw Lake; thence southwesterly along the natural boundary of the lake and its outlet stream to the mouth of the outlet stream; thence westerly and southerly along the mean low water mark in the natural boundary of Agamemnon Channel to the point of commencement. [en. B.C. Reg. 205/94, s. 26.]",
@@ -426,9 +429,34 @@
   ],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "9.987 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     },
     {
       "check": "step directions match the line",
@@ -436,8 +464,295 @@
       "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at Daniel Point",
+      "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP, WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP, WHSE_BASEMAPPING.FWA_LAKES_POLY"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -124.06098138188548,
+            49.634819248505956
+          ],
+          [
+            -124.06096702735468,
+            49.6346433775486
+          ],
+          [
+            -124.06090002575662,
+            49.63447269081682
+          ],
+          [
+            -124.06078294713652,
+            49.634313734148684
+          ],
+          [
+            -124.06062028187806,
+            49.634172603473104
+          ],
+          [
+            -124.06041826844074,
+            49.63405471104943
+          ],
+          [
+            -124.06018465408705,
+            49.63396457793129
+          ],
+          [
+            -124.05992839777998,
+            49.63390566060953
+          ],
+          [
+            -124.05965932664301,
+            49.63388021847857
+          ],
+          [
+            -124.0593877591518,
+            49.633889227205
+          ],
+          [
+            -123.97160260658842,
+            49.6424036216798
+          ],
+          [
+            -123.97159952313895,
+            49.642403921821376
+          ],
+          [
+            -123.9713091583204,
+            49.6424324013017
+          ],
+          [
+            -123.97113067692652,
+            49.642457780265985
+          ],
+          [
+            -123.97097886939402,
+            49.64248625976092
+          ],
+          [
+            -123.97060934691612,
+            49.642595651739164
+          ],
+          [
+            -123.96953828652732,
+            49.64304569476653
+          ],
+          [
+            -123.96932352186924,
+            49.64315695586246
+          ],
+          [
+            -123.96914682724116,
+            49.64329344073941
+          ],
+          [
+            -123.96895635496149,
+            49.643474308856945
+          ],
+          [
+            -123.96884529838985,
+            49.64360061003211
+          ],
+          [
+            -123.96876711022335,
+            49.643736845773994
+          ],
+          [
+            -123.9678156001077,
+            49.645921119163624
+          ],
+          [
+            -123.96776881532662,
+            49.646086200818765
+          ],
+          [
+            -123.96777021821458,
+            49.64625403652903
+          ],
+          [
+            -123.96781976040144,
+            49.64641878058606
+          ],
+          [
+            -123.9679157167925,
+            49.646574694905496
+          ],
+          [
+            -123.9680547455905,
+            49.64671634889234
+          ],
+          [
+            -123.9682320046408,
+            49.64683880860328
+          ],
+          [
+            -123.96844132005435,
+            49.64693780861564
+          ],
+          [
+            -123.96867540123947,
+            49.647009900613675
+          ],
+          [
+            -123.96892609485336,
+            49.64705257351417
+          ],
+          [
+            -124.01612577677821,
+            49.65208807099183
+          ],
+          [
+            -124.01613338046535,
+            49.6520888665505
+          ],
+          [
+            -124.05792767404347,
+            49.656376874765115
+          ],
+          [
+            -124.05818645868763,
+            49.65638751450515
+          ],
+          [
+            -124.05844378934555,
+            49.65636683378888
+          ],
+          [
+            -124.05869069965206,
+            49.6563155532107
+          ],
+          [
+            -124.05891858638383,
+            49.65623545957583
+          ],
+          [
+            -124.05911950926723,
+            49.656129343631996
+          ],
+          [
+            -124.05928646766979,
+            49.65600090281585
+          ],
+          [
+            -124.05941364452899,
+            49.65585461240573
+          ],
+          [
+            -124.05949660901804,
+            49.65569556957285
+          ],
+          [
+            -124.05953247088911,
+            49.65552931576726
+          ],
+          [
+            -124.06098138188548,
+            49.634819248505956
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W9-011",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 9, s. 11",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 9 Firearms Using Shot Only Areas (Section 10 (1) (a))\nSechelt\n11 That portion of the Province of British Columbia in M.U. 2-5 on the Sechelt Peninsula within the following described boundaries: Commencing at Daniel Point; thence northerly, easterly and southerly along the mean low water mark of the natural boundary of Lee Bay to the west end of Keelson Road; thence along the northerly and easterly boundary of the road to Crosstrees Road; thence easterly along its northerly boundary to Irvines Landing Road; thence easterly along the road to the point of its intersection with Mixal Road and Garden Bay Road; thence easterly along the northerly boundary of Garden Bay Road to its intersection with Myers Creek; thence northeasterly up the Creek to its intersection with Highway 101; thence along the westerly boundary of Highway 101 to the most westerly point of the road approximately 2.2 kilometres north of its intersection with Myers Creek; thence in a straight line due northwest to the natural boundary of Sakinaw Lake; thence southwesterly along the natural boundary of the lake and its outlet stream to the mouth of the outlet stream; thence westerly and southerly along the mean low water mark in the natural boundary of Agamemnon Channel to the point of commencement. [en. B.C. Reg. 205/94, s. 26.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "shot_only",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "corners",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "in M.U. 2-5",
+        "effect": "Firearms Using Shot Only Areas",
+        "geometry.side": "within the following described boundaries",
+        "geometry.steps[0]": "Commencing at Daniel Point",
+        "geometry.steps[1]": "thence northerly, easterly and southerly along the mean low water mark of the natural boundary of Lee Bay to the west end of Keelson Road",
+        "geometry.steps[2]": "thence along the northerly and easterly boundary of the road to Crosstrees Road",
+        "geometry.steps[3]": "thence easterly along its northerly boundary to Irvines Landing Road",
+        "geometry.steps[4]": "thence easterly along the road to the point of its intersection with Mixal Road and Garden Bay Road",
+        "geometry.steps[5]": "thence easterly along the northerly boundary of Garden Bay Road to its intersection with Myers Creek",
+        "geometry.steps[6]": "thence northeasterly up the Creek to its intersection with Highway 101",
+        "geometry.steps[7]": "thence along the westerly boundary of Highway 101 to the most westerly point of the road approximately 2.2 kilometres north of its intersection with Myers Creek",
+        "geometry.steps[8]": "thence in a straight line due northwest to the natural boundary of Sakinaw Lake",
+        "geometry.steps[9]": "thence southwesterly along the natural boundary of the lake and its outlet stream to the mouth of the outlet stream",
+        "geometry.steps[10]": "thence westerly and southerly along the mean low water mark in the natural boundary of Agamemnon Channel to the point of commencement"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "acd77c4532e4c6b4858663c4152a1a24b1d496dc10776f0e58707d511cc67ef4",
+      "task_id": "closed_area-acd77c4532e4",
+      "construction": [
+        {
+          "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+          "quote": "Commencing at Daniel Point",
+          "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP, WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP, WHSE_BASEMAPPING.FWA_LAKES_POLY"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "9.987 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:59:53.574Z",
-  "updated": "2026-10-27T23:12:00.673Z"
+  "updated": "2026-10-28T17:18:19.714Z"
 }

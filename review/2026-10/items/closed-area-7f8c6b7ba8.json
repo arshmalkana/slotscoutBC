@@ -181,7 +181,33 @@
   "disagreements": [
     "steps: run 1 [\"international boundary between canada and the united states of america|a concrete marker establishing the international boundary||other\",\"|the mean high water mark in the vicinity of the point where 64 st municipality of delta meets the dyke bordering boundary bay||\",\"mean high water mark|the point of commencement||shoreline\"] vs run 2 [\"international boundary between canada and the united states of america|a concrete marker establishing the international boundary||other\",\"|the mean high water mark in the vicinity of the point where 64 st municipality of delta meets the dyke bordering boundary bay||\",\"|the point of commencement||shoreline\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U. 2-04",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "2-4"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "2-4",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 2,
+          "REGION_RESPONSIBLE_ID": "2",
+          "REGION_RESPONSIBLE_NAME": "Lower Mainland",
+          "GAME_MANAGEMENT_ZONE_ID": "2b",
+          "GAME_MANAGEMENT_ZONE_NAME": "Fraser Valley",
+          "FEATURE_AREA_SQM": 2378738189.1205,
+          "FEATURE_LENGTH_M": 319970.317,
+          "OBJECTID": 354,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -197,5 +223,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:47:18.015Z",
-  "updated": "2026-10-20T21:47:18.015Z"
+  "updated": "2026-10-28T17:11:36.495Z"
 }

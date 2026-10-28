@@ -5,12 +5,17 @@
   "title": "Closed Areas Regulation, Schedule 3, section 40 (Lazo Marsh)",
   "rule_id": "W3-040",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: steps: run 1 [\"lot 245|||\",\"||approximately 360 m|straight_line\",\"|the point of intersection with the west boundary of d.l. 195||straight_line\",\"|the northwest corner of d.l. 195||straight_line\",\"d.l. 195|the northeast corner of d.l. 195||lot_line\",\"d.l. 195||approximately 360 m|lot_line\",\"||approximately 205 m|straight_line\",\"||approximately 325 m|straight_line\",\"|the point of intersection with the southerly boundary of lot 245|approximately 145 m|straight_line\",\"||approximately 170 m|straight_line\",\"||approximately 505 m|straight_line\",\"|the point of intersection with the southerly boundary of lot 244|approximately 170 m|straight_line\",\"||approximately 270 m|straight_line\",\"||approximately 150 m|straight_line\",\"||approximately 170 m|straight_line\",\"||approximately 495 m|straight_line\",\"|the point of intersection with the westerly boundary of lot 244|approximately 85 m|straight_line\",\"|the point of commencement|approximately 97 m|straight_line\"] vs run 2 [\"|||\",\"|a point|approximately 360 m|\",\"|the point of intersection with the west boundary of d.l. 195||\",\"|the northwest corner of d.l. 195||\",\"d.l. 195|the northeast corner of d.l. 195||lot_line\",\"d.l. 195|a point|approximately 360 m|lot_line\",\"|a point|approximately 205 m|\",\"|a point|approximately 325 m|straight_line\",\"|the point of intersection with the southerly boundary of lot 245|approximately 145 m|\",\"|a point|approximately 170 m|straight_line\",\"|a point|approximately 505 m|straight_line\",\"|the point of intersection with the southerly boundary of lot 244|approximately 170 m|straight_line\",\"|a point|approximately 270 m|\",\"|a point|approximately 150 m|straight_line\",\"|a point|approximately 170 m|\",\"|a point|approximately 495 m|straight_line\",\"|the point of intersection with the westerly boundary of lot 244|approximately 85 m|\",\"|the point of commencement|approximately 97 m|\"]",
     "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 \"inside\" vs run 2 null",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "approximate outline (vicinity) drawn from the places the walk names, using run 1's reading of the steps",
+    "\"Lot 245\" was not found in the official layers; that side is drawn straight",
+    "\"D.L. 195\" was not found in the official layers; that side is drawn straight",
+    "\"D.L. 195\" was not found in the official layers; that side is drawn straight",
+    "the outline could not be placed: a 1 km zone around the place the section names is marked",
+    "validation failed: two independent extractions agree (steps: run 1 [\"lot 245|||\",\"||approximately 360 m|straight_line\",\"|the point of intersection with the west boundary of d.l. 195||straight_line\",\"|the northwest corner of d.l. 195||straight_line\",\"d.l. 195|the northeast corner of d.l. 195||lot_line\",\"d.l. 195||approximately 360 m|lot_line\",\"||approximately 205 m|straight_line\",\"||approximately 325 m|straight_line\",\"|the point of intersection with the southerly boundary of lot 245|approximately 145 m|straight_line\",\"||approximately 170 m|straight_line\",\"||approximately 505 m|straight_line\",\"|the point of intersection with the southerly boundary of lot 244|approximately 170 m|straight_line\",\"||approximately 270 m|straight_line\",\"||approximately 150 m|straight_line\",\"||approximately 170 m|straight_line\",\"||approximately 495 m|straight_line\",\"|the point of intersection with the westerly boundary of lot 244|approximately 85 m|straight_line\",\"|the point of commencement|approximately 97 m|straight_line\"] vs run 2 [\"|||\",\"|a point|approximately 360 m|\",\"|the point of intersection with the west boundary of d.l. 195||\",\"|the northwest corner of d.l. 195||\",\"d.l. 195|the northeast corner of d.l. 195||lot_line\",\"d.l. 195|a point|approximately 360 m|lot_line\",\"|a point|approximately 205 m|\",\"|a point|approximately 325 m|straight_line\",\"|the point of intersection with the southerly boundary of lot 245|approximately 145 m|\",\"|a point|approximately 170 m|straight_line\",\"|a point|approximately 505 m|straight_line\",\"|the point of intersection with the southerly boundary of lot 244|approximately 170 m|straight_line\",\"|a point|approximately 270 m|\",\"|a point|approximately 150 m|straight_line\",\"|a point|approximately 170 m|\",\"|a point|approximately 495 m|straight_line\",\"|the point of intersection with the westerly boundary of lot 244|approximately 85 m|\",\"|the point of commencement|approximately 97 m|\"])"
   ],
   "source": {
     "text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nLazo Marsh\n40 That portion of M.U. 1-06 in the vicinity of Comox which is contained within the following described boundaries: Commencing at the southwest corner of Lot 245, Comox Land District; thence northerly approximately 360 m to a point; thence westerly to the point of intersection with the west boundary of D.L. 195; thence northerly to the northwest corner of D.L. 195; thence easterly along the northern boundary of said district lot to the northeast corner of D.L. 195; thence southerly along the east boundary of D.L. 195 approximately 360 m to a point; thence easterly approximately 205 m to a point; thence approximately 325 m at S 51° E to a point; thence southerly approximately 145 m to the point of intersection with the southerly boundary of Lot 245; thence easterly approximately 170 m at S 53° E to a point; thence approximately 505 m at S 18° W to a point; thence approximately 170 m at S 9° W to the point of intersection with the southerly boundary of Lot 244; thence westerly approximately 270 m to a point; thence approximately 150 m at N 24° E to a point; thence northerly approximately 170 m to a point; thence approximately 495 m at N 33° W to a point; thence westerly approximately 85 m to the point of intersection with the westerly boundary of Lot 244; thence northerly approximately 97 m to the point of commencement. [en. B.C. Reg. 235/97, s. 1.]",
@@ -511,12 +516,63 @@
     "side: run 1 \"inside\" vs run 2 null",
     "steps: run 1 [\"lot 245|||\",\"||approximately 360 m|straight_line\",\"|the point of intersection with the west boundary of d.l. 195||straight_line\",\"|the northwest corner of d.l. 195||straight_line\",\"d.l. 195|the northeast corner of d.l. 195||lot_line\",\"d.l. 195||approximately 360 m|lot_line\",\"||approximately 205 m|straight_line\",\"||approximately 325 m|straight_line\",\"|the point of intersection with the southerly boundary of lot 245|approximately 145 m|straight_line\",\"||approximately 170 m|straight_line\",\"||approximately 505 m|straight_line\",\"|the point of intersection with the southerly boundary of lot 244|approximately 170 m|straight_line\",\"||approximately 270 m|straight_line\",\"||approximately 150 m|straight_line\",\"||approximately 170 m|straight_line\",\"||approximately 495 m|straight_line\",\"|the point of intersection with the westerly boundary of lot 244|approximately 85 m|straight_line\",\"|the point of commencement|approximately 97 m|straight_line\"] vs run 2 [\"|||\",\"|a point|approximately 360 m|\",\"|the point of intersection with the west boundary of d.l. 195||\",\"|the northwest corner of d.l. 195||\",\"d.l. 195|the northeast corner of d.l. 195||lot_line\",\"d.l. 195|a point|approximately 360 m|lot_line\",\"|a point|approximately 205 m|\",\"|a point|approximately 325 m|straight_line\",\"|the point of intersection with the southerly boundary of lot 245|approximately 145 m|\",\"|a point|approximately 170 m|straight_line\",\"|a point|approximately 505 m|straight_line\",\"|the point of intersection with the southerly boundary of lot 244|approximately 170 m|straight_line\",\"|a point|approximately 270 m|\",\"|a point|approximately 150 m|straight_line\",\"|a point|approximately 170 m|\",\"|a point|approximately 495 m|straight_line\",\"|the point of intersection with the westerly boundary of lot 244|approximately 85 m|\",\"|the point of commencement|approximately 97 m|\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U. 1-06",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "1-6"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "1-6",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 1,
+          "REGION_RESPONSIBLE_ID": "1",
+          "REGION_RESPONSIBLE_NAME": "Vancouver Island",
+          "GAME_MANAGEMENT_ZONE_ID": "1a",
+          "GAME_MANAGEMENT_ZONE_NAME": "Southern Vancouver Island",
+          "FEATURE_AREA_SQM": 4014262107.1476,
+          "FEATURE_LENGTH_M": 358041.9776,
+          "OBJECTID": 328,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.121 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "steps: run 1 [\"lot 245|||\",\"||approximately 360 m|straight_line\",\"|the point of intersection with the west boundary of d.l. 195||straight_line\",\"|the northwest corner of d.l. 195||straight_line\",\"d.l. 195|the northeast corner of d.l. 195||lot_line\",\"d.l. 195||approximately 360 m|lot_line\",\"||approximately 205 m|straight_line\",\"||approximately 325 m|straight_line\",\"|the point of intersection with the southerly boundary of lot 245|approximately 145 m|straight_line\",\"||approximately 170 m|straight_line\",\"||approximately 505 m|straight_line\",\"|the point of intersection with the southerly boundary of lot 244|approximately 170 m|straight_line\",\"||approximately 270 m|straight_line\",\"||approximately 150 m|straight_line\",\"||approximately 170 m|straight_line\",\"||approximately 495 m|straight_line\",\"|the point of intersection with the westerly boundary of lot 244|approximately 85 m|straight_line\",\"|the point of commencement|approximately 97 m|straight_line\"] vs run 2 [\"|||\",\"|a point|approximately 360 m|\",\"|the point of intersection with the west boundary of d.l. 195||\",\"|the northwest corner of d.l. 195||\",\"d.l. 195|the northeast corner of d.l. 195||lot_line\",\"d.l. 195|a point|approximately 360 m|lot_line\",\"|a point|approximately 205 m|\",\"|a point|approximately 325 m|straight_line\",\"|the point of intersection with the southerly boundary of lot 245|approximately 145 m|\",\"|a point|approximately 170 m|straight_line\",\"|a point|approximately 505 m|straight_line\",\"|the point of intersection with the southerly boundary of lot 244|approximately 170 m|straight_line\",\"|a point|approximately 270 m|\",\"|a point|approximately 150 m|straight_line\",\"|a point|approximately 170 m|\",\"|a point|approximately 495 m|straight_line\",\"|the point of intersection with the westerly boundary of lot 244|approximately 85 m|\",\"|the point of commencement|approximately 97 m|\"]"
     },
     {
       "check": "step directions match the line",
@@ -524,8 +580,254 @@
       "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate outline (vicinity): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at the southwest corner of Lot 245, Comox Land District",
+      "source": "BC Geographical Names"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -124.94167436480693,
+            49.67277693856076
+          ],
+          [
+            -124.9414068541956,
+            49.67102248324776
+          ],
+          [
+            -124.94061564190902,
+            49.66933551034863
+          ],
+          [
+            -124.93933118120418,
+            49.66778083902425
+          ],
+          [
+            -124.93760286485016,
+            49.66641819907129
+          ],
+          [
+            -124.93549712217707,
+            49.665299937876696
+          ],
+          [
+            -124.93309486454916,
+            49.66446901149218
+          ],
+          [
+            -124.93048837768634,
+            49.663957336611276
+          ],
+          [
+            -124.92777778,
+            49.66378456636276
+          ],
+          [
+            -124.92506718231365,
+            49.663957336611276
+          ],
+          [
+            -124.92246069545082,
+            49.66446901149218
+          ],
+          [
+            -124.92005843782293,
+            49.665299937876696
+          ],
+          [
+            -124.91795269514982,
+            49.66641819907129
+          ],
+          [
+            -124.91622437879582,
+            49.66778083902425
+          ],
+          [
+            -124.91493991809097,
+            49.66933551034863
+          ],
+          [
+            -124.9141487058044,
+            49.67102248324776
+          ],
+          [
+            -124.91388119519307,
+            49.67277693856076
+          ],
+          [
+            -124.9141477224868,
+            49.67453145716329
+          ],
+          [
+            -124.91493810115689,
+            49.676218610295784
+          ],
+          [
+            -124.916222004857,
+            49.67777355135846
+          ],
+          [
+            -124.91795012561694,
+            49.679136509489446
+          ],
+          [
+            -124.92005606388403,
+            49.68025508886206
+          ],
+          [
+            -124.92245887851665,
+            49.6810862849849
+          ],
+          [
+            -124.92506619899592,
+            49.6815981400992
+          ],
+          [
+            -124.92777778,
+            49.68177097363725
+          ],
+          [
+            -124.93048936100406,
+            49.6815981400992
+          ],
+          [
+            -124.93309668148335,
+            49.6810862849849
+          ],
+          [
+            -124.93549949611597,
+            49.68025508886206
+          ],
+          [
+            -124.93760543438306,
+            49.679136509489446
+          ],
+          [
+            -124.939333555143,
+            49.67777355135846
+          ],
+          [
+            -124.94061745884309,
+            49.676218610295784
+          ],
+          [
+            -124.9414078375132,
+            49.67453145716329
+          ],
+          [
+            -124.94167436480693,
+            49.67277693856076
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W3-040",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 3, s. 40",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nLazo Marsh\n40 That portion of M.U. 1-06 in the vicinity of Comox which is contained within the following described boundaries: Commencing at the southwest corner of Lot 245, Comox Land District; thence northerly approximately 360 m to a point; thence westerly to the point of intersection with the west boundary of D.L. 195; thence northerly to the northwest corner of D.L. 195; thence easterly along the northern boundary of said district lot to the northeast corner of D.L. 195; thence southerly along the east boundary of D.L. 195 approximately 360 m to a point; thence easterly approximately 205 m to a point; thence approximately 325 m at S 51° E to a point; thence southerly approximately 145 m to the point of intersection with the southerly boundary of Lot 245; thence easterly approximately 170 m at S 53° E to a point; thence approximately 505 m at S 18° W to a point; thence approximately 170 m at S 9° W to the point of intersection with the southerly boundary of Lot 244; thence westerly approximately 270 m to a point; thence approximately 150 m at N 24° E to a point; thence northerly approximately 170 m to a point; thence approximately 495 m at N 33° W to a point; thence westerly approximately 85 m to the point of intersection with the westerly boundary of Lot 244; thence northerly approximately 97 m to the point of commencement. [en. B.C. Reg. 235/97, s. 1.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate outline (vicinity): corners where the followed features meet, traced along them where found, padded 100 m",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "That portion of M.U. 1-06",
+        "effect": "No Shooting or Hunting Areas",
+        "geometry.side": "contained within the following described boundaries",
+        "geometry.steps[0]": "Commencing at the southwest corner of Lot 245, Comox Land District",
+        "geometry.steps[1]": "thence northerly approximately 360 m to a point",
+        "geometry.steps[2]": "thence westerly to the point of intersection with the west boundary of D.L. 195",
+        "geometry.steps[3]": "thence northerly to the northwest corner of D.L. 195",
+        "geometry.steps[4]": "thence easterly along the northern boundary of said district lot to the northeast corner of D.L. 195",
+        "geometry.steps[5]": "thence southerly along the east boundary of D.L. 195 approximately 360 m to a point",
+        "geometry.steps[6]": "thence easterly approximately 205 m to a point",
+        "geometry.steps[7]": "thence approximately 325 m at S 51° E to a point",
+        "geometry.steps[8]": "thence southerly approximately 145 m to the point of intersection with the southerly boundary of Lot 245",
+        "geometry.steps[9]": "thence easterly approximately 170 m at S 53° E to a point",
+        "geometry.steps[10]": "thence approximately 505 m at S 18° W to a point",
+        "geometry.steps[11]": "thence approximately 170 m at S 9° W to the point of intersection with the southerly boundary of Lot 244",
+        "geometry.steps[12]": "thence westerly approximately 270 m to a point",
+        "geometry.steps[13]": "thence approximately 150 m at N 24° E to a point",
+        "geometry.steps[14]": "thence northerly approximately 170 m to a point",
+        "geometry.steps[15]": "thence approximately 495 m at N 33° W to a point",
+        "geometry.steps[16]": "thence westerly approximately 85 m to the point of intersection with the westerly boundary of Lot 244",
+        "geometry.steps[17]": "thence northerly approximately 97 m to the point of commencement"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "0cb50d07636d01a31d7cddd49becce202ae43973e6f8f2d4b8472f32039943fb",
+      "task_id": "closed_area-0cb50d07636d",
+      "construction": [
+        {
+          "what": "approximate outline (vicinity): corners where the followed features meet, traced along them where found, padded 100 m",
+          "quote": "Commencing at the southwest corner of Lot 245, Comox Land District",
+          "source": "BC Geographical Names"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "3.121 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "steps: run 1 [\"lot 245|||\",\"||approximately 360 m|straight_line\",\"|the point of intersection with the west boundary of d.l. 195||straight_line\",\"|the northwest corner of d.l. 195||straight_line\",\"d.l. 195|the northeast corner of d.l. 195||lot_line\",\"d.l. 195||approximately 360 m|lot_line\",\"||approximately 205 m|straight_line\",\"||approximately 325 m|straight_line\",\"|the point of intersection with the southerly boundary of lot 245|approximately 145 m|straight_line\",\"||approximately 170 m|straight_line\",\"||approximately 505 m|straight_line\",\"|the point of intersection with the southerly boundary of lot 244|approximately 170 m|straight_line\",\"||approximately 270 m|straight_line\",\"||approximately 150 m|straight_line\",\"||approximately 170 m|straight_line\",\"||approximately 495 m|straight_line\",\"|the point of intersection with the westerly boundary of lot 244|approximately 85 m|straight_line\",\"|the point of commencement|approximately 97 m|straight_line\"] vs run 2 [\"|||\",\"|a point|approximately 360 m|\",\"|the point of intersection with the west boundary of d.l. 195||\",\"|the northwest corner of d.l. 195||\",\"d.l. 195|the northeast corner of d.l. 195||lot_line\",\"d.l. 195|a point|approximately 360 m|lot_line\",\"|a point|approximately 205 m|\",\"|a point|approximately 325 m|straight_line\",\"|the point of intersection with the southerly boundary of lot 245|approximately 145 m|\",\"|a point|approximately 170 m|straight_line\",\"|a point|approximately 505 m|straight_line\",\"|the point of intersection with the southerly boundary of lot 244|approximately 170 m|straight_line\",\"|a point|approximately 270 m|\",\"|a point|approximately 150 m|straight_line\",\"|a point|approximately 170 m|\",\"|a point|approximately 495 m|straight_line\",\"|the point of intersection with the westerly boundary of lot 244|approximately 85 m|\",\"|the point of commencement|approximately 97 m|\"]"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:07:26.043Z",
-  "updated": "2026-10-27T23:10:06.709Z"
+  "updated": "2026-10-28T17:03:25.610Z"
 }

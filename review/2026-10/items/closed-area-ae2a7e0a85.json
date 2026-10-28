@@ -5,10 +5,15 @@
   "title": "Closed Areas Regulation, Schedule 9, section 12 (Powell River)",
   "rule_id": "W9-012",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "approximate outline (traced) drawn from the places the walk names",
+    "\"BC Hydro power line\" was not found in the official layers; that side is drawn straight",
+    "\"British Columbia Hydro power line\" was not found in the official layers; that side is drawn straight",
+    "\"Sliammon Indian Reserve Number 1\" was not found in the official layers; that side is drawn straight",
+    "\"Malaspina Strait\" was not found in the official layers; that side is drawn straight",
+    "\"Thunder Bay\" was not found in the official layers; that side is drawn straight"
   ],
   "source": {
     "text": "Schedule 9 Firearms Using Shot Only Areas (Section 10 (1) (a))\nPowell River\n12 That portion of the Province of British Columbia in M.U. 2-12 in the vicinity of Powell River contained within the following described boundaries: Commencing at a point on the mean low water mark on the southerly natural boundary of Jefferd Creek where it flows into Thunder Bay; thence northerly up the creek to a point 500 m upstream of the right-of-way of BC Hydro powerline; thence westerly to its intersection with the Lois River; thence northerly and easterly along the west bank of the Lois River to the Lois Lake dam; thence along a straight line due West to a point 500 m north of the right-of-way of the BC Hydro power line; thence northwesterly parallel to the northerly boundary of the power line right of way at a perpendicular distance off 500 m from it to Kelly Creek; thence due South along a straight line to the southern boundary of the BC Hydro power line; thence northwesterly along the southern boundary of the British Columbia Hydro power line right of way to the southeasternmost bay of Hammil Lake; thence westerly and northwesterly along the mean low water mark of Hammil Lake to the outlet of Hammil Lake; thence in a straight line due North to the mean low water mark of Haslam Lake; thence westerly along the mean low water mark of Haslam Lake to its westernmost point; thence in a straight line due northwest to the southwesternmost point of Schmarge Bay, north of Powell Hill; thence due West in a straight line to the easterly boundary of the Sliammon Indian Reserve Number 1; thence southerly along the reserve boundary to its intersection with the northerly boundary of the District Municipality of Powell River; thence easterly and southerly along the district boundary to a point on the boundary 500 m southerly from the mean low water mark on the natural boundary of Malaspina Strait; thence generally southeasterly along a line 500 m from and parallel to the mean low water mark on the natural boundary of Malaspina Strait to a point 500 m south of the southerly tip of an unnamed point of land which forms the westerly shore of Frolander Bay; thence due East to the natural boundary of Frolander Bay; thence northeasterly along the base of a hill, which is located northeast of Frolander Bay, to the natural boundary of Thunder Bay; thence northerly along the mean low water mark on the natural boundary to the point of commencement. [en. B.C. Reg. 205/94, s. 27.]",
@@ -628,9 +633,34 @@
   ],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "40.576 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     },
     {
       "check": "step directions match the line",
@@ -638,8 +668,319 @@
       "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at a point on the mean low water mark on the southerly natural boundary of Jefferd Creek where it flows into Thunder Bay",
+      "source": "WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP, WHSE_BASEMAPPING.FWA_RIVERS_POLY, WHSE_BASEMAPPING.FWA_LAKES_POLY, WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -124.59457755248181,
+            49.87810426337877
+          ],
+          [
+            -124.59454686201764,
+            49.877924630257255
+          ],
+          [
+            -124.59446105964277,
+            49.87775257814785
+          ],
+          [
+            -124.59432361065197,
+            49.87759505457906
+          ],
+          [
+            -124.59414006570249,
+            49.87745842034733
+          ],
+          [
+            -124.5753133336227,
+            49.86600050546016
+          ],
+          [
+            -124.5752593811248,
+            49.865969326256554
+          ],
+          [
+            -124.57460223370822,
+            49.86560895136578
+          ],
+          [
+            -124.5744981576639,
+            49.86555712208164
+          ],
+          [
+            -124.57329769702069,
+            49.86501554033864
+          ],
+          [
+            -124.5732896457349,
+            49.86501193505773
+          ],
+          [
+            -124.562632341528,
+            49.860274447630054
+          ],
+          [
+            -124.56237858376214,
+            49.86018508826442
+          ],
+          [
+            -124.56210170134248,
+            49.86013137150243
+          ],
+          [
+            -124.56181358872384,
+            49.86011560492519
+          ],
+          [
+            -124.15945242600411,
+            49.86438252570859
+          ],
+          [
+            -124.1592016084646,
+            49.86439944438839
+          ],
+          [
+            -124.15895961300346,
+            49.86444519091918
+          ],
+          [
+            -124.15869638685498,
+            49.86451212976159
+          ],
+          [
+            -124.15836186139074,
+            49.864633843899036
+          ],
+          [
+            -124.1581013730035,
+            49.864762012003
+          ],
+          [
+            -124.15792875602911,
+            49.86486269338459
+          ],
+          [
+            -124.15430115945631,
+            49.86736358158178
+          ],
+          [
+            -124.15413607675285,
+            49.86750225231365
+          ],
+          [
+            -124.15401572778407,
+            49.867658886630316
+          ],
+          [
+            -124.15394465909831,
+            49.86782756778155
+          ],
+          [
+            -124.15392555581515,
+            49.8680019238929
+          ],
+          [
+            -124.15395914012183,
+            49.86817536865099
+          ],
+          [
+            -124.15404414390916,
+            49.868341350098916
+          ],
+          [
+            -124.15417735659312,
+            49.8684935981446
+          ],
+          [
+            -124.15435374632753,
+            49.868626361430806
+          ],
+          [
+            -124.1554970374942,
+            49.86933420093611
+          ],
+          [
+            -124.155686950531,
+            49.86943274126577
+          ],
+          [
+            -124.15590057727572,
+            49.86950847055227
+          ],
+          [
+            -124.15613139515304,
+            49.869559076551255
+          ],
+          [
+            -124.15637235661025,
+            49.869583014102396
+          ],
+          [
+            -124.1565409097281,
+            49.869590134236056
+          ],
+          [
+            -124.1565566425038,
+            49.86959074132214
+          ],
+          [
+            -124.15716840384341,
+            49.86961211172447
+          ],
+          [
+            -124.1571932050291,
+            49.8696128354611
+          ],
+          [
+            -124.59313944955154,
+            49.879011260359725
+          ],
+          [
+            -124.59341920377943,
+            49.87899859942205
+          ],
+          [
+            -124.59368938096716,
+            49.87895015056303
+          ],
+          [
+            -124.59393907054385,
+            49.87886787030223
+          ],
+          [
+            -124.59415818941825,
+            49.878755081365604
+          ],
+          [
+            -124.59433788920272,
+            49.87861633848441
+          ],
+          [
+            -124.59447091354225,
+            49.8784572444391
+          ],
+          [
+            -124.59455189111591,
+            49.87828422378163
+          ],
+          [
+            -124.59457755248181,
+            49.87810426337877
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W9-012",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 9, s. 12",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 9 Firearms Using Shot Only Areas (Section 10 (1) (a))\nPowell River\n12 That portion of the Province of British Columbia in M.U. 2-12 in the vicinity of Powell River contained within the following described boundaries: Commencing at a point on the mean low water mark on the southerly natural boundary of Jefferd Creek where it flows into Thunder Bay; thence northerly up the creek to a point 500 m upstream of the right-of-way of BC Hydro powerline; thence westerly to its intersection with the Lois River; thence northerly and easterly along the west bank of the Lois River to the Lois Lake dam; thence along a straight line due West to a point 500 m north of the right-of-way of the BC Hydro power line; thence northwesterly parallel to the northerly boundary of the power line right of way at a perpendicular distance off 500 m from it to Kelly Creek; thence due South along a straight line to the southern boundary of the BC Hydro power line; thence northwesterly along the southern boundary of the British Columbia Hydro power line right of way to the southeasternmost bay of Hammil Lake; thence westerly and northwesterly along the mean low water mark of Hammil Lake to the outlet of Hammil Lake; thence in a straight line due North to the mean low water mark of Haslam Lake; thence westerly along the mean low water mark of Haslam Lake to its westernmost point; thence in a straight line due northwest to the southwesternmost point of Schmarge Bay, north of Powell Hill; thence due West in a straight line to the easterly boundary of the Sliammon Indian Reserve Number 1; thence southerly along the reserve boundary to its intersection with the northerly boundary of the District Municipality of Powell River; thence easterly and southerly along the district boundary to a point on the boundary 500 m southerly from the mean low water mark on the natural boundary of Malaspina Strait; thence generally southeasterly along a line 500 m from and parallel to the mean low water mark on the natural boundary of Malaspina Strait to a point 500 m south of the southerly tip of an unnamed point of land which forms the westerly shore of Frolander Bay; thence due East to the natural boundary of Frolander Bay; thence northeasterly along the base of a hill, which is located northeast of Frolander Bay, to the natural boundary of Thunder Bay; thence northerly along the mean low water mark on the natural boundary to the point of commencement. [en. B.C. Reg. 205/94, s. 27.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "shot_only",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "traced",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "in M.U. 2-12",
+        "effect": "Firearms Using Shot Only Areas",
+        "geometry.side": "within the following described boundaries",
+        "geometry.steps[0]": "Commencing at a point on the mean low water mark on the southerly natural boundary of Jefferd Creek where it flows into Thunder Bay",
+        "geometry.steps[1]": "thence northerly up the creek to a point 500 m upstream of the right-of-way of BC Hydro powerline",
+        "geometry.steps[2]": "thence westerly to its intersection with the Lois River",
+        "geometry.steps[3]": "thence northerly and easterly along the west bank of the Lois River to the Lois Lake dam",
+        "geometry.steps[4]": "thence along a straight line due West to a point 500 m north of the right-of-way of the BC Hydro power line",
+        "geometry.steps[5]": "thence northwesterly parallel to the northerly boundary of the power line right of way at a perpendicular distance off 500 m from it to Kelly Creek",
+        "geometry.steps[6]": "thence due South along a straight line to the southern boundary of the BC Hydro power line",
+        "geometry.steps[7]": "thence northwesterly along the southern boundary of the British Columbia Hydro power line right of way to the southeasternmost bay of Hammil Lake",
+        "geometry.steps[8]": "thence westerly and northwesterly along the mean low water mark of Hammil Lake to the outlet of Hammil Lake",
+        "geometry.steps[9]": "thence in a straight line due North to the mean low water mark of Haslam Lake",
+        "geometry.steps[10]": "thence westerly along the mean low water mark of Haslam Lake to its westernmost point",
+        "geometry.steps[11]": "thence in a straight line due northwest to the southwesternmost point of Schmarge Bay, north of Powell Hill",
+        "geometry.steps[12]": "thence due West in a straight line to the easterly boundary of the Sliammon Indian Reserve Number 1",
+        "geometry.steps[13]": "thence southerly along the reserve boundary to its intersection with the northerly boundary of the District Municipality of Powell River",
+        "geometry.steps[14]": "thence easterly and southerly along the district boundary to a point on the boundary 500 m southerly from the mean low water mark on the natural boundary of Malaspina Strait",
+        "geometry.steps[15]": "thence generally southeasterly along a line 500 m from and parallel to the mean low water mark on the natural boundary of Malaspina Strait to a point 500 m south of the southerly tip of an unnamed point of land which forms the westerly shore of Frolander Bay",
+        "geometry.steps[16]": "thence due East to the natural boundary of Frolander Bay",
+        "geometry.steps[17]": "thence northeasterly along the base of a hill, which is located northeast of Frolander Bay, to the natural boundary of Thunder Bay",
+        "geometry.steps[18]": "thence northerly along the mean low water mark on the natural boundary to the point of commencement"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "e4ac8f7c0b209dc28e596a28594c72fc6870ff848218cc024af286b3f4dce650",
+      "task_id": "closed_area-e4ac8f7c0b20",
+      "construction": [
+        {
+          "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+          "quote": "Commencing at a point on the mean low water mark on the southerly natural boundary of Jefferd Creek where it flows into Thunder Bay",
+          "source": "WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP, WHSE_BASEMAPPING.FWA_RIVERS_POLY, WHSE_BASEMAPPING.FWA_LAKES_POLY, WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "40.576 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T22:00:19.523Z",
-  "updated": "2026-10-27T23:12:34.281Z"
+  "updated": "2026-10-28T17:28:10.827Z"
 }

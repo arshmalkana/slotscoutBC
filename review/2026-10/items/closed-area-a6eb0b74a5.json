@@ -312,7 +312,33 @@
     "side: run 1 \"inside\" vs run 2 null",
     "steps: run 1 [\"lot 1476|||\",\"914.4 m elevation|a point approximately 8 450 m at s 66 w from the southeast corner of lot 1476||contour\",\"murray river|a point 402 m due west of the natural boundary of murray river on the left bank thereof||straight_line\",\"murray river|a point due east of the southeast corner of lot 817|402 m|river\",\"||approximately 2 500 m|straight_line\",\"murray river|the point of intersection with the natural boundary of murray river on the right bank thereof||straight_line\",\"|a point at 884 m elevation||straight_line\",\"884 m elevation|a point due west of the point of commencement||contour\",\"|the point of commencement||straight_line\"] vs run 2 [\"lot 1476|||\",\"914.4 m elevation|a point approximately 8 450 m at s 66 w from the southeast corner of lot 1476||contour\",\"murray river|a point 402 m due west of the natural boundary of murray river on the left bank thereof|402 m|straight_line\",\"murray river|a point due east of the southeast corner of lot 817|402 m|river\",\"||approximately 2 500 m|straight_line\",\"murray river|the point of intersection with the natural boundary of murray river on the right bank thereof||straight_line\",\"|a point at 884 m elevation||straight_line\",\"884 m elevation|a point due west of the point of commencement||contour\",\"|the point of commencement||straight_line\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U. 7-21",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "7-21"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "7-21",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 7,
+          "REGION_RESPONSIBLE_ID": "7B",
+          "REGION_RESPONSIBLE_NAME": "Omineca",
+          "GAME_MANAGEMENT_ZONE_ID": "7Pa",
+          "GAME_MANAGEMENT_ZONE_NAME": "South Peace",
+          "FEATURE_AREA_SQM": 6742654358.4221,
+          "FEATURE_LENGTH_M": 624336.9009,
+          "OBJECTID": 500,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -328,5 +354,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:08:33.688Z",
-  "updated": "2026-10-27T23:10:49.453Z"
+  "updated": "2026-10-28T17:11:07.289Z"
 }

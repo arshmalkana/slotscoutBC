@@ -259,7 +259,33 @@
   "disagreements": [
     "steps: run 1 [\"bcr mackenzie branch line|||\",\"missinchinka river|an unnamed stream running westerly into the missinchinka river|approximately 9 km|river\",\"|the crossing of the bcr line||creek\",\"bcr|the junction of the bcr branch line to mackenzie||other\",\"|the point of commencement||other\"] vs run 2 [\"missinchinka river|||\",\"missinchinka river|an unnamed stream running westerly into the missinchinka river|approximately 9 km|river\",\"|the crossing of the bcr line||creek\",\"bcr|the junction of the bcr branch line to mackenzie||other\",\"|the point of commencement||other\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U. 7-23",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "7-23"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "7-23",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 7,
+          "REGION_RESPONSIBLE_ID": "7A",
+          "REGION_RESPONSIBLE_NAME": "Omineca",
+          "GAME_MANAGEMENT_ZONE_ID": "7Oc",
+          "GAME_MANAGEMENT_ZONE_NAME": "Mcleod Lake",
+          "FEATURE_AREA_SQM": 4348857339.4672,
+          "FEATURE_LENGTH_M": 434193.5818,
+          "OBJECTID": 503,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -275,5 +301,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:08:32.361Z",
-  "updated": "2026-10-21T16:08:32.361Z"
+  "updated": "2026-10-28T17:09:42.478Z"
 }

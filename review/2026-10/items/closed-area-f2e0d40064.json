@@ -5,11 +5,25 @@
   "title": "Closed Areas Regulation, Schedule 5, section 64 (Sechelt)",
   "rule_id": "W5-064",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: steps: run 1 [\"|||\",\"|its intersection with the northern and western boundary of the right of way of the bc hydro double power line||creek\",\"bc hydro double power line|its intersection with langdale creek||other\",\"langdale creek|a point on the mean low water mark at the mouth of the creek where it flows into howe sound||creek\",\"howe sound|the point of commencement||shoreline\",\"|||\",\"langdale creek|a point 500 m westerly and northerly of its intersection with the western and northern boundary of the right of way of the bc hydro double powerline|500 m|creek\",\"bc hydro double powerline|a point perpendicular to the intersection of the power line right of way and the western natural boundary of halfmoon creek|500 m|other\",\"halfmoon creek|a point on the mean low water mark at the mouth of halfmoon creek where it flows into halfmoon bay||creek\",\"georgia strait and howe sound|the point of commencement||shoreline\",\"|||\",\"halfmoon creek||500 m|creek\",\"hwy 101|a point on the northern natural boundary of haslam creek approximately 500 m east of the intersection of the eastern boundary of the right of way of hwy 101 and the northern natural boundary of haslam creek|500 m|other\",\"haslam creek|a point on the mean low water mark at the mouth of the creek where it flows into georgia strait||creek\",\"georgia strait|its intersection with the northern natural boundary of halfmoon creek||shoreline\",\"halfmoon creek|the point of commencement||creek\",\"|||\",\"haslam creek|a point 500 m upstream of hwy 101|500 m|creek\",\"|the summit of cecil hill||straight_line\",\"|a point 500 m west of the bc hydro powerline right of way|500 m|straight_line\",\"bc hydro powerline|the north fork of myers creek|500 m|other\",\"myers creek|its intersection with garden bay rd||creek\",\"garden bay rd|its intersection with mixal rd and irvines landing rd||road\",\"irvines landing rd|its intersection with crosstrees rd||road\",\"crosstrees rd|its intersection with keelson rd||road\",\"keelson rd|its end||road\",\"|a point on the mean low water mark on the boundary of georgia strait||straight_line\",\"georgia strait|daniel point||shoreline\",\"|the westernmost tip of martin island||straight_line\",\"|francis point||straight_line\",\"|the southern tip of an unnamed island lying approximately 400 m east of francis point|approximately 400 m|straight_line\",\"|the southern tip of edgecombe island||straight_line\",\"|a point at the mean low water mark on the natural boundary of the sechelt peninsula|approximately 650 m|straight_line\",\"strait of georgia|the point of commencement||shoreline\",\"||500 m|\",\"bc hydro powerline|a point 500 m east of porpoise bay rd|500 m|other\",\"porpoise bay rd|the rd s end at tuwanek|500 m|other\",\"|the natural boundary of irvine creek||straight_line\",\"irvine creek|its mouth||creek\",\"|an unnamed point of land forming the northerly shore of snake bay and continuing to a point 500 m perpendicularly distant from the northern boundary of the bc hydro powerline right of way|500 m|straight_line\",\"bc hydro power line|the point of commencement|500 m|other\",\"||500 m|\",\"roberts creek|a point 2.5 kilometres from the intersection of the powerline|2.5 kilometres|creek\",\"bc hydro double powerline|east wilson creek|2 kilometres|other\",\"east wilson creek|a point 500 m northeasterly from the northeast boundary of the bc hydro double powerline|500 m|creek\",\"bc hydro double powerline|the point of commencement|500 m|other\"] vs run 2 [\"|||\",\"|its intersection with the northern and western boundary of the right of way of the bc hydro double power line||creek\",\"bc hydro double power line|its intersection with langdale creek||other\",\"langdale creek|a point on the mean low water mark at the mouth of the creek where it flows into howe sound||creek\",\"howe sound|the point of commencement||shoreline\",\"|||\",\"langdale creek|a point 500 m westerly and northerly of its intersection with the western and northern boundary of the right of way of the bc hydro double powerline|500 m|creek\",\"bc hydro double powerline|a point perpendicular to the intersection of the power line right of way and the western natural boundary of halfmoon creek|perpendicular distance of 500 m|other\",\"halfmoon creek|a point on the mean low water mark at the mouth of halfmoon creek where it flows into halfmoon bay||creek\",\"georgia strait and howe sound|the point of commencement||shoreline\",\"|||\",\"halfmoon creek||500 m|creek\",\"hwy 101|a point on the northern natural boundary of haslam creek approximately 500 m east of the intersection of the eastern boundary of the right of way of hwy 101 and the northern natural boundary of haslam creek|perpendicular distance of 500 m|other\",\"haslam creek|a point on the mean low water mark at the mouth of the creek where it flows into georgia strait||creek\",\"georgia strait|its intersection with the northern natural boundary of halfmoon creek||shoreline\",\"halfmoon creek|the point of commencement||creek\",\"|||\",\"haslam creek|a point 500 m upstream of hwy 101|500 m|creek\",\"|the summit of cecil hill||straight_line\",\"|a point 500 m west of the bc hydro powerline right of way|500 m|straight_line\",\"bc hydro powerline|the north fork of myers creek|perpendicular distance of 500 m|other\",\"myers creek|its intersection with garden bay rd||creek\",\"garden bay rd|its intersection with mixal rd and irvines landing rd||road\",\"irvines landing rd|its intersection with crosstrees rd||road\",\"crosstrees rd|its intersection with keelson rd||road\",\"keelson rd|its end||road\",\"|a point on the mean low water mark on the boundary of georgia strait||straight_line\",\"georgia strait|daniel point||shoreline\",\"|the westernmost tip of martin island||straight_line\",\"|francis point||straight_line\",\"|the southern tip of an unnamed island lying approximately 400 m east of francis point|approximately 400 m|straight_line\",\"|the southern tip of edgecombe island||straight_line\",\"|a point at the mean low water mark on the natural boundary of the sechelt peninsula|approximately 650 m|straight_line\",\"strait of georgia|the point of commencement||shoreline\",\"||500 m|\",\"bc hydro powerline|a point 500 m east of porpoise bay rd|perpendicular distance of 500 m|other\",\"porpoise bay rd|the rd s end at tuwanek|perpendicular distance of 500 m|other\",\"|the natural boundary of irvine creek||straight_line\",\"irvine creek|its mouth||creek\",\"|a point 500 m perpendicularly distant from the northern boundary of the bc hydro powerline right of way|500 m perpendicularly distant|straight_line\",\"bc hydro power line|the point of commencement|500 m perpendicularly distant|other\",\"||500 m|\",\"roberts creek|a point 2.5 kilometres from the intersection of the powerline|2.5 kilometres|creek\",\"bc hydro double powerline|east wilson creek|2 kilometres|other\",\"east wilson creek|a point 500 m northeasterly from the northeast boundary of the bc hydro double powerline|500 m|creek\",\"bc hydro double powerline|the point of commencement|perpendicular distance of 500 m|other\"]",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "approximate outline (corners) drawn from the places the walk names, using run 1's reading of the steps",
+    "\"BC Hydro (double) power line\" was not found in the official layers; that side is drawn straight",
+    "\"Howe Sound\" was not found in the official layers; that side is drawn straight",
+    "\"BC Hydro (double) powerline\" was not found in the official layers; that side is drawn straight",
+    "\"Georgia Strait and Howe sound\" was not found in the official layers; that side is drawn straight",
+    "\"Georgia Strait\" was not found in the official layers; that side is drawn straight",
+    "\"BC Hydro powerline\" was not found in the official layers; that side is drawn straight",
+    "\"Crosstrees Road\" was not found in the official layers; that side is drawn straight",
+    "\"Georgia Strait\" was not found in the official layers; that side is drawn straight",
+    "\"Strait of Georgia\" was not found in the official layers; that side is drawn straight",
+    "\"BC Hydro powerline\" was not found in the official layers; that side is drawn straight",
+    "\"BC Hydro power line\" was not found in the official layers; that side is drawn straight",
+    "\"BC Hydro (double) powerline\" was not found in the official layers; that side is drawn straight",
+    "\"BC Hydro (double) powerline\" was not found in the official layers; that side is drawn straight",
+    "validation failed: two independent extractions agree (steps: run 1 [\"|||\",\"|its intersection with the northern and western boundary of the right of way of the bc hydro double power line||creek\",\"bc hydro double power line|its intersection with langdale creek||other\",\"langdale creek|a point on the mean low water mark at the mouth of the creek where it flows into howe sound||creek\",\"howe sound|the point of commencement||shoreline\",\"|||\",\"langdale creek|a point 500 m westerly and northerly of its intersection with the western and northern boundary of the right of way of the bc hydro double powerline|500 m|creek\",\"bc hydro double powerline|a point perpendicular to the intersection of the power line right of way and the western natural boundary of halfmoon creek|500 m|other\",\"halfmoon creek|a point on the mean low water mark at the mouth of halfmoon creek where it flows into halfmoon bay||creek\",\"georgia strait and howe sound|the point of commencement||shoreline\",\"|||\",\"halfmoon creek||500 m|creek\",\"hwy 101|a point on the northern natural boundary of haslam creek approximately 500 m east of the intersection of the eastern boundary of the right of way of hwy 101 and the northern natural boundary of haslam creek|500 m|other\",\"haslam creek|a point on the mean low water mark at the mouth of the creek where it flows into georgia strait||creek\",\"georgia strait|its intersection with the northern natural boundary of halfmoon creek||shoreline\",\"halfmoon creek|the point of commencement||creek\",\"|||\",\"haslam creek|a point 500 m upstream of hwy 101|500 m|creek\",\"|the summit of cecil hill||straight_line\",\"|a point 500 m west of the bc hydro powerline right of way|500 m|straight_line\",\"bc hydro powerline|the north fork of myers creek|500 m|other\",\"myers creek|its intersection with garden bay rd||creek\",\"garden bay rd|its intersection with mixal rd and irvines landing rd||road\",\"irvines landing rd|its intersection with crosstrees rd||road\",\"crosstrees rd|its intersection with keelson rd||road\",\"keelson rd|its end||road\",\"|a point on the mean low water mark on the boundary of georgia strait||straight_line\",\"georgia strait|daniel point||shoreline\",\"|the westernmost tip of martin island||straight_line\",\"|francis point||straight_line\",\"|the southern tip of an unnamed island lying approximately 400 m east of francis point|approximately 400 m|straight_line\",\"|the southern tip of edgecombe island||straight_line\",\"|a point at the mean low water mark on the natural boundary of the sechelt peninsula|approximately 650 m|straight_line\",\"strait of georgia|the point of commencement||shoreline\",\"||500 m|\",\"bc hydro powerline|a point 500 m east of porpoise bay rd|500 m|other\",\"porpoise bay rd|the rd s end at tuwanek|500 m|other\",\"|the natural boundary of irvine creek||straight_line\",\"irvine creek|its mouth||creek\",\"|an unnamed point of land forming the northerly shore of snake bay and continuing to a point 500 m perpendicularly distant from the northern boundary of the bc hydro powerline right of way|500 m|straight_line\",\"bc hydro power line|the point of commencement|500 m|other\",\"||500 m|\",\"roberts creek|a point 2.5 kilometres from the intersection of the powerline|2.5 kilometres|creek\",\"bc hydro double powerline|east wilson creek|2 kilometres|other\",\"east wilson creek|a point 500 m northeasterly from the northeast boundary of the bc hydro double powerline|500 m|creek\",\"bc hydro double powerline|the point of commencement|500 m|other\"] vs run 2 [\"|||\",\"|its intersection with the northern and western boundary of the right of way of the bc hydro double power line||creek\",\"bc hydro double power line|its intersection with langdale creek||other\",\"langdale creek|a point on the mean low water mark at the mouth of the creek where it flows into howe sound||creek\",\"howe sound|the point of commencement||shoreline\",\"|||\",\"langdale creek|a point 500 m westerly and northerly of its intersection with the western and northern boundary of the right of way of the bc hydro double powerline|500 m|creek\",\"bc hydro double powerline|a point perpendicular to the intersection of the power line right of way and the western natural boundary of halfmoon creek|perpendicular distance of 500 m|other\",\"halfmoon creek|a point on the mean low water mark at the mouth of halfmoon creek where it flows into halfmoon bay||creek\",\"georgia strait and howe sound|the point of commencement||shoreline\",\"|||\",\"halfmoon creek||500 m|creek\",\"hwy 101|a point on the northern natural boundary of haslam creek approximately 500 m east of the intersection of the eastern boundary of the right of way of hwy 101 and the northern natural boundary of haslam creek|perpendicular distance of 500 m|other\",\"haslam creek|a point on the mean low water mark at the mouth of the creek where it flows into georgia strait||creek\",\"georgia strait|its intersection with the northern natural boundary of halfmoon creek||shoreline\",\"halfmoon creek|the point of commencement||creek\",\"|||\",\"haslam creek|a point 500 m upstream of hwy 101|500 m|creek\",\"|the summit of cecil hill||straight_line\",\"|a point 500 m west of the bc hydro powerline right of way|500 m|straight_line\",\"bc hydro powerline|the north fork of myers creek|perpendicular distance of 500 m|other\",\"myers creek|its intersection with garden bay rd||creek\",\"garden bay rd|its intersection with mixal rd and irvines landing rd||road\",\"irvines landing rd|its intersection with crosstrees rd||road\",\"crosstrees rd|its intersection with keelson rd||road\",\"keelson rd|its end||road\",\"|a point on the mean low water mark on the boundary of georgia strait||straight_line\",\"georgia strait|daniel point||shoreline\",\"|the westernmost tip of martin island||straight_line\",\"|francis point||straight_line\",\"|the southern tip of an unnamed island lying approximately 400 m east of francis point|approximately 400 m|straight_line\",\"|the southern tip of edgecombe island||straight_line\",\"|a point at the mean low water mark on the natural boundary of the sechelt peninsula|approximately 650 m|straight_line\",\"strait of georgia|the point of commencement||shoreline\",\"||500 m|\",\"bc hydro powerline|a point 500 m east of porpoise bay rd|perpendicular distance of 500 m|other\",\"porpoise bay rd|the rd s end at tuwanek|perpendicular distance of 500 m|other\",\"|the natural boundary of irvine creek||straight_line\",\"irvine creek|its mouth||creek\",\"|a point 500 m perpendicularly distant from the northern boundary of the bc hydro powerline right of way|500 m perpendicularly distant|straight_line\",\"bc hydro power line|the point of commencement|500 m perpendicularly distant|other\",\"||500 m|\",\"roberts creek|a point 2.5 kilometres from the intersection of the powerline|2.5 kilometres|creek\",\"bc hydro double powerline|east wilson creek|2 kilometres|other\",\"east wilson creek|a point 500 m northeasterly from the northeast boundary of the bc hydro double powerline|500 m|creek\",\"bc hydro double powerline|the point of commencement|perpendicular distance of 500 m|other\"])"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nSechelt\n64 Those 6 portions of the Province of British Columbia in M.U. 2-5 in the vicinity of the Sechelt Peninsula within the following described boundaries: (1)Commencing at the mouth of an unnamed creek where it flows into Plowden Bay at the mean low water mark; thence up the northern and eastern natural boundary of the creek to its intersection with the northern and western boundary of the right of way of the BC Hydro (double) power line; thence westerly and southerly along the boundary of the power line to its intersection with Langdale Creek; thence easterly down the southern natural boundary of Langdale Creek to a point on the mean low water mark at the mouth of the creek, where it flows into Howe Sound; thence northerly, westerly and easterly along the mean low water mark on the natural boundary of Howe Sound to the point of commencement. (2)Commencing at a point on the mean low water mark on the southern natural boundary of Langdale Creek where it flows into Howe Sound; thence westerly and northerly along the natural boundary to a point 500 m westerly and northerly of its intersection with the western and northern boundary of the right of way of the BC Hydro (double) powerline; thence southerly and westerly and northerly parallel to the northerly, westerly and easterly boundary of the right of way of the powerline at a perpendicular distance of 500 m from it to a point perpendicular to the intersection of the power line right of way and the western natural boundary of Halfmoon Creek; thence southerly and westerly along the natural boundary of the creek to a point on the mean low water mark at the mouth of Halfmoon Creek where it flows into Halfmoon Bay; thence generally easterly and southerly and northerly along the mean low water mark on the natural boundary of Georgia Strait and Howe sound to the point of commencement. (3)Commencing at the intersection of the boundary of the right of way of Highway 101 and the western natural boundary of Halfmoon Creek; thence northerly and easterly along the boundary of the creek a distance of 500 m; thence northerly and westerly parallel to Highway 101, at a perpendicular distance of 500 m from the northern, eastern and western boundary of the Highway, to a point on the northern natural boundary of Haslam Creek approximately 500 m east of the intersection of the eastern boundary of the right of way of Highway 101 and the northern natural boundary of Haslam Creek; thence westerly along the northern natural boundary of Haslam Creek to a point on the mean low water mark at the mouth of the creek where it flows into Georgia Strait; thence generally southerly, easterly, westerly, southerly and easterly along the mean low water mark of the natural boundary of Georgia Strait to its intersection with the northern natural boundary of Halfmoon Creek; thence northerly and easterly up the natural boundary of Halfmoon Creek to the point of commencement. (4)Commencing at the intersection of the northern natural boundary of Haslam Creek and the mean low water mark on the boundary of Georgia Strait where the creek flows into Georgia Strait; thence easterly and northerly up the northern natural boundary of Haslam Creek to a point 500 m upstream of Highway 101; thence in a straight line northerly to the summit of Cecil Hill; thence due East in a straight line to a point 500 m west of the BC Hydro powerline right of way; thence in a northeasterly and northerly direction parallel to the power line and at a perpendicular distance of 500 m from it to the north fork of Myers Creek; thence downstream along the natural boundary of Myers Creek to its intersection with Garden Bay Road; thence westerly and northerly and southerly along the northern boundary of Garden Bay Road to its intersection with Mixal Road and Irvines Landing Road; thence westerly and southerly along the northern boundary of Irvines Landing Road to its intersection with Crosstrees Road; thence southerly and westerly along the northern boundary of Crosstrees Road to its intersection with Keelson Road; thence northerly and westerly along the easterly and northerly boundary of Keelson Road to its end; thence in a straight line due West to a point on the mean low water mark on the boundary of Georgia Strait; thence northerly and westerly along the natural boundary of Georgia Strait to Daniel Point; thence southerly in a straight line to the westernmost tip of Martin Island; thence southerly in a straight line to Francis Point; thence easterly in a straight line to the southern tip of an unnamed island lying approximately 400 m east of Francis Point; thence in a straight line easterly to the southern tip of Edgecombe Island; thence in a straight line due East a distance of approximately 650 m to a point at the mean low water mark on the natural boundary of the Sechelt Peninsula; thence southerly and easterly along the mean low water mark on the natural boundary of the Strait of Georgia to the point of commencement, excepting all Indian Reserve lands. (5)Commencing at a point on the northerly natural boundary of Chapman Creek 500 m upstream from its intersection with the northerly boundary of the BC Hydro powerline right of way; thence northwesterly, parallel to the powerline at a perpendicular distance of 500 m to a point 500 m east of Porpoise Bay Road; thence in a generally northerly direction parallel to and at a perpendicular distance of 500 m from Porpoise Bay Road to the road's end at Tuwanek; thence in a straight line due North to the natural boundary of Irvine Creek; thence down Irvine Creek westerly to its mouth; thence southwesterly in a straight line to an unnamed point of land forming the northerly shore of Snake Bay and continuing to a point 500 m perpendicularly distant from the northern boundary of the BC Hydro powerline right of way; thence southerly and easterly along a line parallel to and 500 m perpendicularly distant from the northern boundary of the BC Hydro power line right of way to the point of commencement, excepting all Indian Reserve lands. (6)Commencing at a point on Roberts Creek 500 m northeasterly from the northeast boundary of the BC Hydro (double) powerline; thence northeasterly up the natural boundary of Roberts Creek to a point 2.5 kilometres from the intersection of the powerline; thence in a northwesterly direction perpendicular to and at a distance of 2 kilometres from the northerly boundary of the powerline right of way to East Wilson Creek; thence in a southwesterly direction down the natural boundary of East Wilson Creek to a point 500 m northeasterly from the northeast boundary of the BC Hydro (double) powerline; thence parallel to the BC Hydro (double) powerline in a southeasterly direction at a perpendicular distance of 500 m from it to the point of commencement. [en. B.C. Reg. 205/94, s. 12.]",
@@ -1095,12 +1109,63 @@
   "disagreements": [
     "steps: run 1 [\"|||\",\"|its intersection with the northern and western boundary of the right of way of the bc hydro double power line||creek\",\"bc hydro double power line|its intersection with langdale creek||other\",\"langdale creek|a point on the mean low water mark at the mouth of the creek where it flows into howe sound||creek\",\"howe sound|the point of commencement||shoreline\",\"|||\",\"langdale creek|a point 500 m westerly and northerly of its intersection with the western and northern boundary of the right of way of the bc hydro double powerline|500 m|creek\",\"bc hydro double powerline|a point perpendicular to the intersection of the power line right of way and the western natural boundary of halfmoon creek|500 m|other\",\"halfmoon creek|a point on the mean low water mark at the mouth of halfmoon creek where it flows into halfmoon bay||creek\",\"georgia strait and howe sound|the point of commencement||shoreline\",\"|||\",\"halfmoon creek||500 m|creek\",\"hwy 101|a point on the northern natural boundary of haslam creek approximately 500 m east of the intersection of the eastern boundary of the right of way of hwy 101 and the northern natural boundary of haslam creek|500 m|other\",\"haslam creek|a point on the mean low water mark at the mouth of the creek where it flows into georgia strait||creek\",\"georgia strait|its intersection with the northern natural boundary of halfmoon creek||shoreline\",\"halfmoon creek|the point of commencement||creek\",\"|||\",\"haslam creek|a point 500 m upstream of hwy 101|500 m|creek\",\"|the summit of cecil hill||straight_line\",\"|a point 500 m west of the bc hydro powerline right of way|500 m|straight_line\",\"bc hydro powerline|the north fork of myers creek|500 m|other\",\"myers creek|its intersection with garden bay rd||creek\",\"garden bay rd|its intersection with mixal rd and irvines landing rd||road\",\"irvines landing rd|its intersection with crosstrees rd||road\",\"crosstrees rd|its intersection with keelson rd||road\",\"keelson rd|its end||road\",\"|a point on the mean low water mark on the boundary of georgia strait||straight_line\",\"georgia strait|daniel point||shoreline\",\"|the westernmost tip of martin island||straight_line\",\"|francis point||straight_line\",\"|the southern tip of an unnamed island lying approximately 400 m east of francis point|approximately 400 m|straight_line\",\"|the southern tip of edgecombe island||straight_line\",\"|a point at the mean low water mark on the natural boundary of the sechelt peninsula|approximately 650 m|straight_line\",\"strait of georgia|the point of commencement||shoreline\",\"||500 m|\",\"bc hydro powerline|a point 500 m east of porpoise bay rd|500 m|other\",\"porpoise bay rd|the rd s end at tuwanek|500 m|other\",\"|the natural boundary of irvine creek||straight_line\",\"irvine creek|its mouth||creek\",\"|an unnamed point of land forming the northerly shore of snake bay and continuing to a point 500 m perpendicularly distant from the northern boundary of the bc hydro powerline right of way|500 m|straight_line\",\"bc hydro power line|the point of commencement|500 m|other\",\"||500 m|\",\"roberts creek|a point 2.5 kilometres from the intersection of the powerline|2.5 kilometres|creek\",\"bc hydro double powerline|east wilson creek|2 kilometres|other\",\"east wilson creek|a point 500 m northeasterly from the northeast boundary of the bc hydro double powerline|500 m|creek\",\"bc hydro double powerline|the point of commencement|500 m|other\"] vs run 2 [\"|||\",\"|its intersection with the northern and western boundary of the right of way of the bc hydro double power line||creek\",\"bc hydro double power line|its intersection with langdale creek||other\",\"langdale creek|a point on the mean low water mark at the mouth of the creek where it flows into howe sound||creek\",\"howe sound|the point of commencement||shoreline\",\"|||\",\"langdale creek|a point 500 m westerly and northerly of its intersection with the western and northern boundary of the right of way of the bc hydro double powerline|500 m|creek\",\"bc hydro double powerline|a point perpendicular to the intersection of the power line right of way and the western natural boundary of halfmoon creek|perpendicular distance of 500 m|other\",\"halfmoon creek|a point on the mean low water mark at the mouth of halfmoon creek where it flows into halfmoon bay||creek\",\"georgia strait and howe sound|the point of commencement||shoreline\",\"|||\",\"halfmoon creek||500 m|creek\",\"hwy 101|a point on the northern natural boundary of haslam creek approximately 500 m east of the intersection of the eastern boundary of the right of way of hwy 101 and the northern natural boundary of haslam creek|perpendicular distance of 500 m|other\",\"haslam creek|a point on the mean low water mark at the mouth of the creek where it flows into georgia strait||creek\",\"georgia strait|its intersection with the northern natural boundary of halfmoon creek||shoreline\",\"halfmoon creek|the point of commencement||creek\",\"|||\",\"haslam creek|a point 500 m upstream of hwy 101|500 m|creek\",\"|the summit of cecil hill||straight_line\",\"|a point 500 m west of the bc hydro powerline right of way|500 m|straight_line\",\"bc hydro powerline|the north fork of myers creek|perpendicular distance of 500 m|other\",\"myers creek|its intersection with garden bay rd||creek\",\"garden bay rd|its intersection with mixal rd and irvines landing rd||road\",\"irvines landing rd|its intersection with crosstrees rd||road\",\"crosstrees rd|its intersection with keelson rd||road\",\"keelson rd|its end||road\",\"|a point on the mean low water mark on the boundary of georgia strait||straight_line\",\"georgia strait|daniel point||shoreline\",\"|the westernmost tip of martin island||straight_line\",\"|francis point||straight_line\",\"|the southern tip of an unnamed island lying approximately 400 m east of francis point|approximately 400 m|straight_line\",\"|the southern tip of edgecombe island||straight_line\",\"|a point at the mean low water mark on the natural boundary of the sechelt peninsula|approximately 650 m|straight_line\",\"strait of georgia|the point of commencement||shoreline\",\"||500 m|\",\"bc hydro powerline|a point 500 m east of porpoise bay rd|perpendicular distance of 500 m|other\",\"porpoise bay rd|the rd s end at tuwanek|perpendicular distance of 500 m|other\",\"|the natural boundary of irvine creek||straight_line\",\"irvine creek|its mouth||creek\",\"|a point 500 m perpendicularly distant from the northern boundary of the bc hydro powerline right of way|500 m perpendicularly distant|straight_line\",\"bc hydro power line|the point of commencement|500 m perpendicularly distant|other\",\"||500 m|\",\"roberts creek|a point 2.5 kilometres from the intersection of the powerline|2.5 kilometres|creek\",\"bc hydro double powerline|east wilson creek|2 kilometres|other\",\"east wilson creek|a point 500 m northeasterly from the northeast boundary of the bc hydro double powerline|500 m|creek\",\"bc hydro double powerline|the point of commencement|perpendicular distance of 500 m|other\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U. 2-5",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "2-5"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "2-5",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 2,
+          "REGION_RESPONSIBLE_ID": "2",
+          "REGION_RESPONSIBLE_NAME": "Lower Mainland",
+          "GAME_MANAGEMENT_ZONE_ID": "2a",
+          "GAME_MANAGEMENT_ZONE_NAME": "South Coast",
+          "FEATURE_AREA_SQM": 3461177010.9317,
+          "FEATURE_LENGTH_M": 382569.1375,
+          "OBJECTID": 340,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "64.879 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "steps: run 1 [\"|||\",\"|its intersection with the northern and western boundary of the right of way of the bc hydro double power line||creek\",\"bc hydro double power line|its intersection with langdale creek||other\",\"langdale creek|a point on the mean low water mark at the mouth of the creek where it flows into howe sound||creek\",\"howe sound|the point of commencement||shoreline\",\"|||\",\"langdale creek|a point 500 m westerly and northerly of its intersection with the western and northern boundary of the right of way of the bc hydro double powerline|500 m|creek\",\"bc hydro double powerline|a point perpendicular to the intersection of the power line right of way and the western natural boundary of halfmoon creek|500 m|other\",\"halfmoon creek|a point on the mean low water mark at the mouth of halfmoon creek where it flows into halfmoon bay||creek\",\"georgia strait and howe sound|the point of commencement||shoreline\",\"|||\",\"halfmoon creek||500 m|creek\",\"hwy 101|a point on the northern natural boundary of haslam creek approximately 500 m east of the intersection of the eastern boundary of the right of way of hwy 101 and the northern natural boundary of haslam creek|500 m|other\",\"haslam creek|a point on the mean low water mark at the mouth of the creek where it flows into georgia strait||creek\",\"georgia strait|its intersection with the northern natural boundary of halfmoon creek||shoreline\",\"halfmoon creek|the point of commencement||creek\",\"|||\",\"haslam creek|a point 500 m upstream of hwy 101|500 m|creek\",\"|the summit of cecil hill||straight_line\",\"|a point 500 m west of the bc hydro powerline right of way|500 m|straight_line\",\"bc hydro powerline|the north fork of myers creek|500 m|other\",\"myers creek|its intersection with garden bay rd||creek\",\"garden bay rd|its intersection with mixal rd and irvines landing rd||road\",\"irvines landing rd|its intersection with crosstrees rd||road\",\"crosstrees rd|its intersection with keelson rd||road\",\"keelson rd|its end||road\",\"|a point on the mean low water mark on the boundary of georgia strait||straight_line\",\"georgia strait|daniel point||shoreline\",\"|the westernmost tip of martin island||straight_line\",\"|francis point||straight_line\",\"|the southern tip of an unnamed island lying approximately 400 m east of francis point|approximately 400 m|straight_line\",\"|the southern tip of edgecombe island||straight_line\",\"|a point at the mean low water mark on the natural boundary of the sechelt peninsula|approximately 650 m|straight_line\",\"strait of georgia|the point of commencement||shoreline\",\"||500 m|\",\"bc hydro powerline|a point 500 m east of porpoise bay rd|500 m|other\",\"porpoise bay rd|the rd s end at tuwanek|500 m|other\",\"|the natural boundary of irvine creek||straight_line\",\"irvine creek|its mouth||creek\",\"|an unnamed point of land forming the northerly shore of snake bay and continuing to a point 500 m perpendicularly distant from the northern boundary of the bc hydro powerline right of way|500 m|straight_line\",\"bc hydro power line|the point of commencement|500 m|other\",\"||500 m|\",\"roberts creek|a point 2.5 kilometres from the intersection of the powerline|2.5 kilometres|creek\",\"bc hydro double powerline|east wilson creek|2 kilometres|other\",\"east wilson creek|a point 500 m northeasterly from the northeast boundary of the bc hydro double powerline|500 m|creek\",\"bc hydro double powerline|the point of commencement|500 m|other\"] vs run 2 [\"|||\",\"|its intersection with the northern and western boundary of the right of way of the bc hydro double power line||creek\",\"bc hydro double power line|its intersection with langdale creek||other\",\"langdale creek|a point on the mean low water mark at the mouth of the creek where it flows into howe sound||creek\",\"howe sound|the point of commencement||shoreline\",\"|||\",\"langdale creek|a point 500 m westerly and northerly of its intersection with the western and northern boundary of the right of way of the bc hydro double powerline|500 m|creek\",\"bc hydro double powerline|a point perpendicular to the intersection of the power line right of way and the western natural boundary of halfmoon creek|perpendicular distance of 500 m|other\",\"halfmoon creek|a point on the mean low water mark at the mouth of halfmoon creek where it flows into halfmoon bay||creek\",\"georgia strait and howe sound|the point of commencement||shoreline\",\"|||\",\"halfmoon creek||500 m|creek\",\"hwy 101|a point on the northern natural boundary of haslam creek approximately 500 m east of the intersection of the eastern boundary of the right of way of hwy 101 and the northern natural boundary of haslam creek|perpendicular distance of 500 m|other\",\"haslam creek|a point on the mean low water mark at the mouth of the creek where it flows into georgia strait||creek\",\"georgia strait|its intersection with the northern natural boundary of halfmoon creek||shoreline\",\"halfmoon creek|the point of commencement||creek\",\"|||\",\"haslam creek|a point 500 m upstream of hwy 101|500 m|creek\",\"|the summit of cecil hill||straight_line\",\"|a point 500 m west of the bc hydro powerline right of way|500 m|straight_line\",\"bc hydro powerline|the north fork of myers creek|perpendicular distance of 500 m|other\",\"myers creek|its intersection with garden bay rd||creek\",\"garden bay rd|its intersection with mixal rd and irvines landing rd||road\",\"irvines landing rd|its intersection with crosstrees rd||road\",\"crosstrees rd|its intersection with keelson rd||road\",\"keelson rd|its end||road\",\"|a point on the mean low water mark on the boundary of georgia strait||straight_line\",\"georgia strait|daniel point||shoreline\",\"|the westernmost tip of martin island||straight_line\",\"|francis point||straight_line\",\"|the southern tip of an unnamed island lying approximately 400 m east of francis point|approximately 400 m|straight_line\",\"|the southern tip of edgecombe island||straight_line\",\"|a point at the mean low water mark on the natural boundary of the sechelt peninsula|approximately 650 m|straight_line\",\"strait of georgia|the point of commencement||shoreline\",\"||500 m|\",\"bc hydro powerline|a point 500 m east of porpoise bay rd|perpendicular distance of 500 m|other\",\"porpoise bay rd|the rd s end at tuwanek|perpendicular distance of 500 m|other\",\"|the natural boundary of irvine creek||straight_line\",\"irvine creek|its mouth||creek\",\"|a point 500 m perpendicularly distant from the northern boundary of the bc hydro powerline right of way|500 m perpendicularly distant|straight_line\",\"bc hydro power line|the point of commencement|500 m perpendicularly distant|other\",\"||500 m|\",\"roberts creek|a point 2.5 kilometres from the intersection of the powerline|2.5 kilometres|creek\",\"bc hydro double powerline|east wilson creek|2 kilometres|other\",\"east wilson creek|a point 500 m northeasterly from the northeast boundary of the bc hydro double powerline|500 m|creek\",\"bc hydro double powerline|the point of commencement|perpendicular distance of 500 m|other\"]"
     },
     {
       "check": "step directions match the line",
@@ -1108,8 +1173,1378 @@
       "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at the mouth of an unnamed creek where it flows into Plowden Bay at the mean low water mark",
+      "source": "WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP, WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              -124.06098274940403,
+              49.634786491658055
+            ],
+            [
+              -124.06095873892139,
+              49.63461185653063
+            ],
+            [
+              -124.06088286783904,
+              49.634443557227684
+            ],
+            [
+              -124.060758020274,
+              49.63428799023222
+            ],
+            [
+              -124.06058894165047,
+              49.634151068057484
+            ],
+            [
+              -124.06038205829164,
+              49.6340379945514
+            ],
+            [
+              -124.06014523315449,
+              49.633953067139764
+            ],
+            [
+              -124.0598874669955,
+              49.63389951351997
+            ],
+            [
+              -124.05961855632215,
+              49.63387936900857
+            ],
+            [
+              -124.05934872112378,
+              49.63389339920042
+            ],
+            [
+              -123.98104850991926,
+              49.642975093543505
+            ],
+            [
+              -123.9807936808119,
+              49.64302113406504
+            ],
+            [
+              -123.98055695741365,
+              49.643097630303394
+            ],
+            [
+              -123.98034692978561,
+              49.64320180644781
+            ],
+            [
+              -123.98017121941342,
+              49.643329882248864
+            ],
+            [
+              -123.98003620265325,
+              49.64347721017518
+            ],
+            [
+              -123.97994485684065,
+              49.643643390241934
+            ],
+            [
+              -123.97990536124519,
+              49.6438179195649
+            ],
+            [
+              -123.97991923585028,
+              49.64399408385414
+            ],
+            [
+              -123.97998594745059,
+              49.64416510584139
+            ],
+            [
+              -123.98010293007341,
+              49.644324406019976
+            ],
+            [
+              -123.9802656836181,
+              49.64446585577966
+            ],
+            [
+              -123.98046794692539,
+              49.64458401320343
+            ],
+            [
+              -123.98070193862699,
+              49.644674332451395
+            ],
+            [
+              -123.98084291846187,
+              49.64471723322506
+            ],
+            [
+              -123.98095501643849,
+              49.64475133533032
+            ],
+            [
+              -123.98109501390095,
+              49.644788048768426
+            ],
+            [
+              -124.01094361425507,
+              49.651412164225626
+            ],
+            [
+              -124.01100418922837,
+              49.651424602790705
+            ],
+            [
+              -124.01128851384009,
+              49.65147838374148
+            ],
+            [
+              -124.0114140835668,
+              49.65149808238034
+            ],
+            [
+              -124.01608730514401,
+              49.652083612954
+            ],
+            [
+              -124.01624540693125,
+              49.65209737821528
+            ],
+            [
+              -124.01641813009344,
+              49.652105918371014
+            ],
+            [
+              -124.01679370670519,
+              49.652091401703444
+            ],
+            [
+              -124.02353589401365,
+              49.651226865995845
+            ],
+            [
+              -124.02380622294733,
+              49.65117319918454
+            ],
+            [
+              -124.02398841549251,
+              49.65112339833654
+            ],
+            [
+              -124.02421536610986,
+              49.65104458417854
+            ],
+            [
+              -124.0603617473167,
+              49.635528005361145
+            ],
+            [
+              -124.06057168631015,
+              49.63541731520359
+            ],
+            [
+              -124.06074447351013,
+              49.6352823472253
+            ],
+            [
+              -124.0608735418678,
+              49.63512823135561
+            ],
+            [
+              -124.06095398616547,
+              49.63496082525477
+            ],
+            [
+              -124.06098274940403,
+              49.634786491658055
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              -124.01228128326436,
+              49.59241208736722
+            ],
+            [
+              -124.01226933930991,
+              49.59227237751143
+            ],
+            [
+              -124.01225507318841,
+              49.59218430435967
+            ],
+            [
+              -124.01110466135458,
+              49.587375727998854
+            ],
+            [
+              -124.01108701460566,
+              49.58731556545652
+            ],
+            [
+              -124.00033464197483,
+              49.55640878109808
+            ],
+            [
+              -124.00027140617897,
+              49.55627582238182
+            ],
+            [
+              -123.99998500572845,
+              49.55580616556724
+            ],
+            [
+              -123.99988883047284,
+              49.55567883691497
+            ],
+            [
+              -123.99964742628094,
+              49.55541430939798
+            ],
+            [
+              -123.99950544892911,
+              49.55528596616314
+            ],
+            [
+              -123.99917761755167,
+              49.55503873913229
+            ],
+            [
+              -123.99914050722953,
+              49.55501186289021
+            ],
+            [
+              -123.9944098583992,
+              49.551720774219156
+            ],
+            [
+              -123.99435939624384,
+              49.551687443941304
+            ],
+            [
+              -123.99386844667916,
+              49.55137958801652
+            ],
+            [
+              -123.99385467485838,
+              49.55137106997154
+            ],
+            [
+              -123.98871321291007,
+              49.54823411203906
+            ],
+            [
+              -123.9887038863075,
+              49.54822847324406
+            ],
+            [
+              -123.9869831197659,
+              49.547197627185355
+            ],
+            [
+              -123.98690212622645,
+              49.54715272106027
+            ],
+            [
+              -123.98623184987318,
+              49.546809106022096
+            ],
+            [
+              -123.98618284019078,
+              49.54678510566566
+            ],
+            [
+              -123.91903459172316,
+              49.51535268462699
+            ],
+            [
+              -123.91891677701453,
+              49.51530315912563
+            ],
+            [
+              -123.91608729704866,
+              49.51424172602292
+            ],
+            [
+              -123.9160404638423,
+              49.51422493115009
+            ],
+            [
+              -123.9149962461102,
+              49.51386736696441
+            ],
+            [
+              -123.91487838284974,
+              49.51383149657483
+            ],
+            [
+              -123.91399167536198,
+              49.513593950610726
+            ],
+            [
+              -123.91384063437133,
+              49.513559965085015
+            ],
+            [
+              -123.91297113852701,
+              49.513400147909955
+            ],
+            [
+              -123.9128689886989,
+              49.51338406301581
+            ],
+            [
+              -123.91184373642109,
+              49.51324913544382
+            ],
+            [
+              -123.91161819630585,
+              49.51323178749877
+            ],
+            [
+              -123.9105175565081,
+              49.51320615796503
+            ],
+            [
+              -123.91049231548025,
+              49.513205719603825
+            ],
+            [
+              -123.90650769560561,
+              49.51316004267915
+            ],
+            [
+              -123.90625735976502,
+              49.513171937194244
+            ],
+            [
+              -123.90601444015299,
+              49.51321296888214
+            ],
+            [
+              -123.90578691365279,
+              49.51328179036788
+            ],
+            [
+              -123.905582251754,
+              49.51337614172357
+            ],
+            [
+              -123.90552646507969,
+              49.51340715903777
+            ],
+            [
+              -123.90549582358655,
+              49.51342471084511
+            ],
+            [
+              -123.90524963416746,
+              49.51356997886764
+            ],
+            [
+              -123.90516839943618,
+              49.51362203844397
+            ],
+            [
+              -123.87308868956973,
+              49.535933428372246
+            ],
+            [
+              -123.87304058320451,
+              49.535968670139795
+            ],
+            [
+              -123.87279351198433,
+              49.536159507880726
+            ],
+            [
+              -123.8727518591799,
+              49.53619329866591
+            ],
+            [
+              -123.86571424222085,
+              49.542192001796515
+            ],
+            [
+              -123.86565665507949,
+              49.54224493277599
+            ],
+            [
+              -123.86557492397387,
+              49.542326111958936
+            ],
+            [
+              -123.86544782284363,
+              49.54248489888074
+            ],
+            [
+              -123.86537168200564,
+              49.54265687053444
+            ],
+            [
+              -123.86531852689428,
+              49.54284628991061
+            ],
+            [
+              -123.86529616755786,
+              49.54301588240347
+            ],
+            [
+              -123.86529838323568,
+              49.543168272430584
+            ],
+            [
+              -123.86529844467746,
+              49.54317177512302
+            ],
+            [
+              -123.86530011237531,
+              49.54325295514328
+            ],
+            [
+              -123.86534575445872,
+              49.543470162675526
+            ],
+            [
+              -123.87653784119806,
+              49.571008802056866
+            ],
+            [
+              -123.87663867214773,
+              49.57118201640113
+            ],
+            [
+              -123.87679206347536,
+              49.57133816947224
+            ],
+            [
+              -123.876991514165,
+              49.57147064273153
+            ],
+            [
+              -123.87722857077263,
+              49.57157382125867
+            ],
+            [
+              -123.87749318571197,
+              49.57164333176851
+            ],
+            [
+              -124.0083653856879,
+              49.59612263504882
+            ],
+            [
+              -124.00864878773854,
+              49.59615531939706
+            ],
+            [
+              -124.00893649582584,
+              49.596149395258266
+            ],
+            [
+              -124.00921612574038,
+              49.59610511763344
+            ],
+            [
+              -124.00947564104806,
+              49.59602439242195
+            ],
+            [
+              -124.00970387126432,
+              49.59591069437044
+            ],
+            [
+              -124.01079246776756,
+              49.595241104857024
+            ],
+            [
+              -124.01092807076607,
+              49.5951446404092
+            ],
+            [
+              -124.01112884934957,
+              49.59497912852426
+            ],
+            [
+              -124.01127004042002,
+              49.594837044145685
+            ],
+            [
+              -124.01136772541814,
+              49.59468034587971
+            ],
+            [
+              -124.01219035102001,
+              49.59289286648176
+            ],
+            [
+              -124.01223648170595,
+              49.59275264437142
+            ],
+            [
+              -124.01227164688474,
+              49.592578703957
+            ],
+            [
+              -124.01228128326436,
+              49.59241208736722
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              -123.76529672709962,
+              49.551300212506824
+            ],
+            [
+              -123.76528512256931,
+              49.55112456819096
+            ],
+            [
+              -123.76522106831393,
+              49.55095374470588
+            ],
+            [
+              -123.76510701268113,
+              49.55079427002751
+            ],
+            [
+              -123.76494731469656,
+              49.550652238378966
+            ],
+            [
+              -123.76474807742791,
+              49.55053307735951
+            ],
+            [
+              -123.76451691472867,
+              49.5504413405538
+            ],
+            [
+              -123.76426266027981,
+              49.550380533543176
+            ],
+            [
+              -123.76399503004737,
+              49.550352979963414
+            ],
+            [
+              -123.7598312762967,
+              49.55019204292664
+            ],
+            [
+              -123.7598035810136,
+              49.55019115220776
+            ],
+            [
+              -123.75952650610273,
+              49.55018404233895
+            ],
+            [
+              -123.75942342040487,
+              49.55018388575235
+            ],
+            [
+              -123.75885660082145,
+              49.55019670551728
+            ],
+            [
+              -123.75883498106772,
+              49.55019730408639
+            ],
+            [
+              -123.7585309566437,
+              49.550207263903694
+            ],
+            [
+              -123.75844654998802,
+              49.550211709311725
+            ],
+            [
+              -123.75830936246662,
+              49.55022167912951
+            ],
+            [
+              -123.75806222217821,
+              49.55025462942504
+            ],
+            [
+              -123.75763410903225,
+              49.55033866794471
+            ],
+            [
+              -123.75748931499572,
+              49.55037289704061
+            ],
+            [
+              -123.75056607063313,
+              49.55229838446673
+            ],
+            [
+              -123.75048932650799,
+              49.55232154936065
+            ],
+            [
+              -123.75040639752716,
+              49.55234860891566
+            ],
+            [
+              -123.75025094281287,
+              49.55240784691532
+            ],
+            [
+              -123.75008592417008,
+              49.55248048580877
+            ],
+            [
+              -123.75000095458623,
+              49.55252103433665
+            ],
+            [
+              -123.74975272589747,
+              49.55264921249033
+            ],
+            [
+              -123.74953552651641,
+              49.5527894506902
+            ],
+            [
+              -123.7494684760929,
+              49.55284357006592
+            ],
+            [
+              -123.74939734958194,
+              49.5529063686662
+            ],
+            [
+              -123.74924730769527,
+              49.55305163717721
+            ],
+            [
+              -123.7492249484541,
+              49.55307399438748
+            ],
+            [
+              -123.74669241037815,
+              49.55569023876637
+            ],
+            [
+              -123.74656562622347,
+              49.55585753551629
+            ],
+            [
+              -123.74649928353595,
+              49.55597431477248
+            ],
+            [
+              -123.74649855584606,
+              49.555975598688946
+            ],
+            [
+              -123.74527362588942,
+              49.55814181494771
+            ],
+            [
+              -123.74521955127223,
+              49.558263218733636
+            ],
+            [
+              -123.74512693384172,
+              49.558543777651124
+            ],
+            [
+              -123.74509633614367,
+              49.558719469316166
+            ],
+            [
+              -123.74511932176921,
+              49.558895648733106
+            ],
+            [
+              -123.74519500282318,
+              49.559065506043225
+            ],
+            [
+              -123.74532045450474,
+              49.55922247568718
+            ],
+            [
+              -123.74549082808478,
+              49.55936049019734
+            ],
+            [
+              -123.74569953827273,
+              49.55947421474562
+            ],
+            [
+              -123.745938517737,
+              49.55955925337726
+            ],
+            [
+              -123.74619852894519,
+              49.55961231895465
+            ],
+            [
+              -123.74646952126758,
+              49.55963136023851
+            ],
+            [
+              -123.74674101953387,
+              49.559615641190106
+            ],
+            [
+              -123.74700252901333,
+              49.55956576942745
+            ],
+            [
+              -123.74724394115171,
+              49.55948367273409
+            ],
+            [
+              -123.76427709007997,
+              49.55222152100607
+            ],
+            [
+              -123.76440295961447,
+              49.552160961879025
+            ],
+            [
+              -123.76469015085728,
+              49.552005719683315
+            ],
+            [
+              -123.76472982151031,
+              49.55198343677317
+            ],
+            [
+              -123.7648396517977,
+              49.551919345895904
+            ],
+            [
+              -123.76502244870161,
+              49.551789562523616
+            ],
+            [
+              -123.76516283223724,
+              49.55163918674935
+            ],
+            [
+              -123.76525543787508,
+              49.551473965380225
+            ],
+            [
+              -123.76529672709962,
+              49.551300212506824
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              -123.69114098042921,
+              49.45039917182845
+            ],
+            [
+              -123.69111854421371,
+              49.45022653956449
+            ],
+            [
+              -123.69104560746447,
+              49.450059907349946
+            ],
+            [
+              -123.69092487740433,
+              49.449905459008455
+            ],
+            [
+              -123.69076083478191,
+              49.44976892615706
+            ],
+            [
+              -123.69055956753948,
+              49.44965537551977
+            ],
+            [
+              -123.69031010938087,
+              49.449540017246385
+            ],
+            [
+              -123.69009672823765,
+              49.44945895465174
+            ],
+            [
+              -123.6898645654545,
+              49.44940387024492
+            ],
+            [
+              -123.6881634034753,
+              49.44910906548217
+            ],
+            [
+              -123.68805393685643,
+              49.4490931542254
+            ],
+            [
+              -123.68776396192037,
+              49.449058964844305
+            ],
+            [
+              -123.68767453773069,
+              49.449050372668225
+            ],
+            [
+              -123.679608122875,
+              49.44844937366703
+            ],
+            [
+              -123.6795995590448,
+              49.44844875286417
+            ],
+            [
+              -123.6792558852417,
+              49.44842454330766
+            ],
+            [
+              -123.67899567449548,
+              49.4484222200885
+            ],
+            [
+              -123.67873939898826,
+              49.44845162220299
+            ],
+            [
+              -123.6785326923689,
+              49.448488651548274
+            ],
+            [
+              -123.67832171840122,
+              49.4485387412322
+            ],
+            [
+              -123.67812599333665,
+              49.44861036731295
+            ],
+            [
+              -123.67517713776058,
+              49.449904947617654
+            ],
+            [
+              -123.67513981783895,
+              49.449921918677916
+            ],
+            [
+              -123.67339759016633,
+              49.45074225648053
+            ],
+            [
+              -123.67335553998895,
+              49.450762859798026
+            ],
+            [
+              -123.67312362128214,
+              49.45088105809013
+            ],
+            [
+              -123.67303045883187,
+              49.45093303861312
+            ],
+            [
+              -123.65946867068807,
+              49.45920473783358
+            ],
+            [
+              -123.6592990479897,
+              49.45932925333837
+            ],
+            [
+              -123.65913536645695,
+              49.45947452176136
+            ],
+            [
+              -123.65909894005094,
+              49.459508461677
+            ],
+            [
+              -123.65705636376543,
+              49.461508031353624
+            ],
+            [
+              -123.65702145075555,
+              49.46154402744776
+            ],
+            [
+              -123.65693891935857,
+              49.46163375660163
+            ],
+            [
+              -123.65691217204402,
+              49.461664165957835
+            ],
+            [
+              -123.65679010951825,
+              49.461809434678116
+            ],
+            [
+              -123.65675625075505,
+              49.461852437164616
+            ],
+            [
+              -123.65576578431686,
+              49.46319829648935
+            ],
+            [
+              -123.65575424621743,
+              49.46321437988113
+            ],
+            [
+              -123.65528037238566,
+              49.46389230472618
+            ],
+            [
+              -123.65523879869019,
+              49.463958682892894
+            ],
+            [
+              -123.65472730744231,
+              49.46487871714339
+            ],
+            [
+              -123.65466124616414,
+              49.46504675261424
+            ],
+            [
+              -123.65464604228565,
+              49.46521990464431
+            ],
+            [
+              -123.65468226178933,
+              49.46539173354325
+            ],
+            [
+              -123.65476855815056,
+              49.465555848762556
+            ],
+            [
+              -123.65490172234009,
+              49.465706146573794
+            ],
+            [
+              -123.65507680210827,
+              49.465837037088534
+            ],
+            [
+              -123.65528728612523,
+              49.4659436521747
+            ],
+            [
+              -123.65552534613275,
+              49.466022026532976
+            ],
+            [
+              -123.65578212810522,
+              49.466069245195676
+            ],
+            [
+              -123.65604808158702,
+              49.46608355195824
+            ],
+            [
+              -123.6563133149518,
+              49.46606441470788
+            ],
+            [
+              -123.65656796336083,
+              49.4660125452177
+            ],
+            [
+              -123.65680255572424,
+              49.465929872669456
+            ],
+            [
+              -123.69053185549333,
+              49.45113353747854
+            ],
+            [
+              -123.69073732513844,
+              49.451023209431796
+            ],
+            [
+              -123.69090643984377,
+              49.45088931566548
+            ],
+            [
+              -123.69103292366998,
+              49.45073682530375
+            ],
+            [
+              -123.69111208294916,
+              49.450571397586806
+            ],
+            [
+              -123.69114098042921,
+              49.45039917182845
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              -123.55093405548203,
+              49.454260816760154
+            ],
+            [
+              -123.55093166680756,
+              49.454085141076355
+            ],
+            [
+              -123.55087678348995,
+              49.45391311926629
+            ],
+            [
+              -123.55022628047755,
+              49.4525572766628
+            ],
+            [
+              -123.55014134346965,
+              49.45242074076318
+            ],
+            [
+              -123.55002326573951,
+              49.45229504771287
+            ],
+            [
+              -123.54995294506888,
+              49.45223237839078
+            ],
+            [
+              -123.5498100465489,
+              49.452124207718796
+            ],
+            [
+              -123.54976812655569,
+              49.452097148071424
+            ],
+            [
+              -123.54976122828737,
+              49.45209272626278
+            ],
+            [
+              -123.54957999838167,
+              49.45197736777653
+            ],
+            [
+              -123.54957313233287,
+              49.45197302746684
+            ],
+            [
+              -123.5477673739025,
+              49.45083937244319
+            ],
+            [
+              -123.54758950799159,
+              49.45074493175671
+            ],
+            [
+              -123.53439236322224,
+              49.44485164101423
+            ],
+            [
+              -123.53416316605913,
+              49.44476886629826
+            ],
+            [
+              -123.53391406399572,
+              49.444715697381255
+            ],
+            [
+              -123.53365400657856,
+              49.44469404446411
+            ],
+            [
+              -123.53339233688479,
+              49.444704685469674
+            ],
+            [
+              -123.53313845590623,
+              49.44474723809901
+            ],
+            [
+              -123.53290148485428,
+              49.44482017356391
+            ],
+            [
+              -123.53268993750882,
+              49.444920871503285
+            ],
+            [
+              -123.53251141437366,
+              49.445045714111394
+            ],
+            [
+              -123.53237232962103,
+              49.44519021609922
+            ],
+            [
+              -123.53227768063233,
+              49.44534918582206
+            ],
+            [
+              -123.53223086841615,
+              49.44551691178841
+            ],
+            [
+              -123.53223357536025,
+              49.44568736785139
+            ],
+            [
+              -123.53228570471718,
+              49.44585442971317
+            ],
+            [
+              -123.5323853840077,
+              49.4460120949644
+            ],
+            [
+              -123.53252903222989,
+              49.446154698753396
+            ],
+            [
+              -123.5372612216108,
+              49.45000011284908
+            ],
+            [
+              -123.53735358368709,
+              49.4500678654333
+            ],
+            [
+              -123.53743520364304,
+              49.45012198612904
+            ],
+            [
+              -123.53745710606587,
+              49.45013618800677
+            ],
+            [
+              -123.53752673610899,
+              49.45018033858719
+            ],
+            [
+              -123.53760735573553,
+              49.45022758987991
+            ],
+            [
+              -123.53769152609769,
+              49.450273160523146
+            ],
+            [
+              -123.53776049709383,
+              49.45030816098662
+            ],
+            [
+              -123.53787138785725,
+              49.45036085176821
+            ],
+            [
+              -123.53793850819027,
+              49.450390815037025
+            ],
+            [
+              -123.54875160565211,
+              49.4549184549905
+            ],
+            [
+              -123.54886814065739,
+              49.45496218105309
+            ],
+            [
+              -123.5489235613223,
+              49.45498070135592
+            ],
+            [
+              -123.5491748425,
+              49.45504537867481
+            ],
+            [
+              -123.5494406731692,
+              49.45507706456682
+            ],
+            [
+              -123.54971090821665,
+              49.455074549774906
+            ],
+            [
+              -123.54997523441347,
+              49.45503793027307
+            ],
+            [
+              -123.55022356407171,
+              49.454968603603184
+            ],
+            [
+              -123.55044642008612,
+              49.454869215531076
+            ],
+            [
+              -123.55063529765634,
+              49.4547435590592
+            ],
+            [
+              -123.55078298887626,
+              49.4545964296532
+            ],
+            [
+              -123.55088385779916,
+              49.45443344221046
+            ],
+            [
+              -123.55093405548203,
+              49.454260816760154
+            ]
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-064",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 64",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nSechelt\n64 Those 6 portions of the Province of British Columbia in M.U. 2-5 in the vicinity of the Sechelt Peninsula within the following described boundaries: (1)Commencing at the mouth of an unnamed creek where it flows into Plowden Bay at the mean low water mark; thence up the northern and eastern natural boundary of the creek to its intersection with the northern and western boundary of the right of way of the BC Hydro (double) power line; thence westerly and southerly along the boundary of the power line to its intersection with Langdale Creek; thence easterly down the southern natural boundary of Langdale Creek to a point on the mean low water mark at the mouth of the creek, where it flows into Howe Sound; thence northerly, westerly and easterly along the mean low water mark on the natural boundary of Howe Sound to the point of commencement. (2)Commencing at a point on the mean low water mark on the southern natural boundary of Langdale Creek where it flows into Howe Sound; thence westerly and northerly along the natural boundary to a point 500 m westerly and northerly of its intersection with the western and northern boundary of the right of way of the BC Hydro (double) powerline; thence southerly and westerly and northerly parallel to the northerly, westerly and easterly boundary of the right of way of the powerline at a perpendicular distance of 500 m from it to a point perpendicular to the intersection of the power line right of way and the western natural boundary of Halfmoon Creek; thence southerly and westerly along the natural boundary of the creek to a point on the mean low water mark at the mouth of Halfmoon Creek where it flows into Halfmoon Bay; thence generally easterly and southerly and northerly along the mean low water mark on the natural boundary of Georgia Strait and Howe sound to the point of commencement. (3)Commencing at the intersection of the boundary of the right of way of Highway 101 and the western natural boundary of Halfmoon Creek; thence northerly and easterly along the boundary of the creek a distance of 500 m; thence northerly and westerly parallel to Highway 101, at a perpendicular distance of 500 m from the northern, eastern and western boundary of the Highway, to a point on the northern natural boundary of Haslam Creek approximately 500 m east of the intersection of the eastern boundary of the right of way of Highway 101 and the northern natural boundary of Haslam Creek; thence westerly along the northern natural boundary of Haslam Creek to a point on the mean low water mark at the mouth of the creek where it flows into Georgia Strait; thence generally southerly, easterly, westerly, southerly and easterly along the mean low water mark of the natural boundary of Georgia Strait to its intersection with the northern natural boundary of Halfmoon Creek; thence northerly and easterly up the natural boundary of Halfmoon Creek to the point of commencement. (4)Commencing at the intersection of the northern natural boundary of Haslam Creek and the mean low water mark on the boundary of Georgia Strait where the creek flows into Georgia Strait; thence easterly and northerly up the northern natural boundary of Haslam Creek to a point 500 m upstream of Highway 101; thence in a straight line northerly to the summit of Cecil Hill; thence due East in a straight line to a point 500 m west of the BC Hydro powerline right of way; thence in a northeasterly and northerly direction parallel to the power line and at a perpendicular distance of 500 m from it to the north fork of Myers Creek; thence downstream along the natural boundary of Myers Creek to its intersection with Garden Bay Road; thence westerly and northerly and southerly along the northern boundary of Garden Bay Road to its intersection with Mixal Road and Irvines Landing Road; thence westerly and southerly along the northern boundary of Irvines Landing Road to its intersection with Crosstrees Road; thence southerly and westerly along the northern boundary of Crosstrees Road to its intersection with Keelson Road; thence northerly and westerly along the easterly and northerly boundary of Keelson Road to its end; thence in a straight line due West to a point on the mean low water mark on the boundary of Georgia Strait; thence northerly and westerly along the natural boundary of Georgia Strait to Daniel Point; thence southerly in a straight line to the westernmost tip of Martin Island; thence southerly in a straight line to Francis Point; thence easterly in a straight line to the southern tip of an unnamed island lying approximately 400 m east of Francis Point; thence in a straight line easterly to the southern tip of Edgecombe Island; thence in a straight line due East a distance of approximately 650 m to a point at the mean low water mark on the natural boundary of the Sechelt Peninsula; thence southerly and easterly along the mean low water mark on the natural boundary of the Strait of Georgia to the point of commencement, excepting all Indian Reserve lands. (5)Commencing at a point on the northerly natural boundary of Chapman Creek 500 m upstream from its intersection with the northerly boundary of the BC Hydro powerline right of way; thence northwesterly, parallel to the powerline at a perpendicular distance of 500 m to a point 500 m east of Porpoise Bay Road; thence in a generally northerly direction parallel to and at a perpendicular distance of 500 m from Porpoise Bay Road to the road's end at Tuwanek; thence in a straight line due North to the natural boundary of Irvine Creek; thence down Irvine Creek westerly to its mouth; thence southwesterly in a straight line to an unnamed point of land forming the northerly shore of Snake Bay and continuing to a point 500 m perpendicularly distant from the northern boundary of the BC Hydro powerline right of way; thence southerly and easterly along a line parallel to and 500 m perpendicularly distant from the northern boundary of the BC Hydro power line right of way to the point of commencement, excepting all Indian Reserve lands. (6)Commencing at a point on Roberts Creek 500 m northeasterly from the northeast boundary of the BC Hydro (double) powerline; thence northeasterly up the natural boundary of Roberts Creek to a point 2.5 kilometres from the intersection of the powerline; thence in a northwesterly direction perpendicular to and at a distance of 2 kilometres from the northerly boundary of the powerline right of way to East Wilson Creek; thence in a southwesterly direction down the natural boundary of East Wilson Creek to a point 500 m northeasterly from the northeast boundary of the BC Hydro (double) powerline; thence parallel to the BC Hydro (double) powerline in a southeasterly direction at a perpendicular distance of 500 m from it to the point of commencement. [en. B.C. Reg. 205/94, s. 12.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [
+        "excepting all Indian Reserve lands"
+      ],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "corners",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "in M.U. 2-5",
+        "effect": "No Shooting Areas",
+        "exemptions[0]": "excepting all Indian Reserve lands",
+        "geometry.steps[0]": "Commencing at the mouth of an unnamed creek where it flows into Plowden Bay at the mean low water mark",
+        "geometry.steps[1]": "thence up the northern and eastern natural boundary of the creek to its intersection with the northern and western boundary of the right of way of the BC Hydro (double) power line",
+        "geometry.steps[2]": "thence westerly and southerly along the boundary of the power line to its intersection with Langdale Creek",
+        "geometry.steps[3]": "thence easterly down the southern natural boundary of Langdale Creek to a point on the mean low water mark at the mouth of the creek, where it flows into Howe Sound",
+        "geometry.steps[4]": "thence northerly, westerly and easterly along the mean low water mark on the natural boundary of Howe Sound to the point of commencement",
+        "geometry.steps[5]": "Commencing at a point on the mean low water mark on the southern natural boundary of Langdale Creek where it flows into Howe Sound",
+        "geometry.steps[6]": "thence westerly and northerly along the natural boundary to a point 500 m westerly and northerly of its intersection with the western and northern boundary of the right of way of the BC Hydro (double) powerline",
+        "geometry.steps[7]": "thence southerly and westerly and northerly parallel to the northerly, westerly and easterly boundary of the right of way of the powerline at a perpendicular distance of 500 m from it to a point perpendicular to the intersection of the power line right of way and the western natural boundary of Halfmoon Creek",
+        "geometry.steps[8]": "thence southerly and westerly along the natural boundary of the creek to a point on the mean low water mark at the mouth of Halfmoon Creek where it flows into Halfmoon Bay",
+        "geometry.steps[9]": "thence generally easterly and southerly and northerly along the mean low water mark on the natural boundary of Georgia Strait and Howe sound to the point of commencement",
+        "geometry.steps[10]": "Commencing at the intersection of the boundary of the right of way of Highway 101 and the western natural boundary of Halfmoon Creek",
+        "geometry.steps[11]": "thence northerly and easterly along the boundary of the creek a distance of 500 m",
+        "geometry.steps[12]": "thence northerly and westerly parallel to Highway 101, at a perpendicular distance of 500 m from the northern, eastern and western boundary of the Highway, to a point on the northern natural boundary of Haslam Creek approximately 500 m east of the intersection of the eastern boundary of the right of way of Highway 101 and the northern natural boundary of Haslam Creek",
+        "geometry.steps[13]": "thence westerly along the northern natural boundary of Haslam Creek to a point on the mean low water mark at the mouth of the creek where it flows into Georgia Strait",
+        "geometry.steps[14]": "thence generally southerly, easterly, westerly, southerly and easterly along the mean low water mark of the natural boundary of Georgia Strait to its intersection with the northern natural boundary of Halfmoon Creek",
+        "geometry.steps[15]": "thence northerly and easterly up the natural boundary of Halfmoon Creek to the point of commencement",
+        "geometry.steps[16]": "Commencing at the intersection of the northern natural boundary of Haslam Creek and the mean low water mark on the boundary of Georgia Strait where the creek flows into Georgia Strait",
+        "geometry.steps[17]": "thence easterly and northerly up the northern natural boundary of Haslam Creek to a point 500 m upstream of Highway 101",
+        "geometry.steps[18]": "thence in a straight line northerly to the summit of Cecil Hill",
+        "geometry.steps[19]": "thence due East in a straight line to a point 500 m west of the BC Hydro powerline right of way",
+        "geometry.steps[20]": "thence in a northeasterly and northerly direction parallel to the power line and at a perpendicular distance of 500 m from it to the north fork of Myers Creek",
+        "geometry.steps[21]": "thence downstream along the natural boundary of Myers Creek to its intersection with Garden Bay Road",
+        "geometry.steps[22]": "thence westerly and northerly and southerly along the northern boundary of Garden Bay Road to its intersection with Mixal Road and Irvines Landing Road",
+        "geometry.steps[23]": "thence westerly and southerly along the northern boundary of Irvines Landing Road to its intersection with Crosstrees Road",
+        "geometry.steps[24]": "thence southerly and westerly along the northern boundary of Crosstrees Road to its intersection with Keelson Road",
+        "geometry.steps[25]": "thence northerly and westerly along the easterly and northerly boundary of Keelson Road to its end",
+        "geometry.steps[26]": "thence in a straight line due West to a point on the mean low water mark on the boundary of Georgia Strait",
+        "geometry.steps[27]": "thence northerly and westerly along the natural boundary of Georgia Strait to Daniel Point",
+        "geometry.steps[28]": "thence southerly in a straight line to the westernmost tip of Martin Island",
+        "geometry.steps[29]": "thence southerly in a straight line to Francis Point",
+        "geometry.steps[30]": "thence easterly in a straight line to the southern tip of an unnamed island lying approximately 400 m east of Francis Point",
+        "geometry.steps[31]": "thence in a straight line easterly to the southern tip of Edgecombe Island",
+        "geometry.steps[32]": "thence in a straight line due East a distance of approximately 650 m to a point at the mean low water mark on the natural boundary of the Sechelt Peninsula",
+        "geometry.steps[33]": "thence southerly and easterly along the mean low water mark on the natural boundary of the Strait of Georgia to the point of commencement",
+        "geometry.steps[34]": "Commencing at a point on the northerly natural boundary of Chapman Creek 500 m upstream from its intersection with the northerly boundary of the BC Hydro powerline right of way",
+        "geometry.steps[35]": "thence northwesterly, parallel to the powerline at a perpendicular distance of 500 m to a point 500 m east of Porpoise Bay Road",
+        "geometry.steps[36]": "thence in a generally northerly direction parallel to and at a perpendicular distance of 500 m from Porpoise Bay Road to the road's end at Tuwanek",
+        "geometry.steps[37]": "thence in a straight line due North to the natural boundary of Irvine Creek",
+        "geometry.steps[38]": "thence down Irvine Creek westerly to its mouth",
+        "geometry.steps[39]": "thence southwesterly in a straight line to an unnamed point of land forming the northerly shore of Snake Bay and continuing to a point 500 m perpendicularly distant from the northern boundary of the BC Hydro powerline right of way",
+        "geometry.steps[40]": "thence southerly and easterly along a line parallel to and 500 m perpendicularly distant from the northern boundary of the BC Hydro power line right of way to the point of commencement",
+        "geometry.steps[41]": "Commencing at a point on Roberts Creek 500 m northeasterly from the northeast boundary of the BC Hydro (double) powerline",
+        "geometry.steps[42]": "thence northeasterly up the natural boundary of Roberts Creek to a point 2.5 kilometres from the intersection of the powerline",
+        "geometry.steps[43]": "thence in a northwesterly direction perpendicular to and at a distance of 2 kilometres from the northerly boundary of the powerline right of way to East Wilson Creek",
+        "geometry.steps[44]": "thence in a southwesterly direction down the natural boundary of East Wilson Creek to a point 500 m northeasterly from the northeast boundary of the BC Hydro (double) powerline",
+        "geometry.steps[45]": "thence parallel to the BC Hydro (double) powerline in a southeasterly direction at a perpendicular distance of 500 m from it to the point of commencement"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "51c6a56c14900e30f4f9c2208ea6d9b1dc5be2004fc00dc87cceb950e12294ed",
+      "task_id": "closed_area-51c6a56c1490",
+      "construction": [
+        {
+          "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+          "quote": "Commencing at the mouth of an unnamed creek where it flows into Plowden Bay at the mean low water mark",
+          "source": "WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP, WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "64.879 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "steps: run 1 [\"|||\",\"|its intersection with the northern and western boundary of the right of way of the bc hydro double power line||creek\",\"bc hydro double power line|its intersection with langdale creek||other\",\"langdale creek|a point on the mean low water mark at the mouth of the creek where it flows into howe sound||creek\",\"howe sound|the point of commencement||shoreline\",\"|||\",\"langdale creek|a point 500 m westerly and northerly of its intersection with the western and northern boundary of the right of way of the bc hydro double powerline|500 m|creek\",\"bc hydro double powerline|a point perpendicular to the intersection of the power line right of way and the western natural boundary of halfmoon creek|500 m|other\",\"halfmoon creek|a point on the mean low water mark at the mouth of halfmoon creek where it flows into halfmoon bay||creek\",\"georgia strait and howe sound|the point of commencement||shoreline\",\"|||\",\"halfmoon creek||500 m|creek\",\"hwy 101|a point on the northern natural boundary of haslam creek approximately 500 m east of the intersection of the eastern boundary of the right of way of hwy 101 and the northern natural boundary of haslam creek|500 m|other\",\"haslam creek|a point on the mean low water mark at the mouth of the creek where it flows into georgia strait||creek\",\"georgia strait|its intersection with the northern natural boundary of halfmoon creek||shoreline\",\"halfmoon creek|the point of commencement||creek\",\"|||\",\"haslam creek|a point 500 m upstream of hwy 101|500 m|creek\",\"|the summit of cecil hill||straight_line\",\"|a point 500 m west of the bc hydro powerline right of way|500 m|straight_line\",\"bc hydro powerline|the north fork of myers creek|500 m|other\",\"myers creek|its intersection with garden bay rd||creek\",\"garden bay rd|its intersection with mixal rd and irvines landing rd||road\",\"irvines landing rd|its intersection with crosstrees rd||road\",\"crosstrees rd|its intersection with keelson rd||road\",\"keelson rd|its end||road\",\"|a point on the mean low water mark on the boundary of georgia strait||straight_line\",\"georgia strait|daniel point||shoreline\",\"|the westernmost tip of martin island||straight_line\",\"|francis point||straight_line\",\"|the southern tip of an unnamed island lying approximately 400 m east of francis point|approximately 400 m|straight_line\",\"|the southern tip of edgecombe island||straight_line\",\"|a point at the mean low water mark on the natural boundary of the sechelt peninsula|approximately 650 m|straight_line\",\"strait of georgia|the point of commencement||shoreline\",\"||500 m|\",\"bc hydro powerline|a point 500 m east of porpoise bay rd|500 m|other\",\"porpoise bay rd|the rd s end at tuwanek|500 m|other\",\"|the natural boundary of irvine creek||straight_line\",\"irvine creek|its mouth||creek\",\"|an unnamed point of land forming the northerly shore of snake bay and continuing to a point 500 m perpendicularly distant from the northern boundary of the bc hydro powerline right of way|500 m|straight_line\",\"bc hydro power line|the point of commencement|500 m|other\",\"||500 m|\",\"roberts creek|a point 2.5 kilometres from the intersection of the powerline|2.5 kilometres|creek\",\"bc hydro double powerline|east wilson creek|2 kilometres|other\",\"east wilson creek|a point 500 m northeasterly from the northeast boundary of the bc hydro double powerline|500 m|creek\",\"bc hydro double powerline|the point of commencement|500 m|other\"] vs run 2 [\"|||\",\"|its intersection with the northern and western boundary of the right of way of the bc hydro double power line||creek\",\"bc hydro double power line|its intersection with langdale creek||other\",\"langdale creek|a point on the mean low water mark at the mouth of the creek where it flows into howe sound||creek\",\"howe sound|the point of commencement||shoreline\",\"|||\",\"langdale creek|a point 500 m westerly and northerly of its intersection with the western and northern boundary of the right of way of the bc hydro double powerline|500 m|creek\",\"bc hydro double powerline|a point perpendicular to the intersection of the power line right of way and the western natural boundary of halfmoon creek|perpendicular distance of 500 m|other\",\"halfmoon creek|a point on the mean low water mark at the mouth of halfmoon creek where it flows into halfmoon bay||creek\",\"georgia strait and howe sound|the point of commencement||shoreline\",\"|||\",\"halfmoon creek||500 m|creek\",\"hwy 101|a point on the northern natural boundary of haslam creek approximately 500 m east of the intersection of the eastern boundary of the right of way of hwy 101 and the northern natural boundary of haslam creek|perpendicular distance of 500 m|other\",\"haslam creek|a point on the mean low water mark at the mouth of the creek where it flows into georgia strait||creek\",\"georgia strait|its intersection with the northern natural boundary of halfmoon creek||shoreline\",\"halfmoon creek|the point of commencement||creek\",\"|||\",\"haslam creek|a point 500 m upstream of hwy 101|500 m|creek\",\"|the summit of cecil hill||straight_line\",\"|a point 500 m west of the bc hydro powerline right of way|500 m|straight_line\",\"bc hydro powerline|the north fork of myers creek|perpendicular distance of 500 m|other\",\"myers creek|its intersection with garden bay rd||creek\",\"garden bay rd|its intersection with mixal rd and irvines landing rd||road\",\"irvines landing rd|its intersection with crosstrees rd||road\",\"crosstrees rd|its intersection with keelson rd||road\",\"keelson rd|its end||road\",\"|a point on the mean low water mark on the boundary of georgia strait||straight_line\",\"georgia strait|daniel point||shoreline\",\"|the westernmost tip of martin island||straight_line\",\"|francis point||straight_line\",\"|the southern tip of an unnamed island lying approximately 400 m east of francis point|approximately 400 m|straight_line\",\"|the southern tip of edgecombe island||straight_line\",\"|a point at the mean low water mark on the natural boundary of the sechelt peninsula|approximately 650 m|straight_line\",\"strait of georgia|the point of commencement||shoreline\",\"||500 m|\",\"bc hydro powerline|a point 500 m east of porpoise bay rd|perpendicular distance of 500 m|other\",\"porpoise bay rd|the rd s end at tuwanek|perpendicular distance of 500 m|other\",\"|the natural boundary of irvine creek||straight_line\",\"irvine creek|its mouth||creek\",\"|a point 500 m perpendicularly distant from the northern boundary of the bc hydro powerline right of way|500 m perpendicularly distant|straight_line\",\"bc hydro power line|the point of commencement|500 m perpendicularly distant|other\",\"||500 m|\",\"roberts creek|a point 2.5 kilometres from the intersection of the powerline|2.5 kilometres|creek\",\"bc hydro double powerline|east wilson creek|2 kilometres|other\",\"east wilson creek|a point 500 m northeasterly from the northeast boundary of the bc hydro double powerline|500 m|creek\",\"bc hydro double powerline|the point of commencement|perpendicular distance of 500 m|other\"]"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:47:08.097Z",
-  "updated": "2026-10-20T21:47:08.097Z"
+  "updated": "2026-10-28T17:10:23.400Z"
 }

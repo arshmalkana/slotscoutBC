@@ -1,0 +1,232 @@
+{
+  "type": "FeatureCollection",
+  "name": "W5-125",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -124.94167436480693,
+              49.67277693856076
+            ],
+            [
+              -124.9414068541956,
+              49.67102248324776
+            ],
+            [
+              -124.94061564190902,
+              49.66933551034863
+            ],
+            [
+              -124.93933118120418,
+              49.66778083902425
+            ],
+            [
+              -124.93760286485016,
+              49.66641819907129
+            ],
+            [
+              -124.93549712217707,
+              49.665299937876696
+            ],
+            [
+              -124.93309486454916,
+              49.66446901149218
+            ],
+            [
+              -124.93048837768634,
+              49.663957336611276
+            ],
+            [
+              -124.92777778,
+              49.66378456636276
+            ],
+            [
+              -124.92506718231365,
+              49.663957336611276
+            ],
+            [
+              -124.92246069545082,
+              49.66446901149218
+            ],
+            [
+              -124.92005843782293,
+              49.665299937876696
+            ],
+            [
+              -124.91795269514982,
+              49.66641819907129
+            ],
+            [
+              -124.91622437879582,
+              49.66778083902425
+            ],
+            [
+              -124.91493991809097,
+              49.66933551034863
+            ],
+            [
+              -124.9141487058044,
+              49.67102248324776
+            ],
+            [
+              -124.91388119519307,
+              49.67277693856076
+            ],
+            [
+              -124.9141477224868,
+              49.67453145716329
+            ],
+            [
+              -124.91493810115689,
+              49.676218610295784
+            ],
+            [
+              -124.916222004857,
+              49.67777355135846
+            ],
+            [
+              -124.91795012561694,
+              49.679136509489446
+            ],
+            [
+              -124.92005606388403,
+              49.68025508886206
+            ],
+            [
+              -124.92245887851665,
+              49.6810862849849
+            ],
+            [
+              -124.92506619899592,
+              49.6815981400992
+            ],
+            [
+              -124.92777778,
+              49.68177097363725
+            ],
+            [
+              -124.93048936100406,
+              49.6815981400992
+            ],
+            [
+              -124.93309668148335,
+              49.6810862849849
+            ],
+            [
+              -124.93549949611597,
+              49.68025508886206
+            ],
+            [
+              -124.93760543438306,
+              49.679136509489446
+            ],
+            [
+              -124.939333555143,
+              49.67777355135846
+            ],
+            [
+              -124.94061745884309,
+              49.676218610295784
+            ],
+            [
+              -124.9414078375132,
+              49.67453145716329
+            ],
+            [
+              -124.94167436480693,
+              49.67277693856076
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "rule_id": "W5-125",
+        "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 125",
+        "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+        "source_text": "Schedule 5 No Shooting Areas (Section 6)\nComox Harbour\n125 That portion of the Province of British Columbia in M.U. 1-6 in the vicinity of Comox contained within the following described boundaries: Commencing at the most westerly point on Goose Spit; thence southeasterly in a straight line to the most northerly point on Gartley Point; thence in a general northwesterly direction following the mean high water mark of Comox Harbour to the mouth of the Courtenay River; thence northeasterly in a straight line across the mouth of the Courtenay River; thence in a southeasterly, southwesterly and westerly direction following the mean high water mark of Comox Harbour to the point of commencement. [en. B.C. Reg. 205/94, s. 22.]",
+        "source_version": "BC Laws consolidation current to October 13, 2026",
+        "effect": "no_shooting",
+        "period": null,
+        "exemptions": [],
+        "geometry_method": "metes_and_bounds",
+        "buffer_m": null,
+        "partial_extent": false,
+        "conservative": true,
+        "approximate": true,
+        "approximate_quality": "vicinity",
+        "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+        "digitised_on": "2026-10-28",
+        "reviewed_by": null,
+        "reviewed_on": null,
+        "confidence": "low",
+        "notes": "approximate outline (vicinity): corners where the followed features meet, traced along them where found, padded 100 m",
+        "extraction_method": "ai",
+        "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+        "prompt_version": "closed_area.v1",
+        "quotes": {
+          "within": "in M.U. 1-6",
+          "effect": "No Shooting Areas",
+          "geometry.steps[0]": "Commencing at the most westerly point on Goose Spit",
+          "geometry.steps[1]": "thence southeasterly in a straight line to the most northerly point on Gartley Point",
+          "geometry.steps[2]": "thence in a general northwesterly direction following the mean high water mark of Comox Harbour to the mouth of the Courtenay River",
+          "geometry.steps[3]": "thence northeasterly in a straight line across the mouth of the Courtenay River",
+          "geometry.steps[4]": "thence in a southeasterly, southwesterly and westerly direction following the mean high water mark of Comox Harbour to the point of commencement"
+        },
+        "run_agreement": false,
+        "status": "candidate",
+        "version": 1,
+        "unit_hash": "4317cdfbb8dc4f97706b449b15f3db72f1f5fbdf428703e18d1f33979df6e2a0",
+        "task_id": "closed_area-4317cdfbb8dc",
+        "construction": [
+          {
+            "what": "approximate outline (vicinity): corners where the followed features meet, traced along them where found, padded 100 m",
+            "quote": "Commencing at the most westerly point on Goose Spit",
+            "source": "BC Geographical Names"
+          }
+        ],
+        "validation": [
+          {
+            "check": "ring closes",
+            "passed": true,
+            "detail": "largest gap 0.0 m (limit 25 m)"
+          },
+          {
+            "check": "no self-crossing",
+            "passed": true,
+            "detail": "none"
+          },
+          {
+            "check": "area in expected range",
+            "passed": true,
+            "detail": "3.121 km² (limit 500 km²)"
+          },
+          {
+            "check": "inside the area the text names",
+            "passed": true,
+            "detail": "100.0% inside"
+          },
+          {
+            "check": "overlaps the synopsis map shape",
+            "passed": null,
+            "detail": "no synopsis shape in inbox/synopsis for this area yet"
+          },
+          {
+            "check": "two independent extractions agree",
+            "passed": false,
+            "detail": "steps: run 1 [\"|||\",\"|the most northerly point on gartley point||straight_line\",\"comox harbour|the mouth of the courtenay river||shoreline\",\"courtenay river|||straight_line\",\"comox harbour|the point of commencement||shoreline\"] vs run 2 [\"|||\",\"|the most northerly point on gartley point||straight_line\",\"comox harbour|the mouth of the courtenay river||shoreline\",\"the mouth of the courtenay river|||straight_line\",\"comox harbour|the point of commencement||shoreline\"]"
+          },
+          {
+            "check": "step directions match the line",
+            "passed": null,
+            "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+          }
+        ],
+        "change_type": "new"
+      }
+    }
+  ]
+}

@@ -5,10 +5,15 @@
   "title": "Closed Areas Regulation, Schedule 5, section 86 (York Lake)",
   "rule_id": "W5-086",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "approximate outline (traced) drawn from the places the walk names",
+    "\"McMillan Road\" was not found in the official layers; that side is drawn straight",
+    "\"Ryeland Road\" was not found in the official layers; that side is drawn straight",
+    "\"McMillan Road\" was not found in the official layers; that side is drawn straight",
+    "\"Sanford Way\" was not found in the official layers; that side is drawn straight",
+    "\"Torberg Road\" was not found in the official layers; that side is drawn straight"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nYork Lake\n86 That portion of the Province of British Columbia in the general vicinity of York Lake, Cedar Land District, which is contained within the following described boundaries: Commencing at the point of intersection of the midline of Holden Corso Road and the midline of McMillan Road; thence in a southerly direction along the midline of McMillan Road to the point of intersection with the midline of Walsh Road; thence in a general easterly direction along the midline of Walsh Road to the point of intersection with the midline of Nairne Road; thence in a southerly direction along the midline of Nairne Road to the point of intersection with the midline of Ryeland Road; thence in a westerly direction along the midline of Ryeland Road to the point of intersection with the midline of Cedar Road; thence in a general westerly direction along the midline of Cedar Road to the point of intersection with the midline of McMillan Road; thence in a northerly direction along the midline of McMillan Road to the point of intersection with the midline of Sanford Way; thence in a westerly direction along the midline of Sanford Way to the point of intersection with the midline of Torberg Road; thence in a general northerly direction along the midline of Torberg Road to the point of intersection with the midline of Holden Corso Road; thence in an easterly direction along the midline of Holden Corso Road to the point of commencement. [en. B.C. Reg. 162/87, s. 22.]",
@@ -380,7 +385,7 @@
           "FEATURE_CODE": "FA91800000",
           "FEATURE_AREA_SQM": 44409884.3809,
           "FEATURE_LENGTH_M": 37279.4954,
-          "OBJECTID": 9432253,
+          "OBJECTID": 9435840,
           "SE_ANNO_CAD_DATA": null
         }
       ]
@@ -388,9 +393,34 @@
   ],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "2.592 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     },
     {
       "check": "step directions match the line",
@@ -398,8 +428,281 @@
       "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at the point of intersection of the midline of Holden Corso Road and the midline of McMillan Road",
+      "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -123.86418533877463,
+            49.11639627324844
+          ],
+          [
+            -123.86415816,
+            49.11548218
+          ],
+          [
+            -123.86415552,
+            49.11518473
+          ],
+          [
+            -123.86413476,
+            49.11285166
+          ],
+          [
+            -123.8641256,
+            49.11181934
+          ],
+          [
+            -123.86412233,
+            49.11145178
+          ],
+          [
+            -123.86411955,
+            49.11114151
+          ],
+          [
+            -123.86411866,
+            49.11104027
+          ],
+          [
+            -123.86410164,
+            49.10912667
+          ],
+          [
+            -123.86409439,
+            49.10830982
+          ],
+          [
+            -123.86409358,
+            49.10821988
+          ],
+          [
+            -123.86409616,
+            49.1081164
+          ],
+          [
+            -123.86410291,
+            49.10784497
+          ],
+          [
+            -123.8641336984692,
+            49.106607657916356
+          ],
+          [
+            -123.85850892919755,
+            49.101786100993195
+          ],
+          [
+            -123.8583359421701,
+            49.101663347050334
+          ],
+          [
+            -123.85799110305577,
+            49.10146022978685
+          ],
+          [
+            -123.85797651343717,
+            49.10145175805639
+          ],
+          [
+            -123.85425707538889,
+            49.0993225371045
+          ],
+          [
+            -123.85404266062612,
+            49.09922183032821
+          ],
+          [
+            -123.85380279091288,
+            49.09914982758837
+          ],
+          [
+            -123.85354631912259,
+            49.09910918626352
+          ],
+          [
+            -123.85328271076202,
+            49.09910140628301
+          ],
+          [
+            -123.85302169468207,
+            49.099126774778355
+          ],
+          [
+            -123.85277290407689,
+            49.09918435548784
+          ],
+          [
+            -123.85254552101082,
+            49.099272023305296
+          ],
+          [
+            -123.85234793758215,
+            49.099386542698745
+          ],
+          [
+            -123.85218744622068,
+            49.09952368710696
+          ],
+          [
+            -123.83694526662116,
+            49.11552108365271
+          ],
+          [
+            -123.83683083963854,
+            49.11567046415889
+          ],
+          [
+            -123.83676061089163,
+            49.11583112233259
+          ],
+          [
+            -123.83673700551402,
+            49.11599751133597
+          ],
+          [
+            -123.836737303465,
+            49.11643251133919
+          ],
+          [
+            -123.83676567529783,
+            49.11661392133823
+          ],
+          [
+            -123.83684937610079,
+            49.11678785568948
+          ],
+          [
+            -123.83698496485468,
+            49.11694716263149
+          ],
+          [
+            -123.83716686688781,
+            49.11708529178149
+          ],
+          [
+            -123.83738760303689,
+            49.117196563494765
+          ],
+          [
+            -123.83763809715269,
+            49.117276402426434
+          ],
+          [
+            -123.83790804930881,
+            49.117321525687096
+          ],
+          [
+            -123.83818635936431,
+            49.11733007785075
+          ],
+          [
+            -123.86418533877463,
+            49.11639627324844
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-086",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 86",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nYork Lake\n86 That portion of the Province of British Columbia in the general vicinity of York Lake, Cedar Land District, which is contained within the following described boundaries: Commencing at the point of intersection of the midline of Holden Corso Road and the midline of McMillan Road; thence in a southerly direction along the midline of McMillan Road to the point of intersection with the midline of Walsh Road; thence in a general easterly direction along the midline of Walsh Road to the point of intersection with the midline of Nairne Road; thence in a southerly direction along the midline of Nairne Road to the point of intersection with the midline of Ryeland Road; thence in a westerly direction along the midline of Ryeland Road to the point of intersection with the midline of Cedar Road; thence in a general westerly direction along the midline of Cedar Road to the point of intersection with the midline of McMillan Road; thence in a northerly direction along the midline of McMillan Road to the point of intersection with the midline of Sanford Way; thence in a westerly direction along the midline of Sanford Way to the point of intersection with the midline of Torberg Road; thence in a general northerly direction along the midline of Torberg Road to the point of intersection with the midline of Holden Corso Road; thence in an easterly direction along the midline of Holden Corso Road to the point of commencement. [en. B.C. Reg. 162/87, s. 22.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "traced",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "Cedar Land District",
+        "effect": "No Shooting Areas",
+        "geometry.steps[0]": "Commencing at the point of intersection of the midline of Holden Corso Road and the midline of McMillan Road",
+        "geometry.steps[1]": "thence in a southerly direction along the midline of McMillan Road to the point of intersection with the midline of Walsh Road",
+        "geometry.steps[2]": "thence in a general easterly direction along the midline of Walsh Road to the point of intersection with the midline of Nairne Road",
+        "geometry.steps[3]": "thence in a southerly direction along the midline of Nairne Road to the point of intersection with the midline of Ryeland Road",
+        "geometry.steps[4]": "thence in a westerly direction along the midline of Ryeland Road to the point of intersection with the midline of Cedar Road",
+        "geometry.steps[5]": "thence in a general westerly direction along the midline of Cedar Road to the point of intersection with the midline of McMillan Road",
+        "geometry.steps[6]": "thence in a northerly direction along the midline of McMillan Road to the point of intersection with the midline of Sanford Way",
+        "geometry.steps[7]": "thence in a westerly direction along the midline of Sanford Way to the point of intersection with the midline of Torberg Road",
+        "geometry.steps[8]": "thence in a general northerly direction along the midline of Torberg Road to the point of intersection with the midline of Holden Corso Road",
+        "geometry.steps[9]": "thence in an easterly direction along the midline of Holden Corso Road to the point of commencement"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "f5772e0db982aa860f339168f4b0afed7b2a0d7275205318efd4875a6fdf4b0d",
+      "task_id": "closed_area-f5772e0db982",
+      "construction": [
+        {
+          "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+          "quote": "Commencing at the point of intersection of the midline of Holden Corso Road and the midline of McMillan Road",
+          "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "2.592 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:10:36.572Z",
-  "updated": "2026-10-27T23:12:36.080Z"
+  "updated": "2026-10-28T17:29:05.159Z"
 }

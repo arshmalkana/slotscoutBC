@@ -5,10 +5,14 @@
   "title": "Closed Areas Regulation, Schedule 5, section 74 (Burrard Inlet)",
   "rule_id": "W5-074",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "approximate outline (traced) drawn from the places the walk names",
+    "\"North Vancouver\" was not found in the official layers; that side is drawn straight",
+    "\"City of Vancouver\" was not found in the official layers; that side is drawn straight",
+    "\"City of Vancouver\" was not found in the official layers; that side is drawn straight",
+    "\"Point Grey beach\" was not found in the official layers; that side is drawn straight"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nBurrard Inlet\n74 That portion of the Province of British Columbia in the vicinity of the City of Vancouver within the following described boundaries: Commencing at Point Grey and proceeding in a straight line northerly to a point on the southerly municipal boundary of West Vancouver due South of Point Atkinson; thence easterly along the boundary to the southerly boundary of North Vancouver municipality; thence easterly along the boundary to the easterly boundary of North Vancouver; thence due South to the north boundary of the municipality of Burnaby; thence westerly along the boundary to the north boundary of the City of Vancouver; thence westerly, northwesterly, westerly, southerly and westerly along the boundary to the west boundary of the City of Vancouver; thence southerly along the boundary to the high water mark on Point Grey beach; thence westerly along the high water mark to the point of commencement. [en. B.C. Reg. 109/85, s. 3 (i).]",
@@ -273,9 +277,34 @@
   "lookups": [],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "0.517 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     },
     {
       "check": "step directions match the line",
@@ -283,8 +312,258 @@
       "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at Point Grey and proceeding in a straight line northerly to a point on the southerly municipal boundary of West Vancouver due South of Point Atkinson",
+      "source": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -123.0221987311547,
+            49.232826276032654
+          ],
+          [
+            -123.02213573512853,
+            49.25455033528635
+          ],
+          [
+            -123.02216166344735,
+            49.25472569146378
+          ],
+          [
+            -123.02223947104743,
+            49.254894383791914
+          ],
+          [
+            -123.02236617258669,
+            49.25504993873436
+          ],
+          [
+            -123.02253690630367,
+            49.25518638684134
+          ],
+          [
+            -123.02274512053658,
+            49.25529849184561
+          ],
+          [
+            -123.02298282512129,
+            49.25538195162707
+          ],
+          [
+            -123.02324089802367,
+            49.255433563330435
+          ],
+          [
+            -123.02350943543716,
+            49.25545134629524
+          ],
+          [
+            -123.02377813190357,
+            49.255434618077665
+          ],
+          [
+            -123.02403667585995,
+            49.255384020644286
+          ],
+          [
+            -123.02427514541964,
+            49.25530149573194
+          ],
+          [
+            -123.02448438918766,
+            49.25519021031981
+          ],
+          [
+            -123.0246563774857,
+            49.255054435076374
+          ],
+          [
+            -123.02478451050185,
+            49.25489938044872
+          ],
+          [
+            -123.02486387153725,
+            49.25473099668857
+          ],
+          [
+            -123.02489141563426,
+            49.254555745493136
+          ],
+          [
+            -123.0249554227866,
+            49.24441934473083
+          ],
+          [
+            -123.02495543447598,
+            49.24441552552154
+          ],
+          [
+            -123.02495321130135,
+            49.23282786554656
+          ],
+          [
+            -123.0249267477236,
+            49.232652528246426
+          ],
+          [
+            -123.02484844031363,
+            49.232483924872106
+          ],
+          [
+            -123.02472129506054,
+            49.23232852651111
+          ],
+          [
+            -123.02455019225192,
+            49.23219229737756
+          ],
+          [
+            -123.0243416991159,
+            49.232080465921804
+          ],
+          [
+            -123.02410381774702,
+            49.2319973241837
+          ],
+          [
+            -123.02384567799324,
+            49.23194606308628
+          ],
+          [
+            -123.02357718708883,
+            49.231928649987445
+          ],
+          [
+            -123.02330864947368,
+            49.23194575318594
+          ],
+          [
+            -123.02305037138012,
+            49.23199671627674
+          ],
+          [
+            -123.02281226535104,
+            49.23207958333921
+          ],
+          [
+            -123.02260346985534,
+            49.232191173992305
+          ],
+          [
+            -123.02243199859066,
+            49.23232720543838
+          ],
+          [
+            -123.02230443292493,
+            49.232482456814644
+          ],
+          [
+            -123.02222566928002,
+            49.23265096954877
+          ],
+          [
+            -123.0221987311547,
+            49.232826276032654
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-074",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 74",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nBurrard Inlet\n74 That portion of the Province of British Columbia in the vicinity of the City of Vancouver within the following described boundaries: Commencing at Point Grey and proceeding in a straight line northerly to a point on the southerly municipal boundary of West Vancouver due South of Point Atkinson; thence easterly along the boundary to the southerly boundary of North Vancouver municipality; thence easterly along the boundary to the easterly boundary of North Vancouver; thence due South to the north boundary of the municipality of Burnaby; thence westerly along the boundary to the north boundary of the City of Vancouver; thence westerly, northwesterly, westerly, southerly and westerly along the boundary to the west boundary of the City of Vancouver; thence southerly along the boundary to the high water mark on Point Grey beach; thence westerly along the high water mark to the point of commencement. [en. B.C. Reg. 109/85, s. 3 (i).]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "traced",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "effect": "No Shooting Areas",
+        "geometry.steps[0]": "Commencing at Point Grey and proceeding in a straight line northerly to a point on the southerly municipal boundary of West Vancouver due South of Point Atkinson",
+        "geometry.steps[1]": "thence easterly along the boundary to the southerly boundary of North Vancouver municipality",
+        "geometry.steps[2]": "thence easterly along the boundary to the easterly boundary of North Vancouver",
+        "geometry.steps[3]": "thence due South to the north boundary of the municipality of Burnaby",
+        "geometry.steps[4]": "thence westerly along the boundary to the north boundary of the City of Vancouver",
+        "geometry.steps[5]": "thence westerly, northwesterly, westerly, southerly and westerly along the boundary to the west boundary of the City of Vancouver",
+        "geometry.steps[6]": "thence southerly along the boundary to the high water mark on Point Grey beach",
+        "geometry.steps[7]": "thence westerly along the high water mark to the point of commencement"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "c9bca3f9152c3da70b5aa115cec29e3cc6d343d9d70d997403af1fbafafdfa34",
+      "task_id": "closed_area-c9bca3f9152c",
+      "construction": [
+        {
+          "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+          "quote": "Commencing at Point Grey and proceeding in a straight line northerly to a point on the southerly municipal boundary of West Vancouver due South of Point Atkinson",
+          "source": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "0.517 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": null,
+          "detail": "the text names no area, or it could not be found"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:47:35.527Z",
-  "updated": "2026-10-20T21:47:35.527Z"
+  "updated": "2026-10-28T17:24:45.520Z"
 }

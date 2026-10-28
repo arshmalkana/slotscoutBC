@@ -5,11 +5,14 @@
   "title": "Closed Areas Regulation, Schedule 7, section 38 (Sunshine Meadows)",
   "rule_id": "W8-038",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: steps: run 1 [\"brewster rock|||\",\"larix creek|a point on the westerly boundary of the watershed of larix creek at approximately 2 135 m 7 000 ft elevation||other\",\"|the most adjacent point at approximately 2 345 m 7 700 ft elevation on the easterly boundary of the watershed of larix creek||straight_line\",\"2 345 m 7 700 ft elevation|the most southeasterly point thereof in the vicinity of quartz hill||contour\",\"|the easterly boundary of the watershed of north simpson river||straight_line\",\"north simpson river|the point of commencement||other\"] vs run 2 [\"brewster rock|||\",\"the watershed of larix creek|a point on the westerly boundary of the watershed of larix creek at approximately 2 135 m 7 000 ft elevation||other\",\"|the most adjacent point at approximately 2 345 m 7 700 ft elevation on the easterly boundary of the watershed of larix creek||straight_line\",\"|the most southeasterly point thereof in the vicinity of quartz hill||contour\",\"|the point of intersection with the easterly boundary of the watershed of north simpson river||straight_line\",\"the watershed of north simpson river|the point of commencement||other\"]",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "approximate outline (vicinity) drawn from the places the walk names, using run 1's reading of the steps",
+    "\"Brewster Rock\" was not found in the official layers; that side is drawn straight",
+    "the outline could not be placed: a 1 km zone around the place the section names is marked",
+    "validation failed: two independent extractions agree (steps: run 1 [\"brewster rock|||\",\"larix creek|a point on the westerly boundary of the watershed of larix creek at approximately 2 135 m 7 000 ft elevation||other\",\"|the most adjacent point at approximately 2 345 m 7 700 ft elevation on the easterly boundary of the watershed of larix creek||straight_line\",\"2 345 m 7 700 ft elevation|the most southeasterly point thereof in the vicinity of quartz hill||contour\",\"|the easterly boundary of the watershed of north simpson river||straight_line\",\"north simpson river|the point of commencement||other\"] vs run 2 [\"brewster rock|||\",\"the watershed of larix creek|a point on the westerly boundary of the watershed of larix creek at approximately 2 135 m 7 000 ft elevation||other\",\"|the most adjacent point at approximately 2 345 m 7 700 ft elevation on the easterly boundary of the watershed of larix creek||straight_line\",\"|the most southeasterly point thereof in the vicinity of quartz hill||contour\",\"|the point of intersection with the easterly boundary of the watershed of north simpson river||straight_line\",\"the watershed of north simpson river|the point of commencement||other\"])"
   ],
   "source": {
     "text": "Schedule 7 No Hunting Areas (Section 8)\nSunshine Meadows\n38 That portion of the Province of British Columbia in M.U. 4-25 that is contained within the following described boundaries: Commencing on the northerly boundary of the watershed of Larix Creek at the apex of Brewster Rock on the B.C./Alberta boundary; thence in a general westerly and southerly direction along the northerly and westerly boundaries of the watershed of Larix Creek to a point on the westerly boundary of the watershed of Larix Creek at approximately 2 135 m (7 000 ft) elevation; thence more or less southeast in a straight line to the most adjacent point at approximately 2 345 m (7 700 ft) elevation on the easterly boundary of the watershed of Larix Creek; thence in a general southerly and easterly direction at 2 345 m (7 700 ft) elevation to the most southeasterly point thereof in the vicinity of Quartz Hill; thence easterly in a straight line to the point of intersection with the easterly boundary of the watershed of North Simpson River; thence in a general northerly direction along the easterly boundary of the watershed of North Simpson River to the point of commencement. [en. B.C. Reg. 204/91, s. 13.]",
@@ -270,12 +273,63 @@
   "disagreements": [
     "steps: run 1 [\"brewster rock|||\",\"larix creek|a point on the westerly boundary of the watershed of larix creek at approximately 2 135 m 7 000 ft elevation||other\",\"|the most adjacent point at approximately 2 345 m 7 700 ft elevation on the easterly boundary of the watershed of larix creek||straight_line\",\"2 345 m 7 700 ft elevation|the most southeasterly point thereof in the vicinity of quartz hill||contour\",\"|the easterly boundary of the watershed of north simpson river||straight_line\",\"north simpson river|the point of commencement||other\"] vs run 2 [\"brewster rock|||\",\"the watershed of larix creek|a point on the westerly boundary of the watershed of larix creek at approximately 2 135 m 7 000 ft elevation||other\",\"|the most adjacent point at approximately 2 345 m 7 700 ft elevation on the easterly boundary of the watershed of larix creek||straight_line\",\"|the most southeasterly point thereof in the vicinity of quartz hill||contour\",\"|the point of intersection with the easterly boundary of the watershed of north simpson river||straight_line\",\"the watershed of north simpson river|the point of commencement||other\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U. 4-25",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "4-25"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "4-25",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 4,
+          "REGION_RESPONSIBLE_ID": "4",
+          "REGION_RESPONSIBLE_NAME": "Kootenay",
+          "GAME_MANAGEMENT_ZONE_ID": "4Ea",
+          "GAME_MANAGEMENT_ZONE_NAME": "Fernie",
+          "FEATURE_AREA_SQM": 3188411049.525,
+          "FEATURE_LENGTH_M": 441989.3062,
+          "OBJECTID": 398,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "1.570 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "steps: run 1 [\"brewster rock|||\",\"larix creek|a point on the westerly boundary of the watershed of larix creek at approximately 2 135 m 7 000 ft elevation||other\",\"|the most adjacent point at approximately 2 345 m 7 700 ft elevation on the easterly boundary of the watershed of larix creek||straight_line\",\"2 345 m 7 700 ft elevation|the most southeasterly point thereof in the vicinity of quartz hill||contour\",\"|the easterly boundary of the watershed of north simpson river||straight_line\",\"north simpson river|the point of commencement||other\"] vs run 2 [\"brewster rock|||\",\"the watershed of larix creek|a point on the westerly boundary of the watershed of larix creek at approximately 2 135 m 7 000 ft elevation||other\",\"|the most adjacent point at approximately 2 345 m 7 700 ft elevation on the easterly boundary of the watershed of larix creek||straight_line\",\"|the most southeasterly point thereof in the vicinity of quartz hill||contour\",\"|the point of intersection with the easterly boundary of the watershed of north simpson river||straight_line\",\"the watershed of north simpson river|the point of commencement||other\"]"
     },
     {
       "check": "step directions match the line",
@@ -283,8 +337,553 @@
       "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate outline (vicinity): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing on the northerly boundary of the watershed of Larix Creek at the apex of Brewster Rock on the B.C./Alberta boundary",
+      "source": "WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP, WHSE_BASEMAPPING.TRIM_CONTOUR_LINES (2340 m)"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -115.77624600131432,
+            51.036388007287776
+          ],
+          [
+            -115.77597066975086,
+            51.03463355354858
+          ],
+          [
+            -115.77515637854171,
+            51.032946585125046
+          ],
+          [
+            -115.77383447165683,
+            51.031391920496525
+          ],
+          [
+            -115.77205578344017,
+            51.03002928844032
+          ],
+          [
+            -115.76988867987387,
+            51.02891103514145
+          ],
+          [
+            -115.76741642949226,
+            51.028080115449995
+          ],
+          [
+            -115.76473400525472,
+            51.027568445040984
+          ],
+          [
+            -115.76194444000001,
+            51.02739567636275
+          ],
+          [
+            -115.75915487474528,
+            51.027568445040984
+          ],
+          [
+            -115.75647245050776,
+            51.028080115449995
+          ],
+          [
+            -115.75400020012613,
+            51.02891103514145
+          ],
+          [
+            -115.75183309655982,
+            51.03002928844032
+          ],
+          [
+            -115.75005440834319,
+            51.031391920496525
+          ],
+          [
+            -115.74928378123846,
+            51.03229823751112
+          ],
+          [
+            -115.74967422,
+            51.03220171
+          ],
+          [
+            -115.75002254,
+            51.03209552
+          ],
+          [
+            -115.75035908,
+            51.03201419
+          ],
+          [
+            -115.75065994,
+            51.03196345
+          ],
+          [
+            -115.75087429,
+            51.0318888
+          ],
+          [
+            -115.75110193,
+            51.03179131
+          ],
+          [
+            -115.75110924,
+            51.03178862
+          ],
+          [
+            -115.75152924,
+            51.03163401
+          ],
+          [
+            -115.75214296,
+            51.03143973
+          ],
+          [
+            -115.75248732,
+            51.03171619
+          ],
+          [
+            -115.75288705,
+            51.03193728
+          ],
+          [
+            -115.75331774,
+            51.03212673
+          ],
+          [
+            -115.75375103,
+            51.03227824
+          ],
+          [
+            -115.75417595,
+            51.03238768
+          ],
+          [
+            -115.75448781,
+            51.03251791
+          ],
+          [
+            -115.75477684,
+            51.03267187
+          ],
+          [
+            -115.75505576,
+            51.03281923
+          ],
+          [
+            -115.75507215,
+            51.03282789
+          ],
+          [
+            -115.75520979,
+            51.03287177
+          ],
+          [
+            -115.75542569,
+            51.03294058
+          ],
+          [
+            -115.75572177,
+            51.03283182
+          ],
+          [
+            -115.75610062,
+            51.0327679
+          ],
+          [
+            -115.75639402,
+            51.03299585
+          ],
+          [
+            -115.75675034,
+            51.0331825
+          ],
+          [
+            -115.7571263,
+            51.03334537
+          ],
+          [
+            -115.75732631,
+            51.03351037
+          ],
+          [
+            -115.7575572,
+            51.03364672
+          ],
+          [
+            -115.75781895,
+            51.03375442
+          ],
+          [
+            -115.75798426,
+            51.03379514
+          ],
+          [
+            -115.7583782,
+            51.03399718
+          ],
+          [
+            -115.75879899,
+            51.03426244
+          ],
+          [
+            -115.75905275,
+            51.03437305
+          ],
+          [
+            -115.7593016,
+            51.0344896
+          ],
+          [
+            -115.7595454,
+            51.03461809
+          ],
+          [
+            -115.75968833,
+            51.03472552
+          ],
+          [
+            -115.75987565,
+            51.03489138
+          ],
+          [
+            -115.76004566,
+            51.03511202
+          ],
+          [
+            -115.76019186,
+            51.03527544
+          ],
+          [
+            -115.76037813,
+            51.0354213
+          ],
+          [
+            -115.76057336,
+            51.03553195
+          ],
+          [
+            -115.7606045,
+            51.0355496
+          ],
+          [
+            -115.76090552,
+            51.03565657
+          ],
+          [
+            -115.76094359,
+            51.03567011
+          ],
+          [
+            -115.7612955,
+            51.0358447
+          ],
+          [
+            -115.76148726,
+            51.03596364
+          ],
+          [
+            -115.76166072,
+            51.03605541
+          ],
+          [
+            -115.76187093,
+            51.03619552
+          ],
+          [
+            -115.76205351,
+            51.03630238
+          ],
+          [
+            -115.76238903,
+            51.03652117
+          ],
+          [
+            -115.76240398,
+            51.03653091
+          ],
+          [
+            -115.76286752,
+            51.03679764
+          ],
+          [
+            -115.76288161,
+            51.03680575
+          ],
+          [
+            -115.76289174,
+            51.03681389
+          ],
+          [
+            -115.76324469,
+            51.03709737
+          ],
+          [
+            -115.76333906,
+            51.03715744
+          ],
+          [
+            -115.7636374,
+            51.03734733
+          ],
+          [
+            -115.76381572,
+            51.03746957
+          ],
+          [
+            -115.76400161,
+            51.03759699
+          ],
+          [
+            -115.7643373,
+            51.03784634
+          ],
+          [
+            -115.76440723,
+            51.03789636
+          ],
+          [
+            -115.76477121,
+            51.03815669
+          ],
+          [
+            -115.76518852,
+            51.03837694
+          ],
+          [
+            -115.76561684,
+            51.03851912
+          ],
+          [
+            -115.76563311,
+            51.03852452
+          ],
+          [
+            -115.76610499,
+            51.03859945
+          ],
+          [
+            -115.7661683,
+            51.03859842
+          ],
+          [
+            -115.76655211,
+            51.03859218
+          ],
+          [
+            -115.76695325,
+            51.03864537
+          ],
+          [
+            -115.76716571,
+            51.03868845
+          ],
+          [
+            -115.76717747,
+            51.03869084
+          ],
+          [
+            -115.76733788,
+            51.03872337
+          ],
+          [
+            -115.76771908,
+            51.03887128
+          ],
+          [
+            -115.76808578,
+            51.03902802
+          ],
+          [
+            -115.76818681,
+            51.03908201
+          ],
+          [
+            -115.76842333,
+            51.03920843
+          ],
+          [
+            -115.76867223,
+            51.03932497
+          ],
+          [
+            -115.76878804,
+            51.03936301
+          ],
+          [
+            -115.7688325,
+            51.03937762
+          ],
+          [
+            -115.76895917,
+            51.0394419
+          ],
+          [
+            -115.76902052,
+            51.03953083
+          ],
+          [
+            -115.76912858,
+            51.03968749
+          ],
+          [
+            -115.76925971,
+            51.03994267
+          ],
+          [
+            -115.76930921,
+            51.04022797
+          ],
+          [
+            -115.76942738,
+            51.04033517
+          ],
+          [
+            -115.76961566,
+            51.04050597
+          ],
+          [
+            -115.76986305,
+            51.04085931
+          ],
+          [
+            -115.77005141,
+            51.04128795
+          ],
+          [
+            -115.77054941,
+            51.04151501
+          ],
+          [
+            -115.77093793,
+            51.04174692
+          ],
+          [
+            -115.77123399,
+            51.04205879
+          ],
+          [
+            -115.77162516,
+            51.0424306
+          ],
+          [
+            -115.7720611266763,
+            51.04274563116054
+          ],
+          [
+            -115.77383703605483,
+            51.04138463281871
+          ],
+          [
+            -115.77515834124695,
+            51.03982968506198
+          ],
+          [
+            -115.77597173195926,
+            51.03814252745823
+          ],
+          [
+            -115.77624600131432,
+            51.036388007287776
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W8-038",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 7, s. 38",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 7 No Hunting Areas (Section 8)\nSunshine Meadows\n38 That portion of the Province of British Columbia in M.U. 4-25 that is contained within the following described boundaries: Commencing on the northerly boundary of the watershed of Larix Creek at the apex of Brewster Rock on the B.C./Alberta boundary; thence in a general westerly and southerly direction along the northerly and westerly boundaries of the watershed of Larix Creek to a point on the westerly boundary of the watershed of Larix Creek at approximately 2 135 m (7 000 ft) elevation; thence more or less southeast in a straight line to the most adjacent point at approximately 2 345 m (7 700 ft) elevation on the easterly boundary of the watershed of Larix Creek; thence in a general southerly and easterly direction at 2 345 m (7 700 ft) elevation to the most southeasterly point thereof in the vicinity of Quartz Hill; thence easterly in a straight line to the point of intersection with the easterly boundary of the watershed of North Simpson River; thence in a general northerly direction along the easterly boundary of the watershed of North Simpson River to the point of commencement. [en. B.C. Reg. 204/91, s. 13.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_hunting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate outline (vicinity): corners where the followed features meet, traced along them where found, padded 100 m",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "in M.U. 4-25",
+        "effect": "No Hunting Areas",
+        "geometry.steps[0]": "Commencing on the northerly boundary of the watershed of Larix Creek at the apex of Brewster Rock on the B.C./Alberta boundary",
+        "geometry.steps[1]": "thence in a general westerly and southerly direction along the northerly and westerly boundaries of the watershed of Larix Creek to a point on the westerly boundary of the watershed of Larix Creek at approximately 2 135 m (7 000 ft) elevation",
+        "geometry.steps[2]": "thence more or less southeast in a straight line to the most adjacent point at approximately 2 345 m (7 700 ft) elevation on the easterly boundary of the watershed of Larix Creek",
+        "geometry.steps[3]": "thence in a general southerly and easterly direction at 2 345 m (7 700 ft) elevation to the most southeasterly point thereof in the vicinity of Quartz Hill",
+        "geometry.steps[4]": "thence easterly in a straight line to the point of intersection with the easterly boundary of the watershed of North Simpson River",
+        "geometry.steps[5]": "thence in a general northerly direction along the easterly boundary of the watershed of North Simpson River to the point of commencement"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "b43261f95a1aa2c59bd2cc949de6d5ccb536b75a62ca19d061ab4fd2d72f80f9",
+      "task_id": "closed_area-b43261f95a1a",
+      "construction": [
+        {
+          "what": "approximate outline (vicinity): corners where the followed features meet, traced along them where found, padded 100 m",
+          "quote": "Commencing on the northerly boundary of the watershed of Larix Creek at the apex of Brewster Rock on the B.C./Alberta boundary",
+          "source": "WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP, WHSE_BASEMAPPING.TRIM_CONTOUR_LINES (2340 m)"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "1.570 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "steps: run 1 [\"brewster rock|||\",\"larix creek|a point on the westerly boundary of the watershed of larix creek at approximately 2 135 m 7 000 ft elevation||other\",\"|the most adjacent point at approximately 2 345 m 7 700 ft elevation on the easterly boundary of the watershed of larix creek||straight_line\",\"2 345 m 7 700 ft elevation|the most southeasterly point thereof in the vicinity of quartz hill||contour\",\"|the easterly boundary of the watershed of north simpson river||straight_line\",\"north simpson river|the point of commencement||other\"] vs run 2 [\"brewster rock|||\",\"the watershed of larix creek|a point on the westerly boundary of the watershed of larix creek at approximately 2 135 m 7 000 ft elevation||other\",\"|the most adjacent point at approximately 2 345 m 7 700 ft elevation on the easterly boundary of the watershed of larix creek||straight_line\",\"|the most southeasterly point thereof in the vicinity of quartz hill||contour\",\"|the point of intersection with the easterly boundary of the watershed of north simpson river||straight_line\",\"the watershed of north simpson river|the point of commencement||other\"]"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:09:57.616Z",
-  "updated": "2026-10-21T16:09:57.616Z"
+  "updated": "2026-10-28T17:18:40.072Z"
 }

@@ -1077,7 +1077,41 @@
   "disagreements": [
     "steps: run 1 [\"farms rd|its intersection with durieu rd||road\",\"durieu rd|the point of intersection of that line with the easterly boundary of the sylvester rd right of way||road\",\"sylvester rd|the point of its intersection with a line drawn due east from the southerly boundary of the seux rd right of way||road\",\"seux rd|||straight_line\",\"seux rd|the point of its intersection with legace creek||road\",\"legace creek|the point of commencement||creek\",\"|||\",\"hatzic slough|its intersection with farm s rd||other\",\"farm s rd|its intersection with hatzic slough located approximately 1 000 m south of the intersection of dale rd and farm s rd|approximately 1 000 m|road\",\"hatzic slough|the point of commencement||other\",\"|||\",\"hwy 7|its intersection with the boundary of the municipality of mission||road\",\"municipality of mission|its intersection with the 20 m contour line south and west of the end of sward rd||district_boundary\",\"20 m contour line|a point due west of the most easterly point of the northeast southwest component of sward rd||contour\",\"|the most easterly point of the northeast southwest component of sward rd||straight_line\",\"hatzic lake|a point on the natural boundary of the lake 150 m north of a point due west of the east west portion of shore rd|150 m|straight_line\",\"shore rd|the intersection of the line and eagle rd||straight_line\",\"eagle rd|the point of commencement||road\",\"|||\",\"ross rd|||road\",\"|taylor rd||straight_line\",\"taylor rd|the point of its intersection with deroche creek||road\",\"deroche creek|north nicomen rd||creek\",\"north nicomen rd|a point at the westerly end of a curve located approximately 350 m west of park rd|approximately 350 m|road\",\"|the 60 m contour line||straight_line\",\"60 m contour line|its intersection with deroche creek||contour\",\"deroche creek|its intersection with the 200 m contour line||creek\",\"200 m contour line|its intersection with sasin creek||contour\",\"sasin creek|the 305 m contour line||creek\",\"305 m contour line|its intersection with an unnamed creek channel whose confluence with elbow creek is located approximately 350 m southerly from the outlet of elbow lake|approximately 350 m|contour\",\"|the point where it intersects the elbow lake rd||creek\",\"elbow lake rd|the southerly end of a curve in the rd which is located approximately 600 m north of the intersection of elbow lake rd and hwy 7|approximately 600 m|road\",\"|the natural boundary of the harrison river||straight_line\",\"harrison river|the no. 7 hwy harrison river bridge||river\",\"harrison bay|the southeasterly corner of the squawkum creek indian reserve number 3||shoreline\",\"|the 200 m contour line||straight_line\",\"200 m contour line|the channel of an unnamed creek which crosses malcolm rd 50 m southeast of the intersection of malcolm rd and hodgkin rd|50 m|contour\",\"|malcolm rd||creek\",\"malcolm rd|its intersection with the canadian pacific railway right of way||road\",\"canadian pacific railway|its intersection with hwy 7||other\",\"hwy 7|the point of commencement||road\",\"mountainview rd|the point of its intersection with hatzic slough||road\",\"|the northerly natural boundary of hatzic slough||straight_line\",\"hatzic slough|its intersection with the southerly boundary of the farms rd right of way||other\",\"farms rd|the point of commencement||road\"] vs run 2 [\"farms rd|its intersection with durieu rd||road\",\"durieu rd|the point of intersection of that line with the easterly boundary of the sylvester rd right of way||road\",\"sylvester rd|the point of its intersection with a line drawn due east from the southerly boundary of the seux rd right of way||road\",\"seux rd|||road\",\"seux rd|the point of its intersection with legace creek||road\",\"legace creek|the point of commencement||creek\",\"|||\",\"hatzic slough|its intersection with farm s rd||shoreline\",\"farm s rd|its intersection with hatzic slough located approximately 1 000 m south of the intersection of dale rd and farm s rd|approximately 1 000 m|road\",\"hatzic slough|the point of commencement||shoreline\",\"|||\",\"hwy 7|its intersection with the boundary of the municipality of mission||road\",\"municipality of mission|its intersection with the 20 m contour line south and west of the end of sward rd||district_boundary\",\"20 m contour line|a point due west of the most easterly point of the northeast southwest component of sward rd||contour\",\"|that point of reference||straight_line\",\"hatzic lake|a point on the natural boundary of the lake 150 m north of a point due west of the east west portion of shore rd|150 m|straight_line\",\"shore rd|the intersection of the line and eagle rd||straight_line\",\"eagle rd|the point of commencement||road\",\"|||\",\"ross rd|||road\",\"|taylor rd||straight_line\",\"taylor rd|the point of its intersection with deroche creek||road\",\"deroche creek|north nicomen rd||creek\",\"north nicomen rd|a point at the westerly end of a curve located approximately 350 m west of park rd|approximately 350 m|road\",\"|the 60 m contour line||straight_line\",\"60 m contour line|its intersection with deroche creek||contour\",\"deroche creek|its intersection with the 200 m contour line||creek\",\"200 m contour line|its intersection with sasin creek||contour\",\"sasin creek|the 305 m contour line||creek\",\"305 m contour line|its intersection with an unnamed creek channel whose confluence with elbow creek is located approximately 350 m southerly from the outlet of elbow lake|approximately 350 m|contour\",\"|the point where it intersects the elbow lake rd||creek\",\"elbow lake rd|the southerly end of a curve in the rd which is located approximately 600 m north of the intersection of elbow lake rd and hwy 7|approximately 600 m|road\",\"|the natural boundary of the harrison river||straight_line\",\"harrison river|the no. 7 hwy harrison river bridge||river\",\"harrison bay|the southeasterly corner of the squawkum creek indian reserve number 3||shoreline\",\"|the 200 m contour line||straight_line\",\"200 m contour line|the channel of an unnamed creek which crosses malcolm rd 50 m southeast of the intersection of malcolm rd and hodgkin rd|50 m|contour\",\"|malcolm rd||creek\",\"malcolm rd|its intersection with the canadian pacific railway right of way||road\",\"canadian pacific railway|its intersection with hwy 7||other\",\"hwy 7|the point of commencement||road\",\"mountainview rd|the point of its intersection with hatzic slough||road\",\"|the northerly natural boundary of hatzic slough||straight_line\",\"hatzic slough|its intersection with the southerly boundary of the farms rd right of way||shoreline\",\"farms rd|the point of commencement||road\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "Fraser Valley Regional District",
+      "kind": "regional_district",
+      "layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_REGIONAL_DISTRICTS_SP",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "Fraser Valley Regional District"
+      ],
+      "sample": [
+        {
+          "LGL_ADMIN_AREA_ID": 89,
+          "ADMIN_AREA_NAME": "Fraser Valley Regional District",
+          "ADMIN_AREA_ABBREVIATION": "FVRD",
+          "ADMIN_AREA_BOUNDARY_TYPE": "LGL",
+          "ADMIN_AREA_GROUP_NAME": "-",
+          "CHANGE_REQUESTED_ORG": "HMA",
+          "UPDATE_TYPE": null,
+          "WHEN_UPDATED": "2015-07-15Z",
+          "MAP_STATUS": "Not Appended",
+          "OIC_MO_NUMBER": "1446",
+          "OIC_MO_YEAR": "1995",
+          "OIC_MO_TYPE": "OIC",
+          "WEBSITE_URL": null,
+          "IMAGE_URL": null,
+          "AFFECTED_ADMIN_AREA_ABRVN": null,
+          "FEATURE_AREA_SQM": 13913900713.0139,
+          "FEATURE_LENGTH_M": 748811.2066,
+          "OBJECTID": 34568,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -1093,5 +1127,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:47:18.032Z",
-  "updated": "2026-10-20T21:47:18.032Z"
+  "updated": "2026-10-28T17:12:44.111Z"
 }

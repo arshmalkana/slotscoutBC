@@ -458,7 +458,33 @@
     "side: run 1 null vs run 2 \"inside\"",
     "steps: run 1 [\"kumdis bay|||\",\"lot 414|the southeast corner of lot 414||\",\"lot 414|the eastern boundary of lot 746||lot_line\",\"lot 746|the southern boundary of lot 746||lot_line\",\"lot 746|the eastern boundary of block b of lot 747||lot_line\",\"block b of lot 747|the southern boundary of block b||lot_line\",\"block b of lot 747|the western boundary of block b||lot_line\",\"lot 3040|the southern boundary of lot 3040||lot_line\",\"|the high water mark of masset inlet||straight_line\",\"||1 km|straight_line\",\"masset inlet|a point due north of the most northerly point of lot 420|1 km|other\",\"|the most northerly point of lot 420||straight_line\",\"||100 metres|straight_line\",\"kumdis bay|the intersection with hwy 16 in lot 414|100 metres|other\",\"hwy 16|the east end of the bridge that crosses kumdis creek to a point at the mean high water mark on the east shore of kumdis creek||road\",\"kumdis creek and kumdis bay|the point of commencement||shoreline\"] vs run 2 [\"|||\",\"lot 414|the southeast corner of lot 414||\",\"lot 414|the eastern boundary of lot 746||lot_line\",\"lot 746|the southern boundary of lot 746||lot_line\",\"lot 746|the eastern boundary of block b of lot 747||lot_line\",\"block b of lot 747|the southern boundary of block b||lot_line\",\"block b of lot 747|the western boundary of block b||lot_line\",\"lot 3040|the southern boundary of lot 3040||lot_line\",\"|the high water mark of masset inlet||straight_line\",\"||1 km|straight_line\",\"masset inlet|a point due north of the most northerly point of lot 420|1 km|shoreline\",\"|the most northerly point of lot 420||straight_line\",\"||100 metres|straight_line\",\"kumdis bay|the intersection with hwy 16 in lot 414|100 metres|shoreline\",\"hwy 16|the east end of the bridge that crosses kumdis creek to a point at the mean high water mark on the east shore of kumdis creek||road\",\"kumdis creek and kumdis bay|the point of commencement||shoreline\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U. 6-13",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "6-13"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "6-13",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 6,
+          "REGION_RESPONSIBLE_ID": "6",
+          "REGION_RESPONSIBLE_NAME": "Skeena",
+          "GAME_MANAGEMENT_ZONE_ID": "6a",
+          "GAME_MANAGEMENT_ZONE_NAME": "Queen Charlotte",
+          "FEATURE_AREA_SQM": 19475788191.2325,
+          "FEATURE_LENGTH_M": 557746.1291,
+          "OBJECTID": 458,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -474,5 +500,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:59:54.659Z",
-  "updated": "2026-10-27T23:12:04.594Z"
+  "updated": "2026-10-28T17:21:01.703Z"
 }

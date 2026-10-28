@@ -287,7 +287,33 @@
   "disagreements": [
     "steps: run 1 [\"||2 km|\",\"||25 m|straight_line\",\"central rd|a point 25 m due north of the junction of the midlines of central rd and imperial limestone rd|approximately 16 km|other\",\"|the midline of central rd|25 m|straight_line\",\"|a point 25 m south of the midline of central rd||straight_line\",\"central rd|a point 25 m southwest of the point of commencement||other\",\"|the point of commencement|25 m|straight_line\"] vs run 2 [\"||2 km|\",\"||25 m|\",\"central rd|a point 25 m due north of the junction of the midlines of central rd and imperial limestone rd|approximately 16 km|other\",\"|the midline of central rd|25 m|\",\"|a point 25 m south of the midline of central rd||\",\"central rd|a point 25 m southwest of the point of commencement||other\",\"|the point of commencement|25 m|\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U. 2-16",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "2-16"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "2-16",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 2,
+          "REGION_RESPONSIBLE_ID": "2",
+          "REGION_RESPONSIBLE_NAME": "Lower Mainland",
+          "GAME_MANAGEMENT_ZONE_ID": "2a",
+          "GAME_MANAGEMENT_ZONE_NAME": "South Coast",
+          "FEATURE_AREA_SQM": 2171785200.864,
+          "FEATURE_LENGTH_M": 345551.4145,
+          "OBJECTID": 341,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -303,5 +329,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T22:00:18.844Z",
-  "updated": "2026-10-20T22:00:18.844Z"
+  "updated": "2026-10-28T17:26:22.425Z"
 }

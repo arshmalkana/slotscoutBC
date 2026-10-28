@@ -5,10 +5,11 @@
   "title": "Closed Areas Regulation, Schedule 9, section 10 (Chilliwack Valley)",
   "rule_id": "W9-010",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "approximate outline (corners) drawn from the places the walk names",
+    "\"Department of National Defence Military Reserve\" was not found in the official layers; that side is drawn straight"
   ],
   "source": {
     "text": "Schedule 9 Firearms Using Shot Only Areas (Section 10 (1) (a))\nChilliwack Valley\n10 That portion of the Province of British Columbia in M.U. 2-3 in the vicinity of Chilliwack within the following described boundaries: Commencing at the intersection of the easterly boundary of the Soowahlie Number 14 Indian Reserve and the Chilliwack Lake Road; thence northerly along the Reserve boundary to its intersection with the southerly boundary of the District of Chilliwack; thence in an easterly direction along the District boundary to its intersection with an unnamed creek the mouth of which is located approximately 300 m southeasterly of the easterly end of O'Bryan Road (U.T.M. 50/10.5876.54370); thence southwesterly down the creek to its confluence with the Chilliwack River; thence along a line due South to the line's intersection with the southerly boundary of the Chilliwack Lake Road; thence westerly along the road right of way boundary to its intersection with a forestry access road on the south bank of the Chilliwack River which intersects the Chilliwack Lake Road at a point adjacent Tamihi Creek; thence westerly along the southerly boundary of the forest access road to its intersection with the Department of National Defence Military Reserve boundary; thence in a westerly and northerly direction along the boundary of the Military Reserve to its intersection with the easterly boundary of Soowahlie Indian Reserve Number 14; thence northerly along the Reserve boundary to the point of commencement. [en. B.C. Reg. 205/94, s. 25.]",
@@ -376,9 +377,34 @@
   ],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "0.016 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     },
     {
       "check": "step directions match the line",
@@ -386,8 +412,229 @@
       "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at the intersection of the easterly boundary of the Soowahlie Number 14 Indian Reserve and the Chilliwack Lake Road",
+      "source": "WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES, WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP, WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -121.96633158052819,
+            49.093031115253
+          ],
+          [
+            -121.966304252759,
+            49.092855728210594
+          ],
+          [
+            -121.96622519864098,
+            49.09268720231524
+          ],
+          [
+            -121.96609745663672,
+            49.09253201382101
+          ],
+          [
+            -121.96592593610342,
+            49.09239612638365
+          ],
+          [
+            -121.96571722858296,
+            49.09228476190354
+          ],
+          [
+            -121.96547935447674,
+            49.092202199878045
+          ],
+          [
+            -121.96522145484319,
+            49.09215161296984
+          ],
+          [
+            -121.96495344015916,
+            49.09213494510602
+          ],
+          [
+            -121.96486884996175,
+            49.09213513827103
+          ],
+          [
+            -121.96460101930718,
+            49.0921530297585
+          ],
+          [
+            -121.96434366469565,
+            49.09220479326978
+          ],
+          [
+            -121.96410667566334,
+            49.09228843966369
+          ],
+          [
+            -121.9638991592622,
+            49.09240075460732
+          ],
+          [
+            -121.96372909012716,
+            49.092537422077946
+          ],
+          [
+            -121.96360300403119,
+            49.092693190198496
+          ],
+          [
+            -121.96352574670233,
+            49.09286207303711
+          ],
+          [
+            -121.9635019019513,
+            49.0930264514837
+          ],
+          [
+            -121.96417042,
+            49.09303036
+          ],
+          [
+            -121.96426252,
+            49.09303088
+          ],
+          [
+            -121.96426944,
+            49.09303092
+          ],
+          [
+            -121.96495878,
+            49.09303495
+          ],
+          [
+            -121.96530565,
+            49.09303404
+          ],
+          [
+            -121.96556846,
+            49.09303335
+          ],
+          [
+            -121.96607549,
+            49.09303418
+          ],
+          [
+            -121.9662437,
+            49.09303422
+          ],
+          [
+            -121.96633051,
+            49.0930346
+          ],
+          [
+            -121.96633107507611,
+            49.09303460104412
+          ],
+          [
+            -121.96633158052819,
+            49.093031115253
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W9-010",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 9, s. 10",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 9 Firearms Using Shot Only Areas (Section 10 (1) (a))\nChilliwack Valley\n10 That portion of the Province of British Columbia in M.U. 2-3 in the vicinity of Chilliwack within the following described boundaries: Commencing at the intersection of the easterly boundary of the Soowahlie Number 14 Indian Reserve and the Chilliwack Lake Road; thence northerly along the Reserve boundary to its intersection with the southerly boundary of the District of Chilliwack; thence in an easterly direction along the District boundary to its intersection with an unnamed creek the mouth of which is located approximately 300 m southeasterly of the easterly end of O'Bryan Road (U.T.M. 50/10.5876.54370); thence southwesterly down the creek to its confluence with the Chilliwack River; thence along a line due South to the line's intersection with the southerly boundary of the Chilliwack Lake Road; thence westerly along the road right of way boundary to its intersection with a forestry access road on the south bank of the Chilliwack River which intersects the Chilliwack Lake Road at a point adjacent Tamihi Creek; thence westerly along the southerly boundary of the forest access road to its intersection with the Department of National Defence Military Reserve boundary; thence in a westerly and northerly direction along the boundary of the Military Reserve to its intersection with the easterly boundary of Soowahlie Indian Reserve Number 14; thence northerly along the Reserve boundary to the point of commencement. [en. B.C. Reg. 205/94, s. 25.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "shot_only",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "corners",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "in M.U. 2-3",
+        "effect": "Firearms Using Shot Only Areas",
+        "geometry.side": "within the following described boundaries",
+        "geometry.steps[0]": "Commencing at the intersection of the easterly boundary of the Soowahlie Number 14 Indian Reserve and the Chilliwack Lake Road",
+        "geometry.steps[1]": "thence northerly along the Reserve boundary to its intersection with the southerly boundary of the District of Chilliwack",
+        "geometry.steps[2]": "thence in an easterly direction along the District boundary to its intersection with an unnamed creek the mouth of which is located approximately 300 m southeasterly of the easterly end of O'Bryan Road",
+        "geometry.steps[3]": "thence southwesterly down the creek to its confluence with the Chilliwack River",
+        "geometry.steps[4]": "thence along a line due South to the line's intersection with the southerly boundary of the Chilliwack Lake Road",
+        "geometry.steps[5]": "thence westerly along the road right of way boundary to its intersection with a forestry access road on the south bank of the Chilliwack River which intersects the Chilliwack Lake Road at a point adjacent Tamihi Creek",
+        "geometry.steps[6]": "thence westerly along the southerly boundary of the forest access road to its intersection with the Department of National Defence Military Reserve boundary",
+        "geometry.steps[7]": "thence in a westerly and northerly direction along the boundary of the Military Reserve to its intersection with the easterly boundary of Soowahlie Indian Reserve Number 14",
+        "geometry.steps[8]": "thence northerly along the Reserve boundary to the point of commencement"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "19e6bc37a1a71ec1556da63939544e71db88c2e0e09b729ed9a123e65d8cca45",
+      "task_id": "closed_area-19e6bc37a1a7",
+      "construction": [
+        {
+          "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+          "quote": "Commencing at the intersection of the easterly boundary of the Soowahlie Number 14 Indian Reserve and the Chilliwack Lake Road",
+          "source": "WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES, WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP, WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "0.016 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:58:54.789Z",
-  "updated": "2026-10-27T23:10:08.193Z"
+  "updated": "2026-10-28T17:04:12.216Z"
 }

@@ -275,7 +275,33 @@
   "disagreements": [
     "steps: run 1 [\"lot 6489||201.2 m|\",\"||201.2 m|\",\"||804.7 m|\",\"|the westerly limit of the right of way for the kootenay forest products logging rd|724.2 m more or less|\",\"|a point due east of the point of commencement||road\",\"|the point of commencement|603.5 m more or less|\"] vs run 2 [\"lot 6489||201.2 m|\",\"||201.2 m|straight_line\",\"||804.7 m|straight_line\",\"|the westerly limit of the right of way for the kootenay forest products logging rd|724.2 m more or less|straight_line\",\"kootenay forest products logging rd|a point due east of the point of commencement||road\",\"|the point of commencement|603.5 m more or less|straight_line\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U. 4-18",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "4-18"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "4-18",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 4,
+          "REGION_RESPONSIBLE_ID": "4",
+          "REGION_RESPONSIBLE_NAME": "Kootenay",
+          "GAME_MANAGEMENT_ZONE_ID": "4Wa",
+          "GAME_MANAGEMENT_ZONE_NAME": "Nelson",
+          "FEATURE_AREA_SQM": 1465230340.9121,
+          "FEATURE_LENGTH_M": 248233.4766,
+          "OBJECTID": 414,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -291,5 +317,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:07:31.171Z",
-  "updated": "2026-10-21T16:07:31.171Z"
+  "updated": "2026-10-28T17:05:18.979Z"
 }

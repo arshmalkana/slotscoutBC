@@ -1,0 +1,262 @@
+{
+  "type": "FeatureCollection",
+  "name": "W9-004",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.7304249086676,
+              49.21234355107299
+            ],
+            [
+              -122.75949003781017,
+              49.223478525874405
+            ],
+            [
+              -122.75972104796193,
+              49.223549097484536
+            ],
+            [
+              -122.75996802334916,
+              49.22359063451242
+            ],
+            [
+              -122.76022249152034,
+              49.22360171203189
+            ],
+            [
+              -122.86681359913163,
+              49.22172930794718
+            ],
+            [
+              -122.86697941497201,
+              49.22171974436362
+            ],
+            [
+              -122.87657010368923,
+              49.22078182746171
+            ],
+            [
+              -122.87663074110117,
+              49.220774986695645
+            ],
+            [
+              -122.87747376557677,
+              49.220667154767916
+            ],
+            [
+              -122.87780164651234,
+              49.220596394077454
+            ],
+            [
+              -122.88471122417717,
+              49.21844464872212
+            ],
+            [
+              -122.88494944689451,
+              49.218350023488256
+            ],
+            [
+              -122.88515359852292,
+              49.2182259901847
+            ],
+            [
+              -122.88531530729439,
+              49.21807763529208
+            ],
+            [
+              -122.885427942156,
+              49.217911042645184
+            ],
+            [
+              -122.88548688465956,
+              49.217733043920184
+            ],
+            [
+              -122.88548971828496,
+              49.21755093846145
+            ],
+            [
+              -122.88543632744498,
+              49.217372193941145
+            ],
+            [
+              -122.88532890212562,
+              49.2172041401289
+            ],
+            [
+              -122.88517184798847,
+              49.21705366832942
+            ],
+            [
+              -122.88497160563624,
+              49.2169269488111
+            ],
+            [
+              -122.88473638646407,
+              49.216829177809814
+            ],
+            [
+              -122.88447583593504,
+              49.21676436447728
+            ],
+            [
+              -122.88420063808701,
+              49.216735166505686
+            ],
+            [
+              -122.7312063862641,
+              49.21067028664658
+            ],
+            [
+              -122.73094413926658,
+              49.210676084131315
+            ],
+            [
+              -122.73068833976306,
+              49.210714282354054
+            ],
+            [
+              -122.73044828095955,
+              49.21078349357559
+            ],
+            [
+              -122.73023268428945,
+              49.210881203348215
+            ],
+            [
+              -122.73004938259744,
+              49.21100386185254
+            ],
+            [
+              -122.7299050355836,
+              49.2111470128463
+            ],
+            [
+              -122.72980488784256,
+              49.21130545554398
+            ],
+            [
+              -122.72975257828864,
+              49.21147343354858
+            ],
+            [
+              -122.7297500078952,
+              49.21164484397536
+            ],
+            [
+              -122.72979727056092,
+              49.21181345917123
+            ],
+            [
+              -122.72989264962463,
+              49.21197315297656
+            ],
+            [
+              -122.73003268016592,
+              49.212118123308294
+            ],
+            [
+              -122.73021227483778,
+              49.21224310297653
+            ],
+            [
+              -122.7304249086676,
+              49.21234355107299
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "rule_id": "W9-004",
+        "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 9, s. 4",
+        "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+        "source_text": "Schedule 9 Firearms Using Shot Only Areas (Section 10 (1) (a))\nBarnston Island\n4 That portion of the Province of British Columbia in the vicinity of the City of Vancouver within the following described boundaries: Commencing at intersection of the southerly boundary of the District of Pitt Meadows and the northerly boundary of the District of Surrey, west of Barnston Island; thence easterly along the District of Pitt Meadows boundary to the point of its intersection with the northerly boundary of the District of Langley; thence westerly along the District boundary to its point of intersection with the northerly boundary of the District of Surrey; thence westerly along the District boundary to the point of commencement, excepting all Indian Reserve lands.",
+        "source_version": "BC Laws consolidation current to October 13, 2026",
+        "effect": "shot_only",
+        "period": null,
+        "exemptions": [
+          "excepting all Indian Reserve lands"
+        ],
+        "geometry_method": "metes_and_bounds",
+        "buffer_m": null,
+        "partial_extent": false,
+        "conservative": true,
+        "approximate": true,
+        "approximate_quality": "traced",
+        "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+        "digitised_on": "2026-10-28",
+        "reviewed_by": null,
+        "reviewed_on": null,
+        "confidence": "low",
+        "notes": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+        "extraction_method": "ai",
+        "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+        "prompt_version": "closed_area.v1",
+        "quotes": {
+          "effect": "Firearms Using Shot Only Areas",
+          "geometry.side": "within the following described boundaries",
+          "exemptions[0]": "excepting all Indian Reserve lands",
+          "geometry.steps[0]": "Commencing at intersection of the southerly boundary of the District of Pitt Meadows and the northerly boundary of the District of Surrey, west of Barnston Island",
+          "geometry.steps[1]": "thence easterly along the District of Pitt Meadows boundary to the point of its intersection with the northerly boundary of the District of Langley",
+          "geometry.steps[2]": "thence westerly along the District boundary to its point of intersection with the northerly boundary of the District of Surrey",
+          "geometry.steps[3]": "thence westerly along the District boundary to the point of commencement"
+        },
+        "run_agreement": true,
+        "status": "candidate",
+        "version": 1,
+        "unit_hash": "03698f3cea8956912e501ba495eef6037f6b74b1f6449ab78b5649f89458d294",
+        "task_id": "closed_area-03698f3cea89",
+        "construction": [
+          {
+            "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+            "quote": "Commencing at intersection of the southerly boundary of the District of Pitt Meadows and the northerly boundary of the District of Surrey, west of Barnston Island",
+            "source": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP"
+          }
+        ],
+        "validation": [
+          {
+            "check": "ring closes",
+            "passed": true,
+            "detail": "largest gap 0.0 m (limit 25 m)"
+          },
+          {
+            "check": "no self-crossing",
+            "passed": true,
+            "detail": "none"
+          },
+          {
+            "check": "area in expected range",
+            "passed": true,
+            "detail": "9.771 km² (limit 500 km²)"
+          },
+          {
+            "check": "inside the area the text names",
+            "passed": null,
+            "detail": "the text names no area, or it could not be found"
+          },
+          {
+            "check": "overlaps the synopsis map shape",
+            "passed": null,
+            "detail": "no synopsis shape in inbox/synopsis for this area yet"
+          },
+          {
+            "check": "two independent extractions agree",
+            "passed": true,
+            "detail": "same landmarks, distances and effect"
+          },
+          {
+            "check": "step directions match the line",
+            "passed": null,
+            "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+          }
+        ],
+        "change_type": "new"
+      }
+    }
+  ]
+}

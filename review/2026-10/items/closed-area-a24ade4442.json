@@ -332,7 +332,47 @@
   "disagreements": [
     "steps: run 1 [\"district lot 9009|||\",\"district lot 9009|the point of intersection with the northern boundary of the right of way of the b.c. hydro power line||lot_line\",\"right of way of the b.c. hydro power line|the point of intersection with the eastern boundary of the right of way of the canadian pacific railway||other\",\"right of way of the canadian pacific railway|the point of intersection with the southern boundary of district lot 2580||other\",\"district lot 2580|the point of intersection with the southern boundary of district lot 10113||lot_line\",\"district lot 10113|the point of intersection with the northern boundary of district lot 9565a||lot_line\",\"district lot 9565a and district lot 9560|the northeast corner of district lot 9560||lot_line\",\"district lots 9560 9010 and 9567|the northwest corner of district lot 8207||lot_line\",\"district lot 8207|the southeast corner of district lot 9009||lot_line\",\"|the point of commencement||\"] vs run 2 [\"district lot 9009|||\",\"district lot 9009|the point of intersection with the northern boundary of the right of way of the b.c. hydro power line||lot_line\",\"b.c. hydro power line|the point of intersection with the eastern boundary of the right of way of the canadian pacific railway||other\",\"canadian pacific railway|the point of intersection with the southern boundary of district lot 2580||other\",\"district lot 2580|the point of intersection with the southern boundary of district lot 10113||lot_line\",\"district lot 10113|the point of intersection with the northern boundary of district lot 9565a||lot_line\",\"district lot 9565a district lot 9560|the northeast corner of district lot 9560||lot_line\",\"district lots 9560 9010 and 9567|the northwest corner of district lot 8207||lot_line\",\"district lot 8207|the southeast corner of district lot 9009||lot_line\",\"|the point of commencement||\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U.s 4-25 and 4-35",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 2,
+      "ids": [
+        "4-25",
+        "4-35"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "4-25",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 4,
+          "REGION_RESPONSIBLE_ID": "4",
+          "REGION_RESPONSIBLE_NAME": "Kootenay",
+          "GAME_MANAGEMENT_ZONE_ID": "4Ea",
+          "GAME_MANAGEMENT_ZONE_NAME": "Fernie",
+          "FEATURE_AREA_SQM": 3188411049.525,
+          "FEATURE_LENGTH_M": 441989.3062,
+          "OBJECTID": 398,
+          "SE_ANNO_CAD_DATA": null
+        },
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "4-35",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 4,
+          "REGION_RESPONSIBLE_ID": "4",
+          "REGION_RESPONSIBLE_NAME": "Kootenay",
+          "GAME_MANAGEMENT_ZONE_ID": "4Ec",
+          "GAME_MANAGEMENT_ZONE_NAME": "Golden",
+          "FEATURE_AREA_SQM": 2671243217.6689,
+          "FEATURE_LENGTH_M": 330493.6472,
+          "OBJECTID": 388,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -348,5 +388,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:08:38.068Z",
-  "updated": "2026-10-21T16:08:38.068Z"
+  "updated": "2026-10-28T17:11:29.074Z"
 }

@@ -1,0 +1,239 @@
+{
+  "type": "FeatureCollection",
+  "name": "W3-010",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -120.52361111,
+              49.368159863637246
+            ],
+            [
+              -120.52630535362249,
+              49.367987030448155
+            ],
+            [
+              -120.52889600395739,
+              49.36747517632759
+            ],
+            [
+              -120.53128345713036,
+              49.366643981691865
+            ],
+            [
+              -120.53337593350476,
+              49.365525404073274
+            ],
+            [
+              -120.53509300946455,
+              49.36416244769609
+            ],
+            [
+              -120.53636870970875,
+              49.36260750811994
+            ],
+            [
+              -120.53715404097093,
+              49.36092035598037
+            ],
+            [
+              -120.53741887005025,
+              49.359165837726025
+            ],
+            [
+              -120.53715307470874,
+              49.35741138206357
+            ],
+            [
+              -120.53636692428898,
+              49.35572440817057
+            ],
+            [
+              -120.53509067670113,
+              49.3541697353593
+            ],
+            [
+              -120.5333734085398,
+              49.352807093652736
+            ],
+            [
+              -120.53128112436687,
+              49.35168883070476
+            ],
+            [
+              -120.52889421853747,
+              49.35085790283394
+            ],
+            [
+              -120.52630438736018,
+              49.35034622695997
+            ],
+            [
+              -120.52361111,
+              49.35017345636276
+            ],
+            [
+              -120.52091783263982,
+              49.35034622695997
+            ],
+            [
+              -120.51832800146254,
+              49.35085790283394
+            ],
+            [
+              -120.51594109563314,
+              49.35168883070476
+            ],
+            [
+              -120.51384881146022,
+              49.352807093652736
+            ],
+            [
+              -120.51213154329888,
+              49.3541697353593
+            ],
+            [
+              -120.51085529571104,
+              49.35572440817057
+            ],
+            [
+              -120.51006914529127,
+              49.35741138206357
+            ],
+            [
+              -120.50980334994976,
+              49.359165837726025
+            ],
+            [
+              -120.51006817902908,
+              49.36092035598037
+            ],
+            [
+              -120.51085351029126,
+              49.36260750811994
+            ],
+            [
+              -120.51212921053546,
+              49.36416244769609
+            ],
+            [
+              -120.51384628649527,
+              49.365525404073274
+            ],
+            [
+              -120.51593876286965,
+              49.366643981691865
+            ],
+            [
+              -120.51832621604262,
+              49.36747517632759
+            ],
+            [
+              -120.52091686637752,
+              49.367987030448155
+            ],
+            [
+              -120.52361111,
+              49.368159863637246
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "rule_id": "W3-010",
+        "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 3, s. 10",
+        "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+        "source_text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nSimilkameen Mining Company Limited\n10 That portion of the Province of British Columbia in the vicinity of the Smelter Lakes, SDYD, which is contained within the following described boundaries: Commencing at Whipsaw Bridge on Highway 3; thence downstream approximately 1.6 km (1 mile) to the junction of Whipsaw Creek and the Similkameen River; thence upstream on the west bank of the Similkameen River for approximately 0.43 km (0.33 mile) to the chain post in the southwest corner of Lot 2164(S), SDYD; thence easterly 455 m (1 501.5 feet) to the southeast corner of Lot 2164(S): thence S. 78° E to a point approximately 2.8 kilometres (1.75 mile) to the northeast corner of Lot 52(S); thence due East 545 metres (1 798.5 feet); thence northeasterly approximately 790 metres (2 607 feet) to the Ferguson Farm house fenceline; thence due East approximately 455 metres (1 501.5 feet) to Copper Mountain Road; thence southerly along said road for approximately 4.24 kilometres (2.5 miles) to Cumont Camp; thence due South approximately 2.2 kilometres (7 216 feet) to a point approximately 4 kilometres (2.5 miles) due East of the southern intersection of Highway 3 and the highway relocation; thence due West to said relocation; thence northerly along Highway 3 relocation for approximately 8 kilometres (5 miles) to point of commencement.",
+        "source_version": "BC Laws consolidation current to October 13, 2026",
+        "effect": "no_shooting",
+        "period": null,
+        "exemptions": [],
+        "geometry_method": "metes_and_bounds",
+        "buffer_m": null,
+        "partial_extent": false,
+        "conservative": true,
+        "approximate": true,
+        "approximate_quality": "vicinity",
+        "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+        "digitised_on": "2026-10-28",
+        "reviewed_by": null,
+        "reviewed_on": null,
+        "confidence": "low",
+        "notes": "approximate outline (vicinity): corners where the followed features meet, traced along them where found, padded 100 m",
+        "extraction_method": "ai",
+        "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+        "prompt_version": "closed_area.v1",
+        "quotes": {
+          "within": "SDYD",
+          "effect": "No Shooting or Hunting Areas",
+          "geometry.steps[0]": "Commencing at Whipsaw Bridge on Highway 3",
+          "geometry.steps[1]": "thence downstream approximately 1.6 km (1 mile) to the junction of Whipsaw Creek and the Similkameen River",
+          "geometry.steps[2]": "thence upstream on the west bank of the Similkameen River for approximately 0.43 km (0.33 mile) to the chain post in the southwest corner of Lot 2164(S), SDYD",
+          "geometry.steps[3]": "thence easterly 455 m (1 501.5 feet) to the southeast corner of Lot 2164(S)",
+          "geometry.steps[4]": "thence S. 78° E to a point approximately 2.8 kilometres (1.75 mile) to the northeast corner of Lot 52(S)",
+          "geometry.steps[5]": "thence due East 545 metres (1 798.5 feet)",
+          "geometry.steps[6]": "thence northeasterly approximately 790 metres (2 607 feet) to the Ferguson Farm house fenceline",
+          "geometry.steps[7]": "thence due East approximately 455 metres (1 501.5 feet) to Copper Mountain Road",
+          "geometry.steps[8]": "thence southerly along said road for approximately 4.24 kilometres (2.5 miles) to Cumont Camp",
+          "geometry.steps[9]": "thence due South approximately 2.2 kilometres (7 216 feet) to a point approximately 4 kilometres (2.5 miles) due East of the southern intersection of Highway 3 and the highway relocation",
+          "geometry.steps[10]": "thence due West to said relocation",
+          "geometry.steps[11]": "thence northerly along Highway 3 relocation for approximately 8 kilometres (5 miles) to point of commencement"
+        },
+        "run_agreement": false,
+        "status": "candidate",
+        "version": 1,
+        "unit_hash": "07e70da5db1ac67b087e1d39865aa540a839d405af3fd8c9dd6decf2b9aa20e6",
+        "task_id": "closed_area-07e70da5db1a",
+        "construction": [
+          {
+            "what": "approximate outline (vicinity): corners where the followed features meet, traced along them where found, padded 100 m",
+            "quote": "Commencing at Whipsaw Bridge on Highway 3",
+            "source": "WHSE_BASEMAPPING.FWA_RIVERS_POLY"
+          }
+        ],
+        "validation": [
+          {
+            "check": "ring closes",
+            "passed": true,
+            "detail": "largest gap 0.0 m (limit 25 m)"
+          },
+          {
+            "check": "no self-crossing",
+            "passed": true,
+            "detail": "none"
+          },
+          {
+            "check": "area in expected range",
+            "passed": true,
+            "detail": "3.121 km² (limit 500 km²)"
+          },
+          {
+            "check": "inside the area the text names",
+            "passed": null,
+            "detail": "the text names no area, or it could not be found"
+          },
+          {
+            "check": "overlaps the synopsis map shape",
+            "passed": null,
+            "detail": "no synopsis shape in inbox/synopsis for this area yet"
+          },
+          {
+            "check": "two independent extractions agree",
+            "passed": false,
+            "detail": "steps: run 1 [\"|||\",\"|the junction of whipsaw creek and the similkameen river|approximately 1.6 km (1 mile)|\",\"similkameen river|the chain post in the southwest corner of lot 2164 s sdyd|approximately 0.43 km (0.33 mile)|river\",\"|the southeast corner of lot 2164 s|455 m (1 501.5 feet)|\",\"|the northeast corner of lot 52 s|approximately 2.8 kilometres (1.75 mile)|straight_line\",\"||545 metres (1 798.5 feet)|straight_line\",\"|the ferguson farm house fenceline|approximately 790 metres (2 607 feet)|\",\"|copper mountain rd|approximately 455 metres (1 501.5 feet)|straight_line\",\"copper mountain rd|cumont camp|approximately 4.24 kilometres (2.5 miles)|road\",\"|a point approximately 4 kilometres 2.5 miles due east of the southern intersection of hwy 3 and the hwy relocation|approximately 2.2 kilometres (7 216 feet)|straight_line\",\"|said relocation||straight_line\",\"hwy 3 relocation|point of commencement|approximately 8 kilometres (5 miles)|road\"] vs run 2 [\"|||\",\"|the junction of whipsaw creek and the similkameen river|approximately 1.6 km (1 mile)|\",\"similkameen river|the chain post in the southwest corner of lot 2164 s sdyd|approximately 0.43 km (0.33 mile)|river\",\"|the southeast corner of lot 2164 s|455 m (1 501.5 feet)|straight_line\",\"|a point approximately 2.8 kilometres 1.75 mile to the northeast corner of lot 52 s|approximately 2.8 kilometres (1.75 mile)|straight_line\",\"||545 metres (1 798.5 feet)|straight_line\",\"|the ferguson farm house fenceline|approximately 790 metres (2 607 feet)|straight_line\",\"|copper mountain rd|approximately 455 metres (1 501.5 feet)|straight_line\",\"copper mountain rd|cumont camp|approximately 4.24 kilometres (2.5 miles)|road\",\"|a point approximately 4 kilometres 2.5 miles due east of the southern intersection of hwy 3 and the hwy relocation|approximately 2.2 kilometres (7 216 feet)|straight_line\",\"|said relocation||straight_line\",\"hwy 3 relocation|point of commencement|approximately 8 kilometres (5 miles)|road\"]"
+          },
+          {
+            "check": "step directions match the line",
+            "passed": null,
+            "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+          }
+        ],
+        "change_type": "new"
+      }
+    }
+  ]
+}

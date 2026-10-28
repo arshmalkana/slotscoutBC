@@ -284,7 +284,33 @@
   "disagreements": [
     "steps: run 1 [\"|||\",\"|the headwaters of the north fork of the unnamed creek locally known as rainey creek|5.6 km (3.5 miles)|\",\"unnamed creek locally known as rainey creek|the confluence with coldstream creek||creek\",\"coldstream creek|the confluence with an unnamed creek being the north fork of coldstream creek||creek\",\"unnamed creek being the north fork of coldstream creek|a point due west of the southeast corner of the northeast quarter of section 2 tp 78 r 19 w6m||creek\",\"|the point of commencement||\"] vs run 2 [\"groundbirch community pasture|||\",\"|the headwaters of the north fork of the unnamed creek locally known as rainey creek|5.6 km (3.5 miles)|\",\"the unnamed creek locally known as rainey creek|the confluence with coldstream creek||creek\",\"coldstream creek|the confluence with an unnamed creek being the north fork of coldstream creek||creek\",\"an unnamed creek being the north fork of coldstream creek|a point due west of the southeast corner of the northeast quarter of section 2 tp 78 r 19 w6m||creek\",\"|the point of commencement||\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U. 7-21",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "7-21"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "7-21",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 7,
+          "REGION_RESPONSIBLE_ID": "7B",
+          "REGION_RESPONSIBLE_NAME": "Omineca",
+          "GAME_MANAGEMENT_ZONE_ID": "7Pa",
+          "GAME_MANAGEMENT_ZONE_NAME": "South Peace",
+          "FEATURE_AREA_SQM": 6742654358.4221,
+          "FEATURE_LENGTH_M": 624336.9009,
+          "OBJECTID": 500,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -300,5 +326,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:59:04.478Z",
-  "updated": "2026-10-27T23:10:57.419Z"
+  "updated": "2026-10-28T17:11:35.478Z"
 }

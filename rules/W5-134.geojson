@@ -1,0 +1,232 @@
+{
+  "type": "FeatureCollection",
+  "name": "W5-134",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -124.15433586455009,
+              49.26111029056774
+            ],
+            [
+              -124.1540705993851,
+              49.259355834796935
+            ],
+            [
+              -124.15328601356764,
+              49.25766886059579
+            ],
+            [
+              -124.15201230462775,
+              49.2561141873235
+            ],
+            [
+              -124.15029845143212,
+              49.254751545073226
+            ],
+            [
+              -124.1482103272482,
+              49.25363328158163
+            ],
+            [
+              -124.14582816662467,
+              49.25280235324998
+            ],
+            [
+              -124.14324348368375,
+              49.2522906770681
+            ],
+            [
+              -124.14055556000001,
+              49.25211790636276
+            ],
+            [
+              -124.13786763631626,
+              49.2522906770681
+            ],
+            [
+              -124.13528295337534,
+              49.25280235324998
+            ],
+            [
+              -124.13290079275181,
+              49.25363328158163
+            ],
+            [
+              -124.13081266856788,
+              49.254751545073226
+            ],
+            [
+              -124.12909881537226,
+              49.2561141873235
+            ],
+            [
+              -124.12782510643237,
+              49.25766886059579
+            ],
+            [
+              -124.12704052061491,
+              49.259355834796935
+            ],
+            [
+              -124.12677525544993,
+              49.26111029056774
+            ],
+            [
+              -124.12703955960669,
+              49.26286480871412
+            ],
+            [
+              -124.1278233307207,
+              49.264551960545845
+            ],
+            [
+              -124.12909649529314,
+              49.26610689966109
+            ],
+            [
+              -124.13081015733229,
+              49.26746985549451
+            ],
+            [
+              -124.13289847267261,
+              49.26858843256927
+            ],
+            [
+              -124.13528117766357,
+              49.26941962674388
+            ],
+            [
+              -124.13786667530796,
+              49.26993148055636
+            ],
+            [
+              -124.14055556000001,
+              49.27010431363726
+            ],
+            [
+              -124.14324444469204,
+              49.26993148055636
+            ],
+            [
+              -124.14582994233643,
+              49.26941962674388
+            ],
+            [
+              -124.14821264732738,
+              49.26858843256927
+            ],
+            [
+              -124.15030096266771,
+              49.26746985549451
+            ],
+            [
+              -124.15201462470688,
+              49.26610689966109
+            ],
+            [
+              -124.15328778927932,
+              49.264551960545845
+            ],
+            [
+              -124.1540715603933,
+              49.26286480871412
+            ],
+            [
+              -124.15433586455009,
+              49.26111029056774
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "rule_id": "W5-134",
+        "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 134",
+        "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+        "source_text": "Schedule 5 No Shooting Areas (Section 6)\nNanoose Bay\n134 That portion of Management Unit 1-05 in the Province of British Columbia in the vicinity of Nanoose Harbour, Nanaimo Land District, which is contained within the following described boundaries: Commencing at the mean high water mark at the southeast corner of the Qualicum National Wildlife Area; thence generally easterly maintaining a distance of 400 m from the mean high water mark to a point that is 400 m directly southwest of the intersection of the mean high water mark and the Department of Defence property line; thence directly northeast to the mean high water mark; thence generally west following the mean high water mark to the northeast corner of the Qualicum National Wildlife Area; thence south along the easterly boundary of the Qualicum National Wildlife Area to the point of commencement. [en. B.C. Reg. 151/2006, s. 4 (c).]",
+        "source_version": "BC Laws consolidation current to October 13, 2026",
+        "effect": "no_shooting",
+        "period": null,
+        "exemptions": [],
+        "geometry_method": "metes_and_bounds",
+        "buffer_m": null,
+        "partial_extent": false,
+        "conservative": true,
+        "approximate": true,
+        "approximate_quality": "vicinity",
+        "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+        "digitised_on": "2026-10-28",
+        "reviewed_by": null,
+        "reviewed_on": null,
+        "confidence": "low",
+        "notes": "approximate outline (vicinity): corners where the followed features meet, traced along them where found, padded 100 m",
+        "extraction_method": "ai",
+        "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+        "prompt_version": "closed_area.v1",
+        "quotes": {
+          "within": "Management Unit 1-05",
+          "effect": "No Shooting Areas",
+          "geometry.steps[0]": "Commencing at the mean high water mark at the southeast corner of the Qualicum National Wildlife Area",
+          "geometry.steps[1]": "thence generally easterly maintaining a distance of 400 m from the mean high water mark to a point that is 400 m directly southwest of the intersection of the mean high water mark and the Department of Defence property line",
+          "geometry.steps[2]": "thence directly northeast to the mean high water mark",
+          "geometry.steps[3]": "thence generally west following the mean high water mark to the northeast corner of the Qualicum National Wildlife Area",
+          "geometry.steps[4]": "thence south along the easterly boundary of the Qualicum National Wildlife Area to the point of commencement"
+        },
+        "run_agreement": false,
+        "status": "candidate",
+        "version": 1,
+        "unit_hash": "b1deaa6310a35acf6aba8631a663bf5deee8dba9f1eb2753fbcf78f17082a149",
+        "task_id": "closed_area-b1deaa6310a3",
+        "construction": [
+          {
+            "what": "approximate outline (vicinity): corners where the followed features meet, traced along them where found, padded 100 m",
+            "quote": "Commencing at the mean high water mark at the southeast corner of the Qualicum National Wildlife Area",
+            "source": "BC Geographical Names"
+          }
+        ],
+        "validation": [
+          {
+            "check": "ring closes",
+            "passed": true,
+            "detail": "largest gap 0.0 m (limit 25 m)"
+          },
+          {
+            "check": "no self-crossing",
+            "passed": true,
+            "detail": "none"
+          },
+          {
+            "check": "area in expected range",
+            "passed": true,
+            "detail": "3.121 km² (limit 500 km²)"
+          },
+          {
+            "check": "inside the area the text names",
+            "passed": true,
+            "detail": "100.0% inside"
+          },
+          {
+            "check": "overlaps the synopsis map shape",
+            "passed": null,
+            "detail": "no synopsis shape in inbox/synopsis for this area yet"
+          },
+          {
+            "check": "two independent extractions agree",
+            "passed": false,
+            "detail": "steps: run 1 [\"|||\",\"|a point that is 400 m directly southwest of the intersection of the mean high water mark and the department of defence property line|400 m|shoreline\",\"|the mean high water mark||straight_line\",\"|the northeast corner of the qualicum national wildlife area||shoreline\",\"qualicum national wildlife area|the point of commencement||reserve_boundary\"] vs run 2 [\"|||\",\"|a point that is 400 m directly southwest of the intersection of the mean high water mark and the department of defence property line|400 m|other\",\"|the mean high water mark||straight_line\",\"|the northeast corner of the qualicum national wildlife area||shoreline\",\"qualicum national wildlife area|the point of commencement||other\"]"
+          },
+          {
+            "check": "step directions match the line",
+            "passed": null,
+            "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+          }
+        ],
+        "change_type": "new"
+      }
+    }
+  ]
+}

@@ -264,7 +264,33 @@
   "disagreements": [
     "steps: run 1 [\"|||\",\"|the ordinary high water mark at the most northeasterly point of tangil peninsula at porter head||straight_line\",\"|the most easterly peak on the tangil peninsula||straight_line\",\"the watershed boundary that separates those creeks that flow into dana inlet from those that flow into logan inlet|the peak at the intersection of the northerly boundary of the watershed of crescent inlet with the said watershed boundary that separates those creeks that flow into dana inlet from those that flow into logan inlet||other\",\"|the northeast corner of lot 663||straight_line\",\"lot 663|the intersection with the southerly boundary of the watershed of crescent inlet||lot_line\",\"the watershed of said crescent inlet and of tasu sound|a point on the o.h.w.m. at tasu head||other\",\"|||straight_line\"] vs run 2 []"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U. 6-12",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "6-12"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "6-12",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 6,
+          "REGION_RESPONSIBLE_ID": "6",
+          "REGION_RESPONSIBLE_NAME": "Skeena",
+          "GAME_MANAGEMENT_ZONE_ID": "6a",
+          "GAME_MANAGEMENT_ZONE_NAME": "Queen Charlotte",
+          "FEATURE_AREA_SQM": 22451495629.4934,
+          "FEATURE_LENGTH_M": 668692.8737,
+          "OBJECTID": 459,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -280,5 +306,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:47:33.023Z",
-  "updated": "2026-10-27T23:12:04.559Z"
+  "updated": "2026-10-28T17:21:00.200Z"
 }

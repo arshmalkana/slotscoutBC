@@ -237,7 +237,33 @@
   "disagreements": [
     "steps: run 1 [\"|||\",\"|a point 450 metres offshore||straight_line\",\"lot 1|a point 450 metres offshore from the southeast corner of lot 1 which is also the northeast corner of lot 44|450 metres|other\",\"lot 44|a point on the east shore of vancouver island|450 metres|other\",\"vancouver island|the point of commencement||shoreline\"] vs run 2 [\"|||\",\"|a point 450 metres offshore|450 metres|\",\"lot 1|a point 450 metres offshore from the southeast corner of lot 1 which is also the northeast corner of lot 44|450 metres|other\",\"lot 44|a point on the east shore of vancouver island|450 metres|other\",\"vancouver island|the point of commencement||shoreline\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U. 1-06",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "1-6"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "1-6",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 1,
+          "REGION_RESPONSIBLE_ID": "1",
+          "REGION_RESPONSIBLE_NAME": "Vancouver Island",
+          "GAME_MANAGEMENT_ZONE_ID": "1a",
+          "GAME_MANAGEMENT_ZONE_NAME": "Southern Vancouver Island",
+          "FEATURE_AREA_SQM": 4014262107.1476,
+          "FEATURE_LENGTH_M": 358041.9776,
+          "OBJECTID": 328,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -253,5 +279,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:59:53.587Z",
-  "updated": "2026-10-20T21:59:53.587Z"
+  "updated": "2026-10-28T17:18:20.050Z"
 }

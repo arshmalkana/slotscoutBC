@@ -247,7 +247,33 @@
   "disagreements": [
     "steps: run 1 [\"british columbia alberta boundary|||\",\"british columbia alberta boundary|the southerly boundary of the watershed of sheep creek||other\",\"sheep creek and cecilia creek and kakwa river|mount hanigton||other\",\"kakwa river|mount minnes||other\",\"|the point of commencement||\"] vs run 2 [\"mile post 25|||\",\"british columbia alberta boundary|the point of intersection with the southerly boundary of the watershed of sheep creek||other\",\"the watershed of sheep creek and cecilia creek and kakwa river|mount hanigton||other\",\"the watershed of kakwa river|mount minnes||other\",\"|the point of commencement||\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U. 7-19",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "7-19"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "7-19",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 7,
+          "REGION_RESPONSIBLE_ID": "7B",
+          "REGION_RESPONSIBLE_NAME": "Omineca",
+          "GAME_MANAGEMENT_ZONE_ID": "7Pa",
+          "GAME_MANAGEMENT_ZONE_NAME": "South Peace",
+          "FEATURE_AREA_SQM": 4385120182.551,
+          "FEATURE_LENGTH_M": 461890.5234,
+          "OBJECTID": 502,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -263,5 +289,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:10:36.530Z",
-  "updated": "2026-10-21T16:10:36.530Z"
+  "updated": "2026-10-28T17:29:01.364Z"
 }

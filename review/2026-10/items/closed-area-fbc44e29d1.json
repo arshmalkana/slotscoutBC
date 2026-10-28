@@ -5,11 +5,16 @@
   "title": "Closed Areas Regulation, Schedule 5, section 110 (Windermere)",
   "rule_id": "W5-110",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: steps: run 1 [\"|||\",\"windermere lake|the south boundary of d.l.8 kootenay land district||shoreline\",\"d.l.8|the southerly boundary of block a d.l.108||lot_line\",\"block a d.l.108|the easterly boundary of hwy 93 95 right of way||lot_line\",\"hwy 93 95 right of way swansea rd right of way and again hwy 93 95 right of way|the point of intersection with a westerly prolongation of the northerly boundary of d.l.9001||road\",\"|the natural boundary of windermere river on the right bank thereof||other\",\"windermere river|the intersection with the natural boundary of windermere lake on the easterly shore thereof||river\",\"windermere lake|the point of commencement||shoreline\"] vs run 2 [\"|||\",\"windermere lake|the south boundary of d.l.8 kootenay land district||shoreline\",\"d.l.8|the southerly boundary of block a d.l.108||lot_line\",\"block a d.l.108|the easterly boundary of hwy 93 95 right of way||lot_line\",\"hwy 93 95 right of way swansea rd right of way and again hwy 93 95 right of way|the point of intersection with a westerly prolongation of the northerly boundary of d.l.9001||road\",\"the said prolongation the southerly boundary of the adjacent unnamed rd right of way and a prolongation thereof|the natural boundary of windermere river on the right bank thereof||other\",\"windermere river|the intersection with the natural boundary of windermere lake on the easterly shore thereof||river\",\"windermere lake|the point of commencement||shoreline\"]",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "approximate outline (traced) drawn from the places the walk names, using run 1's reading of the steps",
+    "\"D.L.8\" was not found in the official layers; that side is drawn straight",
+    "\"Block A, D.L.108\" was not found in the official layers; that side is drawn straight",
+    "\"Highway 93/95 right of way, Swansea Road right of way and again Highway 93/95 right of way\" was not found in the official layers; that side is drawn straight",
+    "\"Windermere River\" was not found in the official layers; that side is drawn straight",
+    "validation failed: two independent extractions agree (steps: run 1 [\"|||\",\"windermere lake|the south boundary of d.l.8 kootenay land district||shoreline\",\"d.l.8|the southerly boundary of block a d.l.108||lot_line\",\"block a d.l.108|the easterly boundary of hwy 93 95 right of way||lot_line\",\"hwy 93 95 right of way swansea rd right of way and again hwy 93 95 right of way|the point of intersection with a westerly prolongation of the northerly boundary of d.l.9001||road\",\"|the natural boundary of windermere river on the right bank thereof||other\",\"windermere river|the intersection with the natural boundary of windermere lake on the easterly shore thereof||river\",\"windermere lake|the point of commencement||shoreline\"] vs run 2 [\"|||\",\"windermere lake|the south boundary of d.l.8 kootenay land district||shoreline\",\"d.l.8|the southerly boundary of block a d.l.108||lot_line\",\"block a d.l.108|the easterly boundary of hwy 93 95 right of way||lot_line\",\"hwy 93 95 right of way swansea rd right of way and again hwy 93 95 right of way|the point of intersection with a westerly prolongation of the northerly boundary of d.l.9001||road\",\"the said prolongation the southerly boundary of the adjacent unnamed rd right of way and a prolongation thereof|the natural boundary of windermere river on the right bank thereof||other\",\"windermere river|the intersection with the natural boundary of windermere lake on the easterly shore thereof||river\",\"windermere lake|the point of commencement||shoreline\"])"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nWindermere\n110 That portion of the Province of British Columbia in M.U. 4-25 that is contained within the following described boundaries: Commencing at a point on the natural boundary of Windermere Lake on the easterly shore thereof at the point of intersection with the natural boundary of Windermere Creek on the right bank thereof; thence in a general southerly direction along the natural boundary of Windermere Lake on the easterly shore thereof to the south boundary of D.L.8, Kootenay Land District; thence easterly and northerly along the southerly and easterly boundaries of D.L.8 to the southerly boundary of Block A, D.L.108; thence westerly along the southerly boundary of Block A, D.L.108 to the easterly boundary of Highway 93/95 right of way; thence northerly along the easterly boundaries of Highway 93/95 right of way, Swansea Road right of way and again Highway 93/95 right of way to the point of intersection with a westerly prolongation of the northerly boundary of D.L.9001; thence westerly along the said prolongation, the southerly boundary of the adjacent unnamed road right of way and a prolongation thereof to the natural boundary of Windermere River on the right bank thereof; thence in a general southerly direction along the natural boundary of Windermere River on the right bank thereof to the intersection with the natural boundary of Windermere Lake on the easterly shore thereof; thence in a southerly direction along the natural boundary of Windermere Lake on the easterly shore thereof to the point of commencement. [en. B.C. Reg. 204/91, s. 12; am. B.C. Regs. 277/91, Sch. 2, s. 3; 224/92, s. 10.]",
@@ -276,12 +281,63 @@
   "disagreements": [
     "steps: run 1 [\"|||\",\"windermere lake|the south boundary of d.l.8 kootenay land district||shoreline\",\"d.l.8|the southerly boundary of block a d.l.108||lot_line\",\"block a d.l.108|the easterly boundary of hwy 93 95 right of way||lot_line\",\"hwy 93 95 right of way swansea rd right of way and again hwy 93 95 right of way|the point of intersection with a westerly prolongation of the northerly boundary of d.l.9001||road\",\"|the natural boundary of windermere river on the right bank thereof||other\",\"windermere river|the intersection with the natural boundary of windermere lake on the easterly shore thereof||river\",\"windermere lake|the point of commencement||shoreline\"] vs run 2 [\"|||\",\"windermere lake|the south boundary of d.l.8 kootenay land district||shoreline\",\"d.l.8|the southerly boundary of block a d.l.108||lot_line\",\"block a d.l.108|the easterly boundary of hwy 93 95 right of way||lot_line\",\"hwy 93 95 right of way swansea rd right of way and again hwy 93 95 right of way|the point of intersection with a westerly prolongation of the northerly boundary of d.l.9001||road\",\"the said prolongation the southerly boundary of the adjacent unnamed rd right of way and a prolongation thereof|the natural boundary of windermere river on the right bank thereof||other\",\"windermere river|the intersection with the natural boundary of windermere lake on the easterly shore thereof||river\",\"windermere lake|the point of commencement||shoreline\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U. 4-25",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "4-25"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "4-25",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 4,
+          "REGION_RESPONSIBLE_ID": "4",
+          "REGION_RESPONSIBLE_NAME": "Kootenay",
+          "GAME_MANAGEMENT_ZONE_ID": "4Ea",
+          "GAME_MANAGEMENT_ZONE_NAME": "Fernie",
+          "FEATURE_AREA_SQM": 3188411049.525,
+          "FEATURE_LENGTH_M": 441989.3062,
+          "OBJECTID": 398,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "0.509 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "steps: run 1 [\"|||\",\"windermere lake|the south boundary of d.l.8 kootenay land district||shoreline\",\"d.l.8|the southerly boundary of block a d.l.108||lot_line\",\"block a d.l.108|the easterly boundary of hwy 93 95 right of way||lot_line\",\"hwy 93 95 right of way swansea rd right of way and again hwy 93 95 right of way|the point of intersection with a westerly prolongation of the northerly boundary of d.l.9001||road\",\"|the natural boundary of windermere river on the right bank thereof||other\",\"windermere river|the intersection with the natural boundary of windermere lake on the easterly shore thereof||river\",\"windermere lake|the point of commencement||shoreline\"] vs run 2 [\"|||\",\"windermere lake|the south boundary of d.l.8 kootenay land district||shoreline\",\"d.l.8|the southerly boundary of block a d.l.108||lot_line\",\"block a d.l.108|the easterly boundary of hwy 93 95 right of way||lot_line\",\"hwy 93 95 right of way swansea rd right of way and again hwy 93 95 right of way|the point of intersection with a westerly prolongation of the northerly boundary of d.l.9001||road\",\"the said prolongation the southerly boundary of the adjacent unnamed rd right of way and a prolongation thereof|the natural boundary of windermere river on the right bank thereof||other\",\"windermere river|the intersection with the natural boundary of windermere lake on the easterly shore thereof||river\",\"windermere lake|the point of commencement||shoreline\"]"
     },
     {
       "check": "step directions match the line",
@@ -289,8 +345,179 @@
       "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at a point on the natural boundary of Windermere Lake on the easterly shore thereof at the point of intersection with the natural boundary of Windermere Creek on the right bank thereof",
+      "source": "WHSE_BASEMAPPING.FWA_LAKES_POLY"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -116.01617528376288,
+            50.50215157588369
+          ],
+          [
+            -116.01479988,
+            50.49928402
+          ],
+          [
+            -116.0150936,
+            50.4957843
+          ],
+          [
+            -116.0157797,
+            50.49066283
+          ],
+          [
+            -116.01603268,
+            50.48927203
+          ],
+          [
+            -116.01513635513396,
+            50.48764816816929
+          ],
+          [
+            -116.00823061542243,
+            50.49283362502417
+          ],
+          [
+            -116.00806342186046,
+            50.492989840398636
+          ],
+          [
+            -116.00795123571959,
+            50.493164834545674
+          ],
+          [
+            -116.0078990117999,
+            50.49335087967576
+          ],
+          [
+            -116.00775945496343,
+            50.49459135798939
+          ],
+          [
+            -116.00776661579921,
+            50.49476634435289
+          ],
+          [
+            -116.0080336957777,
+            50.49613500756211
+          ],
+          [
+            -116.00809736639249,
+            50.49631219164384
+          ],
+          [
+            -116.00821574172095,
+            50.496477613291674
+          ],
+          [
+            -116.00838398712769,
+            50.496624515666994
+          ],
+          [
+            -116.01617528376288,
+            50.50215157588369
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-110",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 110",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nWindermere\n110 That portion of the Province of British Columbia in M.U. 4-25 that is contained within the following described boundaries: Commencing at a point on the natural boundary of Windermere Lake on the easterly shore thereof at the point of intersection with the natural boundary of Windermere Creek on the right bank thereof; thence in a general southerly direction along the natural boundary of Windermere Lake on the easterly shore thereof to the south boundary of D.L.8, Kootenay Land District; thence easterly and northerly along the southerly and easterly boundaries of D.L.8 to the southerly boundary of Block A, D.L.108; thence westerly along the southerly boundary of Block A, D.L.108 to the easterly boundary of Highway 93/95 right of way; thence northerly along the easterly boundaries of Highway 93/95 right of way, Swansea Road right of way and again Highway 93/95 right of way to the point of intersection with a westerly prolongation of the northerly boundary of D.L.9001; thence westerly along the said prolongation, the southerly boundary of the adjacent unnamed road right of way and a prolongation thereof to the natural boundary of Windermere River on the right bank thereof; thence in a general southerly direction along the natural boundary of Windermere River on the right bank thereof to the intersection with the natural boundary of Windermere Lake on the easterly shore thereof; thence in a southerly direction along the natural boundary of Windermere Lake on the easterly shore thereof to the point of commencement. [en. B.C. Reg. 204/91, s. 12; am. B.C. Regs. 277/91, Sch. 2, s. 3; 224/92, s. 10.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "traced",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "in M.U. 4-25",
+        "effect": "No Shooting Areas",
+        "geometry.steps[0]": "Commencing at a point on the natural boundary of Windermere Lake on the easterly shore thereof at the point of intersection with the natural boundary of Windermere Creek on the right bank thereof",
+        "geometry.steps[1]": "thence in a general southerly direction along the natural boundary of Windermere Lake on the easterly shore thereof to the south boundary of D.L.8, Kootenay Land District",
+        "geometry.steps[2]": "thence easterly and northerly along the southerly and easterly boundaries of D.L.8 to the southerly boundary of Block A, D.L.108",
+        "geometry.steps[3]": "thence westerly along the southerly boundary of Block A, D.L.108 to the easterly boundary of Highway 93/95 right of way",
+        "geometry.steps[4]": "thence northerly along the easterly boundaries of Highway 93/95 right of way, Swansea Road right of way and again Highway 93/95 right of way to the point of intersection with a westerly prolongation of the northerly boundary of D.L.9001",
+        "geometry.steps[5]": "thence westerly along the said prolongation, the southerly boundary of the adjacent unnamed road right of way and a prolongation thereof to the natural boundary of Windermere River on the right bank thereof",
+        "geometry.steps[6]": "thence in a general southerly direction along the natural boundary of Windermere River on the right bank thereof to the intersection with the natural boundary of Windermere Lake on the easterly shore thereof",
+        "geometry.steps[7]": "thence in a southerly direction along the natural boundary of Windermere Lake on the easterly shore thereof to the point of commencement"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "0daeb334a4fe57e6d077d3de5483fe46dedb97ae2cddec8c6f092649210951cb",
+      "task_id": "closed_area-0daeb334a4fe",
+      "construction": [
+        {
+          "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+          "quote": "Commencing at a point on the natural boundary of Windermere Lake on the easterly shore thereof at the point of intersection with the natural boundary of Windermere Creek on the right bank thereof",
+          "source": "WHSE_BASEMAPPING.FWA_LAKES_POLY"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "0.509 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "steps: run 1 [\"|||\",\"windermere lake|the south boundary of d.l.8 kootenay land district||shoreline\",\"d.l.8|the southerly boundary of block a d.l.108||lot_line\",\"block a d.l.108|the easterly boundary of hwy 93 95 right of way||lot_line\",\"hwy 93 95 right of way swansea rd right of way and again hwy 93 95 right of way|the point of intersection with a westerly prolongation of the northerly boundary of d.l.9001||road\",\"|the natural boundary of windermere river on the right bank thereof||other\",\"windermere river|the intersection with the natural boundary of windermere lake on the easterly shore thereof||river\",\"windermere lake|the point of commencement||shoreline\"] vs run 2 [\"|||\",\"windermere lake|the south boundary of d.l.8 kootenay land district||shoreline\",\"d.l.8|the southerly boundary of block a d.l.108||lot_line\",\"block a d.l.108|the easterly boundary of hwy 93 95 right of way||lot_line\",\"hwy 93 95 right of way swansea rd right of way and again hwy 93 95 right of way|the point of intersection with a westerly prolongation of the northerly boundary of d.l.9001||road\",\"the said prolongation the southerly boundary of the adjacent unnamed rd right of way and a prolongation thereof|the natural boundary of windermere river on the right bank thereof||other\",\"windermere river|the intersection with the natural boundary of windermere lake on the easterly shore thereof||river\",\"windermere lake|the point of commencement||shoreline\"]"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:07:26.233Z",
-  "updated": "2026-10-21T16:07:26.233Z"
+  "updated": "2026-10-28T17:03:32.229Z"
 }

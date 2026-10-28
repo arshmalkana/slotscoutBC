@@ -416,7 +416,33 @@
     "side: run 1 \"inside\" vs run 2 null",
     "steps: run 1 [\"|||\",\"sl72|the point of intersection with the 3 500 foot elevation contour||other\",\"3 500 foot elevation contour|the southwestern corner of mount sabine||contour\",\"|the point of intersection with the 2 900 foot elevation contour||\",\"2 900 foot elevation contour|the point of intersection with the eastern boundary of the right of way of kootenay river forest access rd||contour\",\"kootenay river forest access rd|the point of intersection with the northern boundary of the right of way of crestbrook off hwy haul rd||road\",\"|the point of intersection with the natural boundary of kootenay river on the northern bank thereof||\",\"kootenay river|the point of intersection with the eastern boundary of the right of way of hwy 93 95||river\",\"hwy 93 95|the point of intersection with the natural boundary of columbia lake on the southern bank thereof||road\",\"columbia lake|the point of commencement||shoreline\"] vs run 2 [\"|||\",\"sl72|point of intersection with the 3 500 foot elevation contour||other\",\"3 500 foot elevation contour|southwestern corner of mount sabine||contour\",\"|point of intersection with the 2 900 foot elevation contour||straight_line\",\"2 900 foot elevation contour|point of intersection with the eastern boundary of the right of way of kootenay river forest access rd||contour\",\"kootenay river forest access rd|point of intersection with the northern boundary of the right of way of crestbrook off hwy haul rd||road\",\"|point of intersection with the natural boundary of kootenay river on the northern bank thereof||straight_line\",\"kootenay river|point of intersection with the eastern boundary of the right of way of hwy 93 95||river\",\"hwy 93 95|point of intersection with the natural boundary of columbia lake on the southern bank thereof||road\",\"columbia lake|point of commencement||shoreline\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U. 4-25",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "4-25"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "4-25",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 4,
+          "REGION_RESPONSIBLE_ID": "4",
+          "REGION_RESPONSIBLE_NAME": "Kootenay",
+          "GAME_MANAGEMENT_ZONE_ID": "4Ea",
+          "GAME_MANAGEMENT_ZONE_NAME": "Fernie",
+          "FEATURE_AREA_SQM": 3188411049.525,
+          "FEATURE_LENGTH_M": 441989.3062,
+          "OBJECTID": 398,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -432,5 +458,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:10:30.961Z",
-  "updated": "2026-10-27T23:12:32.281Z"
+  "updated": "2026-10-28T17:28:05.410Z"
 }

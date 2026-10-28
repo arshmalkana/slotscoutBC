@@ -1,0 +1,229 @@
+{
+  "type": "FeatureCollection",
+  "name": "W3-012",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.78027778000002,
+              49.27093764363725
+            ],
+            [
+              -122.78296671011223,
+              49.27076481055543
+            ],
+            [
+              -122.78555225142875,
+              49.27025295674034
+            ],
+            [
+              -122.78793499666344,
+              49.269421762561805
+            ],
+            [
+              -122.79002334727103,
+              49.268303185482445
+            ],
+            [
+              -122.79173703824524,
+              49.266940229644405
+            ],
+            [
+              -122.79301022430903,
+              49.265385290525245
+            ],
+            [
+              -122.79379400864626,
+              49.26369813869092
+            ],
+            [
+              -122.79405831725207,
+              49.261943620543626
+            ],
+            [
+              -122.79379304759354,
+              49.26018916477374
+            ],
+            [
+              -122.79300844851512,
+              49.25850219057522
+            ],
+            [
+              -122.7917347180587,
+              49.25694751730683
+            ],
+            [
+              -122.79002083591918,
+              49.255584875061174
+            ],
+            [
+              -122.78793267647681,
+              49.25446661157418
+            ],
+            [
+              -122.78555047563475,
+              49.25363568324643
+            ],
+            [
+              -122.78296574905944,
+              49.25312400706717
+            ],
+            [
+              -122.78027778000002,
+              49.252951236362755
+            ],
+            [
+              -122.7775898109406,
+              49.25312400706717
+            ],
+            [
+              -122.77500508436528,
+              49.25363568324643
+            ],
+            [
+              -122.77262288352321,
+              49.25446661157418
+            ],
+            [
+              -122.77053472408085,
+              49.255584875061174
+            ],
+            [
+              -122.76882084194133,
+              49.25694751730683
+            ],
+            [
+              -122.7675471114849,
+              49.25850219057522
+            ],
+            [
+              -122.76676251240649,
+              49.26018916477374
+            ],
+            [
+              -122.76649724274796,
+              49.261943620543626
+            ],
+            [
+              -122.76676155135377,
+              49.26369813869092
+            ],
+            [
+              -122.76754533569103,
+              49.265385290525245
+            ],
+            [
+              -122.76881852175478,
+              49.266940229644405
+            ],
+            [
+              -122.770532212729,
+              49.268303185482445
+            ],
+            [
+              -122.77262056333659,
+              49.269421762561805
+            ],
+            [
+              -122.77500330857127,
+              49.27025295674034
+            ],
+            [
+              -122.77758884988779,
+              49.27076481055543
+            ],
+            [
+              -122.78027778000002,
+              49.27093764363725
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "rule_id": "W3-012",
+        "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 3, s. 12",
+        "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+        "source_text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nAddington Marsh\n12 That portion of the Province of British Columbia in the vicinity of Port Coquitlam which is contained within the following described boundaries: Commencing at the northern extremity of the dyke between Pitt River and Addington marsh and proceeding due West to a point due North of the end of the surveyed road allowance which divides Section 9 and Section 10, Coquitlam District Municipality; thence proceeding due South to the outside edge of the dyke; thence proceeding easterly, northerly and northwesterly along the outside edge of the dyke to the point of commencement.",
+        "source_version": "BC Laws consolidation current to October 13, 2026",
+        "effect": "no_shooting",
+        "period": null,
+        "exemptions": [],
+        "geometry_method": "metes_and_bounds",
+        "buffer_m": null,
+        "partial_extent": false,
+        "conservative": true,
+        "approximate": true,
+        "approximate_quality": "vicinity",
+        "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+        "digitised_on": "2026-10-28",
+        "reviewed_by": null,
+        "reviewed_on": null,
+        "confidence": "low",
+        "notes": "approximate outline (vicinity): corners where the followed features meet, traced along them where found, padded 100 m",
+        "extraction_method": "ai",
+        "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+        "prompt_version": "closed_area.v1",
+        "quotes": {
+          "effect": "No Shooting or Hunting Areas",
+          "geometry.steps[0]": "Commencing at the northern extremity of the dyke between Pitt River and Addington marsh and proceeding due West to a point due North of the end of the surveyed road allowance which divides Section 9 and Section 10, Coquitlam District Municipality",
+          "geometry.steps[1]": "thence proceeding due South to the outside edge of the dyke",
+          "geometry.steps[2]": "thence proceeding easterly, northerly and northwesterly along the outside edge of the dyke to the point of commencement"
+        },
+        "run_agreement": false,
+        "status": "candidate",
+        "version": 1,
+        "unit_hash": "cdbe692ac085b54a9187fd393941ffd5537885352a2d166a93ed5843fcb1a9d9",
+        "task_id": "closed_area-cdbe692ac085",
+        "construction": [
+          {
+            "what": "approximate outline (vicinity): corners where the followed features meet, traced along them where found, padded 100 m",
+            "quote": "Commencing at the northern extremity of the dyke between Pitt River and Addington marsh and proceeding due West to a point due North of the end of the surveyed road allowance which divides Section 9 and Section 10, Coquitlam District Municipality",
+            "source": "BC Geographical Names"
+          }
+        ],
+        "validation": [
+          {
+            "check": "ring closes",
+            "passed": true,
+            "detail": "largest gap 0.0 m (limit 25 m)"
+          },
+          {
+            "check": "no self-crossing",
+            "passed": true,
+            "detail": "none"
+          },
+          {
+            "check": "area in expected range",
+            "passed": true,
+            "detail": "3.121 km² (limit 500 km²)"
+          },
+          {
+            "check": "inside the area the text names",
+            "passed": null,
+            "detail": "the text names no area, or it could not be found"
+          },
+          {
+            "check": "overlaps the synopsis map shape",
+            "passed": null,
+            "detail": "no synopsis shape in inbox/synopsis for this area yet"
+          },
+          {
+            "check": "two independent extractions agree",
+            "passed": false,
+            "detail": "steps: run 1 [\"|a point due north of the end of the surveyed rd allowance which divides section 9 and section 10 coquitlam district municipality||straight_line\",\"|the outside edge of the dyke||straight_line\",\"the dyke|the point of commencement||other\"] vs run 2 [\"|a point due north of the end of the surveyed rd allowance which divides section 9 and section 10 coquitlam district municipality||straight_line\",\"|the outside edge of the dyke||straight_line\",\"dyke|the point of commencement||other\"]"
+          },
+          {
+            "check": "step directions match the line",
+            "passed": null,
+            "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+          }
+        ],
+        "change_type": "new"
+      }
+    }
+  ]
+}

@@ -176,7 +176,29 @@
     "method: run 1 \"metes_and_bounds\" vs run 2 \"other\"",
     "steps: run 1 [\"block 32 cowichan lake land district|||lot_line\",\"mayo lake rd|||road\",\"e. n. railway right of way|||other\",\"skutz falls rd|||road\"] vs run 2 []"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "Quamichan Land District",
+      "kind": "other",
+      "layer": "WHSE_TANTALIS.TA_LAND_DISTRICTS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "QUAMICHAN DISTRICT"
+      ],
+      "sample": [
+        {
+          "ADMIN_AREA_SID": 146,
+          "LAND_DISTRICT_NAME": "QUAMICHAN DISTRICT",
+          "FEATURE_CODE": "FA91800000",
+          "FEATURE_AREA_SQM": 66477645.7973,
+          "FEATURE_LENGTH_M": 32641.5664,
+          "OBJECTID": 9436061,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -192,5 +214,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:08:32.763Z",
-  "updated": "2026-10-21T16:08:32.763Z"
+  "updated": "2026-10-28T17:10:24.315Z"
 }

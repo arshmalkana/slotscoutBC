@@ -695,7 +695,62 @@
   "disagreements": [
     "steps: run 1 [\"tweedsmuir provincial park||1 km|\",\"tetachuck lake redfern rapids and eutsuk lake|the natural boundary of whitesail lake on the southerly shore thereof|1 km|shoreline\",\"whitesail lake and little whitesail lake|the midline of mccuish creek||shoreline\",\"mccuish creek|the easterly boundary of the watershed of sias creek||creek\",\"gamsby river kimsquit river and sakumtha river|a prolongation of the midline of chezko river||other\",\"chezko river|a point 1 km due south of the natural boundary of eutsuk lake on the southerly shore thereof|1 km|river\",\"eutsuk lake redfern rapids and tetachuck lake|the easterly boundary of tweedsmuir park|1 km|shoreline\",\"|the point of commencement||straight_line\",\"tweedsmuir park|||\",\"takia river|the midline of kohasganko creek||river\",\"kohasganko creek|a point in lot 698 coast land district range 3 where kohasganko creek turns and flows in a general westerly direction||creek\",\"|the easterly boundary of tweedsmuir park||straight_line\",\"tweedsmuir park|the midline of hwy 20||other\",\"hwy 20|a point next to benchmark 3907 coast land district range 3||road\",\"young creek|the apex of king mountain||other\",\"burnt bridge creek|the westerly boundary of tweedsmuir park||other\",\"tweedsmuir park|the point of commencement||other\",\"hotnarko river|||\",\"tweedsmuir park|the midline of an unnamed stream flowing easterly into talchako river east of melikan mountain||other\",\"|the apex of caribou mountain||straight_line\",\"|the apex of mount marvin||straight_line\",\"|the point of intersection of the midlines of atnarko river and hotnarko river||straight_line\",\"hotnarko river|the point of commencement||river\"] vs run 2 [\"tweedsmuir provincial park||1 km|\",\"tetachuck lake redfern rapids and eutsuk lake|the point of intersection with the natural boundary of whitesail lake on the southerly shore thereof|1 km|shoreline\",\"whitesail lake and little whitesail lake|the point of intersection with the midline of mccuish creek||shoreline\",\"mccuish creek|the point of intersection with the easterly boundary of the watershed of sias creek||creek\",\"the watersheds of gamsby river kimsquit river and sakumtha river|the point of intersection with a prolongation of the midline of chezko river||other\",\"chezko river|a point 1 km due south of the natural boundary of eutsuk lake on the southerly shore thereof|1 km|river\",\"eutsuk lake redfern rapids and tetachuck lake|the point of intersection with the easterly boundary of tweedsmuir park|1 km|shoreline\",\"|the point of commencement||straight_line\",\"tweedsmuir park|||\",\"takia river|the point of intersection with the midline of kohasganko creek||river\",\"kohasganko creek|a point in lot 698 coast land district range 3 where kohasganko creek turns and flows in a general westerly direction||creek\",\"|the point of intersection with the easterly boundary of tweedsmuir park||straight_line\",\"tweedsmuir park|the point of intersection with the midline of hwy 20||other\",\"hwy 20|a point next to benchmark 3907 coast land district range 3||road\",\"the watershed of young creek|the apex of king mountain||other\",\"the main tributary of burnt bridge creek|the point of intersection with the westerly boundary of tweedsmuir park||other\",\"tweedsmuir park|the point of commencement||other\",\"hotnarko river|||\",\"tweedsmuir park|the point of intersection with the midline of an unnamed stream flowing easterly into talchako river east of melikan mountain||other\",\"|the apex of caribou mountain||straight_line\",\"|the apex of mount marvin||straight_line\",\"|the point of intersection of the midlines of atnarko river and hotnarko river||straight_line\",\"hotnarko river|the point of commencement||river\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U.s 5-10, 5-11, 6-01 and 6-02",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 4,
+      "ids": [
+        "5-10",
+        "5-11",
+        "6-1",
+        "6-2"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "5-10",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 5,
+          "REGION_RESPONSIBLE_ID": "5",
+          "REGION_RESPONSIBLE_NAME": "Cariboo",
+          "GAME_MANAGEMENT_ZONE_ID": "5c",
+          "GAME_MANAGEMENT_ZONE_NAME": "North Chilcotin",
+          "FEATURE_AREA_SQM": 3420454584.8145,
+          "FEATURE_LENGTH_M": 377510.6023,
+          "OBJECTID": 424,
+          "SE_ANNO_CAD_DATA": null
+        },
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "5-11",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 5,
+          "REGION_RESPONSIBLE_ID": "5",
+          "REGION_RESPONSIBLE_NAME": "Cariboo",
+          "GAME_MANAGEMENT_ZONE_ID": "5e",
+          "GAME_MANAGEMENT_ZONE_NAME": "Central Coast",
+          "FEATURE_AREA_SQM": 1995898637.1011,
+          "FEATURE_LENGTH_M": 304629.7194,
+          "OBJECTID": 431,
+          "SE_ANNO_CAD_DATA": null
+        },
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "6-1",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 6,
+          "REGION_RESPONSIBLE_ID": "6",
+          "REGION_RESPONSIBLE_NAME": "Skeena",
+          "GAME_MANAGEMENT_ZONE_ID": "6c",
+          "GAME_MANAGEMENT_ZONE_NAME": "Upper Nechako",
+          "FEATURE_AREA_SQM": 5747219575.3075,
+          "FEATURE_LENGTH_M": 652857.2085,
+          "OBJECTID": 461,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -711,5 +766,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:09:58.810Z",
-  "updated": "2026-10-21T16:09:58.810Z"
+  "updated": "2026-10-28T17:22:26.274Z"
 }

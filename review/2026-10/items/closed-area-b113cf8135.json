@@ -334,7 +334,29 @@
   "disagreements": [
     "steps: run 1 [\"|||\",\"|the centre line of hwy 1||\",\"hwy 1|the southerly boundary of sublot 13 of section 21 township 28 range 22 w5m kootenay land district||road\",\"sublot 13 of section 21 township 28 range 22 w5m kootenay land district|its intersection with the boundary of burges and james gadsden park||lot_line\",\"burges and james gadsden park|the intersection with the south bank of the blaeberry river||other\",\"blaeberry river|the east bank of the columbia river||river\",\"columbia river|a point due west of moberly station||river\",\"|the point of commencement||\"] vs run 2 [\"moberly station|||\",\"|the centre line of hwy 1||\",\"hwy 1|the southerly boundary of sublot 13 of section 21 township 28 range 22 w5m kootenay land district||road\",\"sublot 13 of section 21 township 28 range 22 w5m kootenay land district|its intersection with the boundary of burges and james gadsden park||lot_line\",\"burges and james gadsden park|the intersection with the south bank of the blaeberry river||other\",\"blaeberry river|the east bank of the columbia river||river\",\"columbia river|a point due west of moberly station||river\",\"|the point of commencement||\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "Kootenay Land District",
+      "kind": "other",
+      "layer": "WHSE_TANTALIS.TA_LAND_DISTRICTS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "KOOTENAY DISTRICT"
+      ],
+      "sample": [
+        {
+          "ADMIN_AREA_SID": 129,
+          "LAND_DISTRICT_NAME": "KOOTENAY DISTRICT",
+          "FEATURE_CODE": "FA91800000",
+          "FEATURE_AREA_SQM": 76036193238.5857,
+          "FEATURE_LENGTH_M": 1768455.4793,
+          "OBJECTID": 9435640,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -350,5 +372,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:58:53.514Z",
-  "updated": "2026-10-20T21:58:53.514Z"
+  "updated": "2026-10-28T17:03:24.490Z"
 }

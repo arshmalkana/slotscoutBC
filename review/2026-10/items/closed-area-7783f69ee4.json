@@ -266,7 +266,29 @@
   "disagreements": [
     "steps: run 1 [\"lot 1|||\",\"lots 1 96 and 129|the point of intersection on the easterly boundary of said lot 129 with the centreline of island hwy 19 registered plan 812 r w||lot_line\",\"island hwy 19|the point of intersection with the centreline of the englishman river||road\",\"englishman river|a point due west of the most westerly part of lot 9 plan 19158 lot 181||river\",\"lot 9 plan 19158|a point on the high water mark of the strait of georgia being the westerly extremity of said lot 9 plan 19158||straight_line\",\"strait of georgia|the northeast corner of lot 1 nanoose district being point of commencement||shoreline\"] vs run 2 [\"lot 1 nanoose land district|||\",\"lots 1 96 and 129|the point of intersection on the easterly boundary of said lot 129 with the centreline of island hwy 19 registered plan 812 r w||lot_line\",\"island hwy 19|the point of intersection with the centreline of the englishman river||road\",\"englishman river|a point due west of the most westerly part of lot 9 plan 19158 lot 181||river\",\"lot 9 plan 19158|a point on the high water mark of the strait of georgia being the westerly extremity of said lot 9 plan 19158||straight_line\",\"strait of georgia|the northeast corner of lot 1 nanoose district being point of commencement||shoreline\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "Nanoose Land District",
+      "kind": "other",
+      "layer": "WHSE_TANTALIS.TA_LAND_DISTRICTS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "NANOOSE DISTRICT"
+      ],
+      "sample": [
+        {
+          "ADMIN_AREA_SID": 136,
+          "LAND_DISTRICT_NAME": "NANOOSE DISTRICT",
+          "FEATURE_CODE": "FA91800000",
+          "FEATURE_AREA_SQM": 321290023.3142,
+          "FEATURE_LENGTH_M": 127948.5098,
+          "OBJECTID": 9435601,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -282,5 +304,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:08:32.439Z",
-  "updated": "2026-10-21T16:08:32.439Z"
+  "updated": "2026-10-28T17:09:58.095Z"
 }

@@ -5,12 +5,12 @@
   "title": "Closed Areas Regulation, Schedule 5, section 104 (Tatlow Road)",
   "rule_id": "W5-104",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs also differ on fields this shape is not drawn from (not blocking): steps: run 1 [\"tatlow rd||.4 km|road\",\"tatlow rd|the point of intersection with the midline of chapman rd|.4 km|road\",\"tatlow rd|the most easterly point on the midline of tatlow rd|.4 km|road\",\"chapman rd||1 km|road\"] vs run 2 []",
     "rule parser and AI disagree: within: rule parser null vs AI runs \"6 9\"; buffer_m: rule parser 4000 vs AI runs 400; from: rule parser null vs AI runs \"tatlow rd\"; to: rule parser null vs AI runs \"tatlow rd\"; steps: rule parser [] vs AI runs [\"tatlow rd||.4 km|road\",\"tatlow rd|the point of intersection with the midline of chapman rd|.4 km|road\",\"tatlow rd|the most easterly point on the midline of tatlow rd|.4 km|road\",\"chapman rd||1 km|road\"]",
     "the limits meet the road 145 and 145 times; each must meet it once",
-    "validation failed: shape built (no shape could be built)"
+    "approximate outline (traced) drawn from the places the walk names"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nTatlow Road\n104 That portion of M.U. 6-09 in the Province of British Columbia contained within the following described boundaries: Commencing .4 km on either side of the midline of Tatlow Road at Km 13 south of Smithers, thence in a general easterly direction at .4 km on either side of the midline of Tatlow Road to the point of intersection with the midline of Chapman Road; thence in a general easterly direction at .4 km on either side of the midline of Tatlow Road to the most easterly point on the midline of Tatlow Road and southerly at .4 km on either side of the midline of Chapman Road for 1 km. [en. B.C. Reg. 176/89, s. 6.]",
@@ -635,13 +635,277 @@
   ],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "0.034 km² (limit 2 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing .4 km on either side of the midline of Tatlow Road at Km 13 south of Smithers",
+      "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -127.066812467745,
+            54.69616477359685
+          ],
+          [
+            -127.0667654199118,
+            54.695990585256574
+          ],
+          [
+            -127.06666047485604,
+            54.69582504825422
+          ],
+          [
+            -127.06650166614185,
+            54.69567452394099
+          ],
+          [
+            -127.06629509704983,
+            54.6955447966851
+          ],
+          [
+            -127.06604870597783,
+            54.69544085161171
+          ],
+          [
+            -127.06577196136314,
+            54.69536668306093
+          ],
+          [
+            -127.06560155449388,
+            54.69533228378075
+          ],
+          [
+            -127.06530509140796,
+            54.69529074142362
+          ],
+          [
+            -127.06500030153407,
+            54.695283421996514
+          ],
+          [
+            -127.06469889701292,
+            54.6953106067625
+          ],
+          [
+            -127.06441245992187,
+            54.695371251093725
+          ],
+          [
+            -127.06415199729308,
+            54.69546302460547
+          ],
+          [
+            -127.06392751820857,
+            54.695582400689894
+          ],
+          [
+            -127.06374764921009,
+            54.695724792011525
+          ],
+          [
+            -127.06361930279567,
+            54.69588472676251
+          ],
+          [
+            -127.06354741174079,
+            54.69605605890897
+          ],
+          [
+            -127.06353473945909,
+            54.69623220435398
+          ],
+          [
+            -127.06358177370247,
+            54.696406393945246
+          ],
+          [
+            -127.0636867077008,
+            54.696571933607046
+          ],
+          [
+            -127.06384550948403,
+            54.69672246160003
+          ],
+          [
+            -127.06405207673951,
+            54.69685219302115
+          ],
+          [
+            -127.06429847126702,
+            54.696956142144096
+          ],
+          [
+            -127.06457522402971,
+            54.69703031405157
+          ],
+          [
+            -127.06474563716058,
+            54.697064714771436
+          ],
+          [
+            -127.0650421126361,
+            54.69710625849382
+          ],
+          [
+            -127.06534691621111,
+            54.69711357781602
+          ],
+          [
+            -127.06564833369197,
+            54.697086391442234
+          ],
+          [
+            -127.06593478104435,
+            54.69702574419697
+          ],
+          [
+            -127.06619524967257,
+            54.69693396686285
+          ],
+          [
+            -127.06641972956258,
+            54.69681458658809
+          ],
+          [
+            -127.0665995940145,
+            54.69667219131021
+          ],
+          [
+            -127.06672793117183,
+            54.69651225341072
+          ],
+          [
+            -127.06679980960433,
+            54.696340919382266
+          ],
+          [
+            -127.066812467745,
+            54.69616477359685
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-104",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 104",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nTatlow Road\n104 That portion of M.U. 6-09 in the Province of British Columbia contained within the following described boundaries: Commencing .4 km on either side of the midline of Tatlow Road at Km 13 south of Smithers, thence in a general easterly direction at .4 km on either side of the midline of Tatlow Road to the point of intersection with the midline of Chapman Road; thence in a general easterly direction at .4 km on either side of the midline of Tatlow Road to the most easterly point on the midline of Tatlow Road and southerly at .4 km on either side of the midline of Chapman Road for 1 km. [en. B.C. Reg. 176/89, s. 6.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "road_buffer",
+      "buffer_m": 400,
+      "partial_extent": true,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "traced",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; rule parser cross-check)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m From Tatlow Road to Tatlow Road.",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "M.U. 6-09",
+        "geometry.road": "midline of Tatlow Road",
+        "geometry.buffer_m": ".4 km on either side",
+        "geometry.from": "Tatlow Road at Km 13 south of Smithers",
+        "geometry.to": "the most easterly point on the midline of Tatlow Road",
+        "effect": "No Shooting Areas",
+        "geometry.side": "on either side",
+        "geometry.steps[0]": "Commencing .4 km on either side of the midline of Tatlow Road at Km 13 south of Smithers",
+        "geometry.steps[1]": "thence in a general easterly direction at .4 km on either side of the midline of Tatlow Road to the point of intersection with the midline of Chapman Road",
+        "geometry.steps[2]": "thence in a general easterly direction at .4 km on either side of the midline of Tatlow Road to the most easterly point on the midline of Tatlow Road",
+        "geometry.steps[3]": "southerly at .4 km on either side of the midline of Chapman Road for 1 km"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "da396085511de0d0660dc52c6d17ef214f625dfe21f46961ca39cbcfe36fde81",
+      "task_id": "closed_area-da396085511d",
+      "construction": [
+        {
+          "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+          "quote": "Commencing .4 km on either side of the midline of Tatlow Road at Km 13 south of Smithers",
+          "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "0.034 km² (limit 2 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:10:30.874Z",
-  "updated": "2026-10-27T23:12:32.229Z"
+  "updated": "2026-10-28T17:26:20.270Z"
 }

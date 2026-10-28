@@ -260,7 +260,33 @@
     "side: run 1 \"inside\" vs run 2 null",
     "steps: run 1 [\"sections 22 27 and 34|the northeasterly corner of section 34||lot_line\",\"|the northwesterly corner of section 35 township 85 range 15 w6||\",\"sections 35 26 and 23|the southwesterly corner of section 23||lot_line\",\"|the point of commencement||\"] vs run 2 [\"sections 22 27 and 34|northeasterly corner of section 34||lot_line\",\"|northwesterly corner of section 35 township 85 range 15 w6||\",\"sections 35 26 and 23|southwesterly corner of section 23||lot_line\",\"|point of commencement||\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U. 7-33",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "7-33"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "7-33",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 7,
+          "REGION_RESPONSIBLE_ID": "7B",
+          "REGION_RESPONSIBLE_NAME": "Omineca",
+          "GAME_MANAGEMENT_ZONE_ID": "7Pb",
+          "GAME_MANAGEMENT_ZONE_NAME": "North Peace",
+          "FEATURE_AREA_SQM": 5775149317.2836,
+          "FEATURE_LENGTH_M": 645919.7231,
+          "OBJECTID": 489,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -276,5 +302,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:10:30.917Z",
-  "updated": "2026-10-27T23:12:32.247Z"
+  "updated": "2026-10-28T17:26:21.165Z"
 }

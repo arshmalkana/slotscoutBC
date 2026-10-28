@@ -385,7 +385,33 @@
   "disagreements": [
     "steps: run 1 [\"lot 59 queen charlotte land district||50 m|\",\"lot 59|the point of intersection with the natural boundary of hecate strait||lot_line\",\"hecate strait|a point in hecate strait|201 m|straight_line\",\"hecate strait|a point due east of the most northerly point of lot 1350a|201 m|shoreline\",\"|||straight_line\",\"tlell river|the point of intersection with the northerly boundary of lot 1350|50 m|river\",\"lot 1350|the northeast corner of lot 1350||straight_line\",\"lot 1350|the southeast corner of lot 1350||straight_line\",\"lot 1350|a point 50 m due east of the natural boundary of tlell river on the right bank thereof|50 m|lot_line\",\"tlell river|the point of commencement|50 m|river\"] vs run 2 [\"tlell river||50 m|\",\"lot 59|the point of intersection with the natural boundary of hecate strait||lot_line\",\"hecate strait|a point in hecate strait|201 m|straight_line\",\"hecate strait|a point due east of the most northerly point of lot 1350a|201 m|shoreline\",\"|||straight_line\",\"tlell river|the point of intersection with the northerly boundary of lot 1350|50 m|river\",\"lot 1350|the northeast corner of lot 1350||straight_line\",\"lot 1350|the southeast corner of lot 1350||straight_line\",\"lot 1350|a point 50 m due east of the natural boundary of tlell river on the right bank thereof||lot_line\",\"tlell river|the point of commencement|50 m|river\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U. 6-13",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "6-13"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "6-13",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 6,
+          "REGION_RESPONSIBLE_ID": "6",
+          "REGION_RESPONSIBLE_NAME": "Skeena",
+          "GAME_MANAGEMENT_ZONE_ID": "6a",
+          "GAME_MANAGEMENT_ZONE_NAME": "Queen Charlotte",
+          "FEATURE_AREA_SQM": 19475788191.2325,
+          "FEATURE_LENGTH_M": 557746.1291,
+          "OBJECTID": 458,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -401,5 +427,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:08:38.247Z",
-  "updated": "2026-10-21T16:08:38.247Z"
+  "updated": "2026-10-28T17:11:29.374Z"
 }

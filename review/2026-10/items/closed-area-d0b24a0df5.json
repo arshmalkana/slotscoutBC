@@ -669,7 +669,33 @@
   "disagreements": [
     "steps: run 1 [\"|||\",\"|the point of intersection with the reclaim water line due east of gnawed lake||straight_line\",\"|the point of intersection with the westerly boundary of highmont ultimate tailings pond||other\",\"highmont ultimate tailings pond|the point of intersection with the fresh water supply line south of squetankilhats indian reserve 15||other\",\"|the point of intersection with the midline of the highland valley hwy||other\",\"highland valley hwy|the point west of enquotco indian reserve 14 at which the existing gas pipeline crosses the said hwy||road\",\"|the point of intersection with the natural boundary of spud lake at the most easterly point thereof||straight_line\",\"spud lake|the most northerly point thereof||shoreline\",\"|the point of intersection with the natural boundary of copper lake at the most easterly point thereof||straight_line\",\"copper lake|the most northerly point thereof||shoreline\",\"|the point of intersection with the natural boundary of bose lake at the most southerly point thereof||straight_line\",\"bose lake|the most westerly point thereof||shoreline\",\"|the point of intersection with the midline of the existing secondary rd west of bose lake||straight_line\",\"|the point of intersection with the midline of the existing mining rd leading to forge mountain||road\",\"|the point of intersection with the midline of highland valley hwy north of chilthnaux indian reserve 12 at which the existing powerline crosses the said hwy||straight_line\",\"highland valley hwy|the point of intersection with midline of the new highland valley hwy||road\",\"new highland valley hwy|the point of intersection with the old highland valley hwy||road\",\"old highland valley hwy|the point of intersection with the midline of the existing secondary rd leading southeasterly to pukaist creek||road\",\"|the point of intersection with the midline of the existing water pipeline||road\",\"|the point of intersection with the prolongation of the midline of the existing mining rd leading southwesterly to alwin mines||other\",\"|a point one kilometre distant from the active workings of alwin mines|one kilometre|road\",\"alwin valley copper lornex and highmont mines|the point of commencement|at least one kilometre|other\"] vs run 2 [\"gnawed mountain|||\",\"|the point of intersection with the reclaim water line due east of gnawed lake||straight_line\",\"reclaim water line|the point of intersection with the westerly boundary of highmont ultimate tailings pond||other\",\"highmont ultimate tailings pond|the point of intersection with the fresh water supply line south of squetankilhats indian reserve 15||other\",\"fresh water supply line|the point of intersection with the midline of the highland valley hwy||other\",\"highland valley hwy|the point west of enquotco indian reserve 14 at which the existing gas pipeline crosses the said hwy||road\",\"spud lake|the point of intersection with the natural boundary of spud lake at the most easterly point thereof||straight_line\",\"spud lake|the most northerly point thereof||shoreline\",\"copper lake|the point of intersection with the natural boundary of copper lake at the most easterly point thereof||straight_line\",\"copper lake|the most northerly point thereof||shoreline\",\"bose lake|the point of intersection with the natural boundary of bose lake at the most southerly point thereof||straight_line\",\"bose lake|the most westerly point thereof||shoreline\",\"|the point of intersection with the midline of the existing secondary rd west of bose lake||straight_line\",\"existing secondary rd west of bose lake|the point of intersection with the midline of the existing mining rd leading to forge mountain||road\",\"|the point of intersection with the midline of highland valley hwy north of chilthnaux indian reserve 12 at which the existing powerline crosses the said hwy||straight_line\",\"highland valley hwy|the point of intersection with midline of the new highland valley hwy||road\",\"new highland valley hwy|the point of intersection with the old highland valley hwy||road\",\"old highland valley hwy|the point of intersection with the midline of the existing secondary rd leading southeasterly to pukaist creek||road\",\"existing secondary rd leading southeasterly to pukaist creek|the point of intersection with the midline of the existing water pipeline||road\",\"existing water pipeline|the point of intersection with the prolongation of the midline of the existing mining rd leading southwesterly to alwin mines||other\",\"existing mining rd leading southwesterly to alwin mines|a point one kilometre distant from the active workings of alwin mines|one kilometre|road\",\"active workings of alwin valley copper lornex and highmont mines|the point of commencement|at least one kilometre|other\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U. 3-18",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "3-18"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "3-18",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 3,
+          "REGION_RESPONSIBLE_ID": "3",
+          "REGION_RESPONSIBLE_NAME": "Thompson",
+          "GAME_MANAGEMENT_ZONE_ID": "3b",
+          "GAME_MANAGEMENT_ZONE_NAME": "Nicola",
+          "FEATURE_AREA_SQM": 2018178341.07,
+          "FEATURE_LENGTH_M": 223064.7776,
+          "OBJECTID": 375,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -685,5 +711,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:10:20.839Z",
-  "updated": "2026-10-21T16:10:20.839Z"
+  "updated": "2026-10-28T17:25:15.082Z"
 }

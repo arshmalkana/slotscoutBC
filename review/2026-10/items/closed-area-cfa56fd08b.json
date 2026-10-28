@@ -237,7 +237,33 @@
   "disagreements": [
     "steps: run 1 [\"|||\",\"|a point due west of the extreme southwesterly tip of sea island||straight_line\",\"|a point on the high water mark at the extreme southwesterly point of sea island||straight_line\",\"sea island iona island causeway and iona island|a point on the high water mark at the extreme northeasterly end of the southerly side of the iona island sewage jetty||shoreline\",\"iona island sewage jetty|the point of commencement||shoreline\"] vs run 2 [\"|||\",\"|a point due west of the extreme southwesterly tip of sea island||\",\"|a point on the high water mark at the extreme southwesterly point of sea island||\",\"sea island iona island causeway and iona island|a point on the high water mark at the extreme northeasterly end of the southerly side of the iona island sewage jetty||shoreline\",\"iona island sewage jetty|the point of commencement||shoreline\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U. 2-04",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "2-4"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "2-4",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 2,
+          "REGION_RESPONSIBLE_ID": "2",
+          "REGION_RESPONSIBLE_NAME": "Lower Mainland",
+          "GAME_MANAGEMENT_ZONE_ID": "2b",
+          "GAME_MANAGEMENT_ZONE_NAME": "Fraser Valley",
+          "FEATURE_AREA_SQM": 2378738189.1205,
+          "FEATURE_LENGTH_M": 319970.317,
+          "OBJECTID": 354,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -253,5 +279,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-20T21:59:52.212Z",
-  "updated": "2026-10-20T21:59:52.212Z"
+  "updated": "2026-10-28T17:17:25.458Z"
 }

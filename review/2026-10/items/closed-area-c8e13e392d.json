@@ -5,11 +5,15 @@
   "title": "Closed Areas Regulation, Schedule 11, section 1 (Nicomen)",
   "rule_id": "W11-001",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: steps: run 1 [\"|||\",\"canadian pacific railway right of way|the westerly boundary of the district of kent||other\",\"district of kent|the point of its intersection with the northerly boundary of the district of chilliwack||district_boundary\",\"|a point due south of the intersection of the 2 dykes which are the southern boundary of zaitscullachan slough and the eastern dyke on skumalasph indian reserve number 16||district_boundary\",\"|the intersection of the 2 dykes||straight_line\",\"the dyke on the eastern side of skumalasph indian reserve number 16|its intersection with malcolm rd||other\",\"malcolm rd|its intersection with the channel of an unnamed creek which is approximately 50 m east of the junction of malcolm rd and hodgkin rd||road\",\"the unnamed creek|its intersection with the 200 m contour line||creek\",\"the 200 m contour line|a point due south of the point of commencement||contour\",\"|the point of commencement||straight_line\"] vs run 2 [\"|||\",\"canadian pacific railway right of way|the westerly boundary of the district of kent||other\",\"the district boundary|the point of its intersection with the northerly boundary of the district of chilliwack||district_boundary\",\"the district boundary|a point due south of the intersection of the 2 dykes which are the southern boundary of zaitscullachan slough and the eastern dyke on skumalasph indian reserve number 16||district_boundary\",\"|the intersection of the 2 dykes||straight_line\",\"dyke on the eastern side of skumalasph indian reserve number 16|its intersection with malcolm rd||other\",\"malcolm rd|its intersection with the channel of an unnamed creek which is approximately 50 m east of the junction of malcolm rd and hodgkin rd|approximately 50 m|road\",\"unnamed creek|its intersection with the 200 m contour line||creek\",\"contour line|a point due south of the point of commencement||contour\",\"|the point of commencement||straight_line\"]",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "approximate outline (corners) drawn from the places the walk names, using run 1's reading of the steps",
+    "\"Canadian Pacific Railway right of way\" was not found in the official layers; that side is drawn straight",
+    "\"the dyke on the eastern side of Skumalasph Indian Reserve Number 16\" was not found in the official layers; that side is drawn straight",
+    "\"the unnamed creek\" was not found in the official layers; that side is drawn straight",
+    "validation failed: two independent extractions agree (steps: run 1 [\"|||\",\"canadian pacific railway right of way|the westerly boundary of the district of kent||other\",\"district of kent|the point of its intersection with the northerly boundary of the district of chilliwack||district_boundary\",\"|a point due south of the intersection of the 2 dykes which are the southern boundary of zaitscullachan slough and the eastern dyke on skumalasph indian reserve number 16||district_boundary\",\"|the intersection of the 2 dykes||straight_line\",\"the dyke on the eastern side of skumalasph indian reserve number 16|its intersection with malcolm rd||other\",\"malcolm rd|its intersection with the channel of an unnamed creek which is approximately 50 m east of the junction of malcolm rd and hodgkin rd||road\",\"the unnamed creek|its intersection with the 200 m contour line||creek\",\"the 200 m contour line|a point due south of the point of commencement||contour\",\"|the point of commencement||straight_line\"] vs run 2 [\"|||\",\"canadian pacific railway right of way|the westerly boundary of the district of kent||other\",\"the district boundary|the point of its intersection with the northerly boundary of the district of chilliwack||district_boundary\",\"the district boundary|a point due south of the intersection of the 2 dykes which are the southern boundary of zaitscullachan slough and the eastern dyke on skumalasph indian reserve number 16||district_boundary\",\"|the intersection of the 2 dykes||straight_line\",\"dyke on the eastern side of skumalasph indian reserve number 16|its intersection with malcolm rd||other\",\"malcolm rd|its intersection with the channel of an unnamed creek which is approximately 50 m east of the junction of malcolm rd and hodgkin rd|approximately 50 m|road\",\"unnamed creek|its intersection with the 200 m contour line||creek\",\"contour line|a point due south of the point of commencement||contour\",\"|the point of commencement||straight_line\"])"
   ],
   "source": {
     "text": "Schedule 11 Prohibited Discharge Areas — Rifles (Section 10 (1) (c))\nNicomen\n1 That portion of the Province of British Columbia in Fraser Valley Regional District in the following described boundaries: Commencing at the southeast corner of the Squawkum Creek Indian Reserve Number 3; thence easterly along the Canadian Pacific Railway right of way to the westerly boundary of the District of Kent; thence easterly and southerly along the district boundary to the point of its intersection with the northerly boundary of the District of Chilliwack; thence southwesterly along the district boundary to a point due South of the intersection of the 2 dykes which are the southern boundary of Zaitscullachan Slough and the eastern dyke on Skumalasph Indian Reserve Number 16; thence in a straight line due North to the intersection of the 2 dykes; thence northerly and easterly along the dyke on the eastern side of Skumalasph Indian Reserve Number 16 to its intersection with Malcolm Road; thence westerly and northerly along Malcolm Road to its intersection with the channel of an unnamed creek which is approximately 50 m east of the junction of Malcolm Road and Hodgkin Road; thence up the unnamed creek to its intersection with the 200 m contour line; thence northerly and easterly along the contour line to a point due South of the point of commencement; thence in a straight line due North to the point of commencement. [am. B.C. Reg. 235/97, s. 7.]",
@@ -328,12 +332,71 @@
   "disagreements": [
     "steps: run 1 [\"|||\",\"canadian pacific railway right of way|the westerly boundary of the district of kent||other\",\"district of kent|the point of its intersection with the northerly boundary of the district of chilliwack||district_boundary\",\"|a point due south of the intersection of the 2 dykes which are the southern boundary of zaitscullachan slough and the eastern dyke on skumalasph indian reserve number 16||district_boundary\",\"|the intersection of the 2 dykes||straight_line\",\"the dyke on the eastern side of skumalasph indian reserve number 16|its intersection with malcolm rd||other\",\"malcolm rd|its intersection with the channel of an unnamed creek which is approximately 50 m east of the junction of malcolm rd and hodgkin rd||road\",\"the unnamed creek|its intersection with the 200 m contour line||creek\",\"the 200 m contour line|a point due south of the point of commencement||contour\",\"|the point of commencement||straight_line\"] vs run 2 [\"|||\",\"canadian pacific railway right of way|the westerly boundary of the district of kent||other\",\"the district boundary|the point of its intersection with the northerly boundary of the district of chilliwack||district_boundary\",\"the district boundary|a point due south of the intersection of the 2 dykes which are the southern boundary of zaitscullachan slough and the eastern dyke on skumalasph indian reserve number 16||district_boundary\",\"|the intersection of the 2 dykes||straight_line\",\"dyke on the eastern side of skumalasph indian reserve number 16|its intersection with malcolm rd||other\",\"malcolm rd|its intersection with the channel of an unnamed creek which is approximately 50 m east of the junction of malcolm rd and hodgkin rd|approximately 50 m|road\",\"unnamed creek|its intersection with the 200 m contour line||creek\",\"contour line|a point due south of the point of commencement||contour\",\"|the point of commencement||straight_line\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "Fraser Valley Regional District",
+      "kind": "regional_district",
+      "layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_REGIONAL_DISTRICTS_SP",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "Fraser Valley Regional District"
+      ],
+      "sample": [
+        {
+          "LGL_ADMIN_AREA_ID": 89,
+          "ADMIN_AREA_NAME": "Fraser Valley Regional District",
+          "ADMIN_AREA_ABBREVIATION": "FVRD",
+          "ADMIN_AREA_BOUNDARY_TYPE": "LGL",
+          "ADMIN_AREA_GROUP_NAME": "-",
+          "CHANGE_REQUESTED_ORG": "HMA",
+          "UPDATE_TYPE": null,
+          "WHEN_UPDATED": "2015-07-15Z",
+          "MAP_STATUS": "Not Appended",
+          "OIC_MO_NUMBER": "1446",
+          "OIC_MO_YEAR": "1995",
+          "OIC_MO_TYPE": "OIC",
+          "WEBSITE_URL": null,
+          "IMAGE_URL": null,
+          "AFFECTED_ADMIN_AREA_ABRVN": null,
+          "FEATURE_AREA_SQM": 13913900713.0139,
+          "FEATURE_LENGTH_M": 748811.2066,
+          "OBJECTID": 34568,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "27.722 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "steps: run 1 [\"|||\",\"canadian pacific railway right of way|the westerly boundary of the district of kent||other\",\"district of kent|the point of its intersection with the northerly boundary of the district of chilliwack||district_boundary\",\"|a point due south of the intersection of the 2 dykes which are the southern boundary of zaitscullachan slough and the eastern dyke on skumalasph indian reserve number 16||district_boundary\",\"|the intersection of the 2 dykes||straight_line\",\"the dyke on the eastern side of skumalasph indian reserve number 16|its intersection with malcolm rd||other\",\"malcolm rd|its intersection with the channel of an unnamed creek which is approximately 50 m east of the junction of malcolm rd and hodgkin rd||road\",\"the unnamed creek|its intersection with the 200 m contour line||creek\",\"the 200 m contour line|a point due south of the point of commencement||contour\",\"|the point of commencement||straight_line\"] vs run 2 [\"|||\",\"canadian pacific railway right of way|the westerly boundary of the district of kent||other\",\"the district boundary|the point of its intersection with the northerly boundary of the district of chilliwack||district_boundary\",\"the district boundary|a point due south of the intersection of the 2 dykes which are the southern boundary of zaitscullachan slough and the eastern dyke on skumalasph indian reserve number 16||district_boundary\",\"|the intersection of the 2 dykes||straight_line\",\"dyke on the eastern side of skumalasph indian reserve number 16|its intersection with malcolm rd||other\",\"malcolm rd|its intersection with the channel of an unnamed creek which is approximately 50 m east of the junction of malcolm rd and hodgkin rd|approximately 50 m|road\",\"unnamed creek|its intersection with the 200 m contour line||creek\",\"contour line|a point due south of the point of commencement||contour\",\"|the point of commencement||straight_line\"]"
     },
     {
       "check": "step directions match the line",
@@ -341,8 +404,257 @@
       "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at the southeast corner of the Squawkum Creek Indian Reserve Number 3",
+      "source": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP, WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP, WHSE_BASEMAPPING.TRIM_CONTOUR_LINES (200 m)"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -121.98981775022831,
+            49.208852214899274
+          ],
+          [
+            -121.98977754299453,
+            49.208676932289
+          ],
+          [
+            -121.98968549709262,
+            49.208510205431956
+          ],
+          [
+            -121.98954518814574,
+            49.20835851010855
+          ],
+          [
+            -121.98936206620715,
+            49.20822773820836
+          ],
+          [
+            -121.98914324403248,
+            49.208122968906295
+          ],
+          [
+            -121.98889722080284,
+            49.208048271408785
+          ],
+          [
+            -121.98863355203133,
+            49.20800654692741
+          ],
+          [
+            -121.98836247846988,
+            49.207999416013536
+          ],
+          [
+            -121.9880945284219,
+            49.208027155626866
+          ],
+          [
+            -121.94520365197398,
+            49.21534812651528
+          ],
+          [
+            -121.94492493277623,
+            49.21541744926374
+          ],
+          [
+            -121.94467560629595,
+            49.2155243525645
+          ],
+          [
+            -121.94446737224078,
+            49.2156638200501
+          ],
+          [
+            -121.74738085149824,
+            49.37934368553497
+          ],
+          [
+            -121.7472379784695,
+            49.379488432295716
+          ],
+          [
+            -121.7471400603811,
+            49.379648244209044
+          ],
+          [
+            -121.74709068172287,
+            49.379817271771046
+          ],
+          [
+            -121.74709165039518,
+            49.3799893281014
+          ],
+          [
+            -121.74714293146349,
+            49.38015811539381
+          ],
+          [
+            -121.74724264836146,
+            49.38031745543557
+          ],
+          [
+            -121.74738715150909,
+            49.38046151575921
+          ],
+          [
+            -121.74757115184477,
+            49.380585023146274
+          ],
+          [
+            -121.74778791439105,
+            49.38068345666652
+          ],
+          [
+            -121.7480295047739,
+            49.380753213182665
+          ],
+          [
+            -121.74828707967181,
+            49.38079173925987
+          ],
+          [
+            -121.74855121056024,
+            49.38079762464776
+          ],
+          [
+            -121.7488122288935,
+            49.38077065391081
+          ],
+          [
+            -121.74906058007957,
+            49.38071181431561
+          ],
+          [
+            -121.74928717328045,
+            49.380623259686324
+          ],
+          [
+            -121.7494837142235,
+            49.380508231552
+          ],
+          [
+            -121.98945986115201,
+            49.209503315142655
+          ],
+          [
+            -121.98962206839526,
+            49.20936124296308
+          ],
+          [
+            -121.98973847385781,
+            49.209201146783776
+          ],
+          [
+            -121.98980455655008,
+            49.20902924510158
+          ],
+          [
+            -121.98981775022831,
+            49.208852214899274
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W11-001",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 11, s. 1",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 11 Prohibited Discharge Areas — Rifles (Section 10 (1) (c))\nNicomen\n1 That portion of the Province of British Columbia in Fraser Valley Regional District in the following described boundaries: Commencing at the southeast corner of the Squawkum Creek Indian Reserve Number 3; thence easterly along the Canadian Pacific Railway right of way to the westerly boundary of the District of Kent; thence easterly and southerly along the district boundary to the point of its intersection with the northerly boundary of the District of Chilliwack; thence southwesterly along the district boundary to a point due South of the intersection of the 2 dykes which are the southern boundary of Zaitscullachan Slough and the eastern dyke on Skumalasph Indian Reserve Number 16; thence in a straight line due North to the intersection of the 2 dykes; thence northerly and easterly along the dyke on the eastern side of Skumalasph Indian Reserve Number 16 to its intersection with Malcolm Road; thence westerly and northerly along Malcolm Road to its intersection with the channel of an unnamed creek which is approximately 50 m east of the junction of Malcolm Road and Hodgkin Road; thence up the unnamed creek to its intersection with the 200 m contour line; thence northerly and easterly along the contour line to a point due South of the point of commencement; thence in a straight line due North to the point of commencement. [am. B.C. Reg. 235/97, s. 7.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_rifle",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "corners",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "in Fraser Valley Regional District",
+        "effect": "Prohibited Discharge Areas — Rifles",
+        "geometry.steps[0]": "Commencing at the southeast corner of the Squawkum Creek Indian Reserve Number 3",
+        "geometry.steps[1]": "thence easterly along the Canadian Pacific Railway right of way to the westerly boundary of the District of Kent",
+        "geometry.steps[2]": "thence easterly and southerly along the district boundary to the point of its intersection with the northerly boundary of the District of Chilliwack",
+        "geometry.steps[3]": "thence southwesterly along the district boundary to a point due South of the intersection of the 2 dykes which are the southern boundary of Zaitscullachan Slough and the eastern dyke on Skumalasph Indian Reserve Number 16",
+        "geometry.steps[4]": "thence in a straight line due North to the intersection of the 2 dykes",
+        "geometry.steps[5]": "thence northerly and easterly along the dyke on the eastern side of Skumalasph Indian Reserve Number 16 to its intersection with Malcolm Road",
+        "geometry.steps[6]": "thence westerly and northerly along Malcolm Road to its intersection with the channel of an unnamed creek which is approximately 50 m east of the junction of Malcolm Road and Hodgkin Road",
+        "geometry.steps[7]": "thence up the unnamed creek to its intersection with the 200 m contour line",
+        "geometry.steps[8]": "thence northerly and easterly along the contour line to a point due South of the point of commencement",
+        "geometry.steps[9]": "thence in a straight line due North to the point of commencement"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "6127655a5f49664532e05afcd2e2e0197481c6591150e7473127387f6a8592c7",
+      "task_id": "closed_area-6127655a5f49",
+      "construction": [
+        {
+          "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+          "quote": "Commencing at the southeast corner of the Squawkum Creek Indian Reserve Number 3",
+          "source": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP, WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP, WHSE_BASEMAPPING.TRIM_CONTOUR_LINES (200 m)"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "27.722 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "steps: run 1 [\"|||\",\"canadian pacific railway right of way|the westerly boundary of the district of kent||other\",\"district of kent|the point of its intersection with the northerly boundary of the district of chilliwack||district_boundary\",\"|a point due south of the intersection of the 2 dykes which are the southern boundary of zaitscullachan slough and the eastern dyke on skumalasph indian reserve number 16||district_boundary\",\"|the intersection of the 2 dykes||straight_line\",\"the dyke on the eastern side of skumalasph indian reserve number 16|its intersection with malcolm rd||other\",\"malcolm rd|its intersection with the channel of an unnamed creek which is approximately 50 m east of the junction of malcolm rd and hodgkin rd||road\",\"the unnamed creek|its intersection with the 200 m contour line||creek\",\"the 200 m contour line|a point due south of the point of commencement||contour\",\"|the point of commencement||straight_line\"] vs run 2 [\"|||\",\"canadian pacific railway right of way|the westerly boundary of the district of kent||other\",\"the district boundary|the point of its intersection with the northerly boundary of the district of chilliwack||district_boundary\",\"the district boundary|a point due south of the intersection of the 2 dykes which are the southern boundary of zaitscullachan slough and the eastern dyke on skumalasph indian reserve number 16||district_boundary\",\"|the intersection of the 2 dykes||straight_line\",\"dyke on the eastern side of skumalasph indian reserve number 16|its intersection with malcolm rd||other\",\"malcolm rd|its intersection with the channel of an unnamed creek which is approximately 50 m east of the junction of malcolm rd and hodgkin rd|approximately 50 m|road\",\"unnamed creek|its intersection with the 200 m contour line||creek\",\"contour line|a point due south of the point of commencement||contour\",\"|the point of commencement||straight_line\"]"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:47:08.114Z",
-  "updated": "2026-10-20T21:47:08.114Z"
+  "updated": "2026-10-28T17:11:19.636Z"
 }

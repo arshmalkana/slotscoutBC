@@ -265,7 +265,29 @@
     "side: run 1 null vs run 2 \"inside\"",
     "steps: run 1 [\"lot 314|||\",\"lot 314|the southeast corner of lot 314||lot_line\",\"lots 314 549 550 1665 1644 and 1643|the southwest corner of lot 1643||lot_line\",\"lot 1643|a point northerly 594 metres 1 980 feet along the west boundary of lot 1643|594 metres (1 980 feet)|lot_line\",\"|the west boundary of lot 1643a||straight_line\",\"lot 1643a|the low water mark of stuart lake||lot_line\",\"stuart lake|point of commencement||shoreline\"] vs run 2 [\"lot 314|||\",\"lot 314|its southeast corner||lot_line\",\"lots 314 549 550 1665 1644 and 1643|its southwest corner||lot_line\",\"lot 1643||594 metres (1 980 feet)|lot_line\",\"|the west boundary of lot 1643a||straight_line\",\"lot 1643a|the low water mark of stuart lake||lot_line\",\"stuart lake|point of commencement||shoreline\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "Range 5, Coast District",
+      "kind": "other",
+      "layer": "WHSE_TANTALIS.TA_LAND_DISTRICTS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "RANGE 5 COAST DISTRICT"
+      ],
+      "sample": [
+        {
+          "ADMIN_AREA_SID": 116,
+          "LAND_DISTRICT_NAME": "RANGE 5 COAST DISTRICT",
+          "FEATURE_CODE": "FA91800000",
+          "FEATURE_AREA_SQM": 50417592003.8878,
+          "FEATURE_LENGTH_M": 1267217.6154,
+          "OBJECTID": 9435625,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
       "check": "shape built",
@@ -281,5 +303,5 @@
   "construction": [],
   "status": "open",
   "created": "2026-10-21T16:10:37.002Z",
-  "updated": "2026-10-27T23:12:36.834Z"
+  "updated": "2026-10-28T17:29:10.456Z"
 }

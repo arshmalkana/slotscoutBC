@@ -5,10 +5,13 @@
   "title": "Closed Areas Regulation, Schedule 9, section 14 (Sechelt)",
   "rule_id": "W9-014",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
-    "validation failed: shape built (no shape could be built)"
+    "approximate outline (vicinity) drawn from the places the walk names",
+    "\"Sechelt Peninsula\" was not found in the official layers; that side is drawn straight",
+    "\"Sechelt Peninsula\" was not found in the official layers; that side is drawn straight",
+    "the outline could not be placed: a 1 km zone around the place the section names is marked"
   ],
   "source": {
     "text": "Schedule 9 Firearms Using Shot Only Areas (Section 10 (1) (a))\nSechelt\n14 That portion of the Province of British Columbia in M.U. 2-5 in the vicinity of the Sechelt Peninsula within the following described boundaries: Commencing at a point on the mean high water mark at the tip of Francis Point and proceeding 500 metres offshore in a straight line perpendicular to the shoreline; thence proceeding generally easterly and southerly then northeasterly parallel to and 500 metres distant from the mean high water mark of the Sechelt Peninsula to a point 1 km east of the mouth of Rainy River; thence proceeding northerly in a straight line to a point on the mean high water mark of Sechelt Peninsula; thence proceeding generally southwesterly, westerly and northerly along the mean high water mark to the point of commencement. [en. B.C. Reg. 205/94, s. 28.]",
@@ -251,9 +254,34 @@
   ],
   "validation": [
     {
-      "check": "shape built",
-      "passed": false,
-      "detail": "no shape could be built"
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.121 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
     },
     {
       "check": "step directions match the line",
@@ -261,8 +289,240 @@
       "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate outline (vicinity): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at a point on the mean high water mark at the tip of Francis Point and proceeding 500 metres offshore in a straight line perpendicular to the shoreline",
+      "source": "BC Geographical Names"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -123.94110414308082,
+            49.62138805007067
+          ],
+          [
+            -123.940836915601,
+            49.619633594700105
+          ],
+          [
+            -123.9400465388465,
+            49.617946621637245
+          ],
+          [
+            -123.93876343382931,
+            49.61639195006791
+          ],
+          [
+            -123.93703694112935,
+            49.615029309826056
+          ],
+          [
+            -123.9349334199629,
+            49.6139110483426
+          ],
+          [
+            -123.93253369635504,
+            49.61308012171324
+          ],
+          [
+            -123.92992995873557,
+            49.61256844666871
+          ],
+          [
+            -123.92722222,
+            49.612395676362766
+          ],
+          [
+            -123.92451448126441,
+            49.61256844666871
+          ],
+          [
+            -123.92191074364496,
+            49.61308012171324
+          ],
+          [
+            -123.91951102003709,
+            49.6139110483426
+          ],
+          [
+            -123.91740749887065,
+            49.615029309826056
+          ],
+          [
+            -123.91568100617069,
+            49.61639195006791
+          ],
+          [
+            -123.91439790115349,
+            49.617946621637245
+          ],
+          [
+            -123.91360752439898,
+            49.619633594700105
+          ],
+          [
+            -123.91334029691916,
+            49.62138805007067
+          ],
+          [
+            -123.91360654390267,
+            49.623142568615854
+          ],
+          [
+            -123.91439608943249,
+            49.62482972158477
+          ],
+          [
+            -123.91567863904308,
+            49.62638466240256
+          ],
+          [
+            -123.91740493671017,
+            49.6277476202446
+          ],
+          [
+            -123.91950865290941,
+            49.628866199328264
+          ],
+          [
+            -123.92190893192384,
+            49.629697395206094
+          ],
+          [
+            -123.92451350076801,
+            49.63020925015669
+          ],
+          [
+            -123.92722222,
+            49.63038208363725
+          ],
+          [
+            -123.92993093923198,
+            49.63020925015669
+          ],
+          [
+            -123.93253550807614,
+            49.629697395206094
+          ],
+          [
+            -123.93493578709057,
+            49.628866199328264
+          ],
+          [
+            -123.93703950328982,
+            49.6277476202446
+          ],
+          [
+            -123.9387658009569,
+            49.62638466240256
+          ],
+          [
+            -123.9400483505675,
+            49.62482972158477
+          ],
+          [
+            -123.94083789609732,
+            49.623142568615854
+          ],
+          [
+            -123.94110414308082,
+            49.62138805007067
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W9-014",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 9, s. 14",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 9 Firearms Using Shot Only Areas (Section 10 (1) (a))\nSechelt\n14 That portion of the Province of British Columbia in M.U. 2-5 in the vicinity of the Sechelt Peninsula within the following described boundaries: Commencing at a point on the mean high water mark at the tip of Francis Point and proceeding 500 metres offshore in a straight line perpendicular to the shoreline; thence proceeding generally easterly and southerly then northeasterly parallel to and 500 metres distant from the mean high water mark of the Sechelt Peninsula to a point 1 km east of the mouth of Rainy River; thence proceeding northerly in a straight line to a point on the mean high water mark of Sechelt Peninsula; thence proceeding generally southwesterly, westerly and northerly along the mean high water mark to the point of commencement. [en. B.C. Reg. 205/94, s. 28.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "shot_only",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "vicinity",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate outline (vicinity): corners where the followed features meet, traced along them where found, padded 100 m",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "in M.U. 2-5",
+        "effect": "Firearms Using Shot Only Areas",
+        "geometry.side": "within the following described boundaries",
+        "geometry.steps[0]": "Commencing at a point on the mean high water mark at the tip of Francis Point and proceeding 500 metres offshore in a straight line perpendicular to the shoreline",
+        "geometry.steps[1]": "thence proceeding generally easterly and southerly then northeasterly parallel to and 500 metres distant from the mean high water mark of the Sechelt Peninsula to a point 1 km east of the mouth of Rainy River",
+        "geometry.steps[2]": "thence proceeding northerly in a straight line to a point on the mean high water mark of Sechelt Peninsula",
+        "geometry.steps[3]": "thence proceeding generally southwesterly, westerly and northerly along the mean high water mark to the point of commencement"
+      },
+      "run_agreement": true,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "5afc49511572b86f189b12b4a04b4b7e36b67fbce0417742c2a735e5aa89181c",
+      "task_id": "closed_area-5afc49511572",
+      "construction": [
+        {
+          "what": "approximate outline (vicinity): corners where the followed features meet, traced along them where found, padded 100 m",
+          "quote": "Commencing at a point on the mean high water mark at the tip of Francis Point and proceeding 500 metres offshore in a straight line perpendicular to the shoreline",
+          "source": "BC Geographical Names"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "3.121 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": true,
+          "detail": "same landmarks, distances and effect"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:58:58.404Z",
-  "updated": "2026-10-27T23:10:49.414Z"
+  "updated": "2026-10-28T17:10:38.724Z"
 }

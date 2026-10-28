@@ -5,12 +5,16 @@
   "title": "Closed Areas Regulation, Schedule 3, section 42 (Cathedral Park)",
   "rule_id": "W3-042",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: steps: run 1 [\"lindsay creek|||\",\"lakeview creek|a point lying 100 metres east of the right bank natural boundary of lakeview creek|100 metres|straight_line\",\"lakeview creek|a point lying due east of the most northerly point on the natural boundary of goat lake|100 metres|creek\",\"goat lake|the natural boundary of goat lake||straight_line\",\"goat lake|the most southerly point thereon||shoreline\",\"|the height of land separating the watersheds of lakeview creek and ewart creek||straight_line\",\"the watershed of lakeview creek|a peak locally known as scout mountain||other\",\"lindsay creek|the point of intersection with the natural boundary of lindsay creek on the left bank thereof||straight_line\",\"lindsay creek|the point of commencement||creek\"] vs run 2 [\"|||\",\"lakeview creek|a point lying 100 metres east of the right bank natural boundary of lakeview creek|100 metres|straight_line\",\"lakeview creek|a point lying due east of the most northerly point on the natural boundary of goat lake|100 metres|creek\",\"goat lake|the natural boundary of goat lake||straight_line\",\"goat lake|the most southerly point thereon||shoreline\",\"|the height of land separating the watersheds of lakeview creek and ewart creek||straight_line\",\"height of land forming the southerly and westerly boundary of the watershed of lakeview creek|a peak locally known as scout mountain||other\",\"lindsay creek|the point of intersection with the natural boundary of lindsay creek on the left bank thereof||straight_line\",\"lindsay creek|the point of commencement||creek\"]",
     "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 \"inside\" vs run 2 null",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "approximate outline (traced) drawn from the places the walk names, using run 1's reading of the steps",
+    "\"Lindsay Creek\" was not found in the official layers; that side is drawn straight",
+    "\"the watershed of Lakeview Creek\" was not found in the official layers; that side is drawn straight",
+    "\"Lindsay Creek\" was not found in the official layers; that side is drawn straight",
+    "validation failed: two independent extractions agree (steps: run 1 [\"lindsay creek|||\",\"lakeview creek|a point lying 100 metres east of the right bank natural boundary of lakeview creek|100 metres|straight_line\",\"lakeview creek|a point lying due east of the most northerly point on the natural boundary of goat lake|100 metres|creek\",\"goat lake|the natural boundary of goat lake||straight_line\",\"goat lake|the most southerly point thereon||shoreline\",\"|the height of land separating the watersheds of lakeview creek and ewart creek||straight_line\",\"the watershed of lakeview creek|a peak locally known as scout mountain||other\",\"lindsay creek|the point of intersection with the natural boundary of lindsay creek on the left bank thereof||straight_line\",\"lindsay creek|the point of commencement||creek\"] vs run 2 [\"|||\",\"lakeview creek|a point lying 100 metres east of the right bank natural boundary of lakeview creek|100 metres|straight_line\",\"lakeview creek|a point lying due east of the most northerly point on the natural boundary of goat lake|100 metres|creek\",\"goat lake|the natural boundary of goat lake||straight_line\",\"goat lake|the most southerly point thereon||shoreline\",\"|the height of land separating the watersheds of lakeview creek and ewart creek||straight_line\",\"height of land forming the southerly and westerly boundary of the watershed of lakeview creek|a peak locally known as scout mountain||other\",\"lindsay creek|the point of intersection with the natural boundary of lindsay creek on the left bank thereof||straight_line\",\"lindsay creek|the point of commencement||creek\"])"
   ],
   "source": {
     "text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nCathedral Park\n42 That portion of M.U. 8-03 in the Province of British Columbia contained within the following described boundaries known locally as the Core Area of Cathedral Park: Commencing at the point of intersection of the left bank natural boundary of an unamed creek, locally known as Lindsay Creek, and the left bank natural boundary of Lakeview Creek at approximately UTM North 5442423 metres and UTM East 707745 metres; thence due East to a point lying 100 metres east of the right bank natural boundary of Lakeview Creek; thence in a general southerly direction along a line parallel to and 100 metres perpendicularly distant from said Lakeview Creek natural boundary to a point lying due East of the most northerly point on the natural boundary of Goat Lake; thence due West to the natural boundary of Goat Lake; thence in a general southerly direction along the easterly natural boundary of Goat Lake to the most southerly point thereon; thence due South to the height of land separating the watersheds of Lakeview Creek and Ewart Creek; thence in a general westerly, northwesterly and northeasterly direction along a height of land forming the southerly and westerly boundary of the watershed of Lakeview Creek to a peak at approximately UTM North 5440408 metres and UTM East 704283 metres, locally known as Scout Mountain; thence north to the point of intersection with the natural boundary of Lindsay Creek, on the left bank thereof at approximately UTM North 5441222 metres and UTM East 704283 metres; thence in a general northeasterly direction along the said natural boundary to the point of commencement based on the 1:20,000 TRIM Provincial Baseline Atlas. [en. B.C. Reg. 151/2006, s. 3 (a).]",
@@ -318,12 +322,63 @@
     "side: run 1 \"inside\" vs run 2 null",
     "steps: run 1 [\"lindsay creek|||\",\"lakeview creek|a point lying 100 metres east of the right bank natural boundary of lakeview creek|100 metres|straight_line\",\"lakeview creek|a point lying due east of the most northerly point on the natural boundary of goat lake|100 metres|creek\",\"goat lake|the natural boundary of goat lake||straight_line\",\"goat lake|the most southerly point thereon||shoreline\",\"|the height of land separating the watersheds of lakeview creek and ewart creek||straight_line\",\"the watershed of lakeview creek|a peak locally known as scout mountain||other\",\"lindsay creek|the point of intersection with the natural boundary of lindsay creek on the left bank thereof||straight_line\",\"lindsay creek|the point of commencement||creek\"] vs run 2 [\"|||\",\"lakeview creek|a point lying 100 metres east of the right bank natural boundary of lakeview creek|100 metres|straight_line\",\"lakeview creek|a point lying due east of the most northerly point on the natural boundary of goat lake|100 metres|creek\",\"goat lake|the natural boundary of goat lake||straight_line\",\"goat lake|the most southerly point thereon||shoreline\",\"|the height of land separating the watersheds of lakeview creek and ewart creek||straight_line\",\"height of land forming the southerly and westerly boundary of the watershed of lakeview creek|a peak locally known as scout mountain||other\",\"lindsay creek|the point of intersection with the natural boundary of lindsay creek on the left bank thereof||straight_line\",\"lindsay creek|the point of commencement||creek\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U. 8-03",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "8-3"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "8-3",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 8,
+          "REGION_RESPONSIBLE_ID": "8",
+          "REGION_RESPONSIBLE_NAME": "Okanagan",
+          "GAME_MANAGEMENT_ZONE_ID": "8a",
+          "GAME_MANAGEMENT_ZONE_NAME": "Similkameen",
+          "FEATURE_AREA_SQM": 1319329590.6327,
+          "FEATURE_LENGTH_M": 185504.7172,
+          "OBJECTID": 545,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "0.448 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "steps: run 1 [\"lindsay creek|||\",\"lakeview creek|a point lying 100 metres east of the right bank natural boundary of lakeview creek|100 metres|straight_line\",\"lakeview creek|a point lying due east of the most northerly point on the natural boundary of goat lake|100 metres|creek\",\"goat lake|the natural boundary of goat lake||straight_line\",\"goat lake|the most southerly point thereon||shoreline\",\"|the height of land separating the watersheds of lakeview creek and ewart creek||straight_line\",\"the watershed of lakeview creek|a peak locally known as scout mountain||other\",\"lindsay creek|the point of intersection with the natural boundary of lindsay creek on the left bank thereof||straight_line\",\"lindsay creek|the point of commencement||creek\"] vs run 2 [\"|||\",\"lakeview creek|a point lying 100 metres east of the right bank natural boundary of lakeview creek|100 metres|straight_line\",\"lakeview creek|a point lying due east of the most northerly point on the natural boundary of goat lake|100 metres|creek\",\"goat lake|the natural boundary of goat lake||straight_line\",\"goat lake|the most southerly point thereon||shoreline\",\"|the height of land separating the watersheds of lakeview creek and ewart creek||straight_line\",\"height of land forming the southerly and westerly boundary of the watershed of lakeview creek|a peak locally known as scout mountain||other\",\"lindsay creek|the point of intersection with the natural boundary of lindsay creek on the left bank thereof||straight_line\",\"lindsay creek|the point of commencement||creek\"]"
     },
     {
       "check": "step directions match the line",
@@ -331,8 +386,333 @@
       "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at the point of intersection of the left bank natural boundary of an unamed creek, locally known as Lindsay Creek, and the left bank natural boundary of Lakeview Creek",
+      "source": "WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP, WHSE_BASEMAPPING.FWA_LAKES_POLY"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -120.18207238511253,
+            49.04091896560857
+          ],
+          [
+            -120.18203584182953,
+            49.04073856583394
+          ],
+          [
+            -120.18202241089172,
+            49.04070152598882
+          ],
+          [
+            -120.18196499193373,
+            49.0405813203574
+          ],
+          [
+            -120.17439003654471,
+            49.02790879394703
+          ],
+          [
+            -120.17432533259995,
+            49.02781629862342
+          ],
+          [
+            -120.17419891985136,
+            49.02765963994767
+          ],
+          [
+            -120.1741532640419,
+            49.02760737313533
+          ],
+          [
+            -120.17399752164813,
+            49.02744216470541
+          ],
+          [
+            -120.17384882190493,
+            49.027312309013084
+          ],
+          [
+            -120.17366693364325,
+            49.027202103546486
+          ],
+          [
+            -120.17345778707025,
+            49.027115141277186
+          ],
+          [
+            -120.17322820096668,
+            49.02705425737424
+          ],
+          [
+            -120.17298566039264,
+            49.027021436783485
+          ],
+          [
+            -120.17273807268676,
+            49.027017749523594
+          ],
+          [
+            -120.17235363958748,
+            49.02703483921546
+          ],
+          [
+            -120.1722918731514,
+            49.027038506422194
+          ],
+          [
+            -120.17219611484906,
+            49.02704562629434
+          ],
+          [
+            -120.17197450503664,
+            49.0270743805268
+          ],
+          [
+            -120.17189070637475,
+            49.02709005025443
+          ],
+          [
+            -120.1715343525259,
+            49.02719456547785
+          ],
+          [
+            -120.1714930929048,
+            49.02721165521669
+          ],
+          [
+            -120.17130972677012,
+            49.02730254396206
+          ],
+          [
+            -120.17115208419798,
+            49.02741223554788
+          ],
+          [
+            -120.17102459304331,
+            49.027537649091016
+          ],
+          [
+            -120.1709802721584,
+            49.02759033863106
+          ],
+          [
+            -120.17089232042187,
+            49.027717273961734
+          ],
+          [
+            -120.17087730981362,
+            49.027744333794544
+          ],
+          [
+            -120.17082071584585,
+            49.027877393371796
+          ],
+          [
+            -120.17079586762677,
+            49.0280145663262
+          ],
+          [
+            -120.17079083543375,
+            49.02809432626659
+          ],
+          [
+            -120.17081453063138,
+            49.02830197175354
+          ],
+          [
+            -120.17092943046278,
+            49.02869220309059
+          ],
+          [
+            -120.17095794884007,
+            49.02877019317803
+          ],
+          [
+            -120.17124893270942,
+            49.029433876492426
+          ],
+          [
+            -120.17129741015249,
+            49.02952551247104
+          ],
+          [
+            -120.1778574763057,
+            49.040051914446884
+          ],
+          [
+            -120.17803351981394,
+            49.04025445850689
+          ],
+          [
+            -120.1783854069505,
+            49.04055924183257
+          ],
+          [
+            -120.17838729381869,
+            49.040560872252115
+          ],
+          [
+            -120.17875243090428,
+            49.04087563569705
+          ],
+          [
+            -120.17883114390467,
+            49.04093752534997
+          ],
+          [
+            -120.17968779181174,
+            49.04155279284949
+          ],
+          [
+            -120.17989473093151,
+            49.041674105557185
+          ],
+          [
+            -120.18013469120059,
+            49.04176562508313
+          ],
+          [
+            -120.18039784639414,
+            49.04182360370092
+          ],
+          [
+            -120.18067342031516,
+            49.041845667174414
+          ],
+          [
+            -120.18095012813778,
+            49.04183091199775
+          ],
+          [
+            -120.18121663859523,
+            49.04177994239999
+          ],
+          [
+            -120.18146203807076,
+            49.0416948455978
+          ],
+          [
+            -120.18167627757278,
+            49.04157910631063
+          ],
+          [
+            -120.18185058427733,
+            49.04143746404121
+          ],
+          [
+            -120.18197782077779,
+            49.04127571897037
+          ],
+          [
+            -120.18205277732757,
+            49.041100494418856
+          ],
+          [
+            -120.18207238511253,
+            49.04091896560857
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W3-042",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 3, s. 42",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nCathedral Park\n42 That portion of M.U. 8-03 in the Province of British Columbia contained within the following described boundaries known locally as the Core Area of Cathedral Park: Commencing at the point of intersection of the left bank natural boundary of an unamed creek, locally known as Lindsay Creek, and the left bank natural boundary of Lakeview Creek at approximately UTM North 5442423 metres and UTM East 707745 metres; thence due East to a point lying 100 metres east of the right bank natural boundary of Lakeview Creek; thence in a general southerly direction along a line parallel to and 100 metres perpendicularly distant from said Lakeview Creek natural boundary to a point lying due East of the most northerly point on the natural boundary of Goat Lake; thence due West to the natural boundary of Goat Lake; thence in a general southerly direction along the easterly natural boundary of Goat Lake to the most southerly point thereon; thence due South to the height of land separating the watersheds of Lakeview Creek and Ewart Creek; thence in a general westerly, northwesterly and northeasterly direction along a height of land forming the southerly and westerly boundary of the watershed of Lakeview Creek to a peak at approximately UTM North 5440408 metres and UTM East 704283 metres, locally known as Scout Mountain; thence north to the point of intersection with the natural boundary of Lindsay Creek, on the left bank thereof at approximately UTM North 5441222 metres and UTM East 704283 metres; thence in a general northeasterly direction along the said natural boundary to the point of commencement based on the 1:20,000 TRIM Provincial Baseline Atlas. [en. B.C. Reg. 151/2006, s. 3 (a).]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "traced",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "That portion of M.U. 8-03",
+        "effect": "No Shooting or Hunting Areas",
+        "geometry.side": "contained within the following described boundaries",
+        "geometry.steps[0]": "Commencing at the point of intersection of the left bank natural boundary of an unamed creek, locally known as Lindsay Creek, and the left bank natural boundary of Lakeview Creek",
+        "geometry.steps[1]": "thence due East to a point lying 100 metres east of the right bank natural boundary of Lakeview Creek",
+        "geometry.steps[2]": "thence in a general southerly direction along a line parallel to and 100 metres perpendicularly distant from said Lakeview Creek natural boundary to a point lying due East of the most northerly point on the natural boundary of Goat Lake",
+        "geometry.steps[3]": "thence due West to the natural boundary of Goat Lake",
+        "geometry.steps[4]": "thence in a general southerly direction along the easterly natural boundary of Goat Lake to the most southerly point thereon",
+        "geometry.steps[5]": "thence due South to the height of land separating the watersheds of Lakeview Creek and Ewart Creek",
+        "geometry.steps[6]": "thence in a general westerly, northwesterly and northeasterly direction along a height of land forming the southerly and westerly boundary of the watershed of Lakeview Creek to a peak",
+        "geometry.steps[7]": "thence north to the point of intersection with the natural boundary of Lindsay Creek, on the left bank thereof",
+        "geometry.steps[8]": "thence in a general northeasterly direction along the said natural boundary to the point of commencement"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "d6598280f56b8ff850aa69116799bd87e43d7d80e3d39cf8f519992369a06278",
+      "task_id": "closed_area-d6598280f56b",
+      "construction": [
+        {
+          "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+          "quote": "Commencing at the point of intersection of the left bank natural boundary of an unamed creek, locally known as Lindsay Creek, and the left bank natural boundary of Lakeview Creek",
+          "source": "WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP, WHSE_BASEMAPPING.FWA_LAKES_POLY"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "0.448 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "steps: run 1 [\"lindsay creek|||\",\"lakeview creek|a point lying 100 metres east of the right bank natural boundary of lakeview creek|100 metres|straight_line\",\"lakeview creek|a point lying due east of the most northerly point on the natural boundary of goat lake|100 metres|creek\",\"goat lake|the natural boundary of goat lake||straight_line\",\"goat lake|the most southerly point thereon||shoreline\",\"|the height of land separating the watersheds of lakeview creek and ewart creek||straight_line\",\"the watershed of lakeview creek|a peak locally known as scout mountain||other\",\"lindsay creek|the point of intersection with the natural boundary of lindsay creek on the left bank thereof||straight_line\",\"lindsay creek|the point of commencement||creek\"] vs run 2 [\"|||\",\"lakeview creek|a point lying 100 metres east of the right bank natural boundary of lakeview creek|100 metres|straight_line\",\"lakeview creek|a point lying due east of the most northerly point on the natural boundary of goat lake|100 metres|creek\",\"goat lake|the natural boundary of goat lake||straight_line\",\"goat lake|the most southerly point thereon||shoreline\",\"|the height of land separating the watersheds of lakeview creek and ewart creek||straight_line\",\"height of land forming the southerly and westerly boundary of the watershed of lakeview creek|a peak locally known as scout mountain||other\",\"lindsay creek|the point of intersection with the natural boundary of lindsay creek on the left bank thereof||straight_line\",\"lindsay creek|the point of commencement||creek\"]"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T22:00:18.826Z",
-  "updated": "2026-10-27T23:12:27.408Z"
+  "updated": "2026-10-28T17:26:00.770Z"
 }

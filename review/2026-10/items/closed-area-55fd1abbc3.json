@@ -5,11 +5,16 @@
   "title": "Closed Areas Regulation, Schedule 5, section 53 (Hope)",
   "rule_id": "W5-053",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: steps: run 1 [\"|||\",\"town of hope|the southwest corner of the aywawwis 15 indian reserve||district_boundary\",\"aywawwis 15 indian reserve|a private logging company rd||reserve_boundary\",\"private logging company rd|its intersection with othello rd||road\",\"|the pipeline pumping station||straight_line\",\"gas pipeline right of way|its intersection with the old kettle valley railway right of way||other\",\"old kettle valley railway right of way|the point of its intersection with a line due north from the mouth of two mile creek||other\",\"|the mouth of two mile creek||straight_line\",\"two mile creek|the coquihalla hwy||creek\",\"coquihalla hwy|its point of commencement||road\",\"|||\",\"chawuthen creek|its mouth||creek\",\"fraser river|the southerly end of the bristol island causeway||river\",\"bristol island causeway|the natural boundary of the fraser river||other\",\"fraser river|its point of intersection with the southwesterly boundary of the town of hope||river\",\"town of hope|a point 500 m south of its intersection with hwy no. 1|500 m|district_boundary\",\"hwy no. 1|a point that is 500 m east of silverhope rd|500 m|road\",\"silverhope rd|a point due north of eureka creek|500 m|road\",\"eureka creek|a point 500 m due south of silverhope rd|500 m|straight_line\",\"silverhope rd|a point 500 m due south of hwy no. 1|500 m|road\",\"hwy no. 1|a point due south of the mouth of chawuthen creek|500 m|road\",\"|its point of commencement||straight_line\"] vs run 2 [\"|||\",\"town of hope|its intersection with the southwest corner of the aywawwis 15 indian reserve||district_boundary\",\"aywawwis 15 indian reserve|a private logging company rd||reserve_boundary\",\"private logging company rd|its intersection with othello rd||road\",\"|the pipeline pumping station||straight_line\",\"gas pipeline right of way|its intersection with the old kettle valley railway right of way||other\",\"old kettle valley railway right of way|the point of its intersection with a line due north from the mouth of two mile creek||other\",\"|the mouth of two mile creek||straight_line\",\"two mile creek|the coquihalla hwy||creek\",\"coquihalla hwy|its point of commencement||road\",\"|||\",\"chawuthen creek|its mouth||creek\",\"fraser river|the southerly end of the bristol island causeway||shoreline\",\"bristol island causeway|the natural boundary of the fraser river||other\",\"fraser river|its point of intersection with the southwesterly boundary of the town of hope||shoreline\",\"town of hope|a point 500 m south of its intersection with hwy no. 1|500 m|district_boundary\",\"hwy no. 1|a point that is 500 m east of silverhope rd|perpendicular distance of 500 m|road\",\"silverhope rd|a point due north of eureka creek|perpendicular distance of 500 m|road\",\"eureka creek|a point 500 m due south of silverhope rd|500 m|straight_line\",\"silverhope rd|a point 500 m due south of hwy no. 1|500 m perpendicularly distant|road\",\"hwy no. 1|a point due south of the mouth of chawuthen creek|500 m perpendicularly distant|road\",\"|its point of commencement||straight_line\"]",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "approximate outline (corners) drawn from the places the walk names, using run 1's reading of the steps",
+    "\"private logging company road\" was not found in the official layers; that side is drawn straight",
+    "\"gas pipeline right of way\" was not found in the official layers; that side is drawn straight",
+    "\"old Kettle Valley Railway right of way\" was not found in the official layers; that side is drawn straight",
+    "\"Bristol Island causeway\" was not found in the official layers; that side is drawn straight",
+    "validation failed: two independent extractions agree (steps: run 1 [\"|||\",\"town of hope|the southwest corner of the aywawwis 15 indian reserve||district_boundary\",\"aywawwis 15 indian reserve|a private logging company rd||reserve_boundary\",\"private logging company rd|its intersection with othello rd||road\",\"|the pipeline pumping station||straight_line\",\"gas pipeline right of way|its intersection with the old kettle valley railway right of way||other\",\"old kettle valley railway right of way|the point of its intersection with a line due north from the mouth of two mile creek||other\",\"|the mouth of two mile creek||straight_line\",\"two mile creek|the coquihalla hwy||creek\",\"coquihalla hwy|its point of commencement||road\",\"|||\",\"chawuthen creek|its mouth||creek\",\"fraser river|the southerly end of the bristol island causeway||river\",\"bristol island causeway|the natural boundary of the fraser river||other\",\"fraser river|its point of intersection with the southwesterly boundary of the town of hope||river\",\"town of hope|a point 500 m south of its intersection with hwy no. 1|500 m|district_boundary\",\"hwy no. 1|a point that is 500 m east of silverhope rd|500 m|road\",\"silverhope rd|a point due north of eureka creek|500 m|road\",\"eureka creek|a point 500 m due south of silverhope rd|500 m|straight_line\",\"silverhope rd|a point 500 m due south of hwy no. 1|500 m|road\",\"hwy no. 1|a point due south of the mouth of chawuthen creek|500 m|road\",\"|its point of commencement||straight_line\"] vs run 2 [\"|||\",\"town of hope|its intersection with the southwest corner of the aywawwis 15 indian reserve||district_boundary\",\"aywawwis 15 indian reserve|a private logging company rd||reserve_boundary\",\"private logging company rd|its intersection with othello rd||road\",\"|the pipeline pumping station||straight_line\",\"gas pipeline right of way|its intersection with the old kettle valley railway right of way||other\",\"old kettle valley railway right of way|the point of its intersection with a line due north from the mouth of two mile creek||other\",\"|the mouth of two mile creek||straight_line\",\"two mile creek|the coquihalla hwy||creek\",\"coquihalla hwy|its point of commencement||road\",\"|||\",\"chawuthen creek|its mouth||creek\",\"fraser river|the southerly end of the bristol island causeway||shoreline\",\"bristol island causeway|the natural boundary of the fraser river||other\",\"fraser river|its point of intersection with the southwesterly boundary of the town of hope||shoreline\",\"town of hope|a point 500 m south of its intersection with hwy no. 1|500 m|district_boundary\",\"hwy no. 1|a point that is 500 m east of silverhope rd|perpendicular distance of 500 m|road\",\"silverhope rd|a point due north of eureka creek|perpendicular distance of 500 m|road\",\"eureka creek|a point 500 m due south of silverhope rd|500 m|straight_line\",\"silverhope rd|a point 500 m due south of hwy no. 1|500 m perpendicularly distant|road\",\"hwy no. 1|a point due south of the mouth of chawuthen creek|500 m perpendicularly distant|road\",\"|its point of commencement||straight_line\"])"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nHope\n53 Those two portions of the Province of British Columbia within M.U.s 2-2 and 2-17 in the vicinity of the Town of Hope within the following described boundaries: (1)Commencing at the intersection of the Coquihalla Highway and the easternmost boundary of the Town of Hope west of Thacker Creek; thence northerly, westerly and northerly along the easterly boundary of the Town of Hope to its intersection with the southwest corner of the Aywawwis #15 Indian Reserve; thence easterly and northerly along the southerly and easterly boundary of the reserve to a private logging company road; thence southeasterly along the northern boundary of the road to its intersection with Othello Road; thence in an easterly direction to the pipeline pumping station; thence westerly along the gas pipeline right of way to its intersection with the old Kettle Valley Railway right of way; thence southeasterly along the northern edge of the right of way to the point of its intersection with a line due North from the mouth of Two Mile Creek; thence due South to the mouth of Two Mile creek; thence southerly up Two Mile Creek to the Coquihalla Highway; thence westerly along the Coquihalla Highway to its point of commencement. (2)Commencing at the intersection of the No. 1 Highway and Chawuthen Creek; thence northerly along the creek to its mouth; thence easterly along the natural boundary of the Fraser River to the southerly end of the Bristol Island causeway; thence easterly across the causeway to the natural boundary of the Fraser River; thence easterly along the natural boundary of the Fraser River to its point of intersection with the southwesterly boundary of the Town of Hope; thence southerly and easterly along the town boundary to a point 500 m south of its intersection with Highway No. 1; thence southeasterly and easterly at a perpendicular distance of 500 m and parallel to Highway No. 1 to a point that is 500 m east of Silverhope Road; thence southerly at a perpendicular distance of 500 m and parallel to Silverhope Road to a point due North of Eureka Creek; thence due South along a straight line through the mouth of Eureka Creek to a point 500 m due South of Silverhope Road; thence westerly and northerly along a line parallel to and 500 m perpendicularly distant from the centerline of Silverhope Road to a point 500 m due South of Highway No. 1; thence easterly along a line parallel to and 500 m perpendicularly distant from the centerline of Highway No. 1 to a point due South of the mouth of Chawuthen Creek; thence due North along a line to its point of commencement [en. B.C. Reg. 205/94, s. 11.]",
@@ -666,12 +671,77 @@
   "disagreements": [
     "steps: run 1 [\"|||\",\"town of hope|the southwest corner of the aywawwis 15 indian reserve||district_boundary\",\"aywawwis 15 indian reserve|a private logging company rd||reserve_boundary\",\"private logging company rd|its intersection with othello rd||road\",\"|the pipeline pumping station||straight_line\",\"gas pipeline right of way|its intersection with the old kettle valley railway right of way||other\",\"old kettle valley railway right of way|the point of its intersection with a line due north from the mouth of two mile creek||other\",\"|the mouth of two mile creek||straight_line\",\"two mile creek|the coquihalla hwy||creek\",\"coquihalla hwy|its point of commencement||road\",\"|||\",\"chawuthen creek|its mouth||creek\",\"fraser river|the southerly end of the bristol island causeway||river\",\"bristol island causeway|the natural boundary of the fraser river||other\",\"fraser river|its point of intersection with the southwesterly boundary of the town of hope||river\",\"town of hope|a point 500 m south of its intersection with hwy no. 1|500 m|district_boundary\",\"hwy no. 1|a point that is 500 m east of silverhope rd|500 m|road\",\"silverhope rd|a point due north of eureka creek|500 m|road\",\"eureka creek|a point 500 m due south of silverhope rd|500 m|straight_line\",\"silverhope rd|a point 500 m due south of hwy no. 1|500 m|road\",\"hwy no. 1|a point due south of the mouth of chawuthen creek|500 m|road\",\"|its point of commencement||straight_line\"] vs run 2 [\"|||\",\"town of hope|its intersection with the southwest corner of the aywawwis 15 indian reserve||district_boundary\",\"aywawwis 15 indian reserve|a private logging company rd||reserve_boundary\",\"private logging company rd|its intersection with othello rd||road\",\"|the pipeline pumping station||straight_line\",\"gas pipeline right of way|its intersection with the old kettle valley railway right of way||other\",\"old kettle valley railway right of way|the point of its intersection with a line due north from the mouth of two mile creek||other\",\"|the mouth of two mile creek||straight_line\",\"two mile creek|the coquihalla hwy||creek\",\"coquihalla hwy|its point of commencement||road\",\"|||\",\"chawuthen creek|its mouth||creek\",\"fraser river|the southerly end of the bristol island causeway||shoreline\",\"bristol island causeway|the natural boundary of the fraser river||other\",\"fraser river|its point of intersection with the southwesterly boundary of the town of hope||shoreline\",\"town of hope|a point 500 m south of its intersection with hwy no. 1|500 m|district_boundary\",\"hwy no. 1|a point that is 500 m east of silverhope rd|perpendicular distance of 500 m|road\",\"silverhope rd|a point due north of eureka creek|perpendicular distance of 500 m|road\",\"eureka creek|a point 500 m due south of silverhope rd|500 m|straight_line\",\"silverhope rd|a point 500 m due south of hwy no. 1|500 m perpendicularly distant|road\",\"hwy no. 1|a point due south of the mouth of chawuthen creek|500 m perpendicularly distant|road\",\"|its point of commencement||straight_line\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "M.U.s 2-2 and 2-17",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "matches": 2,
+      "ids": [
+        "2-17",
+        "2-2"
+      ],
+      "sample": [
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "2-17",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 2,
+          "REGION_RESPONSIBLE_ID": "2",
+          "REGION_RESPONSIBLE_NAME": "Lower Mainland",
+          "GAME_MANAGEMENT_ZONE_ID": "2b",
+          "GAME_MANAGEMENT_ZONE_NAME": "Fraser Valley",
+          "FEATURE_AREA_SQM": 1024432134.5596,
+          "FEATURE_LENGTH_M": 223088.788,
+          "OBJECTID": 350,
+          "SE_ANNO_CAD_DATA": null
+        },
+        {
+          "WILDLIFE_MGMT_UNIT_ID": "2-2",
+          "FEATURE_CODE": "WI02800110",
+          "REGION_RESPONSIBLE": 2,
+          "REGION_RESPONSIBLE_ID": "2",
+          "REGION_RESPONSIBLE_NAME": "Lower Mainland",
+          "GAME_MANAGEMENT_ZONE_ID": "2b",
+          "GAME_MANAGEMENT_ZONE_NAME": "Fraser Valley",
+          "FEATURE_AREA_SQM": 979159042.1741,
+          "FEATURE_LENGTH_M": 169739.0268,
+          "OBJECTID": 351,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "16.206 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "steps: run 1 [\"|||\",\"town of hope|the southwest corner of the aywawwis 15 indian reserve||district_boundary\",\"aywawwis 15 indian reserve|a private logging company rd||reserve_boundary\",\"private logging company rd|its intersection with othello rd||road\",\"|the pipeline pumping station||straight_line\",\"gas pipeline right of way|its intersection with the old kettle valley railway right of way||other\",\"old kettle valley railway right of way|the point of its intersection with a line due north from the mouth of two mile creek||other\",\"|the mouth of two mile creek||straight_line\",\"two mile creek|the coquihalla hwy||creek\",\"coquihalla hwy|its point of commencement||road\",\"|||\",\"chawuthen creek|its mouth||creek\",\"fraser river|the southerly end of the bristol island causeway||river\",\"bristol island causeway|the natural boundary of the fraser river||other\",\"fraser river|its point of intersection with the southwesterly boundary of the town of hope||river\",\"town of hope|a point 500 m south of its intersection with hwy no. 1|500 m|district_boundary\",\"hwy no. 1|a point that is 500 m east of silverhope rd|500 m|road\",\"silverhope rd|a point due north of eureka creek|500 m|road\",\"eureka creek|a point 500 m due south of silverhope rd|500 m|straight_line\",\"silverhope rd|a point 500 m due south of hwy no. 1|500 m|road\",\"hwy no. 1|a point due south of the mouth of chawuthen creek|500 m|road\",\"|its point of commencement||straight_line\"] vs run 2 [\"|||\",\"town of hope|its intersection with the southwest corner of the aywawwis 15 indian reserve||district_boundary\",\"aywawwis 15 indian reserve|a private logging company rd||reserve_boundary\",\"private logging company rd|its intersection with othello rd||road\",\"|the pipeline pumping station||straight_line\",\"gas pipeline right of way|its intersection with the old kettle valley railway right of way||other\",\"old kettle valley railway right of way|the point of its intersection with a line due north from the mouth of two mile creek||other\",\"|the mouth of two mile creek||straight_line\",\"two mile creek|the coquihalla hwy||creek\",\"coquihalla hwy|its point of commencement||road\",\"|||\",\"chawuthen creek|its mouth||creek\",\"fraser river|the southerly end of the bristol island causeway||shoreline\",\"bristol island causeway|the natural boundary of the fraser river||other\",\"fraser river|its point of intersection with the southwesterly boundary of the town of hope||shoreline\",\"town of hope|a point 500 m south of its intersection with hwy no. 1|500 m|district_boundary\",\"hwy no. 1|a point that is 500 m east of silverhope rd|perpendicular distance of 500 m|road\",\"silverhope rd|a point due north of eureka creek|perpendicular distance of 500 m|road\",\"eureka creek|a point 500 m due south of silverhope rd|500 m|straight_line\",\"silverhope rd|a point 500 m due south of hwy no. 1|500 m perpendicularly distant|road\",\"hwy no. 1|a point due south of the mouth of chawuthen creek|500 m perpendicularly distant|road\",\"|its point of commencement||straight_line\"]"
     },
     {
       "check": "step directions match the line",
@@ -679,8 +749,347 @@
       "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at the intersection of the Coquihalla Highway and the easternmost boundary of the Town of Hope west of Thacker Creek",
+      "source": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP, WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES, WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP, WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP, WHSE_BASEMAPPING.FWA_RIVERS_POLY"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              -121.50302541,
+              49.37419651
+            ],
+            [
+              -121.50299486094642,
+              49.36329609360903
+            ],
+            [
+              -121.47218485654112,
+              49.37693190719158
+            ],
+            [
+              -121.47339483,
+              49.37764102
+            ],
+            [
+              -121.47743383,
+              49.37908658
+            ],
+            [
+              -121.4828224,
+              49.37849127
+            ],
+            [
+              -121.48634849,
+              49.37701864
+            ],
+            [
+              -121.4903944,
+              49.37537937
+            ],
+            [
+              -121.50302541,
+              49.37419651
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              -121.43307877448095,
+              49.39619007885076
+            ],
+            [
+              -121.43307729433315,
+              49.39600056565578
+            ],
+            [
+              -121.43301482617413,
+              49.39581546226922
+            ],
+            [
+              -121.43113803924217,
+              49.392150983475496
+            ],
+            [
+              -121.43111667951715,
+              49.392112252025306
+            ],
+            [
+              -121.43108337825824,
+              49.39205595239547
+            ],
+            [
+              -121.43097268273851,
+              49.39190986543257
+            ],
+            [
+              -121.43082331844583,
+              49.39177917079736
+            ],
+            [
+              -121.43064018551571,
+              49.3916681558871
+            ],
+            [
+              -121.43042929173,
+              49.391580462485116
+            ],
+            [
+              -121.35694194439301,
+              49.3667757456102
+            ],
+            [
+              -121.35670062789278,
+              49.36671217550808
+            ],
+            [
+              -121.3564452801629,
+              49.366679224538416
+            ],
+            [
+              -121.356184973587,
+              49.36667806343095
+            ],
+            [
+              -121.35592895670534,
+              49.36670873343906
+            ],
+            [
+              -121.35568632567218,
+              49.36677014487421
+            ],
+            [
+              -121.3554657011231,
+              49.366860115816
+            ],
+            [
+              -121.35536176174685,
+              49.36691198506298
+            ],
+            [
+              -121.35526306232127,
+              49.3669661910044
+            ],
+            [
+              -121.33694891730393,
+              49.37801474272572
+            ],
+            [
+              -121.336776346479,
+              49.3781403338947
+            ],
+            [
+              -121.33664279095856,
+              49.37828468035363
+            ],
+            [
+              -121.3365529402026,
+              49.37844271413542
+            ],
+            [
+              -121.33650994930845,
+              49.378608886664075
+            ],
+            [
+              -121.33651532818118,
+              49.378777363554654
+            ],
+            [
+              -121.33656888845513,
+              49.378942229455404
+            ],
+            [
+              -121.3366687500394,
+              49.37909769574096
+            ],
+            [
+              -121.33681140706652,
+              49.379238303764154
+            ],
+            [
+              -121.3373515136867,
+              49.37967529877647
+            ],
+            [
+              -121.33753173924735,
+              49.37979598797902
+            ],
+            [
+              -121.35619940036631,
+              49.39014942223521
+            ],
+            [
+              -121.35652144856334,
+              49.390282873697295
+            ],
+            [
+              -121.41840201477233,
+              49.408649789794374
+            ],
+            [
+              -121.41867894664935,
+              49.408709841892474
+            ],
+            [
+              -121.41896908594495,
+              49.40873071196739
+            ],
+            [
+              -121.41918427864965,
+              49.40871645282189
+            ],
+            [
+              -121.41897504,
+              49.4078314
+            ],
+            [
+              -121.41876637,
+              49.40635308
+            ],
+            [
+              -121.41987357,
+              49.40499438
+            ],
+            [
+              -121.42557828,
+              49.40301758
+            ],
+            [
+              -121.42735783,
+              49.40245727
+            ],
+            [
+              -121.42778992209917,
+              49.40232121199582
+            ],
+            [
+              -121.43290121640224,
+              49.39654884887006
+            ],
+            [
+              -121.43301920019132,
+              49.39637558595275
+            ],
+            [
+              -121.43307877448095,
+              49.39619007885076
+            ]
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-053",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 53",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nHope\n53 Those two portions of the Province of British Columbia within M.U.s 2-2 and 2-17 in the vicinity of the Town of Hope within the following described boundaries: (1)Commencing at the intersection of the Coquihalla Highway and the easternmost boundary of the Town of Hope west of Thacker Creek; thence northerly, westerly and northerly along the easterly boundary of the Town of Hope to its intersection with the southwest corner of the Aywawwis #15 Indian Reserve; thence easterly and northerly along the southerly and easterly boundary of the reserve to a private logging company road; thence southeasterly along the northern boundary of the road to its intersection with Othello Road; thence in an easterly direction to the pipeline pumping station; thence westerly along the gas pipeline right of way to its intersection with the old Kettle Valley Railway right of way; thence southeasterly along the northern edge of the right of way to the point of its intersection with a line due North from the mouth of Two Mile Creek; thence due South to the mouth of Two Mile creek; thence southerly up Two Mile Creek to the Coquihalla Highway; thence westerly along the Coquihalla Highway to its point of commencement. (2)Commencing at the intersection of the No. 1 Highway and Chawuthen Creek; thence northerly along the creek to its mouth; thence easterly along the natural boundary of the Fraser River to the southerly end of the Bristol Island causeway; thence easterly across the causeway to the natural boundary of the Fraser River; thence easterly along the natural boundary of the Fraser River to its point of intersection with the southwesterly boundary of the Town of Hope; thence southerly and easterly along the town boundary to a point 500 m south of its intersection with Highway No. 1; thence southeasterly and easterly at a perpendicular distance of 500 m and parallel to Highway No. 1 to a point that is 500 m east of Silverhope Road; thence southerly at a perpendicular distance of 500 m and parallel to Silverhope Road to a point due North of Eureka Creek; thence due South along a straight line through the mouth of Eureka Creek to a point 500 m due South of Silverhope Road; thence westerly and northerly along a line parallel to and 500 m perpendicularly distant from the centerline of Silverhope Road to a point 500 m due South of Highway No. 1; thence easterly along a line parallel to and 500 m perpendicularly distant from the centerline of Highway No. 1 to a point due South of the mouth of Chawuthen Creek; thence due North along a line to its point of commencement [en. B.C. Reg. 205/94, s. 11.]",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "corners",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "within M.U.s 2-2 and 2-17",
+        "effect": "No Shooting Areas",
+        "geometry.steps[0]": "Commencing at the intersection of the Coquihalla Highway and the easternmost boundary of the Town of Hope west of Thacker Creek",
+        "geometry.steps[1]": "thence northerly, westerly and northerly along the easterly boundary of the Town of Hope to its intersection with the southwest corner of the Aywawwis #15 Indian Reserve",
+        "geometry.steps[2]": "thence easterly and northerly along the southerly and easterly boundary of the reserve to a private logging company road",
+        "geometry.steps[3]": "thence southeasterly along the northern boundary of the road to its intersection with Othello Road",
+        "geometry.steps[4]": "thence in an easterly direction to the pipeline pumping station",
+        "geometry.steps[5]": "thence westerly along the gas pipeline right of way to its intersection with the old Kettle Valley Railway right of way",
+        "geometry.steps[6]": "thence southeasterly along the northern edge of the right of way to the point of its intersection with a line due North from the mouth of Two Mile Creek",
+        "geometry.steps[7]": "thence due South to the mouth of Two Mile creek",
+        "geometry.steps[8]": "thence southerly up Two Mile Creek to the Coquihalla Highway",
+        "geometry.steps[9]": "thence westerly along the Coquihalla Highway to its point of commencement",
+        "geometry.steps[10]": "Commencing at the intersection of the No. 1 Highway and Chawuthen Creek",
+        "geometry.steps[11]": "thence northerly along the creek to its mouth",
+        "geometry.steps[12]": "thence easterly along the natural boundary of the Fraser River to the southerly end of the Bristol Island causeway",
+        "geometry.steps[13]": "thence easterly across the causeway to the natural boundary of the Fraser River",
+        "geometry.steps[14]": "thence easterly along the natural boundary of the Fraser River to its point of intersection with the southwesterly boundary of the Town of Hope",
+        "geometry.steps[15]": "thence southerly and easterly along the town boundary to a point 500 m south of its intersection with Highway No. 1",
+        "geometry.steps[16]": "thence southeasterly and easterly at a perpendicular distance of 500 m and parallel to Highway No. 1 to a point that is 500 m east of Silverhope Road",
+        "geometry.steps[17]": "thence southerly at a perpendicular distance of 500 m and parallel to Silverhope Road to a point due North of Eureka Creek",
+        "geometry.steps[18]": "thence due South along a straight line through the mouth of Eureka Creek to a point 500 m due South of Silverhope Road",
+        "geometry.steps[19]": "thence westerly and northerly along a line parallel to and 500 m perpendicularly distant from the centerline of Silverhope Road to a point 500 m due South of Highway No. 1",
+        "geometry.steps[20]": "thence easterly along a line parallel to and 500 m perpendicularly distant from the centerline of Highway No. 1 to a point due South of the mouth of Chawuthen Creek",
+        "geometry.steps[21]": "thence due North along a line to its point of commencement"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "4a654364d8f2e26f1b7d8cd0de1159845b3a00d152a52f88a1a58f5d6400559b",
+      "task_id": "closed_area-4a654364d8f2",
+      "construction": [
+        {
+          "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+          "quote": "Commencing at the intersection of the Coquihalla Highway and the easternmost boundary of the Town of Hope west of Thacker Creek",
+          "source": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP, WHSE_ADMIN_BOUNDARIES.CLAB_INDIAN_RESERVES, WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP, WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP, WHSE_BASEMAPPING.FWA_RIVERS_POLY"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "16.206 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "steps: run 1 [\"|||\",\"town of hope|the southwest corner of the aywawwis 15 indian reserve||district_boundary\",\"aywawwis 15 indian reserve|a private logging company rd||reserve_boundary\",\"private logging company rd|its intersection with othello rd||road\",\"|the pipeline pumping station||straight_line\",\"gas pipeline right of way|its intersection with the old kettle valley railway right of way||other\",\"old kettle valley railway right of way|the point of its intersection with a line due north from the mouth of two mile creek||other\",\"|the mouth of two mile creek||straight_line\",\"two mile creek|the coquihalla hwy||creek\",\"coquihalla hwy|its point of commencement||road\",\"|||\",\"chawuthen creek|its mouth||creek\",\"fraser river|the southerly end of the bristol island causeway||river\",\"bristol island causeway|the natural boundary of the fraser river||other\",\"fraser river|its point of intersection with the southwesterly boundary of the town of hope||river\",\"town of hope|a point 500 m south of its intersection with hwy no. 1|500 m|district_boundary\",\"hwy no. 1|a point that is 500 m east of silverhope rd|500 m|road\",\"silverhope rd|a point due north of eureka creek|500 m|road\",\"eureka creek|a point 500 m due south of silverhope rd|500 m|straight_line\",\"silverhope rd|a point 500 m due south of hwy no. 1|500 m|road\",\"hwy no. 1|a point due south of the mouth of chawuthen creek|500 m|road\",\"|its point of commencement||straight_line\"] vs run 2 [\"|||\",\"town of hope|its intersection with the southwest corner of the aywawwis 15 indian reserve||district_boundary\",\"aywawwis 15 indian reserve|a private logging company rd||reserve_boundary\",\"private logging company rd|its intersection with othello rd||road\",\"|the pipeline pumping station||straight_line\",\"gas pipeline right of way|its intersection with the old kettle valley railway right of way||other\",\"old kettle valley railway right of way|the point of its intersection with a line due north from the mouth of two mile creek||other\",\"|the mouth of two mile creek||straight_line\",\"two mile creek|the coquihalla hwy||creek\",\"coquihalla hwy|its point of commencement||road\",\"|||\",\"chawuthen creek|its mouth||creek\",\"fraser river|the southerly end of the bristol island causeway||shoreline\",\"bristol island causeway|the natural boundary of the fraser river||other\",\"fraser river|its point of intersection with the southwesterly boundary of the town of hope||shoreline\",\"town of hope|a point 500 m south of its intersection with hwy no. 1|500 m|district_boundary\",\"hwy no. 1|a point that is 500 m east of silverhope rd|perpendicular distance of 500 m|road\",\"silverhope rd|a point due north of eureka creek|perpendicular distance of 500 m|road\",\"eureka creek|a point 500 m due south of silverhope rd|500 m|straight_line\",\"silverhope rd|a point 500 m due south of hwy no. 1|500 m perpendicularly distant|road\",\"hwy no. 1|a point due south of the mouth of chawuthen creek|500 m perpendicularly distant|road\",\"|its point of commencement||straight_line\"]"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-20T21:47:08.075Z",
-  "updated": "2026-10-20T21:47:08.075Z"
+  "updated": "2026-10-28T17:10:12.105Z"
 }

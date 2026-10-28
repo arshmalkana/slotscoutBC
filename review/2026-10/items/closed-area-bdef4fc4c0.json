@@ -5,11 +5,15 @@
   "title": "Closed Areas Regulation, Schedule 5, section 6 (Skookumchuck Pulp Mill)",
   "rule_id": "W5-006",
   "change_type": "new",
-  "decision": "No shape was built. Draw it from the extracted fields, or reject the extraction.",
+  "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs disagree: steps: run 1 [\"skookumchuck kootenay river bridge|||\",\"hwy 95|the junction of a roadway named farstad way||road\",\"farstad way|skookumchuck river rd||road\",\"skookumchuck river rd|the skookumchuck river bridge||road\",\"skookumchuck river|its confluence with the kootenay river||river\",\"kootenay river|point of commencement||river\"] vs run 2 [\"hwy 95|||\",\"hwy 95|the junction of a roadway named farstad way||road\",\"farstad way|skookumchuck river rd||road\",\"skookumchuck river rd|the skookumchuck river bridge||road\",\"skookumchuck river|its confluence with the kootenay river||river\",\"kootenay river|point of commencement||river\"]",
     "not built: the AI runs disagree, so the area stays grey until a person decides",
-    "validation failed: shape built (no shape could be built)"
+    "approximate outline (traced) drawn from the places the walk names, using run 1's reading of the steps",
+    "\"Skookumchuck Kootenay River bridge\" was not found in the official layers; that side is drawn straight",
+    "\"Skookumchuck River road\" was not found in the official layers; that side is drawn straight",
+    "\"Skookumchuck River\" was not found in the official layers; that side is drawn straight",
+    "validation failed: two independent extractions agree (steps: run 1 [\"skookumchuck kootenay river bridge|||\",\"hwy 95|the junction of a roadway named farstad way||road\",\"farstad way|skookumchuck river rd||road\",\"skookumchuck river rd|the skookumchuck river bridge||road\",\"skookumchuck river|its confluence with the kootenay river||river\",\"kootenay river|point of commencement||river\"] vs run 2 [\"hwy 95|||\",\"hwy 95|the junction of a roadway named farstad way||road\",\"farstad way|skookumchuck river rd||road\",\"skookumchuck river rd|the skookumchuck river bridge||road\",\"skookumchuck river|its confluence with the kootenay river||river\",\"kootenay river|point of commencement||river\"])"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nSkookumchuck Pulp Mill\n6 That portion of the Province of British Columbia in Kootenay District which is contained within the following described boundaries: Commencing at the Skookumchuck Kootenay River bridge on Highway 95; thence southerly along Highway 95 to the junction of a roadway named Farstad Way; thence westerly and northerly along Farstad Way to Skookumchuck River road; thence northerly along said road to the Skookumchuck River bridge; thence downstream along the Skookumchuck River to its confluence with the Kootenay River; thence downstream along the Kootenay River high water mark to point of commencement.",
@@ -266,12 +270,59 @@
   "disagreements": [
     "steps: run 1 [\"skookumchuck kootenay river bridge|||\",\"hwy 95|the junction of a roadway named farstad way||road\",\"farstad way|skookumchuck river rd||road\",\"skookumchuck river rd|the skookumchuck river bridge||road\",\"skookumchuck river|its confluence with the kootenay river||river\",\"kootenay river|point of commencement||river\"] vs run 2 [\"hwy 95|||\",\"hwy 95|the junction of a roadway named farstad way||road\",\"farstad way|skookumchuck river rd||road\",\"skookumchuck river rd|the skookumchuck river bridge||road\",\"skookumchuck river|its confluence with the kootenay river||river\",\"kootenay river|point of commencement||river\"]"
   ],
-  "lookups": [],
+  "lookups": [
+    {
+      "query": "Kootenay District",
+      "kind": "other",
+      "layer": "WHSE_TANTALIS.TA_LAND_DISTRICTS_SVW",
+      "status": "ok",
+      "matches": 1,
+      "ids": [
+        "KOOTENAY DISTRICT"
+      ],
+      "sample": [
+        {
+          "ADMIN_AREA_SID": 129,
+          "LAND_DISTRICT_NAME": "KOOTENAY DISTRICT",
+          "FEATURE_CODE": "FA91800000",
+          "FEATURE_AREA_SQM": 76036193238.5857,
+          "FEATURE_LENGTH_M": 1768455.4793,
+          "OBJECTID": 9435640,
+          "SE_ANNO_CAD_DATA": null
+        }
+      ]
+    }
+  ],
   "validation": [
     {
-      "check": "shape built",
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.239 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
       "passed": false,
-      "detail": "no shape could be built"
+      "detail": "steps: run 1 [\"skookumchuck kootenay river bridge|||\",\"hwy 95|the junction of a roadway named farstad way||road\",\"farstad way|skookumchuck river rd||road\",\"skookumchuck river rd|the skookumchuck river bridge||road\",\"skookumchuck river|its confluence with the kootenay river||river\",\"kootenay river|point of commencement||river\"] vs run 2 [\"hwy 95|||\",\"hwy 95|the junction of a roadway named farstad way||road\",\"farstad way|skookumchuck river rd||road\",\"skookumchuck river rd|the skookumchuck river bridge||road\",\"skookumchuck river|its confluence with the kootenay river||river\",\"kootenay river|point of commencement||river\"]"
     },
     {
       "check": "step directions match the line",
@@ -279,8 +330,289 @@
       "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
     }
   ],
-  "construction": [],
+  "construction": [
+    {
+      "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at the Skookumchuck Kootenay River bridge on Highway 95",
+      "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP, WHSE_BASEMAPPING.FWA_RIVERS_POLY"
+    }
+  ],
+  "feature": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -115.75490398295483,
+            49.90237998860557
+          ],
+          [
+            -115.75487729811448,
+            49.90221303679076
+          ],
+          [
+            -115.75480291582122,
+            49.902052185864044
+          ],
+          [
+            -115.75468342710073,
+            49.901903037899224
+          ],
+          [
+            -115.75452299382954,
+            49.90177078733298
+          ],
+          [
+            -115.75432720374403,
+            49.90166004006956
+          ],
+          [
+            -115.731567696633,
+            49.89103008047322
+          ],
+          [
+            -115.73133673352659,
+            49.89094262084693
+          ],
+          [
+            -115.73108409079151,
+            49.89088519650082
+          ],
+          [
+            -115.7308190735713,
+            49.89085992243068
+          ],
+          [
+            -115.73055144270079,
+            49.89086772950334
+          ],
+          [
+            -115.7302910552622,
+            49.89090833017739
+          ],
+          [
+            -115.7300475015988,
+            49.89098022909197
+          ],
+          [
+            -115.72982975214535,
+            49.891080778133535
+          ],
+          [
+            -115.7296458270724,
+            49.89120627395431
+          ],
+          [
+            -115.72458491911652,
+            49.895401675974554
+          ],
+          [
+            -115.72444268720042,
+            49.895546064912736
+          ],
+          [
+            -115.72434545358193,
+            49.89570518672122
+          ],
+          [
+            -115.72429673433315,
+            49.89587328813228
+          ],
+          [
+            -115.72429829149321,
+            49.89604429114721
+          ],
+          [
+            -115.72435006928747,
+            49.896212012790414
+          ],
+          [
+            -115.73237879465403,
+            49.913441075115074
+          ],
+          [
+            -115.73238731993594,
+            49.91345870369955
+          ],
+          [
+            -115.73255701157619,
+            49.91379730563855
+          ],
+          [
+            -115.7326398786321,
+            49.913927035048836
+          ],
+          [
+            -115.73277741252649,
+            49.91410211849463
+          ],
+          [
+            -115.73294359845887,
+            49.91431366027519
+          ],
+          [
+            -115.73300659260411,
+            49.914385468728035
+          ],
+          [
+            -115.73334992306914,
+            49.914738038088295
+          ],
+          [
+            -115.73367283516447,
+            49.915069628325455
+          ],
+          [
+            -115.73424316347716,
+            49.91565528107953
+          ],
+          [
+            -115.73441874592739,
+            49.91580021722881
+          ],
+          [
+            -115.73463642769022,
+            49.9159191373855
+          ],
+          [
+            -115.73488711436492,
+            49.91600707310331
+          ],
+          [
+            -115.7351603324254,
+            49.9160603504327
+          ],
+          [
+            -115.73544466684123,
+            49.916076743440016
+          ],
+          [
+            -115.73572823806411,
+            49.916055567221875
+          ],
+          [
+            -115.73599919843728,
+            49.91599770652513
+          ],
+          [
+            -115.7362462272716,
+            49.915905578775984
+          ],
+          [
+            -115.73645900388719,
+            49.91578303306418
+          ],
+          [
+            -115.75454033705105,
+            49.90299357252937
+          ],
+          [
+            -115.7546969954804,
+            49.90285945596811
+          ],
+          [
+            -115.75481223437504,
+            49.90270892641912
+          ],
+          [
+            -115.75488204046606,
+            49.902547226695944
+          ],
+          [
+            -115.75490398295483,
+            49.90237998860557
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "rule_id": "W5-006",
+      "authority": "Wildlife Act, Closed Areas Regulation (B.C. Reg. 76/84), Sch. 5, s. 6",
+      "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+      "source_text": "Schedule 5 No Shooting Areas (Section 6)\nSkookumchuck Pulp Mill\n6 That portion of the Province of British Columbia in Kootenay District which is contained within the following described boundaries: Commencing at the Skookumchuck Kootenay River bridge on Highway 95; thence southerly along Highway 95 to the junction of a roadway named Farstad Way; thence westerly and northerly along Farstad Way to Skookumchuck River road; thence northerly along said road to the Skookumchuck River bridge; thence downstream along the Skookumchuck River to its confluence with the Kootenay River; thence downstream along the Kootenay River high water mark to point of commencement.",
+      "source_version": "BC Laws consolidation current to October 13, 2026",
+      "effect": "no_shooting",
+      "period": null,
+      "exemptions": [],
+      "geometry_method": "metes_and_bounds",
+      "buffer_m": null,
+      "partial_extent": false,
+      "conservative": true,
+      "approximate": true,
+      "approximate_quality": "traced",
+      "digitised_by": "pipeline (agent mode: Claude Code agent mode; no rule parse)",
+      "digitised_on": "2026-10-28",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "confidence": "low",
+      "notes": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+      "extraction_method": "ai",
+      "model_version": "Claude Code agent mode / Claude Code agent mode, fresh subagent",
+      "prompt_version": "closed_area.v1",
+      "quotes": {
+        "within": "in Kootenay District",
+        "effect": "No Shooting Areas",
+        "geometry.steps[0]": "Commencing at the Skookumchuck Kootenay River bridge on Highway 95",
+        "geometry.steps[1]": "thence southerly along Highway 95 to the junction of a roadway named Farstad Way",
+        "geometry.steps[2]": "thence westerly and northerly along Farstad Way to Skookumchuck River road",
+        "geometry.steps[3]": "thence northerly along said road to the Skookumchuck River bridge",
+        "geometry.steps[4]": "thence downstream along the Skookumchuck River to its confluence with the Kootenay River",
+        "geometry.steps[5]": "thence downstream along the Kootenay River high water mark to point of commencement"
+      },
+      "run_agreement": false,
+      "status": "candidate",
+      "version": 1,
+      "unit_hash": "9f252596b5ec4b68f30de475a2b7e1d138b74473b9d73aadb43f60d662ebff1e",
+      "task_id": "closed_area-9f252596b5ec",
+      "construction": [
+        {
+          "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+          "quote": "Commencing at the Skookumchuck Kootenay River bridge on Highway 95",
+          "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP, WHSE_BASEMAPPING.FWA_RIVERS_POLY"
+        }
+      ],
+      "validation": [
+        {
+          "check": "ring closes",
+          "passed": true,
+          "detail": "largest gap 0.0 m (limit 25 m)"
+        },
+        {
+          "check": "no self-crossing",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "check": "area in expected range",
+          "passed": true,
+          "detail": "3.239 km² (limit 500 km²)"
+        },
+        {
+          "check": "inside the area the text names",
+          "passed": true,
+          "detail": "100.0% inside"
+        },
+        {
+          "check": "overlaps the synopsis map shape",
+          "passed": null,
+          "detail": "no synopsis shape in inbox/synopsis for this area yet"
+        },
+        {
+          "check": "two independent extractions agree",
+          "passed": false,
+          "detail": "steps: run 1 [\"skookumchuck kootenay river bridge|||\",\"hwy 95|the junction of a roadway named farstad way||road\",\"farstad way|skookumchuck river rd||road\",\"skookumchuck river rd|the skookumchuck river bridge||road\",\"skookumchuck river|its confluence with the kootenay river||river\",\"kootenay river|point of commencement||river\"] vs run 2 [\"hwy 95|||\",\"hwy 95|the junction of a roadway named farstad way||road\",\"farstad way|skookumchuck river rd||road\",\"skookumchuck river rd|the skookumchuck river bridge||road\",\"skookumchuck river|its confluence with the kootenay river||river\",\"kootenay river|point of commencement||river\"]"
+        },
+        {
+          "check": "step directions match the line",
+          "passed": null,
+          "detail": "not run: metes-and-bounds walks are drawn by a person in this version"
+        }
+      ],
+      "change_type": "new"
+    }
+  },
   "status": "open",
   "created": "2026-10-21T16:09:19.394Z",
-  "updated": "2026-10-21T16:09:19.394Z"
+  "updated": "2026-10-28T17:17:58.662Z"
 }
