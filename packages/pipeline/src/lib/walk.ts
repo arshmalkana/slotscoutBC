@@ -136,6 +136,18 @@ export async function resolveStep(step: WalkStep, area: Feature<Polygon | MultiP
   return null;
 }
 
+/** A walk that runs past its time budget is left to a person rather than holding up the build. */
+class WalkTimeout extends Error {}
+let deadline = Infinity;
+const tick = () => {
+  if (Date.now() > deadline) throw new WalkTimeout();
+};
+const WALK_BUDGET_MS = 45_000;
+const NEAR_DEG = (NEAR_M / 111_000) * 2;
+const boxes = new WeakMap<Line, number[]>();
+const bb = (l: Line) => boxes.get(l) ?? (boxes.set(l, turf.bbox(l)), boxes.get(l)!);
+const boxesNear = (p: number[], q: number[], m: number) => !(p[2]! + m < q[0]! || q[2]! + m < p[0]! || p[3]! + m < q[1]! || q[3]! + m < p[1]!);
+
 /** The feature a landmark phrase names: "its intersection with the westerly boundary of the Popkum No. I Indian Reserve" -> "Popkum No. I Indian Reserve". */
 export function landmarkName(text: string): string | null {
   let t = text.trim().replace(/[.;,]$/, "");
@@ -149,16 +161,28 @@ export function landmarkName(text: string): string | null {
 /** Where two followed features meet: their crossings, or their closest approach when they only come near. */
 function meetings(a: Line[], b: Line[]): Position[] {
   const pts: Position[] = [];
-  for (const x of a) for (const y of b) for (const p of turf.lineIntersect(x, y).features) pts.push(p.geometry.coordinates);
+  // Only pieces whose boxes overlap can cross; only boxes within NEAR_M can come near.
+  for (const x of a) {
+    tick();
+    for (const y of b) {
+      if (!boxesNear(bb(x), bb(y), 0)) continue;
+      for (const p of turf.lineIntersect(x, y).features) pts.push(p.geometry.coordinates);
+    }
+    if (pts.length > 400) break;
+  }
   if (!pts.length) {
     let best: { p: Position; d: number } | null = null;
-    for (const x of a)
-      for (const c of x.geometry.coordinates.filter((_, i, arr) => i % Math.max(1, Math.floor(arr.length / 200)) === 0))
-        for (const y of b) {
+    for (const x of a) {
+      tick();
+      const near = b.filter((y) => boxesNear(bb(x), bb(y), NEAR_DEG));
+      if (!near.length) continue;
+      for (const c of x.geometry.coordinates.filter((_, i, arr) => i % Math.max(1, Math.floor(arr.length / 40)) === 0))
+        for (const y of near) {
           const n = turf.nearestPointOnLine(y, c, { units: "meters" });
           const d = n.properties.dist ?? Infinity;
           if (!best || d < best.d) best = { p: n.geometry.coordinates, d };
         }
+    }
     if (best && best.d <= NEAR_M) pts.push(best.p);
   }
   // Merge points within 30 m of each other.
@@ -200,7 +224,8 @@ function chooseCorners(cands: (Position[] | null)[]): (Position | null)[] {
 /** The stretch of a followed feature between two corners (the shorter way round a boundary). */
 function along(r: Resolved, from: Position, to: Position): Position[] | null {
   let best: { line: Line; d: number } | null = null;
-  for (const comp of components(r.lines as unknown as AnyFeature[])) {
+  for (const comp of components(r.lines.filter((l) => boxesNear(bb(l), turf.bbox(turf.lineString([from, to])), NEAR_DEG)) as unknown as AnyFeature[])) {
+    tick();
     const merged = mergeLines(comp as unknown as Line[]);
     for (const line of merged) {
       const d1 = turf.nearestPointOnLine(line, from, { units: "meters" }).properties.dist ?? Infinity;
@@ -227,6 +252,7 @@ function mergeLines(lines: Line[]): Line[] {
   const out: Position[][] = [];
   const near = (a: Position, b: Position) => turf.distance(a, b, { units: "meters" }) < 2;
   while (pool.length) {
+    tick();
     let cur = pool.shift()!;
     let grew = true;
     while (grew) {
@@ -335,6 +361,18 @@ async function walkPart(steps: WalkStep[], area: Feature<Polygon | MultiPolygon>
 }
 
 export async function walkOutline(steps: WalkStep[], area: Feature<Polygon | MultiPolygon> | null, vicinity: Position | null): Promise<WalkResult> {
+  deadline = Date.now() + WALK_BUDGET_MS;
+  try {
+    return await walkWithin(steps, area, vicinity);
+  } catch (e) {
+    if (!(e instanceof WalkTimeout)) throw e;
+    return { geometry: null, quality: null, notes: ["the walk was too complex to trace within the time allowed; a person draws it"], layers: [] };
+  } finally {
+    deadline = Infinity;
+  }
+}
+
+async function walkWithin(steps: WalkStep[], area: Feature<Polygon | MultiPolygon> | null, vicinity: Position | null): Promise<WalkResult> {
   const notes: string[] = [];
   const layers = new Set<string>();
   const shapes: Feature<Polygon | MultiPolygon>[] = [];

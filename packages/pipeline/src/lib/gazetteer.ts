@@ -1,6 +1,6 @@
 import { join } from "node:path";
 import * as turf from "@turf/turf";
-import type { Feature, FeatureCollection, Geometry, LineString, MultiLineString, MultiPolygon, Polygon } from "geojson";
+import type { Feature, FeatureCollection, Geometry, LineString, MultiLineString, MultiPolygon, Polygon, Position } from "geojson";
 import { politeFetch } from "./http.js";
 import { P } from "./paths.js";
 import { readJsonIf } from "./util.js";
@@ -181,9 +181,19 @@ export function components(fs: AnyFeature[]): AnyFeature[][] {
   const parent = fs.map((_, i) => i);
   const find = (i: number): number => (parent[i] === i ? i : (parent[i] = find(parent[i]!)));
   const ends = lines.map((ls) => ls.flatMap((l) => [l[0]!, l[l.length - 1]!]));
-  for (let i = 0; i < fs.length; i++)
-    for (let j = i + 1; j < fs.length; j++)
-      if (ends[i]!.some((a) => ends[j]!.some((b) => turf.distance(a, b, { units: "meters" }) < 2))) parent[find(i)] = find(j);
+  // Ends within 2 m join; a grid of ~5 m cells finds the candidates without comparing every pair.
+  const cell = (p: Position) => `${Math.floor(p[0]! / 5e-5)},${Math.floor(p[1]! / 5e-5)}`;
+  const grid = new Map<string, number[]>();
+  ends.forEach((es, i) => es.forEach((p) => grid.set(cell(p), [...(grid.get(cell(p)) ?? []), i])));
+  ends.forEach((es, i) =>
+    es.forEach((p) => {
+      const [cx, cy] = cell(p).split(",").map(Number);
+      for (let dx = -1; dx <= 1; dx++)
+        for (let dy = -1; dy <= 1; dy++)
+          for (const j of grid.get(`${cx! + dx},${cy! + dy}`) ?? [])
+            if (j !== i && ends[j]!.some((q) => turf.distance(p, q, { units: "meters" }) < 2)) parent[find(i)] = find(j);
+    }),
+  );
   const groups = new Map<number, AnyFeature[]>();
   fs.forEach((f, i) => groups.set(find(i), [...(groups.get(find(i)) ?? []), f]));
   return [...groups.values()];
