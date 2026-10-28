@@ -35,6 +35,18 @@ Nothing finished is ever done twice. Every extraction answer is its own file in 
 
 PDFs are read by `pdftotext` first. A page with no usable text layer (a scan, or a map saved as a picture) is read by OCR (`tesseract`), marked `[Page N: text read by OCR from the page image]` in the text, and map or scan pages are also saved as page images (`raw/<YYYY-MM>/dm_notices/images/`). The extraction looks at the images as well as the text: District Manager letters, bulletins and gate maps use `dm_notice.v1`, which lists every road the document closes. Quotes are still checked against the text and OCR text; anything seen only on the image is shown to a person but not counted. A PDF goes to a person as unreadable only when OCR and the page images both fail.
 
+### Closed-area shapes: exact, map-read and approximate
+
+`make build` draws each Closed Areas Regulation section the best way the sources allow, in this order:
+
+1. **Exact, from official layers:** whole areas (parks, islands, lakes, reserves, management units, land districts) and road buffers, including sections that list several roads (read by code from the text).
+2. **Read from the Province's map:** `make pull` collects the closed-area maps GeoBC publishes on the hunting synopsis page (`raw/<YYYY-MM>/closed_area_maps/`, `index.json`). Code reads each map's georeferencing with GDAL (in the ingest image), picks out the closed-area colour (yellow-highlighted roads buffered by the legend's distance, or a red outline filled in) and clips it to the management units the section names. Used when no text-drawn shape passed its checks.
+3. **Approximate, from a boundary walk:** "commencing at …, thence along …" sections. Code finds each followed feature in the official layers, places the corners where they meet (or at the landmark the text names), and traces between them; too few corners gives a zone around the features, none a 1 km zone around the named place.
+
+Map-read and walk outlines carry `approximate: true`. The engine reads a spot inside one as "Cannot confirm: possibly inside …" (grey), except deeper inside a map-read outline than its reading tolerance, where the answer is firm. The map draws them grey and dashed; exact areas are solid. Sections drawn only on a map that is not published (older attached maps) stay grey.
+
+Arsh's instruction of 2026-10-28: the shapes code draws are approved in his name, each decision noting it (`review/<YYYY-MM>/decisions.jsonl`).
+
 ## One-way rule (Addendum A 5.1, 9)
 
 Stricter changes (a new closure, a bigger buffer, a new road) may go live at once as red or amber and a person confirms within 24 hours, but only after the gold set passes (`ai.autopublish` in `config.toml`, checked against `reports/gold-metrics.json`). Looser changes (a closure lifted, an area removed, a boundary shrinking) never go live without a person: the live map keeps the old, stricter version. Unclear changes hold the area grey.
