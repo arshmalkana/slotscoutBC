@@ -163,6 +163,15 @@ describe("evaluate: profile-dependent Closed Areas rules", () => {
     expect(outside.checks.some((c) => c.ruleId === "W5" && c.status === "unknown")).toBe(false);
   });
 
+  it("an outline read from an official map is firm deep inside, 'possibly inside' near its edge", () => {
+    const area = (offsetEastM: number) =>
+      digitised(square(PIN, 2000, offsetEastM), { rule_id: "W6-014", effect: "no_shooting", approximate: true, approximate_quality: "map_image", approximate_tolerance_m: 100 });
+    expect(evaluate(baseInput({ digitised: [area(0)] })).verdict.state).toBe("red");
+    const edge = evaluate(baseInput({ digitised: [area(1950)] }));
+    expect(edge.verdict.state).toBe("grey");
+    expect(check(edge, "W6").reason).toMatch(/possibly inside.*official map/);
+  });
+
   it("Schedule 5.1 hunting-exempt areas: red for target shooting, amber (never green) for hunting", () => {
     const area = digitised(square(PIN, 300), { rule_id: "W6-001", effect: "no_shooting_hunting_exempt" });
     expect(evaluate(baseInput({ digitised: [area] })).verdict.state).toBe("red");

@@ -10,6 +10,7 @@ import { ruleIdFor, splitBylaw, splitRegulation } from "../src/lib/units.js";
 import { normaliseUnit, quoteFound } from "../src/lib/util.js";
 import { classifyAgainst, partsInside } from "../src/build/closedAreas.js";
 import { landDistrictName, muIds } from "../src/lib/gazetteer.js";
+import { legendSymbols, mapIdFromFile, nameWords } from "../src/lib/mapimage.js";
 import { parseRoadList } from "../src/lib/roadlist.js";
 
 // Closed Areas Regulation, Schedule 5, section 85, as quoted in Addendum A 4.1.
@@ -178,6 +179,19 @@ describe("reading names and road lists from the official text", () => {
     expect(list[1]).toMatchObject({ from: "Blubber Bay Road", to: "Shelter Point Road", partial: null });
     expect(list[2]!.partial).toMatch(/^from the junction/);
     expect(list.every((r) => r.spurs)).toBe(true);
+  });
+
+  it("reads the Province's closed-area maps: map number, legend symbol and name", () => {
+    expect(mapIdFromFile("closed_areas_reg_3-69_26.pdf")).toBe("3-69");
+    expect(mapIdFromFile("closed_area_51-14_22.pdf")).toBe("5.1-14");
+    expect(mapIdFromFile("closed_areas_reg_9-22t_26.pdf")).toBe("9-22");
+    expect(mapIdFromFile("nsa_5_139.pdf")).toBe("5-139");
+    expect(mapIdFromFile("nsha_kalamalka_lake_park.pdf")).toBeNull();
+    expect(legendSymbols("No shooting within 400m of the roads/streams highlighted in yellow")).toEqual([{ colour: "yellow", bufferM: 400 }]);
+    expect(legendSymbols("No shooting within 400m on the east side and 800m on the west side of the roads highlighted in orange")).toEqual([{ colour: "orange", bufferM: 800 }]);
+    expect(legendSymbols("No Shooting or Hunting Area")).toEqual([{ colour: "red", bufferM: null }]);
+    expect([...nameWords("Chilko — Newton")]).toEqual(["chilko", "newton"]);
+    expect(nameWords("no_hunting_area_-_400m_chilko-newton_road_mu_5-4_and_5-5.pdf").has("lord")).toBe(false);
   });
 
   it("gives up on a list it cannot read rather than drawing part of it", () => {

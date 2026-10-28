@@ -573,6 +573,27 @@ sources:
   pull: bclaws
   unit: regulation_section
   method: rule parser for road corridors and whole areas; AI extraction for metes and bounds; person reviews every shape (Addendum A 2)
+- id: closed_area_maps
+  name: Closed Areas Regulation maps (GeoBC georeferenced PDFs)
+  owner: Province of British Columbia, Wildlife and Habitat Branch; maps produced by GeoBC
+  url: https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/regulations-synopsis
+  access: page links
+  endpoint: raw/<YYYY-MM>/closed_area_maps/index.json
+  layer: Closed area maps linked from the hunting synopsis page
+  licence: Province of British Columbia
+  robots: www2.gov.bc.ca robots.txt allows /gov/content and /assets/gov/sports-recreation-arts-and-culture (checked 2026-10-28)
+  cadence: Monthly
+  freshness_hours: 1080
+  rules:
+  - W3
+  - W5
+  - W6
+  - W8
+  - W9
+  contact: Wildlife and Habitat Branch
+  pull: closed_area_maps
+  unit: map
+  method: the map's own closed-area layer when the PDF keeps one; otherwise the georeferenced map image, closed-area colour picked out by code (approximate)
 - id: bylaws
   name: Local government firearm bylaw register
   owner: Each municipality, regional district and local trust committee; register kept by SlotScout

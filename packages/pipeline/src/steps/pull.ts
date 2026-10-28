@@ -6,6 +6,7 @@ import { pullLayer } from "../lib/gis.js";
 import { fetchBuffer, fetchText, userAgent } from "../lib/http.js";
 import { addFile, clearFailure, fail, loadManifest, resetSource, saveManifest, setSource, type Manifest } from "../lib/manifest.js";
 import { P, monthDir } from "../lib/paths.js";
+import { gdalAvailable, mapIdFromFile, readClosedAreaMap } from "../lib/mapimage.js";
 import { pdfTextFile, readPdf } from "../lib/pdf.js";
 import { loadRegistry, type Source } from "../lib/registry.js";
 import { ensureDir, listFiles, log, progress, readJsonIf, rel, sha256, writeText } from "../lib/util.js";
@@ -191,6 +192,72 @@ async function pullBcLaws(m: Manifest, opts: PullOpts): Promise<void> {
   saveManifest(m);
 }
 
+const SYNOPSIS_PAGE = "https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/regulations-synopsis";
+const CLOSED_AREA_MAP = /^(closed_areas?(_reg)?_|nsha_|nsa_|no_hunting_area|fontas_no_hunting)/i;
+
+export interface ClosedAreaMap {
+  file: string;
+  title: string;
+  url: string;
+  sha256: string;
+  mapId: string | null;
+  method: "layer" | "image" | null;
+  style: "outline" | "highlight" | null;
+  bufferM: number | null;
+  toleranceM: number | null;
+  /** The outline read from the map (repository path), when one was read. */
+  outline: string | null;
+  problems: string[];
+}
+
+/**
+ * The closed-area maps GeoBC publishes for the Closed Areas Regulation, linked from the hunting synopsis
+ * page (gov.bc.ca robots.txt allows /gov/content and /assets). Each map is kept with its hash, and its
+ * outline is read from the map's own coordinates (lib/mapimage.ts).
+ */
+async function pullClosedAreaMaps(m: Manifest, opts: PullOpts): Promise<void> {
+  if (!want(opts, "closed_area_maps")) return;
+  const dir = join(monthDir(m.month), "closed_area_maps");
+  let page: Awaited<ReturnType<typeof fetchText>>;
+  try {
+    page = await fetchText(SYNOPSIS_PAGE, { kind: "page", accept: "text/html" });
+  } catch (e) {
+    fail(m, "closed_area_maps", "synopsis page", e);
+    return;
+  }
+  storeFile(m, "closed_area_maps", join(dir, "synopsis-page.html"), Buffer.from(page.text), SYNOPSIS_PAGE, page.fetchedAt);
+  const links = new Map<string, { url: string; title: string }>();
+  for (const [, href, inner] of page.text.matchAll(/href="([^"]+\.pdf)"[^>]*>([\s\S]*?)<\/a>/gi)) {
+    const name = basename(href!);
+    if (!CLOSED_AREA_MAP.test(name) || links.has(name)) continue;
+    links.set(name, { url: new URL(href!, SYNOPSIS_PAGE).toString(), title: inner!.replace(/<[^>]+>|&nbsp;/g, " ").replace(/\s+/g, " ").trim() });
+  }
+  const gdal = gdalAvailable();
+  if (!gdal) log("pull", "GDAL is not installed: closed-area maps are kept but their outlines are not read (rebuild the ingest image)");
+  const index: ClosedAreaMap[] = [];
+  let i = 0;
+  for (const [name, l] of links) {
+    try {
+      const res = await fetchBuffer(l.url, { kind: "page", accept: "application/pdf" });
+      const file = join(dir, name);
+      storeFile(m, "closed_area_maps", file, res.body, l.url, res.fetchedAt, l.title);
+      const onDisk = existsSync(file) ? file : join(dir, "large", name);
+      const read = gdal ? readClosedAreaMap(onDisk, name) : { mapId: mapIdFromFile(name), method: null, style: null, bufferM: null, toleranceM: null, geometry: null, problems: ["GDAL not installed"] };
+      const outline = read.geometry ? join(dir, name.replace(/\.pdf$/i, ".geojson")) : null;
+      if (outline) writeText(outline, JSON.stringify({ type: "Feature", properties: { file: name, title: l.title, method: read.method, style: read.style, bufferM: read.bufferM }, geometry: read.geometry }));
+      index.push({ file: name, title: l.title, url: l.url, sha256: sha256(res.body), mapId: read.mapId, method: read.method, style: read.style, bufferM: read.bufferM, toleranceM: read.toleranceM, outline: outline ? rel(outline) : null, problems: read.problems });
+      clearFailure(m, "closed_area_maps", name);
+    } catch (e) {
+      fail(m, "closed_area_maps", name, e);
+    }
+    progress("pull", "closed-area maps", ++i, links.size, name);
+  }
+  writeText(join(dir, "index.json"), JSON.stringify(index, null, 2) + "\n");
+  const read = index.filter((x) => x.outline).length;
+  setSource(m, "closed_area_maps", { status: read ? "ok" : "partial", detail: `${links.size} maps linked, ${read} outlines read (${index.filter((x) => x.method === "layer").length} from the map's own layer, ${index.filter((x) => x.method === "image").length} from the map image)`, at: new Date().toISOString() });
+  saveManifest(m);
+}
+
 /** Copies every new inbox file into raw/<month>/inbox with its hash; never edits inbox/. */
 function pullInbox(m: Manifest): void {
   const dir = join(monthDir(m.month), "inbox");
@@ -220,6 +287,7 @@ export async function pull(opts: PullOpts = {}): Promise<Manifest> {
   await pullBcLaws(m, opts);
   await pullDistrictPages(m, opts);
   if (want(opts, "bylaws") || opts.only?.some((o) => o.includes(":"))) await pullBylaws(m, opts);
+  await pullClosedAreaMaps(m, opts);
   await pullGis(m, active, opts);
   saveManifest(m);
   const failed = m.failures.length;

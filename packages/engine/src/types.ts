@@ -210,6 +210,8 @@ export interface DigitisedRuleProps {
    */
   approximate?: boolean;
   approximate_quality?: "traced" | "corners" | "vicinity" | "map_image";
+  /** For an outline read from an official map image: how far it can be off. Deeper inside than this is a firm answer. */
+  approximate_tolerance_m?: number;
 }
 
 export type CoverageStatus = "not_started" | "in_progress" | "digitised" | "reviewed";

@@ -420,8 +420,10 @@ function checkWildlife(ctx: Context): void {
       continue;
     }
     const inside = rel.inside;
-    if (f.properties.approximate) {
-      // An approximate outline marks where a closed area roughly is; it never decides a spot either way.
+    // An approximate outline marks where a closed area roughly is and never decides a spot near its edge.
+    // An outline read from an official map image is firm deeper inside than its reading tolerance.
+    const tol = f.properties.approximate_quality === "map_image" ? (f.properties.approximate_tolerance_m ?? null) : null;
+    if (f.properties.approximate && !(inside && tol !== null && rel.edgeDistanceM > tol)) {
       if (!inside) continue;
       const p = f.properties;
       const w = wRuleOf(p.rule_id);

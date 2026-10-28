@@ -9,10 +9,12 @@ import { areaShape, lookupArea, lookupRoad, type Lookup } from "../lib/gazetteer
 import { isForestRoad, parseRoadList } from "../lib/roadlist.js";
 import { vicinityPoint, walkOutline, type WalkStep } from "../lib/walk.js";
 import { buildAdminBoundary, buildRoadBuffer, validateShape, type Built } from "../lib/geometry.js";
-import { P } from "../lib/paths.js";
+import { nameWords } from "../lib/mapimage.js";
+import { P, monthDir } from "../lib/paths.js";
 import { itemId, upsertItem } from "../lib/review.js";
 import { listFiles, log, readJsonIf, writeJson } from "../lib/util.js";
 import { loadAnswer, type Answer } from "../steps/extract.js";
+import type { ClosedAreaMap } from "../steps/pull.js";
 import type { Task } from "../steps/queue.js";
 
 /**
@@ -26,6 +28,17 @@ const EFFECT_STRICTNESS: Record<string, number> = { no_shooting: 5, no_shooting_
 
 export function rulePath(ruleId: string): string {
   return join(P.rules, `${ruleId}.geojson`);
+}
+
+/** The Province's maps for a section, read at pull time (raw/<month>/closed_area_maps/index.json): by map number, or by name. */
+export function sectionMaps(t: Task, month: string): ClosedAreaMap[] {
+  const index = readJsonIf<ClosedAreaMap[]>(join(monthDir(month), "closed_area_maps", "index.json"), []).filter((m) => m.outline);
+  const id = `${t.meta.schedule}-${t.meta.section}`;
+  const byId = index.filter((m) => m.mapId === id);
+  if (byId.length) return byId;
+  const words = nameWords(t.title.match(/\(([^)]+)\)\s*$/)?.[1] ?? "");
+  if (!words.size) return [];
+  return index.filter((m) => !m.mapId && [...words].every((w) => nameWords(`${m.file} ${m.title}`).has(w)));
 }
 
 /** Sections drawn only on a map attached to the regulation ("outlined in red on the attached map"). */
@@ -185,7 +198,7 @@ export async function buildClosedArea(t: Task, month: string): Promise<{ state: 
           const shape = areaShape({ ...l, features: parts as unknown as Lookup["features"] });
           if (shape) built = buildAdminBoundary(shape, c1.quotes["geometry.feature"], l.layer);
           if (own.type === "electoral_area")
-            why.push(`electoral area letters are reassigned over time: check that today's ${own.name} is the area this section means (its heading: ${String(t.meta.sectionTitle ?? "none")})`);
+            why.push(`electoral area letters are reassigned over time: check that today's ${own.name} is the area this section means (its heading: ${t.title.match(/\(([^)]+)\)\s*$/)?.[1] ?? "none"})`);
         }
       } else if (area) built = buildAdminBoundary(area, c1.quotes.within, lookups[0]!.layer);
     } else {
@@ -195,9 +208,29 @@ export async function buildClosedArea(t: Task, month: string): Promise<{ state: 
   } else if (!a) why.push("no usable answer to build from");
   else why.push("not built: the AI runs disagree, so the area stays grey until a person decides");
 
+  let approximate: { quality: string; notes: string[]; toleranceM?: number } | null = null;
+  // A section drawn on a map the Province publishes: the outline code read from that map, when no
+  // text-drawn shape passed its checks (W8-053's road buffer came out at 58 km2; its map shows 4).
+  const maps = sectionMaps(t, month);
+  if (maps.length && (!built.geometry || validateShape({ geometry: built.geometry, method: a?.geometry?.method ?? "other", within: area, synopsis: null, runAgreement: null, disagreements: [] }).some((v) => v.passed === false))) {
+    if (!area && a?.within) {
+      const l = await lookupArea(a.within.type, a.within.name);
+      if (l.status === "ok") (lookups.push(l), (area = areaShape(l)));
+    }
+    const parts = maps.map((m) => readJsonIf<Feature<Polygon | MultiPolygon> | null>(join(P.root, m.outline!), null)).filter((f): f is Feature<Polygon | MultiPolygon> => !!f?.geometry);
+    let shape: Feature<Polygon | MultiPolygon> | null = parts.length > 1 ? turf.union(turf.featureCollection(parts)) : (parts[0] ?? null);
+    // The section covers only the management units it names, whatever else the map shows.
+    if (shape && area) shape = turf.intersect(turf.featureCollection([shape, area]));
+    if (shape) {
+      const how = maps.map((m) => `${m.file} (${m.style === "highlight" ? `yellow-highlighted roads, ${m.bufferM} m` : "red outline"})`).join("; ");
+      built = { geometry: shape.geometry, construction: [{ what: `outline read by code from the official map image: ${how}${area ? `; clipped to ${a?.within?.name}` : ""}`, quote: null, source: maps.map((m) => m.url).join(" ") }], problems: [] };
+      approximate = { quality: "map_image", notes: [], toleranceM: Math.max(...maps.map((m) => m.toleranceM ?? 50)) };
+      why.push(`outline read from the official map (${maps.map((m) => m.file).join(", ")}); firm more than ${approximate.toleranceM} m inside, "possibly inside" nearer the edge`);
+    }
+  }
+
   // A walk ("commencing at …; thence along …") with no exact shape gets an approximate outline, by Arsh's
   // instruction (2026-10-28). It is marked approximate: the engine shows "possibly inside", never a boundary.
-  let approximate: { quality: string; notes: string[] } | null = null;
   const steps = (a?.geometry?.steps ?? []) as WalkStep[];
   if (!built.geometry && a && steps.filter((s) => s.feature || s.until).length >= 2 && !citesMap(t.source_text)) {
     if (!area && a.within) {
@@ -240,7 +273,7 @@ export async function buildClosedArea(t: Task, month: string): Promise<{ state: 
       buffer_m: a.geometry.buffer_m ?? null,
       partial_extent: !!(a.geometry.from || a.geometry.to),
       conservative: true,
-      ...(approximate ? { approximate: true, approximate_quality: approximate.quality as DigitisedRuleProps["approximate_quality"] } : {}),
+      ...(approximate ? { approximate: true, approximate_quality: approximate.quality as DigitisedRuleProps["approximate_quality"], ...(approximate.toleranceM ? { approximate_tolerance_m: approximate.toleranceM } : {}) } : {}),
       digitised_by: `pipeline (${(r1 as Answer).mode} mode: ${aiModel}; ${rule ? "rule parser cross-check" : "no rule parse"})`,
       digitised_on: today(),
       reviewed_by: null,

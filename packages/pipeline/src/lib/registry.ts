@@ -16,7 +16,7 @@ export interface Source {
   freshness_hours: number;
   rules: string[];
   contact: string;
-  pull?: "gis" | "district_pages" | "bclaws" | "bylaws" | "advisories";
+  pull?: "gis" | "district_pages" | "bclaws" | "bylaws" | "advisories" | "closed_area_maps";
   unit?: string;
   method?: string;
   status?: string;
