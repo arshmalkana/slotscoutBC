@@ -2,17 +2,17 @@
   "month": "2026-10",
   "userAgent": "SlotScoutBot/0.1 (+https://slotscout.ca/about; data@slotscout.ca)",
   "startedAt": "2026-10-19T16:53:43.915Z",
-  "updatedAt": "2026-10-22T05:29:49.504Z",
+  "updatedAt": "2026-10-28T23:04:07.868Z",
   "sources": {
     "bcparks_advisories": {
       "status": "skipped",
       "detail": "planned source, not pulled yet",
-      "at": "2026-10-22T05:29:49.494Z"
+      "at": "2026-10-28T23:04:07.648Z"
     },
     "licensee_notices": {
       "status": "skipped",
       "detail": "planned source, not pulled yet",
-      "at": "2026-10-22T05:29:49.494Z"
+      "at": "2026-10-28T23:04:07.648Z"
     },
     "wmu": {
       "status": "ok",
@@ -121,8 +121,8 @@
     },
     "closed_areas": {
       "status": "partial",
-      "detail": "1 of 6 regulations from copies a person saved in inbox/bclaws; waiting for 190_84_00_multi, 180_90_00_multi, 16_2004, 38_2005, 18_2024; 1 unconfirmed excerpt(s) in inbox/excerpts",
-      "at": "2026-10-22T05:29:49.497Z"
+      "detail": "4 of 6 regulations from copies a person saved in inbox/bclaws; waiting for 190_84_00_multi, 180_90_00_multi; 1 unconfirmed excerpt(s) in inbox/excerpts",
+      "at": "2026-10-28T23:04:07.866Z"
     },
     "road_notices": {
       "status": "ok",
@@ -797,6 +797,33 @@
     }
   },
   "files": [
+    {
+      "path": "raw/2026-10/bclaws/16_2004.pdf",
+      "sha256": "e54a253d3f0b8e5b7dbc1b65181b0514e9c6985e5d123b90b0c83bab8592cb09",
+      "bytes": 225639,
+      "source": "closed_areas",
+      "fetchedAt": "2026-10-28T23:02:51.871Z",
+      "committed": true,
+      "note": "copied from inbox/bclaws/16_2004.pdf"
+    },
+    {
+      "path": "raw/2026-10/bclaws/18_2024.pdf",
+      "sha256": "dbec1496032c8a0ef698f82ee66c1516273b04545f8c0be391ebfc43e37fc1ea",
+      "bytes": 775829,
+      "source": "closed_areas",
+      "fetchedAt": "2026-10-28T23:02:51.862Z",
+      "committed": true,
+      "note": "copied from inbox/bclaws/18_2024.pdf"
+    },
+    {
+      "path": "raw/2026-10/bclaws/38_2005.pdf",
+      "sha256": "074caa03dccf60342b5a5a6c5e91a4d4feece4b813f6f8c90aa9e2f4a4c8d385",
+      "bytes": 556993,
+      "source": "closed_areas",
+      "fetchedAt": "2026-10-28T23:02:51.867Z",
+      "committed": true,
+      "note": "copied from inbox/bclaws/38_2005.pdf"
+    },
     {
       "path": "raw/2026-10/bclaws/76_84_00_multi.txt",
       "sha256": "8d13512755a1e2ee97e7c4c4adefdf8be9cc7e5a5292ad34cdbf1fa281969181",
@@ -1473,6 +1500,33 @@
       "note": "over 2 MB: hash kept, file not committed"
     },
     {
+      "path": "raw/2026-10/inbox/bclaws/16_2004.pdf",
+      "sha256": "e54a253d3f0b8e5b7dbc1b65181b0514e9c6985e5d123b90b0c83bab8592cb09",
+      "bytes": 225639,
+      "source": "inbox",
+      "fetchedAt": "2026-10-28T23:02:51.871Z",
+      "committed": true,
+      "note": "copied from inbox/bclaws/16_2004.pdf"
+    },
+    {
+      "path": "raw/2026-10/inbox/bclaws/18_2024.pdf",
+      "sha256": "dbec1496032c8a0ef698f82ee66c1516273b04545f8c0be391ebfc43e37fc1ea",
+      "bytes": 775829,
+      "source": "inbox",
+      "fetchedAt": "2026-10-28T23:02:51.862Z",
+      "committed": true,
+      "note": "copied from inbox/bclaws/18_2024.pdf"
+    },
+    {
+      "path": "raw/2026-10/inbox/bclaws/38_2005.pdf",
+      "sha256": "074caa03dccf60342b5a5a6c5e91a4d4feece4b813f6f8c90aa9e2f4a4c8d385",
+      "bytes": 556993,
+      "source": "inbox",
+      "fetchedAt": "2026-10-28T23:02:51.867Z",
+      "committed": true,
+      "note": "copied from inbox/bclaws/38_2005.pdf"
+    },
+    {
       "path": "raw/2026-10/inbox/bclaws/76_84_00_multi.txt",
       "sha256": "8d13512755a1e2ee97e7c4c4adefdf8be9cc7e5a5292ad34cdbf1fa281969181",
       "bytes": 267969,
@@ -1480,6 +1534,15 @@
       "fetchedAt": "2026-10-20T15:09:27.233Z",
       "committed": true,
       "note": "copied from inbox/bclaws/76_84_00_multi.txt"
+    },
+    {
+      "path": "raw/2026-10/inbox/bylaws/ea:SLRD Electoral Area A/1293-2013-consolidated.pdf",
+      "sha256": "c3e2bd19a5b6468ee545cb092be88e861c6fc32dbaf7d888d2bed3b358b360ef",
+      "bytes": 1955919,
+      "source": "inbox",
+      "fetchedAt": "2026-10-28T23:02:51.881Z",
+      "committed": true,
+      "note": "copied from inbox/bylaws/ea:SLRD Electoral Area A/1293-2013-consolidated.pdf"
     },
     {
       "path": "raw/2026-10/inbox/excerpts/closed-areas-sch5-s85.txt",
@@ -1519,8 +1582,8 @@
     {
       "source": "closed_areas",
       "what": "legal text",
-      "error": "no dated copy of 190_84_00_multi, 180_90_00_multi, 16_2004, 38_2005, 18_2024: waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)",
-      "at": "2026-10-22T05:29:49.497Z"
+      "error": "no dated copy of 190_84_00_multi, 180_90_00_multi: waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)",
+      "at": "2026-10-28T23:04:07.866Z"
     }
   ]
 }

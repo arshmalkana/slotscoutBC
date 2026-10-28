@@ -44,7 +44,7 @@ First pull: this is the baseline every later month is compared with.
 
 | Kind | Units | New | Changed | Removed | Unchanged |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| bylaw_clause | 59 | 59 | 0 | 0 | 0 |
+| bylaw_clause | 81 | 81 | 0 | 0 | 0 |
 | dm_notice | 46 | 46 | 0 | 0 | 0 |
 | notice_block | 13 | 13 | 0 | 0 | 0 |
 | regulation_section | 254 | 254 | 0 | 0 | 0 |
@@ -53,6 +53,4 @@ First pull: this is the baseline every later month is compared with.
 ## Failed or missing sources
 
 - **bylaws** muni:Bowen Island Municipality: robots.txt for www.bimbc.ca could not be read, so automated access is not assumed
-- **closed_areas** legal text: no dated copy of 180_90, 16_2004, 38_2005: waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)
-- **closed_areas** 190_84: Hunting Regulation, B.C. Reg. 190/84: https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84 returned HTTP 404 to a person on 2026-10-20. The current BC Laws document id is needed.
-- **closed_areas** 196_99: Motor Vehicle Prohibition Regulation, B.C. Reg. 196/99: repealed effective March 1, 2024 by B.C. Reg. 18/2024 (BC Laws page saved by a person 2026-10-20). Which regulation now holds the motor vehicle closures is not confirmed yet.
+- **closed_areas** legal text: no dated copy of 190_84_00_multi, 180_90_00_multi: waiting for the person to save them into inbox/bclaws (BC Laws robots.txt disallows automated clients)
