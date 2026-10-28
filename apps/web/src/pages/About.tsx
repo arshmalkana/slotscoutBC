@@ -77,6 +77,11 @@ export function About() {
           marks printed on them. It still quotes the printed words; it never measures from a map or places anything itself. A road a notice or map closes counts only after a person has checked it, and until then
           SlotScout shows "Cannot confirm" on that road rather than green.
         </p>
+        <p>
+          Closed areas on the map come in two kinds. A solid outline is exact: drawn by code from official layers (a park, an island, a road buffer). A grey dashed outline is approximate: a boundary walk
+          (&ldquo;commencing at&hellip;, thence along&hellip;&rdquo;) traced between the places it names, or an area read from the colours of the Province&rsquo;s own closed-area map. Inside an approximate
+          outline SlotScout says &ldquo;possibly inside&rdquo; and shows grey, never red or green, except deep inside a map-read area, where the map leaves no doubt. Read the regulation text before shooting near one.
+        </p>
 
         <h2>What is checked</h2>
         <p>
