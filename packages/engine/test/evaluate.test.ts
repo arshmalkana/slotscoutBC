@@ -68,6 +68,28 @@ describe("evaluate: verdict precedence (PRD 3.9)", () => {
     expect(l2.moreUrl).toBe("https://example.test/bylaw.pdf");
   });
 
+  it("is grey, never green, under a zoned bylaw whose zones are not drawn", () => {
+    const r = evaluate(
+      baseInput({
+        bylaws: [
+          {
+            key: "ea:Test Electoral Area Z",
+            kind: "electoral_area",
+            name: "Test Electoral Area Z",
+            status: "reviewed",
+            targetShooting: "zoned",
+            confirmedOn: "2026-10-10",
+            bylaw: { title: "Firearms Bylaw", number: "1293-2013", url: "https://example.test/bylaw.pdf" },
+          },
+        ],
+      }),
+    );
+    const l2 = check(r, "L2");
+    expect(l2.status).toBe("unknown");
+    expect(l2.reason).toMatch(/not drawn yet/);
+    expect(r.verdict.state).not.toBe("green");
+  });
+
   it("red beats amber and grey", () => {
     const input = baseInput({ wildlifeCoverage: [] });
     input.layers.bc_parks = okLayer("bc_parks", [feature(square(PIN, 200), { PROTECTED_LANDS_NAME: "TEST PARK", PROTECTED_LANDS_CODE: "PP", PROTECTED_LANDS_DESIGNATION: "PROVINCIAL PARK" })]);

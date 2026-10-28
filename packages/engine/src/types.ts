@@ -156,6 +156,8 @@ export interface SourceInfo {
 /** A digitised rule area (PRD 5.2). Only reviewed features are ever evaluated. */
 export interface DigitisedRuleProps {
   rule_id: string;
+  /** Bylaw zones only: the register key of the jurisdiction whose bylaw draws this zone ("ea:SLRD Electoral Area A"). */
+  jurisdiction?: string;
   authority: string;
   source_url: string;
   source_text: string;
@@ -235,8 +237,9 @@ export interface BylawEntry {
   regionalDistrict?: string;
   status: CoverageStatus | "not_applicable";
   bylaw?: { number?: string; title?: string; url?: string };
-  /** Reviewed summary for the whole jurisdiction. Only used when status is "reviewed". */
-  targetShooting?: "prohibited" | "permitted_with_zones" | "no_bylaw";
+  /** Reviewed summary for the whole jurisdiction. Only used when status is "reviewed". "zoned" (as the bylaw extraction
+   * writes it) and "permitted_with_zones" both mean the answer depends on mapped zones or distances. */
+  targetShooting?: "prohibited" | "zoned" | "permitted_with_zones" | "no_bylaw";
   confirmedOn?: string;
   notes?: string;
 }

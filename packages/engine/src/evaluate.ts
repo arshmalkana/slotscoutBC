@@ -947,9 +947,21 @@ function bylawCheck(ctx: Context, ruleId: "L1" | "L2" | "L3", entry: BylawEntry 
     ctx.add({ ruleId, status: "pass", reason: `No firearm discharge bylaw applies in ${name} (reviewed ${entry.confirmedOn}).`, dataDate: entry.confirmedOn });
     return;
   }
-  // Zoned bylaw: evaluate digitised zones for this jurisdiction by their review state.
-  const all = ctx.input.digitised.filter((f) => f.properties.rule_id.startsWith(`${ruleId}-`));
-  const inside = all.filter((f) => featureState(f) !== "ignore" && relate(f.geometry, ctx.input.point)?.inside);
+  // Zoned bylaw: evaluate this jurisdiction's digitised zones by their review state. Until its zones are drawn, an
+  // undrawn zone must never read as "outside": the answer cannot be given.
+  const all = ctx.input.digitised.filter((f) => f.properties.rule_id.startsWith(`${ruleId}-`) && f.properties.jurisdiction === entry.key && featureState(f) !== "ignore");
+  if (!all.length) {
+    ctx.add({
+      ruleId,
+      status: "unknown",
+      reason: `Cannot confirm: ${name}'s bylaw${bylawLabel ? ` (${bylawLabel})` : ""} bans discharge in mapped zones or near buildings and roads, and those zones are not drawn yet. Read the bylaw's maps.`,
+      moreUrl: link,
+      dataDate: entry.confirmedOn,
+      notes: entry.notes ? [entry.notes] : undefined,
+    });
+    return;
+  }
+  const inside = all.filter((f) => relate(f.geometry, ctx.input.point)?.inside);
   for (const z of inside) {
     const state = featureState(z);
     if (state === "pending") continue;
