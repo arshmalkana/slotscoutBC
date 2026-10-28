@@ -8,8 +8,7 @@
   "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 \"inside\" vs run 2 null",
-    "named area \"Haida Gwaii\": failed (no official layer for area type other)",
-    "validation failed: no self-crossing (4 self-intersection(s))"
+    "named area \"Haida Gwaii\": failed (no official layer for area type other)"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nQueen Charlotte City\n46 That portion of the Province of British Columbia on Haida Gwaii described as: Queen Charlotte City District Lots 15, 15A, 16, 16A, 18 and 3. [am. B.C. Reg. 251/2010, Sch., s. 1.]",
@@ -234,8 +233,8 @@
     },
     {
       "check": "no self-crossing",
-      "passed": false,
-      "detail": "4 self-intersection(s)"
+      "passed": true,
+      "detail": "none"
     },
     {
       "check": "area in expected range",
@@ -12951,28 +12950,6 @@
             -132.12490545,
             53.25199051
           ]
-        ],
-        [
-          [
-            -132.10000603,
-            53.25421012
-          ],
-          [
-            -132.09998917,
-            53.25452258
-          ],
-          [
-            -132.09997712,
-            53.25474539
-          ],
-          [
-            -132.09998916,
-            53.25452258
-          ],
-          [
-            -132.10000603,
-            53.25421012
-          ]
         ]
       ]
     },
@@ -13024,8 +13001,8 @@
         },
         {
           "check": "no self-crossing",
-          "passed": false,
-          "detail": "4 self-intersection(s)"
+          "passed": true,
+          "detail": "none"
         },
         {
           "check": "area in expected range",
@@ -13053,5 +13030,5 @@
   },
   "status": "open",
   "created": "2026-10-21T16:08:46.106Z",
-  "updated": "2026-10-28T20:02:29.790Z"
+  "updated": "2026-10-28T20:19:54.401Z"
 }

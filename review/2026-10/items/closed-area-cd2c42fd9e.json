@@ -8,8 +8,7 @@
   "decision": "Check the shape against the text and the map, then approve or reject the candidate.",
   "why": [
     "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 \"inside\" vs run 2 null",
-    "named area \"Haida Gwaii\": failed (no official layer for area type other)",
-    "validation failed: no self-crossing (8 self-intersection(s))"
+    "named area \"Haida Gwaii\": failed (no official layer for area type other)"
   ],
   "source": {
     "text": "Schedule 5 No Shooting Areas (Section 6)\nSandspit\n47 That portion of the Province of British Columbia on Haida Gwaii described as: Sandspit District Lots 159, 159A, 160, 161, 162, 163, 164, 165, 166, 307, 2143, 2144, 2145 and 1317. [am. B.C. Reg. 251/2010, Sch., s. 1.]",
@@ -240,8 +239,8 @@
     },
     {
       "check": "no self-crossing",
-      "passed": false,
-      "detail": "8 self-intersection(s)"
+      "passed": true,
+      "detail": "none"
     },
     {
       "check": "area in expected range",
@@ -2773,86 +2772,6 @@
             -131.87024075,
             53.23515296
           ]
-        ],
-        [
-          [
-            -131.83993875,
-            53.23157755
-          ],
-          [
-            -131.83993875,
-            53.23157763
-          ],
-          [
-            -131.8399256204695,
-            53.231770982030866
-          ],
-          [
-            -131.83993875,
-            53.23157755
-          ]
-        ],
-        [
-          [
-            -131.83945934,
-            53.23864178
-          ],
-          [
-            -131.83951321,
-            53.23784804
-          ],
-          [
-            -131.83969043,
-            53.23523584
-          ],
-          [
-            -131.83951321,
-            53.23784805
-          ],
-          [
-            -131.83945934,
-            53.23864178
-          ]
-        ],
-        [
-          [
-            -131.83985298884036,
-            53.23284103427167
-          ],
-          [
-            -131.8398527,
-            53.23284536
-          ],
-          [
-            -131.83969287,
-            53.2352
-          ],
-          [
-            -131.83985298884036,
-            53.23284103427167
-          ]
-        ],
-        [
-          [
-            -131.79720637973648,
-            53.22894220287037
-          ],
-          [
-            -131.79714774,
-            53.22894098
-          ],
-          [
-            -131.79650736,
-            53.22892761
-          ],
-          [
-            -131.79714777,
-            53.22894098
-          ],
-          [
-            -131.79720637973648,
-            53.22894220287037
-          ]
         ]
       ]
     },
@@ -2904,8 +2823,8 @@
         },
         {
           "check": "no self-crossing",
-          "passed": false,
-          "detail": "8 self-intersection(s)"
+          "passed": true,
+          "detail": "none"
         },
         {
           "check": "area in expected range",
@@ -2933,5 +2852,5 @@
   },
   "status": "open",
   "created": "2026-10-21T16:07:30.687Z",
-  "updated": "2026-10-28T19:49:45.538Z"
+  "updated": "2026-10-28T20:19:53.325Z"
 }

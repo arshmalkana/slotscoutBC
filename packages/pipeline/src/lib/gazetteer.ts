@@ -138,7 +138,12 @@ export function areaShape(l: Lookup): Feature<Polygon | MultiPolygon> | null {
   const polys = l.features.filter((f) => f.geometry && /Polygon/.test(f.geometry.type)) as Feature<Polygon | MultiPolygon>[];
   if (!polys.length) return null;
   if (polys.length === 1) return polys[0]!;
-  return turf.union(turf.featureCollection(polys)) as Feature<Polygon | MultiPolygon> | null;
+  const u = turf.union(turf.featureCollection(polys)) as Feature<Polygon | MultiPolygon> | null;
+  if (!u) return null;
+  // Neighbouring parts (district lots) leave zero-area slivers as holes that touch the edge; they enclose nothing.
+  const solid = (rings: Position[][]) => [rings[0]!, ...rings.slice(1).filter((h) => turf.area(turf.polygon([h])) >= 1)];
+  u.geometry = u.geometry.type === "Polygon" ? { type: "Polygon", coordinates: solid(u.geometry.coordinates) } : { type: "MultiPolygon", coordinates: u.geometry.coordinates.map(solid) };
+  return u;
 }
 
 /** Road segments with this name inside the area (DRA, or FTEN for forest service roads). */
