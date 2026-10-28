@@ -59,8 +59,10 @@ function collect(month: string): Unit[] {
     }
   };
 
-  // Regulations: official copies first (BC Laws API or a person's saved copy), then unconfirmed excerpts.
-  for (const f of listFiles(join(dir, "bclaws"), (p) => /\.(html?|xml|txt)$/i.test(p))) {
+  // Regulations: official copies first (BC Laws API or a person's saved copy), then unconfirmed excerpts. Only the
+  // Closed Areas Regulation is split into sections; the others (Hunting, Parks, Wildfire, Forest Recreation, Motor
+  // Vehicle Prohibition) are kept as dated copies the rules cite. Their own schedules must not read as closed areas.
+  for (const f of listFiles(join(dir, "bclaws"), (p) => /\.(html?|xml|txt)$/i.test(p) && basename(p).startsWith("76_84"))) {
     const raw = readFileSync(f, "utf8");
     const meta = fileMeta.get(rel(f));
     const current = raw.match(/current to\s+([A-Z][a-z]+ \d{1,2}, \d{4})/i)?.[1];
