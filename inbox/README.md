@@ -17,7 +17,7 @@ BC Laws' robots.txt allows only Googlebot and Bingbot, so SlotScout does not cra
 
 The Hunting and Park regulations come in parts; save the complete page (`_00_multi`), not one part. The plain `190_84` page returned 404 on 2026-10-20 (`notes/`) for that reason. B.C. Reg. 18/2024 replaced the Motor Vehicle Prohibition Regulation, B.C. Reg. 196/99, on March 1, 2024 (196/99 repeal notice saved in `notes/` on 2026-10-20).
 
-Saved so far: `bclaws/76_84_00_multi.txt`, the Closed Areas Regulation consolidation current to October 13, 2026 (last amended July 1, 2026 by B.C. Reg. 97/2026), copied in by a person on 2026-10-20.
+Saved so far (all six): `bclaws/76_84_00_multi.txt`, the Closed Areas Regulation consolidation current to October 13, 2026 (last amended July 1, 2026 by B.C. Reg. 97/2026), copied in by a person on 2026-10-20; and, saved by Arsh on 2026-10-28 as PDFs of the BC Laws pages, each current to October 20, 2026: `bclaws/190_84_00_multi.pdf` (Hunting, last amended October 1, 2026 by B.C. Reg. 66/2026), `bclaws/180_90_00_multi.pdf` (Park, Conservancy and Recreation Area, last amended October 1, 2026 by B.C. Reg. 68/2026), `bclaws/16_2004.pdf` (Forest Recreation), `bclaws/38_2005.pdf` (Wildfire) and `bclaws/18_2024.pdf` (Motor Vehicle Prohibition).
 
 Use "Save page as, web page, HTML only", or copy the text into a `.txt` file with the same name. Keep the "current to" and "last amended" lines at the top. Then run `make pull && make split`.
 
