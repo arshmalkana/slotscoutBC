@@ -59,7 +59,20 @@ function areaKind(type: string, name: string): string {
   return type;
 }
 
-export async function wfsQuery(layer: string, cql: string, count = 5000): Promise<AnyFeature[]> {
+/** Answers already fetched in this run: many sections name the same river, highway or boundary. */
+const wfsCache = new Map<string, Promise<AnyFeature[]>>();
+
+export function wfsQuery(layer: string, cql: string, count = 5000): Promise<AnyFeature[]> {
+  const key = `${layer}|${cql}|${count}`;
+  const hit = wfsCache.get(key);
+  if (hit) return hit;
+  const p = wfsFetch(layer, cql, count);
+  wfsCache.set(key, p);
+  p.catch(() => wfsCache.delete(key));
+  return p;
+}
+
+async function wfsFetch(layer: string, cql: string, count: number): Promise<AnyFeature[]> {
   const u = new URL(WFS);
   u.search = new URLSearchParams({ service: "WFS", version: "2.0.0", request: "GetFeature", typeNames: layer, outputFormat: "application/json", srsName: "EPSG:4326", count: String(count), CQL_FILTER: cql }).toString();
   const r = await politeFetch(u.toString(), { kind: "api", timeoutMs: 180_000 });
