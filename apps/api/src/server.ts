@@ -9,12 +9,14 @@ import fastifyStatic from "@fastify/static";
 import { LIGHTS, RULES, RULES_BY_ID, featureState, inBCBox, normaliseProfile, type LatLon } from "@slotscout/engine";
 import { config } from "./config.js";
 import { checkPoint, sourceStats } from "./check.js";
+import { addContribution, checkContribution, contributionsEnabled, listContributions, reviewContribution, reviewerFor, storeName } from "./contributions.js";
 import { data } from "./data.js";
 import { displayFeature } from "./display.js";
 import { FINDER_MAX_RADIUS_KM, findSpots } from "./finder.js";
 import { errorText, getBinary } from "./http.js";
 import { MAP_LAYERS, MAP_LAYERS_BY_ID, sldFor, tileBounds } from "./maplayers.js";
 import { search } from "./search.js";
+import { boundary, lookupFeatures, workbenchImage, workbenchIndex, workbenchItem, type Kind } from "./workbench.js";
 
 const TRANSPARENT_PNG = Buffer.from(
   "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==",
@@ -70,7 +72,7 @@ export async function buildApp(opts: { logger?: boolean } = {}): Promise<Fastify
     reply.header("X-Content-Type-Options", "nosniff");
     reply.header("Referrer-Policy", "strict-origin-when-cross-origin");
     reply.header("Permissions-Policy", "geolocation=(self), camera=(), microphone=()");
-    if (req.url.startsWith("/v1/check") || req.url.startsWith("/v1/finder") || req.url.startsWith("/v1/search")) {
+    if (req.url.startsWith("/v1/check") || req.url.startsWith("/v1/finder") || req.url.startsWith("/v1/search") || req.url.startsWith("/v1/contributions") || req.url.startsWith("/v1/reviewer")) {
       reply.header("Cache-Control", "no-store");
     }
   });
@@ -239,6 +241,85 @@ export async function buildApp(opts: { logger?: boolean } = {}): Promise<Fastify
     } catch {
       reply.header("Cache-Control", "no-store");
       return reply.code(502).send(TRANSPARENT_PNG);
+    }
+  });
+
+  // The map editor (community): folders, one item's wording and pictures, drawing helpers, contributions and reviews.
+  const kindOf = (k: string): Kind | null => (k === "closed-areas" || k === "bylaws" ? k : null);
+  app.get("/v1/workbench/img/:file", async (req, reply) => {
+    const img = await workbenchImage((req.params as { file: string }).file);
+    if (!img) return reply.code(404).send({ error: "not found" });
+    reply.header("Cache-Control", "public, max-age=86400");
+    return reply.type(img.type).send(img.body);
+  });
+  app.get("/v1/workbench/boundary", { config: { rateLimit: { max: 30, timeWindow: "1 minute" } } }, async (req, reply) => {
+    const q = req.query as Record<string, string>;
+    try {
+      const b = await boundary(String(q.kind ?? ""), String(q.name ?? ""));
+      return b ?? reply.code(400).send({ error: "kind must be municipality, electoral_area, local_trust_area or wmu, with a name" });
+    } catch (e) {
+      return reply.code(502).send({ error: `The official boundary layer did not answer: ${errorText(e)}` });
+    }
+  });
+  app.get("/v1/workbench/lookup", { config: { rateLimit: { max: 30, timeWindow: "1 minute" } } }, async (req, reply) => {
+    const q = req.query as Record<string, string>;
+    const bbox = q.bbox ? String(q.bbox).split(",").map(Number) : null;
+    try {
+      return await lookupFeatures(String(q.type ?? ""), String(q.name ?? ""), bbox);
+    } catch (e) {
+      const msg = errorText(e);
+      return reply.code(/required|must be/.test(msg) ? 400 : 502).send({ error: msg });
+    }
+  });
+  app.get("/v1/workbench/:kind", async (req, reply) => {
+    const kind = kindOf((req.params as { kind: string }).kind);
+    if (!kind) return reply.code(404).send({ error: "not found" });
+    try {
+      reply.header("Cache-Control", "no-cache");
+      return await workbenchIndex(kind);
+    } catch {
+      return reply.code(404).send({ error: "the map editor's data has not been built yet (make workbench)" });
+    }
+  });
+  app.get("/v1/workbench/:kind/:id", async (req, reply) => {
+    const p = req.params as { kind: string; id: string };
+    const kind = kindOf(p.kind);
+    const item = kind ? await workbenchItem(kind, p.id) : null;
+    if (!item) return reply.code(404).send({ error: "not found" });
+    reply.header("Cache-Control", "no-cache");
+    return item;
+  });
+
+  app.get("/v1/contributions", async (req) => {
+    const q = req.query as Record<string, string>;
+    const contributions = contributionsEnabled() ? await listContributions({ target: q.target, kind: q.kind, status: q.status }) : [];
+    return { enabled: contributionsEnabled(), store: storeName(), contributions };
+  });
+  app.post("/v1/contributions", { bodyLimit: 2 * 1024 * 1024, config: { rateLimit: { max: 10, timeWindow: "10 minutes" } } }, async (req, reply) => {
+    if (!contributionsEnabled()) return reply.code(503).send({ error: "Contributions are switched off on this server." });
+    let c;
+    try {
+      const closed = (await workbenchIndex("closed-areas")).items.map((i) => i.id);
+      c = checkContribution((req.body ?? {}) as Record<string, unknown>, { closedAreas: new Set(closed), bylaws: new Set(data().bylaws.map((b) => b.key)) });
+    } catch (e) {
+      return reply.code(400).send({ error: errorText(e) });
+    }
+    await addContribution(c);
+    return { ok: true, id: c.id };
+  });
+  app.get("/v1/reviewer", async (req, reply) => {
+    const name = reviewerFor(String(req.headers["x-reviewer-key"] ?? ""));
+    return name ? { name } : reply.code(401).send({ error: "That reviewer key is not valid." });
+  });
+  app.post("/v1/contributions/:id/review", { config: { rateLimit: { max: 30, timeWindow: "1 minute" } } }, async (req, reply) => {
+    const name = reviewerFor(String(req.headers["x-reviewer-key"] ?? ""));
+    if (!name) return reply.code(401).send({ error: "That reviewer key is not valid." });
+    const b = (req.body ?? {}) as Record<string, unknown>;
+    try {
+      return { ok: true, review: await reviewContribution((req.params as { id: string }).id, name, String(b.decision ?? ""), b.note) };
+    } catch (e) {
+      const code = (e as { statusCode?: number }).statusCode ?? 400;
+      return reply.code(code).send({ error: errorText(e) });
     }
   });
 

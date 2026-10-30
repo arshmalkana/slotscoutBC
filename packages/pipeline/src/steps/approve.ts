@@ -77,7 +77,13 @@ function applyBylaw(it: ReviewItem, by: string, approve: boolean): void {
   for (const key of b.covers) {
     const e = reg.entries.find((x) => x.key === key);
     if (!e) continue;
-    Object.assign(e, { status: "reviewed", targetShooting: target, confirmedOn: today(), bylaw: { ...(e.bylaw ?? {}), title: b.title, number: b.number ?? e.bylaw?.number, url: b.url ?? e.bylaw?.url } });
+    Object.assign(e, {
+      status: "reviewed",
+      targetShooting: target,
+      confirmedOn: today(),
+      bylaw: { ...(e.bylaw ?? {}), title: b.title, number: b.number ?? e.bylaw?.number, url: b.url ?? e.bylaw?.url },
+      notes: `Rules read from ${b.title}${b.number ? ` (Bylaw ${b.number})` : ""} and approved by ${by} on ${today()}.`,
+    });
   }
   writeJson(regPath, reg);
 }

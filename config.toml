@@ -72,3 +72,7 @@ documents = ["76_84_00_multi", "190_84_00_multi", "180_90_00_multi", "16_2004", 
 commit_pdf_max_mb = 2
 screenshot_quality = 55
 screenshot_max_height_px = 12000
+
+[community]
+# The live site's map editor. `make contributions` publishes the contributions a second person confirmed there.
+api_url = "https://slotscout-five.vercel.app"

@@ -22,3 +22,6 @@ data/feedback/
 queue/.lock
 # Pipeline run logs are part of the audit trail (Addendum A 7.4)
 !reports/*.log
+
+# Map editor contributions stored locally when the API runs without Vercel Blob (published via make contributions)
+contributions/

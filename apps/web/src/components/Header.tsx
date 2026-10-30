@@ -28,6 +28,7 @@ export function Header({ children }: { children?: ReactNode }) {
         <NavLink to="/" end>
           Map
         </NavLink>
+        <NavLink to="/editor">Map editor</NavLink>
         <NavLink to="/about">How it works</NavLink>
         <NavLink to="/rules">Rules</NavLink>
         <NavLink to="/sources">Sources</NavLink>

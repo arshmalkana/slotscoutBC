@@ -23,7 +23,7 @@ export interface MapRead {
   problems: string[];
 }
 
-const run = (cmd: string, args: string[]) =>
+export const run = (cmd: string, args: string[]) =>
   execFileSync(cmd, args, {
     maxBuffer: 512 * 1024 * 1024,
     stdio: ["ignore", "pipe", "pipe"],

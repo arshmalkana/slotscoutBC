@@ -180,7 +180,9 @@ export interface DigitisedRuleProps {
     | "georeferenced_map"
     | "contour"
     /** An approximate zone around the places the text names, when no outline could be drawn. */
-    | "named_places";
+    | "named_places"
+    /** Drawn by a person in the map editor and confirmed by a second person. */
+    | "hand_drawn";
   buffer_m: number | null;
   partial_extent: boolean;
   conservative: boolean;
@@ -213,9 +215,11 @@ export interface DigitisedRuleProps {
    * or a zone around the named place). A spot inside reads "possibly inside", never a firm answer.
    */
   approximate?: boolean;
-  approximate_quality?: "traced" | "corners" | "vicinity" | "map_image" | "whole_feature";
+  approximate_quality?: "traced" | "corners" | "vicinity" | "map_image" | "whole_feature" | "hand_drawn";
   /** For an outline read from an official map image: how far it can be off. Deeper inside than this is a firm answer. */
   approximate_tolerance_m?: number;
+  /** Drawn in the map editor: the contribution it came from (who drew it and who confirmed it are digitised_by and reviewed_by). */
+  contribution_id?: string;
 }
 
 export type CoverageStatus = "not_started" | "in_progress" | "digitised" | "reviewed";
@@ -417,4 +421,38 @@ export interface SpotReport {
   standingChecks: string[];
   sources: { id: string; name: string; fetchedAt?: string; status: string; fresh: boolean; url: string }[];
   disclaimer: string;
+}
+
+/**
+ * A community contribution from the map editor: a shape drawn or fixed by one person, or a bylaw answer they
+ * found. It counts on the map only after a second person (a reviewer) confirms it and the pipeline publishes it.
+ */
+export interface Contribution {
+  id: string;
+  /** What it is for: a closed-area section's shape, a jurisdiction's bylaw answer, or one zone of a zoned bylaw. */
+  kind: "closed_area" | "bylaw" | "bylaw_zone";
+  /** The closed-area rule id ("W5-049") or the bylaw register key ("ea:SLRD Electoral Area A"). */
+  target: string;
+  author: string;
+  note: string;
+  createdAt: string;
+  geometry?: { type: "Polygon"; coordinates: number[][][] } | { type: "MultiPolygon"; coordinates: number[][][][] };
+  /** The author says the outline follows the legal boundary; otherwise it is shown as approximate. */
+  exact?: boolean;
+  bylaw?: { url: string; title: string; number: string; targetShooting: "prohibited" | "zoned" | "no_bylaw"; quote: string };
+  zone?: { schedule: string; effect: "no_shooting" | "no_rifle" | "shot_only" };
+}
+
+export interface ContributionReview {
+  id: string;
+  decision: "confirmed" | "rejected";
+  by: string;
+  note: string;
+  at: string;
+}
+
+/** A contribution with its review, as the API lists it. "published" once the confirmed change is in the live data. */
+export interface ContributionView extends Contribution {
+  status: "waiting" | "confirmed" | "rejected" | "published";
+  review?: ContributionReview;
 }

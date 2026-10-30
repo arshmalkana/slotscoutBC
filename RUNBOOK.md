@@ -48,6 +48,19 @@ Map-read, walk, whole-feature and zone outlines carry `approximate: true`. The e
 
 Arsh's instruction of 2026-10-28: the shapes code draws are approved in his name, each decision noting it (`review/<YYYY-MM>/decisions.jsonl`).
 
+## The map editor (community)
+
+The site's **Map editor** (`/editor`) is where people turn closed areas and local bylaws into shapes together. Every closed-area section and every jurisdiction sits in one of three folders: **not done** (nothing drawn or found), **not confirmed** (drawn or read, but approximate or not checked by a second person) and **confirmed** (a person approved an exact outline or the bylaw's answer). Beside the map it shows the exact legal wording, what the pipeline read, the Province's closed-area map (also laid over the map, with a see-through slider) and the bylaw's pages with their schedule maps.
+
+| Step | Who | What |
+| --- | --- | --- |
+| Draw or find | anyone | Draws or fixes a shape (corners, areas, cut-outs, line plus buffer, circles, official roads, waters, parks, reserves and district lots by name, clip to the area), or sends a bylaw's link, its answer and its own words. It is stored as a contribution, with their name. |
+| Confirm | a reviewer | Signs in with a reviewer key and confirms or rejects it. Nobody can confirm what they sent themselves. |
+| Publish | `make contributions` | Puts confirmed contributions into the data: an approved shape in `rules/<id>.geojson` (drawn by the contributor, reviewed by the reviewer), a bylaw zone in `rules/bylaw-zones.geojson`, or a reviewed entry in `data/bylaws.json`; each is validated and logged in `decisions.jsonl`. Then `make validate test release`, commit and push. `make monthly` runs it. |
+| Refresh | `make workbench` | Rewrites the folders and pictures in `data/workbench/` (run it in the ingest container, which has GDAL for the map overlays). `make monthly` runs it. |
+
+Contributions live in Vercel Blob on the live site (`BLOB_READ_WRITE_TOKEN`, set by Vercel when the store is connected) or in `contributions/` when the API runs locally. Reviewer keys are set in the site's environment as `REVIEWER_KEYS="Name=key,Other Name=key2"` (each key at least 16 characters); whoever holds one can confirm. Nothing anyone sends changes a check until it is confirmed and published.
+
 ## One-way rule (Addendum A 5.1, 9)
 
 Stricter changes (a new closure, a bigger buffer, a new road) may go live at once as red or amber and a person confirms within 24 hours, but only after the gold set passes (`ai.autopublish` in `config.toml`, checked against `reports/gold-metrics.json`). Looser changes (a closure lifted, an area removed, a boundary shrinking) never go live without a person: the live map keeps the old, stricter version. Unclear changes hold the area grey.

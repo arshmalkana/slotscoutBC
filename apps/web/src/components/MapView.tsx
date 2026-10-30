@@ -34,10 +34,10 @@ interface Props {
   onZoom?(z: number): void;
 }
 
-type StyleInput = Exclude<Parameters<MlMap["setStyle"]>[0], null | string>;
+export type StyleInput = Exclude<Parameters<MlMap["setStyle"]>[0], null | string>;
 
 const VERDICT_COLOR: Record<VerdictState, string> = { red: "#b42318", amber: "#b77400", grey: "#5f6b7a", green: "#1e7a3c" };
-const BC_BOUNDS: [[number, number], [number, number]] = [
+export const BC_BOUNDS: [[number, number], [number, number]] = [
   [-139.1, 48.2],
   [-114.0, 60.0],
 ];
@@ -47,7 +47,7 @@ const BC_ATTR = 'BC Basemap © <a href="https://www2.gov.bc.ca/gov/content/data/
 const RULES_ATTR = 'Rule layers: <a href="https://catalogue.data.gov.bc.ca/">BC Data Catalogue</a> (OGL-BC)';
 
 /** Raster base styles. "auto" shows topo when zoomed out and satellite closer in (PRD 9.1). */
-function rasterStyle(base: "auto" | "satellite" | "topo"): StyleInput {
+export function rasterStyle(base: "auto" | "satellite" | "topo"): StyleInput {
   return {
     version: 8,
     glyphs: "https://tiles.openfreemap.org/fonts/{fontstack}/{range}.pbf",

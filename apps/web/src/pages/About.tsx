@@ -84,6 +84,13 @@ export function About() {
           outline SlotScout says &ldquo;possibly inside&rdquo; and shows grey, never red or green, except deep inside a map-read area, where the map leaves no doubt. Read the regulation text before shooting near one.
         </p>
 
+        <h2>A map built by people</h2>
+        <p>
+          Shapes that code could only place roughly, and local bylaws nobody has read yet, are open to everyone in the <Link to="/editor">map editor</Link>. Pick one from <i>not done</i> or <i>not confirmed</i>, read the
+          exact wording beside the Province&rsquo;s own map or the bylaw&rsquo;s pages, draw or fix the shape, and send it with your name. A second person with a reviewer key checks it against the text; only then does it go
+          into the data the checks use. Nobody can confirm their own drawing.
+        </p>
+
         <h2>What is checked</h2>
         <p>
           Federal law (restricted firearms, national parks, federal land, railways, bird sanctuaries), the Wildlife Act Closed Areas Regulation and road allowance rule, provincial parks and ecological reserves, recreation sites and trails, wildfire orders and bans, resource road closures, motor vehicle closures, community watersheds, Crown tenures, municipal, regional district and Islands Trust bylaws, local parks, reserves and treaty lands, private and other titled land, utility lines, buildings, roads, recent burns and active logging. See the <Link to="/rules">rule catalogue</Link>.

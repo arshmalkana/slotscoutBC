@@ -43,6 +43,8 @@ const commands: Record<string, () => Promise<unknown>> = {
   status: async () => (await import("./steps/status.js")).status(common),
   monthly: async () => (await import("./steps/monthly.js")).monthly(common),
   release: async () => (await import("./steps/release.js")).release(common),
+  workbench: async () => (await import("./steps/workbench.js")).workbench(common),
+  contributions: async () => (await import("./steps/contributions.js")).contributions(common),
   approve: async () =>
     (await import("./steps/approve.js")).approve({ ...common, item: str(flags.item), by: str(flags.by), decision: str(flags.decision), note: str(flags.note) }),
   signoff: async () => (await import("./steps/approve.js")).signoff({ ...common, by: str(flags.by), note: str(flags.note) }),

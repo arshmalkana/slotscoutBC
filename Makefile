@@ -3,7 +3,7 @@
 PIPE := npx tsx packages/pipeline/src/cli.ts
 MONTH ?=
 
-.PHONY: help install pull split queue extract build validate review-packet test release report monthly status approve signoff up down logs in-docker
+.PHONY: help install pull split queue extract build validate review-packet test release workbench contributions report monthly status approve signoff up down logs in-docker
 
 help:
 	@echo "pull split queue extract build validate review-packet test report monthly status release"
@@ -48,6 +48,13 @@ monthly:
 
 release:
 	$(PIPE) release $(if $(MONTH),--month $(MONTH))
+
+# The map editor: its data (folders, wording, map and bylaw page images) and the confirmed community contributions.
+workbench:
+	$(PIPE) workbench $(if $(MONTH),--month $(MONTH))
+
+contributions:
+	$(PIPE) contributions $(if $(MONTH),--month $(MONTH))
 
 # People only. Claude Code never runs these (CLAUDE.md).
 approve:

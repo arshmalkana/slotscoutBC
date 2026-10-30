@@ -17,6 +17,8 @@ export interface PipelineConfig {
   gis: { page_size: number; max_count_change: number; store_bodies_up_to_features: number };
   bclaws: { api_confirmed: boolean; api_document_url: string; documents: string[]; repealed?: Record<string, string>; not_found?: Record<string, string> };
   storage: { commit_pdf_max_mb: number; screenshot_quality: number; screenshot_max_height_px: number };
+  /** The map editor's community contributions: the live site whose confirmed contributions the pipeline publishes. */
+  community?: { api_url?: string };
 }
 
 let cached: PipelineConfig | null = null;
