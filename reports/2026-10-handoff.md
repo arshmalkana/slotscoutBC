@@ -39,6 +39,10 @@ Prepared by Claude Code (Addendum A 10.3 step 13), last updated 2026-10-28. Appr
 - **BC Laws:** all 6 regulations in hand: Closed Areas (current to October 13, 2026) and, saved by Arsh on 2026-10-28, Hunting 190/84, Park 180/90, Forest Recreation 16/2004, Wildfire 38/2005 and Motor Vehicle Prohibition 18/2024 (each current to October 20, 2026). Only the Closed Areas Regulation is split into sections; the others are dated copies the rules cite.
 - **Checks:** validate 0 errors; regression passed with no false greens; release `2026-10-r1` publishable with 208 approved closed-area features. The October sign-off of 2026-10-23 stands; every decision since is listed in `releases/2026-10/release.json` with its note.
 
+## Map editor (added 2026-10-30)
+
+https://slotscout-five.vercel.app/editor turns the remaining work into a community-built map. Closed areas (254) and jurisdictions (332) sit in three folders: not done (43 and 326), not confirmed (186 and 4) and confirmed (25 and 2). Each item shows the exact legal wording, what the pipeline read, the Province's closed-area map (laid over the map where one is published) or the bylaw's pages, and a full shape editor. Anyone can send a drawing or a bylaw's answer with their name; a reviewer key holder confirms it (never their own); `make contributions` publishes what was confirmed (also part of `make monthly`). Contributions are stored in the Vercel Blob store `slotscout-contributions` (private). Reviewer keys: set `REVIEWER_KEYS="Name=key"` in the Vercel project's environment variables (Arsh's to choose; each key at least 16 characters), then redeploy.
+
 ## 2. What was run for October, with counts
 
 There is one October: `2026-10`. The second cycle that had been run as `2026-10-dryrun` was re-pulled and re-read inside `2026-10`, and the dry-run folders were removed (they remain in git history).
@@ -122,6 +126,7 @@ A separate run of the October pipeline on Windows (5 commits on top of `0260b7b`
 - [ ] Confirm today's Electoral Area H is the area W5-049 (s. 49) means
 - [ ] Look at the 3 held closed areas (W3-023, W9-009, W3-015) and the 43 not drawn (listed in the review packet)
 - [ ] W4-003 (Pitt WMA): its period has weekday rules the rule format cannot hold yet; it is shown in force all year (stricter) and, being an approximate outline, as "possibly inside" (grey)
+- [ ] Set `REVIEWER_KEYS` in Vercel (Settings, Environment Variables) so reviewers can confirm map-editor contributions
 - [ ] Identify the jurisdiction that differs between the Province's count and the boundary layers
 - [ ] Add Region 2 bylaw document URLs or copies for the jurisdictions still not found
 - [ ] Hand-digitise Region 2 closed areas for the gold set; put people's answers in `gold/answers/`
