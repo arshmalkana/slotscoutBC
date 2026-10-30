@@ -1,0 +1,101 @@
+{
+  "id": "W5-046",
+  "itemId": "closed-area-9764d6a5ab",
+  "title": "Closed Areas Regulation, Schedule 5, section 46 (Queen Charlotte City)",
+  "heading": "Queen Charlotte City",
+  "folder": "confirmed",
+  "state": "Approved: exact outline",
+  "quality": "exact",
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nQueen Charlotte City\n46 That portion of the Province of British Columbia on Haida Gwaii described as: Queen Charlotte City District Lots 15, 15A, 16, 16A, 18 and 3. [am. B.C. Reg. 251/2010, Sch., s. 1.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "on Haida Gwaii",
+    "geometry.feature": "Queen Charlotte City District Lots 15, 15A, 16, 16A, 18 and 3",
+    "effect": "No Shooting Areas",
+    "geometry.side": "That portion of the Province of British Columbia on Haida Gwaii described as: Queen Charlotte City District Lots"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Haida Gwaii"
+    },
+    "method": "admin_boundary",
+    "feature": {
+      "type": "lot",
+      "name": "Queen Charlotte City District Lots 15, 15A, 16, 16A, 18 and 3"
+    },
+    "road": null,
+    "bufferM": null,
+    "steps": []
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 \"inside\" vs run 2 null",
+    "named area \"Haida Gwaii\": failed (no official layer for area type other)"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "4.072 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
+    }
+  ],
+  "construction": [
+    {
+      "what": "official boundary of the named area",
+      "quote": "Queen Charlotte City District Lots 15, 15A, 16, 16A, 18 and 3",
+      "source": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "Haida Gwaii",
+      "kind": "other",
+      "layer": "-",
+      "status": "failed",
+      "note": "no official layer for area type other"
+    },
+    {
+      "query": "District Lots 15, 15A, 16, 16A, 18, 3 (QUEEN CHARLOTTE)",
+      "kind": "lot",
+      "layer": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

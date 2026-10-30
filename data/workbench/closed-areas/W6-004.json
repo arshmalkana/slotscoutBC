@@ -1,0 +1,85 @@
+{
+  "id": "W6-004",
+  "itemId": "closed-area-cad82534dc",
+  "title": "Closed Areas Regulation, Schedule 5.1, section 4 (McGuire and Tamihi Creek Forest Service Roads)",
+  "heading": "McGuire and Tamihi Creek Forest Service Roads",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 5.1 [en. B.C. Reg. 135/2017, App. 1, s. 2.] No Shooting Areas — Specified Crown Land (Section 7.1)\nMcGuire and Tamihi Creek Forest Service Roads\n4 Those portions of M.U. 2-3 being all Crown land within 400 m of the midline of the following roads: (a)McGuire Forest Service Road from the junction with the Tamihi Creek Forest Service Road to the crossing of an unnamed creek approximately 3 km easterly along the McGuire Forest Service Road; (b)Tamihi Creek Forest Service Road from the junction with the Liumchen Forest Service Road to the crossing of Tamihi Creek approximately 6 km southerly and easterly along the Tamihi Creek Forest Service Road. [am. B.C. Reg. 115/2018, App. 1, s. 3.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "M.U. 2-3",
+    "geometry.buffer_m": "400 m",
+    "effect": "No Shooting Areas",
+    "geometry.side": "within 400 m of the midline"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 2-3"
+    },
+    "method": "road_buffer",
+    "feature": null,
+    "road": null,
+    "bufferM": 400,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "effect read from the text (no_shooting) differs from the schedule's effect (no_shooting_hunting_exempt)",
+    "listed road \"Tamihi Creek Forest Service Road\" none in the official road layers",
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [
+    {
+      "what": "road centreline",
+      "quote": "McGuire Forest Service Road from the junction with the Tamihi Creek Forest Service Road to the crossing of an unnamed creek approximately 3 km easterly along the McGuire Forest Service Road;",
+      "source": "WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW",
+      "ids": [
+        "5127.32"
+      ]
+    },
+    {
+      "what": "buffer 400 m either side, plus a 10 m conservative pad",
+      "quote": "400 m",
+      "source": "geometry builder"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "M.U. 2-3",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "McGuire Forest Service Road",
+      "kind": "fsr",
+      "layer": "WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "Tamihi Creek Forest Service Road",
+      "kind": "fsr",
+      "layer": "WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW",
+      "status": "none",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

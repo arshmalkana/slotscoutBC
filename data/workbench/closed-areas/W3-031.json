@@ -1,0 +1,64 @@
+{
+  "id": "W3-031",
+  "itemId": "closed-area-e4d86f1eb7",
+  "title": "Closed Areas Regulation, Schedule 3, section 31 (Roderick Haig-Brown Recreation Area)",
+  "heading": "Roderick Haig-Brown Recreation Area",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nRoderick Haig-Brown Recreation Area\n31 That portion of M.U. 3-37, in the vicinity of Chase, contained within the following described boundaries: That portion of the Roderick Haig-Brown Recreation Area being south of the Squilax-Anglement Road and downstream of the Adams River bridge. [en. B.C. Reg. 162/87, s. 7.] Repealed 32-34 Repealed. [B.C. Reg. 204/91, s. 1.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "That portion of M.U. 3-37",
+    "geometry.road": "the Squilax-Anglement Road",
+    "geometry.feature": "That portion of the Roderick Haig-Brown Recreation Area",
+    "effect": "No Shooting or Hunting Areas",
+    "geometry.side": "south of the Squilax-Anglement Road"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 3-37"
+    },
+    "method": "other",
+    "feature": {
+      "type": "park",
+      "name": "Roderick Haig-Brown Recreation Area"
+    },
+    "road": {
+      "name": "Squilax-Anglement Road",
+      "source_hint": "DRA"
+    },
+    "bufferM": null,
+    "steps": []
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs disagree: from: run 1 null vs run 2 \"adams river bridge\"",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "lookups": [
+    {
+      "query": "M.U. 3-37",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

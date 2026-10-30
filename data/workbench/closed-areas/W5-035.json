@@ -1,0 +1,93 @@
+{
+  "id": "W5-035",
+  "itemId": "closed-area-453b9f49da",
+  "title": "Closed Areas Regulation, Schedule 5, section 35 (Mayo Lake)",
+  "heading": "Mayo Lake",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nMayo Lake\n35 That portion of the Province in the vicinity of the Corporation of the City of Duncan, Quamichan Land District, which is contained within the following described boundaries: All that area bounded on the south by the southern boundary of Block 32, Cowichan Lake Land District; on the west by the Mayo Lake Road; on the north by the E. & N. Railway right of way; and on the east by the Skutz Falls Road.",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "Quamichan Land District",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "All that area bounded on the south by the southern boundary of Block 32, Cowichan Lake Land District",
+    "geometry.steps[1]": "on the west by the Mayo Lake Road",
+    "geometry.steps[2]": "on the north by the E. & N. Railway right of way",
+    "geometry.steps[3]": "on the east by the Skutz Falls Road"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Quamichan Land District"
+    },
+    "method": "metes_and_bounds",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": [
+      {
+        "follow": "lot_line",
+        "feature": "Block 32, Cowichan Lake Land District",
+        "until": null,
+        "quote": "All that area bounded on the south by the southern boundary of Block 32, Cowichan Lake Land District"
+      },
+      {
+        "follow": "road",
+        "feature": "Mayo Lake Road",
+        "until": null,
+        "quote": "on the west by the Mayo Lake Road"
+      },
+      {
+        "follow": "other",
+        "feature": "E. & N. Railway right of way",
+        "until": null,
+        "quote": "on the north by the E. & N. Railway right of way"
+      },
+      {
+        "follow": "road",
+        "feature": "Skutz Falls Road",
+        "until": null,
+        "quote": "on the east by the Skutz Falls Road"
+      }
+    ]
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs disagree: method: run 1 \"metes_and_bounds\" vs run 2 \"other\"; steps: run 1 [\"block 32 cowichan lake land district|||lot_line\",\"mayo lake rd|||road\",\"e. n. railway right of way|||other\",\"skutz falls rd|||road\"] vs run 2 []",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "\"Block 32, Cowichan Lake Land District\" was not found in the official layers; that side is drawn straight",
+    "\"Mayo Lake Road\" was not found in the official layers; that side is drawn straight",
+    "\"E. & N. Railway right of way\" was not found in the official layers; that side is drawn straight",
+    "\"Skutz Falls Road\" was not found in the official layers; that side is drawn straight",
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
+    }
+  ],
+  "construction": [],
+  "lookups": [
+    {
+      "query": "Quamichan Land District",
+      "kind": "other",
+      "layer": "WHSE_TANTALIS.TA_LAND_DISTRICTS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

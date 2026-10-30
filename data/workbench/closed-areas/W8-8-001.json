@@ -1,0 +1,134 @@
+{
+  "id": "W8-8-001",
+  "itemId": "closed-area-a46aa9f3c4",
+  "title": "Closed Areas Regulation, Schedule 8, section 1 (Cecil Lake)",
+  "heading": "Cecil Lake",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: zone around the places named",
+  "quality": "vicinity",
+  "sourceText": "Schedule 8 Seasonal No Hunting Areas (Section 9)\nCecil Lake\n1 During the period June 1 to October 15 in that portion of M.U. 7-33 contained within the following described boundaries: Commencing at the southeasterly corner of Section 22, Township 85, Range 16, W6 and proceeding northerly along the easterly boundaries of Sections 22, 27 and 34 to the northeasterly corner of Section 34; thence easterly to the point of intersection with the northwesterly corner of Section 35, Township 85, Range 15, W6; thence southerly along the westerly boundaries of Sections 35, 26 and 23 to the southwesterly corner of Section 23; thence westerly to the point of commencement. [am. B.C. Reg. 172/86, s. 4.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "that portion of M.U. 7-33",
+    "period": "During the period June 1 to October 15",
+    "effect": "Seasonal No Hunting Areas",
+    "geometry.side": "contained within the following described boundaries",
+    "geometry.steps[0]": "Commencing at the southeasterly corner of Section 22, Township 85, Range 16, W6 and proceeding northerly along the easterly boundaries of Sections 22, 27 and 34 to the northeasterly corner of Section 34",
+    "geometry.steps[1]": "thence easterly to the point of intersection with the northwesterly corner of Section 35, Township 85, Range 15, W6",
+    "geometry.steps[2]": "thence southerly along the westerly boundaries of Sections 35, 26 and 23 to the southwesterly corner of Section 23",
+    "geometry.steps[3]": "thence westerly to the point of commencement"
+  },
+  "extracted": {
+    "effect": "no_hunting",
+    "period": {
+      "start": "June 1",
+      "end": "October 15"
+    },
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 7-33"
+    },
+    "method": "metes_and_bounds",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": [
+      {
+        "follow": "lot_line",
+        "feature": "Sections 22, 27 and 34",
+        "until": "the northeasterly corner of Section 34",
+        "quote": "Commencing at the southeasterly corner of Section 22, Township 85, Range 16, W6 and proceeding northerly along the easterly boundaries of Sections 22, 27 and 34 to the northeasterly corner of Section 34"
+      },
+      {
+        "follow": null,
+        "feature": null,
+        "until": "the northwesterly corner of Section 35, Township 85, Range 15, W6",
+        "quote": "thence easterly to the point of intersection with the northwesterly corner of Section 35, Township 85, Range 15, W6"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "Sections 35, 26 and 23",
+        "until": "the southwesterly corner of Section 23",
+        "quote": "thence southerly along the westerly boundaries of Sections 35, 26 and 23 to the southwesterly corner of Section 23"
+      },
+      {
+        "follow": null,
+        "feature": null,
+        "until": "the point of commencement",
+        "quote": "thence westerly to the point of commencement"
+      }
+    ]
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs disagree: steps: run 1 [\"sections 22 27 and 34|the northeasterly corner of section 34||lot_line\",\"|the northwesterly corner of section 35 township 85 range 15 w6||\",\"sections 35 26 and 23|the southwesterly corner of section 23||l…",
+    "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 \"inside\" vs run 2 null",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "\"Sections 22, 27 and 34\" was not found in the official layers; that side is drawn straight",
+    "\"Sections 35, 26 and 23\" was not found in the official layers; that side is drawn straight",
+    "approximate zone around the places the section names, using run 1's reading",
+    "a zone around the places the section names (Cecil Lake): 1 km around the named points; not the boundary",
+    "validation failed: two independent extractions agree (steps: run 1 [\"sections 22 27 and 34|the northeasterly corner of section 34||lot_line\",\"|the northwesterly corner of section 35 township 85 range 15 w6||\",\"sections 35 26 and 23|the s…"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "11.709 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": false,
+      "detail": "steps: run 1 [\"sections 22 27 and 34|the northeasterly corner of section 34||lot_line\",\"|the northwesterly corner of section 35 township 85 range 15 w6||\",\"sections 35 26 and 23|the southwesterly corner of section 23||lot_line\",\"|the point of commencement||\"] vs run 2 [\"sections 22 27 and 34|northeasterly corner of section 34||lot_line\",\"|northwesterly corner of section 35 township 85 range 15 w6||\",\"sections 35 26 and 23|southwesterly corner of section 23||lot_line\",\"|point of commencement||\"]"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Cecil Lake): 1 km around the named points; not the boundary",
+      "quote": "Commencing at the southeasterly corner of Section 22, Township 85, Range 16, W6 and proceeding northerly along the easterly boundaries of Sections 22, 27 and 34 to the northeasterly corner of Section 34",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "M.U. 7-33",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

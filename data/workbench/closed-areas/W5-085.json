@@ -1,0 +1,198 @@
+{
+  "id": "W5-085",
+  "itemId": "closed-area-71626994d0",
+  "title": "Closed Areas Regulation, Schedule 5, section 85 (Sylvester Road)",
+  "heading": "Sylvester Road",
+  "folder": "confirmed",
+  "state": "Approved: exact outline",
+  "quality": "exact",
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nSylvester Road\n85 That portion of Fraser Valley Regional District being 50 m either side of the centreline of Sylvester Road between the midline of Farms Road and the midline of Dale Road. [en. B.C. Reg. 172/86, s. 2; am. B.C. Reg. 235/97, s. 3 (d).]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "That portion of Fraser Valley Regional District",
+    "geometry.road": "centreline of Sylvester Road",
+    "geometry.buffer_m": "50 m",
+    "geometry.from": "the midline of Farms Road",
+    "geometry.to": "the midline of Dale Road",
+    "effect": "No Shooting Areas",
+    "geometry.side": "either side"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "regional_district",
+      "name": "Fraser Valley Regional District"
+    },
+    "method": "road_buffer",
+    "feature": null,
+    "road": {
+      "name": "Sylvester Road",
+      "source_hint": "DRA"
+    },
+    "bufferM": 50,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "0.235 km² (limit 2 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
+    }
+  ],
+  "construction": [
+    {
+      "what": "road centreline",
+      "quote": "centreline of Sylvester Road",
+      "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "ids": [
+        "2465367",
+        "2465368",
+        "2594866",
+        "2594865",
+        "2152141",
+        "189538",
+        "329225",
+        "329226",
+        "190368",
+        "189539",
+        "189603",
+        "189604",
+        "190496",
+        "189601",
+        "189602",
+        "482974",
+        "482972",
+        "482973",
+        "525089",
+        "525088",
+        "525087",
+        "525090",
+        "525099",
+        "525098",
+        "329234",
+        "329233",
+        "2538279",
+        "2538278",
+        "482993",
+        "482994",
+        "482995",
+        "482991",
+        "482989",
+        "2465340",
+        "2594874",
+        "2594875",
+        "2158838",
+        "482992",
+        "483070",
+        "2414623",
+        "2414624",
+        "2594890",
+        "525100",
+        "582166",
+        "582164",
+        "582165",
+        "582163",
+        "451660",
+        "582162",
+        "582159",
+        "582161",
+        "582160",
+        "582157",
+        "582156",
+        "582155",
+        "582154",
+        "582153",
+        "189606"
+      ]
+    },
+    {
+      "what": "start at the junction with the first limit",
+      "quote": "the midline of Farms Road",
+      "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "point": [
+        -122.231777,
+        49.1838732
+      ]
+    },
+    {
+      "what": "end at the junction with the second limit",
+      "quote": "the midline of Dale Road",
+      "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "point": [
+        -122.229796,
+        49.1998626
+      ]
+    },
+    {
+      "what": "buffer 50 m either side, plus a 10 m conservative pad; round ends extend past each limit",
+      "quote": "50 m",
+      "source": "geometry builder"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "Fraser Valley Regional District",
+      "kind": "regional_district",
+      "layer": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_REGIONAL_DISTRICTS_SP",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "Sylvester Road",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "Farms Road",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "Dale Road",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-23",
+    "note": "Reviewed by Arsh, who checked every item manually; approval entered by Claude Code at his instruction (2026-10-23)."
+  }
+}

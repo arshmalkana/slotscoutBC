@@ -1,0 +1,147 @@
+{
+  "id": "W5-095",
+  "itemId": "closed-area-226480620e",
+  "title": "Closed Areas Regulation, Schedule 5, section 95 (Equity Mines)",
+  "heading": "Equity Mines",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: zone around the places named",
+  "quality": "vicinity",
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nEquity Mines\n95 That part of M.U. 6-09 in the vicinity of Houston which is contained within the following described boundaries: Commencing at a point on the Houston to Equity Silver Mine Road approximately 150 metres east of the 36 kilometre mark; thence approximately 1.7 kilometres at approximately S 20 W to the apex of an unnamed peak south of Lu Lake; thence approximately 1.85 kilometres at approximately S 26 E to the midline of the Goosley Lake Road; thence approximately 3.2 kilometres at approximately N 86 E to the apex of an unnamed peak; thence approximately 2.55 kilometres at approximately N 1 E to the apex of an unnamed peak; thence approximately 3.9 kilometres at approximately N 50 W to the apex of an unnamed peak; thence approximately 2.2 kilometres at approximately S 19 W to the point of commencement. [en. B.C. Reg. 219/2000, s. 5 (g).]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "That part of M.U. 6-09",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at a point on the Houston to Equity Silver Mine Road approximately 150 metres east of the 36 kilometre mark",
+    "geometry.steps[1]": "thence approximately 1.7 kilometres at approximately S 20 W to the apex of an unnamed peak south of Lu Lake",
+    "geometry.steps[2]": "thence approximately 1.85 kilometres at approximately S 26 E to the midline of the Goosley Lake Road",
+    "geometry.steps[3]": "thence approximately 3.2 kilometres at approximately N 86 E to the apex of an unnamed peak",
+    "geometry.steps[4]": "thence approximately 2.55 kilometres at approximately N 1 E to the apex of an unnamed peak",
+    "geometry.steps[5]": "thence approximately 3.9 kilometres at approximately N 50 W to the apex of an unnamed peak",
+    "geometry.steps[6]": "thence approximately 2.2 kilometres at approximately S 19 W to the point of commencement"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 6-09"
+    },
+    "method": "metes_and_bounds",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": [
+      {
+        "follow": null,
+        "feature": null,
+        "until": null,
+        "quote": "Commencing at a point on the Houston to Equity Silver Mine Road approximately 150 metres east of the 36 kilometre mark"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the apex of an unnamed peak south of Lu Lake",
+        "quote": "thence approximately 1.7 kilometres at approximately S 20 W to the apex of an unnamed peak south of Lu Lake"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the midline of the Goosley Lake Road",
+        "quote": "thence approximately 1.85 kilometres at approximately S 26 E to the midline of the Goosley Lake Road"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the apex of an unnamed peak",
+        "quote": "thence approximately 3.2 kilometres at approximately N 86 E to the apex of an unnamed peak"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the apex of an unnamed peak",
+        "quote": "thence approximately 2.55 kilometres at approximately N 1 E to the apex of an unnamed peak"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the apex of an unnamed peak",
+        "quote": "thence approximately 3.9 kilometres at approximately N 50 W to the apex of an unnamed peak"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the point of commencement",
+        "quote": "thence approximately 2.2 kilometres at approximately S 19 W to the point of commencement"
+      }
+    ]
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs disagree: steps: run 1 [\"||approximately 150 metres|\",\"|the apex of an unnamed peak south of lu lake|approximately 1.7 kilometres|straight_line\",\"|the midline of the goosley lake rd|approximately 1.85 kilometres|straight_line\",\"|…",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "approximate outline (vicinity) drawn from the places the walk names, using run 1's reading of the steps",
+    "the outline could not be placed: a 1 km zone around the place the section names is marked",
+    "validation failed: two independent extractions agree (steps: run 1 [\"||approximately 150 metres|\",\"|the apex of an unnamed peak south of lu lake|approximately 1.7 kilometres|straight_line\",\"|the midline of the goosley lake rd|approximate…"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "2.724 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": false,
+      "detail": "steps: run 1 [\"||approximately 150 metres|\",\"|the apex of an unnamed peak south of lu lake|approximately 1.7 kilometres|straight_line\",\"|the midline of the goosley lake rd|approximately 1.85 kilometres|straight_line\",\"|the apex of an unnamed peak|approximately 3.2 kilometres|straight_line\",\"|the apex of an unnamed peak|approximately 2.55 kilometres|straight_line\",\"|the apex of an unnamed peak|approximately 3.9 kilometres|straight_line\",\"|the point of commencement|approximately 2.2 kilometres|straight_line\"] vs run 2 [\"|||\",\"|the apex of an unnamed peak south of lu lake|approximately 1.7 kilometres|straight_line\",\"|the midline of the goosley lake rd|approximately 1.85 kilometres|straight_line\",\"|the apex of an unnamed peak|approximately 3.2 kilometres|straight_line\",\"|the apex of an unnamed peak|approximately 2.55 kilometres|straight_line\",\"|the apex of an unnamed peak|approximately 3.9 kilometres|straight_line\",\"|the point of commencement|approximately 2.2 kilometres|straight_line\"]"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate outline (vicinity): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at a point on the Houston to Equity Silver Mine Road approximately 150 metres east of the 36 kilometre mark",
+      "source": "BC Geographical Names"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "M.U. 6-09",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

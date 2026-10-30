@@ -1,0 +1,197 @@
+{
+  "id": "W5-129",
+  "itemId": "closed-area-6741f049f8",
+  "title": "Closed Areas Regulation, Schedule 5, section 129 (Dokie)",
+  "heading": "Dokie",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: walk with some straight sides",
+  "quality": "corners",
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nDokie\n129 That portion of M.U.s 7-22 and 7-31 in the Province of British Columbia in the vicinity of Chetwynd contained within the following described boundaries: Commencing at the southeast corner of District Lot 2456, Peace River Land District; thence southerly along the western boundary of District Lot 2072 to the point of intersection with the natural boundary of Pine River on the left bank thereof; thence in a general southerly direction along said natural boundary to the point of intersection with the northern boundary of District Lot 2474; thence westerly along said northern boundary, and along the prolongation thereof, to the point of intersection with the western boundary of the right of way of B.C. Railway; thence in a general northeasterly direction along said right of way boundary to the northeast corner of District Lot 2750; thence westerly along the northern boundary of said Lot, and along the prolongation thereof, to the southwest corner of the Provincial Reserve; thence northerly along the western boundary of said Reserve to the point of intersection with the southern boundary of District Lot 2267; thence westerly along said southern boundary and northerly along the western boundary of said Lot to the southeast corner of District Lot 592; thence westerly, northerly and easterly along the southern, western and northern boundaries of District Lot 592 to the northeast corner thereof; thence northerly along the western boundary of District Lot 2200 and easterly along the northern boundary of said Lot to the southwest corner of District Lot 2550; thence northerly along the western boundaries of District Lots 2550, 2455 and 2730A to the northern boundary of District Lot 2730A; thence easterly along said northern boundary to the point of intersection with the western boundary of the right of way of Highway 97; thence in a general northerly direction along said right of way boundary to the point of intersection with the prolongation of the southern boundary of District Lot 2456; thence easterly along said prolongation and along said southern boundary to the point of commencement. [en. B.C. Reg. 190/96, s. 5 (e).]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "M.U.s 7-22 and 7-31",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at the southeast corner of District Lot 2456, Peace River Land District",
+    "geometry.steps[1]": "thence southerly along the western boundary of District Lot 2072 to the point of intersection with the natural boundary of Pine River on the left bank thereof",
+    "geometry.steps[2]": "thence in a general southerly direction along said natural boundary to the point of intersection with the northern boundary of District Lot 2474",
+    "geometry.steps[3]": "thence westerly along said northern boundary, and along the prolongation thereof, to the point of intersection with the western boundary of the right of way of B.C. Railway",
+    "geometry.steps[4]": "thence in a general northeasterly direction along said right of way boundary to the northeast corner of District Lot 2750",
+    "geometry.steps[5]": "thence westerly along the northern boundary of said Lot, and along the prolongation thereof, to the southwest corner of the Provincial Reserve",
+    "geometry.steps[6]": "thence northerly along the western boundary of said Reserve to the point of intersection with the southern boundary of District Lot 2267",
+    "geometry.steps[7]": "thence westerly along said southern boundary and northerly along the western boundary of said Lot to the southeast corner of District Lot 592",
+    "geometry.steps[8]": "thence westerly, northerly and easterly along the southern, western and northern boundaries of District Lot 592 to the northeast corner thereof",
+    "geometry.steps[9]": "thence northerly along the western boundary of District Lot 2200 and easterly along the northern boundary of said Lot to the southwest corner of District Lot 2550",
+    "geometry.steps[10]": "thence northerly along the western boundaries of District Lots 2550, 2455 and 2730A to the northern boundary of District Lot 2730A",
+    "geometry.steps[11]": "thence easterly along said northern boundary to the point of intersection with the western boundary of the right of way of Highway 97",
+    "geometry.steps[12]": "thence in a general northerly direction along said right of way boundary to the point of intersection with the prolongation of the southern boundary of District Lot 2456",
+    "geometry.steps[13]": "thence easterly along said prolongation and along said southern boundary to the point of commencement"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U.s 7-22 and 7-31"
+    },
+    "method": "metes_and_bounds",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": [
+      {
+        "follow": null,
+        "feature": null,
+        "until": null,
+        "quote": "Commencing at the southeast corner of District Lot 2456, Peace River Land District"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "District Lot 2072",
+        "until": "the point of intersection with the natural boundary of Pine River on the left bank thereof",
+        "quote": "thence southerly along the western boundary of District Lot 2072 to the point of intersection with the natural boundary of Pine River on the left bank thereof"
+      },
+      {
+        "follow": "river",
+        "feature": "Pine River",
+        "until": "the point of intersection with the northern boundary of District Lot 2474",
+        "quote": "thence in a general southerly direction along said natural boundary to the point of intersection with the northern boundary of District Lot 2474"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "District Lot 2474",
+        "until": "the point of intersection with the western boundary of the right of way of B.C. Railway",
+        "quote": "thence westerly along said northern boundary, and along the prolongation thereof, to the point of intersection with the western boundary of the right of way of B.C. Railway"
+      },
+      {
+        "follow": "other",
+        "feature": "B.C. Railway",
+        "until": "the northeast corner of District Lot 2750",
+        "quote": "thence in a general northeasterly direction along said right of way boundary to the northeast corner of District Lot 2750"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "District Lot 2750",
+        "until": "the southwest corner of the Provincial Reserve",
+        "quote": "thence westerly along the northern boundary of said Lot, and along the prolongation thereof, to the southwest corner of the Provincial Reserve"
+      },
+      {
+        "follow": "reserve_boundary",
+        "feature": "Provincial Reserve",
+        "until": "the point of intersection with the southern boundary of District Lot 2267",
+        "quote": "thence northerly along the western boundary of said Reserve to the point of intersection with the southern boundary of District Lot 2267"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "District Lot 2267",
+        "until": "the southeast corner of District Lot 592",
+        "quote": "thence westerly along said southern boundary and northerly along the western boundary of said Lot to the southeast corner of District Lot 592"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "District Lot 592",
+        "until": "the northeast corner thereof",
+        "quote": "thence westerly, northerly and easterly along the southern, western and northern boundaries of District Lot 592 to the northeast corner thereof"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "District Lot 2200",
+        "until": "the southwest corner of District Lot 2550",
+        "quote": "thence northerly along the western boundary of District Lot 2200 and easterly along the northern boundary of said Lot to the southwest corner of District Lot 2550"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "District Lots 2550, 2455 and 2730A",
+        "until": "the northern boundary of District Lot 2730A",
+        "quote": "thence northerly along the western boundaries of District Lots 2550, 2455 and 2730A to the northern boundary of District Lot 2730A"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "District Lot 2730A",
+        "until": "the point of intersection with the western boundary of the right of way of Highway 97",
+        "quote": "thence easterly along said northern boundary to the point of intersection with the western boundary of the right of way of Highway 97"
+      },
+      {
+        "follow": "road",
+        "feature": "Highway 97",
+        "until": "the point of intersection with the prolongation of the southern boundary of District Lot 2456",
+        "quote": "thence in a general northerly direction along said right of way boundary to the point of intersection with the prolongation of the southern boundary of District Lot 2456"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "District Lot 2456",
+        "until": "the point of commencement",
+        "quote": "thence easterly along said prolongation and along said southern boundary to the point of commencement"
+      }
+    ]
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs disagree: steps: run 1 [\"|||\",\"district lot 2072|the point of intersection with the natural boundary of pine river on the left bank thereof||lot_line\",\"pine river|the point of intersection with the northern boundary of district l…",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "approximate outline (corners) drawn from the places the walk names, using run 1's reading of the steps",
+    "\"B.C. Railway\" was not found in the official layers; that side is drawn straight",
+    "\"Provincial Reserve\" was not found in the official layers; that side is drawn straight",
+    "validation failed: two independent extractions agree (steps: run 1 [\"|||\",\"district lot 2072|the point of intersection with the natural boundary of pine river on the left bank thereof||lot_line\",\"pine river|the point of intersection with…"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "4.540 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": false,
+      "detail": "steps: run 1 [\"|||\",\"district lot 2072|the point of intersection with the natural boundary of pine river on the left bank thereof||lot_line\",\"pine river|the point of intersection with the northern boundary of district lot 2474||river\",\"district lot 2474|the point of intersection with the western boundary of the right of way of b.c. railway||lot_line\",\"b.c. railway|the northeast corner of district lot 2750||other\",\"district lot 2750|the southwest corner of the provincial reserve||lot_line\",\"provincial reserve|the point of intersection with the southern boundary of district lot 2267||reserve_boundary\",\"district lot 2267|the southeast corner of district lot 592||lot_line\",\"district lot 592|the northeast corner thereof||lot_line\",\"district lot 2200|the southwest corner of district lot 2550||lot_line\",\"district lots 2550 2455 and 2730a|the northern boundary of district lot 2730a||lot_line\",\"district lot 2730a|the point of intersection with the western boundary of the right of way of hwy 97||lot_line\",\"hwy 97|the point of intersection with the prolongation of the southern boundary of district lot 2456||road\",\"district lot 2456|the point of commencement||lot_line\"] vs run 2 [\"|||\",\"district lot 2072|the point of intersection with the natural boundary of pine river on the left bank thereof||lot_line\",\"pine river|the point of intersection with the northern boundary of district lot 2474||river\",\"district lot 2474|the point of intersection with the western boundary of the right of way of b.c. railway||lot_line\",\"b.c. railway|the northeast corner of district lot 2750||other\",\"district lot 2750|the southwest corner of the provincial reserve||lot_line\",\"the provincial reserve|the point of intersection with the southern boundary of district lot 2267||reserve_boundary\",\"district lot 2267|the southeast corner of district lot 592||lot_line\",\"district lot 592|the northeast corner thereof||lot_line\",\"district lot 2200|the southwest corner of district lot 2550||lot_line\",\"district lots 2550 2455 and 2730a|the northern boundary of district lot 2730a||lot_line\",\"district lot 2730a|the point of intersection with the western boundary of the right of way of hwy 97||lot_line\",\"hwy 97|the point of intersection with the prolongation of the southern boundary of district lot 2456||road\",\"district lot 2456|the point of commencement||lot_line\"]"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at the southeast corner of District Lot 2456, Peace River Land District",
+      "source": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW, WHSE_BASEMAPPING.FWA_RIVERS_POLY, WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "M.U.s 7-22 and 7-31",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

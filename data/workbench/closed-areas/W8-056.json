@@ -1,0 +1,120 @@
+{
+  "id": "W8-056",
+  "itemId": "closed-area-6e2cb05a29",
+  "title": "Closed Areas Regulation, Schedule 7, section 56 (Chilko — Newton)",
+  "heading": "Chilko — Newton",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: read from the Province's map",
+  "quality": "map_image",
+  "sourceText": "Schedule 7 No Hunting Areas (Section 8)\nChilko — Newton\n56 That portion of M.U. 5-4 within 400 m of the midline of the roads highlighted in yellow on the attached map 'Closed Area 7-56/24'. [en. B.C. Reg. 161/2024, App. 1, s. 3.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "That portion of M.U. 5-4",
+    "geometry.buffer_m": "within 400 m",
+    "effect": "No Hunting Areas",
+    "geometry.side": "within 400 m of the midline of the roads"
+  },
+  "extracted": {
+    "effect": "no_hunting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 5-4"
+    },
+    "method": "road_buffer",
+    "feature": null,
+    "road": null,
+    "bufferM": 400,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "no single road named and no list of roads the code can read",
+    "outline read from the official map (no_hunting_area_-_400m_chilko-newton_road_mu_5-4_and_5-5.pdf); firm more than 135 m inside, \"possibly inside\" nearer the edge",
+    "validation failed: area in expected range (9.082 km² (limit 2 km²))"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": false,
+      "detail": "9.082 km² (limit 2 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
+    }
+  ],
+  "construction": [
+    {
+      "what": "outline read by code from the official map image: no_hunting_area_-_400m_chilko-newton_road_mu_5-4_and_5-5.pdf (yellow-highlighted roads, 400 m); clipped to M.U. 5-4",
+      "quote": null,
+      "source": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/maps/no_hunting_area_-_400m_chilko-newton_road_mu_5-4_and_5-5.pdf"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "M.U. 5-4",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [
+    {
+      "file": "no_hunting_area_-_400m_chilko-newton_road_mu_5-4_and_5-5.pdf",
+      "title": "No Hunting Area - 400m Chilko-Newton Road (MU 5-4 and 5-5) (PDF, 2.8MB)",
+      "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/maps/no_hunting_area_-_400m_chilko-newton_road_mu_5-4_and_5-5.pdf",
+      "page": "ca-map-no-hunting-area-400m-chilko-newton-road-mu-5-4-and-5-5.jpg",
+      "overlay": {
+        "image": "ca-map-no-hunting-area-400m-chilko-newton-road-mu-5-4-and-5-5.overlay.webp",
+        "corners": [
+          [
+            -124.154565,
+            52.17263
+          ],
+          [
+            -123.510357,
+            52.17263
+          ],
+          [
+            -123.510357,
+            51.617864
+          ],
+          [
+            -124.154565,
+            51.617864
+          ]
+        ]
+      }
+    }
+  ],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

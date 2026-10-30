@@ -1,0 +1,214 @@
+{
+  "id": "W5-018",
+  "itemId": "closed-area-e6f400e783",
+  "title": "Closed Areas Regulation, Schedule 5, section 18 (Kumdis Bay)",
+  "heading": "Kumdis Bay",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: walk with some straight sides",
+  "quality": "corners",
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nKumdis Bay\n18 That portion of M.U. 6-13 on the east side of Masset Inlet, Queen Charlotte District, contained within the following described boundaries: Commencing at the intersection of the southern shore of Kumdis Bay and the eastern boundary of Lot 414; thence in a southerly direction to the southeast corner of Lot 414; thence westerly along the southern boundary of Lot 414 to the eastern boundary of Lot 746; thence proceeding south along the eastern boundary of Lot 746 to the southern boundary of Lot 746; thence proceeding west along the southern boundary of Lot 746 to the eastern boundary of block B of Lot 747; thence proceeding south along the eastern boundary of block B to the southern boundary of block B; thence proceeding west along the southern boundary of block B to the western boundary of block B; thence proceeding south along the eastern boundary of Lot 3040 to the southern boundary of Lot 3040; thence proceeding due West to the high water mark of Masset Inlet; thence proceeding in a northwesterly direction, perpendicular to the shoreline for a distance of 1 km; thence proceeding northeasterly, remaining 1 km from the high water mark of Masset Inlet, parallel to the shoreline to a point due North of the most northerly point of Lot 420; thence due South to the most northerly point of Lot 420; thence due West 100 metres; thence proceeding southeasterly, remaining 100 metres west of the high water mark of Kumdis Bay, to the intersection with Highway 16 in Lot 414; thence easterly along Highway 16, to the east end of the bridge that crosses Kumdis Creek, to a point at the mean high water mark, on the east shore of Kumdis Creek; thence following the mean high water mark of Kumdis Creek and Kumdis Bay northeasterly to the point of commencement. [en. B.C. Reg. 194/99, s. 5 (a).]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "M.U. 6-13",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at the intersection of the southern shore of Kumdis Bay and the eastern boundary of Lot 414",
+    "geometry.steps[1]": "thence in a southerly direction to the southeast corner of Lot 414",
+    "geometry.steps[2]": "thence westerly along the southern boundary of Lot 414 to the eastern boundary of Lot 746",
+    "geometry.steps[3]": "thence proceeding south along the eastern boundary of Lot 746 to the southern boundary of Lot 746",
+    "geometry.steps[4]": "thence proceeding west along the southern boundary of Lot 746 to the eastern boundary of block B of Lot 747",
+    "geometry.steps[5]": "thence proceeding south along the eastern boundary of block B to the southern boundary of block B",
+    "geometry.steps[6]": "thence proceeding west along the southern boundary of block B to the western boundary of block B",
+    "geometry.steps[7]": "thence proceeding south along the eastern boundary of Lot 3040 to the southern boundary of Lot 3040",
+    "geometry.steps[8]": "thence proceeding due West to the high water mark of Masset Inlet",
+    "geometry.steps[9]": "thence proceeding in a northwesterly direction, perpendicular to the shoreline for a distance of 1 km",
+    "geometry.steps[10]": "thence proceeding northeasterly, remaining 1 km from the high water mark of Masset Inlet, parallel to the shoreline to a point due North of the most northerly point of Lot 420",
+    "geometry.steps[11]": "thence due South to the most northerly point of Lot 420",
+    "geometry.steps[12]": "thence due West 100 metres",
+    "geometry.steps[13]": "thence proceeding southeasterly, remaining 100 metres west of the high water mark of Kumdis Bay, to the intersection with Highway 16 in Lot 414",
+    "geometry.steps[14]": "thence easterly along Highway 16, to the east end of the bridge that crosses Kumdis Creek, to a point at the mean high water mark, on the east shore of Kumdis Creek",
+    "geometry.steps[15]": "thence following the mean high water mark of Kumdis Creek and Kumdis Bay northeasterly to the point of commencement"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 6-13"
+    },
+    "method": "metes_and_bounds",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": [
+      {
+        "follow": null,
+        "feature": "Kumdis Bay",
+        "until": null,
+        "quote": "Commencing at the intersection of the southern shore of Kumdis Bay and the eastern boundary of Lot 414"
+      },
+      {
+        "follow": null,
+        "feature": "Lot 414",
+        "until": "the southeast corner of Lot 414",
+        "quote": "thence in a southerly direction to the southeast corner of Lot 414"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "Lot 414",
+        "until": "the eastern boundary of Lot 746",
+        "quote": "thence westerly along the southern boundary of Lot 414 to the eastern boundary of Lot 746"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "Lot 746",
+        "until": "the southern boundary of Lot 746",
+        "quote": "thence proceeding south along the eastern boundary of Lot 746 to the southern boundary of Lot 746"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "Lot 746",
+        "until": "the eastern boundary of block B of Lot 747",
+        "quote": "thence proceeding west along the southern boundary of Lot 746 to the eastern boundary of block B of Lot 747"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "block B of Lot 747",
+        "until": "the southern boundary of block B",
+        "quote": "thence proceeding south along the eastern boundary of block B to the southern boundary of block B"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "block B of Lot 747",
+        "until": "the western boundary of block B",
+        "quote": "thence proceeding west along the southern boundary of block B to the western boundary of block B"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "Lot 3040",
+        "until": "the southern boundary of Lot 3040",
+        "quote": "thence proceeding south along the eastern boundary of Lot 3040 to the southern boundary of Lot 3040"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the high water mark of Masset Inlet",
+        "quote": "thence proceeding due West to the high water mark of Masset Inlet"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": null,
+        "quote": "thence proceeding in a northwesterly direction, perpendicular to the shoreline for a distance of 1 km"
+      },
+      {
+        "follow": "other",
+        "feature": "Masset Inlet",
+        "until": "a point due North of the most northerly point of Lot 420",
+        "quote": "thence proceeding northeasterly, remaining 1 km from the high water mark of Masset Inlet, parallel to the shoreline to a point due North of the most northerly point of Lot 420"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the most northerly point of Lot 420",
+        "quote": "thence due South to the most northerly point of Lot 420"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": null,
+        "quote": "thence due West 100 metres"
+      },
+      {
+        "follow": "other",
+        "feature": "Kumdis Bay",
+        "until": "the intersection with Highway 16 in Lot 414",
+        "quote": "thence proceeding southeasterly, remaining 100 metres west of the high water mark of Kumdis Bay, to the intersection with Highway 16 in Lot 414"
+      },
+      {
+        "follow": "road",
+        "feature": "Highway 16",
+        "until": "the east end of the bridge that crosses Kumdis Creek, to a point at the mean high water mark, on the east shore of Kumdis Creek",
+        "quote": "thence easterly along Highway 16, to the east end of the bridge that crosses Kumdis Creek, to a point at the mean high water mark, on the east shore of Kumdis Creek"
+      },
+      {
+        "follow": "shoreline",
+        "feature": "Kumdis Creek and Kumdis Bay",
+        "until": "the point of commencement",
+        "quote": "thence following the mean high water mark of Kumdis Creek and Kumdis Bay northeasterly to the point of commencement"
+      }
+    ]
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs disagree: steps: run 1 [\"kumdis bay|||\",\"lot 414|the southeast corner of lot 414||\",\"lot 414|the eastern boundary of lot 746||lot_line\",\"lot 746|the southern boundary of lot 746||lot_line\",\"lot 746|the eastern boundary of block b…",
+    "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 null vs run 2 \"inside\"",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "approximate outline (corners) drawn from the places the walk names, using run 1's reading of the steps",
+    "\"Kumdis Bay\" was not found in the official layers; that side is drawn straight",
+    "\"Masset Inlet\" was not found in the official layers; that side is drawn straight",
+    "\"Kumdis Bay\" was not found in the official layers; that side is drawn straight",
+    "\"Kumdis Creek and Kumdis Bay\" was not found in the official layers; that side is drawn straight",
+    "validation failed: two independent extractions agree (steps: run 1 [\"kumdis bay|||\",\"lot 414|the southeast corner of lot 414||\",\"lot 414|the eastern boundary of lot 746||lot_line\",\"lot 746|the southern boundary of lot 746||lot_line\",\"lot…"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "0.429 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": false,
+      "detail": "steps: run 1 [\"kumdis bay|||\",\"lot 414|the southeast corner of lot 414||\",\"lot 414|the eastern boundary of lot 746||lot_line\",\"lot 746|the southern boundary of lot 746||lot_line\",\"lot 746|the eastern boundary of block b of lot 747||lot_line\",\"block b of lot 747|the southern boundary of block b||lot_line\",\"block b of lot 747|the western boundary of block b||lot_line\",\"lot 3040|the southern boundary of lot 3040||lot_line\",\"|the high water mark of masset inlet||straight_line\",\"||1 km|straight_line\",\"masset inlet|a point due north of the most northerly point of lot 420|1 km|other\",\"|the most northerly point of lot 420||straight_line\",\"||100 metres|straight_line\",\"kumdis bay|the intersection with hwy 16 in lot 414|100 metres|other\",\"hwy 16|the east end of the bridge that crosses kumdis creek to a point at the mean high water mark on the east shore of kumdis creek||road\",\"kumdis creek and kumdis bay|the point of commencement||shoreline\"] vs run 2 [\"|||\",\"lot 414|the southeast corner of lot 414||\",\"lot 414|the eastern boundary of lot 746||lot_line\",\"lot 746|the southern boundary of lot 746||lot_line\",\"lot 746|the eastern boundary of block b of lot 747||lot_line\",\"block b of lot 747|the southern boundary of block b||lot_line\",\"block b of lot 747|the western boundary of block b||lot_line\",\"lot 3040|the southern boundary of lot 3040||lot_line\",\"|the high water mark of masset inlet||straight_line\",\"||1 km|straight_line\",\"masset inlet|a point due north of the most northerly point of lot 420|1 km|shoreline\",\"|the most northerly point of lot 420||straight_line\",\"||100 metres|straight_line\",\"kumdis bay|the intersection with hwy 16 in lot 414|100 metres|shoreline\",\"hwy 16|the east end of the bridge that crosses kumdis creek to a point at the mean high water mark on the east shore of kumdis creek||road\",\"kumdis creek and kumdis bay|the point of commencement||shoreline\"]"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at the intersection of the southern shore of Kumdis Bay and the eastern boundary of Lot 414",
+      "source": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW, WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "M.U. 6-13",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

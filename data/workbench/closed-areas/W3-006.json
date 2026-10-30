@@ -1,0 +1,95 @@
+{
+  "id": "W3-006",
+  "itemId": "closed-area-bbbdf480ed",
+  "title": "Closed Areas Regulation, Schedule 3, section 6 (Swan Lake)",
+  "heading": "Swan Lake",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: zone around the places named",
+  "quality": "vicinity",
+  "sourceText": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nSwan Lake\n6 That portion of the Province of British Columbia, in the vicinity of the Corporation of the City of Vernon, ODYD, which is contained within the following described boundaries: Those waters of Swan Lake to the maximum high water mark including all marshland adjacent to Swan Lake. [am. B.C. Regs. 109/85, s. 2 (a); 204/85, s. 1.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "ODYD",
+    "geometry.feature": "Those waters of Swan Lake to the maximum high water mark including all marshland adjacent to Swan Lake",
+    "effect": "No Shooting or Hunting Areas"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "ODYD"
+    },
+    "method": "other",
+    "feature": {
+      "type": "lake",
+      "name": "Swan Lake"
+    },
+    "road": null,
+    "bufferM": null,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "named area \"ODYD\": failed (no official layer for area type other)",
+    "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Swan Lake): the outline of Swan Lake and 1 km around the named points; not the boundary"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "4.838 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Swan Lake): the outline of Swan Lake and 1 km around the named points; not the boundary",
+      "quote": "Those waters of Swan Lake to the maximum high water mark including all marshland adjacent to Swan Lake",
+      "source": "WHSE_BASEMAPPING.FWA_LAKES_POLY, WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "ODYD",
+      "kind": "other",
+      "layer": "-",
+      "status": "failed",
+      "note": "no official layer for area type other"
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

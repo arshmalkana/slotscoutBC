@@ -1,0 +1,80 @@
+{
+  "id": "W8-8.1-001",
+  "itemId": "closed-area-3fc12f6b1e",
+  "title": "Closed Areas Regulation, Schedule 8.1, section 1 (Burns Bog)",
+  "heading": "Burns Bog",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: zone around the places named",
+  "quality": "vicinity",
+  "sourceText": "Schedule 8.1 No Hunting or Trapping Areas (Section 8.1)\nBurns Bog\n1 That portion of the Province of British Columbia described as follows: (a)Parcel identifier 000-914-991 Parcel \"D\" (Explanatory Plan 2515) District Lot 437 Group 2; except: Firstly: Parcel One (Reference Plan 8648); Secondly: Portions in Plans 64775 and LMP7813; Thirdly: Portions in Statutory Right of Way Plans 73154, 73156 and LMP45327 Fourthly: Portions in Plans BCP10127 and BCP10128, New Westminster District; (b)Parcel identifier 000-915-106 The West 100 acres of the Southeast Quarter of Section 23 Township 4; except: Firstly: the Right of Way of the Vancouver Victoria and Eastern Railway and Navigation Company as shown on Plan with Fee Deposited 8825F; Secondly: Parcel \"A\" (Reference Plan 15997); Thirdly: Part on Highway Plan 73514, New Westminster District; (c)Parcel identifier 000-915-084 Parcel One (Reference Plan 25703) of the Northeast Quarter of Section 14, Township 4, except: Firstly: Part subdivided by Plan 26104; Secondly: Part subdivided by Plan 40037; Thirdly: Part dedicated as road on Plan 50544; Fourthly: Part on Highway Plan 73154; and Fifthly: Part subdivided by Plan BCP10128, New Westminster District; (d)Parcel Identifier 000-915-114 Parcel 1 (Reference Plan 8648) District Lot 437, Group 2, New Westminster District, Except Part subdivided by Plan BCP11267; (e)Lot E, District Lot 437, Group 2, New Westminster District Plan BCP10127; (f)Parcel Identifier 000-915-122, Section 16, Township 4, New Westminster District; (g)Parcel Identifier 025-945-688 Lot A District Lot 437, Group 2, New Westminster District Plan BCP11267. [en. B.C. Reg. 151/2006, s. 6; am. B.C. Reg. 161/2024, App. 1, s. 4.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "effect": "No Hunting or Trapping Areas"
+  },
+  "extracted": {
+    "effect": "no_hunting",
+    "period": null,
+    "within": null,
+    "method": "other",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": []
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs disagree: within: run 1 null vs run 2 \"new westminster district\"",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "approximate zone around the places the section names, using run 1's reading",
+    "a zone around the places the section names (Burns Bog): 1 km around the named points; not the boundary",
+    "validation failed: two independent extractions agree (within: run 1 null vs run 2 \"new westminster district\")"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.137 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": false,
+      "detail": "within: run 1 null vs run 2 \"new westminster district\""
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Burns Bog): 1 km around the named points; not the boundary",
+      "quote": null,
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "lookups": [],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

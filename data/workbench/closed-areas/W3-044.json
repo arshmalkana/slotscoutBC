@@ -1,0 +1,103 @@
+{
+  "id": "W3-044",
+  "itemId": "closed-area-d075705697",
+  "title": "Closed Areas Regulation, Schedule 3, section 44 (Nitinat River)",
+  "heading": "Nitinat River",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: whole lots or waterbody",
+  "quality": "whole_feature",
+  "sourceText": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nNitinat River\n44 That portion of the Province of British Columbia in M.U.s 1-3 and 1-4 that is contained within the following described boundaries: Commencing at a point on the midline of Nitinat River at its intersection with the westerly boundary of Indian Reserve #15; thence in a general southerly direction along the midline of Nitinat River to the natural boundary of Nitinat Lake on the northerly shore thereof and including all intervening territory for 500 metres on either side of the midline of Nitinat River. [en. B.C. Reg. 204/91, s. 2.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "in M.U.s 1-3 and 1-4",
+    "geometry.feature": "the midline of Nitinat River",
+    "geometry.buffer_m": "500 metres",
+    "geometry.from": "Commencing at a point on the midline of Nitinat River at its intersection with the westerly boundary of Indian Reserve #15",
+    "geometry.to": "to the natural boundary of Nitinat Lake on the northerly shore thereof",
+    "effect": "No Shooting or Hunting Areas",
+    "geometry.side": "on either side of the midline"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U.s 1-3 and 1-4"
+    },
+    "method": "waterbody_buffer",
+    "feature": {
+      "type": "river",
+      "name": "Nitinat River"
+    },
+    "road": null,
+    "bufferM": 500,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "drawn whole: the text names only part of it, so the outline is approximate (\"possibly inside\")"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "40.424 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
+    }
+  ],
+  "construction": [
+    {
+      "what": "500 m around Nitinat River, clipped to M.U.s 1-3 and 1-4",
+      "quote": "the midline of Nitinat River",
+      "source": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW, WHSE_BASEMAPPING.FWA_RIVERS_POLY"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "M.U.s 1-3 and 1-4",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "Nitinat River",
+      "kind": "water",
+      "layer": "WHSE_BASEMAPPING.FWA_RIVERS_POLY",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

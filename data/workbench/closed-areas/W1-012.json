@@ -1,0 +1,59 @@
+{
+  "id": "W1-012",
+  "itemId": "closed-area-1861d63b24",
+  "title": "Closed Areas Regulation, Schedule 1, section 12 (Tunkwa Lake)",
+  "heading": "Tunkwa Lake",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 1 No Shooting, Hunting or Trapping Areas (Section 2)\nTunkwa Lake\n12 That portion of the Province, in the vicinity of Tunkwa Lake, Kootenay Land District, that is within the following boundaries: The largest island in Tunkwa Lake, being in Township 19, Range 21, W6M, Kootenay Land District.",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "in the vicinity of Tunkwa Lake, Kootenay Land District",
+    "geometry.feature": "The largest island in Tunkwa Lake",
+    "effect": "No Shooting, Hunting or Trapping Areas"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Kootenay Land District"
+    },
+    "method": "other",
+    "feature": {
+      "type": "island",
+      "name": "The largest island in Tunkwa Lake"
+    },
+    "road": null,
+    "bufferM": null,
+    "steps": []
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs disagree: side: run 1 null vs run 2 \"inside\"",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "lookups": [
+    {
+      "query": "Kootenay Land District",
+      "kind": "other",
+      "layer": "WHSE_TANTALIS.TA_LAND_DISTRICTS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

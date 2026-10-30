@@ -1,0 +1,170 @@
+{
+  "id": "W5-086",
+  "itemId": "closed-area-1403c2158a",
+  "title": "Closed Areas Regulation, Schedule 5, section 86 (York Lake)",
+  "heading": "York Lake",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: walk traced along the named features",
+  "quality": "traced",
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nYork Lake\n86 That portion of the Province of British Columbia in the general vicinity of York Lake, Cedar Land District, which is contained within the following described boundaries: Commencing at the point of intersection of the midline of Holden Corso Road and the midline of McMillan Road; thence in a southerly direction along the midline of McMillan Road to the point of intersection with the midline of Walsh Road; thence in a general easterly direction along the midline of Walsh Road to the point of intersection with the midline of Nairne Road; thence in a southerly direction along the midline of Nairne Road to the point of intersection with the midline of Ryeland Road; thence in a westerly direction along the midline of Ryeland Road to the point of intersection with the midline of Cedar Road; thence in a general westerly direction along the midline of Cedar Road to the point of intersection with the midline of McMillan Road; thence in a northerly direction along the midline of McMillan Road to the point of intersection with the midline of Sanford Way; thence in a westerly direction along the midline of Sanford Way to the point of intersection with the midline of Torberg Road; thence in a general northerly direction along the midline of Torberg Road to the point of intersection with the midline of Holden Corso Road; thence in an easterly direction along the midline of Holden Corso Road to the point of commencement. [en. B.C. Reg. 162/87, s. 22.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "Cedar Land District",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at the point of intersection of the midline of Holden Corso Road and the midline of McMillan Road",
+    "geometry.steps[1]": "thence in a southerly direction along the midline of McMillan Road to the point of intersection with the midline of Walsh Road",
+    "geometry.steps[2]": "thence in a general easterly direction along the midline of Walsh Road to the point of intersection with the midline of Nairne Road",
+    "geometry.steps[3]": "thence in a southerly direction along the midline of Nairne Road to the point of intersection with the midline of Ryeland Road",
+    "geometry.steps[4]": "thence in a westerly direction along the midline of Ryeland Road to the point of intersection with the midline of Cedar Road",
+    "geometry.steps[5]": "thence in a general westerly direction along the midline of Cedar Road to the point of intersection with the midline of McMillan Road",
+    "geometry.steps[6]": "thence in a northerly direction along the midline of McMillan Road to the point of intersection with the midline of Sanford Way",
+    "geometry.steps[7]": "thence in a westerly direction along the midline of Sanford Way to the point of intersection with the midline of Torberg Road",
+    "geometry.steps[8]": "thence in a general northerly direction along the midline of Torberg Road to the point of intersection with the midline of Holden Corso Road",
+    "geometry.steps[9]": "thence in an easterly direction along the midline of Holden Corso Road to the point of commencement"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Cedar Land District"
+    },
+    "method": "metes_and_bounds",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": [
+      {
+        "follow": null,
+        "feature": null,
+        "until": null,
+        "quote": "Commencing at the point of intersection of the midline of Holden Corso Road and the midline of McMillan Road"
+      },
+      {
+        "follow": "road",
+        "feature": "McMillan Road",
+        "until": "the point of intersection with the midline of Walsh Road",
+        "quote": "thence in a southerly direction along the midline of McMillan Road to the point of intersection with the midline of Walsh Road"
+      },
+      {
+        "follow": "road",
+        "feature": "Walsh Road",
+        "until": "the point of intersection with the midline of Nairne Road",
+        "quote": "thence in a general easterly direction along the midline of Walsh Road to the point of intersection with the midline of Nairne Road"
+      },
+      {
+        "follow": "road",
+        "feature": "Nairne Road",
+        "until": "the point of intersection with the midline of Ryeland Road",
+        "quote": "thence in a southerly direction along the midline of Nairne Road to the point of intersection with the midline of Ryeland Road"
+      },
+      {
+        "follow": "road",
+        "feature": "Ryeland Road",
+        "until": "the point of intersection with the midline of Cedar Road",
+        "quote": "thence in a westerly direction along the midline of Ryeland Road to the point of intersection with the midline of Cedar Road"
+      },
+      {
+        "follow": "road",
+        "feature": "Cedar Road",
+        "until": "the point of intersection with the midline of McMillan Road",
+        "quote": "thence in a general westerly direction along the midline of Cedar Road to the point of intersection with the midline of McMillan Road"
+      },
+      {
+        "follow": "road",
+        "feature": "McMillan Road",
+        "until": "the point of intersection with the midline of Sanford Way",
+        "quote": "thence in a northerly direction along the midline of McMillan Road to the point of intersection with the midline of Sanford Way"
+      },
+      {
+        "follow": "road",
+        "feature": "Sanford Way",
+        "until": "the point of intersection with the midline of Torberg Road",
+        "quote": "thence in a westerly direction along the midline of Sanford Way to the point of intersection with the midline of Torberg Road"
+      },
+      {
+        "follow": "road",
+        "feature": "Torberg Road",
+        "until": "the point of intersection with the midline of Holden Corso Road",
+        "quote": "thence in a general northerly direction along the midline of Torberg Road to the point of intersection with the midline of Holden Corso Road"
+      },
+      {
+        "follow": "road",
+        "feature": "Holden Corso Road",
+        "until": "the point of commencement",
+        "quote": "thence in an easterly direction along the midline of Holden Corso Road to the point of commencement"
+      }
+    ]
+  },
+  "runsAgree": true,
+  "why": [
+    "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "approximate outline (traced) drawn from the places the walk names",
+    "\"McMillan Road\" was not found in the official layers; that side is drawn straight",
+    "\"Ryeland Road\" was not found in the official layers; that side is drawn straight",
+    "\"McMillan Road\" was not found in the official layers; that side is drawn straight",
+    "\"Sanford Way\" was not found in the official layers; that side is drawn straight",
+    "\"Torberg Road\" was not found in the official layers; that side is drawn straight"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "2.592 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at the point of intersection of the midline of Holden Corso Road and the midline of McMillan Road",
+      "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "Cedar Land District",
+      "kind": "other",
+      "layer": "WHSE_TANTALIS.TA_LAND_DISTRICTS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

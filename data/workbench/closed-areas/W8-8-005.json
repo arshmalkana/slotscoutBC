@@ -1,0 +1,58 @@
+{
+  "id": "W8-8-005",
+  "itemId": "closed-area-5d2bca588e",
+  "title": "Closed Areas Regulation, Schedule 8, section 5 (K'waal and Kitkiata Watersheds)",
+  "heading": "K'waal and Kitkiata Watersheds",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 8 Seasonal No Hunting Areas (Section 9)\nK'waal and Kitkiata Watersheds\n5 During the period January 1 to October 31 in that portion of M.U. 6-11 outlined in red on the attached Map No. 8-5/20. [en. B.C. Reg. 169/2020, App. 1, s. 3.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "that portion of M.U. 6-11",
+    "period": "During the period January 1 to October 31",
+    "effect": "Seasonal No Hunting Areas"
+  },
+  "extracted": {
+    "effect": "no_hunting",
+    "period": {
+      "start": "January 1",
+      "end": "October 31"
+    },
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 6-11"
+    },
+    "method": "other",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "lookups": [
+    {
+      "query": "M.U. 6-11",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

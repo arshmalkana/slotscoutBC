@@ -1,0 +1,166 @@
+{
+  "id": "W5-068",
+  "itemId": "closed-area-333fbac340",
+  "title": "Closed Areas Regulation, Schedule 5, section 68 (Lund)",
+  "heading": "Lund",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: walk traced along the named features",
+  "quality": "traced",
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nLund\n68 That portion of the Province of British Columbia in M.U. 2-12 contained within the following described boundaries: Commencing at a point on the mean high water mark that is the most southerly point of the natural boundary of Thulin Lake; thence northerly along the mean high water mark on the westerly natural boundary of the lake to the northernmost tip of the lake; thence along a straight line due West to the right of way of Finn Bay Road; thence northwesterly along the right of way to its intersection with Norlund Road; thence in a straight line southwest to a point on the mean low water mark on the natural boundary of Thulin Passage; thence southerly along the natural boundary to the most southwesterly point of land bordering the entrance to Thulin passage; thence along a straight line easterly to the point of land southwest of Lund which is the northeasterly terminus of the Savary Island marine telephone cable; thence southerly along the natural boundary to a small unnamed bay approximately 500 m southeasterly from the telephone cable terminus point; thence along a straight line due East to the Highway 101 right of way; thence along a straight line due North to the point of commencement. [en. B.C. Reg. 205/94, s. 16; am. B.C. Reg. 301/2010, App. 1.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "in M.U. 2-12",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at a point on the mean high water mark that is the most southerly point of the natural boundary of Thulin Lake",
+    "geometry.steps[1]": "thence northerly along the mean high water mark on the westerly natural boundary of the lake to the northernmost tip of the lake",
+    "geometry.steps[2]": "thence along a straight line due West to the right of way of Finn Bay Road",
+    "geometry.steps[3]": "thence northwesterly along the right of way to its intersection with Norlund Road",
+    "geometry.steps[4]": "thence in a straight line southwest to a point on the mean low water mark on the natural boundary of Thulin Passage",
+    "geometry.steps[5]": "thence southerly along the natural boundary to the most southwesterly point of land bordering the entrance to Thulin passage",
+    "geometry.steps[6]": "thence along a straight line easterly to the point of land southwest of Lund which is the northeasterly terminus of the Savary Island marine telephone cable",
+    "geometry.steps[7]": "thence southerly along the natural boundary to a small unnamed bay approximately 500 m southeasterly from the telephone cable terminus point",
+    "geometry.steps[8]": "thence along a straight line due East to the Highway 101 right of way",
+    "geometry.steps[9]": "thence along a straight line due North to the point of commencement"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 2-12"
+    },
+    "method": "metes_and_bounds",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": [
+      {
+        "follow": null,
+        "feature": null,
+        "until": null,
+        "quote": "Commencing at a point on the mean high water mark that is the most southerly point of the natural boundary of Thulin Lake"
+      },
+      {
+        "follow": "shoreline",
+        "feature": "Thulin Lake",
+        "until": "the northernmost tip of the lake",
+        "quote": "thence northerly along the mean high water mark on the westerly natural boundary of the lake to the northernmost tip of the lake"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the right of way of Finn Bay Road",
+        "quote": "thence along a straight line due West to the right of way of Finn Bay Road"
+      },
+      {
+        "follow": "road",
+        "feature": "Finn Bay Road",
+        "until": "its intersection with Norlund Road",
+        "quote": "thence northwesterly along the right of way to its intersection with Norlund Road"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "a point on the mean low water mark on the natural boundary of Thulin Passage",
+        "quote": "thence in a straight line southwest to a point on the mean low water mark on the natural boundary of Thulin Passage"
+      },
+      {
+        "follow": "shoreline",
+        "feature": "Thulin Passage",
+        "until": "the most southwesterly point of land bordering the entrance to Thulin passage",
+        "quote": "thence southerly along the natural boundary to the most southwesterly point of land bordering the entrance to Thulin passage"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the point of land southwest of Lund which is the northeasterly terminus of the Savary Island marine telephone cable",
+        "quote": "thence along a straight line easterly to the point of land southwest of Lund which is the northeasterly terminus of the Savary Island marine telephone cable"
+      },
+      {
+        "follow": "shoreline",
+        "feature": null,
+        "until": "a small unnamed bay approximately 500 m southeasterly from the telephone cable terminus point",
+        "quote": "thence southerly along the natural boundary to a small unnamed bay approximately 500 m southeasterly from the telephone cable terminus point"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the Highway 101 right of way",
+        "quote": "thence along a straight line due East to the Highway 101 right of way"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the point of commencement",
+        "quote": "thence along a straight line due North to the point of commencement"
+      }
+    ]
+  },
+  "runsAgree": true,
+  "why": [
+    "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "approximate outline (traced) drawn from the places the walk names",
+    "\"Thulin Passage\" was not found in the official layers; that side is drawn straight"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "0.874 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at a point on the mean high water mark that is the most southerly point of the natural boundary of Thulin Lake",
+      "source": "WHSE_BASEMAPPING.FWA_LAKES_POLY, WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "M.U. 2-12",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "W3-043",
+  "itemId": "closed-area-04fa08d5ed",
+  "title": "Closed Areas Regulation, Schedule 3, section 43 (Road 248)",
+  "heading": "Road 248",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nRoad 248\n43 That portion of the Province of British Columbia, in the vicinity of Beatton Provincial Park, that is within 50 metres of either side of the midline of Number 248 Road. [en. B.C. Reg. 204/91, s. 2.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "geometry.road": "the midline of Number 248 Road",
+    "geometry.buffer_m": "within 50 metres",
+    "effect": "No Shooting or Hunting Areas",
+    "geometry.side": "either side of the midline"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": null,
+    "method": "road_buffer",
+    "feature": null,
+    "road": {
+      "name": "Number 248 Road",
+      "source_hint": "DRA"
+    },
+    "bufferM": 50,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "road \"Number 248 Road\": none",
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "lookups": [
+    {
+      "query": "Number 248 Road",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

@@ -1,0 +1,141 @@
+{
+  "id": "W5-096",
+  "itemId": "closed-area-82198391ed",
+  "title": "Closed Areas Regulation, Schedule 5, section 96 (Miworth)",
+  "heading": "Miworth",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: walk with some straight sides",
+  "quality": "corners",
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nMiworth\n96 That portion of M.U. 7-15 in the vicinity of Prince George which is contained within the following described boundaries: Commencing at the point of intersection of the westerly boundary of the city of Prince George and the natural boundary of Nechako River on the right bank thereof; thence in a general southerly direction along the natural boundary of Nechako River on the right bank thereof to the southerly boundary of Lot 7639 Cariboo Land District; thence due East approximately 100 m to the Canadian National Railway right of way on the easterly boundary thereof; thence approximately 2.2 km in a general northerly direction along the easterly boundary of the said railway right of way to the point of intersection with the midline of an unnamed stream flowing westerly into Nechako River near the southerly boundary of Lot 1532; thence in a general easterly direction along the midline of the said unnamed stream to the point of intersection with the westerly boundary of the city of Prince George; thence in a general northerly direction along the westerly boundary of the city of Prince George to the point of commencement. [en. B.C. Reg. 167/88, s. 7.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "That portion of M.U. 7-15",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at the point of intersection of the westerly boundary of the city of Prince George and the natural boundary of Nechako River on the right bank thereof",
+    "geometry.steps[1]": "thence in a general southerly direction along the natural boundary of Nechako River on the right bank thereof to the southerly boundary of Lot 7639 Cariboo Land District",
+    "geometry.steps[2]": "thence due East approximately 100 m to the Canadian National Railway right of way on the easterly boundary thereof",
+    "geometry.steps[3]": "thence approximately 2.2 km in a general northerly direction along the easterly boundary of the said railway right of way to the point of intersection with the midline of an unnamed stream flowing westerly into Nechako River near the southerly boundary of Lot 1532",
+    "geometry.steps[4]": "thence in a general easterly direction along the midline of the said unnamed stream to the point of intersection with the westerly boundary of the city of Prince George",
+    "geometry.steps[5]": "thence in a general northerly direction along the westerly boundary of the city of Prince George to the point of commencement"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 7-15"
+    },
+    "method": "metes_and_bounds",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": [
+      {
+        "follow": null,
+        "feature": null,
+        "until": null,
+        "quote": "Commencing at the point of intersection of the westerly boundary of the city of Prince George and the natural boundary of Nechako River on the right bank thereof"
+      },
+      {
+        "follow": "river",
+        "feature": "Nechako River",
+        "until": "the southerly boundary of Lot 7639 Cariboo Land District",
+        "quote": "thence in a general southerly direction along the natural boundary of Nechako River on the right bank thereof to the southerly boundary of Lot 7639 Cariboo Land District"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the Canadian National Railway right of way on the easterly boundary thereof",
+        "quote": "thence due East approximately 100 m to the Canadian National Railway right of way on the easterly boundary thereof"
+      },
+      {
+        "follow": "other",
+        "feature": "Canadian National Railway right of way",
+        "until": "the point of intersection with the midline of an unnamed stream flowing westerly into Nechako River near the southerly boundary of Lot 1532",
+        "quote": "thence approximately 2.2 km in a general northerly direction along the easterly boundary of the said railway right of way to the point of intersection with the midline of an unnamed stream flowing westerly into Nechako River near the southerly boundary of Lot 1532"
+      },
+      {
+        "follow": "creek",
+        "feature": "unnamed stream flowing westerly into Nechako River",
+        "until": "the point of intersection with the westerly boundary of the city of Prince George",
+        "quote": "thence in a general easterly direction along the midline of the said unnamed stream to the point of intersection with the westerly boundary of the city of Prince George"
+      },
+      {
+        "follow": "district_boundary",
+        "feature": "city of Prince George",
+        "until": "the point of commencement",
+        "quote": "thence in a general northerly direction along the westerly boundary of the city of Prince George to the point of commencement"
+      }
+    ]
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs disagree: steps: run 1 [\"|||\",\"nechako river|the southerly boundary of lot 7639 cariboo land district||river\",\"|the canadian national railway right of way on the easterly boundary thereof|approximately 100 m|straight_line\",\"canad…",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "approximate outline (corners) drawn from the places the walk names, using run 1's reading of the steps",
+    "\"Canadian National Railway right of way\" was not found in the official layers; that side is drawn straight",
+    "\"unnamed stream flowing westerly into Nechako River\" was not found in the official layers; that side is drawn straight",
+    "validation failed: two independent extractions agree (steps: run 1 [\"|||\",\"nechako river|the southerly boundary of lot 7639 cariboo land district||river\",\"|the canadian national railway right of way on the easterly boundary thereof|appro…"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "14.287 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": false,
+      "detail": "steps: run 1 [\"|||\",\"nechako river|the southerly boundary of lot 7639 cariboo land district||river\",\"|the canadian national railway right of way on the easterly boundary thereof|approximately 100 m|straight_line\",\"canadian national railway right of way|the point of intersection with the midline of an unnamed stream flowing westerly into nechako river near the southerly boundary of lot 1532|approximately 2.2 km|other\",\"unnamed stream flowing westerly into nechako river|the point of intersection with the westerly boundary of the city of prince george||creek\",\"city of prince george|the point of commencement||district_boundary\"] vs run 2 [\"|||\",\"nechako river|the southerly boundary of lot 7639 cariboo land district||river\",\"|the canadian national railway right of way on the easterly boundary thereof|approximately 100 m|straight_line\",\"canadian national railway right of way|the point of intersection with the midline of an unnamed stream flowing westerly into nechako river near the southerly boundary of lot 1532|approximately 2.2 km|other\",\"|the point of intersection with the westerly boundary of the city of prince george||creek\",\"city of prince george|the point of commencement||district_boundary\"]"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at the point of intersection of the westerly boundary of the city of Prince George and the natural boundary of Nechako River on the right bank thereof",
+      "source": "WHSE_BASEMAPPING.FWA_RIVERS_POLY, WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP, WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "M.U. 7-15",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

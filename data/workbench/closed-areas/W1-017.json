@@ -1,0 +1,124 @@
+{
+  "id": "W1-017",
+  "itemId": "closed-area-92d655fa0e",
+  "title": "Closed Areas Regulation, Schedule 1, section 17 (Gwaii Haanas National Park Reserve)",
+  "heading": "Gwaii Haanas National Park Reserve",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 1 No Shooting, Hunting or Trapping Areas (Section 2)\nGwaii Haanas National Park Reserve\n17 That portion of the Province of British Columbia in M.U. 6-12 being Moresby Island South of a line described as follows: Commencing at the intersection of the 52° 50' 05\" parallel of north latitude with the 131° 20' 10\" meridian of west longitude (said intersection being a point in Hecate Strait approximately 10 km northeasterly of Lost Islands); thence westerly in a straight line to the ordinary high water mark at the most northeasterly point of Tangil Peninsula at Porter Head at approximate latitude 52° 48' 35\" and approximate longitude 131° 39' 20\" (said line passing approximately 2 km north of Lost Islands); thence southwesterly in a straight line to the most easterly peak on the Tangil Peninsula at approximate latitude 52° 48' 10\" and approximate longitude 131° 40' 39\"; thence generally westerly along the watershed boundary that separates those creeks that flow into Dana Inlet from those that flow into Logan Inlet, to the peak at the intersection of the northerly boundary of the watershed of Crescent Inlet with the said watershed boundary that separates those creeks that flow into Dana Inlet from those that flow into Logan Inlet (said peak being at approximate latitude 52° 46' 37\" and approximate longitude 131° 49' 09\"); thence southwesterly in a straight line to the northeast corner of Lot 663; thence southerly and westerly along the easterly and southerly boundaries of said Lot 663 to the intersection with the southerly boundary of the watershed of Crescent Inlet; thence generally westerly along the southerly boundaries of the watershed of said Crescent Inlet and of Tasu sound, being also a portion of the southerly boundary of Tree Farm Licence 24 Block 2, to a point on the O.H.W.M. at Tasu Head, said southerly boundaries crossing in sequence the summits of Apex Mountain, Mount de la Touche, Mount Oliver and Mount Moody; thence southwesterly in a straight line to the intersection of the 52° 40' 36\" parallel of north latitude with the 132° 13' 16\" meridian of west longitude said intersection being a point in the Pacific Ocean approximately 10 km from said point on the O.H.W.M. at Tasu Head. [en. B.C. Reg. 225/98, s. 1; am. B.C. Reg. 151/2006, s. 2 (b).]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "in M.U. 6-12",
+    "geometry.feature": "Moresby Island",
+    "effect": "No Shooting, Hunting or Trapping Areas",
+    "geometry.side": "Moresby Island South of a line",
+    "geometry.steps[0]": "Commencing at the intersection of the",
+    "geometry.steps[1]": "thence westerly in a straight line to the ordinary high water mark at the most northeasterly point of Tangil Peninsula at Porter Head",
+    "geometry.steps[2]": "thence southwesterly in a straight line to the most easterly peak on the Tangil Peninsula",
+    "geometry.steps[3]": "thence generally westerly along the watershed boundary that separates those creeks that flow into Dana Inlet from those that flow into Logan Inlet, to the peak at the intersection of the northerly boundary of the watershed of Crescent Inlet with the said watershed boundary that separates those creeks that flow into Dana Inlet from those that flow into Logan Inlet",
+    "geometry.steps[4]": "thence southwesterly in a straight line to the northeast corner of Lot 663",
+    "geometry.steps[5]": "thence southerly and westerly along the easterly and southerly boundaries of said Lot 663 to the intersection with the southerly boundary of the watershed of Crescent Inlet",
+    "geometry.steps[6]": "thence generally westerly along the southerly boundaries of the watershed of said Crescent Inlet and of Tasu sound, being also a portion of the southerly boundary of Tree Farm Licence 24 Block 2, to a point on the O.H.W.M. at Tasu Head, said southerly boundaries crossing in sequence the summits of Apex Mountain, Mount de la Touche, Mount Oliver and Mount Moody",
+    "geometry.steps[7]": "thence southwesterly in a straight line to the intersection of the"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 6-12"
+    },
+    "method": "metes_and_bounds",
+    "feature": {
+      "type": "island",
+      "name": "Moresby Island"
+    },
+    "road": null,
+    "bufferM": null,
+    "steps": [
+      {
+        "follow": null,
+        "feature": null,
+        "until": null,
+        "quote": "Commencing at the intersection of the"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the ordinary high water mark at the most northeasterly point of Tangil Peninsula at Porter Head",
+        "quote": "thence westerly in a straight line to the ordinary high water mark at the most northeasterly point of Tangil Peninsula at Porter Head"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the most easterly peak on the Tangil Peninsula",
+        "quote": "thence southwesterly in a straight line to the most easterly peak on the Tangil Peninsula"
+      },
+      {
+        "follow": "other",
+        "feature": "the watershed boundary that separates those creeks that flow into Dana Inlet from those that flow into Logan Inlet",
+        "until": "the peak at the intersection of the northerly boundary of the watershed of Crescent Inlet with the said watershed boundary that separates those creeks that flow into Dana Inlet from those that flow into Logan Inlet",
+        "quote": "thence generally westerly along the watershed boundary that separates those creeks that flow into Dana Inlet from those that flow into Logan Inlet, to the peak at the intersection of the northerly boundary of the watershed of Crescent Inlet with the said watershed boundary that separates those creeks that flow into Dana Inlet from those that flow into Logan Inlet"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the northeast corner of Lot 663",
+        "quote": "thence southwesterly in a straight line to the northeast corner of Lot 663"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "Lot 663",
+        "until": "the intersection with the southerly boundary of the watershed of Crescent Inlet",
+        "quote": "thence southerly and westerly along the easterly and southerly boundaries of said Lot 663 to the intersection with the southerly boundary of the watershed of Crescent Inlet"
+      },
+      {
+        "follow": "other",
+        "feature": "the watershed of said Crescent Inlet and of Tasu sound",
+        "until": "a point on the O.H.W.M. at Tasu Head",
+        "quote": "thence generally westerly along the southerly boundaries of the watershed of said Crescent Inlet and of Tasu sound, being also a portion of the southerly boundary of Tree Farm Licence 24 Block 2, to a point on the O.H.W.M. at Tasu Head, said southerly boundaries crossing in sequence the summits of Apex Mountain, Mount de la Touche, Mount Oliver and Mount Moody"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": null,
+        "quote": "thence southwesterly in a straight line to the intersection of the"
+      }
+    ]
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs disagree: steps: run 1 [\"|||\",\"|the ordinary high water mark at the most northeasterly point of tangil peninsula at porter head||straight_line\",\"|the most easterly peak on the tangil peninsula||straight_line\",\"the watershed bound…",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "\"the watershed boundary that separates those creeks that flow into Dana Inlet from those that flow into Logan Inlet\" was not found in the official layers; that side is drawn straight",
+    "\"the watershed of said Crescent Inlet and of Tasu sound\" was not found in the official layers; that side is drawn straight",
+    "a zone around Moresby Island would cover 2600 km2, too wide to mark",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
+    }
+  ],
+  "construction": [],
+  "lookups": [
+    {
+      "query": "M.U. 6-12",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

@@ -1,0 +1,117 @@
+{
+  "id": "W5-067",
+  "itemId": "closed-area-5bd196e54f",
+  "title": "Closed Areas Regulation, Schedule 5, section 67 (Blubber Bay)",
+  "heading": "Blubber Bay",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: zone around the places named",
+  "quality": "vicinity",
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nBlubber Bay\n67 That portion of the Province of British Columbia in M.U. 2-16 in the vicinity of Blubber Bay contained within the following described boundaries: (1)within a 1 kilometre radius of the Blubber Bay Ferry Terminal, and (2)commencing at Blubber Point; thence westerly, southerly and southeasterly along the mean low water mark to the midpoint of Limekiln Bay; thence due North to the point of commencement. [en. B.C. Reg. 205/94, s. 15.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "in M.U. 2-16",
+    "geometry.feature": "the Blubber Bay Ferry Terminal",
+    "geometry.buffer_m": "within a 1 kilometre radius",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "commencing at Blubber Point",
+    "geometry.steps[1]": "thence westerly, southerly and southeasterly along the mean low water mark to the midpoint of Limekiln Bay",
+    "geometry.steps[2]": "thence due North to the point of commencement"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 2-16"
+    },
+    "method": "other",
+    "feature": {
+      "type": "other",
+      "name": "Blubber Bay Ferry Terminal"
+    },
+    "road": null,
+    "bufferM": 1000,
+    "steps": [
+      {
+        "follow": null,
+        "feature": null,
+        "until": null,
+        "quote": "commencing at Blubber Point"
+      },
+      {
+        "follow": "shoreline",
+        "feature": null,
+        "until": "the midpoint of Limekiln Bay",
+        "quote": "thence westerly, southerly and southeasterly along the mean low water mark to the midpoint of Limekiln Bay"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the point of commencement",
+        "quote": "thence due North to the point of commencement"
+      }
+    ]
+  },
+  "runsAgree": true,
+  "why": [
+    "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Blubber Bay, Blubber Point): 1 km around the named points; not the boundary"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "5.756 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Blubber Bay, Blubber Point): 1 km around the named points; not the boundary",
+      "quote": "the Blubber Bay Ferry Terminal",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "M.U. 2-16",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

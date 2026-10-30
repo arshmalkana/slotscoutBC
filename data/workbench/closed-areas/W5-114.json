@@ -1,0 +1,86 @@
+{
+  "id": "W5-114",
+  "itemId": "closed-area-4a4599091c",
+  "title": "Closed Areas Regulation, Schedule 5, section 114 (Westcan Terminals)",
+  "heading": "Westcan Terminals",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nWestcan Terminals\n114 That portion of the Province of British Columbia in M.U. 1-4 in the vicinity of Cowichan Bay being the area within 25 metres on either side of the midline of Westcan Terminals Road commencing at the easterly boundary of Indian Reserve #9 and proceeding easterly along the said road to its end and including the area 25 metres seaward from the paved edge of the Westcan Terminals Ltd. port site. [en. B.C. Reg. 204/91, s. 12.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "in M.U. 1-4",
+    "geometry.road": "midline of Westcan Terminals Road",
+    "geometry.buffer_m": "within 25 metres on either side",
+    "geometry.from": "commencing at the easterly boundary of Indian Reserve #9",
+    "geometry.to": "proceeding easterly along the said road to its end",
+    "effect": "No Shooting Areas",
+    "geometry.side": "on either side"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 1-4"
+    },
+    "method": "road_buffer",
+    "feature": null,
+    "road": {
+      "name": "Westcan Terminals Road",
+      "source_hint": "DRA"
+    },
+    "bufferM": 25,
+    "steps": []
+  },
+  "runsAgree": false,
+  "why": [
+    "rule parser and AI disagree: within: rule parser null vs AI runs \"1 4\"; from: rule parser null vs AI runs \"westcan terminals rd\"; to: rule parser null vs AI runs \"westcan terminals rd\"",
+    "road \"Westcan Terminals Road\": none",
+    "road \"Westcan Terminals Road\": none",
+    "road \"Westcan Terminals Road\": none",
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "lookups": [
+    {
+      "query": "M.U. 1-4",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "Westcan Terminals Road",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "note": null
+    },
+    {
+      "query": "Westcan Terminals Road",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "note": null
+    },
+    {
+      "query": "Westcan Terminals Road",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

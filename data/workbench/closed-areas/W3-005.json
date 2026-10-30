@@ -1,0 +1,52 @@
+{
+  "id": "W3-005",
+  "itemId": "closed-area-5a8031f870",
+  "title": "Closed Areas Regulation, Schedule 3, section 5 (Salmon Arm)",
+  "heading": "Salmon Arm",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nSalmon Arm\n5 That portion of the Province of British Columbia in the vicinity of the District of Salmon Arm, KDYD, except organized territory, which is contained within the following described boundaries: All the waters of Shuswap Lake Iying southeasterly of a straight line commencing at the outer end of the Salmon Arm Wharf; thence northeasterly to the white marker on the northern boundary of the northwest quarter of Section 24, Township 20, Range 10.",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "KDYD",
+    "geometry.feature": "All the waters of Shuswap Lake",
+    "effect": "No Shooting or Hunting Areas",
+    "exemptions[0]": "except organized territory"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "KDYD"
+    },
+    "method": "other",
+    "feature": {
+      "type": "lake",
+      "name": "Shuswap Lake"
+    },
+    "road": null,
+    "bufferM": null,
+    "steps": []
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs disagree: method: run 1 \"other\" vs run 2 \"metes_and_bounds\"; steps: run 1 [] vs run 2 [\"|||\",\"|the white marker on the northern boundary of the northwest quarter of section 24 township 20 range 10||straight_line\"]",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "\"Salmon Arm\" names more than one place and nothing narrows it",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "lookups": [],
+  "maps": [],
+  "decided": null
+}

@@ -1,0 +1,76 @@
+{
+  "id": "W5-138",
+  "itemId": "closed-area-212d2ed3c3",
+  "title": "Closed Areas Regulation, Schedule 5, section 138 (Whiteswan Forest Service Road)",
+  "heading": "Whiteswan Forest Service Road",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nWhiteswan Forest Service Road\n138 That portion of M.U. 4-24 within 50 m of either side of the Whiteswan Forest Service Road from Inlet Creek Campground to the junction with the White-Moscow Forest Service Road. [en. B.C. Reg. 130/2016, App. 1, s. 4.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "That portion of M.U. 4-24",
+    "geometry.road": "the Whiteswan Forest Service Road",
+    "geometry.buffer_m": "within 50 m",
+    "geometry.from": "from Inlet Creek Campground",
+    "geometry.to": "to the junction with the White-Moscow Forest Service Road",
+    "effect": "No Shooting Areas",
+    "geometry.side": "either side"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 4-24"
+    },
+    "method": "road_buffer",
+    "feature": null,
+    "road": {
+      "name": "Whiteswan Forest Service Road",
+      "source_hint": "FTEN"
+    },
+    "bufferM": 50,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "road \"Whiteswan Forest Service Road\": none",
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "lookups": [
+    {
+      "query": "M.U. 4-24",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "Whiteswan Forest Service Road",
+      "kind": "fsr",
+      "layer": "WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW",
+      "status": "none",
+      "note": null
+    },
+    {
+      "query": "White-Moscow Forest Service Road",
+      "kind": "fsr",
+      "layer": "WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

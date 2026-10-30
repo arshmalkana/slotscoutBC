@@ -1,0 +1,122 @@
+{
+  "id": "W5-119",
+  "itemId": "closed-area-abb0fe840a",
+  "title": "Closed Areas Regulation, Schedule 5, section 119 (Lion's Bay)",
+  "heading": "Lion's Bay",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: zone around the places named",
+  "quality": "vicinity",
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nLion's Bay\n119 That portion of the Province of British Columbia in the vicinity of Lion's Bay contained within the following described boundaries: Commencing at the point of intersection of the mean low water mark of Howe Sound and the midline of Magnesia Creek; thence easterly along the midline of Magnesia Creek and along the easterly prolongation thereof to the apex of Mt. Harvey; thence in a general easterly, southerly and westerly direction along the northerly, easterly and southerly boundaries of the watershed of Harvey Creek to the point of intersection with the southerly boundary of the watershed of Rundle Creek; thence westerly along the southerly boundary of the watershed of Rundle Creek and along the prolongation thereof to the point of intersection with the mean low water mark of Howe Sound; thence in a general northerly direction along the mean low water mark of Howe Sound to the point of commencement. [en. B.C. Reg. 224/92, s. 13.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at the point of intersection of the mean low water mark of Howe Sound and the midline of Magnesia Creek",
+    "geometry.steps[1]": "thence easterly along the midline of Magnesia Creek and along the easterly prolongation thereof to the apex of Mt. Harvey",
+    "geometry.steps[2]": "thence in a general easterly, southerly and westerly direction along the northerly, easterly and southerly boundaries of the watershed of Harvey Creek to the point of intersection with the southerly boundary of the watershed of Rundle Creek",
+    "geometry.steps[3]": "thence westerly along the southerly boundary of the watershed of Rundle Creek and along the prolongation thereof to the point of intersection with the mean low water mark of Howe Sound",
+    "geometry.steps[4]": "thence in a general northerly direction along the mean low water mark of Howe Sound to the point of commencement"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": null,
+    "method": "metes_and_bounds",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": [
+      {
+        "follow": null,
+        "feature": null,
+        "until": null,
+        "quote": "Commencing at the point of intersection of the mean low water mark of Howe Sound and the midline of Magnesia Creek"
+      },
+      {
+        "follow": "creek",
+        "feature": "Magnesia Creek",
+        "until": "the apex of Mt. Harvey",
+        "quote": "thence easterly along the midline of Magnesia Creek and along the easterly prolongation thereof to the apex of Mt. Harvey"
+      },
+      {
+        "follow": "other",
+        "feature": "watershed of Harvey Creek",
+        "until": "the point of intersection with the southerly boundary of the watershed of Rundle Creek",
+        "quote": "thence in a general easterly, southerly and westerly direction along the northerly, easterly and southerly boundaries of the watershed of Harvey Creek to the point of intersection with the southerly boundary of the watershed of Rundle Creek"
+      },
+      {
+        "follow": "other",
+        "feature": "watershed of Rundle Creek",
+        "until": "the point of intersection with the mean low water mark of Howe Sound",
+        "quote": "thence westerly along the southerly boundary of the watershed of Rundle Creek and along the prolongation thereof to the point of intersection with the mean low water mark of Howe Sound"
+      },
+      {
+        "follow": "shoreline",
+        "feature": "Howe Sound",
+        "until": "the point of commencement",
+        "quote": "thence in a general northerly direction along the mean low water mark of Howe Sound to the point of commencement"
+      }
+    ]
+  },
+  "runsAgree": true,
+  "why": [
+    "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "\"watershed of Harvey Creek\" was not found in the official layers; that side is drawn straight",
+    "\"watershed of Rundle Creek\" was not found in the official layers; that side is drawn straight",
+    "\"Howe Sound\" was not found in the official layers; that side is drawn straight",
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Magnesia Creek, Howe Sound): 1 km around the named points; not the boundary"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "15.407 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Magnesia Creek, Howe Sound): 1 km around the named points; not the boundary",
+      "quote": "Commencing at the point of intersection of the mean low water mark of Howe Sound and the midline of Magnesia Creek",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "lookups": [],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

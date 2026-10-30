@@ -1,0 +1,84 @@
+{
+  "id": "W5-137",
+  "itemId": "closed-area-fd9db8a522",
+  "title": "Closed Areas Regulation, Schedule 5, section 137 (White-Moscow Forest Service Road)",
+  "heading": "White-Moscow Forest Service Road",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nWhite-Moscow Forest Service Road\n137 That portion of M.U. 4-24 within 50 m of either side of the White-Moscow Forest Service Road from the junction with Whiteswan Forest Service Road to the junction with the Moscow-Home Basin Campground road. [en. B.C. Reg. 130/2016, App. 1, s. 4.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "That portion of M.U. 4-24",
+    "geometry.road": "the White-Moscow Forest Service Road",
+    "geometry.buffer_m": "within 50 m",
+    "geometry.from": "from the junction with Whiteswan Forest Service Road",
+    "geometry.to": "to the junction with the Moscow-Home Basin Campground road",
+    "effect": "No Shooting Areas",
+    "geometry.side": "either side"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 4-24"
+    },
+    "method": "road_buffer",
+    "feature": null,
+    "road": {
+      "name": "White-Moscow Forest Service Road",
+      "source_hint": "FTEN"
+    },
+    "bufferM": 50,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "road \"Whiteswan Forest Service Road\": none",
+    "road \"Moscow-Home Basin Campground road\": none",
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "lookups": [
+    {
+      "query": "M.U. 4-24",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "White-Moscow Forest Service Road",
+      "kind": "fsr",
+      "layer": "WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "Whiteswan Forest Service Road",
+      "kind": "fsr",
+      "layer": "WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW",
+      "status": "none",
+      "note": null
+    },
+    {
+      "query": "Moscow-Home Basin Campground road",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

@@ -1,0 +1,89 @@
+{
+  "id": "W7-003",
+  "itemId": "closed-area-fdbe7ca176",
+  "title": "Closed Areas Regulation, Schedule 6, section 3 (Cultus Lake)",
+  "heading": "Cultus Lake",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: zone around the places named",
+  "quality": "vicinity",
+  "sourceText": "Schedule 6 Seasonal No Shooting Areas (Section 7)\nCultus Lake\n3 That portion of the Province of British Columbia in the vicinity of the Town of Chilliwack, New Westminster District, which is contained within the following described boundaries: Those waters of Cultus Lake to the maximum high water mark during the period of February 1 to September 30. [en. B.C. Reg. 162/87, s. 30.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "period": "February 1 to September 30",
+    "geometry.feature": "Cultus Lake",
+    "effect": "Seasonal No Shooting Areas"
+  },
+  "extracted": {
+    "effect": "no_shooting_seasonal",
+    "period": {
+      "start": "February 1",
+      "end": "September 30"
+    },
+    "within": null,
+    "method": "admin_boundary",
+    "feature": {
+      "type": "lake",
+      "name": "Cultus Lake"
+    },
+    "road": null,
+    "bufferM": null,
+    "steps": []
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs disagree: within: run 1 null vs run 2 \"new westminster district\"",
+    "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 null vs run 2 \"inside\"",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "approximate zone around the places the section names, using run 1's reading",
+    "a zone around the places the section names (Cultus Lake): the outline of Cultus Lake and 1 km around the named points; not the boundary",
+    "validation failed: two independent extractions agree (within: run 1 null vs run 2 \"new westminster district\")"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "9.176 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": false,
+      "detail": "within: run 1 null vs run 2 \"new westminster district\""
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Cultus Lake): the outline of Cultus Lake and 1 km around the named points; not the boundary",
+      "quote": "Cultus Lake",
+      "source": "WHSE_BASEMAPPING.FWA_LAKES_POLY, WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "lookups": [],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

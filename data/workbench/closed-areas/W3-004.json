@@ -1,0 +1,96 @@
+{
+  "id": "W3-004",
+  "itemId": "closed-area-8eb987b250",
+  "title": "Closed Areas Regulation, Schedule 3, section 4 (Sicamous)",
+  "heading": "Sicamous",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: zone around the places named",
+  "quality": "vicinity",
+  "sourceText": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nSicamous\n4 That portion of the Province of British Columbia in Kamloops Division of Yale District, except organized territory, which is contained within the following described boundaries: All waters of Mara and Shuswap Lakes Iying east of a straight line between Murdock and Semaphore Points and north of a line running east-west through the mouth of Sicamous Creek.",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "Kamloops Division of Yale District",
+    "geometry.feature": "All waters of Mara and Shuswap Lakes",
+    "effect": "No Shooting or Hunting Areas",
+    "exemptions[0]": "except organized territory"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Kamloops Division of Yale District"
+    },
+    "method": "other",
+    "feature": {
+      "type": "lake",
+      "name": "Mara and Shuswap Lakes"
+    },
+    "road": null,
+    "bufferM": null,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "named area \"Kamloops Division of Yale District\": none",
+    "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Sicamous): 1 km around the named points; not the boundary"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.137 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Sicamous): 1 km around the named points; not the boundary",
+      "quote": "All waters of Mara and Shuswap Lakes",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "Kamloops Division of Yale District",
+      "kind": "other",
+      "layer": "WHSE_TANTALIS.TA_LAND_DISTRICTS_SVW",
+      "status": "none",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

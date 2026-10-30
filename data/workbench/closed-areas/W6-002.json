@@ -1,0 +1,86 @@
+{
+  "id": "W6-002",
+  "itemId": "closed-area-417cacd348",
+  "title": "Closed Areas Regulation, Schedule 5.1, section 2 (Silver Skagit Forest Service Road)",
+  "heading": "Silver Skagit Forest Service Road",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 5.1 [en. B.C. Reg. 135/2017, App. 1, s. 2.] No Shooting Areas — Specified Crown Land (Section 7.1)\nSilver Skagit Forest Service Road\n2 That portion of M.U. 2-2 being all Crown land within 400 m of the midline of the Silver Skagit Forest Service Road from the crossing at Eureka Creek to the boundary of Skagit Valley Provincial Park.",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "M.U. 2-2",
+    "geometry.road": "Silver Skagit Forest Service Road",
+    "geometry.buffer_m": "400 m",
+    "geometry.from": "from the crossing at Eureka Creek",
+    "geometry.to": "to the boundary of Skagit Valley Provincial Park",
+    "effect": "No Shooting Areas",
+    "geometry.side": "within 400 m of the midline"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 2-2"
+    },
+    "method": "road_buffer",
+    "feature": null,
+    "road": {
+      "name": "Silver Skagit Forest Service Road",
+      "source_hint": "FTEN"
+    },
+    "bufferM": 400,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "effect read from the text (no_shooting) differs from the schedule's effect (no_shooting_hunting_exempt)",
+    "road \"Silver Skagit Forest Service Road\": none",
+    "road \"Silver Skagit Forest Service Road\": none",
+    "road \"Silver Skagit Forest Service Road\": none",
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "lookups": [
+    {
+      "query": "M.U. 2-2",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "Silver Skagit Forest Service Road",
+      "kind": "fsr",
+      "layer": "WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW",
+      "status": "none",
+      "note": null
+    },
+    {
+      "query": "Silver Skagit Forest Service Road",
+      "kind": "fsr",
+      "layer": "WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW",
+      "status": "none",
+      "note": null
+    },
+    {
+      "query": "Silver Skagit Forest Service Road",
+      "kind": "fsr",
+      "layer": "WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW",
+      "status": "none",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

@@ -1,0 +1,56 @@
+{
+  "id": "W9-027",
+  "itemId": "closed-area-d1897f3d09",
+  "title": "Closed Areas Regulation, Schedule 9, section 27 (Campbell River to Nanaimo)",
+  "heading": "Campbell River to Nanaimo",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 9 Firearms Using Shot Only Areas (Section 10 (1) (a))\nCampbell River to Nanaimo\n27 Those portions of the Province of British Columbia on Vancouver Island shown outlined in red on the attached map 'Closed Area 9-27/22', other than a portion of land that is reserve within the meaning of the Indian Act (Canada). [en. B.C. Reg. 157/2022, App. 3, s. 6.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "on Vancouver Island",
+    "effect": "Firearms Using Shot Only Areas",
+    "exemptions[0]": "other than a portion of land that is reserve within the meaning of the Indian Act (Canada)"
+  },
+  "extracted": {
+    "effect": "shot_only",
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Vancouver Island"
+    },
+    "method": "other",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "named area \"Vancouver Island\": failed (no official layer for area type other)",
+    "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "\"Campbell River\" names more than one place and nothing narrows it",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "lookups": [
+    {
+      "query": "Vancouver Island",
+      "kind": "other",
+      "layer": "-",
+      "status": "failed",
+      "note": "no official layer for area type other"
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

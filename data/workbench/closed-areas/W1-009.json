@@ -1,0 +1,99 @@
+{
+  "id": "W1-009",
+  "itemId": "closed-area-98270aac7f",
+  "title": "Closed Areas Regulation, Schedule 1, section 9 (Robert W. Starratt)",
+  "heading": "Robert W. Starratt",
+  "folder": "confirmed",
+  "state": "Approved: exact outline",
+  "quality": "exact",
+  "sourceText": "Schedule 1 No Shooting, Hunting or Trapping Areas (Section 2)\nRobert W. Starratt\n9 That portion of the Province, in the vicinity of the Village of Valemount, that is within the following boundaries: Lots 7127, 7128, 7129, 7130, 7132, 7133, 7134, 7139, 7140, 8351, 8352, 8353, 8357, 8358 and 8454, Cariboo Land District.",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "Cariboo Land District",
+    "geometry.feature": "Lots 7127, 7128, 7129, 7130, 7132, 7133, 7134, 7139, 7140, 8351, 8352, 8353, 8357, 8358 and 8454",
+    "effect": "No Shooting, Hunting or Trapping Areas"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Cariboo Land District"
+    },
+    "method": "admin_boundary",
+    "feature": {
+      "type": "lot",
+      "name": "Lots 7127, 7128, 7129, 7130, 7132, 7133, 7134, 7139, 7140, 8351, 8352, 8353, 8357, 8358 and 8454"
+    },
+    "road": null,
+    "bufferM": null,
+    "steps": []
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 null vs run 2 \"inside\""
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "4.225 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
+    }
+  ],
+  "construction": [
+    {
+      "what": "official boundary of the named area",
+      "quote": "Lots 7127, 7128, 7129, 7130, 7132, 7133, 7134, 7139, 7140, 8351, 8352, 8353, 8357, 8358 and 8454",
+      "source": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "Cariboo Land District",
+      "kind": "other",
+      "layer": "WHSE_TANTALIS.TA_LAND_DISTRICTS_SVW",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "District Lots 7127, 7128, 7129, 7130, 7132, 7133, 7134, 7139, 7140, 8351, 8352, 8353, 8357, 8358, 8454 (CARIBOO DIST)",
+      "kind": "lot",
+      "layer": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

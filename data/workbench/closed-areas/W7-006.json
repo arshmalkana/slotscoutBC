@@ -1,0 +1,233 @@
+{
+  "id": "W7-006",
+  "itemId": "closed-area-e6f1b247e1",
+  "title": "Closed Areas Regulation, Schedule 6, section 6 (Osoyoos Oxbows)",
+  "heading": "Osoyoos Oxbows",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: walk traced along the named features",
+  "quality": "traced",
+  "sourceText": "Schedule 6 Seasonal No Shooting Areas (Section 7)\nOsoyoos Oxbows\n6 That portion of M.U.8-01 in the Province of British Columbia contained within the following described boundaries: Commencing at the point of intersection at approximately 119° 30' 40\" west longitude and 49° 04' 30\" north latitude of the natural boundary of Osoyoos Lake on the northerly shore thereof and the midline of the main oxbow east of Okanagan River channel; thence in a general westerly direction along the natural boundary of Osoyoos Lake on the northerly shore thereof to the point of intersection with the midline of the main oxbow west of the Okanagan River channel; thence in a general northerly, westerly and again northerly direction along the midline of the said oxbow to the point of intersection with the midline of Okanagan River channel; thence northerly along the midline of Okanagan River channel to a point approximately 350 m past the first Sluice Gate; thence N 50° E to the point of intersection with the midline of the main oxbow east of the Okanagan River channel; thence in a general northerly, easterly, again northerly and westerly direction along the midline of the said oxbow to the point of intersection with the midline of Okanagan River channel; thence more or less west in a straight line to the point of intersection with the midline of the main oxbow west of Okanagan River channel; thence in a general westerly and northerly direction along the midline of the said oxbow to the point of intersection with the midline of Okanagan River channel approximately 50 m past the second Sluice Gate; thence northerly along the midline of Okanagan River channel for approximately 500 m; thence N 65° E to the point of intersection with the 1 000 m elevational contour; thence in a general southerly direction along the 1 000 m elevation contour for approximately 600 m; thence southerly in a straight line to a point on the midline of the power transmission line right of way at 1 000 m elevation; thence more or less east in a straight line to a point at approximately 119° 32' 15\" west longitude and 49° 06' 00\" north latitude; thence S 50° E approximately 650 m to a point on the 1 000 m elevational contour; thence more or less east in a straight line to the adjacent southwest corner of Indian Reserve 1 at approximately 119° 31' 20\" west longitude and 49° 05' 48\" north latitude; thence S 45° E approximately 600 m; thence due South to the point of intersection with the midline of the main oxbow east of Okanagan River channel; thence in a general easterly and southerly direction along the midline of the said oxbow to the point of commencement during the period of March 1 to September 30. [en. B.C. Reg. 176/89, s. 6.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "M.U.8-01",
+    "period": "March 1 to September 30",
+    "effect": "Seasonal No Shooting Areas",
+    "geometry.steps[0]": "Commencing at the point of intersection at approximately 119° 30' 40\" west longitude and 49° 04' 30\" north latitude of the natural boundary of Osoyoos Lake on the northerly shore thereof and the midline of the main oxbow east of Okanagan River channel",
+    "geometry.steps[1]": "thence in a general westerly direction along the natural boundary of Osoyoos Lake on the northerly shore thereof to the point of intersection with the midline of the main oxbow west of the Okanagan River channel",
+    "geometry.steps[2]": "thence in a general northerly, westerly and again northerly direction along the midline of the said oxbow to the point of intersection with the midline of Okanagan River channel",
+    "geometry.steps[3]": "thence northerly along the midline of Okanagan River channel to a point approximately 350 m past the first Sluice Gate",
+    "geometry.steps[4]": "thence N 50° E to the point of intersection with the midline of the main oxbow east of the Okanagan River channel",
+    "geometry.steps[5]": "thence in a general northerly, easterly, again northerly and westerly direction along the midline of the said oxbow to the point of intersection with the midline of Okanagan River channel",
+    "geometry.steps[6]": "thence more or less west in a straight line to the point of intersection with the midline of the main oxbow west of Okanagan River channel",
+    "geometry.steps[7]": "thence in a general westerly and northerly direction along the midline of the said oxbow to the point of intersection with the midline of Okanagan River channel approximately 50 m past the second Sluice Gate",
+    "geometry.steps[8]": "thence northerly along the midline of Okanagan River channel for approximately 500 m",
+    "geometry.steps[9]": "thence N 65° E to the point of intersection with the 1 000 m elevational contour",
+    "geometry.steps[10]": "thence in a general southerly direction along the 1 000 m elevation contour for approximately 600 m",
+    "geometry.steps[11]": "thence southerly in a straight line to a point on the midline of the power transmission line right of way at 1 000 m elevation",
+    "geometry.steps[12]": "thence more or less east in a straight line to a point at approximately 119° 32' 15\" west longitude and 49° 06' 00\" north latitude",
+    "geometry.steps[13]": "thence S 50° E approximately 650 m to a point on the 1 000 m elevational contour",
+    "geometry.steps[14]": "thence more or less east in a straight line to the adjacent southwest corner of Indian Reserve 1 at approximately 119° 31' 20\" west longitude and 49° 05' 48\" north latitude",
+    "geometry.steps[15]": "thence S 45° E approximately 600 m",
+    "geometry.steps[16]": "thence due South to the point of intersection with the midline of the main oxbow east of Okanagan River channel",
+    "geometry.steps[17]": "thence in a general easterly and southerly direction along the midline of the said oxbow to the point of commencement"
+  },
+  "extracted": {
+    "effect": "no_shooting_seasonal",
+    "period": {
+      "start": "March 1",
+      "end": "September 30"
+    },
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U.8-01"
+    },
+    "method": "metes_and_bounds",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": [
+      {
+        "follow": null,
+        "feature": "Osoyoos Lake",
+        "until": null,
+        "quote": "Commencing at the point of intersection at approximately 119° 30' 40\" west longitude and 49° 04' 30\" north latitude of the natural boundary of Osoyoos Lake on the northerly shore thereof and the midline of the main oxbow east of Okanagan River channel"
+      },
+      {
+        "follow": "shoreline",
+        "feature": "Osoyoos Lake",
+        "until": "point of intersection with the midline of the main oxbow west of the Okanagan River channel",
+        "quote": "thence in a general westerly direction along the natural boundary of Osoyoos Lake on the northerly shore thereof to the point of intersection with the midline of the main oxbow west of the Okanagan River channel"
+      },
+      {
+        "follow": "other",
+        "feature": "main oxbow west of the Okanagan River channel",
+        "until": "point of intersection with the midline of Okanagan River channel",
+        "quote": "thence in a general northerly, westerly and again northerly direction along the midline of the said oxbow to the point of intersection with the midline of Okanagan River channel"
+      },
+      {
+        "follow": "river",
+        "feature": "Okanagan River channel",
+        "until": "a point approximately 350 m past the first Sluice Gate",
+        "quote": "thence northerly along the midline of Okanagan River channel to a point approximately 350 m past the first Sluice Gate"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "point of intersection with the midline of the main oxbow east of the Okanagan River channel",
+        "quote": "thence N 50° E to the point of intersection with the midline of the main oxbow east of the Okanagan River channel"
+      },
+      {
+        "follow": "other",
+        "feature": "main oxbow east of the Okanagan River channel",
+        "until": "point of intersection with the midline of Okanagan River channel",
+        "quote": "thence in a general northerly, easterly, again northerly and westerly direction along the midline of the said oxbow to the point of intersection with the midline of Okanagan River channel"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "point of intersection with the midline of the main oxbow west of Okanagan River channel",
+        "quote": "thence more or less west in a straight line to the point of intersection with the midline of the main oxbow west of Okanagan River channel"
+      },
+      {
+        "follow": "other",
+        "feature": "main oxbow west of Okanagan River channel",
+        "until": "point of intersection with the midline of Okanagan River channel approximately 50 m past the second Sluice Gate",
+        "quote": "thence in a general westerly and northerly direction along the midline of the said oxbow to the point of intersection with the midline of Okanagan River channel approximately 50 m past the second Sluice Gate"
+      },
+      {
+        "follow": "river",
+        "feature": "Okanagan River channel",
+        "until": null,
+        "quote": "thence northerly along the midline of Okanagan River channel for approximately 500 m"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "point of intersection with the 1 000 m elevational contour",
+        "quote": "thence N 65° E to the point of intersection with the 1 000 m elevational contour"
+      },
+      {
+        "follow": "contour",
+        "feature": "1 000 m elevation contour",
+        "until": null,
+        "quote": "thence in a general southerly direction along the 1 000 m elevation contour for approximately 600 m"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "a point on the midline of the power transmission line right of way at 1 000 m elevation",
+        "quote": "thence southerly in a straight line to a point on the midline of the power transmission line right of way at 1 000 m elevation"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": null,
+        "quote": "thence more or less east in a straight line to a point at approximately 119° 32' 15\" west longitude and 49° 06' 00\" north latitude"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "a point on the 1 000 m elevational contour",
+        "quote": "thence S 50° E approximately 650 m to a point on the 1 000 m elevational contour"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "adjacent southwest corner of Indian Reserve 1",
+        "quote": "thence more or less east in a straight line to the adjacent southwest corner of Indian Reserve 1 at approximately 119° 31' 20\" west longitude and 49° 05' 48\" north latitude"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": null,
+        "quote": "thence S 45° E approximately 600 m"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "point of intersection with the midline of the main oxbow east of Okanagan River channel",
+        "quote": "thence due South to the point of intersection with the midline of the main oxbow east of Okanagan River channel"
+      },
+      {
+        "follow": "other",
+        "feature": "main oxbow east of Okanagan River channel",
+        "until": "point of commencement",
+        "quote": "thence in a general easterly and southerly direction along the midline of the said oxbow to the point of commencement"
+      }
+    ]
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs disagree: steps: run 1 [\"osoyoos lake|||\",\"osoyoos lake|point of intersection with the midline of the main oxbow west of the okanagan river channel||shoreline\",\"main oxbow west of the okanagan river channel|point of intersection …",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "approximate outline (traced) drawn from the places the walk names, using run 1's reading of the steps",
+    "\"main oxbow west of the Okanagan River channel\" was not found in the official layers; that side is drawn straight",
+    "\"Okanagan River channel\" was not found in the official layers; that side is drawn straight",
+    "\"main oxbow east of the Okanagan River channel\" was not found in the official layers; that side is drawn straight",
+    "\"main oxbow west of Okanagan River channel\" was not found in the official layers; that side is drawn straight",
+    "\"Okanagan River channel\" was not found in the official layers; that side is drawn straight",
+    "\"main oxbow east of Okanagan River channel\" was not found in the official layers; that side is drawn straight",
+    "validation failed: two independent extractions agree (steps: run 1 [\"osoyoos lake|||\",\"osoyoos lake|point of intersection with the midline of the main oxbow west of the okanagan river channel||shoreline\",\"main oxbow west of the okanagan …"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "15.303 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": false,
+      "detail": "steps: run 1 [\"osoyoos lake|||\",\"osoyoos lake|point of intersection with the midline of the main oxbow west of the okanagan river channel||shoreline\",\"main oxbow west of the okanagan river channel|point of intersection with the midline of okanagan river channel||other\",\"okanagan river channel|a point approximately 350 m past the first sluice gate|approximately 350 m past the first Sluice Gate|river\",\"|point of intersection with the midline of the main oxbow east of the okanagan river channel||straight_line\",\"main oxbow east of the okanagan river channel|point of intersection with the midline of okanagan river channel||other\",\"|point of intersection with the midline of the main oxbow west of okanagan river channel||straight_line\",\"main oxbow west of okanagan river channel|point of intersection with the midline of okanagan river channel approximately 50 m past the second sluice gate|approximately 50 m past the second Sluice Gate|other\",\"okanagan river channel||approximately 500 m|river\",\"|point of intersection with the 1 000 m elevational contour||straight_line\",\"1 000 m elevation contour||approximately 600 m|contour\",\"|a point on the midline of the power transmission line right of way at 1 000 m elevation||straight_line\",\"|||straight_line\",\"|a point on the 1 000 m elevational contour|approximately 650 m|straight_line\",\"|adjacent southwest corner of indian reserve 1||straight_line\",\"||approximately 600 m|straight_line\",\"|point of intersection with the midline of the main oxbow east of okanagan river channel||straight_line\",\"main oxbow east of okanagan river channel|point of commencement||other\"] vs run 2 [\"|||\",\"osoyoos lake|the point of intersection with the midline of the main oxbow west of the okanagan river channel||shoreline\",\"main oxbow west of the okanagan river channel|the point of intersection with the midline of okanagan river channel||other\",\"okanagan river channel|a point approximately 350 m past the first sluice gate|approximately 350 m|river\",\"|the point of intersection with the midline of the main oxbow east of the okanagan river channel||straight_line\",\"main oxbow east of the okanagan river channel|the point of intersection with the midline of okanagan river channel||other\",\"|the point of intersection with the midline of the main oxbow west of okanagan river channel||straight_line\",\"main oxbow west of okanagan river channel|the point of intersection with the midline of okanagan river channel approximately 50 m past the second sluice gate|approximately 50 m|other\",\"okanagan river channel||approximately 500 m|river\",\"|the point of intersection with the 1 000 m elevational contour||straight_line\",\"1 000 m elevation contour||approximately 600 m|contour\",\"|a point on the midline of the power transmission line right of way at 1 000 m elevation||straight_line\",\"|||straight_line\",\"|a point on the 1 000 m elevational contour|approximately 650 m|straight_line\",\"|the adjacent southwest corner of indian reserve 1||straight_line\",\"||approximately 600 m|straight_line\",\"|the point of intersection with the midline of the main oxbow east of okanagan river channel||straight_line\",\"main oxbow east of okanagan river channel|the point of commencement||other\"]"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at the point of intersection at approximately 119° 30' 40\" west longitude and 49° 04' 30\" north latitude of the natural boundary of Osoyoos Lake on the northerly shore thereof and the midline of the main oxbow east of Okanagan River channel",
+      "source": "WHSE_BASEMAPPING.FWA_LAKES_POLY, WHSE_BASEMAPPING.TRIM_CONTOUR_LINES (1000 m)"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "M.U.8-01",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

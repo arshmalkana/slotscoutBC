@@ -1,0 +1,177 @@
+{
+  "id": "W3-023",
+  "itemId": "closed-area-54ce4bdcc7",
+  "title": "Closed Areas Regulation, Schedule 3, section 23 (Mt. Bergeron — Tumbler Ridge)",
+  "heading": "Mt. Bergeron — Tumbler Ridge",
+  "folder": "not_confirmed",
+  "state": "Held: area in expected range",
+  "quality": "corners",
+  "sourceText": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nMt. Bergeron — Tumbler Ridge\n23 That portion of the Province of British Columbia in M.U. 7-21 contained within the following described boundaries: Commencing at the confluence of Murray River and Quality Creek and proceeding northwesterly in a straight line to the summit of Mt. Bergeron; thence turning 90° to the southwest and proceeding southwesterly in a straight line to a point on the middle thread of Bullmoose Creek; thence proceeding downstream along the middle thread of Bullmoose Creek to its confluence with Wolverine River; thence southerly to the southerly bank of Wolverine River; thence downstream along the southerly bank of Wolverine River to the westerly bank of Murray River; thence southerly along the westerly bank of Murray River to a point opposite the southerly bank of Flatbed Creek; thence easterly to the southerly bank of Flatbed Creek; thence upstream along the southerly bank of Flatbed Creek to Highway 52; thence due North to the Tumbler Ridge height of land; thence northwesterly along the top of the ridge to a point due East of the southeast corner of Lot 304 Peace River District; thence due West to the easterly bank of Murray River; thence northeasterly along the bank to the point of commencement. [en. B.C. Reg. 109/85, s. 2 (c).]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "M.U. 7-21",
+    "effect": "No Shooting or Hunting Areas",
+    "geometry.steps[0]": "Commencing at the confluence of Murray River and Quality Creek and proceeding northwesterly in a straight line to the summit of Mt. Bergeron",
+    "geometry.steps[1]": "thence turning 90° to the southwest and proceeding southwesterly in a straight line to a point on the middle thread of Bullmoose Creek",
+    "geometry.steps[2]": "thence proceeding downstream along the middle thread of Bullmoose Creek to its confluence with Wolverine River",
+    "geometry.steps[3]": "thence southerly to the southerly bank of Wolverine River",
+    "geometry.steps[4]": "thence downstream along the southerly bank of Wolverine River to the westerly bank of Murray River",
+    "geometry.steps[5]": "thence southerly along the westerly bank of Murray River to a point opposite the southerly bank of Flatbed Creek",
+    "geometry.steps[6]": "thence easterly to the southerly bank of Flatbed Creek",
+    "geometry.steps[7]": "thence upstream along the southerly bank of Flatbed Creek to Highway 52",
+    "geometry.steps[8]": "thence due North to the Tumbler Ridge height of land",
+    "geometry.steps[9]": "thence northwesterly along the top of the ridge to a point due East of the southeast corner of Lot 304 Peace River District",
+    "geometry.steps[10]": "thence due West to the easterly bank of Murray River",
+    "geometry.steps[11]": "thence northeasterly along the bank to the point of commencement"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "7-21"
+    },
+    "method": "metes_and_bounds",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": [
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the summit of Mt. Bergeron",
+        "quote": "Commencing at the confluence of Murray River and Quality Creek and proceeding northwesterly in a straight line to the summit of Mt. Bergeron"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "a point on the middle thread of Bullmoose Creek",
+        "quote": "thence turning 90° to the southwest and proceeding southwesterly in a straight line to a point on the middle thread of Bullmoose Creek"
+      },
+      {
+        "follow": "creek",
+        "feature": "Bullmoose Creek",
+        "until": "its confluence with Wolverine River",
+        "quote": "thence proceeding downstream along the middle thread of Bullmoose Creek to its confluence with Wolverine River"
+      },
+      {
+        "follow": null,
+        "feature": null,
+        "until": "the southerly bank of Wolverine River",
+        "quote": "thence southerly to the southerly bank of Wolverine River"
+      },
+      {
+        "follow": "river",
+        "feature": "Wolverine River",
+        "until": "the westerly bank of Murray River",
+        "quote": "thence downstream along the southerly bank of Wolverine River to the westerly bank of Murray River"
+      },
+      {
+        "follow": "river",
+        "feature": "Murray River",
+        "until": "a point opposite the southerly bank of Flatbed Creek",
+        "quote": "thence southerly along the westerly bank of Murray River to a point opposite the southerly bank of Flatbed Creek"
+      },
+      {
+        "follow": null,
+        "feature": null,
+        "until": "the southerly bank of Flatbed Creek",
+        "quote": "thence easterly to the southerly bank of Flatbed Creek"
+      },
+      {
+        "follow": "creek",
+        "feature": "Flatbed Creek",
+        "until": "Highway 52",
+        "quote": "thence upstream along the southerly bank of Flatbed Creek to Highway 52"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the Tumbler Ridge height of land",
+        "quote": "thence due North to the Tumbler Ridge height of land"
+      },
+      {
+        "follow": "other",
+        "feature": null,
+        "until": "a point due East of the southeast corner of Lot 304 Peace River District",
+        "quote": "thence northwesterly along the top of the ridge to a point due East of the southeast corner of Lot 304 Peace River District"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the easterly bank of Murray River",
+        "quote": "thence due West to the easterly bank of Murray River"
+      },
+      {
+        "follow": "river",
+        "feature": "Murray River",
+        "until": "the point of commencement",
+        "quote": "thence northeasterly along the bank to the point of commencement"
+      }
+    ]
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs disagree: steps: run 1 [\"|the summit of mt. bergeron||straight_line\",\"|a point on the middle thread of bullmoose creek||straight_line\",\"bullmoose creek|its confluence with wolverine river||creek\",\"|the southerly bank of wolverine…",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "approximate outline (corners) drawn from the places the walk names, using run 1's reading of the steps",
+    "validation failed: area in expected range (1679.090 km² (limit 500 km²))",
+    "validation failed: two independent extractions agree (steps: run 1 [\"|the summit of mt. bergeron||straight_line\",\"|a point on the middle thread of bullmoose creek||straight_line\",\"bullmoose creek|its confluence with wolverine river||cree…"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": false,
+      "detail": "1679.090 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": false,
+      "detail": "steps: run 1 [\"|the summit of mt. bergeron||straight_line\",\"|a point on the middle thread of bullmoose creek||straight_line\",\"bullmoose creek|its confluence with wolverine river||creek\",\"|the southerly bank of wolverine river||\",\"wolverine river|the westerly bank of murray river||river\",\"murray river|a point opposite the southerly bank of flatbed creek||river\",\"|the southerly bank of flatbed creek||\",\"flatbed creek|hwy 52||creek\",\"|the tumbler ridge height of land||straight_line\",\"|a point due east of the southeast corner of lot 304 peace river district||other\",\"|the easterly bank of murray river||straight_line\",\"murray river|the point of commencement||river\"] vs run 2 [\"|the summit of mt. bergeron||straight_line\",\"|a point on the middle thread of bullmoose creek||straight_line\",\"bullmoose creek|its confluence with wolverine river||creek\",\"|the southerly bank of wolverine river||straight_line\",\"wolverine river|the westerly bank of murray river||river\",\"murray river|a point opposite the southerly bank of flatbed creek||river\",\"|the southerly bank of flatbed creek||straight_line\",\"flatbed creek|hwy 52||creek\",\"|the tumbler ridge height of land||straight_line\",\"|a point due east of the southeast corner of lot 304 peace river district||other\",\"|the easterly bank of murray river||straight_line\",\"murray river|the point of commencement||river\"]"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at the confluence of Murray River and Quality Creek and proceeding northwesterly in a straight line to the summit of Mt. Bergeron",
+      "source": "WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP, WHSE_BASEMAPPING.FWA_RIVERS_POLY, WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "7-21",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

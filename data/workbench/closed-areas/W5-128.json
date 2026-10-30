@@ -1,0 +1,106 @@
+{
+  "id": "W5-128",
+  "itemId": "closed-area-fa043d51ed",
+  "title": "Closed Areas Regulation, Schedule 5, section 128 (Upper Carmi Road)",
+  "heading": "Upper Carmi Road",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nUpper Carmi Road\n128 That portion of the Province of British Columbia within M.U. 8-09 in the vicinity of the City of Penticton which is contained within the following described boundaries: Commencing at the southeast corner of SL 51; thence northerly along the western boundary of SL 17 to the northwest corner of said Lot; thence easterly along the northern boundary, northerly along the western boundary and easterly along the northern boundary of said Lot, to the northeast corner thereof; thence southerly along the eastern boundary of said Lot to the southeast corner thereof; thence westerly along the southern boundary of said Lot to the south-southwest corner thereof; thence along the prolongation of said southern boundary to the point of commencement. [en. B.C. Reg. 190/96, s. 5 (d).]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "within M.U. 8-09",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at the southeast corner of SL 51",
+    "geometry.steps[1]": "thence northerly along the western boundary of SL 17 to the northwest corner of said Lot",
+    "geometry.steps[2]": "thence easterly along the northern boundary, northerly along the western boundary and easterly along the northern boundary of said Lot, to the northeast corner thereof",
+    "geometry.steps[3]": "thence southerly along the eastern boundary of said Lot to the southeast corner thereof",
+    "geometry.steps[4]": "thence westerly along the southern boundary of said Lot to the south-southwest corner thereof",
+    "geometry.steps[5]": "thence along the prolongation of said southern boundary to the point of commencement"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 8-09"
+    },
+    "method": "metes_and_bounds",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": [
+      {
+        "follow": null,
+        "feature": null,
+        "until": null,
+        "quote": "Commencing at the southeast corner of SL 51"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "SL 17",
+        "until": "the northwest corner of said Lot",
+        "quote": "thence northerly along the western boundary of SL 17 to the northwest corner of said Lot"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "SL 17",
+        "until": "the northeast corner thereof",
+        "quote": "thence easterly along the northern boundary, northerly along the western boundary and easterly along the northern boundary of said Lot, to the northeast corner thereof"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "SL 17",
+        "until": "the southeast corner thereof",
+        "quote": "thence southerly along the eastern boundary of said Lot to the southeast corner thereof"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "SL 17",
+        "until": "the south-southwest corner thereof",
+        "quote": "thence westerly along the southern boundary of said Lot to the south-southwest corner thereof"
+      },
+      {
+        "follow": "straight_line",
+        "feature": "SL 17",
+        "until": "the point of commencement",
+        "quote": "thence along the prolongation of said southern boundary to the point of commencement"
+      }
+    ]
+  },
+  "runsAgree": true,
+  "why": [
+    "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "\"SL 17\" was not found in the official layers; that side is drawn straight",
+    "\"SL 17\" was not found in the official layers; that side is drawn straight",
+    "\"SL 17\" was not found in the official layers; that side is drawn straight",
+    "\"SL 17\" was not found in the official layers; that side is drawn straight",
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
+    }
+  ],
+  "construction": [],
+  "lookups": [
+    {
+      "query": "M.U. 8-09",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

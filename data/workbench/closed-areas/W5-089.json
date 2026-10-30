@@ -1,0 +1,111 @@
+{
+  "id": "W5-089",
+  "itemId": "closed-area-957da54a2f",
+  "title": "Closed Areas Regulation, Schedule 5, section 89 (Grantham Road)",
+  "heading": "Grantham Road",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: zone around the places named",
+  "quality": "vicinity",
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nGrantham Road\n89 That portion of the Province of British Columbia being 0.4 km on each side of the midline of the Telkwa-Morice Road, commencing from the intersection of the midpoints of Walcott Station Road and the Telkwa-Morice Road and continuing in a northerly direction to a point 3 km distant. [en. B.C. Reg. 162/87, s. 25.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "geometry.road": "the midline of the Telkwa-Morice Road",
+    "geometry.buffer_m": "0.4 km",
+    "geometry.from": "commencing from the intersection of the midpoints of Walcott Station Road and the Telkwa-Morice Road",
+    "geometry.to": "continuing in a northerly direction to a point 3 km distant",
+    "effect": "No Shooting Areas",
+    "geometry.side": "on each side"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": null,
+    "method": "road_buffer",
+    "feature": null,
+    "road": {
+      "name": "Telkwa-Morice Road",
+      "source_hint": "DRA"
+    },
+    "bufferM": 400,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "road \"Telkwa-Morice Road\": none",
+    "road \"Telkwa-Morice Road\": none",
+    "road \"Telkwa-Morice Road\": none",
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Grantham): 1 km around the named points; not the boundary",
+    "validation failed: area in expected range (3.137 km² (limit 2 km²))"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": false,
+      "detail": "3.137 km² (limit 2 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Grantham): 1 km around the named points; not the boundary",
+      "quote": null,
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "Telkwa-Morice Road",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "note": null
+    },
+    {
+      "query": "Telkwa-Morice Road",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "note": null
+    },
+    {
+      "query": "Telkwa-Morice Road",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

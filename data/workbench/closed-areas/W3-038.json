@@ -1,0 +1,85 @@
+{
+  "id": "W3-038",
+  "itemId": "closed-area-a078a28ecb",
+  "title": "Closed Areas Regulation, Schedule 3, section 38 (Okanagan Connector Highway)",
+  "heading": "Okanagan Connector Highway",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nOkanagan Connector Highway\n38 That portion of M.U.s 8-08, 3-12 and 8-06 in the Province of British Columbia contained within the following described boundaries: All areas within 0.4 km of either side of the centreline of the Coquihalla Phase III (Okanagan Connector) Highway between its junction with Highway 97 near Peachland and its junction with Highway 5 near Aspen Grove. [en. B.C. Reg. 167/88, s.1.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "That portion of M.U.s 8-08, 3-12 and 8-06",
+    "geometry.road": "the Coquihalla Phase III (Okanagan Connector) Highway",
+    "geometry.buffer_m": "within 0.4 km",
+    "geometry.from": "its junction with Highway 97 near Peachland",
+    "geometry.to": "its junction with Highway 5 near Aspen Grove",
+    "effect": "No Shooting or Hunting Areas",
+    "geometry.side": "either side of the centreline"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U.s 8-08, 3-12 and 8-06"
+    },
+    "method": "road_buffer",
+    "feature": null,
+    "road": {
+      "name": "Coquihalla Phase III (Okanagan Connector) Highway",
+      "source_hint": "highway"
+    },
+    "bufferM": 400,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "road \"Coquihalla Phase III (Okanagan Connector) Highway\": none",
+    "road \"Highway 97\": ambiguous (5 separate roads named Highway 97 in the area)",
+    "road \"Highway 5\": ambiguous (2 separate roads named Highway 5 in the area)",
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "lookups": [
+    {
+      "query": "M.U.s 8-08, 3-12 and 8-06",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "Coquihalla Phase III (Okanagan Connector) Highway",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "note": null
+    },
+    {
+      "query": "Highway 97",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "ambiguous",
+      "note": "5 separate roads named Highway 97 in the area"
+    },
+    {
+      "query": "Highway 5",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "ambiguous",
+      "note": "2 separate roads named Highway 5 in the area"
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

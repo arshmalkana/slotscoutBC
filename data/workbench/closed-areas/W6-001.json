@@ -1,0 +1,43 @@
+{
+  "id": "W6-001",
+  "itemId": "closed-area-74855ebcd9",
+  "title": "Closed Areas Regulation, Schedule 5.1, section 1 (Definition)",
+  "heading": "Definition",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 5.1 [en. B.C. Reg. 135/2017, App. 1, s. 2.] No Shooting Areas — Specified Crown Land (Section 7.1)\nDefinition\n1 In this Schedule, \"spur road\", in relation to a particular road, means the following: (a)a road that begins at a junction with the particular road and ends at a point other than a junction with another road; (b)a road that begins at a junction with a spur road of the particular road and ends at a point other than a junction with another road.",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "effect": "No Shooting Areas"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": null,
+    "method": "other",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "effect read from the text (no_shooting) differs from the schedule's effect (no_shooting_hunting_exempt)",
+    "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "lookups": [],
+  "maps": [],
+  "decided": null
+}

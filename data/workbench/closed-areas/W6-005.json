@@ -1,0 +1,154 @@
+{
+  "id": "W6-005",
+  "itemId": "closed-area-7c344e7c34",
+  "title": "Closed Areas Regulation, Schedule 5.1, section 5 (Bench, Foley and Nesakwatch Forest Service Roads)",
+  "heading": "Bench, Foley and Nesakwatch Forest Service Roads",
+  "folder": "confirmed",
+  "state": "Approved: exact outline",
+  "quality": "exact",
+  "sourceText": "Schedule 5.1 [en. B.C. Reg. 135/2017, App. 1, s. 2.] No Shooting Areas — Specified Crown Land (Section 7.1)\nBench, Foley and Nesakwatch Forest Service Roads\n5 (1)Subject to subsection (2), those portions of M.U. 2-3 being all Crown land within 400 m of the midline of the following roads: (a)Bench Forest Service Road; (b)Foley Forest Service Road from the junction with the Bench Forest Service Road to the crossing of an unnamed stream approximately 1 km past a point due South of the most westerly point of Foley Lake; (c)Nesakwatch Forest Service Road from the junction with the Centre Forest Service Road to a point 2 km southerly along the Nesakwatch Forest Service Road. (2)The areas set out in subsection (1) do not include any areas described in section 16 of Schedule 5. [am. B.C. Reg. 115/2018, App. 1, s. 4.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "M.U. 2-3",
+    "geometry.buffer_m": "400 m",
+    "effect": "No Shooting Areas",
+    "geometry.side": "within 400 m of the midline",
+    "exemptions[0]": "The areas set out in subsection (1) do not include any areas described in section 16 of Schedule 5"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 2-3"
+    },
+    "method": "road_buffer",
+    "feature": null,
+    "road": null,
+    "bufferM": 400,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "effect read from the text (no_shooting) differs from the schedule's effect (no_shooting_hunting_exempt)",
+    "\"Foley Forest Service Road\" is drawn along its whole length in M.U. 2-3; the text limits it (from the junction with the Bench Forest Service Road to the crossing of an unnamed stream approximately 1 km past a point due South of the most …",
+    "\"Nesakwatch Forest Service Road\" is drawn along its whole length in M.U. 2-3; the text limits it (from the junction with the Centre Forest Service Road to a point 2 km southerly along the Nesakwatch Forest Service Road)",
+    "validation failed: area in expected range (32.697 km² (limit 2 km²))"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": false,
+      "detail": "32.697 km² (limit 2 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
+    }
+  ],
+  "construction": [
+    {
+      "what": "road centreline",
+      "quote": "Bench Forest Service Road;",
+      "source": "WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW",
+      "ids": [
+        "5127.10"
+      ]
+    },
+    {
+      "what": "buffer 400 m either side, plus a 10 m conservative pad",
+      "quote": "400 m",
+      "source": "geometry builder"
+    },
+    {
+      "what": "road centreline",
+      "quote": "Foley Forest Service Road from the junction with the Bench Forest Service Road to the crossing of an unnamed stream approximately 1 km past a point due South of the most westerly point of Foley Lake;",
+      "source": "WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW",
+      "ids": [
+        "5127.13"
+      ]
+    },
+    {
+      "what": "buffer 400 m either side, plus a 10 m conservative pad",
+      "quote": "400 m",
+      "source": "geometry builder"
+    },
+    {
+      "what": "road centreline",
+      "quote": "Nesakwatch Forest Service Road from the junction with the Centre Forest Service Road to a point 2 km southerly along the Nesakwatch Forest Service Road.",
+      "source": "WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW",
+      "ids": [
+        "5127.16"
+      ]
+    },
+    {
+      "what": "buffer 400 m either side, plus a 10 m conservative pad",
+      "quote": "400 m",
+      "source": "geometry builder"
+    },
+    {
+      "what": "clipped to M.U. 2-3",
+      "quote": "M.U. 2-3",
+      "source": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "M.U. 2-3",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "Bench Forest Service Road",
+      "kind": "fsr",
+      "layer": "WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "Foley Forest Service Road",
+      "kind": "fsr",
+      "layer": "WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "Nesakwatch Forest Service Road",
+      "kind": "fsr",
+      "layer": "WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved by Arsh in chat on 2026-10-28 (the new code-drawn shapes, and the corrected W3-069); entered by Claude Code at his instruction."
+  }
+}

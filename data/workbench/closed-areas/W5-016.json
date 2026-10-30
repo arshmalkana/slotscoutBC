@@ -1,0 +1,89 @@
+{
+  "id": "W5-016",
+  "itemId": "closed-area-3a30ee15f1",
+  "title": "Closed Areas Regulation, Schedule 5, section 16 (Provincial Gaol Camp No. 1)",
+  "heading": "Provincial Gaol Camp No. 1",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: zone around the places named",
+  "quality": "vicinity",
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nProvincial Gaol Camp No. 1\n16 That portion of the Province of British Columbia in the Chilliwack River Valley, Yale District, which is contained within the following described boundaries: Commencing at the point 1.6 km (1 mile) west of the Provincial Gaol Service Camp No. 1 and extending for a distance of 800 m (0.5 mile) north and south of Chilliwack River Road East to Chilliwack Lake, Yale District. The western boundary is indicated by signs erected by the Ministry of the Attorney General.",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "geometry.road": "Chilliwack River Road",
+    "geometry.buffer_m": "800 m (0.5 mile)",
+    "geometry.from": "the point 1.6 km (1 mile) west of the Provincial Gaol Service Camp No. 1",
+    "geometry.to": "East to Chilliwack Lake",
+    "effect": "No Shooting Areas",
+    "geometry.side": "north and south of Chilliwack River Road"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": null,
+    "method": "road_buffer",
+    "feature": null,
+    "road": {
+      "name": "Chilliwack River Road",
+      "source_hint": "DRA"
+    },
+    "bufferM": 800,
+    "steps": []
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs disagree: within: run 1 null vs run 2 \"yale district\"",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "approximate zone around the places the section names, using run 1's reading",
+    "a zone around the places the section names (Chilliwack River): 1 km around the named points; not the boundary",
+    "validation failed: area in expected range (3.137 km² (limit 2 km²))",
+    "validation failed: two independent extractions agree (within: run 1 null vs run 2 \"yale district\")"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": false,
+      "detail": "3.137 km² (limit 2 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": false,
+      "detail": "within: run 1 null vs run 2 \"yale district\""
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Chilliwack River): 1 km around the named points; not the boundary",
+      "quote": null,
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "lookups": [],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

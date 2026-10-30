@@ -1,0 +1,183 @@
+{
+  "id": "W5-123",
+  "itemId": "closed-area-2850ee8ecb",
+  "title": "Closed Areas Regulation, Schedule 5, section 123 (Selkirk)",
+  "heading": "Selkirk",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: walk with some straight sides",
+  "quality": "corners",
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nSelkirk\n123 That portion of M.U. 4-7 and M.U. 4-8 which is contained within the following described boundaries: Commencing at the confluence of Summit Creek and Bayonne Creek and proceeding upstream along the southerly natural boundary of Summit Creek to its intersection with the boundary of Stagleap Park; thence proceeding westerly, northerly and southwesterly along the boundary of Stagleap Park to the height of land which forms the easterly watershed boundary of Lost Creek; thence northerly, westerly and northerly along the height of land which forms the easterly and northerly boundary of the watershed of Lost Creek to the height of land which forms the easterly watershed boundary of Billings Creek; thence northwesterly along the height of land to the mouth of Billings Creek; thence upstream along the northerly and westerly natural boundary of Sheep Creek to the southerly boundary of Darkwoods Forest Lot 2381, Sublot 1, thence proceeding easterly along the boundary for approximately 5.4 km to the unnamed tributary of Next Creek which has, at its head, an unnamed lake which is approximately 750 m long and 350 m wide; thence proceeding northerly along the unnamed creek to Blazed Creek Road; thence proceeding northeasterly, easterly and southeasterly along Blazed Creek Road to the southern boundary of Darkwoods Forest Lot 2381, Sublot 1, thence proceeding southwesterly up the ridge and along the height of land to the summit of John Bull mountain, thence proceeding southeasterly along the height of land which forms part of the northeasterly watershed boundary of Bayonne Creek to the height of land which forms the southwesterly watershed boundary of Placer Creek; thence proceeding southeasterly along the height of land to the mouth of Placer Creek, thence proceeding westerly along the southerly natural boundary of Summit Creek to the point of commencement. [en. B.C. Reg. 211/93, s. 8 (b).]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "M.U. 4-7 and M.U. 4-8",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at the confluence of Summit Creek and Bayonne Creek and proceeding upstream along the southerly natural boundary of Summit Creek to its intersection with the boundary of Stagleap Park",
+    "geometry.steps[1]": "thence proceeding westerly, northerly and southwesterly along the boundary of Stagleap Park to the height of land which forms the easterly watershed boundary of Lost Creek",
+    "geometry.steps[2]": "thence northerly, westerly and northerly along the height of land which forms the easterly and northerly boundary of the watershed of Lost Creek to the height of land which forms the easterly watershed boundary of Billings Creek",
+    "geometry.steps[3]": "thence northwesterly along the height of land to the mouth of Billings Creek",
+    "geometry.steps[4]": "thence upstream along the northerly and westerly natural boundary of Sheep Creek to the southerly boundary of Darkwoods Forest Lot 2381, Sublot 1",
+    "geometry.steps[5]": "thence proceeding easterly along the boundary for approximately 5.4 km to the unnamed tributary of Next Creek which has, at its head, an unnamed lake which is approximately 750 m long and 350 m wide",
+    "geometry.steps[6]": "thence proceeding northerly along the unnamed creek to Blazed Creek Road",
+    "geometry.steps[7]": "thence proceeding northeasterly, easterly and southeasterly along Blazed Creek Road to the southern boundary of Darkwoods Forest Lot 2381, Sublot 1",
+    "geometry.steps[8]": "thence proceeding southwesterly up the ridge and along the height of land to the summit of John Bull mountain",
+    "geometry.steps[9]": "thence proceeding southeasterly along the height of land which forms part of the northeasterly watershed boundary of Bayonne Creek to the height of land which forms the southwesterly watershed boundary of Placer Creek",
+    "geometry.steps[10]": "thence proceeding southeasterly along the height of land to the mouth of Placer Creek",
+    "geometry.steps[11]": "thence proceeding westerly along the southerly natural boundary of Summit Creek to the point of commencement"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 4-7 and M.U. 4-8"
+    },
+    "method": "metes_and_bounds",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": [
+      {
+        "follow": "creek",
+        "feature": "Summit Creek",
+        "until": "its intersection with the boundary of Stagleap Park",
+        "quote": "Commencing at the confluence of Summit Creek and Bayonne Creek and proceeding upstream along the southerly natural boundary of Summit Creek to its intersection with the boundary of Stagleap Park"
+      },
+      {
+        "follow": "other",
+        "feature": "Stagleap Park",
+        "until": "the height of land which forms the easterly watershed boundary of Lost Creek",
+        "quote": "thence proceeding westerly, northerly and southwesterly along the boundary of Stagleap Park to the height of land which forms the easterly watershed boundary of Lost Creek"
+      },
+      {
+        "follow": "other",
+        "feature": "Lost Creek",
+        "until": "the height of land which forms the easterly watershed boundary of Billings Creek",
+        "quote": "thence northerly, westerly and northerly along the height of land which forms the easterly and northerly boundary of the watershed of Lost Creek to the height of land which forms the easterly watershed boundary of Billings Creek"
+      },
+      {
+        "follow": "other",
+        "feature": null,
+        "until": "the mouth of Billings Creek",
+        "quote": "thence northwesterly along the height of land to the mouth of Billings Creek"
+      },
+      {
+        "follow": "creek",
+        "feature": "Sheep Creek",
+        "until": "the southerly boundary of Darkwoods Forest Lot 2381, Sublot 1",
+        "quote": "thence upstream along the northerly and westerly natural boundary of Sheep Creek to the southerly boundary of Darkwoods Forest Lot 2381, Sublot 1"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "Darkwoods Forest Lot 2381, Sublot 1",
+        "until": "the unnamed tributary of Next Creek which has, at its head, an unnamed lake which is approximately 750 m long and 350 m wide",
+        "quote": "thence proceeding easterly along the boundary for approximately 5.4 km to the unnamed tributary of Next Creek which has, at its head, an unnamed lake which is approximately 750 m long and 350 m wide"
+      },
+      {
+        "follow": "creek",
+        "feature": "unnamed tributary of Next Creek",
+        "until": "Blazed Creek Road",
+        "quote": "thence proceeding northerly along the unnamed creek to Blazed Creek Road"
+      },
+      {
+        "follow": "road",
+        "feature": "Blazed Creek Road",
+        "until": "the southern boundary of Darkwoods Forest Lot 2381, Sublot 1",
+        "quote": "thence proceeding northeasterly, easterly and southeasterly along Blazed Creek Road to the southern boundary of Darkwoods Forest Lot 2381, Sublot 1"
+      },
+      {
+        "follow": "other",
+        "feature": null,
+        "until": "the summit of John Bull mountain",
+        "quote": "thence proceeding southwesterly up the ridge and along the height of land to the summit of John Bull mountain"
+      },
+      {
+        "follow": "other",
+        "feature": "Bayonne Creek",
+        "until": "the height of land which forms the southwesterly watershed boundary of Placer Creek",
+        "quote": "thence proceeding southeasterly along the height of land which forms part of the northeasterly watershed boundary of Bayonne Creek to the height of land which forms the southwesterly watershed boundary of Placer Creek"
+      },
+      {
+        "follow": "other",
+        "feature": null,
+        "until": "the mouth of Placer Creek",
+        "quote": "thence proceeding southeasterly along the height of land to the mouth of Placer Creek"
+      },
+      {
+        "follow": "creek",
+        "feature": "Summit Creek",
+        "until": "the point of commencement",
+        "quote": "thence proceeding westerly along the southerly natural boundary of Summit Creek to the point of commencement"
+      }
+    ]
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs disagree: steps: run 1 [\"summit creek|its intersection with the boundary of stagleap park||creek\",\"stagleap park|the height of land which forms the easterly watershed boundary of lost creek||other\",\"lost creek|the height of land …",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "approximate outline (corners) drawn from the places the walk names, using run 1's reading of the steps",
+    "\"unnamed tributary of Next Creek\" was not found in the official layers; that side is drawn straight",
+    "\"Blazed Creek Road\" was not found in the official layers; that side is drawn straight",
+    "validation failed: two independent extractions agree (steps: run 1 [\"summit creek|its intersection with the boundary of stagleap park||creek\",\"stagleap park|the height of land which forms the easterly watershed boundary of lost creek||ot…"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "14.466 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": false,
+      "detail": "steps: run 1 [\"summit creek|its intersection with the boundary of stagleap park||creek\",\"stagleap park|the height of land which forms the easterly watershed boundary of lost creek||other\",\"lost creek|the height of land which forms the easterly watershed boundary of billings creek||other\",\"|the mouth of billings creek||other\",\"sheep creek|the southerly boundary of darkwoods forest lot 2381 sublot 1||creek\",\"darkwoods forest lot 2381 sublot 1|the unnamed tributary of next creek which has at its head an unnamed lake which is approximately 750 m long and 350 m wide|approximately 5.4 km|lot_line\",\"unnamed tributary of next creek|blazed creek rd||creek\",\"blazed creek rd|the southern boundary of darkwoods forest lot 2381 sublot 1||road\",\"|the summit of john bull mountain||other\",\"bayonne creek|the height of land which forms the southwesterly watershed boundary of placer creek||other\",\"|the mouth of placer creek||other\",\"summit creek|the point of commencement||creek\"] vs run 2 [\"summit creek|its intersection with the boundary of stagleap park||creek\",\"stagleap park|the height of land which forms the easterly watershed boundary of lost creek||other\",\"the height of land which forms the easterly and northerly boundary of the watershed of lost creek|the height of land which forms the easterly watershed boundary of billings creek||other\",\"the height of land|the mouth of billings creek||other\",\"sheep creek|the southerly boundary of darkwoods forest lot 2381 sublot 1||creek\",\"darkwoods forest lot 2381 sublot 1|the unnamed tributary of next creek which has at its head an unnamed lake which is approximately 750 m long and 350 m wide|approximately 5.4 km|lot_line\",\"the unnamed creek|blazed creek rd||creek\",\"blazed creek rd|the southern boundary of darkwoods forest lot 2381 sublot 1||road\",\"the height of land|the summit of john bull mountain||other\",\"the height of land which forms part of the northeasterly watershed boundary of bayonne creek|the height of land which forms the southwesterly watershed boundary of placer creek||other\",\"the height of land|the mouth of placer creek||other\",\"summit creek|the point of commencement||creek\"]"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at the confluence of Summit Creek and Bayonne Creek and proceeding upstream along the southerly natural boundary of Summit Creek to its intersection with the boundary of Stagleap Park",
+      "source": "WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP, WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW, WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "M.U. 4-7 and M.U. 4-8",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

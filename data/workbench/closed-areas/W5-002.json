@@ -1,0 +1,86 @@
+{
+  "id": "W5-002",
+  "itemId": "closed-area-4813e69d57",
+  "title": "Closed Areas Regulation, Schedule 5, section 2 (University of British Columbia Endowment Lands)",
+  "heading": "University of British Columbia Endowment Lands",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: zone around the places named",
+  "quality": "vicinity",
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nUniversity of British Columbia Endowment Lands\n2 That portion of the Province of British Columbia in the vicinity of the City of Vancouver, NWD, which is contained within the following described boundaries: All lands within District Lot 140, Group 1, NWD (except thereout Lots 3044, 4804, 4805 and 6494, Group, NWD, and except thereout those portions within the City of Vancouver). The above description includes Lots 3045, 4806, 4807 and 7184, Group, NWD, formerly portions of said Lot 140.",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "geometry.feature": "District Lot 140, Group 1, NWD",
+    "effect": "No Shooting Areas",
+    "exemptions[0]": "except thereout Lots 3044, 4804, 4805 and 6494, Group, NWD",
+    "exemptions[1]": "except thereout those portions within the City of Vancouver"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": null,
+    "method": "admin_boundary",
+    "feature": {
+      "type": "lot",
+      "name": "District Lot 140, Group 1, NWD"
+    },
+    "road": null,
+    "bufferM": null,
+    "steps": []
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs disagree: within: run 1 null vs run 2 \"nwd\"",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "approximate zone around the places the section names, using run 1's reading",
+    "a zone around the places the section names (District Lot 140, Group 1, NWD): the outline of District Lot 140, Group 1, NWD; not the boundary",
+    "validation failed: two independent extractions agree (within: run 1 null vs run 2 \"nwd\")"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "9.959 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": false,
+      "detail": "within: run 1 null vs run 2 \"nwd\""
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (District Lot 140, Group 1, NWD): the outline of District Lot 140, Group 1, NWD; not the boundary",
+      "quote": "District Lot 140, Group 1, NWD",
+      "source": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW"
+    }
+  ],
+  "lookups": [],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "id": "W5-065",
+  "itemId": "closed-area-21b43cb624",
+  "title": "Closed Areas Regulation, Schedule 5, section 65 (Gillies Bay)",
+  "heading": "Gillies Bay",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nGillies Bay\n65 That portion of the Province of British Columbia within M.U. 2-14 in the vicinity of Gillies Bay contained within the following described boundaries: Commencing at the intersection of Cranby Creek and the Gillies Bay Highway; thence due southwest along a line through the Gillies Bay water tower to the mean low water mark on the natural boundary of Gillies Bay; thence southeasterly along the low water mark to the most southerly point of the north end of Gillies Bay; thence more or less south in a straight line to the most westerly point on the mean low water mark of the natural boundary of Dick Island; thence in a general southerly, easterly and northerly direction along the mean low water mark on the natural boundary of Dick Island to most easterly point thereof; thence more or less west in a straight line to a point on the mean low water mark of the natural boundary of Gillies Bay due West of the west end of Shelter Point Road; thence along the northern boundary of the Shelter Point Road right of way to a point 700 metres east of the junction of the Gillies Bay Highway and Shelter Point Road; thence northerly and northeasterly along a line parallel to and 700 metres perpendicular to the Gillies Bay Highway to a point due East of the intersection of Cranby Creek and the Gillies Bay Highway; thence due West to the point of commencement. [en. B.C. Reg. 205/94, s. 13.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "within M.U. 2-14",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at the intersection of Cranby Creek and the Gillies Bay Highway",
+    "geometry.steps[1]": "thence due southwest along a line through the Gillies Bay water tower to the mean low water mark on the natural boundary of Gillies Bay",
+    "geometry.steps[2]": "thence southeasterly along the low water mark to the most southerly point of the north end of Gillies Bay",
+    "geometry.steps[3]": "thence more or less south in a straight line to the most westerly point on the mean low water mark of the natural boundary of Dick Island",
+    "geometry.steps[4]": "thence in a general southerly, easterly and northerly direction along the mean low water mark on the natural boundary of Dick Island to most easterly point thereof",
+    "geometry.steps[5]": "thence more or less west in a straight line to a point on the mean low water mark of the natural boundary of Gillies Bay due West of the west end of Shelter Point Road",
+    "geometry.steps[6]": "thence along the northern boundary of the Shelter Point Road right of way to a point 700 metres east of the junction of the Gillies Bay Highway and Shelter Point Road",
+    "geometry.steps[7]": "thence northerly and northeasterly along a line parallel to and 700 metres perpendicular to the Gillies Bay Highway to a point due East of the intersection of Cranby Creek and the Gillies Bay Highway",
+    "geometry.steps[8]": "thence due West to the point of commencement"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 2-14"
+    },
+    "method": "metes_and_bounds",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": [
+      {
+        "follow": null,
+        "feature": null,
+        "until": null,
+        "quote": "Commencing at the intersection of Cranby Creek and the Gillies Bay Highway"
+      },
+      {
+        "follow": "straight_line",
+        "feature": "Gillies Bay water tower",
+        "until": "the mean low water mark on the natural boundary of Gillies Bay",
+        "quote": "thence due southwest along a line through the Gillies Bay water tower to the mean low water mark on the natural boundary of Gillies Bay"
+      },
+      {
+        "follow": "shoreline",
+        "feature": "Gillies Bay",
+        "until": "the most southerly point of the north end of Gillies Bay",
+        "quote": "thence southeasterly along the low water mark to the most southerly point of the north end of Gillies Bay"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the most westerly point on the mean low water mark of the natural boundary of Dick Island",
+        "quote": "thence more or less south in a straight line to the most westerly point on the mean low water mark of the natural boundary of Dick Island"
+      },
+      {
+        "follow": "shoreline",
+        "feature": "Dick Island",
+        "until": "most easterly point thereof",
+        "quote": "thence in a general southerly, easterly and northerly direction along the mean low water mark on the natural boundary of Dick Island to most easterly point thereof"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "a point on the mean low water mark of the natural boundary of Gillies Bay due West of the west end of Shelter Point Road",
+        "quote": "thence more or less west in a straight line to a point on the mean low water mark of the natural boundary of Gillies Bay due West of the west end of Shelter Point Road"
+      },
+      {
+        "follow": "road",
+        "feature": "Shelter Point Road",
+        "until": "a point 700 metres east of the junction of the Gillies Bay Highway and Shelter Point Road",
+        "quote": "thence along the northern boundary of the Shelter Point Road right of way to a point 700 metres east of the junction of the Gillies Bay Highway and Shelter Point Road"
+      },
+      {
+        "follow": "other",
+        "feature": "Gillies Bay Highway",
+        "until": "a point due East of the intersection of Cranby Creek and the Gillies Bay Highway",
+        "quote": "thence northerly and northeasterly along a line parallel to and 700 metres perpendicular to the Gillies Bay Highway to a point due East of the intersection of Cranby Creek and the Gillies Bay Highway"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the point of commencement",
+        "quote": "thence due West to the point of commencement"
+      }
+    ]
+  },
+  "runsAgree": true,
+  "why": [
+    "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "\"Gillies Bay\" was not found in the official layers; that side is drawn straight",
+    "\"Dick Island\" was not found in the official layers; that side is drawn straight",
+    "\"Shelter Point Road\" was not found in the official layers; that side is drawn straight",
+    "\"Gillies Bay Highway\" was not found in the official layers; that side is drawn straight",
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
+    }
+  ],
+  "construction": [],
+  "lookups": [
+    {
+      "query": "M.U. 2-14",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

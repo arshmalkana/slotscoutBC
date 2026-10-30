@@ -1,0 +1,96 @@
+{
+  "id": "W3-015",
+  "itemId": "closed-area-c1fd07e5f7",
+  "title": "Closed Areas Regulation, Schedule 3, section 15 (Walter Clough Wildlife Management Area)",
+  "heading": "Walter Clough Wildlife Management Area",
+  "folder": "not_confirmed",
+  "state": "Held: inside the area the text names",
+  "quality": "whole_feature",
+  "sourceText": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nWalter Clough Wildlife Management Area\n15 That portion of M.U. 4-17 which is contained within the following described lots: Block 5, District Lot 381, Kootenay District, Plan 725, and Block 8, District Lot 382, Kootenay District, Plan 722.",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "M.U. 4-17",
+    "geometry.feature": "Block 5, District Lot 381, Kootenay District, Plan 725, and Block 8, District Lot 382, Kootenay District, Plan 722",
+    "effect": "No Shooting or Hunting Areas"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "4-17"
+    },
+    "method": "admin_boundary",
+    "feature": {
+      "type": "lot",
+      "name": "Block 5, District Lot 381, Kootenay District, Plan 725, and Block 8, District Lot 382, Kootenay District, Plan 722"
+    },
+    "road": null,
+    "bufferM": null,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "District Lots 381, 382 (KOOTENAY): the text names part of these lots",
+    "drawn whole: the text names only part of it, so the outline is approximate (\"possibly inside\")",
+    "validation failed: inside the area the text names (60.6% inside)"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "20.556 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": false,
+      "detail": "60.6% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
+    }
+  ],
+  "construction": [
+    {
+      "what": "official boundary of the named area",
+      "quote": "Block 5, District Lot 381, Kootenay District, Plan 725, and Block 8, District Lot 382, Kootenay District, Plan 722",
+      "source": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "4-17",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "District Lots 381, 382 (KOOTENAY)",
+      "kind": "lot",
+      "layer": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW",
+      "status": "ok",
+      "note": "the text names part of these lots"
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

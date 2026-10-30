@@ -1,0 +1,56 @@
+{
+  "id": "W3-019",
+  "itemId": "closed-area-e24ded4794",
+  "title": "Closed Areas Regulation, Schedule 3, section 19 (The Province)",
+  "heading": "The Province",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nThe Province\n19 That portion of British Columbia within 100 m of (a)a church, school building, school yard and playground, (b)a dwelling house, (c)a farm or ranch building that is occupied by persons or domestic animals, and (d)a regional district park in Management Units 1-1 to 1-15 and 2-1 to 2-19. [en. B.C. Reg. 194/99, s. 2.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "That portion of British Columbia",
+    "geometry.buffer_m": "within 100 m",
+    "effect": "No Shooting or Hunting Areas"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "British Columbia"
+    },
+    "method": "other",
+    "feature": null,
+    "road": null,
+    "bufferM": 100,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "named area \"British Columbia\": failed (no official layer for area type other)",
+    "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "lookups": [
+    {
+      "query": "British Columbia",
+      "kind": "other",
+      "layer": "-",
+      "status": "failed",
+      "note": "no official layer for area type other"
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

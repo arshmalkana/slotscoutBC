@@ -1,0 +1,117 @@
+{
+  "id": "W3-066",
+  "itemId": "closed-area-ccedbbdc24",
+  "title": "Closed Areas Regulation, Schedule 3, section 66 (Marble Canyon Park)",
+  "heading": "Marble Canyon Park",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: read from the Province's map",
+  "quality": "map_image",
+  "sourceText": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nMarble Canyon Park\n66 That portion of M.U. 3-17 outlined in red on the attached map 'No Shooting or Hunting Area Marble Canyon Park'. [en. B.C. Reg. 157/2022, App. 3, s. 3.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "That portion of M.U. 3-17",
+    "effect": "No Shooting or Hunting Areas"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 3-17"
+    },
+    "method": "other",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "outline read from the official map (nsha_marble_canyon_park.pdf); firm more than 50 m inside, \"possibly inside\" nearer the edge"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "5.851 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
+    }
+  ],
+  "construction": [
+    {
+      "what": "outline read by code from the official map image: nsha_marble_canyon_park.pdf (red outline); clipped to M.U. 3-17",
+      "quote": null,
+      "source": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/motor-vehicle-prohibitions/firearms-restrictions-closed-areas/nsha_marble_canyon_park.pdf"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "M.U. 3-17",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [
+    {
+      "file": "nsha_marble_canyon_park.pdf",
+      "title": "Marble Canyon Park No Shooting or Hunting Area MU 3-17 (PDF, 7.7MB)",
+      "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/motor-vehicle-prohibitions/firearms-restrictions-closed-areas/nsha_marble_canyon_park.pdf",
+      "page": "ca-map-nsha-marble-canyon-park.jpg",
+      "overlay": {
+        "image": "ca-map-nsha-marble-canyon-park.overlay.webp",
+        "corners": [
+          [
+            -121.77221,
+            50.893262
+          ],
+          [
+            -121.668353,
+            50.893262
+          ],
+          [
+            -121.668353,
+            50.820594
+          ],
+          [
+            -121.77221,
+            50.820594
+          ]
+        ]
+      }
+    }
+  ],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

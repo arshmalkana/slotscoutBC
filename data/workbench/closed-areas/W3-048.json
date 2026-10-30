@@ -1,0 +1,67 @@
+{
+  "id": "W3-048",
+  "itemId": "closed-area-bc2ecf9f5c",
+  "title": "Closed Areas Regulation, Schedule 3, section 48 (Radar Lake)",
+  "heading": "Radar Lake",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nRadar Lake\n48 That portion of the Province of British Columbia in Section 14, Township 77, Range 16 west of the 6th Meridian, Peace River Land District, in the vicinity of the City of Dawson Creek, contained within 200 metres above the high water mark around Radar Lake. [en. B.C. Reg. 224/92, s. 3.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "in Section 14, Township 77, Range 16 west of the 6th Meridian, Peace River Land District",
+    "geometry.feature": "around Radar Lake",
+    "geometry.buffer_m": "within 200 metres above the high water mark",
+    "effect": "No Shooting or Hunting Areas"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Section 14, Township 77, Range 16 west of the 6th Meridian, Peace River Land District"
+    },
+    "method": "waterbody_buffer",
+    "feature": {
+      "type": "lake",
+      "name": "Radar Lake"
+    },
+    "road": null,
+    "bufferM": 200,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "named area \"Section 14, Township 77, Range 16 west of the 6th Meridian, Peace River Land District\": none",
+    "waterbody \"Radar Lake\": none in the Freshwater Atlas",
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "lookups": [
+    {
+      "query": "Section 14, Township 77, Range 16 west of the 6th Meridian, Peace River Land District",
+      "kind": "other",
+      "layer": "WHSE_TANTALIS.TA_LAND_DISTRICTS_SVW",
+      "status": "none",
+      "note": null
+    },
+    {
+      "query": "Radar Lake",
+      "kind": "water",
+      "layer": "WHSE_BASEMAPPING.FWA_LAKES_POLY",
+      "status": "none",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

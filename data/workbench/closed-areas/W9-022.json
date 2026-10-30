@@ -1,0 +1,285 @@
+{
+  "id": "W9-022",
+  "itemId": "closed-area-63cfc5d6e4",
+  "title": "Closed Areas Regulation, Schedule 9, section 22 (Highways)",
+  "heading": "Highways",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: read from the Province's map",
+  "quality": "map_image",
+  "sourceText": "Schedule 9 Firearms Using Shot Only Areas (Section 10 (1) (a))\nHighways\n22 Those portions of the Province of British Columbia being all areas within 0.4 km (0.25 mile) of either side of the road allowance of portions of the following highways and roads in British Columbia: (a)Highway 16 between the boundary of the City of Prince Rupert and the British Columbia-Alberta interprovincial boundary; (b)Highway 37 between the Skeena River Bridge at Kitwanga Post Office, Cassiar Land District, and the British Columbia-Yukon boundary; (c)Highway 97, including those portions of the Cariboo Highway from Cottonwood River to Prince George, the John Hart Highway from Prince George to Dawson Creek, and the Alaska Highway from Dawson Creek to Lower Post; (d)Highway 37 between the intersection of Highway 37 with Highway 16 and the boundary of the District of Kitimat; (e)Highway 29 between the intersection of Highway 29 with Highway 97 in the vicinity of the village of Chetwynd and the intersection of Highway 29 with Highway 97 in the vicinity of Charlie Lake, Peace River Land District; (f)Repealed. [B.C. Reg. 169/2020, App. 1, s. 4.] (g)Highway 35 between Francois Lake and Burns Lake; (h)Highway 6 between Bench Creek and Banting Creek; (i)Tibbles Road in M.U. 5-13 from Nazko Road to 2000 Road; (j)Highway 5 (Coquihalla Highway) between Hope and the junction of Highways 1 and 5 at Kamloops; (k)Canyon Drive (Road 520) between Hudson's Hope and the W.A.C. Bennett Dam; (l)Twelve Mile Road (Road 190) between Canyon Drive (Road 520) and the boat ramp on Dunlevy inlet, and the unnamed road (formerly known as the 190A Road) from Twelve Mile Road (Road 190) to the bridge on Dunlevy Creek; (m)Highway 27, from the junction with Route 16 (Yellowhead) west of Vanderhoof to Fort St. James; (n)Highway 39, from the junction with Highway 97 north of McLeod Lake to its intercept with the municipal boundaries of the City of Mackenzie; (o)Tatlayoko Road (Project #405) from its intersection with the Eagle Main Road (Project #693) southerly to its end; (p)Robertson Road (Project #249), and any side roads to Robertson Road, from its intersection with Highway 97 at District Lot 61, Cariboo Land District, northerly to its intersection again with Highway 97 at the village of McLeese Lake; (q)Horn-Bluff Lakes Road (Highway #341) from a point south 89° 29' 20\" east of the southwest corner of Lot 172, Range 2, Coast Land District, along the midline of Highway #341 to the point of intersection with the south boundary of Lot 791; (r)Highway 37A between the intersection of said highway and Highway 37 at Meziadin Junction and the boundary of the District of Stewart at Bitter Creek; (s)Topley Landing Road (Highway 118) between Topley and Granisle; (t)West Fraser Road from City of Quesnel city limits southerly to Grouse Road and those portions of M.U. 5-2 and M.U. 5-14 on the east side of the Fraser River in the vicinity of West Fraser Road all of which are highlighted in yellow on the attached map 'Closed Area No. 9-22t/26'; (u)Highway 113 between Terrace and Sterling Mountain Parking Lot Recreation Site as shown highlighted in red on the attached map 'Closed Area 9-22u/26'. [en. B.C. Reg. 211/93, s. 10; am. B.C. Regs. 205/94, s. 29; 235/97, s. 5 (c); 225/98, s. 6 (b); 170/2001, s. 4; 221/2005, s. 4; 130/2016, App. 1, s. 5; 169/2020, App. 1, s. 4; 97/2026, App. 1, s. 4.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "geometry.buffer_m": "0.4 km (0.25 mile)",
+    "effect": "Firearms Using Shot Only Areas",
+    "geometry.side": "either side of the road allowance"
+  },
+  "extracted": {
+    "effect": "shot_only",
+    "period": null,
+    "within": null,
+    "method": "road_buffer",
+    "feature": null,
+    "road": null,
+    "bufferM": 400,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "\"Highway 16\" is limited (between the boundary of the City of Prince Rupert and the British Columbia-Alberta interprovincial boundary) in a way the code cannot place, and no management unit narrows it",
+    "\"Highway 37\" is limited (between the Skeena River Bridge at Kitwanga Post Office, Cassiar Land District, and the British Columbia-Yukon boundary) in a way the code cannot place, and no management unit narrows it",
+    "listed road \"Highway 97, including those portions of the Cariboo Highway\" none in the official road layers",
+    "\"Highway 37\" is limited (between the intersection of Highway 37 with Highway 16 and the boundary of the District of Kitimat) in a way the code cannot place, and no management unit narrows it",
+    "\"Highway 29\" is limited (between the intersection of Highway 29 with Highway 97 in the vicinity of the village of Chetwynd and the intersection of Highway 29 with Highway 97 in the vicinity of Charlie Lake, Peace River Land District) in …",
+    "\"Highway 35\" is limited (between Francois Lake and Burns Lake) in a way the code cannot place, and no management unit narrows it",
+    "\"Highway 6\" is limited (between Bench Creek and Banting Creek) in a way the code cannot place, and no management unit narrows it",
+    "listed road \"Tibbles Road in M.U. 5-13\" none in the official road layers",
+    "listed road \"Highway 5 (Coquihalla Highway)\" none in the official road layers",
+    "listed road \"Canyon Drive (Road 520)\" none in the official road layers",
+    "listed road \"Twelve Mile Road (Road 190)\" none in the official road layers",
+    "listed road \"Highway 27,\" none in the official road layers"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": false,
+      "detail": "171.074 km² (limit 2 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
+    }
+  ],
+  "construction": [
+    {
+      "what": "outline read by code from the official map image: closed_areas_reg_9-22t_26.pdf (yellow-highlighted roads, 400 m); closed_areas_reg_9-22u_26.pdf (yellow-highlighted roads, 400 m)",
+      "quote": null,
+      "source": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/closed_areas_reg_9-22t_26.pdf https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/closed_areas_reg_9-22u_26.pdf"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "Highway 16",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "ambiguous",
+      "note": "6 separate roads named Highway 16 in the area"
+    },
+    {
+      "query": "Highway 37",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "ambiguous",
+      "note": "4 separate roads named Highway 37 in the area"
+    },
+    {
+      "query": "Highway 97, including those portions of the Cariboo Highway",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "note": null
+    },
+    {
+      "query": "Highway 37",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "ambiguous",
+      "note": "4 separate roads named Highway 37 in the area"
+    },
+    {
+      "query": "Highway 29",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "ambiguous",
+      "note": "13 separate roads named Highway 29 in the area"
+    },
+    {
+      "query": "Highway 35",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "ambiguous",
+      "note": "2 separate roads named Highway 35 in the area"
+    },
+    {
+      "query": "Highway 6",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "ambiguous",
+      "note": "3 separate roads named Highway 6 in the area"
+    },
+    {
+      "query": "Tibbles Road in M.U. 5-13",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "note": null
+    },
+    {
+      "query": "Highway 5 (Coquihalla Highway)",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "note": null
+    },
+    {
+      "query": "Canyon Drive (Road 520)",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "note": null
+    },
+    {
+      "query": "Twelve Mile Road (Road 190)",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "note": null
+    },
+    {
+      "query": "Highway 27,",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "note": null
+    },
+    {
+      "query": "Highway 39,",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "note": null
+    },
+    {
+      "query": "Tatlayoko Road (Project #405)",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "note": null
+    },
+    {
+      "query": "Robertson Road (Project #249), and any side roads",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "note": null
+    },
+    {
+      "query": "Horn-Bluff Lakes Road (Highway #341)",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "note": null
+    },
+    {
+      "query": "Highway 37A",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "Topley Landing Road (Highway 118)",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "note": null
+    },
+    {
+      "query": "West Fraser Road",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "ambiguous",
+      "note": "2 separate roads named West Fraser Road in the area"
+    },
+    {
+      "query": "Highway 113",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [
+    {
+      "file": "closed_areas_reg_9-22t_26.pdf",
+      "title": "West Fraser FSR Single Projectile Area (PDF, 12.1MB)",
+      "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/closed_areas_reg_9-22t_26.pdf",
+      "page": "ca-map-closed-areas-reg-9-22t-26.jpg",
+      "overlay": {
+        "image": "ca-map-closed-areas-reg-9-22t-26.overlay.webp",
+        "corners": [
+          [
+            -122.84003,
+            52.973775
+          ],
+          [
+            -121.915353,
+            52.973775
+          ],
+          [
+            -121.915353,
+            52.201169
+          ],
+          [
+            -122.84003,
+            52.201169
+          ]
+        ]
+      }
+    },
+    {
+      "file": "closed_areas_reg_9-22u_26.pdf",
+      "title": "Highway 113 No Shooting or Hunting Area (PDF, 16.8MB)",
+      "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/closed_areas_reg_9-22u_26.pdf",
+      "page": "ca-map-closed-areas-reg-9-22u-26.jpg",
+      "overlay": {
+        "image": "ca-map-closed-areas-reg-9-22u-26.overlay.webp",
+        "corners": [
+          [
+            -129.218658,
+            55.102903
+          ],
+          [
+            -128.347046,
+            55.102903
+          ],
+          [
+            -128.347046,
+            54.406538
+          ],
+          [
+            -129.218658,
+            54.406538
+          ]
+        ]
+      }
+    }
+  ],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

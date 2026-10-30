@@ -1,0 +1,204 @@
+{
+  "id": "W5-060",
+  "itemId": "closed-area-e074df75af",
+  "title": "Closed Areas Regulation, Schedule 5, section 60 (Whistler)",
+  "heading": "Whistler",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: zone around the places named",
+  "quality": "vicinity",
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nWhistler\n60 Those portions of the Province of British Columbia in the vicinity of the Resort Municipality of Whistler within the following described boundaries: (1)and (2) Repealed. [B.C. Reg. 72/2014, App. 1, s. 3 (b).] (3)Commencing at the center line of Highway 99 at its junction with the easterly boundary of the Resort Municipality of Whistler, hereinafter referred to as Whistler, and proceeding in a northerly and westerly direction along the boundary of Whistler to its intersection with the 1 200 m contour line immediately east of Nineteen Mile Creek; thence easterly and northerly along the contour line approximately 2 km to a point on the contour line, above Sixteen Mile Creek, at the junction of the easterly and southerly slopes of Rainbow Mountain; thence due northeast in a straight line across Sixteen Mile Creek to the 1 050 m contour line; thence easterly and northerly along the contour line to a point due West of the intersection of the power line and Highway 99 approximately 3 km northeast of the point of commencement; thence due East to that intersection; thence along the southerly and the easterly boundary of Highway 99 to a point due North of the junction of Rethel Creek and the Green River; thence across the Green River and up the northern and eastern natural boundary of Rethel Creek to its intersection with the boundary of Garibaldi Provincial Park; thence westerly along the boundary of the park to its intersection with the eastern boundary of Whistler; thence northerly and easterly and northerly along the boundary of Whistler to the point of commencement. (4)Commencing at the southwest corner of the Brandywine Falls Provincial Park boundary; thence due West up the slope of Mount Brew to the 3 000 ft. (900 m) contour line; thence in a southerly direction along that contour line to the point of its intersection with the unnamed creek originating at Brew Lake; thence in a southerly direction downstream to the confluence of the unnamed creek with Roe Creek; thence in an easterly direction, downstream to the mouth of Roe Creek at Shadow Lake; thence in an easterly direction, along the high water mark of the northerly shore of Shadow Lake to the point of intersection of the high water mark with a perpendicular, downward projection of the centerline of Highway 99 from the center of the Highway 99 bridge across the connecting waterway between Daisy Lake and Shadow Lake; thence northerly along the centerline of Highway 99 to the point of intersection with Brandywine Falls Provincial Park boundary; thence westerly along the southern boundary of Brandywine Falls Provincial Park to the southwest corner of Brandywine Falls Provincial Park, being the point of commencement. [am. B.C. Regs. 225/98, s. 4 (b); 72/2014, App. 1, s. 3.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at the center line of Highway 99 at its junction with the easterly boundary of the Resort Municipality of Whistler, hereinafter referred to as Whistler, and proceeding in a northerly and westerly direction along the boundary of Whistler to its intersection with the 1 200 m contour line immediately east of Nineteen Mile Creek",
+    "geometry.steps[1]": "thence easterly and northerly along the contour line approximately 2 km to a point on the contour line, above Sixteen Mile Creek, at the junction of the easterly and southerly slopes of Rainbow Mountain",
+    "geometry.steps[2]": "thence due northeast in a straight line across Sixteen Mile Creek to the 1 050 m contour line",
+    "geometry.steps[3]": "thence easterly and northerly along the contour line to a point due West of the intersection of the power line and Highway 99 approximately 3 km northeast of the point of commencement",
+    "geometry.steps[4]": "thence due East to that intersection",
+    "geometry.steps[5]": "thence along the southerly and the easterly boundary of Highway 99 to a point due North of the junction of Rethel Creek and the Green River",
+    "geometry.steps[6]": "thence across the Green River and up the northern and eastern natural boundary of Rethel Creek to its intersection with the boundary of Garibaldi Provincial Park",
+    "geometry.steps[7]": "thence westerly along the boundary of the park to its intersection with the eastern boundary of Whistler",
+    "geometry.steps[8]": "thence northerly and easterly and northerly along the boundary of Whistler to the point of commencement",
+    "geometry.steps[9]": "Commencing at the southwest corner of the Brandywine Falls Provincial Park boundary",
+    "geometry.steps[10]": "thence due West up the slope of Mount Brew to the 3 000 ft. (900 m) contour line",
+    "geometry.steps[11]": "thence in a southerly direction along that contour line to the point of its intersection with the unnamed creek originating at Brew Lake",
+    "geometry.steps[12]": "thence in a southerly direction downstream to the confluence of the unnamed creek with Roe Creek",
+    "geometry.steps[13]": "thence in an easterly direction, downstream to the mouth of Roe Creek at Shadow Lake",
+    "geometry.steps[14]": "thence in an easterly direction, along the high water mark of the northerly shore of Shadow Lake to the point of intersection of the high water mark with a perpendicular, downward projection of the centerline of Highway 99 from the center of the Highway 99 bridge across the connecting waterway between Daisy Lake and Shadow Lake",
+    "geometry.steps[15]": "thence northerly along the centerline of Highway 99 to the point of intersection with Brandywine Falls Provincial Park boundary",
+    "geometry.steps[16]": "thence westerly along the southern boundary of Brandywine Falls Provincial Park to the southwest corner of Brandywine Falls Provincial Park, being the point of commencement"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": null,
+    "method": "metes_and_bounds",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": [
+      {
+        "follow": "district_boundary",
+        "feature": "Resort Municipality of Whistler",
+        "until": "its intersection with the 1 200 m contour line immediately east of Nineteen Mile Creek",
+        "quote": "Commencing at the center line of Highway 99 at its junction with the easterly boundary of the Resort Municipality of Whistler, hereinafter referred to as Whistler, and proceeding in a northerly and westerly direction along the boundary of Whistler to its intersection with the 1 200 m contour line immediately east of Nineteen Mile Creek"
+      },
+      {
+        "follow": "contour",
+        "feature": "1 200 m contour line",
+        "until": "a point on the contour line, above Sixteen Mile Creek, at the junction of the easterly and southerly slopes of Rainbow Mountain",
+        "quote": "thence easterly and northerly along the contour line approximately 2 km to a point on the contour line, above Sixteen Mile Creek, at the junction of the easterly and southerly slopes of Rainbow Mountain"
+      },
+      {
+        "follow": "straight_line",
+        "feature": "Sixteen Mile Creek",
+        "until": "the 1 050 m contour line",
+        "quote": "thence due northeast in a straight line across Sixteen Mile Creek to the 1 050 m contour line"
+      },
+      {
+        "follow": "contour",
+        "feature": "1 050 m contour line",
+        "until": "a point due West of the intersection of the power line and Highway 99 approximately 3 km northeast of the point of commencement",
+        "quote": "thence easterly and northerly along the contour line to a point due West of the intersection of the power line and Highway 99 approximately 3 km northeast of the point of commencement"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "that intersection",
+        "quote": "thence due East to that intersection"
+      },
+      {
+        "follow": "road",
+        "feature": "Highway 99",
+        "until": "a point due North of the junction of Rethel Creek and the Green River",
+        "quote": "thence along the southerly and the easterly boundary of Highway 99 to a point due North of the junction of Rethel Creek and the Green River"
+      },
+      {
+        "follow": "creek",
+        "feature": "Rethel Creek",
+        "until": "its intersection with the boundary of Garibaldi Provincial Park",
+        "quote": "thence across the Green River and up the northern and eastern natural boundary of Rethel Creek to its intersection with the boundary of Garibaldi Provincial Park"
+      },
+      {
+        "follow": "other",
+        "feature": "Garibaldi Provincial Park",
+        "until": "its intersection with the eastern boundary of Whistler",
+        "quote": "thence westerly along the boundary of the park to its intersection with the eastern boundary of Whistler"
+      },
+      {
+        "follow": "district_boundary",
+        "feature": "Resort Municipality of Whistler",
+        "until": "the point of commencement",
+        "quote": "thence northerly and easterly and northerly along the boundary of Whistler to the point of commencement"
+      },
+      {
+        "follow": null,
+        "feature": null,
+        "until": null,
+        "quote": "Commencing at the southwest corner of the Brandywine Falls Provincial Park boundary"
+      },
+      {
+        "follow": "straight_line",
+        "feature": "Mount Brew",
+        "until": "the 3 000 ft. (900 m) contour line",
+        "quote": "thence due West up the slope of Mount Brew to the 3 000 ft. (900 m) contour line"
+      },
+      {
+        "follow": "contour",
+        "feature": "3 000 ft. (900 m) contour line",
+        "until": "the point of its intersection with the unnamed creek originating at Brew Lake",
+        "quote": "thence in a southerly direction along that contour line to the point of its intersection with the unnamed creek originating at Brew Lake"
+      },
+      {
+        "follow": "creek",
+        "feature": "unnamed creek originating at Brew Lake",
+        "until": "the confluence of the unnamed creek with Roe Creek",
+        "quote": "thence in a southerly direction downstream to the confluence of the unnamed creek with Roe Creek"
+      },
+      {
+        "follow": "creek",
+        "feature": "Roe Creek",
+        "until": "the mouth of Roe Creek at Shadow Lake",
+        "quote": "thence in an easterly direction, downstream to the mouth of Roe Creek at Shadow Lake"
+      },
+      {
+        "follow": "shoreline",
+        "feature": "Shadow Lake",
+        "until": "the point of intersection of the high water mark with a perpendicular, downward projection of the centerline of Highway 99 from the center of the Highway 99 bridge across the connecting waterway between Daisy Lake and Shadow Lake",
+        "quote": "thence in an easterly direction, along the high water mark of the northerly shore of Shadow Lake to the point of intersection of the high water mark with a perpendicular, downward projection of the centerline of Highway 99 from the center of the Highway 99 bridge across the connecting waterway between Daisy Lake and Shadow Lake"
+      },
+      {
+        "follow": "road",
+        "feature": "Highway 99",
+        "until": "the point of intersection with Brandywine Falls Provincial Park boundary",
+        "quote": "thence northerly along the centerline of Highway 99 to the point of intersection with Brandywine Falls Provincial Park boundary"
+      },
+      {
+        "follow": "other",
+        "feature": "Brandywine Falls Provincial Park",
+        "until": "the southwest corner of Brandywine Falls Provincial Park, being the point of commencement",
+        "quote": "thence westerly along the southern boundary of Brandywine Falls Provincial Park to the southwest corner of Brandywine Falls Provincial Park, being the point of commencement"
+      }
+    ]
+  },
+  "runsAgree": true,
+  "why": [
+    "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "the walk was too complex to trace within the time allowed; a person draws it",
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Whistler, Sixteen Mile Creek, Rethel Creek): 1 km around the named points; not the boundary"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "38.552 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Whistler, Sixteen Mile Creek, Rethel Creek): 1 km around the named points; not the boundary",
+      "quote": "Commencing at the center line of Highway 99 at its junction with the easterly boundary of the Resort Municipality of Whistler, hereinafter referred to as Whistler, and proceeding in a northerly and westerly direction along the boundary of Whistler to its intersection with the 1 200 m contour line immediately east of Nineteen Mile Creek",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "lookups": [],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

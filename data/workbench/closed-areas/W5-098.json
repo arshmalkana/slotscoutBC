@@ -1,0 +1,171 @@
+{
+  "id": "W5-098",
+  "itemId": "closed-area-d43b3a6e86",
+  "title": "Closed Areas Regulation, Schedule 5, section 98 (Texada Junction)",
+  "heading": "Texada Junction",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: walk traced along the named features",
+  "quality": "traced",
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nTexada Junction\n98 That portion of the Province of British Columbia in the vicinity of Texada Island contained within the following described boundaries Commencing at a point along the midline of Central Road 2 km northerly from the junction of Shelter Point Road, Bell Road and Central Road; thence northeast a distance of 0.4 km; thence southeasterly and southwesterly along a line parallel to Central Road to a point 0.4 km east of the junction of Central Road, Bell Road and Shelter Point Road; thence 2 km southerly and easterly along a line parallel to Bell Road; thence southwesterly a distance of 0.2 km; thence southeasterly, northeasterly and southeasterly along a line parallel to Bell Road to the Texada Forest Service Road 5829, Branch 04; thence southwesterly along the midline of the Texada Forest Service Road 5829, Branch 04, to the junction of the Texada Forest Service Road 5829, Branch 04, and Bell Road; thence southeasterly along the midline of Bell Road to a point 0.1 km southwest of the gas pipeline; thence westerly and northwesterly along a line parallel to the gas pipeline to a point 0.4 km southeast of Bell Road; thence northwesterly along a line parallel to Bell Road to the midline of Shelter Point Road 0.4 km southwest of the junction of Shelter Point Road, Bell Road and Central Road; thence northerly along a line parallel to Central Road to a point 0.4 km southwest of the point of commencement; thence northeast 0.4 km to the point of commencement. [en. B.C. Reg. 46/89, s. 7; am. B.C. Regs. 205/94, s. 20; 198/2013, App. 1, s. 1.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at a point along the midline of Central Road 2 km northerly from the junction of Shelter Point Road, Bell Road and Central Road",
+    "geometry.steps[1]": "thence northeast a distance of 0.4 km",
+    "geometry.steps[2]": "thence southeasterly and southwesterly along a line parallel to Central Road to a point 0.4 km east of the junction of Central Road, Bell Road and Shelter Point Road",
+    "geometry.steps[3]": "thence 2 km southerly and easterly along a line parallel to Bell Road",
+    "geometry.steps[4]": "thence southwesterly a distance of 0.2 km",
+    "geometry.steps[5]": "thence southeasterly, northeasterly and southeasterly along a line parallel to Bell Road to the Texada Forest Service Road 5829, Branch 04",
+    "geometry.steps[6]": "thence southwesterly along the midline of the Texada Forest Service Road 5829, Branch 04, to the junction of the Texada Forest Service Road 5829, Branch 04, and Bell Road",
+    "geometry.steps[7]": "thence southeasterly along the midline of Bell Road to a point 0.1 km southwest of the gas pipeline",
+    "geometry.steps[8]": "thence westerly and northwesterly along a line parallel to the gas pipeline to a point 0.4 km southeast of Bell Road",
+    "geometry.steps[9]": "thence northwesterly along a line parallel to Bell Road to the midline of Shelter Point Road 0.4 km southwest of the junction of Shelter Point Road, Bell Road and Central Road",
+    "geometry.steps[10]": "thence northerly along a line parallel to Central Road to a point 0.4 km southwest of the point of commencement",
+    "geometry.steps[11]": "thence northeast 0.4 km to the point of commencement"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": null,
+    "method": "metes_and_bounds",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": [
+      {
+        "follow": null,
+        "feature": null,
+        "until": null,
+        "quote": "Commencing at a point along the midline of Central Road 2 km northerly from the junction of Shelter Point Road, Bell Road and Central Road"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": null,
+        "quote": "thence northeast a distance of 0.4 km"
+      },
+      {
+        "follow": "other",
+        "feature": "Central Road",
+        "until": "a point 0.4 km east of the junction of Central Road, Bell Road and Shelter Point Road",
+        "quote": "thence southeasterly and southwesterly along a line parallel to Central Road to a point 0.4 km east of the junction of Central Road, Bell Road and Shelter Point Road"
+      },
+      {
+        "follow": "other",
+        "feature": "Bell Road",
+        "until": null,
+        "quote": "thence 2 km southerly and easterly along a line parallel to Bell Road"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": null,
+        "quote": "thence southwesterly a distance of 0.2 km"
+      },
+      {
+        "follow": "other",
+        "feature": "Bell Road",
+        "until": "the Texada Forest Service Road 5829, Branch 04",
+        "quote": "thence southeasterly, northeasterly and southeasterly along a line parallel to Bell Road to the Texada Forest Service Road 5829, Branch 04"
+      },
+      {
+        "follow": "road",
+        "feature": "Texada Forest Service Road 5829, Branch 04",
+        "until": "the junction of the Texada Forest Service Road 5829, Branch 04, and Bell Road",
+        "quote": "thence southwesterly along the midline of the Texada Forest Service Road 5829, Branch 04, to the junction of the Texada Forest Service Road 5829, Branch 04, and Bell Road"
+      },
+      {
+        "follow": "road",
+        "feature": "Bell Road",
+        "until": "a point 0.1 km southwest of the gas pipeline",
+        "quote": "thence southeasterly along the midline of Bell Road to a point 0.1 km southwest of the gas pipeline"
+      },
+      {
+        "follow": "other",
+        "feature": "gas pipeline",
+        "until": "a point 0.4 km southeast of Bell Road",
+        "quote": "thence westerly and northwesterly along a line parallel to the gas pipeline to a point 0.4 km southeast of Bell Road"
+      },
+      {
+        "follow": "other",
+        "feature": "Bell Road",
+        "until": "the midline of Shelter Point Road 0.4 km southwest of the junction of Shelter Point Road, Bell Road and Central Road",
+        "quote": "thence northwesterly along a line parallel to Bell Road to the midline of Shelter Point Road 0.4 km southwest of the junction of Shelter Point Road, Bell Road and Central Road"
+      },
+      {
+        "follow": "other",
+        "feature": "Central Road",
+        "until": "a point 0.4 km southwest of the point of commencement",
+        "quote": "thence northerly along a line parallel to Central Road to a point 0.4 km southwest of the point of commencement"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the point of commencement",
+        "quote": "thence northeast 0.4 km to the point of commencement"
+      }
+    ]
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs disagree: steps: run 1 [\"||2 km|\",\"||0.4 km|straight_line\",\"central rd|a point 0.4 km east of the junction of central rd bell rd and shelter point rd||other\",\"bell rd||2 km|other\",\"||0.2 km|straight_line\",\"bell rd|the texada fore…",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "approximate outline (traced) drawn from the places the walk names, using run 1's reading of the steps",
+    "\"Texada Forest Service Road 5829, Branch 04\" was not found in the official layers; that side is drawn straight",
+    "\"gas pipeline\" was not found in the official layers; that side is drawn straight",
+    "validation failed: two independent extractions agree (steps: run 1 [\"||2 km|\",\"||0.4 km|straight_line\",\"central rd|a point 0.4 km east of the junction of central rd bell rd and shelter point rd||other\",\"bell rd||2 km|other\",\"||0.2 km|str…"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "1.461 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": false,
+      "detail": "steps: run 1 [\"||2 km|\",\"||0.4 km|straight_line\",\"central rd|a point 0.4 km east of the junction of central rd bell rd and shelter point rd||other\",\"bell rd||2 km|other\",\"||0.2 km|straight_line\",\"bell rd|the texada forest service rd 5829 branch 04||other\",\"texada forest service rd 5829 branch 04|the junction of the texada forest service rd 5829 branch 04 and bell rd||road\",\"bell rd|a point 0.1 km southwest of the gas pipeline||road\",\"gas pipeline|a point 0.4 km southeast of bell rd||other\",\"bell rd|the midline of shelter point rd 0.4 km southwest of the junction of shelter point rd bell rd and central rd||other\",\"central rd|a point 0.4 km southwest of the point of commencement||other\",\"|the point of commencement|0.4 km|straight_line\"] vs run 2 [\"||2 km|\",\"||0.4 km|\",\"central rd|a point 0.4 km east of the junction of central rd bell rd and shelter point rd||other\",\"bell rd||2 km|other\",\"||0.2 km|\",\"bell rd|the texada forest service rd 5829 branch 04||other\",\"texada forest service rd 5829 branch 04|the junction of the texada forest service rd 5829 branch 04 and bell rd||road\",\"bell rd|a point 0.1 km southwest of the gas pipeline||road\",\"gas pipeline|a point 0.4 km southeast of bell rd||other\",\"bell rd|the midline of shelter point rd 0.4 km southwest of the junction of shelter point rd bell rd and central rd||other\",\"central rd|a point 0.4 km southwest of the point of commencement||other\",\"|the point of commencement|0.4 km|\"]"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at a point along the midline of Central Road 2 km northerly from the junction of Shelter Point Road, Bell Road and Central Road",
+      "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP"
+    }
+  ],
+  "lookups": [],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

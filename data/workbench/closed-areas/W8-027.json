@@ -1,0 +1,42 @@
+{
+  "id": "W8-027",
+  "itemId": "closed-area-85edbdb904",
+  "title": "Closed Areas Regulation, Schedule 7, section 27 (Provincial Parks)",
+  "heading": "Provincial Parks",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 7 No Hunting Areas (Section 8)\nProvincial Parks\n27 (1)Carp Lake Park — That portion of M.U. 7-24, in the vicinity of Prince George, being all the area 0.5 km of either side of the centre line of the Carp Lake Park access road. (2)Mount Robson Park — That portion of M.U. 7-1 contained within the following described boundaries: Commencing at the junction of Swiftcurrent Creek and the Fraser River; thence northerly along the height of land separating the drainages of Swiftcurrent Creek from the drainage of the Fraser and Robson rivers to Mount Philips on the B.C./Alberta Boundary; thence southeasterly along said boundary to Lynx Mountain; thence southwesterly along the height of land separating the drainages of the Robson River from the drainages of Resplendent Creek and the Fraser River to the junction of the Robson River and the Fraser River; thence downstream along the Fraser River to the point of commencement. (3)Moose Marsh — That portion of M.U. 7-1 being east of Thunder Creek, south of Highway 16, west of Sleeper Creek and Grant Brook and north of a line drawn 2 km perpendicular and parallel to the southerly natural boundaries of Moose Lake and the Fraser River. [am. B.C. Reg. 109/85, s. 4 (b).]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "effect": "No Hunting Areas"
+  },
+  "extracted": {
+    "effect": "no_hunting",
+    "period": null,
+    "within": null,
+    "method": "other",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "the geometry builder does not draw \"other\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "lookups": [],
+  "maps": [],
+  "decided": null
+}

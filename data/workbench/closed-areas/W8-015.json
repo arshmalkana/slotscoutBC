@@ -1,0 +1,72 @@
+{
+  "id": "W8-015",
+  "itemId": "closed-area-3e70a63773",
+  "title": "Closed Areas Regulation, Schedule 7, section 15 (Tweedsmuir Park)",
+  "heading": "Tweedsmuir Park",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 7 No Hunting Areas (Section 8)\nTweedsmuir Park\n15 That portion of M.U. 5-11, within the boundaries of Tweedsmuir Park, 0.4 km either side of the centre line of Highway 20 between Young Creek and the westerly boundary of Tweedsmuir Park.",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "That portion of M.U. 5-11",
+    "geometry.road": "the centre line of Highway 20",
+    "geometry.feature": "within the boundaries of Tweedsmuir Park",
+    "geometry.buffer_m": "0.4 km",
+    "geometry.from": "between Young Creek",
+    "geometry.to": "the westerly boundary of Tweedsmuir Park",
+    "effect": "No Hunting Areas",
+    "geometry.side": "either side"
+  },
+  "extracted": {
+    "effect": "no_hunting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 5-11"
+    },
+    "method": "road_buffer",
+    "feature": {
+      "type": "park",
+      "name": "Tweedsmuir Park"
+    },
+    "road": {
+      "name": "Highway 20",
+      "source_hint": "highway"
+    },
+    "bufferM": 400,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "a zone around Tweedsmuir Park would cover 1988 km2, too wide to mark",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "lookups": [
+    {
+      "query": "M.U. 5-11",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "Highway 20",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

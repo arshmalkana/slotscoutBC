@@ -1,0 +1,94 @@
+{
+  "id": "W5-099",
+  "itemId": "closed-area-67909418ba",
+  "title": "Closed Areas Regulation, Schedule 5, section 99 (Village of 100 Mile House)",
+  "heading": "Village of 100 Mile House",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nVillage of 100 Mile House\n99 That portion of the Province of British Columbia in the vicinity of the Village of 100 Mile House within the following described boundaries: Commencing at the point of intersection of the southerly boundary of the B.C. Rail Right of way with the easterly boundary of Lot 2150, Lillooet Land District; thence in a general easterly and southeasterly direction along the southerly boundary of the B.C. Rail Right of way to the point of intersection with the boundary of the Cariboo Highway in the southwestern corner of Lot 2137, Lillooet Land District; thence in a general southwesterly direction along the midline of the Cariboo Highway to the point of intersection with the northerly boundary of an unnamed road; thence in a general westerly direction along the northerly boundary of the unnamed road to the point of intersection with the easterly boundary of the B.C. Hydro transmission line right of way; thence in a northerly direction along the easterly boundary of the B.C. Hydro transmission line right of way to the point of intersection with the northerly boundary of Lot 2150, Lillooet Land District; thence easterly along the northerly boundary of Lot 2150 to the point of commencement. [en. B.C. Reg. 46/89, s. 7.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at the point of intersection of the southerly boundary of the B.C. Rail Right of way with the easterly boundary of Lot 2150, Lillooet Land District",
+    "geometry.steps[1]": "thence in a general easterly and southeasterly direction along the southerly boundary of the B.C. Rail Right of way to the point of intersection with the boundary of the Cariboo Highway in the southwestern corner of Lot 2137, Lillooet Land District",
+    "geometry.steps[2]": "thence in a general southwesterly direction along the midline of the Cariboo Highway to the point of intersection with the northerly boundary of an unnamed road",
+    "geometry.steps[3]": "thence in a general westerly direction along the northerly boundary of the unnamed road to the point of intersection with the easterly boundary of the B.C. Hydro transmission line right of way",
+    "geometry.steps[4]": "thence in a northerly direction along the easterly boundary of the B.C. Hydro transmission line right of way to the point of intersection with the northerly boundary of Lot 2150, Lillooet Land District",
+    "geometry.steps[5]": "thence easterly along the northerly boundary of Lot 2150 to the point of commencement"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": null,
+    "method": "metes_and_bounds",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": [
+      {
+        "follow": null,
+        "feature": null,
+        "until": null,
+        "quote": "Commencing at the point of intersection of the southerly boundary of the B.C. Rail Right of way with the easterly boundary of Lot 2150, Lillooet Land District"
+      },
+      {
+        "follow": "other",
+        "feature": "B.C. Rail Right of way",
+        "until": "the point of intersection with the boundary of the Cariboo Highway in the southwestern corner of Lot 2137, Lillooet Land District",
+        "quote": "thence in a general easterly and southeasterly direction along the southerly boundary of the B.C. Rail Right of way to the point of intersection with the boundary of the Cariboo Highway in the southwestern corner of Lot 2137, Lillooet Land District"
+      },
+      {
+        "follow": "road",
+        "feature": "Cariboo Highway",
+        "until": "the point of intersection with the northerly boundary of an unnamed road",
+        "quote": "thence in a general southwesterly direction along the midline of the Cariboo Highway to the point of intersection with the northerly boundary of an unnamed road"
+      },
+      {
+        "follow": "road",
+        "feature": null,
+        "until": "the point of intersection with the easterly boundary of the B.C. Hydro transmission line right of way",
+        "quote": "thence in a general westerly direction along the northerly boundary of the unnamed road to the point of intersection with the easterly boundary of the B.C. Hydro transmission line right of way"
+      },
+      {
+        "follow": "other",
+        "feature": "B.C. Hydro transmission line right of way",
+        "until": "the point of intersection with the northerly boundary of Lot 2150, Lillooet Land District",
+        "quote": "thence in a northerly direction along the easterly boundary of the B.C. Hydro transmission line right of way to the point of intersection with the northerly boundary of Lot 2150, Lillooet Land District"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "Lot 2150",
+        "until": "the point of commencement",
+        "quote": "thence easterly along the northerly boundary of Lot 2150 to the point of commencement"
+      }
+    ]
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs disagree: steps: run 1 [\"|||\",\"b.c. rail right of way|the point of intersection with the boundary of the cariboo hwy in the southwestern corner of lot 2137 lillooet land district||other\",\"cariboo hwy|the point of intersection wit…",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "\"B.C. Rail Right of way\" was not found in the official layers; that side is drawn straight",
+    "\"B.C. Hydro transmission line right of way\" was not found in the official layers; that side is drawn straight",
+    "\"Lot 2150\" was not found in the official layers; that side is drawn straight",
+    "\"Cariboo\" names more than one place and nothing narrows it",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
+    }
+  ],
+  "construction": [],
+  "lookups": [],
+  "maps": [],
+  "decided": null
+}

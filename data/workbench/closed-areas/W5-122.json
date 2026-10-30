@@ -1,0 +1,95 @@
+{
+  "id": "W5-122",
+  "itemId": "closed-area-86bd7aa868",
+  "title": "Closed Areas Regulation, Schedule 5, section 122 (Quinsam Coal Mine)",
+  "heading": "Quinsam Coal Mine",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nQuinsam Coal Mine\n122 That portion of the Province of British Columbia in M.U. 1-10 that is contained within the following described boundaries: Commencing at 49° 57' 00\" north latitude and 125° 30' 00\" west longitude; thence due East to 126° 26' 30\" west longitude; thence due South to 49° 54' 30\" north latitude; thence due West to 125° 30' 00\" west longitude; thence due North to the point of commencement. [en. B.C. Reg. 211/93, s. 8 (b).]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "in M.U. 1-10",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at 49° 57' 00\" north latitude and 125° 30' 00\" west longitude",
+    "geometry.steps[1]": "thence due East to 126° 26' 30\" west longitude",
+    "geometry.steps[2]": "thence due South to 49° 54' 30\" north latitude",
+    "geometry.steps[3]": "thence due West to 125° 30' 00\" west longitude",
+    "geometry.steps[4]": "thence due North to the point of commencement"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 1-10"
+    },
+    "method": "metes_and_bounds",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": [
+      {
+        "follow": null,
+        "feature": null,
+        "until": null,
+        "quote": "Commencing at 49° 57' 00\" north latitude and 125° 30' 00\" west longitude"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": null,
+        "quote": "thence due East to 126° 26' 30\" west longitude"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": null,
+        "quote": "thence due South to 49° 54' 30\" north latitude"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": null,
+        "quote": "thence due West to 125° 30' 00\" west longitude"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the point of commencement",
+        "quote": "thence due North to the point of commencement"
+      }
+    ]
+  },
+  "runsAgree": true,
+  "why": [
+    "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
+    }
+  ],
+  "construction": [],
+  "lookups": [
+    {
+      "query": "M.U. 1-10",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

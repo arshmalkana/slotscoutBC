@@ -1,0 +1,141 @@
+{
+  "id": "W8-038",
+  "itemId": "closed-area-bf8db09dbe",
+  "title": "Closed Areas Regulation, Schedule 7, section 38 (Sunshine Meadows)",
+  "heading": "Sunshine Meadows",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: zone around the places named",
+  "quality": "vicinity",
+  "sourceText": "Schedule 7 No Hunting Areas (Section 8)\nSunshine Meadows\n38 That portion of the Province of British Columbia in M.U. 4-25 that is contained within the following described boundaries: Commencing on the northerly boundary of the watershed of Larix Creek at the apex of Brewster Rock on the B.C./Alberta boundary; thence in a general westerly and southerly direction along the northerly and westerly boundaries of the watershed of Larix Creek to a point on the westerly boundary of the watershed of Larix Creek at approximately 2 135 m (7 000 ft) elevation; thence more or less southeast in a straight line to the most adjacent point at approximately 2 345 m (7 700 ft) elevation on the easterly boundary of the watershed of Larix Creek; thence in a general southerly and easterly direction at 2 345 m (7 700 ft) elevation to the most southeasterly point thereof in the vicinity of Quartz Hill; thence easterly in a straight line to the point of intersection with the easterly boundary of the watershed of North Simpson River; thence in a general northerly direction along the easterly boundary of the watershed of North Simpson River to the point of commencement. [en. B.C. Reg. 204/91, s. 13.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "in M.U. 4-25",
+    "effect": "No Hunting Areas",
+    "geometry.steps[0]": "Commencing on the northerly boundary of the watershed of Larix Creek at the apex of Brewster Rock on the B.C./Alberta boundary",
+    "geometry.steps[1]": "thence in a general westerly and southerly direction along the northerly and westerly boundaries of the watershed of Larix Creek to a point on the westerly boundary of the watershed of Larix Creek at approximately 2 135 m (7 000 ft) elevation",
+    "geometry.steps[2]": "thence more or less southeast in a straight line to the most adjacent point at approximately 2 345 m (7 700 ft) elevation on the easterly boundary of the watershed of Larix Creek",
+    "geometry.steps[3]": "thence in a general southerly and easterly direction at 2 345 m (7 700 ft) elevation to the most southeasterly point thereof in the vicinity of Quartz Hill",
+    "geometry.steps[4]": "thence easterly in a straight line to the point of intersection with the easterly boundary of the watershed of North Simpson River",
+    "geometry.steps[5]": "thence in a general northerly direction along the easterly boundary of the watershed of North Simpson River to the point of commencement"
+  },
+  "extracted": {
+    "effect": "no_hunting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 4-25"
+    },
+    "method": "metes_and_bounds",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": [
+      {
+        "follow": null,
+        "feature": "Brewster Rock",
+        "until": null,
+        "quote": "Commencing on the northerly boundary of the watershed of Larix Creek at the apex of Brewster Rock on the B.C./Alberta boundary"
+      },
+      {
+        "follow": "other",
+        "feature": "Larix Creek",
+        "until": "a point on the westerly boundary of the watershed of Larix Creek at approximately 2 135 m (7 000 ft) elevation",
+        "quote": "thence in a general westerly and southerly direction along the northerly and westerly boundaries of the watershed of Larix Creek to a point on the westerly boundary of the watershed of Larix Creek at approximately 2 135 m (7 000 ft) elevation"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the most adjacent point at approximately 2 345 m (7 700 ft) elevation on the easterly boundary of the watershed of Larix Creek",
+        "quote": "thence more or less southeast in a straight line to the most adjacent point at approximately 2 345 m (7 700 ft) elevation on the easterly boundary of the watershed of Larix Creek"
+      },
+      {
+        "follow": "contour",
+        "feature": "2 345 m (7 700 ft) elevation",
+        "until": "the most southeasterly point thereof in the vicinity of Quartz Hill",
+        "quote": "thence in a general southerly and easterly direction at 2 345 m (7 700 ft) elevation to the most southeasterly point thereof in the vicinity of Quartz Hill"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the easterly boundary of the watershed of North Simpson River",
+        "quote": "thence easterly in a straight line to the point of intersection with the easterly boundary of the watershed of North Simpson River"
+      },
+      {
+        "follow": "other",
+        "feature": "North Simpson River",
+        "until": "the point of commencement",
+        "quote": "thence in a general northerly direction along the easterly boundary of the watershed of North Simpson River to the point of commencement"
+      }
+    ]
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs disagree: steps: run 1 [\"brewster rock|||\",\"larix creek|a point on the westerly boundary of the watershed of larix creek at approximately 2 135 m 7 000 ft elevation||other\",\"|the most adjacent point at approximately 2 345 m 7 700…",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "approximate outline (vicinity) drawn from the places the walk names, using run 1's reading of the steps",
+    "\"Brewster Rock\" was not found in the official layers; that side is drawn straight",
+    "the outline could not be placed: a 1 km zone around the place the section names is marked",
+    "validation failed: two independent extractions agree (steps: run 1 [\"brewster rock|||\",\"larix creek|a point on the westerly boundary of the watershed of larix creek at approximately 2 135 m 7 000 ft elevation||other\",\"|the most adjacent …"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "1.570 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": false,
+      "detail": "steps: run 1 [\"brewster rock|||\",\"larix creek|a point on the westerly boundary of the watershed of larix creek at approximately 2 135 m 7 000 ft elevation||other\",\"|the most adjacent point at approximately 2 345 m 7 700 ft elevation on the easterly boundary of the watershed of larix creek||straight_line\",\"2 345 m 7 700 ft elevation|the most southeasterly point thereof in the vicinity of quartz hill||contour\",\"|the easterly boundary of the watershed of north simpson river||straight_line\",\"north simpson river|the point of commencement||other\"] vs run 2 [\"brewster rock|||\",\"the watershed of larix creek|a point on the westerly boundary of the watershed of larix creek at approximately 2 135 m 7 000 ft elevation||other\",\"|the most adjacent point at approximately 2 345 m 7 700 ft elevation on the easterly boundary of the watershed of larix creek||straight_line\",\"|the most southeasterly point thereof in the vicinity of quartz hill||contour\",\"|the point of intersection with the easterly boundary of the watershed of north simpson river||straight_line\",\"the watershed of north simpson river|the point of commencement||other\"]"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate outline (vicinity): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing on the northerly boundary of the watershed of Larix Creek at the apex of Brewster Rock on the B.C./Alberta boundary",
+      "source": "WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP, WHSE_BASEMAPPING.TRIM_CONTOUR_LINES (2340 m)"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "M.U. 4-25",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "W2-001",
+  "itemId": "closed-area-07278855d6",
+  "title": "Closed Areas Regulation, Schedule 2, section 1 (Stum Lake)",
+  "heading": "Stum Lake",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 2 Seasonal No Shooting, Hunting or Trapping Areas (Section 3)\nStum Lake\n1 That portion of the Province, in the vicinity of Stum Lake, Cariboo Land District, that is within the following boundaries: All of Stum Lake below the high water mark, including all of the islands, during the period March 1 to August 31 in a year. Repealed 2-3 Repealed. [B.C. Reg. 175/2010, App. 1, s. 1.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "Cariboo Land District",
+    "period": "during the period March 1 to August 31 in a year",
+    "geometry.feature": "All of Stum Lake below the high water mark, including all of the islands",
+    "effect": "Seasonal No Shooting, Hunting or Trapping Areas"
+  },
+  "extracted": {
+    "effect": "no_shooting_seasonal",
+    "period": {
+      "start": "March 1",
+      "end": "August 31"
+    },
+    "within": {
+      "type": "other",
+      "name": "Cariboo Land District"
+    },
+    "method": "admin_boundary",
+    "feature": {
+      "type": "lake",
+      "name": "Stum Lake"
+    },
+    "road": null,
+    "bufferM": null,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "named lake \"Stum Lake\": none; the larger area is not drawn in its place",
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "lookups": [
+    {
+      "query": "Cariboo Land District",
+      "kind": "other",
+      "layer": "WHSE_TANTALIS.TA_LAND_DISTRICTS_SVW",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "Stum Lake",
+      "kind": "lake",
+      "layer": "WHSE_BASEMAPPING.FWA_LAKES_POLY",
+      "status": "none",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

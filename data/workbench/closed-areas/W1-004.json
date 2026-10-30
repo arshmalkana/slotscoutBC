@@ -1,0 +1,158 @@
+{
+  "id": "W1-004",
+  "itemId": "closed-area-5a35600f07",
+  "title": "Closed Areas Regulation, Schedule 1, section 4 (George C. Reifel)",
+  "heading": "George C. Reifel",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: walk traced along the named features",
+  "quality": "traced",
+  "sourceText": "Schedule 1 No Shooting, Hunting or Trapping Areas (Section 2)\nGeorge C. Reifel\n4 That portion of the Province, in the vicinity of the Corporation of Delta, that is within the following boundaries: Commencing at the midpoint of the channel separating District Lot 470 (Albion Island) and District Lot 473 (Harlock Island), NWD; thence in a southerly direction parallel to \"D\" cross dyke on District Lot 194 (Reifel Island) to a point in the middle of Ewen Slough to meet a line drawn due North from the property line separating District Lot 192A and the Department of National Defence property; thence from the southeast corner of said property due West to the north bank of London Slough; thence along the north bank of London Slough to the point where the slough forks; thence due West to a point 2 508 m in an east-west line from the sea dyke; thence on a bearing of 47 east of north (true) for 1 125 m; thence on a bearing of 17° east of north (true) for 894 m; thence on a bearing of 31° east of north (true) to intersect the stone dyke extending west from the northwest corner of Reifel Island; thence along the northern edge of the stone dyke to the point of intersection of the Reifel property; thence easterly along said property line to the point of commencement.",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "effect": "No Shooting, Hunting or Trapping Areas",
+    "geometry.steps[0]": "Commencing at the midpoint of the channel separating District Lot 470 (Albion Island) and District Lot 473 (Harlock Island), NWD",
+    "geometry.steps[1]": "thence in a southerly direction parallel to \"D\" cross dyke on District Lot 194 (Reifel Island) to a point in the middle of Ewen Slough to meet a line drawn due North from the property line separating District Lot 192A and the Department of National Defence property",
+    "geometry.steps[2]": "thence from the southeast corner of said property due West to the north bank of London Slough",
+    "geometry.steps[3]": "thence along the north bank of London Slough to the point where the slough forks",
+    "geometry.steps[4]": "thence due West to a point 2 508 m in an east-west line from the sea dyke",
+    "geometry.steps[5]": "thence on a bearing of 47 east of north (true) for 1 125 m",
+    "geometry.steps[6]": "thence on a bearing of 17° east of north (true) for 894 m",
+    "geometry.steps[7]": "thence on a bearing of 31° east of north (true) to intersect the stone dyke extending west from the northwest corner of Reifel Island",
+    "geometry.steps[8]": "thence along the northern edge of the stone dyke to the point of intersection of the Reifel property",
+    "geometry.steps[9]": "thence easterly along said property line to the point of commencement"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": null,
+    "method": "metes_and_bounds",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": [
+      {
+        "follow": null,
+        "feature": null,
+        "until": null,
+        "quote": "Commencing at the midpoint of the channel separating District Lot 470 (Albion Island) and District Lot 473 (Harlock Island), NWD"
+      },
+      {
+        "follow": "other",
+        "feature": "\"D\" cross dyke on District Lot 194 (Reifel Island)",
+        "until": "a point in the middle of Ewen Slough to meet a line drawn due North from the property line separating District Lot 192A and the Department of National Defence property",
+        "quote": "thence in a southerly direction parallel to \"D\" cross dyke on District Lot 194 (Reifel Island) to a point in the middle of Ewen Slough to meet a line drawn due North from the property line separating District Lot 192A and the Department of National Defence property"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the north bank of London Slough",
+        "quote": "thence from the southeast corner of said property due West to the north bank of London Slough"
+      },
+      {
+        "follow": "other",
+        "feature": "London Slough",
+        "until": "the point where the slough forks",
+        "quote": "thence along the north bank of London Slough to the point where the slough forks"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "a point 2 508 m in an east-west line from the sea dyke",
+        "quote": "thence due West to a point 2 508 m in an east-west line from the sea dyke"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": null,
+        "quote": "thence on a bearing of 47 east of north (true) for 1 125 m"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": null,
+        "quote": "thence on a bearing of 17° east of north (true) for 894 m"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the stone dyke extending west from the northwest corner of Reifel Island",
+        "quote": "thence on a bearing of 31° east of north (true) to intersect the stone dyke extending west from the northwest corner of Reifel Island"
+      },
+      {
+        "follow": "other",
+        "feature": "the stone dyke",
+        "until": "the point of intersection of the Reifel property",
+        "quote": "thence along the northern edge of the stone dyke to the point of intersection of the Reifel property"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "said property line",
+        "until": "the point of commencement",
+        "quote": "thence easterly along said property line to the point of commencement"
+      }
+    ]
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs disagree: steps: run 1 [\"|||\",\"d cross dyke on district lot 194 reifel island|a point in the middle of ewen slough to meet a line drawn due north from the property line separating district lot 192a and the department of national …",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "approximate outline (traced) drawn from the places the walk names, using run 1's reading of the steps",
+    "\"\"D\" cross dyke on District Lot 194 (Reifel Island)\" was not found in the official layers; that side is drawn straight",
+    "\"the stone dyke\" was not found in the official layers; that side is drawn straight",
+    "\"said property line\" was not found in the official layers; that side is drawn straight",
+    "validation failed: two independent extractions agree (steps: run 1 [\"|||\",\"d cross dyke on district lot 194 reifel island|a point in the middle of ewen slough to meet a line drawn due north from the property line separating district lot …"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "0.693 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": false,
+      "detail": "steps: run 1 [\"|||\",\"d cross dyke on district lot 194 reifel island|a point in the middle of ewen slough to meet a line drawn due north from the property line separating district lot 192a and the department of national defence property||other\",\"|the north bank of london slough||straight_line\",\"london slough|the point where the slough forks||other\",\"|a point 2 508 m in an east west line from the sea dyke||straight_line\",\"||1 125 m|straight_line\",\"||894 m|straight_line\",\"|the stone dyke extending west from the northwest corner of reifel island||straight_line\",\"the stone dyke|the point of intersection of the reifel property||other\",\"said property line|the point of commencement||lot_line\"] vs run 2 [\"|||\",\"d cross dyke on district lot 194 reifel island|a point in the middle of ewen slough to meet a line drawn due north from the property line separating district lot 192a and the department of national defence property||other\",\"|the north bank of london slough||straight_line\",\"london slough|the point where the slough forks||other\",\"|a point 2 508 m in an east west line from the sea dyke|2 508 m|straight_line\",\"||1 125 m|straight_line\",\"||894 m|straight_line\",\"|the stone dyke extending west from the northwest corner of reifel island||straight_line\",\"stone dyke|the point of intersection of the reifel property||other\",\"said property line|the point of commencement||lot_line\"]"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at the midpoint of the channel separating District Lot 470 (Albion Island) and District Lot 473 (Harlock Island), NWD",
+      "source": "WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP"
+    }
+  ],
+  "lookups": [],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

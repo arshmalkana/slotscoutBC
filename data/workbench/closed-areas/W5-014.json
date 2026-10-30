@@ -1,0 +1,141 @@
+{
+  "id": "W5-014",
+  "itemId": "closed-area-ad29ae3344",
+  "title": "Closed Areas Regulation, Schedule 5, section 14 (Gibralter Mines)",
+  "heading": "Gibralter Mines",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nGibralter Mines\n14 Commencing at the southeast corner of Lot 9170, Cariboo District; thence north to the northeast corner of said Lot 9170; thence west to the northwest corner of said Lot 9170; thence northerly to the northeast corner of Lot 9497; thence west to the northwest corner of said Lot 9497; thence northwesterly to the southwest corner of Lot 6166; thence east to the southeast corner of said Lot 6166; thence north to the northeast corner of said Lot 6166; thence east 7.6 km (4.7 miles); thence south 8.7 km (5.4 miles); thence west 2.0 km (1.2 miles); thence south 3.5 km (2.2 miles); thence west to the point of commencement. [en. B.C. Reg. 221/2005, s. 3 (b).]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at the southeast corner of Lot 9170, Cariboo District",
+    "geometry.steps[1]": "thence north to the northeast corner of said Lot 9170",
+    "geometry.steps[2]": "thence west to the northwest corner of said Lot 9170",
+    "geometry.steps[3]": "thence northerly to the northeast corner of Lot 9497",
+    "geometry.steps[4]": "thence west to the northwest corner of said Lot 9497",
+    "geometry.steps[5]": "thence northwesterly to the southwest corner of Lot 6166",
+    "geometry.steps[6]": "thence east to the southeast corner of said Lot 6166",
+    "geometry.steps[7]": "thence north to the northeast corner of said Lot 6166",
+    "geometry.steps[8]": "thence east 7.6 km (4.7 miles)",
+    "geometry.steps[9]": "thence south 8.7 km (5.4 miles)",
+    "geometry.steps[10]": "thence west 2.0 km (1.2 miles)",
+    "geometry.steps[11]": "thence south 3.5 km (2.2 miles)",
+    "geometry.steps[12]": "thence west to the point of commencement"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": null,
+    "method": "metes_and_bounds",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": [
+      {
+        "follow": null,
+        "feature": "Lot 9170",
+        "until": null,
+        "quote": "Commencing at the southeast corner of Lot 9170, Cariboo District"
+      },
+      {
+        "follow": "straight_line",
+        "feature": "Lot 9170",
+        "until": "the northeast corner of said Lot 9170",
+        "quote": "thence north to the northeast corner of said Lot 9170"
+      },
+      {
+        "follow": "straight_line",
+        "feature": "Lot 9170",
+        "until": "the northwest corner of said Lot 9170",
+        "quote": "thence west to the northwest corner of said Lot 9170"
+      },
+      {
+        "follow": "straight_line",
+        "feature": "Lot 9497",
+        "until": "the northeast corner of Lot 9497",
+        "quote": "thence northerly to the northeast corner of Lot 9497"
+      },
+      {
+        "follow": "straight_line",
+        "feature": "Lot 9497",
+        "until": "the northwest corner of said Lot 9497",
+        "quote": "thence west to the northwest corner of said Lot 9497"
+      },
+      {
+        "follow": "straight_line",
+        "feature": "Lot 6166",
+        "until": "the southwest corner of Lot 6166",
+        "quote": "thence northwesterly to the southwest corner of Lot 6166"
+      },
+      {
+        "follow": "straight_line",
+        "feature": "Lot 6166",
+        "until": "the southeast corner of said Lot 6166",
+        "quote": "thence east to the southeast corner of said Lot 6166"
+      },
+      {
+        "follow": "straight_line",
+        "feature": "Lot 6166",
+        "until": "the northeast corner of said Lot 6166",
+        "quote": "thence north to the northeast corner of said Lot 6166"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": null,
+        "quote": "thence east 7.6 km (4.7 miles)"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": null,
+        "quote": "thence south 8.7 km (5.4 miles)"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": null,
+        "quote": "thence west 2.0 km (1.2 miles)"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": null,
+        "quote": "thence south 3.5 km (2.2 miles)"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the point of commencement",
+        "quote": "thence west to the point of commencement"
+      }
+    ]
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs disagree: steps: run 1 [\"lot 9170|||\",\"lot 9170|the northeast corner of said lot 9170||straight_line\",\"lot 9170|the northwest corner of said lot 9170||straight_line\",\"lot 9497|the northeast corner of lot 9497||straight_line\",\"lot…",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "\"Lot 9170\" was not found in the official layers; that side is drawn straight",
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
+    }
+  ],
+  "construction": [],
+  "lookups": [],
+  "maps": [],
+  "decided": null
+}

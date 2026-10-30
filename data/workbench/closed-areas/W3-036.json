@@ -1,0 +1,149 @@
+{
+  "id": "W3-036",
+  "itemId": "closed-area-47bc2e1fc0",
+  "title": "Closed Areas Regulation, Schedule 3, section 36 (Conkle Lake Park)",
+  "heading": "Conkle Lake Park",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: zone around the places named",
+  "quality": "vicinity",
+  "sourceText": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nConkle Lake Park\n36 That portion of M.U. 8-12, in the vicinity of Rock Creek, contained within the following described boundaries: Commencing at the northwest corner of Lot 18895, Similkameen Division, Yale District, thence due East along the north boundary of said lot to the northeast corner; thence due West a distance of 280 m; thence south 27° E for a distance of 540 m; thence due West a distance of 3.1 km to the west boundary of Lot 18895, SDYD, thence northerly along said boundary to the point of commencement. [en. B.C. Reg. 162/87, s. 12.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "That portion of M.U. 8-12",
+    "geometry.feature": "Lot 18895, Similkameen Division, Yale District",
+    "effect": "No Shooting or Hunting Areas",
+    "geometry.side": "contained within the following described boundaries",
+    "geometry.steps[0]": "Commencing at the northwest corner of Lot 18895, Similkameen Division, Yale District",
+    "geometry.steps[1]": "thence due East along the north boundary of said lot to the northeast corner",
+    "geometry.steps[2]": "thence due West a distance of 280 m",
+    "geometry.steps[3]": "thence south 27° E for a distance of 540 m",
+    "geometry.steps[4]": "thence due West a distance of 3.1 km to the west boundary of Lot 18895, SDYD",
+    "geometry.steps[5]": "thence northerly along said boundary to the point of commencement"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 8-12"
+    },
+    "method": "metes_and_bounds",
+    "feature": {
+      "type": "lot",
+      "name": "Lot 18895"
+    },
+    "road": null,
+    "bufferM": null,
+    "steps": [
+      {
+        "follow": null,
+        "feature": "Lot 18895",
+        "until": null,
+        "quote": "Commencing at the northwest corner of Lot 18895, Similkameen Division, Yale District"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "Lot 18895",
+        "until": "the northeast corner",
+        "quote": "thence due East along the north boundary of said lot to the northeast corner"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": null,
+        "quote": "thence due West a distance of 280 m"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": null,
+        "quote": "thence south 27° E for a distance of 540 m"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the west boundary of Lot 18895, SDYD",
+        "quote": "thence due West a distance of 3.1 km to the west boundary of Lot 18895, SDYD"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "Lot 18895",
+        "until": "the point of commencement",
+        "quote": "thence northerly along said boundary to the point of commencement"
+      }
+    ]
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs disagree: steps: run 1 [\"lot 18895|||\",\"lot 18895|the northeast corner||lot_line\",\"||280 m|straight_line\",\"||540 m|straight_line\",\"|the west boundary of lot 18895 sdyd|3.1 km|straight_line\",\"lot 18895|the point of commencement||l…",
+    "AI runs also differ on fields this shape is not drawn from (not blocking): feature: run 1 \"lot 18895\" vs run 2 null; side: run 1 \"inside\" vs run 2 null",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "\"Lot 18895\" was not found in the official layers; that side is drawn straight",
+    "\"Lot 18895\" was not found in the official layers; that side is drawn straight",
+    "\"Lot 18895\" was not found in the official layers; that side is drawn straight",
+    "approximate zone around the places the section names, using run 1's reading",
+    "a zone around the places the section names (Conkle Lake Park): 1 km around the named points; not the boundary",
+    "validation failed: two independent extractions agree (steps: run 1 [\"lot 18895|||\",\"lot 18895|the northeast corner||lot_line\",\"||280 m|straight_line\",\"||540 m|straight_line\",\"|the west boundary of lot 18895 sdyd|3.1 km|straight_line\",\"lo…"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.137 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": false,
+      "detail": "steps: run 1 [\"lot 18895|||\",\"lot 18895|the northeast corner||lot_line\",\"||280 m|straight_line\",\"||540 m|straight_line\",\"|the west boundary of lot 18895 sdyd|3.1 km|straight_line\",\"lot 18895|the point of commencement||lot_line\"] vs run 2 [\"|||\",\"lot 18895|the northeast corner||lot_line\",\"||280 m|straight_line\",\"||540 m|straight_line\",\"|the west boundary of lot 18895 sdyd|3.1 km|straight_line\",\"lot 18895|the point of commencement||lot_line\"]"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Conkle Lake Park): 1 km around the named points; not the boundary",
+      "quote": "Lot 18895, Similkameen Division, Yale District",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "M.U. 8-12",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

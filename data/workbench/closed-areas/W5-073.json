@@ -1,0 +1,100 @@
+{
+  "id": "W5-073",
+  "itemId": "closed-area-4da316d25f",
+  "title": "Closed Areas Regulation, Schedule 5, section 73 (Michael Lake)",
+  "heading": "Michael Lake",
+  "folder": "confirmed",
+  "state": "Approved: exact outline",
+  "quality": "exact",
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nMichael Lake\n73 That portion of the Province of British Columbia in Oyster Land District contained within the following described boundaries: The mean high water mark of Michael Lake. [en. B.C. Reg. 109/85, s. 3 (i).]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "in Oyster Land District",
+    "geometry.feature": "The mean high water mark of Michael Lake",
+    "effect": "No Shooting Areas",
+    "geometry.side": "contained within the following described boundaries"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Oyster Land District"
+    },
+    "method": "admin_boundary",
+    "feature": {
+      "type": "lake",
+      "name": "Michael Lake"
+    },
+    "road": null,
+    "bufferM": null,
+    "steps": []
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 \"inside\" vs run 2 null"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "0.383 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
+    }
+  ],
+  "construction": [
+    {
+      "what": "official boundary of the named area",
+      "quote": "The mean high water mark of Michael Lake",
+      "source": "WHSE_BASEMAPPING.FWA_LAKES_POLY"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "Oyster Land District",
+      "kind": "other",
+      "layer": "WHSE_TANTALIS.TA_LAND_DISTRICTS_SVW",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "Michael Lake",
+      "kind": "lake",
+      "layer": "WHSE_BASEMAPPING.FWA_LAKES_POLY",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved by Arsh in chat on 2026-10-28 (the new code-drawn shapes, and the corrected W3-069); entered by Claude Code at his instruction."
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "id": "W5-062",
+  "itemId": "closed-area-92ccfa8d82",
+  "title": "Closed Areas Regulation, Schedule 5, section 62 (Squamish)",
+  "heading": "Squamish",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: walk with some straight sides",
+  "quality": "corners",
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nSquamish\n62 That portion of the Province of British Columbia within the following described boundaries: Commencing at the southeast corner of the District Municipality of Squamish; thence due East to the 400 m contour line; thence northerly along the contour to the point of its intersection with Gonzales Creek; thence up the creek to the 600 m contour line; thence northeasterly to its intersection with a road which lies between the Stawamus River and Shannon Creek; thence northeasterly down the road to its crossing of the Stawamus River; thence down the river to its intersection with the boundary of the District of Squamish; thence westerly and southerly along the boundary line of the District to the point of commencement, excepting any Indian Reserve lands.",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "effect": "No Shooting Areas",
+    "exemptions[0]": "excepting any Indian Reserve lands",
+    "geometry.steps[0]": "Commencing at the southeast corner of the District Municipality of Squamish",
+    "geometry.steps[1]": "thence due East to the 400 m contour line",
+    "geometry.steps[2]": "thence northerly along the contour to the point of its intersection with Gonzales Creek",
+    "geometry.steps[3]": "thence up the creek to the 600 m contour line",
+    "geometry.steps[4]": "thence northeasterly to its intersection with a road which lies between the Stawamus River and Shannon Creek",
+    "geometry.steps[5]": "thence northeasterly down the road to its crossing of the Stawamus River",
+    "geometry.steps[6]": "thence down the river to its intersection with the boundary of the District of Squamish",
+    "geometry.steps[7]": "thence westerly and southerly along the boundary line of the District to the point of commencement"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": null,
+    "method": "metes_and_bounds",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": [
+      {
+        "follow": null,
+        "feature": null,
+        "until": null,
+        "quote": "Commencing at the southeast corner of the District Municipality of Squamish"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the 400 m contour line",
+        "quote": "thence due East to the 400 m contour line"
+      },
+      {
+        "follow": "contour",
+        "feature": "400 m contour line",
+        "until": "the point of its intersection with Gonzales Creek",
+        "quote": "thence northerly along the contour to the point of its intersection with Gonzales Creek"
+      },
+      {
+        "follow": "creek",
+        "feature": "Gonzales Creek",
+        "until": "the 600 m contour line",
+        "quote": "thence up the creek to the 600 m contour line"
+      },
+      {
+        "follow": null,
+        "feature": null,
+        "until": "its intersection with a road which lies between the Stawamus River and Shannon Creek",
+        "quote": "thence northeasterly to its intersection with a road which lies between the Stawamus River and Shannon Creek"
+      },
+      {
+        "follow": "road",
+        "feature": null,
+        "until": "its crossing of the Stawamus River",
+        "quote": "thence northeasterly down the road to its crossing of the Stawamus River"
+      },
+      {
+        "follow": "river",
+        "feature": "Stawamus River",
+        "until": "its intersection with the boundary of the District of Squamish",
+        "quote": "thence down the river to its intersection with the boundary of the District of Squamish"
+      },
+      {
+        "follow": "district_boundary",
+        "feature": "District of Squamish",
+        "until": "the point of commencement",
+        "quote": "thence westerly and southerly along the boundary line of the District to the point of commencement"
+      }
+    ]
+  },
+  "runsAgree": true,
+  "why": [
+    "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "approximate outline (corners) drawn from the places the walk names"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "50.332 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at the southeast corner of the District Municipality of Squamish",
+      "source": "WHSE_BASEMAPPING.TRIM_CONTOUR_LINES (400 m), WHSE_BASEMAPPING.FWA_STREAM_NETWORKS_SP, WHSE_BASEMAPPING.FWA_RIVERS_POLY, WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP, WHSE_BASEMAPPING.TRIM_CONTOUR_LINES (600 m)"
+    }
+  ],
+  "lookups": [],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

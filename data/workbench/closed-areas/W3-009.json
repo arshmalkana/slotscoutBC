@@ -1,0 +1,56 @@
+{
+  "id": "W3-009",
+  "itemId": "closed-area-399c56444a",
+  "title": "Closed Areas Regulation, Schedule 3, section 9 (Highway 3)",
+  "heading": "Highway 3",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nHighway 3\n9 (a)All areas within 0.4 km of the centerline of Highway 3 between the easterly boundary of the Town of Hope to the westerly boundary of Manning Provincial Park. (b)All areas within 0.4 km of the centerline of Highway 3 between the easterly boundary of Manning Provincial Park and the westerly boundary of the village of Princeton. [en. B.C. Reg. 46/89, s. 1.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "geometry.road": "Highway 3",
+    "geometry.buffer_m": "within 0.4 km",
+    "effect": "No Shooting or Hunting Areas",
+    "geometry.side": "All areas within 0.4 km of the centerline"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": null,
+    "method": "road_buffer",
+    "feature": null,
+    "road": {
+      "name": "Highway 3",
+      "source_hint": "highway"
+    },
+    "bufferM": 400,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "3 separate roads with this name in the area and no limits to choose one",
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "lookups": [
+    {
+      "query": "Highway 3",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "ambiguous",
+      "note": "3 separate roads named Highway 3 in the area"
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

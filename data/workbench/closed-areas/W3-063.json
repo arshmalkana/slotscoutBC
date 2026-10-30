@@ -1,0 +1,57 @@
+{
+  "id": "W3-063",
+  "itemId": "closed-area-15d4217357",
+  "title": "Closed Areas Regulation, Schedule 3, section 63 (Sea to Sky Highway)",
+  "heading": "Sea to Sky Highway",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nSea to Sky Highway\n63 That portion of the Province of British Columbia within 400 metres of the road allowance of Highway 99 between the northern boundary of the District of Squamish and the southern boundary of the Resort Municipality of Whistler. [en. B.C. Reg. 169/2020, App. 1, s. 1.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "geometry.road": "Highway 99",
+    "geometry.buffer_m": "within 400 metres",
+    "geometry.from": "the northern boundary of the District of Squamish",
+    "geometry.to": "the southern boundary of the Resort Municipality of Whistler",
+    "effect": "No Shooting or Hunting Areas",
+    "geometry.side": "within 400 metres of the road allowance"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": null,
+    "method": "road_buffer",
+    "feature": null,
+    "road": {
+      "name": "Highway 99",
+      "source_hint": "highway"
+    },
+    "bufferM": 400,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "lookups": [
+    {
+      "query": "Highway 99",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "ambiguous",
+      "note": "2 separate roads named Highway 99 in the area"
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

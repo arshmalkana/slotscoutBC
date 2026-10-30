@@ -1,0 +1,60 @@
+{
+  "id": "W9-001",
+  "itemId": "closed-area-871e12dc87",
+  "title": "Closed Areas Regulation, Schedule 9, section 1",
+  "heading": "Closed Areas Regulation, Schedule 9, section 1",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 9 Firearms Using Shot Only Areas (Section 10 (1) (a))\n1 Those portions of the Province of British Columbia being all areas within 150 m of the travelled portion of the following highways: (1)Highway 1 from the eastern boundary of the corporation of the township of Chilliwack to the northern boundary of M.U. 2-18; (2)Highway 7 from the easterly boundary of Mission to its junction with Highway 1. (3)Repealed. [B.C. Reg. 46/89, s. 10.] [am. B.C. Regs. 46/89, s. 10; 459/90, s. 4.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "geometry.buffer_m": "within 150 m of the travelled portion",
+    "effect": "Firearms Using Shot Only Areas",
+    "geometry.side": "all areas within 150 m of the travelled portion"
+  },
+  "extracted": {
+    "effect": "shot_only",
+    "period": null,
+    "within": null,
+    "method": "road_buffer",
+    "feature": null,
+    "road": null,
+    "bufferM": 150,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "\"Highway 1\" is limited (from the eastern boundary of the corporation of the township of Chilliwack to the northern boundary of M.U. 2-18) in a way the code cannot place, and no management unit narrows it",
+    "\"Highway 7\" is limited (from the easterly boundary of Mission to its junction with Highway 1) in a way the code cannot place, and no management unit narrows it",
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "lookups": [
+    {
+      "query": "Highway 1",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "ambiguous",
+      "note": "8 separate roads named Highway 1 in the area"
+    },
+    {
+      "query": "Highway 7",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "ambiguous",
+      "note": "2 separate roads named Highway 7 in the area"
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

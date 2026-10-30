@@ -1,0 +1,76 @@
+{
+  "id": "W6-012",
+  "itemId": "closed-area-5902d64ce5",
+  "title": "Closed Areas Regulation, Schedule 5.1, section 12 (Chehalis Forest Service Road)",
+  "heading": "Chehalis Forest Service Road",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 5.1 [en. B.C. Reg. 135/2017, App. 1, s. 2.] No Shooting Areas — Specified Crown Land (Section 7.1)\nChehalis Forest Service Road\n12 That portion of M.U. 2-19 being all Crown land within 400 m of the midline of Chehalis Forest Service Road from the junction with the Statlu Forest Service Road to the northern boundary of the area described in section 33 of Schedule 5. [am. B.C. Reg. 115/2018, App. 1, s. 8.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "M.U. 2-19",
+    "geometry.road": "Chehalis Forest Service Road",
+    "geometry.buffer_m": "400 m",
+    "geometry.from": "from the junction with the Statlu Forest Service Road",
+    "geometry.to": "to the northern boundary of the area described in section 33 of Schedule 5",
+    "effect": "No Shooting Areas",
+    "geometry.side": "within 400 m of the midline"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 2-19"
+    },
+    "method": "road_buffer",
+    "feature": null,
+    "road": {
+      "name": "Chehalis Forest Service Road",
+      "source_hint": "FTEN"
+    },
+    "bufferM": 400,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "effect read from the text (no_shooting) differs from the schedule's effect (no_shooting_hunting_exempt)",
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "lookups": [
+    {
+      "query": "M.U. 2-19",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "Chehalis Forest Service Road",
+      "kind": "fsr",
+      "layer": "WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "Statlu Forest Service Road",
+      "kind": "fsr",
+      "layer": "WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

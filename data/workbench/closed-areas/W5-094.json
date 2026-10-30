@@ -1,0 +1,156 @@
+{
+  "id": "W5-094",
+  "itemId": "closed-area-83cb59e81a",
+  "title": "Closed Areas Regulation, Schedule 5, section 94 (Williams Lake River)",
+  "heading": "Williams Lake River",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: walk with some straight sides",
+  "quality": "corners",
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nWilliams Lake River\n94 That portion of M.U. 5-2 contained within the following described boundaries: Commencing at the point of intersection of the natural boundary of Fraser River on the left bank thereof and the midline of Williams Lake River; thence in a general southerly direction along the natural boundary of Fraser River on the left bank thereof to the point of intersection with the southerly boundary of L4731, Cariboo Land District; thence easterly and northerly along the southerly and easterly boundaries of L4731 to the point of intersection with the midline of the unnamed road leading easterly to the City of Williams Lake; thence in a general easterly direction along the midline of the said unnamed road to the point of intersection with the westerly boundary of the City of Williams Lake; thence easterly and northerly along the westerly boundary of the City of Williams Lake to the point of intersection with the midline of the B.C. Railroad right of way; thence in a general westerly direction along the midline of the B.C. Railway right of way to the point of intersection with the northerly boundary of L4731; thence due West to the point of intersection with the natural boundary of Fraser River on the left bank thereof; thence in a general southerly direction along the natural boundary of Fraser River on the left bank thereof to the point of commencement. [en. B.C. Reg. 325/87, s.1 (d).]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "That portion of M.U. 5-2",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at the point of intersection of the natural boundary of Fraser River on the left bank thereof and the midline of Williams Lake River",
+    "geometry.steps[1]": "thence in a general southerly direction along the natural boundary of Fraser River on the left bank thereof to the point of intersection with the southerly boundary of L4731, Cariboo Land District",
+    "geometry.steps[2]": "thence easterly and northerly along the southerly and easterly boundaries of L4731 to the point of intersection with the midline of the unnamed road leading easterly to the City of Williams Lake",
+    "geometry.steps[3]": "thence in a general easterly direction along the midline of the said unnamed road to the point of intersection with the westerly boundary of the City of Williams Lake",
+    "geometry.steps[4]": "thence easterly and northerly along the westerly boundary of the City of Williams Lake to the point of intersection with the midline of the B.C. Railroad right of way",
+    "geometry.steps[5]": "thence in a general westerly direction along the midline of the B.C. Railway right of way to the point of intersection with the northerly boundary of L4731",
+    "geometry.steps[6]": "thence due West to the point of intersection with the natural boundary of Fraser River on the left bank thereof",
+    "geometry.steps[7]": "thence in a general southerly direction along the natural boundary of Fraser River on the left bank thereof to the point of commencement"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 5-2"
+    },
+    "method": "metes_and_bounds",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": [
+      {
+        "follow": null,
+        "feature": null,
+        "until": null,
+        "quote": "Commencing at the point of intersection of the natural boundary of Fraser River on the left bank thereof and the midline of Williams Lake River"
+      },
+      {
+        "follow": "river",
+        "feature": "Fraser River",
+        "until": "the point of intersection with the southerly boundary of L4731, Cariboo Land District",
+        "quote": "thence in a general southerly direction along the natural boundary of Fraser River on the left bank thereof to the point of intersection with the southerly boundary of L4731, Cariboo Land District"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "L4731",
+        "until": "the point of intersection with the midline of the unnamed road leading easterly to the City of Williams Lake",
+        "quote": "thence easterly and northerly along the southerly and easterly boundaries of L4731 to the point of intersection with the midline of the unnamed road leading easterly to the City of Williams Lake"
+      },
+      {
+        "follow": "road",
+        "feature": "unnamed road leading easterly to the City of Williams Lake",
+        "until": "the point of intersection with the westerly boundary of the City of Williams Lake",
+        "quote": "thence in a general easterly direction along the midline of the said unnamed road to the point of intersection with the westerly boundary of the City of Williams Lake"
+      },
+      {
+        "follow": "district_boundary",
+        "feature": "City of Williams Lake",
+        "until": "the point of intersection with the midline of the B.C. Railroad right of way",
+        "quote": "thence easterly and northerly along the westerly boundary of the City of Williams Lake to the point of intersection with the midline of the B.C. Railroad right of way"
+      },
+      {
+        "follow": "other",
+        "feature": "B.C. Railway right of way",
+        "until": "the point of intersection with the northerly boundary of L4731",
+        "quote": "thence in a general westerly direction along the midline of the B.C. Railway right of way to the point of intersection with the northerly boundary of L4731"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the point of intersection with the natural boundary of Fraser River on the left bank thereof",
+        "quote": "thence due West to the point of intersection with the natural boundary of Fraser River on the left bank thereof"
+      },
+      {
+        "follow": "river",
+        "feature": "Fraser River",
+        "until": "the point of commencement",
+        "quote": "thence in a general southerly direction along the natural boundary of Fraser River on the left bank thereof to the point of commencement"
+      }
+    ]
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs disagree: steps: run 1 [\"|||\",\"fraser river|the point of intersection with the southerly boundary of l4731 cariboo land district||river\",\"l4731|the point of intersection with the midline of the unnamed rd leading easterly to the …",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "approximate outline (corners) drawn from the places the walk names, using run 1's reading of the steps",
+    "\"L4731\" was not found in the official layers; that side is drawn straight",
+    "\"unnamed road leading easterly to the City of Williams Lake\" was not found in the official layers; that side is drawn straight",
+    "\"B.C. Railway right of way\" was not found in the official layers; that side is drawn straight",
+    "validation failed: two independent extractions agree (steps: run 1 [\"|||\",\"fraser river|the point of intersection with the southerly boundary of l4731 cariboo land district||river\",\"l4731|the point of intersection with the midline of the…"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "254.137 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": false,
+      "detail": "steps: run 1 [\"|||\",\"fraser river|the point of intersection with the southerly boundary of l4731 cariboo land district||river\",\"l4731|the point of intersection with the midline of the unnamed rd leading easterly to the city of williams lake||lot_line\",\"unnamed rd leading easterly to the city of williams lake|the point of intersection with the westerly boundary of the city of williams lake||road\",\"city of williams lake|the point of intersection with the midline of the b.c. railroad right of way||district_boundary\",\"b.c. railway right of way|the point of intersection with the northerly boundary of l4731||other\",\"|the point of intersection with the natural boundary of fraser river on the left bank thereof||straight_line\",\"fraser river|the point of commencement||river\"] vs run 2 [\"|||\",\"fraser river|the point of intersection with the southerly boundary of l4731 cariboo land district||river\",\"l4731|the point of intersection with the midline of the unnamed rd leading easterly to the city of williams lake||lot_line\",\"|the point of intersection with the westerly boundary of the city of williams lake||road\",\"city of williams lake|the point of intersection with the midline of the b.c. railroad right of way||district_boundary\",\"b.c. railway right of way|the point of intersection with the northerly boundary of l4731||other\",\"|the point of intersection with the natural boundary of fraser river on the left bank thereof||straight_line\",\"fraser river|the point of commencement||river\"]"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate outline (corners): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at the point of intersection of the natural boundary of Fraser River on the left bank thereof and the midline of Williams Lake River",
+      "source": "WHSE_BASEMAPPING.FWA_RIVERS_POLY, WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP, WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "M.U. 5-2",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

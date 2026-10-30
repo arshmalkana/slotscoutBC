@@ -1,0 +1,92 @@
+{
+  "id": "W5-113",
+  "itemId": "closed-area-75ff35f848",
+  "title": "Closed Areas Regulation, Schedule 5, section 113 (Fort St. John Sewage Lagoons)",
+  "heading": "Fort St. John Sewage Lagoons",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: zone around the places named",
+  "quality": "vicinity",
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nFort St. John Sewage Lagoons\n113 That portion of the Province of British Columbia in M.U. 7-33 being the Northeast 1/4 of Section 19, Township 83, Range 18, West of the 6th Meridian; and the Southwest 1/4 of Section 30, Township 83, Range 18, West of the 6th Meridian. [en. B.C. Reg. 224/92, s. 12.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "in M.U. 7-33",
+    "effect": "No Shooting Areas"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 7-33"
+    },
+    "method": "admin_boundary",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": []
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs disagree: method: run 1 \"admin_boundary\" vs run 2 \"other\"",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "approximate zone around the places the section names, using run 1's reading",
+    "a zone around the places the section names (Fort St. John): 1 km around the named points; not the boundary",
+    "validation failed: two independent extractions agree (method: run 1 \"admin_boundary\" vs run 2 \"other\")"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.137 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": false,
+      "detail": "method: run 1 \"admin_boundary\" vs run 2 \"other\""
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Fort St. John): 1 km around the named points; not the boundary",
+      "quote": null,
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "M.U. 7-33",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

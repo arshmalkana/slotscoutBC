@@ -1,0 +1,66 @@
+{
+  "id": "W5-115",
+  "itemId": "closed-area-a219d8d99b",
+  "title": "Closed Areas Regulation, Schedule 5, section 115 (Mount Judge Howay Park)",
+  "heading": "Mount Judge Howay Park",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nMount Judge Howay Park\n115 That portion of the Province of British Columbia in M.U. 2-8 that is within the Mount Judge Howay Park boundaries. [en. B.C. Reg. 204/91, s. 12.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "M.U. 2-8",
+    "geometry.feature": "Mount Judge Howay Park",
+    "effect": "No Shooting Areas",
+    "geometry.side": "within the Mount Judge Howay Park boundaries"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 2-8"
+    },
+    "method": "admin_boundary",
+    "feature": {
+      "type": "park",
+      "name": "Mount Judge Howay Park"
+    },
+    "road": null,
+    "bufferM": null,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "named park \"Mount Judge Howay Park\": none; the larger area is not drawn in its place",
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "lookups": [
+    {
+      "query": "M.U. 2-8",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "Mount Judge Howay Park",
+      "kind": "park",
+      "layer": "WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW",
+      "status": "none",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

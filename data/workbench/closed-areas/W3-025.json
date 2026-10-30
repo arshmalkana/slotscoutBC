@@ -1,0 +1,108 @@
+{
+  "id": "W3-025",
+  "itemId": "closed-area-1908b49149",
+  "title": "Closed Areas Regulation, Schedule 3, section 25 (Stone Mountain)",
+  "heading": "Stone Mountain",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: zone around the places named",
+  "quality": "vicinity",
+  "sourceText": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nStone Mountain\n25 That portion of M.U.s 7-50, 7-51 and 7-54 contained within the described boundaries of Stone Mountain Provincial Park, within a distance of one mile (1.6 kilometres) of the Alaska Highway. [en. B.C. Reg. 476/2004, s. (a).]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "M.U.s 7-50, 7-51 and 7-54",
+    "geometry.road": "the Alaska Highway",
+    "geometry.feature": "within the described boundaries of Stone Mountain Provincial Park",
+    "geometry.buffer_m": "within a distance of one mile (1.6 kilometres)",
+    "effect": "No Shooting or Hunting Areas",
+    "geometry.side": "within a distance of one mile (1.6 kilometres) of the Alaska Highway"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "7-50, 7-51 and 7-54"
+    },
+    "method": "road_buffer",
+    "feature": {
+      "type": "park",
+      "name": "Stone Mountain Provincial Park"
+    },
+    "road": {
+      "name": "Alaska Highway",
+      "source_hint": "unknown"
+    },
+    "bufferM": 1600,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "3 separate roads with this name in the area and no limits to choose one",
+    "approximate zone around the places the section names",
+    "a zone around the places the section names (Stone Mountain): 1.6 km around the named points; not the boundary",
+    "validation failed: area in expected range (8.030 km² (limit 2 km²))"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": false,
+      "detail": "8.030 km² (limit 2 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Stone Mountain): 1.6 km around the named points; not the boundary",
+      "quote": "within the described boundaries of Stone Mountain Provincial Park",
+      "source": "WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW, WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "7-50, 7-51 and 7-54",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "Alaska Highway",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "ambiguous",
+      "note": "3 separate roads named Alaska Highway in the area"
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "W3-053",
+  "itemId": "closed-area-83a60f0fa2",
+  "title": "Closed Areas Regulation, Schedule 3, section 53 (De Courcey Island)",
+  "heading": "De Courcey Island",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nDe Courcey Island\n53 That portion of M.U. 1-1 in the Strait of Georgia which is contained within the following described boundary: The mean low water mark of De Courcey Island. [en. B.C. Reg. 205/94, s. 7; am. B.C. Reg. 190/96, s. 3 (b).]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "That portion of M.U. 1-1",
+    "geometry.feature": "The mean low water mark of De Courcey Island",
+    "effect": "No Shooting or Hunting Areas"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 1-1"
+    },
+    "method": "admin_boundary",
+    "feature": {
+      "type": "island",
+      "name": "De Courcey Island"
+    },
+    "road": null,
+    "bufferM": null,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "named island \"De Courcey Island\": none; the larger area is not drawn in its place",
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "lookups": [
+    {
+      "query": "M.U. 1-1",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "De Courcey Island",
+      "kind": "island",
+      "layer": "WHSE_BASEMAPPING.FWA_ISLANDS_POLY",
+      "status": "none",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

@@ -1,0 +1,97 @@
+{
+  "id": "W3-055",
+  "itemId": "closed-area-a0d337d6e1",
+  "title": "Closed Areas Regulation, Schedule 3, section 55 (Sun Peaks Resort)",
+  "heading": "Sun Peaks Resort",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: zone around the places named",
+  "quality": "vicinity",
+  "sourceText": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nSun Peaks Resort\n55 That portion of M.U. 3-27 in the vicinity of Kamloops, KDYD, which is contained within the following described boundaries: All land and waters within 400 metres of any ski lift, run, facility or development of the Sun Peaks Resort. [en. B.C. Reg. 322/95, s. 2 (b).]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "That portion of M.U. 3-27",
+    "geometry.feature": "any ski lift, run, facility or development of the Sun Peaks Resort",
+    "geometry.buffer_m": "within 400 metres",
+    "effect": "No Shooting or Hunting Areas"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 3-27"
+    },
+    "method": "other",
+    "feature": {
+      "type": "other",
+      "name": "Sun Peaks Resort"
+    },
+    "road": null,
+    "bufferM": 400,
+    "steps": []
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs disagree: feature: run 1 \"sun peaks resort\" vs run 2 \"any ski lift run facility or development of the sun peaks resort\"",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "approximate zone around the places the section names, using run 1's reading",
+    "a zone around the places the section names (Sun Peaks): 1 km around the named points; not the boundary",
+    "validation failed: two independent extractions agree (feature: run 1 \"sun peaks resort\" vs run 2 \"any ski lift run facility or development of the sun peaks resort\")"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.137 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": false,
+      "detail": "feature: run 1 \"sun peaks resort\" vs run 2 \"any ski lift run facility or development of the sun peaks resort\""
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate zone: a zone around the places the section names (Sun Peaks): 1 km around the named points; not the boundary",
+      "quote": "any ski lift, run, facility or development of the Sun Peaks Resort",
+      "source": "WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "M.U. 3-27",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "id": "W10-003",
+  "itemId": "closed-area-e20a8a740e",
+  "title": "Closed Areas Regulation, Schedule 10, section 3 (One Island Pasture)",
+  "heading": "One Island Pasture",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 10 Firearms Using Shot Only Areas (Seasonal) (Section 10 (1) (b))\nOne Island Pasture\n3 During the period June 1 to October 15 in that portion of M.U. 7-20 contained within the following described boundaries: Commencing at the northeast corner of District Lot 36, Tp 24 and proceeding southerly along the East boundaries of District Lots 36 and 25, Tp 24 to the middle point on the west boundary of District Lot 30, Tp 25; thence easterly in a straight line to the middle point on the east boundary of Lot 30; thence southerly along the boundary to the southeast corner of Lot 30; thence west along the south boundary of Lot 30 to the southwest corner of Lot 30; thence southerly along the east boundary of District Lot 24, Tp 24 to its intersection with the fence which forms the southerly and westerly boundaries of the community pasture; thence westerly then in a general northwesterly direction along the fence to its intersection with the north boundary of District Lot 34, Tp 24; thence easterly along the north boundaries of District Lots 34, 35 and 36, Tp 24 to the point of commencement. [en. B.C. Reg. 109/85, s. 7.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "in that portion of M.U. 7-20",
+    "period": "During the period June 1 to October 15",
+    "effect": "Firearms Using Shot Only Areas (Seasonal)",
+    "geometry.steps[0]": "Commencing at the northeast corner of District Lot 36, Tp 24 and proceeding southerly along the East boundaries of District Lots 36 and 25, Tp 24 to the middle point on the west boundary of District Lot 30, Tp 25",
+    "geometry.steps[1]": "thence easterly in a straight line to the middle point on the east boundary of Lot 30",
+    "geometry.steps[2]": "thence southerly along the boundary to the southeast corner of Lot 30",
+    "geometry.steps[3]": "thence west along the south boundary of Lot 30 to the southwest corner of Lot 30",
+    "geometry.steps[4]": "thence southerly along the east boundary of District Lot 24, Tp 24 to its intersection with the fence which forms the southerly and westerly boundaries of the community pasture",
+    "geometry.steps[5]": "thence westerly then in a general northwesterly direction along the fence to its intersection with the north boundary of District Lot 34, Tp 24",
+    "geometry.steps[6]": "thence easterly along the north boundaries of District Lots 34, 35 and 36, Tp 24 to the point of commencement"
+  },
+  "extracted": {
+    "effect": "shot_only_seasonal",
+    "period": {
+      "start": "June 1",
+      "end": "October 15"
+    },
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 7-20"
+    },
+    "method": "metes_and_bounds",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": [
+      {
+        "follow": "lot_line",
+        "feature": "District Lots 36 and 25, Tp 24",
+        "until": "the middle point on the west boundary of District Lot 30, Tp 25",
+        "quote": "Commencing at the northeast corner of District Lot 36, Tp 24 and proceeding southerly along the East boundaries of District Lots 36 and 25, Tp 24 to the middle point on the west boundary of District Lot 30, Tp 25"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the middle point on the east boundary of Lot 30",
+        "quote": "thence easterly in a straight line to the middle point on the east boundary of Lot 30"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "Lot 30",
+        "until": "the southeast corner of Lot 30",
+        "quote": "thence southerly along the boundary to the southeast corner of Lot 30"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "Lot 30",
+        "until": "the southwest corner of Lot 30",
+        "quote": "thence west along the south boundary of Lot 30 to the southwest corner of Lot 30"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "District Lot 24, Tp 24",
+        "until": "its intersection with the fence which forms the southerly and westerly boundaries of the community pasture",
+        "quote": "thence southerly along the east boundary of District Lot 24, Tp 24 to its intersection with the fence which forms the southerly and westerly boundaries of the community pasture"
+      },
+      {
+        "follow": "other",
+        "feature": "the fence which forms the southerly and westerly boundaries of the community pasture",
+        "until": "its intersection with the north boundary of District Lot 34, Tp 24",
+        "quote": "thence westerly then in a general northwesterly direction along the fence to its intersection with the north boundary of District Lot 34, Tp 24"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "District Lots 34, 35 and 36, Tp 24",
+        "until": "the point of commencement",
+        "quote": "thence easterly along the north boundaries of District Lots 34, 35 and 36, Tp 24 to the point of commencement"
+      }
+    ]
+  },
+  "runsAgree": true,
+  "why": [
+    "the geometry builder does not draw \"metes_and_bounds\" descriptions yet; a digitiser draws this shape with the extracted steps pre-filled",
+    "\"District Lots 36 and 25, Tp 24\" was not found in the official layers; that side is drawn straight",
+    "\"Lot 30\" was not found in the official layers; that side is drawn straight",
+    "\"Lot 30\" was not found in the official layers; that side is drawn straight",
+    "\"District Lot 24, Tp 24\" was not found in the official layers; that side is drawn straight",
+    "\"the fence which forms the southerly and westerly boundaries of the community pasture\" was not found in the official layers; that side is drawn straight",
+    "\"District Lots 34, 35 and 36, Tp 24\" was not found in the official layers; that side is drawn straight",
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
+    }
+  ],
+  "construction": [],
+  "lookups": [
+    {
+      "query": "M.U. 7-20",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

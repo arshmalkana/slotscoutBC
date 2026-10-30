@@ -1,0 +1,113 @@
+{
+  "id": "W5-004",
+  "itemId": "closed-area-0fa6da3f3a",
+  "title": "Closed Areas Regulation, Schedule 5, section 4 (McQueen, Griffin and Isobel Lakes)",
+  "heading": "McQueen, Griffin and Isobel Lakes",
+  "folder": "confirmed",
+  "state": "Approved: exact outline",
+  "quality": "exact",
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nMcQueen, Griffin and Isobel Lakes\n4 That portion of the Province of British Columbia in M.U. 3-28 in the vicinity of the City of Kamloops, KDYD, which is contained within the following described boundaries: All land and waters within 1 km of the mean high water mark of McQueen, Griffin and Isobel Lakes. [en. B.C. Reg. 205/94, s. 9.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "in M.U. 3-28",
+    "geometry.feature": "the mean high water mark of McQueen, Griffin and Isobel Lakes",
+    "geometry.buffer_m": "within 1 km",
+    "effect": "No Shooting Areas",
+    "geometry.side": "All land and waters within 1 km"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 3-28"
+    },
+    "method": "waterbody_buffer",
+    "feature": {
+      "type": "lake",
+      "name": "McQueen, Griffin and Isobel Lakes"
+    },
+    "road": null,
+    "bufferM": 1000,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "12.188 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
+    }
+  ],
+  "construction": [
+    {
+      "what": "1000 m around McQueen, Griffin and Isobel Lakes, clipped to M.U. 3-28",
+      "quote": "the mean high water mark of McQueen, Griffin and Isobel Lakes",
+      "source": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW, WHSE_BASEMAPPING.FWA_LAKES_POLY"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "M.U. 3-28",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "McQueen Lake",
+      "kind": "water",
+      "layer": "WHSE_BASEMAPPING.FWA_LAKES_POLY",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "Griffin Lake",
+      "kind": "water",
+      "layer": "WHSE_BASEMAPPING.FWA_LAKES_POLY",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "Isobel Lake",
+      "kind": "water",
+      "layer": "WHSE_BASEMAPPING.FWA_LAKES_POLY",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

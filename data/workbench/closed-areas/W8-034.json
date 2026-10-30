@@ -1,0 +1,77 @@
+{
+  "id": "W8-034",
+  "itemId": "closed-area-825d531295",
+  "title": "Closed Areas Regulation, Schedule 7, section 34 (Golden Bear Access Road)",
+  "heading": "Golden Bear Access Road",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 7 No Hunting Areas (Section 8)\nGolden Bear Access Road\n34 That portion of M.U. 6-22 and M.U. 6-26 contained within the following described boundaries: Within 2 km on either side of the midline of the access road to the Golden Bear Mine from its intersection with the unnamed road between Dease Lake and Telegraph Creek to the Golden Bear Mine Site. [en. B.C. Reg. 46/89, s. 9.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "That portion of M.U. 6-22 and M.U. 6-26",
+    "geometry.road": "the access road to the Golden Bear Mine",
+    "geometry.buffer_m": "Within 2 km",
+    "geometry.from": "from its intersection with the unnamed road between Dease Lake and Telegraph Creek",
+    "geometry.to": "to the Golden Bear Mine Site",
+    "effect": "No Hunting Areas",
+    "geometry.side": "on either side"
+  },
+  "extracted": {
+    "effect": "no_hunting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 6-22 and M.U. 6-26"
+    },
+    "method": "road_buffer",
+    "feature": null,
+    "road": {
+      "name": "access road to the Golden Bear Mine",
+      "source_hint": "unknown"
+    },
+    "bufferM": 2000,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "road \"access road to the Golden Bear Mine\": none",
+    "road \"unnamed road between Dease Lake and Telegraph Creek\": none",
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "lookups": [
+    {
+      "query": "M.U. 6-22 and M.U. 6-26",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "access road to the Golden Bear Mine",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "note": null
+    },
+    {
+      "query": "unnamed road between Dease Lake and Telegraph Creek",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "none",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

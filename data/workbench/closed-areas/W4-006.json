@@ -1,0 +1,103 @@
+{
+  "id": "W4-006",
+  "itemId": "closed-area-d4e3f65601",
+  "title": "Closed Areas Regulation, Schedule 4, section 6 (Kennedy Siding)",
+  "heading": "Kennedy Siding",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 4 Seasonal No Shooting or Hunting Areas (Section 5)\nKennedy Siding\n6 That portion of M.U. 7-23 in the Province of British Columbia contained within the following described boundaries: Commencing at the railroad bridge on the BCR MacKenzie branch line at its crossing of the Missinchinka River; thence following the Missinchinka River upstream approximately 9 km to an unnamed stream running westerly into the Missinchinka River; thence following the unnamed creek upstream to the crossing of the BCR line; thence southerly following the BCR to the junction of the BCR branch line to MacKenzie; thence following the spur line to the point of commencement during the period from September 1 to March 31 inclusive. [en. B.C. Reg. 225/98, s. 3 (b); am. B.C. Regs. 194/99, s. 4; 219/2000, s. 4; 130/2016, App. 1, s. 2.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "That portion of M.U. 7-23",
+    "period": "during the period from September 1 to March 31 inclusive",
+    "effect": "Seasonal No Shooting or Hunting Areas",
+    "geometry.steps[0]": "Commencing at the railroad bridge on the BCR MacKenzie branch line at its crossing of the Missinchinka River",
+    "geometry.steps[1]": "thence following the Missinchinka River upstream approximately 9 km to an unnamed stream running westerly into the Missinchinka River",
+    "geometry.steps[2]": "thence following the unnamed creek upstream to the crossing of the BCR line",
+    "geometry.steps[3]": "thence southerly following the BCR to the junction of the BCR branch line to MacKenzie",
+    "geometry.steps[4]": "thence following the spur line to the point of commencement"
+  },
+  "extracted": {
+    "effect": "no_shooting_seasonal",
+    "period": {
+      "start": "September 1",
+      "end": "March 31"
+    },
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 7-23"
+    },
+    "method": "metes_and_bounds",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": [
+      {
+        "follow": null,
+        "feature": "BCR MacKenzie branch line",
+        "until": null,
+        "quote": "Commencing at the railroad bridge on the BCR MacKenzie branch line at its crossing of the Missinchinka River"
+      },
+      {
+        "follow": "river",
+        "feature": "Missinchinka River",
+        "until": "an unnamed stream running westerly into the Missinchinka River",
+        "quote": "thence following the Missinchinka River upstream approximately 9 km to an unnamed stream running westerly into the Missinchinka River"
+      },
+      {
+        "follow": "creek",
+        "feature": null,
+        "until": "the crossing of the BCR line",
+        "quote": "thence following the unnamed creek upstream to the crossing of the BCR line"
+      },
+      {
+        "follow": "other",
+        "feature": "BCR",
+        "until": "the junction of the BCR branch line to MacKenzie",
+        "quote": "thence southerly following the BCR to the junction of the BCR branch line to MacKenzie"
+      },
+      {
+        "follow": "other",
+        "feature": null,
+        "until": "the point of commencement",
+        "quote": "thence following the spur line to the point of commencement"
+      }
+    ]
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs disagree: steps: run 1 [\"bcr mackenzie branch line|||\",\"missinchinka river|an unnamed stream running westerly into the missinchinka river|approximately 9 km|river\",\"|the crossing of the bcr line||creek\",\"bcr|the junction of the b…",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "\"BCR MacKenzie branch line\" was not found in the official layers; that side is drawn straight",
+    "\"Missinchinka River\" was not found in the official layers; that side is drawn straight",
+    "\"BCR\" was not found in the official layers; that side is drawn straight",
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
+    }
+  ],
+  "construction": [],
+  "lookups": [
+    {
+      "query": "M.U. 7-23",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

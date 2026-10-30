@@ -1,0 +1,100 @@
+{
+  "id": "W8-040",
+  "itemId": "closed-area-cda8e7c2e0",
+  "title": "Closed Areas Regulation, Schedule 7, section 40 (Norbury Lake Park)",
+  "heading": "Norbury Lake Park",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: whole lots or waterbody",
+  "quality": "whole_feature",
+  "sourceText": "Schedule 7 No Hunting Areas (Section 8)\nNorbury Lake Park\n40 That portion of the Province of British Columbia in M.U. 4-22 being all Crown land in Kootenay Land District described as: Sublots 1 and 8 of District Lot 318, the whole containing 97 hectares, more or less. [en. B.C. Reg. 204/91, s. 13; am. B.C. Reg. 151/2006, s. 5 (a).]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "in M.U. 4-22",
+    "geometry.feature": "Sublots 1 and 8 of District Lot 318",
+    "effect": "No Hunting Areas"
+  },
+  "extracted": {
+    "effect": "no_hunting",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 4-22"
+    },
+    "method": "admin_boundary",
+    "feature": {
+      "type": "lot",
+      "name": "Sublots 1 and 8 of District Lot 318"
+    },
+    "road": null,
+    "bufferM": null,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "District Lot 318: the text names part of these lots",
+    "drawn whole: the text names only part of it, so the outline is approximate (\"possibly inside\")"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "9.660 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
+    }
+  ],
+  "construction": [
+    {
+      "what": "official boundary of the named area",
+      "quote": "Sublots 1 and 8 of District Lot 318",
+      "source": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "M.U. 4-22",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    },
+    {
+      "query": "District Lot 318",
+      "kind": "lot",
+      "layer": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW",
+      "status": "ok",
+      "note": "the text names part of these lots"
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

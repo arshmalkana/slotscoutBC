@@ -1,0 +1,57 @@
+{
+  "id": "W3-064",
+  "itemId": "closed-area-8e46e4bb79",
+  "title": "Closed Areas Regulation, Schedule 3, section 64 (Callaghan Road)",
+  "heading": "Callaghan Road",
+  "folder": "not_done",
+  "state": "Not drawn",
+  "quality": null,
+  "sourceText": "Schedule 3 No Shooting or Hunting Areas (Section 4)\nCallaghan Road\n64 That portion of the Province of British Columbia within 400 metres of the road allowance of Callaghan Road between the northwest corner of the Resort Municipality of Whistler and the gate at Whistler Olympic Park. [en. B.C. Reg. 169/2020, App. 1, s. 1.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "geometry.road": "Callaghan Road",
+    "geometry.buffer_m": "within 400 metres",
+    "geometry.from": "the northwest corner of the Resort Municipality of Whistler",
+    "geometry.to": "the gate at Whistler Olympic Park",
+    "effect": "No Shooting or Hunting Areas",
+    "geometry.side": "within 400 metres of the road allowance"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": null,
+    "method": "road_buffer",
+    "feature": null,
+    "road": {
+      "name": "Callaghan Road",
+      "source_hint": "DRA"
+    },
+    "bufferM": 400,
+    "steps": []
+  },
+  "runsAgree": true,
+  "why": [
+    "none of the places the section names was found in the official layers",
+    "validation failed: shape built (no shape could be built)"
+  ],
+  "validation": [
+    {
+      "check": "shape built",
+      "passed": false,
+      "detail": "no shape could be built"
+    }
+  ],
+  "construction": [],
+  "lookups": [
+    {
+      "query": "Callaghan Road",
+      "kind": "road",
+      "layer": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": null
+}

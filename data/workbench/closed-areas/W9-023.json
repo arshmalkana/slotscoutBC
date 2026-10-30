@@ -1,0 +1,101 @@
+{
+  "id": "W9-023",
+  "itemId": "closed-area-a9f6d00a22",
+  "title": "Closed Areas Regulation, Schedule 9, section 23 (Savary Island)",
+  "heading": "Savary Island",
+  "folder": "confirmed",
+  "state": "Approved: exact outline",
+  "quality": "exact",
+  "sourceText": "Schedule 9 Firearms Using Shot Only Areas (Section 10 (1) (a))\nSavary Island\n23 That portion of the Province of British Columbia which is contained within the following described boundary: The mean low water mark of Savary Island. [en. B.C. Reg. 205/94, s. 30.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "That portion of the Province of British Columbia",
+    "geometry.feature": "The mean low water mark of Savary Island",
+    "effect": "Firearms Using Shot Only Areas",
+    "geometry.side": "contained within the following described boundary"
+  },
+  "extracted": {
+    "effect": "shot_only",
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Province of British Columbia"
+    },
+    "method": "admin_boundary",
+    "feature": {
+      "type": "island",
+      "name": "Savary Island"
+    },
+    "road": null,
+    "bufferM": null,
+    "steps": []
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 \"inside\" vs run 2 null",
+    "named area \"Province of British Columbia\": failed (no official layer for area type other)"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "4.956 km² (limit none for this type)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": null,
+      "detail": "the text names no area, or it could not be found"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": true,
+      "detail": "same landmarks, distances and effect"
+    }
+  ],
+  "construction": [
+    {
+      "what": "official boundary of the named area",
+      "quote": "The mean low water mark of Savary Island",
+      "source": "WHSE_BASEMAPPING.FWA_ISLANDS_POLY"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "Province of British Columbia",
+      "kind": "other",
+      "layer": "-",
+      "status": "failed",
+      "note": "no official layer for area type other"
+    },
+    {
+      "query": "Savary Island",
+      "kind": "island",
+      "layer": "WHSE_BASEMAPPING.FWA_ISLANDS_POLY",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved by Arsh in chat on 2026-10-28 (the new code-drawn shapes, and the corrected W3-069); entered by Claude Code at his instruction."
+  }
+}

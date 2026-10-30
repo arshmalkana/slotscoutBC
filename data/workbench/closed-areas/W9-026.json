@@ -1,0 +1,158 @@
+{
+  "id": "W9-026",
+  "itemId": "closed-area-1f58a527db",
+  "title": "Closed Areas Regulation, Schedule 9, section 26 (Stamp Lagoon)",
+  "heading": "Stamp Lagoon",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: zone around the places named",
+  "quality": "vicinity",
+  "sourceText": "Schedule 9 Firearms Using Shot Only Areas (Section 10 (1) (a))\nStamp Lagoon\n26 That portion of the Province of British Columbia in M.U. 1-07 in the vicinity of Port Alberni within the following described boundaries: Commencing at the confluence of Turtle Creek and Stamp River; thence due North to a point 100 metres north of the Stamp River; thence westerly at a distance of 100 metres from the northerly shoreline of the Stamp River to a point 100 metres due North of where the Stamp River enters Stamp Lagoon on the east side of the lagoon; thence westerly at a distance of 100 metres from the northerly shoreline of Stamp Lagoon to a point 100 metres north of where the Stamp River enters Stamp Lagoon on the west side of the lagoon; thence southerly to a point 100 metres due South of the Stamp River; thence easterly at a distance of 100 metres from the southerly shoreline of Stamp Lagoon to a point 100 metres due South of where the Stamp River enters Stamp Lagoon on the east side of the lagoon; thence easterly at a distance of 100 metres from the southerly shoreline of the Stamp River to a point due South of the confluence of Turtle Creek and Stamp River; thence northerly to the point of commencement. [en. B.C. Reg. 189/2002, s. 3 (b).]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "in M.U. 1-07",
+    "effect": "Firearms Using Shot Only Areas",
+    "geometry.side": "within the following described boundaries",
+    "geometry.steps[0]": "Commencing at the confluence of Turtle Creek and Stamp River",
+    "geometry.steps[1]": "thence due North to a point 100 metres north of the Stamp River",
+    "geometry.steps[2]": "thence westerly at a distance of 100 metres from the northerly shoreline of the Stamp River to a point 100 metres due North of where the Stamp River enters Stamp Lagoon on the east side of the lagoon",
+    "geometry.steps[3]": "thence westerly at a distance of 100 metres from the northerly shoreline of Stamp Lagoon to a point 100 metres north of where the Stamp River enters Stamp Lagoon on the west side of the lagoon",
+    "geometry.steps[4]": "thence southerly to a point 100 metres due South of the Stamp River",
+    "geometry.steps[5]": "thence easterly at a distance of 100 metres from the southerly shoreline of Stamp Lagoon to a point 100 metres due South of where the Stamp River enters Stamp Lagoon on the east side of the lagoon",
+    "geometry.steps[6]": "thence easterly at a distance of 100 metres from the southerly shoreline of the Stamp River to a point due South of the confluence of Turtle Creek and Stamp River",
+    "geometry.steps[7]": "thence northerly to the point of commencement"
+  },
+  "extracted": {
+    "effect": "shot_only",
+    "period": null,
+    "within": {
+      "type": "wildlife_management_unit",
+      "name": "M.U. 1-07"
+    },
+    "method": "metes_and_bounds",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": [
+      {
+        "follow": null,
+        "feature": null,
+        "until": null,
+        "quote": "Commencing at the confluence of Turtle Creek and Stamp River"
+      },
+      {
+        "follow": null,
+        "feature": null,
+        "until": "a point 100 metres north of the Stamp River",
+        "quote": "thence due North to a point 100 metres north of the Stamp River"
+      },
+      {
+        "follow": "river",
+        "feature": "Stamp River",
+        "until": "a point 100 metres due North of where the Stamp River enters Stamp Lagoon on the east side of the lagoon",
+        "quote": "thence westerly at a distance of 100 metres from the northerly shoreline of the Stamp River to a point 100 metres due North of where the Stamp River enters Stamp Lagoon on the east side of the lagoon"
+      },
+      {
+        "follow": "shoreline",
+        "feature": "Stamp Lagoon",
+        "until": "a point 100 metres north of where the Stamp River enters Stamp Lagoon on the west side of the lagoon",
+        "quote": "thence westerly at a distance of 100 metres from the northerly shoreline of Stamp Lagoon to a point 100 metres north of where the Stamp River enters Stamp Lagoon on the west side of the lagoon"
+      },
+      {
+        "follow": null,
+        "feature": null,
+        "until": "a point 100 metres due South of the Stamp River",
+        "quote": "thence southerly to a point 100 metres due South of the Stamp River"
+      },
+      {
+        "follow": "shoreline",
+        "feature": "Stamp Lagoon",
+        "until": "a point 100 metres due South of where the Stamp River enters Stamp Lagoon on the east side of the lagoon",
+        "quote": "thence easterly at a distance of 100 metres from the southerly shoreline of Stamp Lagoon to a point 100 metres due South of where the Stamp River enters Stamp Lagoon on the east side of the lagoon"
+      },
+      {
+        "follow": "river",
+        "feature": "Stamp River",
+        "until": "a point due South of the confluence of Turtle Creek and Stamp River",
+        "quote": "thence easterly at a distance of 100 metres from the southerly shoreline of the Stamp River to a point due South of the confluence of Turtle Creek and Stamp River"
+      },
+      {
+        "follow": null,
+        "feature": null,
+        "until": "the point of commencement",
+        "quote": "thence northerly to the point of commencement"
+      }
+    ]
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs disagree: steps: run 1 [\"|||\",\"|a point 100 metres north of the stamp river|100 metres|\",\"stamp river|a point 100 metres due north of where the stamp river enters stamp lagoon on the east side of the lagoon|100 metres|river\",\"sta…",
+    "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 \"inside\" vs run 2 null",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "approximate outline (vicinity) drawn from the places the walk names, using run 1's reading of the steps",
+    "\"Stamp Lagoon\" was not found in the official layers; that side is drawn straight",
+    "\"Stamp Lagoon\" was not found in the official layers; that side is drawn straight",
+    "the outline could not be placed: a 1 km zone around the place the section names is marked",
+    "validation failed: two independent extractions agree (steps: run 1 [\"|||\",\"|a point 100 metres north of the stamp river|100 metres|\",\"stamp river|a point 100 metres due north of where the stamp river enters stamp lagoon on the east side …"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "3.121 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": false,
+      "detail": "steps: run 1 [\"|||\",\"|a point 100 metres north of the stamp river|100 metres|\",\"stamp river|a point 100 metres due north of where the stamp river enters stamp lagoon on the east side of the lagoon|100 metres|river\",\"stamp lagoon|a point 100 metres north of where the stamp river enters stamp lagoon on the west side of the lagoon|100 metres|shoreline\",\"|a point 100 metres due south of the stamp river|100 metres|\",\"stamp lagoon|a point 100 metres due south of where the stamp river enters stamp lagoon on the east side of the lagoon|100 metres|shoreline\",\"stamp river|a point due south of the confluence of turtle creek and stamp river|100 metres|river\",\"|the point of commencement||\"] vs run 2 [\"|||\",\"|a point 100 metres north of the stamp river|100 metres|straight_line\",\"stamp river|a point 100 metres due north of where the stamp river enters stamp lagoon on the east side of the lagoon|100 metres|river\",\"stamp lagoon|a point 100 metres north of where the stamp river enters stamp lagoon on the west side of the lagoon|100 metres|shoreline\",\"|a point 100 metres due south of the stamp river|100 metres|\",\"stamp lagoon|a point 100 metres due south of where the stamp river enters stamp lagoon on the east side of the lagoon|100 metres|shoreline\",\"stamp river|a point due south of the confluence of turtle creek and stamp river|100 metres|river\",\"|point of commencement||\"]"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate outline (vicinity): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at the confluence of Turtle Creek and Stamp River",
+      "source": "WHSE_BASEMAPPING.FWA_RIVERS_POLY"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "M.U. 1-07",
+      "kind": "wildlife_management_unit",
+      "layer": "WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}

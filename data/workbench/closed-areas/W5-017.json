@@ -1,0 +1,171 @@
+{
+  "id": "W5-017",
+  "itemId": "closed-area-71c3b98eee",
+  "title": "Closed Areas Regulation, Schedule 5, section 17 (Ocean Falls)",
+  "heading": "Ocean Falls",
+  "folder": "not_confirmed",
+  "state": "Approved, but approximate: walk traced along the named features",
+  "quality": "traced",
+  "sourceText": "Schedule 5 No Shooting Areas (Section 6)\nOcean Falls\n17 That portion of the Province of British Columbia in Range 3, Coast District, which is contained within the following described boundaries: Commencing at the southwest corner of Lot 1153, Range 3, Coast District; thence northerly along said lot to the south shore of Ikt Lake; thence northwesterly along the said shore of said lake to unnamed river entering Ikt Lake at its most northerly point; thence northerly and northwesterly up the west bank of unnamed river to the northwest corner of Lot 209; thence due East of the northeast corner of said lot; thence due East for 3.2 km (2 miles) to the height of land between the Martin River drainage and Link Lake; thence southerly, easterly and southerly following the height of land through Mount Caro Marion to the west shore of Link Lake, approximately 400 m (0.25 mile) from the northeast corner of Lot 1170; thence in a southerly direction, including unnamed bay to the southeast corner of Lot 1151; thence westerly in a straight line to the southwest corner of Lot 1176; thence westerly in a straight line across Cousins Inlet to point of commencement. [en. B.C. Reg. 224/92, s. 5.]",
+  "sourceUrl": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_00_multi",
+  "sourceVersion": "BC Laws consolidation current to October 13, 2026",
+  "quotes": {
+    "within": "in Range 3, Coast District",
+    "effect": "No Shooting Areas",
+    "geometry.steps[0]": "Commencing at the southwest corner of Lot 1153, Range 3, Coast District",
+    "geometry.steps[1]": "thence northerly along said lot to the south shore of Ikt Lake",
+    "geometry.steps[2]": "thence northwesterly along the said shore of said lake to unnamed river entering Ikt Lake at its most northerly point",
+    "geometry.steps[3]": "thence northerly and northwesterly up the west bank of unnamed river to the northwest corner of Lot 209",
+    "geometry.steps[4]": "thence due East of the northeast corner of said lot",
+    "geometry.steps[5]": "thence due East for 3.2 km (2 miles) to the height of land between the Martin River drainage and Link Lake",
+    "geometry.steps[6]": "thence southerly, easterly and southerly following the height of land through Mount Caro Marion to the west shore of Link Lake, approximately 400 m (0.25 mile) from the northeast corner of Lot 1170",
+    "geometry.steps[7]": "thence in a southerly direction, including unnamed bay to the southeast corner of Lot 1151",
+    "geometry.steps[8]": "thence westerly in a straight line to the southwest corner of Lot 1176",
+    "geometry.steps[9]": "thence westerly in a straight line across Cousins Inlet to point of commencement"
+  },
+  "extracted": {
+    "effect": "no_shooting",
+    "period": null,
+    "within": {
+      "type": "other",
+      "name": "Range 3, Coast District"
+    },
+    "method": "metes_and_bounds",
+    "feature": null,
+    "road": null,
+    "bufferM": null,
+    "steps": [
+      {
+        "follow": null,
+        "feature": "Lot 1153",
+        "until": null,
+        "quote": "Commencing at the southwest corner of Lot 1153, Range 3, Coast District"
+      },
+      {
+        "follow": "lot_line",
+        "feature": "Lot 1153",
+        "until": "the south shore of Ikt Lake",
+        "quote": "thence northerly along said lot to the south shore of Ikt Lake"
+      },
+      {
+        "follow": "shoreline",
+        "feature": "Ikt Lake",
+        "until": "unnamed river entering Ikt Lake at its most northerly point",
+        "quote": "thence northwesterly along the said shore of said lake to unnamed river entering Ikt Lake at its most northerly point"
+      },
+      {
+        "follow": "river",
+        "feature": "unnamed river",
+        "until": "the northwest corner of Lot 209",
+        "quote": "thence northerly and northwesterly up the west bank of unnamed river to the northwest corner of Lot 209"
+      },
+      {
+        "follow": "straight_line",
+        "feature": "Lot 209",
+        "until": null,
+        "quote": "thence due East of the northeast corner of said lot"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the height of land between the Martin River drainage and Link Lake",
+        "quote": "thence due East for 3.2 km (2 miles) to the height of land between the Martin River drainage and Link Lake"
+      },
+      {
+        "follow": "other",
+        "feature": "height of land through Mount Caro Marion",
+        "until": "the west shore of Link Lake, approximately 400 m (0.25 mile) from the northeast corner of Lot 1170",
+        "quote": "thence southerly, easterly and southerly following the height of land through Mount Caro Marion to the west shore of Link Lake, approximately 400 m (0.25 mile) from the northeast corner of Lot 1170"
+      },
+      {
+        "follow": null,
+        "feature": "unnamed bay",
+        "until": "the southeast corner of Lot 1151",
+        "quote": "thence in a southerly direction, including unnamed bay to the southeast corner of Lot 1151"
+      },
+      {
+        "follow": "straight_line",
+        "feature": null,
+        "until": "the southwest corner of Lot 1176",
+        "quote": "thence westerly in a straight line to the southwest corner of Lot 1176"
+      },
+      {
+        "follow": "straight_line",
+        "feature": "Cousins Inlet",
+        "until": "point of commencement",
+        "quote": "thence westerly in a straight line across Cousins Inlet to point of commencement"
+      }
+    ]
+  },
+  "runsAgree": false,
+  "why": [
+    "AI runs disagree: steps: run 1 [\"lot 1153|||\",\"lot 1153|the south shore of ikt lake||lot_line\",\"ikt lake|unnamed river entering ikt lake at its most northerly point||shoreline\",\"unnamed river|the northwest corner of lot 209||river\",\"lot …",
+    "AI runs also differ on fields this shape is not drawn from (not blocking): side: run 1 null vs run 2 \"inside\"",
+    "not built: the AI runs disagree, so the area stays grey until a person decides",
+    "approximate outline (traced) drawn from the places the walk names, using run 1's reading of the steps",
+    "\"unnamed river\" was not found in the official layers; that side is drawn straight",
+    "\"height of land through Mount Caro Marion\" was not found in the official layers; that side is drawn straight",
+    "\"unnamed bay\" was not found in the official layers; that side is drawn straight",
+    "validation failed: two independent extractions agree (steps: run 1 [\"lot 1153|||\",\"lot 1153|the south shore of ikt lake||lot_line\",\"ikt lake|unnamed river entering ikt lake at its most northerly point||shoreline\",\"unnamed river|the north…"
+  ],
+  "validation": [
+    {
+      "check": "ring closes",
+      "passed": true,
+      "detail": "largest gap 0.0 m (limit 25 m)"
+    },
+    {
+      "check": "no self-crossing",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "check": "area in expected range",
+      "passed": true,
+      "detail": "1.860 km² (limit 500 km²)"
+    },
+    {
+      "check": "inside the area the text names",
+      "passed": true,
+      "detail": "100.0% inside"
+    },
+    {
+      "check": "overlaps the synopsis map shape",
+      "passed": null,
+      "detail": "no synopsis shape in inbox/synopsis for this area yet"
+    },
+    {
+      "check": "two independent extractions agree",
+      "passed": false,
+      "detail": "steps: run 1 [\"lot 1153|||\",\"lot 1153|the south shore of ikt lake||lot_line\",\"ikt lake|unnamed river entering ikt lake at its most northerly point||shoreline\",\"unnamed river|the northwest corner of lot 209||river\",\"lot 209|||straight_line\",\"|the height of land between the martin river drainage and link lake|3.2 km (2 miles)|straight_line\",\"height of land through mount caro marion|the west shore of link lake approximately 400 m 0.25 mile from the northeast corner of lot 1170|approximately 400 m (0.25 mile)|other\",\"unnamed bay|the southeast corner of lot 1151||\",\"|the southwest corner of lot 1176||straight_line\",\"cousins inlet|point of commencement||straight_line\"] vs run 2 [\"lot 1153|||\",\"lot 1153|the south shore of ikt lake||lot_line\",\"ikt lake|unnamed river entering ikt lake at its most northerly point||shoreline\",\"unnamed river|the northwest corner of lot 209||river\",\"lot 209|||\",\"|the height of land between the martin river drainage and link lake|3.2 km (2 miles)|straight_line\",\"mount caro marion|the west shore of link lake approximately 400 m 0.25 mile from the northeast corner of lot 1170|approximately 400 m (0.25 mile)|other\",\"unnamed bay|the southeast corner of lot 1151||\",\"|the southwest corner of lot 1176||straight_line\",\"cousins inlet|point of commencement||straight_line\"]"
+    },
+    {
+      "check": "step directions match the line",
+      "passed": null,
+      "detail": "not run: a walk outline is approximate; a person checks it against the text"
+    }
+  ],
+  "construction": [
+    {
+      "what": "approximate outline (traced): corners where the followed features meet, traced along them where found, padded 100 m",
+      "quote": "Commencing at the southwest corner of Lot 1153, Range 3, Coast District",
+      "source": "WHSE_TANTALIS.TA_SURVEY_PARCELS_SVW, WHSE_BASEMAPPING.FWA_LAKES_POLY"
+    }
+  ],
+  "lookups": [
+    {
+      "query": "Range 3, Coast District",
+      "kind": "other",
+      "layer": "WHSE_TANTALIS.TA_LAND_DISTRICTS_SVW",
+      "status": "ok",
+      "note": null
+    }
+  ],
+  "maps": [],
+  "decided": {
+    "status": "approved",
+    "by": "Arsh",
+    "on": "2026-10-28",
+    "note": "Approved under Arsh's standing instruction in chat (2026-10-28) to approve the shapes code draws after it; entered by Claude Code. Approximate outlines stay marked approximate."
+  }
+}
