@@ -6,13 +6,14 @@ import type { Feature, MultiPolygon, Polygon } from "geojson";
 import type { BylawEntry, DigitisedRuleProps } from "@slotscout/engine";
 import { sectionMaps } from "../build/closedAreas.js";
 import { currentMonth } from "../lib/config.js";
-import { areaShape, lookupArea, muIds, wfsQuery } from "../lib/gazetteer.js";
+import { areaShape, lookupArea, lookupRoad, muIds, wfsQuery, type AnyFeature } from "../lib/gazetteer.js";
 import { gdalAvailable, run } from "../lib/mapimage.js";
 import { P, monthDir } from "../lib/paths.js";
 import { loadItems, type ReviewItem } from "../lib/review.js";
-import { ensureDir, listFiles, log, progress, readJson, readJsonIf, sha256, writeJson } from "../lib/util.js";
+import { ensureDir, listFiles, log, progress, readJson, readJsonIf, rel, sha256, writeJson } from "../lib/util.js";
 import type { ClosedAreaMap } from "./pull.js";
 import { loadTasks, type Task } from "./queue.js";
+import { headingPlaces, placeForms } from "../lib/walk.js";
 
 /**
  * The map editor's data (data/workbench/): every closed-area section and every jurisdiction's bylaw, sorted into
@@ -199,20 +200,33 @@ async function closedAreas(month: string, manifest: ImgManifest, gdal: boolean) 
     const within = a1?.within ? { type: String(a1.within.type), name: String(a1.within.name) } : null;
     const mu = within ? muIds(within.name)[0] : undefined;
     let region = mu ? mu.split("-")[0]! : null;
+    // Where the editor zooms when the section is picked: its shape, else the area the text names, else the road,
+    // feature or place it names, else (province-wide sections) the whole province.
     let bbox: number[] | null = shape ? round(turf.bbox(shape)) : null;
+    let zoom = bbox ? "shape" : null;
     if (!bbox && within) {
       try {
         const l = await lookupArea(within.type, within.name);
         const s = l.status === "ok" ? areaShape(l) : null;
-        if (s) bbox = round(turf.bbox(s));
+        if (s) (bbox = round(turf.bbox(s))), (zoom = "area");
       } catch {
-        // No focus area: the editor starts at the province view.
+        // Falls through to the places the section names.
       }
+    }
+    const heading0 = it.title.match(/\(([^)]+)\)\s*$/)?.[1] ?? it.title;
+    if (!bbox) ({ bbox, zoom } = await namedPlaceBox((a1?.geometry ?? {}) as Record<string, any>, heading0));
+    else if (zoom === "area" && headingPlaces(heading0).length === 1 && !/\b(park|recreation area|management area|protected area|conservancy|wilderness|watersheds?)\b/i.test(heading0)) {
+      // A heading that names one place (not an area like a park, whose name point is arbitrary): when that place lies
+      // outside the area the text names (a management unit renumbered since, as for Gillies Bay in "M.U. 2-14"),
+      // the place is where the section is.
+      const place = await namedPlaceBox({}, heading0);
+      const [x, y] = [(place.bbox[0]! + place.bbox[2]!) / 2, (place.bbox[1]! + place.bbox[3]!) / 2];
+      if (place.zoom === "place" && !(x >= bbox[0]! && x <= bbox[2]! && y >= bbox[1]! && y <= bbox[3]!)) ({ bbox, zoom } = place);
     }
     // No management unit in the text: the region of the official unit at the middle of the shape or area.
     if (!region && bbox) region = await regionAt([(bbox[0]! + bbox[2]!) / 2, (bbox[1]! + bbox[3]!) / 2]);
     const maps = t ? closedAreaMapRefs(sectionMaps(t, month), month, manifest, gdal, mapsDone) : [];
-    const heading = it.title.match(/\(([^)]+)\)\s*$/)?.[1] ?? it.title;
+    const heading = heading0;
     const g = (a1?.geometry ?? {}) as Record<string, any>;
     writeJson(join(OUT(), "closed-areas", `${ruleId}.json`), {
       id: ruleId,
@@ -257,10 +271,69 @@ async function closedAreas(month: string, manifest: ImgManifest, gdal: boolean) 
       quality: c.quality,
       km2: shape ? Math.round((turf.area(shape) / 1e6) * 100) / 100 : null,
       bbox,
+      zoom,
       hasMap: maps.some((m) => m.overlay || m.page),
       issues: shortWhy(it.why ?? []).length,
     });
     progress("workbench", "closed-area sections", ++n, byRule.size, `${ruleId}: ${c.folder}`);
+  }
+  return out;
+}
+
+const BC_BOX = [-139.06, 48.3, -114.03, 60.0];
+const pad = (b: number[], d: number) => round([b[0]! - d, b[1]! - d, b[2]! + d, b[3]! + d]);
+const fcBox = (fs: AnyFeature[]) => round(turf.bbox(turf.featureCollection(fs.filter((f) => f.geometry) as Feature[])));
+
+/** A section with no shape and no area found: the road, named area or place it names; province-wide sections, all of BC. */
+async function namedPlaceBox(g: Record<string, any>, heading: string): Promise<{ bbox: number[]; zoom: string }> {
+  try {
+    if (g.road?.name) {
+      const l = await lookupRoad(String(g.road.name), String(g.road.source_hint ?? "DRA"), null);
+      if (l.features.length) return { bbox: pad(fcBox(l.features), 0.01), zoom: "road" };
+    }
+    if (g.feature?.name && ["lake", "island", "park", "reserve"].includes(String(g.feature.type))) {
+      const l = await lookupArea(String(g.feature.type), String(g.feature.name));
+      if (l.features.length) return { bbox: pad(fcBox(l.features), 0.01), zoom: "feature" };
+    }
+    const names = [...headingPlaces(heading), g.feature?.name, g.road?.name].filter((n): n is string => !!n).map((n) => n.replace(/^(the )?(city|district|town|village|township|resort municipality|municipality) of /i, ""));
+    // Every place the section names that can be pinned down ("Campbell River to Nanaimo" spans both).
+    const found: AnyFeature[] = [];
+    for (const name of names)
+      for (const form of placeForms(name)) {
+        const pts = (await wfsQuery("WHSE_BASEMAPPING.GNS_GEOGRAPHICAL_NAMES_SP", `GEOGRAPHICAL_NAME ILIKE '${form.replace(/'/g, "''")}'`, 20)).filter((f) => f.geometry?.type === "Point");
+        if (!pts.length) continue;
+        // Same-named places far apart (a city and a creek with its name): a town or community settles it; else this
+        // name pins nothing down and the next one is tried. A wrong place would send people to the wrong area.
+        const at = (f: AnyFeature) => (f.geometry as { coordinates: number[] }).coordinates;
+        const spread = (fs: AnyFeature[]) => fs.some((a) => fs.some((b) => turf.distance(at(a), at(b), { units: "kilometers" }) > 30));
+        let use = pts;
+        if (spread(use)) use = pts.filter((f) => /city|town|village|municipality|community|locality|settlement/i.test(String(f.properties.FEATURE_TYPE ?? "")));
+        if (!use.length || spread(use)) break;
+        found.push(...use);
+        break;
+      }
+    if (found.length) return { bbox: pad(fcBox(found), 0.05), zoom: "place" };
+  } catch {
+    // Official layers did not answer: the whole province.
+  }
+  return { bbox: BC_BOX, zoom: "province" };
+}
+
+/** Every municipality's, electoral area's and Islands Trust area's outline box, read once from the boundary layers. */
+async function jurisdictionBoxes(): Promise<Map<string, number[]>> {
+  const out = new Map<string, number[]>();
+  for (const layer of ["ABMS_MUNICIPALITIES_SP", "ABMS_ELECTORAL_AREAS_SP", "ABMS_LOCAL_TRUST_AREAS_SP", "ABMS_REGIONAL_DISTRICTS_SP"]) {
+    try {
+      for (const f of await wfsQuery(`WHSE_LEGAL_ADMIN_BOUNDARIES.${layer}`, "INCLUDE", 500)) {
+        const name = String(f.properties.ADMIN_AREA_NAME ?? "");
+        if (!name || !f.geometry) continue;
+        const b = round(turf.bbox(f as Feature));
+        const old = out.get(name);
+        out.set(name, old ? [Math.min(old[0]!, b[0]), Math.min(old[1]!, b[1]), Math.max(old[2]!, b[2]), Math.max(old[3]!, b[3])] : b);
+      }
+    } catch (e) {
+      log("workbench", `boundary layer ${layer} did not answer: ${(e as Error).message}`);
+    }
   }
   return out;
 }
@@ -295,7 +368,7 @@ function pdfPages(pdf: string): number {
   return Number(run("pdfinfo", [pdf]).match(/Pages:\s+(\d+)/)?.[1] ?? 0);
 }
 
-function bylaws(month: string, manifest: ImgManifest) {
+function bylaws(month: string, manifest: ImgManifest, boxes: Map<string, number[]>) {
   const reg = readJson<{ entries: BylawEntry[] }>(join(P.data, "bylaws.json")).entries;
   const sites = readJsonIf<{ sites: { key: string; name: string; website?: string; coversElectoralAreasOf?: string; covers?: string[] }[] }>(join(P.data, "bylaw-sites.json"), { sites: [] }).sites;
   const docs = listFiles(join(P.rules, "bylaws"), (f) => f.endsWith(".json")).map((f) => readJson<Record<string, any>>(f));
@@ -321,7 +394,7 @@ function bylaws(month: string, manifest: ImgManifest) {
       const pdf = bylawPdf(units, d.doc);
       const pages: string[] = [];
       if (pdf) {
-        const sha = sha256(`${pdf}:${statSync(pdf).size}`);
+        const sha = sha256(`${rel(pdf)}:${statSync(pdf).size}`);
         const count = Math.min(16, pdfPages(pdf));
         for (let p = 1; p <= count; p++) {
           const name = render(manifest, `bylaw-${slug(String(d.doc))}-p${p}.jpg`, sha, (o) => pageJpeg(pdf, p, 80, o));
@@ -358,7 +431,12 @@ function bylaws(month: string, manifest: ImgManifest) {
       docs: docOut,
       zones: z,
     });
-    out.push({ id, key: e.key, name: e.name, kind: e.kind, regionalDistrict: e.regionalDistrict ?? null, folder: c.folder, state: c.state, status: e.status, targetShooting: e.targetShooting ?? null, docs: mine.length, zones: z, hasPages: docOut.some((d) => d.pages.length) });
+    // Where the editor zooms: the jurisdiction's own outline, else its regional district's, else all of BC.
+    const own = boxes.get(e.name);
+    const rd = e.regionalDistrict ? boxes.get(e.regionalDistrict) : undefined;
+    const bbox = own ?? rd ?? BC_BOX;
+    const zoom = own ? "jurisdiction" : rd ? "regional district" : "province";
+    out.push({ id, key: e.key, name: e.name, kind: e.kind, regionalDistrict: e.regionalDistrict ?? null, folder: c.folder, state: c.state, status: e.status, targetShooting: e.targetShooting ?? null, docs: mine.length, zones: z, hasPages: docOut.some((d) => d.pages.length), bbox, zoom });
     progress("workbench", "jurisdictions", ++n, reg.length, `${e.name}: ${c.folder}`);
   }
   return out;
@@ -376,7 +454,7 @@ export async function workbench(opts: { month?: string } = {}) {
   const builtAt = new Date().toISOString();
   const ca = await closedAreas(month, manifest, gdal);
   writeJson(join(OUT(), "closed-areas.json"), { month, builtAt, counts: counts(ca as { folder: string }[]), items: ca });
-  const bl = bylaws(month, manifest);
+  const bl = bylaws(month, manifest, await jurisdictionBoxes());
   writeJson(join(OUT(), "bylaws.json"), { month, builtAt, counts: counts(bl as { folder: string }[]), items: bl });
   writeJson(manifestPath, Object.fromEntries(Object.entries(manifest).sort(([a], [b]) => a.localeCompare(b))));
   const summary = { closedAreas: counts(ca as { folder: string }[]), bylaws: counts(bl as { folder: string }[]), images: Object.keys(manifest).length };

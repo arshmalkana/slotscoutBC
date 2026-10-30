@@ -434,7 +434,7 @@ export interface Places {
   bufferM: number | null;
 }
 
-const GENERIC_TAIL = /\s+(operations|camp|resort|ferry terminal|terminals?|wildlife management area|wildlife reserve|nature conservancy( area)?|recreation area|seed orchard|sewage lagoons|environmental demonstration areas?|dykes?|watersheds?|access road|forest service road|fsr|road|highway|trail corridor|corridor|park)$/i;
+const GENERIC_TAIL = /\s+(operations|camp|resort|ferry terminal|terminals?|wildlife management area|wildlife reserve|nature conservancy( area)?|recreation area|seed orchard|sewage lagoons|environmental demonstration areas?|dykes?|watersheds?|access road|forest service road|fsr|road|highway|trail corridor|corridor|park|causeways?|superport|mines?|coal mine)$/i;
 const CLUSTER_KM = 15;
 const ZONE_MAX_KM2 = 500;
 

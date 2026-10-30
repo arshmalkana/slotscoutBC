@@ -25,6 +25,8 @@ export interface ClosedAreaItem {
   quality: string | null;
   km2: number | null;
   bbox: [number, number, number, number] | null;
+  /** What the map zooms to: the shape, the area the text names, a road, feature or place it names, or all of BC. */
+  zoom?: "shape" | "area" | "road" | "feature" | "place" | "province" | null;
   hasMap: boolean;
   issues: number;
   waiting?: number;
@@ -44,6 +46,9 @@ export interface BylawItem {
   docs: number;
   zones: number;
   hasPages: boolean;
+  /** The jurisdiction's outline box (else its regional district's, else all of BC). */
+  bbox?: [number, number, number, number];
+  zoom?: "jurisdiction" | "regional district" | "province";
   waiting?: number;
   contributions?: number;
 }

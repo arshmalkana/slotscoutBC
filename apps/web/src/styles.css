@@ -1810,3 +1810,15 @@ p.error {
     display: none;
   }
 }
+
+.editor-mapbar .zoom-btn {
+  padding: 6px 10px;
+  color: var(--ink);
+  font-weight: 600;
+}
+.editor-mapbar .zoom-note {
+  padding: 6px 10px;
+  background: var(--v-amber-bg);
+  color: var(--v-amber-ink);
+  max-width: 360px;
+}

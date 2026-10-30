@@ -107,7 +107,7 @@ export function Editor() {
   const [lightbox, setLightbox] = useState<{ src: string; title: string } | null>(null);
   const [highlight, setHighlight] = useState<string | null>(null);
   const map = useRef<EditorMapHandle>(null);
-  /** The item the view was last zoomed to: reloading the same item keeps the view. */
+  /** The item ("kind:id") the view was last zoomed to: reloading the same item keeps the view. */
   const fitted = useRef<string | null>(null);
 
   // The draft, with undo and redo.
@@ -152,11 +152,11 @@ export function Editor() {
           setDetail(d);
           const firstMap = isClosed(d) ? (d.maps.find((m) => m.overlay) ?? d.maps[0] ?? null) : null;
           setMapRef(firstMap);
-          // Zoom to the shape; with none, the area's outline (below) sets the view.
-          const b = fit ? bboxOf(d.shapes) : null;
+          // Normally the list already zoomed to the item's area; if not, the shape, else the area's outline (below).
+          const b = fit && fitted.current !== `${k}:${id}` ? bboxOf(d.shapes) : null;
           if (b) {
             map.current?.fitBounds(b);
-            fitted.current = d.id;
+            fitted.current = `${k}:${id}`;
           }
         },
         (e: Error) => setDetailError(e.message),
@@ -198,10 +198,11 @@ export function Editor() {
       (fc) => {
         if (gone) return;
         setFocus(fc);
-        if (fitted.current !== detail.id && fc.features.length) {
+        const key = `${isClosed(detail) ? "closed-areas" : "bylaws"}:${detail.id}`;
+        if (fitted.current !== key && fc.features.length) {
           const b = bboxOf(fc);
           if (b) map.current?.fitBounds(b);
-          fitted.current = detail.id;
+          fitted.current = key;
         }
       },
       () => undefined,
@@ -233,7 +234,25 @@ export function Editor() {
     });
   }, [index, folder, filter, query]);
 
-  const open = (id: string) => navigate({ pathname: `/editor/${kind}/${encodeURIComponent(id)}`, search: search.toString() });
+  // Picking an item zooms the map to its general area at once (worked out ahead in data/workbench), before its details load.
+  const current = useMemo(() => (params.id ? ((index?.items ?? []) as (ClosedAreaItem | BylawItem)[]).find((i) => i.id === params.id) ?? null : null), [index, params.id]);
+  const zoomToItem = useCallback(
+    (force: boolean) => {
+      if (!params.id) return;
+      const key = `${kind}:${params.id}`;
+      if (!force && fitted.current === key) return;
+      const b = current?.bbox ?? (detail ? (bboxOf(detail.shapes) ?? (focus ? bboxOf(focus) : null)) : null);
+      if (!b) return;
+      map.current?.fitBounds(b);
+      fitted.current = key;
+    },
+    [params.id, kind, current, detail, focus],
+  );
+  useEffect(() => zoomToItem(false), [current, zoomToItem]);
+  const open = (id: string) => {
+    if (id === params.id) return zoomToItem(true);
+    navigate({ pathname: `/editor/${kind}/${encodeURIComponent(id)}`, search: search.toString() });
+  };
   const switchKind = (k: Kind) => {
     const s = new URLSearchParams(search);
     s.set("tab", k);
@@ -443,6 +462,12 @@ export function Editor() {
                 </label>
               ))}
             </details>
+            {params.id && (
+              <button className="zoom-btn" onClick={() => zoomToItem(true)} title="Zoom the map to this item's area">
+                Zoom to area
+              </button>
+            )}
+            {current?.zoom === "province" && <span className="zoom-note">Not placed from its text: showing all of BC. Find it from the wording.</span>}
             {mapRef?.overlay && (
               <div className="overlay-ctl">
                 <label>
