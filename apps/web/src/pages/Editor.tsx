@@ -888,7 +888,7 @@ function BylawPanel({ d, onImage, enabled, onSent }: { d: BylawDetail; onImage(i
           {d.website && (
             <>
               <a href={d.website} target="_blank" rel="noreferrer">
-                {d.name.startsWith("ea:") ? "regional district site" : "official website"}
+                {d.kind === "electoral_area" ? "regional district site" : "official website"}
               </a>
               {" · "}
             </>
